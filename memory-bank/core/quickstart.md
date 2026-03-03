@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-03
 Maintainer: RB
 Status: Active
 ---
@@ -17,7 +17,7 @@ Status: Active
 
 ## What's Happening
 
-Auth is live. Users can sign in via magic link → land on `/app/dashboard`. `public.users` row is created on first login. Marketing site, data pipeline (4 fetchers), and auth are all done. Full data backfills are deferred until LLM enrichment is wired. Next: Stripe subscriptions (Phase 4B) to complete the conversion surface.
+Auth + web app MVP are live. Users sign in via magic link → `/app/feed`. Full app shell: feed, item detail, search (`/api/search` RAG via pgvector + claudeSonnet), products page. All pages use mock data with a one-line USE_MOCK flag for real-DB swap. Marketing site fully redesigned: light Stripe-like theme, two-column hero (text left, email right), staggered How It Works, radar pulse animation. Full data backfills deferred until enrichment pipeline is wired. Next: Phase 4B (Stripe) + Phase 2B (enrichment) in parallel.
 
 ---
 
@@ -73,16 +73,16 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 - [x] Build phase revision
 - [x] **Project setup** — Next.js 16, Supabase, Tailwind v4, AI SDK v6, Inngest
 - [x] **Schema live** — 25 tables applied to Supabase, RLS enabled, seeds run
-- [x] **Marketing site** — landing, pricing, sample report, signup API. Static-rendered. Build passes. Homepage visual pass: gradient fix, ProductShowcase dashboard mockup, How It Works rebuild.
+- [x] **Marketing site** — landing, pricing, sample report, signup API. Static-rendered. Visual overhaul: light Stripe-like theme, two-column hero, staggered How It Works with step connectors, radar pulse on urgent dot.
 - [x] **Data pipeline: FR + openFDA** — fetchers built, tested. 175 items + 109 enforcement details in DB.
 - [x] Data pipeline: Warning Letters + FDA RSS (Phase 2A-2)
 - [x] **Auth: Magic link** — `/login`, `/auth/callback`, `/app/dashboard`, `proxy.ts`. Verified end-to-end.
+- [x] **Web app MVP (Phase 6)** — feed, item detail, search, products. AppNav, mock data layer (USE_MOCK flag). `/app/dashboard` redirects to `/app/feed`.
 - [ ] Stripe subscriptions (Phase 4B)
 - [ ] Wire fetchers into Inngest (Phase 2C)
 - [ ] Enrichment pipeline (Gemini Flash + embeddings)
 - [ ] Product onboarding (DSLD + FDC integration)
 - [ ] Product intelligence email MVP
-- [ ] Web app — search + enforcement DB
 - [ ] Validation — sample emails, trial signups
 - [ ] Launch
 - [ ] **Expansion:** State compliance layer (month 3-5)

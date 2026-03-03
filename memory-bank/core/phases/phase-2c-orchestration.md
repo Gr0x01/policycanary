@@ -91,7 +91,33 @@ COMPONENT 4: NPM SCRIPTS (package.json)
   "pipeline:enrich": "npx tsx src/pipeline/enrichment/runner.ts"
   "pipeline:trends": "npx tsx src/pipeline/trends.ts"
 
-COMPONENT 5: CRON CONFIGURATION
+COMPONENT 5: GSRS WEEKLY SYNC (src/pipeline/gsrs-sync.ts)
+
+  The substances table (169K FDA substances) needs weekly refresh to pick up
+  new registrations. New botanical ingredients, novel NDIs, and new food
+  additives are registered periodically. Weekly sync keeps substance matching
+  current and retroactively resolves items with match_status='unresolved'.
+
+  async function syncGsrs(): Promise<{ upserted: number; durationMs: number }>
+
+  - Same logic as scripts/bootstrap-gsrs.ts but wrapped as an async function
+  - Uses upsert on UNII conflict — always safe to re-run
+  - Takes ~10 minutes; must run as background Inngest job (not HTTP handler)
+  - Schedule: weekly, Sunday 3 AM UTC (quiet time, ~10 min runtime OK)
+
+  Inngest function:
+  - inngest.createFunction(
+      { id: "gsrs-weekly-sync", name: "GSRS Weekly Substance Sync" },
+      { cron: "0 3 * * 0" },   // Sunday 3 AM UTC
+      async ({ step }) => { ... }
+    )
+
+  After sync completes: re-attempt resolution of 'unresolved' substance rows
+  - UPDATE regulatory_item_substances SET match_status='pending'
+    WHERE match_status='unresolved'
+  - Then re-run substance matching pass against updated substances table
+
+COMPONENT 6: CRON CONFIGURATION
 
   For Vercel Cron (vercel.json):
   {

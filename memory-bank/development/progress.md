@@ -1,7 +1,7 @@
 ---
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-03
 Maintainer: RB
-Status: Active — Phase 4A complete
+Status: Active — Phase 6 complete (web app MVP)
 ---
 
 # Progress: Policy Canary
@@ -23,13 +23,14 @@ Status: Active — Phase 4A complete
 | **Marketing Site** | **2026-03-03** | **Done — landing page, pricing, sample report, signup API. Homepage visual pass: gradient fix, ProductShowcase, How It Works rebuild.** |
 | **Data Pipeline: FR + openFDA** | **2026-03-03** | **Done — fetchers built + tested. 175 items, 109 enforcement details in DB** |
 | **Data Pipeline: Warning Letters + RSS** | **2026-03-03** | **Done — fetchers built + tested. 422 WL items in DB (partial; full 3,313-record backfill deferred to Phase 2B). 131 RSS items. 364 MARCS numbers extracted.** |
+| **Homepage Visual Overhaul** | **2026-03-03** | **Done — light theme, two-column hero, stagger animations** |
+| **Auth: Magic Link (Phase 4A)** | **2026-03-03** | **Done — verified end-to-end. Magic link → PKCE exchange → public.users upsert → dashboard.** |
+| **Web App MVP (Phase 6)** | **2026-03-03** | **Done — feed, item detail, search API (RAG), products. Mock data layer with USE_MOCK flag.** |
+| Stripe Subscriptions (Phase 4B) | - | Pending |
 | Enrichment Pipeline (Phase 2B) | - | Pending — blocks full backfills |
 | Inngest wiring (Phase 2C) | - | Pending |
 | Product Onboarding (DSLD + FDC) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
-| Web App (search + enforcement DB) | - | Pending |
-| **Auth: Magic Link (Phase 4A)** | **2026-03-03** | **Done — verified end-to-end. Magic link → PKCE exchange → public.users upsert → dashboard.** |
-| Stripe Subscriptions (Phase 4B) | - | Pending |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
 
@@ -160,6 +161,24 @@ Status: Active — Phase 4A complete
 - **`/app/dashboard`** (`src/app/app/dashboard/page.tsx`) — Server component. Shows user email. "Dashboard coming soon" placeholder. Sign-out via `"use server"` form action. Dev mode shows `dev@localhost`.
 - **Env**: `NEXT_PUBLIC_SITE_URL=http://localhost:3000` in `.env.local`. Supabase Auth → URL Configuration: redirect allowlist includes both `http://localhost:3000/auth/callback` and `https://policycanary.io/auth/callback`.
 - **Verified end-to-end**: magic link email received, PKCE exchange succeeded, `public.users` row created with `access_level = 'free'`, sign-out returns to `/login`.
+
+### 2026-03-03 — Homepage Visual Overhaul
+
+- **Light theme** — flipped Header, Hero, ProductShowcase, Stats, and Social Proof from dark to white/surface-muted. CTA section kept dark as the single contrast moment (Stripe pattern). `Header.tsx`: white bg, amber logo dot, dark text nav. `Hero.tsx`: white bg with barely-perceptible warm gradient. `ProductShowcase.tsx`: light section wrapper, inner dashboard mockup stays dark.
+- **Two-column hero** — `Hero.tsx` rebuilt from centered single-column to `grid-cols-1 md:grid-cols-2`: text (headline + subhead + CTAs) on left, stacked email mockup on right. `max-w-6xl` container.
+- **HowItWorksSection** (`src/components/marketing/HowItWorksSection.tsx`) — extracted How It Works from `page.tsx` to a client component. Framer Motion `staggerChildren` (0.12s) triggers cards on scroll via `useInView`. Animated amber gradient sweep travels along step connectors between cards on desktop. All animation respects `useReducedMotion`.
+- **Radar pulse** — `animate-ping` ripple on the urgent red dot in Hero email mockup. Respects `prefers-reduced-motion` natively via Tailwind.
+- Commits: `76e9004` (light theme + HowItWorks), `a944f1e` (hero 2-col).
+
+### 2026-03-03 — Phase 6: Web App MVP
+
+- **App shell** — `AppNav` (server component) + `NavLinks` (client, `usePathname`). Dark sidebar `#07111F`, amber canary dot, Feed / Search / Products links, user email + sign out. `/app/layout.tsx` provides auth guard + shell. `/app/dashboard` redirects to `/app/feed`.
+- **Feed** (`/app/feed`) — split-panel layout: feed list left, inline item detail sidebar right. URL-param filters (type, date range, My Products). `FeedItemCard`, `ItemTypeTag`, `ProductMatchBadge`, `FeedFilters` components.
+- **Item detail** (`/app/items/[id]`) — 8 conditional sections: header, status bar, what happened, action items, your products, substances, enforcement details, source footer.
+- **Search** (`/app/search`) — client component, POSTs to `/api/search`. Search API: Zod validation, auth check, rate limit (10/min/IP), OpenAI embedding, pgvector RPC with graceful fallback, RAG synthesis via `claudeSonnet`, returns `{ answer, citations }`.
+- **Products** (`/app/products`) — grouped by status (urgent/review/clear). `ProductStatusCard` component, empty state.
+- **Mock data** (`src/lib/mock/app-data.ts`) — `USE_MOCK` flag pattern: one-line swap from mock to real Supabase queries when enrichment pipeline is live.
+- Commits: `b9122b6` through `b5543f6`.
 
 ### 2026-03-04 — Homepage Visual Pass
 
