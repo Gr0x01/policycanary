@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Canary — LLM & Data Flow Architecture</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #f8fafc;
+        }
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+        .model-note {
+            color: #7c3aed;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 2.5rem 0 0.5rem;
+            color: #f1f5f9;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #1e293b;
+        }
+        .section-desc {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .diagram-container {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1rem 0 2rem;
+            overflow-x: auto;
+        }
+        .diagram-container .mermaid {
+            display: flex;
+            justify-content: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        th {
+            background: #1e293b;
+            color: #94a3b8;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 2px solid #334155;
+        }
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #1e293b;
+        }
+        tr:hover td { background: #1e293b; }
+        .decisions {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 1rem 0;
+        }
+        .decisions ol { padding-left: 1.25rem; }
+        .decisions li {
+            margin-bottom: 0.75rem;
+            color: #cbd5e1;
+        }
+        .decisions strong { color: #f1f5f9; }
+        .nav {
+            position: sticky;
+            top: 0;
+            background: #0f172aee;
+            backdrop-filter: blur(8px);
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #1e293b;
+            z-index: 10;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            color: #7c3aed;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            transition: all 0.15s;
+        }
+        .nav a:hover {
+            background: #7c3aed22;
+            border-color: #7c3aed;
+        }
+        .api-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 0.5rem 0;
+        }
+        .api-card h4 {
+            color: #f1f5f9;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .api-card p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+        }
+        .api-card code {
+            background: #334155;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #e2e8f0;
+        }
+        .gap-note {
+            background: #7f1d1d22;
+            border: 1px solid #dc262644;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 0.5rem 0;
+            color: #fca5a5;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Policy Canary — LLM & Data Flow Architecture</h1>
+    <p class="subtitle">Draft — March 3, 2026</p>
+    <p class="model-note">Product-centric model: emails organized around subscriber's actual products, not segments</p>
+
+    <nav class="nav">
+        <a href="#overview">System Overview</a>
+        <a href="#enrichment">Enrichment</a>
+        <a href="#email">Email Structure</a>
+        <a href="#onboarding">Product Onboarding</a>
+        <a href="#matching">Relevance Matching</a>
+        <a href="#llm-summary">LLM Summary</a>
+        <a href="#decisions">Decisions</a>
+    </nav>
+
+    <h2 id="overview">1. System Overview — End to End</h2>
+    <p class="section-desc">Regulatory data flows in from the left, gets enriched and tagged. Subscriber products come from onboarding (bottom). Email generation matches enriched tags against subscriber product profiles.</p>
+    <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TB
+    subgraph SOURCES["Regulatory Data Sources"]
+        FR["Federal Register API"]
+        OFDA["openFDA API"]
+        RSS["FDA RSS Feeds"]
+        WL["Warning Letters"]
+        P65["Prop 65 / State Data"]
+    end
+
+    subgraph PRODUCT_DBS["Product Data Sources"]
+        DSLD["DSLD API
+        214K supplements"]
+        FDC["USDA FoodData Central
+        454K foods"]
+        MANUAL["Manual Entry
+        paste / upload / describe"]
+    end
+
+    subgraph INGEST["Ingest"]
+        PARSE["Parse and Normalize"]
+        RAW[("regulatory_items")]
+    end
+
+    subgraph ENRICH["Enrichment — Gemini Flash"]
+        SUMMARY["Summary + Analysis + Action Items"]
+        SEGMENT["Segment Classification"]
+        TOPIC["Topic Tagging"]
+        DEEP["Deep Tagging:
+        affected ingredients,
+        product types, facility types,
+        claims at risk, regulations cited"]
+        IMPACT["Impact Assessment"]
+        CITE["Citation Extraction"]
+    end
+
+    subgraph STORE["Enriched Data Store"]
+        ENR[("enrichments")]
+        SI[("segment_impacts")]
+        IT[("item_topics")]
+        IC[("citations")]
+        TAGS[("affected_ingredients
+        affected_product_types
+        regulations_cited")]
+        CHUNKS[("chunks + embeddings")]
+    end
+
+    subgraph ONBOARD["Product Onboarding"]
+        LOOKUP["Product database lookup"]
+        FALLBACK["LLM extraction
+        for manual entries"]
+        PRODUCTS[("subscriber_products
+        verified ingredients")]
+    end
+
+    subgraph EMAIL["Email Generation"]
+        subgraph FREE["Free — Newsletter"]
+            FREE_T["Generic weekly digest
+            same for everyone"]
+            FREE_OUT[/"Free Email"/]
+        end
+        subgraph PAID["Paid — Personalized"]
+            MATCH["Product-Level
+            Relevance Matching"]
+            COMPOSE["Email Composition
+            Claude Sonnet
+            organized by subscriber products"]
+            PAID_OUT[/"Personalized Email"/]
+        end
+    end
+
+    subgraph ALERTS["Urgent Alerts"]
+        HIGH["High-impact detected"]
+        ALERT_M["Match products"]
+        ALERT_OUT[/"Alert Email"/]
+    end
+
+    subgraph SEARCH["Web App"]
+        Q["User query"]
+        EMB["Embed query"]
+        VEC["pgvector search"]
+        RAG["RAG — Claude Sonnet"]
+        BROWSE["Browse: enforcement, trends"]
+    end
+
+    SOURCES --> PARSE --> RAW
+    RAW --> SUMMARY & SEGMENT & TOPIC & DEEP & IMPACT & CITE
+    SUMMARY --> ENR
+    SEGMENT --> SI
+    TOPIC --> IT
+    DEEP --> TAGS
+    IMPACT --> SI
+    CITE --> IC
+    RAW --> CHUNKS
+
+    PRODUCT_DBS --> LOOKUP --> PRODUCTS
+    LOOKUP -.-> FALLBACK -.-> PRODUCTS
+
+    ENR & SI --> FREE_T --> FREE_OUT
+
+    ENR & SI & IT & TAGS --> MATCH
+    PRODUCTS --> MATCH
+    MATCH --> COMPOSE --> PAID_OUT
+
+    ENR & SI --> HIGH --> ALERT_M
+    PRODUCTS --> ALERT_M --> ALERT_OUT
+
+    Q --> EMB --> VEC
+    CHUNKS --> VEC --> RAG
+    ENR & SI & IC --> BROWSE
+
+    classDef llm fill:#f3e8ff,stroke:#7c3aed,stroke-width:2px,color:#1e1b4b
+    classDef data fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0c4a6e
+    classDef output fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    classDef input fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#78350f
+    classDef product fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#78350f
+
+    class SUMMARY,SEGMENT,TOPIC,DEEP,IMPACT,CITE,FALLBACK,COMPOSE,RAG llm
+    class RAW,ENR,SI,IT,IC,TAGS,CHUNKS,PRODUCTS data
+    class FREE_OUT,PAID_OUT,ALERT_OUT output
+    class FR,OFDA,RSS,WL,P65,DSLD,FDC,MANUAL,Q input
+        </pre>
+    </div>
+
+    <h2 id="enrichment">2. Enrichment — What the LLM Produces Per Item</h2>
+    <p class="section-desc">Single Gemini Flash call at ingest. Deep tagging on ingredients, product types, claims, and facility types is what makes product-level matching possible.</p>
+    <div class="diagram-container">
+        <pre class="mermaid">
+flowchart LR
+    subgraph INPUT["Raw Regulatory Item"]
+        TITLE["Title"]
+        BODY["Full Text / Abstract"]
+        META["Source metadata"]
+    end
+
+    subgraph LLM["Gemini Flash — Single Call"]
+        PROMPT["Structured prompt
+        all outputs in one pass"]
+    end
+
+    subgraph OUTPUT["Enrichment Outputs"]
+        direction TB
+        O1["plain_english_summary"]
+        O2["segments: supplements, cosmetics, food"]
+        O3["topics: labeling, GMP, ingredients, enforcement"]
+        O4["affected_ingredients:
+        marine collagen, ashwagandha, retinol"]
+        O5["affected_product_types:
+        capsules, powders, topical creams"]
+        O6["affected_facility_types:
+        manufacturer, packager, testing lab"]
+        O7["affected_claims:
+        joint health, anti-aging, immune support"]
+        O8["impact_level: high / medium / low"]
+        O9["action_items: specific steps + deadlines"]
+        O10["citations: claim to source quote + URL"]
+        O11["regulations_cited:
+        21 CFR 111.70, MoCRA 607"]
+    end
+
+    INPUT --> LLM --> OUTPUT
+
+    classDef llm fill:#f3e8ff,stroke:#7c3aed,stroke-width:2px,color:#1e1b4b
+    classDef input fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#78350f
+    classDef output fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+
+    class LLM,PROMPT llm
+    class INPUT,TITLE,BODY,META input
+    class OUTPUT,O1,O2,O3,O4,O5,O6,O7,O8,O9,O10,O11 output
+        </pre>
+    </div>
+
+    <h2 id="email">3. Email Structure — Product-Centric</h2>
+    <p class="section-desc">Everything shows up. Items matching subscriber's actual products get full analysis referencing their specific products. Same-segment items get a brief. Everything else gets a one-liner + link. Nothing hidden.</p>
+    <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TB
+    subgraph WEEK["This Week: 15 Regulatory Items"]
+        R1["Warning letter: collagen ID testing"]
+        R2["Adverse event spike: biotin"]
+        R3["GRAS notice: new fiber ingredient"]
+        R4["MoCRA facility registration update"]
+        R5["...11 more items..."]
+    end
+
+    subgraph PRODUCTS["Subscriber's Products"]
+        P1["Marine Collagen Powder
+        marine collagen, vitamin C, HA"]
+        P2["Biotin Gummies
+        biotin 5mg, pectin, citric acid"]
+        P3["Contract manufacturer, NJ"]
+    end
+
+    WEEK --> SCORE["Product-Level Relevance Matching"]
+    PRODUCTS --> SCORE
+
+    SCORE --> HIT["Matches YOUR products"]
+    SCORE --> SEG["In your segment"]
+    SCORE --> OTHER["Other FDA activity"]
+
+    subgraph EMAIL["Personalized Email"]
+        direction TB
+        HEADER["Policy Canary — Week of March 3, 2026"]
+
+        S1["YOUR PRODUCTS
+
+        Marine Collagen Powder
+        FDA warning letter cited identity testing
+        failures for marine-sourced collagen.
+        This directly affects your product.
+        3 action items with deadlines.
+
+        Biotin Gummies
+        Adverse event spike for biotin products.
+        12 reports in 30 days. Your 5mg dose
+        is below the flagged threshold, but
+        here is what to monitor."]
+
+        S2["YOUR SEGMENT
+
+        New CGMP proposed rule
+        Affects contract manufacturers.
+        Brief summary + link.
+
+        GRAS notice: new fiber ingredient
+        Brief — may affect formulations."]
+
+        S3["ACROSS FDA THIS WEEK
+
+        MoCRA registration deadline reminder
+        Import alert: contaminated spices
+        Food labeling proposed rule
+        Cosmetics inspection results
+        ...4 more one-liners"]
+
+        HEADER --> S1 --> S2 --> S3
+    end
+
+    HIT --> S1
+    SEG --> S2
+    OTHER --> S3
+
+    classDef critical fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#7f1d1d
+    classDef moderate fill:#fefce8,stroke:#ca8a04,stroke-width:2px,color:#713f12
+    classDef other fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#334155
+    classDef product fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0c4a6e
+
+    class HIT,S1 critical
+    class SEG,S2 moderate
+    class OTHER,S3 other
+    class PRODUCTS,P1,P2,P3 product
+        </pre>
+    </div>
+
+    <h2 id="onboarding">4. Product Onboarding — Data Sources</h2>
+    <p class="section-desc">Subscribers add real products. System looks them up in public databases for verified ingredient data. Specific onboarding UI is separate.</p>
+
+    <div class="api-card">
+        <h4>Supplements — DSLD (NIH Dietary Supplement Label Database)</h4>
+        <p>214,780 products (121,959 on-market). All major brands.</p>
+        <p>API: <code>https://api.ods.od.nih.gov/dsld/v9/</code></p>
+        <p>Auth: None. CORS open. ~1,000 req/hour.</p>
+        <p>Data: Structured ingredients with amounts, categories, UNII codes, claims, form, manufacturer.</p>
+        <p>Search by: product name, brand, ingredient name.</p>
+    </div>
+
+    <div class="api-card">
+        <h4>Food — USDA FoodData Central</h4>
+        <p>454,596 branded food products. Monthly updates.</p>
+        <p>API: <code>https://api.nal.usda.gov/fdc/v1/</code></p>
+        <p>Auth: Free API key from data.gov. ~1,000 req/hour.</p>
+        <p>Data: Ingredients (text string), full nutrition, UPC barcodes, brand.</p>
+        <p>Search by: product name, UPC barcode.</p>
+    </div>
+
+    <div class="gap-note">
+        <strong>Cosmetics — No good public API.</strong> MoCRA has 589K product listings but FDA hasn't made them publicly searchable. EWG Skin Deep has 130K products but no API. Onboarding falls back to manual entry: paste ingredient list, upload label photo, or describe product. LLM extracts structured data from manual input.
+    </div>
+
+    <div class="diagram-container">
+        <pre class="mermaid">
+flowchart TB
+    START["Subscriber adds a product"]
+
+    SEARCH["Search product databases"]
+    DSLD["DSLD — supplements
+    214K products, structured ingredients"]
+    FDC["FDC — food products
+    454K products, nutrition + ingredients"]
+
+    FOUND{"Found?"}
+    AUTO["Auto-populate:
+    ingredients, amounts, form,
+    claims, manufacturer"]
+    MANUAL["Manual entry:
+    paste ingredients,
+    upload label photo,
+    or describe product"]
+    LLM["LLM extracts structured
+    ingredient list"]
+
+    CONFIRM["Subscriber confirms"]
+    SAVE["Product saved with
+    verified ingredients"]
+
+    START --> SEARCH --> DSLD & FDC
+    DSLD & FDC --> FOUND
+    FOUND -->|"Yes"| AUTO --> CONFIRM
+    FOUND -->|"No"| MANUAL --> LLM --> CONFIRM
+    CONFIRM --> SAVE
+
+    classDef llm fill:#f3e8ff,stroke:#7c3aed,stroke-width:2px,color:#1e1b4b
+    classDef db fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0c4a6e
+    classDef action fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#14532d
+
+    class LLM llm
+    class DSLD,FDC db
+    class SAVE,AUTO action
+        </pre>
+    </div>
+
+    <h2 id="matching">5. Product-Level Relevance Matching</h2>
+    <p class="section-desc">Enrichment tags regulatory items with affected ingredients, product types, claims, etc. Subscriber products have verified ingredient lists. Matching happens across shared dimensions.</p>
+    <div class="diagram-container">
+        <pre class="mermaid">
+flowchart LR
+    subgraph REG["Regulatory Item Tags (from enrichment)"]
+        RI["affected_ingredients:
+        marine collagen, bovine collagen"]
+        RP["affected_product_types:
+        collagen supplements, protein powders"]
+        RC["affected_claims:
+        joint health, anti-aging"]
+        RF["affected_facility_types:
+        manufacturer"]
+        RR["regulations_cited:
+        21 CFR 111.70"]
+    end
+
+    MATCH["Dimensional
+    Matching"]
+
+    subgraph PROD["Subscriber Product Profile"]
+        PI["ingredients:
+        marine collagen, vitamin C, HA"]
+        PP["product_type:
+        collagen powder"]
+        PCL["claims:
+        supports joint health"]
+        PF["facility:
+        contract manufacturer"]
+        PS["segment:
+        supplements"]
+    end
+
+    REG --> MATCH
+    PROD --> MATCH
+
+    MATCH --> SCORE["Relevance Score
+
+    ingredient match: marine collagen
+    product type match: collagen
+    claim match: joint health
+    facility match: manufacturer
+
+    = CRITICAL relevance"]
+
+    classDef reg fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#78350f
+    classDef prod fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0c4a6e
+    classDef score fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#7f1d1d
+
+    class RI,RP,RC,RF,RR reg
+    class PI,PP,PCL,PF,PS prod
+    class SCORE score
+        </pre>
+    </div>
+
+    <h2 id="llm-summary">6. LLM Usage Summary</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Layer</th>
+                <th>Model</th>
+                <th>When</th>
+                <th>Cost Driver</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Data Enrichment + Deep Tagging</strong></td>
+                <td>Gemini 2.5 Flash</td>
+                <td>At ingest (once per item, single call)</td>
+                <td>~50-100 items/week</td>
+            </tr>
+            <tr>
+                <td><strong>Onboarding — manual entry</strong></td>
+                <td>Claude Sonnet 4.6</td>
+                <td>When product not in DSLD/FDC</td>
+                <td>Low — most supplements auto-populate</td>
+            </tr>
+            <tr>
+                <td><strong>Email Composition</strong></td>
+                <td>Claude Sonnet 4.6</td>
+                <td>Weekly per paid subscriber</td>
+                <td>Subscriber count x weekly</td>
+            </tr>
+            <tr>
+                <td><strong>Urgent Alert</strong></td>
+                <td>Claude Sonnet 4.6</td>
+                <td>Per high-impact event x matched subscribers</td>
+                <td>Low frequency</td>
+            </tr>
+            <tr>
+                <td><strong>AI Search</strong></td>
+                <td>Claude Sonnet 4.6</td>
+                <td>Per user query in web app</td>
+                <td>Usage-dependent</td>
+            </tr>
+            <tr>
+                <td><strong>Embeddings</strong></td>
+                <td>text-embedding-3-small</td>
+                <td>At ingest (chunked)</td>
+                <td>Volume of items</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="decisions">7. Key Design Decisions</h2>
+    <div class="decisions">
+        <ol>
+            <li><strong>Products are the core unit, not segments.</strong> The email says "Your Marine Collagen Powder" not "This week in supplements." Segments are backend classification only.</li>
+            <li><strong>Real product data from public databases.</strong> DSLD for supplements (214K products, structured ingredients), USDA FDC for food (454K products). Verified ingredient lists, not self-reported guesses.</li>
+            <li><strong>Cosmetics is the gap.</strong> No public product database. Onboarding uses manual entry (paste/upload/describe) with LLM extraction.</li>
+            <li><strong>Everything shows up, nothing is hidden.</strong> Paid emails show ALL items. Product-matched items get full analysis. Same-segment gets a brief. Everything else gets a one-liner + link.</li>
+            <li><strong>Free email is content marketing.</strong> Generic digest, same for everyone. Drives trial signups via product shot on homepage showing the personalized experience.</li>
+            <li><strong>Enrichment does the heavy lifting once.</strong> Deep tagging on affected ingredients, product types, claims, facility types happens at ingest. Email assembly just matches tags against product profiles.</li>
+            <li><strong>Three LLM providers for their strengths.</strong> Gemini for bulk enrichment (cheap, fast). Claude for writing (emails, search). OpenAI for embeddings.</li>
+        </ol>
+    </div>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                darkMode: true,
+                background: '#1e293b',
+                primaryColor: '#7c3aed',
+                primaryTextColor: '#f1f5f9',
+                primaryBorderColor: '#7c3aed',
+                lineColor: '#64748b',
+                secondaryColor: '#334155',
+                tertiaryColor: '#1e293b',
+                fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, system-ui, sans-serif',
+                fontSize: '14px'
+            },
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis',
+                padding: 20,
+                nodeSpacing: 30,
+                rankSpacing: 40
+            }
+        });
+    </script>
+</body>
+</html>
