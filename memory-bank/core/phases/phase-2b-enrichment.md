@@ -321,16 +321,44 @@ STEP 4: ENRICHMENT RUNNER (src/pipeline/enrichment/runner.ts)
   e) Support partial runs: unenriched query naturally resumes
   f) Support re-enrichment: parameter for enrichment_version < CURRENT_VERSION
 
-CROSS-REFERENCE INFERENCE LAYER (Phase 2B+ — after pipeline stabilization):
-  After LLM extraction, a second pass that:
-  1. Looks up extracted substances in GSRS → finds all known use contexts
-  2. LLM reasons about cross-segment implications given the nature of the action
-  This is NOT deterministic lookup alone — the LLM must judge whether a food-focused
-  action also affects supplement/cosmetic use of the same substance.
-  Example: BHA FDA reassessment → text says "food" → GSRS says BHA is in food,
-  supplements, cosmetics → inference LLM says supplements:high (oral exposure same
-  risk), cosmetics:medium (dermal exposure, different risk but regulatory precedent).
-  Full design: /memory-bank/development/activeContext.md § Cross-Reference Inference Layer
+CROSS-REFERENCE INFERENCE LAYER (BUILT — 2026-03-04):
+  After LLM extraction, two additional steps in the enrichment pipeline:
+
+  Step 1b: DETERMINISTIC USE-CONTEXT LOOKUP (src/pipeline/enrichment/cross-reference.ts)
+    lookupUseContexts(substanceIds, supabase) → Map<substanceId, UseContext[]>
+    Queries substance_codes table for resolved substances (similarity >= 0.95).
+    Maps 10 GSRS code systems → 8 UseContextCategory types:
+    - CFR Part 170-189 → food_additive (175-178 → food_contact checked first)
+    - CFR Part 73-82 → color_additive
+    - CFR Part 310-369 → otc_drug
+    - CFR Part 700-740 → cosmetic_ingredient
+    - CODEX/JECFA → food_additive (+ functional class from comments)
+    - DSLD → supplement_ingredient
+    - CIR → cosmetic_ingredient
+    - RXCUI/DRUGBANK/DAILYMED → pharmaceutical
+    - EPA PESTICIDE CODE → pesticide
+    - Food Contact Substance Notif → food_contact
+    Pure TypeScript, no LLM. GSRS codes are ground truth.
+
+  Step 1c: LLM CROSS-SEGMENT INFERENCE (same file)
+    inferCrossSegments(output, useContextMap, resolvedSubstances, google) → CrossReferenceOutput | null
+    Only fires when use contexts reveal segments BEYOND Step 1's direct extraction.
+    Gemini 2.5 Pro with thinking (budget: 4096). Reasons about:
+    - Exposure routes (oral vs dermal vs inhalation)
+    - Regulatory precedent (FDA historically extends food bans to supplements)
+    - Nature of the regulatory action (cancer risk vs labeling change)
+    - When NOT to extend (company-specific, labeling-only, import-specific)
+    Confidence threshold: >= 0.7. Below that, not included.
+    NON-FATAL: if Step 1c fails, item proceeds with direct-only signals.
+
+  signal_source column on segment_impacts and item_enrichment_tags:
+    'direct' = from Step 1 LLM extraction
+    'cross_reference' = from Step 1c inference
+    Additive-only: Step 1c NEVER modifies Step 1's direct extraction.
+
+  Schema: substance_codes table + signal_source columns (migration 002 applied).
+  GSRS bootstrap updated to capture codes. Must be re-run from 0.
+  Cost: ~$0.02/call, fires on ~20-30% of items.
 
 CRITICAL DECISIONS:
 - enrichment_version starts at 1. Bump when prompt/schema changes.
@@ -368,13 +396,15 @@ SUBAGENTS:
 - Quality gate: run golden fixtures before any full backfill
 ```
 
-### Files to Create
-| File | Description |
-|------|-------------|
-| `src/pipeline/enrichment/prompts.ts` | Enrichment prompt templates + Zod output schema |
-| `src/pipeline/enrichment/processor.ts` | Main enrichment function + rule-based validators |
-| `src/pipeline/enrichment/embeddings.ts` | Chunking + embedding generation |
-| `src/pipeline/enrichment/runner.ts` | Orchestration — find unenriched items and process |
+### Files Created
+| File | Description | Status |
+|------|-------------|--------|
+| `src/pipeline/enrichment/prompts.ts` | Enrichment prompt templates + Zod output schema | Done |
+| `src/pipeline/enrichment/processor.ts` | Main enrichment function + rule-based validators + cross-ref integration | Done |
+| `src/pipeline/enrichment/cross-reference.ts` | Steps 1b (use-context lookup) + 1c (LLM cross-segment inference) | Done |
+| `src/pipeline/enrichment/content-fetch.ts` | Full FDA page content fetching for thin RSS items | Done |
+| `src/pipeline/enrichment/embeddings.ts` | Chunking + embedding generation | Done |
+| `src/pipeline/enrichment/runner.ts` | Orchestration — content-fetch → enrich → embed per item | Done |
 
 ### Schema Note
 `item_enrichments` needs a `regulatory_action_type` column (text with CHECK constraint).

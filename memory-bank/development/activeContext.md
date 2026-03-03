@@ -8,8 +8,8 @@ status: Active
 
 # Active Development Context
 
-**Phase:** Phase 2B stabilization complete — enrichment pipeline passes 10/10 golden tests
-**Next up:** Cross-reference inference layer (designing in separate session), then Phase 4B (Stripe)
+**Phase:** Cross-reference inference layer built — Steps 1b + 1c implemented, type-check clean
+**Next up:** Re-run GSRS bootstrap (captures codes), re-enrich existing items, then Phase 4B (Stripe)
 
 ---
 
@@ -46,8 +46,8 @@ status: Active
 - [x] **Mock data** — `src/lib/mock/app-data.ts` with USE_MOCK flag pattern per page (one-line flip when real data exists)
 
 ### Up Next
-- [ ] **Cross-reference inference layer** — designing in separate session. Research GSRS use-context data, design Step 1b/1c, implement. THIS IS THE KEY DIFFERENTIATOR. See § Cross-Reference Inference Layer below.
-- [ ] **Re-enrich existing items** — 422 WLs were enriched with 8K-truncated content. Defer until after inference layer so we only pay for one re-enrichment pass.
+- [ ] **Re-run GSRS bootstrap** — reset checkpoint (`echo "" > .gsrs-checkpoint`), run `npx tsx scripts/bootstrap-gsrs.ts` to capture codes into `substance_codes` table. ~169K substances, ~500K-850K codes.
+- [ ] **Re-enrich existing items** — 422 WLs were enriched with 8K-truncated content. Now includes cross-reference inference. One pass.
 - [ ] **Phase 4B: Stripe subscriptions** — checkout, webhook, access_level update on `public.users`
 - [ ] Wire fetchers into Inngest functions (Phase 2C)
 - [ ] Product onboarding (DSLD + FDC integration)
@@ -104,68 +104,37 @@ segment classification is a secondary sanity check.
 
 ---
 
-## Cross-Reference Inference Layer (Identified 2026-03-04)
+## Cross-Reference Inference Layer (Built 2026-03-04)
 
-**THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR. Without this, we're a fancy RSS reader.**
+**THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR. Built and code-reviewed. Awaiting GSRS bootstrap re-run.**
 
-### The Problem
+### What It Does
 
-Current enrichment extracts what's *in the text*. The FDA BHA reassessment page says
-"BHA, a chemical preservative used in food." The LLM correctly tags food:critical.
-But BHA is also used in supplement capsule shells and cosmetic preservatives. A good
-compliance officer knows this. Our system doesn't — it only knows what the document says.
+Step 1b: Deterministic use-context derivation from GSRS substance codes. Maps 10 code systems (CFR, CODEX, JECFA, DSLD, CIR, RXCUI, DRUGBANK, DAILYMED, EPA PESTICIDE CODE, Food Contact Substance Notif) to 8 `UseContextCategory` types. Pure TypeScript, no LLM. GSRS codes are ground truth.
 
-Extraction alone makes us a summarizer. **Inference is what makes us intelligent.**
+Step 1c: LLM cross-segment inference using Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). Reasons about exposure routes, regulatory precedent, and action mechanism to determine which additional segments are genuinely implicated.
 
-### The Architecture
+### Key Files
 
-After the LLM extracts affected ingredients, a second step:
+- `src/pipeline/enrichment/cross-reference.ts` — Steps 1b (`lookupUseContexts`) + 1c (`inferCrossSegments`)
+- `src/pipeline/enrichment/processor.ts` — restructured `enrichItem()` integrating cross-ref
+- `scripts/bootstrap-gsrs.ts` — updated to capture codes from 10 relevant systems
+- `supabase/migrations/002_substance_codes_and_signal_source.sql` — schema migration (applied)
 
-1. **Substance graph lookup** — resolve extracted ingredients via GSRS, find all known
-   use contexts (food additive, supplement excipient, cosmetic preservative, etc.)
-2. **LLM inference** — given this regulatory action + these known use contexts, reason
-   about which segments are *actually* implicated and why
+### Trust Safeguards
 
-This is NOT pure lookup. A lookup says "BHA is in supplements too." The LLM reasons:
-"This reassessment focuses on cancer risk from oral exposure. Supplements involve oral
-exposure too → highly relevant. Cosmetics involve dermal exposure → different risk
-profile, but regulatory precedent suggests FDA often extends scrutiny across contexts."
+1. Substance resolution threshold at 0.95 (stricter than general 0.90) for cross-ref
+2. GSRS codes are ground truth — no hallucination vector in Step 1b
+3. Confidence floor at 0.7 for Step 1c expansions
+4. `signal_source = 'cross_reference'` marks all inferred signals (visible, filterable)
+5. Step 1c is additive-only — never modifies Step 1's direct extraction
+6. Non-fatal failure — Step 1c errors don't break enrichment
 
-That second-order reasoning is what a $300/hr consultant provides. It's the product.
+### What's Needed to Activate
 
-### Where It Lives in the Pipeline
-
-```
-Source text → Content fetch → LLM extraction (current Step 1)
-           → Substance graph cross-reference (NEW Step 1b)
-           → LLM inference on cross-segment implications (NEW Step 1c)
-           → DB writes → Embeddings (current Step 3)
-```
-
-Step 1b is deterministic (GSRS lookup). Step 1c is LLM (can't be deterministic because
-the *relevance* of a cross-segment connection depends on the *nature* of the regulatory
-action — a cancer concern vs a labeling change have very different cross-segment implications).
-
-### Data Requirements
-
-- GSRS substance table (already seeded — 169K substances)
-- GSRS needs **use context data** per substance: what product categories use this substance?
-  → Need to investigate: does GSRS provide this, or do we need a supplementary source?
-  → Possible sources: FDA GRAS list, DSLD ingredient-to-product mapping, cosmetic ingredient databases
-- The inference LLM call gets: original regulatory action summary + extracted ingredients +
-  known use contexts for each ingredient → outputs expanded segment impacts with reasoning
-
-### Implementation Priority
-
-This is Phase 2B+ work — after the current enrichment pipeline stabilizes.
-Don't build it until:
-1. Content-fetch is landed and golden tests pass with updated fixtures
-2. The prompt fixes for product_type categories (not SKU names) are in
-3. GSRS use-context data availability is researched
-
-But this is the feature that justifies the $99/mo price tag. Without it, a compliance
-officer gets the same information from an RSS feed. With it, they get intelligence
-they'd need a consultant to produce.
+1. **Re-run GSRS bootstrap** — `echo "" > .gsrs-checkpoint && npx tsx scripts/bootstrap-gsrs.ts` (~30-60 min, captures ~500K-850K codes)
+2. **Run golden tests** — `npm run pipeline:golden-enrich` to validate BHA cross-reference expansion
+3. **Re-enrich 422 WLs** — one pass with cross-reference inference
 
 ---
 
@@ -259,7 +228,8 @@ src/pipeline/fetchers/
 
 src/pipeline/enrichment/
   prompts.ts                        # System prompt, Zod output schema, buildEnrichmentPrompt()
-  processor.ts                      # enrichItem() — LLM call, rule validators, DB writes
+  processor.ts                      # enrichItem() — LLM call, rule validators, cross-ref, DB writes
+  cross-reference.ts                # Steps 1b (use-context lookup) + 1c (LLM cross-segment inference)
   embeddings.ts                     # Chunking + OpenAI embedding generation
   runner.ts                         # Orchestration — content-fetch → enrich → embed per item
   content-fetch.ts                  # Fetch full FDA page content for thin RSS items

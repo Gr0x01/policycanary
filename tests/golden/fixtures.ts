@@ -92,6 +92,8 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       has_deadline: false,
       segments: [
         { segment: "food", min_relevance: "critical" },
+        { segment: "supplements", min_relevance: "medium" },  // cross-reference: BHA in DSLD (oral exposure)
+        { segment: "cosmetics", min_relevance: "low" },       // cross-reference: BHA in CIR (dermal, lower risk)
       ],
       segments_absent: [],
       min_confidence: 0.9,
@@ -100,9 +102,10 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       "BHA reassessment. FDA page specifically discusses food use only. " +
       "Must extract both 'BHA' (label name) and 'butylated hydroxyanisole' (systematic). " +
       "Both names needed for substance table matching via GSRS synonyms. " +
-      "NOTE: BHA is ALSO used in supplements and cosmetics, but the source text doesn't " +
-      "discuss that. Cross-segment inference (Phase 2B+) will expand this — for now, " +
-      "we only test what the source text says.",
+      "Cross-reference inference expands to supplements (oral exposure like food — " +
+      "cancer risk transfers, high/medium relevance) and cosmetics (dermal exposure — " +
+      "different risk profile, medium/low relevance). Expansion depends on GSRS codes " +
+      "being populated for BHA (DSLD, CIR).",
   },
 
   {

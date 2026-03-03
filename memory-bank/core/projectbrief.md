@@ -146,25 +146,27 @@ At 2-5% capture: 120-875 paying customers.
 
 **Research basis:** `/memory-bank/research/per-product-pricing-research.md`, `/memory-bank/research/product-level-pricing-research.md`, `/research/regulatory-platform-pricing-research.md`
 
-### Model: Base + Per-Product, Two Access Levels
+### Model: Base + Per-Product, Phased Access Levels
 
-| Level | Base Price | Includes | Per Extra Product | What You Get |
-|-------|-----------|----------|-------------------|-------------|
-| **Monitor** | $49/mo | 5 products | $6/product/mo | Product intelligence emails (event-driven + weekly all-clear), urgent alerts, product dashboard, weekly update email |
-| **Monitor + Research** | $249/mo | 5 products | $6/product/mo | Everything in Monitor + enforcement database, AI search, trend analysis, full regulatory archive |
+**Launch tier (Monitor only).** Research tier added later once features justify the price.
+
+| Level | Base Price | Includes | Per Extra Product | What You Get | Status |
+|-------|-----------|----------|-------------------|-------------|--------|
+| **Monitor** | $99/mo | 5 products | $6/product/mo | Product intelligence emails (event-driven + weekly all-clear), urgent alerts, product dashboard, weekly update email | **Launch tier** |
+| **Monitor + Research** | $399/mo | 5 products | $6/product/mo | Everything in Monitor + enforcement database, AI search, trend analysis, full regulatory archive | **Added later** — needs enforcement DB, AI search, and trends to justify price |
 
 **Free tier (post-trial):** 1 product, Monitor level only. Weekly update email. Keeps them in the funnel.
 
 ### Price Table
 
-| Products | Monitor | Monitor+Research |
-|----------|---------|-----------------|
-| 5 (base) | $49 | $249 |
-| 10 | $79 | $279 |
-| 15 | $109 | $309 |
-| 25 | $169 | $369 |
-| 50 | $319 | $519 |
-| 100 | $619 | $819 |
+| Products | Monitor | Monitor+Research (future) |
+|----------|---------|--------------------------|
+| 5 (base) | $99 | $399 |
+| 10 | $129 | $429 |
+| 15 | $159 | $459 |
+| 25 | $219 | $519 |
+| 50 | $369 | $669 |
+| 100 | $669 | $969 |
 
 **Product cap:** Self-serve handles up to 100 products. Beyond 100 → "contact us" for custom pricing. 100+ is a different UX problem (email structure, product management, alert grouping) and a different sales conversation.
 
@@ -172,26 +174,41 @@ At 2-5% capture: 120-875 paying customers.
 
 ### Why These Numbers
 
-**Monitor at $49/mo:**
-- Under $600/year. Less than 1 hour of consultant time. Easy credit card purchase for a small brand founder with 3-5 products.
-- One warning letter costs $25,000-$100,000+. $49/mo is insurance that pays for itself if it catches ONE issue.
+**Monitor at $99/mo:**
+- Under $1,200/year at base. Less than 1 hour of consultant time ($150-$500/hr). Easy credit card purchase.
+- Above FoodDocs ($84/mo) for a more sophisticated product. Signals seriousness without triggering procurement.
+- One warning letter costs $25,000-$100,000+. $99/mo is insurance that pays for itself if it catches ONE issue.
+- Small firms (<20 employees) spend $46K/yr on GMP compliance — $99/mo is 2.6% of that budget.
 
-**Monitor+Research at $249/mo ($200 premium over Monitor):**
-- The research platform is the moat — months of accumulated, tagged enforcement data with semantic search and trend analysis. Not a feature toggle, a different product.
-- $49 → $249 is a 5.1x multiplier. Consistent with Westlaw (5.9x), LexisNexis (2.8x), FoodDocs (3.0x), Gartner (4-5x).
-- A single 483 observation document from Redica costs $289. One month of Research gives unlimited access to a tagged, searchable database. Obvious value.
+**Monitor+Research at $399/mo (future — $300 premium over Monitor):**
+- 4x multiplier over Monitor. Consistent with Westlaw (5.9x), LexisNexis (2.8x), Gartner (4-5x) — slightly conservative, room to raise.
+- The research platform is the moat — accumulated, tagged enforcement data with semantic search and trend analysis. Not a feature toggle, a different product.
+- A single 483 observation document from Redica costs $289. One month of Research gives unlimited access to a tagged, searchable database.
 - Nothing exists in the $100-$500/mo range for searchable FDA food/supplement/cosmetics enforcement data. Below that is free/raw. Above is $25K-$98K/year enterprise. We own this gap.
 - Comparable tools: Westlaw Edge $194/mo, FoodDocs Standard $181/mo, YouCompli $300/mo, LexisNexis Enhanced $257/mo.
+- **Not launching at start** — needs enforcement DB, AI search, and trend analysis features built first to justify the price.
 
 **$6/product:**
-- Scales linearly. No surprises. A 50-product company on Monitor pays $319/mo — still well under a warning letter.
-- Same rate for both levels. The access level upgrade is a flat $200/mo regardless of product count. Clean.
+- Scales linearly. No surprises. A 50-product company on Monitor pays $369/mo — still well under a warning letter.
+- Same rate for both levels. The access level upgrade is a flat $300/mo regardless of product count. Clean.
+
+### Pricing Validation (March 2026)
+
+Research confirmed affordability and competitive positioning:
+- Small supplement firms spend $46K-$184K/yr on compliance — our pricing is 1-7% of that
+- FDA consultants charge $150-$500/hr — one hour > one month of Monitor
+- FoodDocs charges $84-$169/mo for simpler food safety tools
+- Non-compliance costs 2.71x more than compliance ($14.82M vs $5.47M avg)
+- Average single-product recall costs $10M (FDA estimate)
+- Full validation data: `research/pricing-validation-market-research.md`, `research/pain-point-validation-2026-03-04.md`
 
 ### Open Pricing Questions
 
 - Trial model (reverse trial vs standard)
-- Whether to offer annual billing at launch or add later (research suggested $199/mo annual as a discount lever for Monitor+Research)
-- Per-product rate validation — $6 feels right but needs testing with real buyers
+- Whether to offer annual billing at launch or add later
+- Per-product rate validation — $6 needs testing with real buyers
+- Research tier launch timing — what features are the minimum to justify $399?
+- Potential to raise Research to $499 once established with 20+ subscribers
 
 ---
 

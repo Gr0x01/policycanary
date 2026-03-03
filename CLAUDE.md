@@ -75,6 +75,11 @@ Always adjust the metadata header (`Last-Updated`, `Maintainer`) when you edit a
 - Leaving old implementations "for reference"
 - Multiple files doing similar things in slightly different ways
 
+### Next.js 16 — proxy.ts - CRITICAL
+**NEVER rename or suggest renaming `proxy.ts` to `middleware.ts`.**
+
+Next.js 16 renamed Middleware to Proxy. The correct file is `proxy.ts` with a named `proxy` export. `middleware.ts` does not exist and should not be created. This is correct and intentional.
+
 ### LLM Model Usage - CRITICAL
 **NEVER change LLM model names or configurations without explicit authorization.**
 

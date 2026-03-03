@@ -126,7 +126,7 @@ flowchart TB
 **Pipeline steps per item:**
 1. **Content-fetch** — if source_url points to FDA.gov and content is thin (<1K chars), fetch full page and extract `<main>` text. RSS items go from ~200 chars to 2K-7K chars.
 2. **LLM extraction** — single Gemini call (Flash for simple items, Pro for complex). Produces all structured outputs below.
-3. **Cross-reference inference** (PLANNED — designing in separate session) — look up extracted substances in GSRS → find all known use contexts → LLM reasons about cross-segment implications. This is what turns extraction into intelligence. See `development/activeContext.md § Cross-Reference Inference Layer`.
+3. **Cross-reference inference** (BUILT) — Step 1b: deterministic lookup of extracted substances in GSRS `substance_codes` → maps to use-context categories. Step 1c: Gemini 2.5 Pro with thinking (budget: 4096) reasons about cross-segment risk transfer. Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). `signal_source` column distinguishes direct vs inferred. See `src/pipeline/enrichment/cross-reference.ts`.
 4. **Embeddings** — chunk content, generate OpenAI embeddings for vector search.
 
 Full content is sent to the LLM — no truncation. Longest item is ~47K chars (~12K tokens), well within Gemini's 1M token context.
@@ -286,7 +286,8 @@ flowchart TB
 
 | Layer | Model | When | Cost Driver |
 |-------|-------|------|-------------|
-| **Data Enrichment + Deep Tagging** | Gemini 2.5 Flash | At ingest (once per item, single call) | ~50-100 items/week |
+| **Data Enrichment + Deep Tagging** | Gemini 2.5 Flash / Pro | At ingest (once per item, single call). Flash for simple items, Pro for complex (WLs, rules). | ~50-100 items/week |
+| **Cross-Reference Inference (Step 1c)** | Gemini 2.5 Pro + thinking | After enrichment, only when use contexts reveal new segments (~20-30% of items). Budget: 4096 thinking tokens. | ~$0.02/call, ~10-30 items/week |
 | **Onboarding — manual entry parsing** | Claude Sonnet 4.6 | When product not found in database | Low — most supplements auto-populate from DSLD |
 | **Email Composition** | Claude Sonnet 4.6 | Weekly per paid subscriber | Subscriber count × weekly |
 | **Urgent Alert** | Claude Sonnet 4.6 | Per high-impact event × matched subscribers | Low frequency |

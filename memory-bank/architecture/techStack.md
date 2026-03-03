@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-04
 Maintainer: RB
 Status: Active
 ---
@@ -47,11 +47,11 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 
 | Provider | Model | Purpose | Why This Provider |
 |----------|-------|---------|-------------------|
-| **Google Gemini** | gemini-2.5-flash / gemini-2.5-pro | Data processing: enrichment, summarization, segment classification, topic tagging. Use Flash for simple classification, Pro for nuanced regulatory analysis. | Cost-effective, large context window. Vercel AI SDK makes it easy to route by complexity. |
+| **Google Gemini** | gemini-2.5-flash / gemini-2.5-pro | Data processing: enrichment, summarization, segment classification, topic tagging. Flash for simple classification, Pro for nuanced regulatory analysis. **Pro + thinking (budget: 4096)** also used for cross-reference inference (Step 1c) — reasoning about cross-segment risk transfer. | Cost-effective, large context window. Vercel AI SDK makes it easy to route by complexity. |
 | **OpenAI** | text-embedding-3-small | Embeddings for semantic search (pgvector) | Best-in-class embeddings, well-supported in pgvector ecosystem. |
 | **Anthropic** | claude-sonnet-4-6 | Writing: email intelligence content, AI search answers, editorial voice | Best writing quality. The intelligence email IS the product — writing quality matters most here. |
 
-**Note on Gemini model selection:** Not everything in the pipeline is simple classification. Extracting accurate action items from a 50-page Federal Register rule requires real comprehension. Use Flash for high-volume/simple tasks (segment tagging, topic classification) and Pro for tasks requiring deeper understanding (impact analysis, action item extraction). Vercel AI SDK makes routing between models trivial.
+**Note on Gemini model selection:** Not everything in the pipeline is simple classification. Extracting accurate action items from a 50-page Federal Register rule requires real comprehension. Use Flash for high-volume/simple tasks (segment tagging, topic classification) and Pro for tasks requiring deeper understanding (impact analysis, action item extraction, cross-reference inference). Pro with thinking (Step 1c) gets a 4096-token thinking budget — the model needs to reason about exposure routes, regulatory precedent, and the nature of the concern before deciding whether to expand to additional segments. Vercel AI SDK makes routing between models trivial.
 
 **DO NOT change model names or providers without explicit authorization.**
 

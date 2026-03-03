@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-04
 Maintainer: RB
-Status: Active — Phase 2B enrichment stabilized, golden tests 10/10
+Status: Active — Cross-reference inference layer built, code-reviewed, type-check clean
 ---
 
 # Progress: Policy Canary
@@ -27,7 +27,8 @@ Status: Active — Phase 2B enrichment stabilized, golden tests 10/10
 | **Auth: Magic Link (Phase 4A)** | **2026-03-03** | **Done — verified end-to-end. Magic link → PKCE exchange → public.users upsert → dashboard.** |
 | **Web App MVP (Phase 6)** | **2026-03-03** | **Done — feed, item detail, search API (RAG), products. Mock data layer with USE_MOCK flag.** |
 | Stripe Subscriptions (Phase 4B) | - | Pending |
-| **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed. Inference layer next.** |
+| **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed.** |
+| **Cross-Reference Inference Layer** | **2026-03-04** | **Built — Steps 1b + 1c. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap re-run needed.** |
 | Inngest wiring (Phase 2C) | - | Pending |
 | Product Onboarding (DSLD + FDC) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
@@ -182,6 +183,20 @@ Status: Active — Phase 2B enrichment stabilized, golden tests 10/10
 - **Products** (`/app/products`) — grouped by status (urgent/review/clear). `ProductStatusCard` component, empty state.
 - **Mock data** (`src/lib/mock/app-data.ts`) — `USE_MOCK` flag pattern: one-line swap from mock to real Supabase queries when enrichment pipeline is live.
 - Commits: `b9122b6` through `b5543f6`.
+
+### 2026-03-04 — Cross-Reference Inference Layer (Steps 1b + 1c)
+
+**THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR.** Without this, we're a summarizer. With it, we provide intelligence worth $99/mo.
+
+- **Schema migration** (`002_substance_codes_and_signal_source.sql`) — new `substance_codes` table (id, substance_id, code_system, code_value, code_type, is_classification, comments). `signal_source` column added to `segment_impacts` and `item_enrichment_tags` (values: `'direct'` | `'cross_reference'`). Applied to Supabase.
+- **Bootstrap updated** (`scripts/bootstrap-gsrs.ts`) — captures codes from 10 relevant GSRS code systems (CFR, CODEX, JECFA, DSLD, CIR, RXCUI, DRUGBANK, DAILYMED, EPA PESTICIDE CODE, Food Contact Substance Notif). Filters irrelevant systems. Batch upserts into `substance_codes` (500/batch). `RELEVANT_CODE_SYSTEMS` Set with "KEEP IN SYNC" comment.
+- **Step 1b: Use-context derivation** (`src/pipeline/enrichment/cross-reference.ts`) — `lookupUseContexts()`: pure TypeScript, no LLM. Queries `substance_codes` for resolved substance_ids, maps to 8 `UseContextCategory` types. CFR Part mapping: 175-178 → food_contact (checked first), 170-189 → food_additive, 73-82 → color_additive, 310-369 → otc_drug, 700-740 → cosmetic_ingredient. CODEX/JECFA functional class parsing from pipe-delimited comments.
+- **Step 1c: LLM cross-segment inference** (`cross-reference.ts`) — `inferCrossSegments()`: Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal segments BEYOND Step 1's direct extraction (~20-30% of items). Detailed system prompt with exposure route reasoning, regulatory precedent, confidence thresholds (>= 0.7). Additive-only — never modifies Step 1's direct extraction.
+- **Processor restructured** (`processor.ts`) — new flow: Steps 1-6 unchanged → step 7 (substance resolution via `Promise.all`) → step 8 (use-context lookup, 0.95 threshold) → step 9 (cross-segment inference, non-fatal) → steps 10-16 (DB writes with signal_source). N+1 UNII lookup replaced with batch `.in()` query. Tag deduplication via `existingTagKeys` Set.
+- **Types updated** (`database.ts`) — `SubstanceCode` interface, `signal_source` on `SegmentImpact` and `ItemEnrichmentTag`, `crossReferenced` on runner result types.
+- **Golden fixtures updated** — BHA expects `supplements` (min_relevance: "medium") and `cosmetics` (min_relevance: "low") via cross-reference. Tests can't validate yet — `substance_codes` table is empty until GSRS bootstrap re-run.
+- **Code review completed** — 3 critical bugs fixed: (1) CFR food_contact range unreachable (overlap), (2) CFR regex matched title number instead of part number, (3) duplicate tag insertion on unique constraint. 2 performance fixes: N+1 UNII queries → batch, sequential substance resolution → Promise.all.
+- **Type-check clean.** Code uncommitted.
 
 ### 2026-03-04 — Phase 2B Enrichment Stabilization
 

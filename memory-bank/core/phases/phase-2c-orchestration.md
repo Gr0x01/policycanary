@@ -91,24 +91,31 @@ COMPONENT 4: NPM SCRIPTS (package.json)
   "pipeline:enrich": "npx tsx src/pipeline/enrichment/runner.ts"
   "pipeline:trends": "npx tsx src/pipeline/trends.ts"
 
-COMPONENT 5: GSRS WEEKLY SYNC (src/pipeline/gsrs-sync.ts)
+COMPONENT 5: GSRS MONTHLY SYNC (src/pipeline/gsrs-sync.ts)
 
-  The substances table (169K FDA substances) needs weekly refresh to pick up
-  new registrations. New botanical ingredients, novel NDIs, and new food
-  additives are registered periodically. Weekly sync keeps substance matching
-  current and retroactively resolves items with match_status='unresolved'.
+  The substances table (169K FDA substances) + substance_codes table (~500K-850K
+  use-context codes) needs monthly refresh to pick up new registrations and codes.
+  New botanical ingredients, novel NDIs, and new food additives are registered
+  periodically. Monthly sync keeps substance matching AND cross-reference inference
+  current, and retroactively resolves items with match_status='unresolved'.
+
+  WHY MONTHLY (not weekly): GSRS has no incremental API — every sync fetches all
+  169K substances (~5 hours). Weekly = 20 hrs/month of compute for marginal gain.
+  New substance registrations relevant to food/supplements/cosmetics trickle in
+  slowly; monthly cadence easily captures them.
 
   async function syncGsrs(): Promise<{ upserted: number; durationMs: number }>
 
   - Same logic as scripts/bootstrap-gsrs.ts but wrapped as an async function
-  - Uses upsert on UNII conflict — always safe to re-run
-  - Takes ~10 minutes; must run as background Inngest job (not HTTP handler)
-  - Schedule: weekly, Sunday 3 AM UTC (quiet time, ~10 min runtime OK)
+  - Captures substances, substance_names, AND substance_codes (10 relevant code systems)
+  - Uses upsert on canonical_name conflict — always safe to re-run
+  - Takes ~5 hours; must run as background Inngest job (not HTTP handler)
+  - Schedule: monthly, 1st of month at 2 AM UTC
 
   Inngest function:
   - inngest.createFunction(
-      { id: "gsrs-weekly-sync", name: "GSRS Weekly Substance Sync" },
-      { cron: "0 3 * * 0" },   // Sunday 3 AM UTC
+      { id: "gsrs-monthly-sync", name: "GSRS Monthly Substance Sync" },
+      { cron: "0 2 1 * *" },   // 1st of month, 2 AM UTC
       async ({ step }) => { ... }
     )
 

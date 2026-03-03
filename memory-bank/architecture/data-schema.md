@@ -1,9 +1,9 @@
 ---
 Title: Data Schema v1
 Version: v1
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-04
 Maintainer: RB
-Status: Draft
+Status: Active
 ---
 
 # Data Schema: Policy Canary v1
@@ -38,8 +38,8 @@ LAYER 2: CLASSIFICATION
       |
       v
 LAYER 3: SUBSTANCE REFERENCE
-  substances  <-->  substance_names
-  (canonical identifiers, GSRS-bootstrapped, fuzzy search)
+  substances  <-->  substance_names  <-->  substance_codes
+  (canonical identifiers, GSRS-bootstrapped, fuzzy search, use-context codes)
       |
       v
 LAYER 4: ENRICHMENT
@@ -77,7 +77,10 @@ LAYER 9: USERS & EMAIL
 2. CLASSIFY: LLM tags item --> item_categories (segments, topics, product classes)
 3. EXTRACT SUBSTANCES: LLM + structured fields --> regulatory_item_substances
 4. RESOLVE: Match raw substance names --> substances table (UNII, CAS, fuzzy)
+4b. USE-CONTEXT LOOKUP: substance_codes --> UseContextCategory mapping (deterministic)
+4c. CROSS-REFERENCE: Gemini Pro reasons about cross-segment risk transfer (LLM, ~20-30% of items)
 5. ENRICH: LLM generates --> item_enrichments, segment_impacts, item_enrichment_tags, item_citations
+   (segment_impacts + item_enrichment_tags include signal_source = 'direct' | 'cross_reference')
 6. EMBED: Chunk content --> item_chunks with vector(1536) embeddings
 7. MATCH: For each subscriber product:
      a. Primary: substance_id match (product_ingredients <-> regulatory_item_substances)
@@ -301,7 +304,7 @@ Canonical substance reference table. Bootstrapped from FDA GSRS (~169K substance
 - `idx_substances_class` on (substance_class)
 - `idx_substances_group` on (ingredient_group)
 
-**Bootstrapping:** Import from FDA GSRS public data (https://gsrs.ncats.nih.gov/). ~169K substances with UNII codes, CAS numbers, names, and classifications. This is a one-time bulk import at project setup, with periodic refresh for new substances.
+**Bootstrapping:** Import from FDA GSRS public API (https://gsrs.ncats.nih.gov/). ~169K substances with UNII codes, CAS numbers, names, classifications, and use-context codes. Script: `scripts/bootstrap-gsrs.ts`. One-time bulk import with monthly refresh (Phase 2C).
 
 ---
 
@@ -335,6 +338,51 @@ Synonym resolution table. A single substance may have dozens of names across dif
 - The trigram index enables queries like `SELECT * FROM substance_names WHERE name % 'ascrobic acid'` (catches typos)
 - Full-text index enables queries like `SELECT * FROM substance_names WHERE to_tsvector('english', name) @@ plainto_tsquery('english', 'vitamin c')` (semantic matches)
 - Populated during GSRS import (each substance has multiple names) and enriched from DSLD, OpenFoodFacts as products are onboarded
+
+---
+
+### `substance_codes`
+
+Use-context codes per substance from GSRS. Powers cross-reference inference (Step 1b): maps code systems to use-context categories (food additive, supplement ingredient, cosmetic ingredient, pharmaceutical, etc.). This is the data foundation for the cross-segment intelligence feature.
+
+**Status:** Live (migration 002 applied, table empty until GSRS bootstrap re-run)
+
+| Column | Type | Constraints | Notes |
+|--------|------|-------------|-------|
+| id | UUID | PK, DEFAULT gen_random_uuid() | |
+| substance_id | UUID | NOT NULL, FK --> substances ON DELETE CASCADE | |
+| code_system | TEXT | NOT NULL | e.g. 'CFR', 'CODEX ALIMENTARIUS (GSFA)', 'DSLD', 'COSMETIC INGREDIENT REVIEW (CIR)' |
+| code_value | TEXT | NOT NULL | The actual code: '21 CFR 172.110', 'DSLD-12345', etc. |
+| code_type | TEXT | | 'PRIMARY', 'CLASSIFICATION', etc. |
+| is_classification | BOOLEAN | DEFAULT false | Whether this code represents a classification vs a specific registration |
+| comments | TEXT | | Functional class, regulatory category (e.g. 'Functional Classification\|Antioxidant') |
+| created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
+
+**Constraints:**
+- `uq_substance_codes` UNIQUE(substance_id, code_system, code_value)
+
+**Indexes:**
+- `idx_substance_codes_substance` on (substance_id)
+- `idx_substance_codes_system` on (code_system)
+
+**Relevant code systems (10 total):**
+
+| Code System | Use-Context Signal |
+|---|---|
+| CFR | Food additive (Part 170-189), food-contact (Part 175-178), color additive (Part 73-82), OTC drug (Part 310-369), cosmetic (Part 700-740) |
+| CODEX ALIMENTARIUS (GSFA) | Food additive + functional class (from comments) |
+| JECFA EVALUATION | Food additive evaluation |
+| DSLD | Supplement ingredient presence |
+| COSMETIC INGREDIENT REVIEW (CIR) | Cosmetic safety reviewed |
+| RXCUI | Pharmaceutical use |
+| DRUGBANK | Pharmaceutical use |
+| DAILYMED | Drug/pharmaceutical |
+| EPA PESTICIDE CODE | Pesticide registration |
+| Food Contact Substance Notif | Food-contact material |
+
+**Estimated volume:** ~500K-850K rows (169K substances × ~3-5 relevant codes each).
+
+**Cross-reference pipeline:** `lookupUseContexts()` in `src/pipeline/enrichment/cross-reference.ts` queries this table for resolved substances and maps codes to `UseContextCategory` types deterministically (no LLM). Step 1c then uses these use contexts to reason about cross-segment risk transfer via Gemini 2.5 Pro.
 
 ---
 
@@ -390,6 +438,7 @@ Per-category relevance scoring. Powers the search feed, trend detection, and fre
 | who_affected | TEXT | | "All supplement manufacturers using botanicals" |
 | deadline | DATE | | Segment-specific deadline if different from item |
 | published_date | DATE | NOT NULL | Denormalized from regulatory_items. Enables single-table feed query without JOIN. |
+| signal_source | TEXT | NOT NULL, DEFAULT 'direct', CHECK (signal_source IN ('direct', 'cross_reference')) | Whether this segment was from LLM extraction (direct) or cross-reference inference (cross_reference) |
 | verification_status | TEXT | NOT NULL, DEFAULT 'unverified', CHECK (verification_status IN ('unverified', 'verified', 'rejected')) | Manual spot-check flag |
 | created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
 
@@ -405,6 +454,7 @@ Per-category relevance scoring. Powers the search feed, trend detection, and fre
 - `category_id` replaces the old segment ENUM. Points to a `regulatory_categories` row where category_type = 'segment'.
 - `published_date` is denormalized from `regulatory_items` to enable single-table feed queries without JOIN. The feed query is the hottest path in the system.
 - The feed index `(category_id, relevance, published_date DESC)` covers: "Show me all critical+high items for supplements, newest first" as a single index scan.
+- `signal_source` distinguishes direct LLM extraction from cross-reference inference. Phase 4C (product matching) can weight inferred signals differently. The UI can show "Inferred: this substance is also used in supplements" with reasoning.
 
 ---
 
@@ -421,6 +471,7 @@ Deep tagging for NON-ingredient dimensions. Captures product types, facility typ
 | tag_dimension | TEXT | NOT NULL, CHECK (tag_dimension IN ('product_type', 'facility_type', 'claims', 'regulation')) | What aspect this tag describes |
 | tag_value | TEXT | NOT NULL | The tag itself: 'protein_powder', 'contract_manufacturer', 'structure_function_claims', '21_cfr_111' |
 | confidence | REAL | | 0-1 |
+| signal_source | TEXT | NOT NULL, DEFAULT 'direct', CHECK (signal_source IN ('direct', 'cross_reference')) | Whether this tag was from LLM extraction (direct) or cross-reference inference (cross_reference) |
 | created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
 
 **Constraints:**
@@ -434,6 +485,7 @@ Deep tagging for NON-ingredient dimensions. Captures product types, facility typ
 - This table handles the "non-ingredient" dimensions of product matching. When a warning letter is about contract manufacturers who make protein powders, that's captured here as tag_dimension='product_type', tag_value='protein_powder' and tag_dimension='facility_type', tag_value='contract_manufacturer'.
 - Ingredients extracted from regulatory items go to `regulatory_item_substances` instead, because they need substance resolution.
 - Together, `item_enrichment_tags` + `regulatory_item_substances` provide complete deep tagging of each regulatory item.
+- `signal_source` marks tags from cross-reference inference (Step 1c) vs direct LLM extraction. Cross-reference adds `product_type` tags for newly inferred segments.
 
 ---
 
@@ -1265,18 +1317,21 @@ CREATE TRIGGER set_updated_at_users
 
 ## Bootstrapping Notes
 
-### 1. GSRS Import (Substances)
+### 1. GSRS Import (Substances + Names + Codes)
 
-Source: https://gsrs.ncats.nih.gov/ (public download)
+Source: https://gsrs.ncats.nih.gov/ (public API, paginated)
+
+Import script: `scripts/bootstrap-gsrs.ts` (run via `npx tsx scripts/bootstrap-gsrs.ts`)
 
 Import process:
-1. Download GSRS public data dump (JSON/SDF format)
-2. Parse each substance: extract canonical_name, UNII, CAS, InChIKey, substance_class
-3. Insert into `substances` table (~169K rows)
-4. For each substance, extract all names/synonyms and insert into `substance_names` with appropriate name_type and source='gsrs'
-5. Estimated row counts: ~169K in substances, ~500K-1M in substance_names
+1. Paginate GSRS API (500/page, ~169K substances)
+2. For each substance: extract canonical_name, UNII, CAS, substance_class → upsert into `substances`
+3. Extract all names/synonyms → upsert into `substance_names` with name_type and source='gsrs'
+4. Extract relevant codes (10 code systems) → upsert into `substance_codes` with code_system, code_value, code_type, is_classification, comments
+5. Checkpoint file (`.gsrs-checkpoint`) enables resume on interruption
+6. Estimated row counts: ~169K substances, ~500K-1M substance_names, ~500K-850K substance_codes
 
-This is a one-time bulk import. Run before any product onboarding so DSLD ingredients can resolve immediately.
+This is a one-time bulk import with monthly refresh (Phase 2C). Run before any product onboarding so DSLD ingredients can resolve immediately and cross-reference inference has data.
 
 ### 2. Regulatory Categories Seed Data
 
@@ -1343,6 +1398,7 @@ INSERT INTO sources (name, source_type, base_url) VALUES
 | 5 | item_categories | Classification | Many-to-many item-to-category junction |
 | 6 | substances | Substance Reference | Canonical substances (GSRS-bootstrapped) |
 | 7 | substance_names | Substance Reference | Synonym resolution with fuzzy search |
+| 7b | substance_codes | Substance Reference | GSRS use-context codes for cross-reference inference |
 | 8 | item_enrichments | Enrichment | LLM summaries, key entities, key regulations |
 | 9 | segment_impacts | Enrichment | Per-category relevance scoring (feed + trends) |
 | 10 | item_enrichment_tags | Enrichment | Deep tagging: product_type, facility_type, claims, regulation |

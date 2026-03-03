@@ -8,16 +8,16 @@ Status: Active
 
 ## Current State
 
-- **Status**: Phase 2B enrichment stabilized — golden tests 10/10. Content-fetch for thin RSS items, prompt fixes, truncation removed. Inference layer designing in separate session.
+- **Status**: Cross-reference inference layer built — Steps 1b (deterministic use-context lookup) + 1c (Gemini 2.5 Pro reasoning). Type-check clean. GSRS bootstrap needs re-run to capture codes.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Next**: Cross-reference inference layer (key differentiator), then Phase 4B (Stripe)
+- **Next**: Re-run GSRS bootstrap (codes), re-enrich existing items, then Phase 4B (Stripe)
 
 ---
 
 ## What's Happening
 
-Enrichment pipeline stabilized. Content-fetch fetches full FDA page content for thin RSS items (112-225 chars → 2K-7K chars). Prompt fixes: broad+specific product types, clarified action types, deadline includes response deadlines. Truncation removed (was 8K, threw away 80% of WLs). Golden tests: 76/76 assertions, 10/10 fixtures. **Key insight**: extraction alone = summarizer. Cross-reference inference layer (substance graph + LLM reasoning about cross-segment implications) = the product differentiator. Designing in separate session. 422 WLs need re-enrichment after inference layer is built (one pass). Web app MVP live with mock data. Marketing site redesigned.
+Cross-reference inference layer built. Step 1b: deterministic GSRS code → use-context mapping (food additive, supplement, cosmetic, pharma, etc.). Step 1c: Gemini 2.5 Pro with thinking (budget: 4096) reasons about cross-segment risk transfer. Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). `signal_source` column on `segment_impacts` and `item_enrichment_tags` distinguishes direct from inferred signals. Non-fatal failure mode — Step 1c errors don't break enrichment. **GSRS bootstrap must be re-run** to capture codes into new `substance_codes` table. Then re-enrich 422 WLs (one pass with cross-reference).
 
 ---
 
@@ -85,9 +85,10 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 - [x] Data pipeline: Warning Letters + FDA RSS (Phase 2A-2)
 - [x] **Auth: Magic link** — `/login`, `/auth/callback`, `/app/dashboard`, `proxy.ts`. Verified end-to-end.
 - [x] **Web app MVP (Phase 6)** — feed, item detail, search, products. AppNav, mock data layer (USE_MOCK flag). `/app/dashboard` redirects to `/app/feed`.
-- [x] **Enrichment pipeline (Phase 2B)** — stabilized. Content-fetch, prompt fixes, golden tests 10/10. Inference layer next.
-- [ ] **Cross-reference inference layer** — substance graph + LLM reasoning for cross-segment implications. KEY DIFFERENTIATOR.
-- [ ] Re-enrich existing 422 WLs (after inference layer, one pass)
+- [x] **Enrichment pipeline (Phase 2B)** — stabilized. Content-fetch, prompt fixes, golden tests 10/10.
+- [x] **Cross-reference inference layer** — Steps 1b + 1c built. Schema migration applied. Type-check clean. GSRS bootstrap updated. KEY DIFFERENTIATOR.
+- [ ] Re-run GSRS bootstrap (captures codes into `substance_codes`)
+- [ ] Re-enrich existing 422 WLs (with cross-reference, one pass)
 - [ ] Stripe subscriptions (Phase 4B)
 - [ ] Wire fetchers into Inngest (Phase 2C)
 - [ ] Product onboarding (DSLD + FDC integration)
