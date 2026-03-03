@@ -121,16 +121,26 @@ Your goal is to create backend systems that can handle millions of users while r
 
 **Data Pipeline** (the core backend job, orchestrated by Inngest):
 ```
-Ingest (Federal Register API, openFDA, FDA RSS)
+Ingest (Federal Register API, openFDA, FDA RSS, Warning Letters)
   → Parse & normalize → regulatory_items
-  → Classify → item_categories (segments, topics, product classes)
-  → Extract substances → regulatory_item_substances
-  → Resolve substances → substance_id FK to substances table
-  → Enrich with LLM (Gemini) → item_enrichments, segment_impacts, item_enrichment_tags, item_citations
-  → Embed (OpenAI, 1536d) → item_chunks with vector(1536) embeddings
-  → Match → product_matches (scored per subscriber product)
+  → Enrich with LLM (Gemini) — INGREDIENT-FIRST, not segment-first:
+      PRIMARY outputs (drive product matching):
+        regulatory_action_type  — what is happening (recall, ban, cgmp_violation, etc.)
+        affected_ingredients    — label-friendly substance names ("BHA", "whey protein isolate")
+        affected_product_types  — GRANULAR ("protein powder", not just "dietary supplement")
+        deadline                — compliance date if any
+      SECONDARY outputs (route generic digest):
+        segment_impacts         — food/supplement/cosmetics relevance
+      → item_enrichments, segment_impacts, item_enrichment_tags, item_citations
+  → Resolve substances → regulatory_item_substances → substance_id FK to substances table
+  → Embed (OpenAI) → item_chunks with halfvec embeddings
+  → Match → product_matches (Phase 4C — joins substance_ids from items to subscriber products)
   → Deliver (Claude writes) → email_campaigns → email_sends via Resend
 ```
+
+**Enrichment design principle:** The value prop is "YOUR product is affected" not "here's
+what happened in supplements." Substance extraction is the backbone. Segment tags are
+secondary. See `tests/golden/fixtures.ts` for the quality target.
 
 **Established Patterns** (follow these, don't reinvent):
 - **Repository Pattern** — all database access through repository classes in `lib/repositories/`

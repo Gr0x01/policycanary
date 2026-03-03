@@ -61,18 +61,44 @@ Full backfills are intentionally held back. Ingesting thousands of raw records w
 
 ## Enrichment Design Principle (Established 2026-03-03)
 
-**Ingredient-first, not segment-first.**
+**Two matching signal types. Both are first-class. Neither collapses into segments.**
 
-The enrichment pipeline is organized around what actually drives product matching:
-1. `regulatory_action_type` — what is happening (ban, recall, cgmp_violation, etc.)
-2. `affected_ingredients` — label-friendly substance names (backbone of Phase 4C matching)
-3. `affected_product_types` — GRANULAR ("protein powder", not just "dietary supplement")
-4. `deadline` — any compliance date
+Not all regulatory changes are ingredient-level. The enrichment pipeline must produce
+BOTH signal types with equal rigor:
 
-Segment tags (food/supplement/cosmetics) are a **secondary** output for routing the generic
-weekly digest. They are not the matching mechanism. The schema has `regulatory_action_type`
-added to `item_enrichments` to reflect this. Golden fixtures in `tests/golden/fixtures.ts`
-test ingredient extraction quality first, segments second.
+### Signal Type 1 — Ingredient-level
+*"BHA is banned"* / *"This cucumber was recalled due to Salmonella"*
+- Vehicle: `affected_ingredients` (LLM extraction) → `regulatory_item_substances` → `substance_id` FK → matched against `product_ingredients.substance_id`
+- Phase 4C match_type: `'direct_substance'`
+- Examples: ingredient bans, GRAS revocations, recalls citing specific ingredients, contamination alerts
+
+### Signal Type 2 — Category-level
+*"All cosmetic facilities must register by July 2026"* / *"CGMP rules now apply to all supplement manufacturers"*
+- Vehicle: `item_enrichment_tags` with 4 tag dimensions → matched against subscriber product profile
+  - `product_type` — "protein powder", "sunscreen", "infant formula" (GRANULAR — not just "dietary supplement")
+  - `facility_type` — "outsourcing facility", "food manufacturer", "cosmetic contract manufacturer"
+  - `claims` — "structure-function claims", "health claims", "organic"
+  - `regulation` — "21 CFR 111", "MoCRA", "FSVP"
+- Phase 4C match_type: `'category_overlap'`
+- Examples: MoCRA registration deadlines, GMP rule changes, labeling format requirements, testing protocol requirements
+- Key: `affected_ingredients = []` is CORRECT for these items. Do not hallucinate substances.
+
+### What segment_impacts IS and IS NOT
+- `segment_impacts` (food/supplement/cosmetics) = **PRESENTATION ONLY**
+  → used to route the generic weekly digest and for UI filtering
+  → NOT used in Phase 4C product matching
+  → the broad "3 FDA product classes" lens, not a matching mechanism
+- `item_enrichment_tags` = **THE MATCHING LAYER**
+  → this is what Phase 4C queries against subscriber product profiles
+  → much more granular than supplement/food/cosmetics
+
+### Schema additions (Supabase migration applied 2026-03-03)
+- `item_enrichments.regulatory_action_type` — what is happening (recall, ban_restriction, compliance_requirement, cgmp_violation, etc.)
+- `item_enrichments.deadline` — compliance date if any (ISO date)
+- Full `ActionType` enum includes `compliance_requirement` (new obligation: registration/GMP deadline) distinct from `cgmp_violation` (enforcement for violating existing rules)
+
+Golden fixtures in `tests/golden/fixtures.ts` test ingredient extraction and action type first;
+segment classification is a secondary sanity check.
 
 ---
 
