@@ -147,7 +147,9 @@ secondary. See `tests/golden/fixtures.ts` for the quality target.
 - **Service Layer** — business logic in single-purpose services in `lib/services/`
 - **Result Type** — explicit success/failure without exceptions (`{ ok: true, data } | { ok: false, error }`)
 - **Zod schemas** — validate all external API responses before touching the data
-- **Admin client** — use `src/lib/supabase/admin.ts` (service role) for all pipeline ops; never in browser code
+- **Admin client** — use `src/lib/supabase/admin.ts` (service role) for all pipeline ops and server-side content queries; never in browser code
+- **API key auth** — machine-to-machine routes (e.g., `/api/blog`) use `X-API-Key` header + `crypto.timingSafeEqual` comparison. Pattern: check key exists in env (500 if missing), then timing-safe compare (401 if wrong). See `src/app/api/blog/route.ts`.
+- **API response envelope** — `{ data, error: null }` on success, `{ error: { message } }` on failure. Consistent across `/api/signup` and `/api/blog`.
 
 ### Key Tables (v1 Schema — 25 tables, 9 layers)
 
@@ -160,9 +162,11 @@ secondary. See `tests/golden/fixtures.ts` for the quality target.
 **Layer 7 — Users & Email**: `users`, `email_subscribers`, `user_bookmarks`, `email_campaigns`, `email_campaign_items`, `email_sends`
 **Layer 8 — Products**: `subscriber_products`, `product_ingredients`
 **Layer 9 — Matching**: `product_matches` (THE money table — item × subscriber product)
+**Standalone — Blog**: `blog_posts` (slug unique, category CHECK, status draft/published, RLS public read for published)
 
 Full schema: `supabase/migrations/001_initial_schema.sql`
-TypeScript types: `src/types/database.ts`
+Blog schema: `supabase/migrations/003_blog_posts.sql` (applied via Supabase MCP)
+TypeScript types: `src/types/database.ts`, `src/lib/blog/types.ts` (blog-specific)
 
 ### Supabase Specifics
 - Row Level Security (RLS) on all subscriber-facing tables
@@ -172,3 +176,16 @@ TypeScript types: `src/types/database.ts`
 - `moddatetime` trigger on `regulatory_items`, `substances`, `users`, `subscriber_products`, `product_matches`
 - Service role key (admin client) for pipeline scripts — never expose client-side
 - Seed with `supabase/seeds/001_sources.sql`; GSRS bootstrap via `scripts/bootstrap-gsrs.ts`
+
+### Environment Variables (Backend-Relevant)
+```
+BLOG_API_KEY              — Clawdbot write path to /api/blog (X-API-Key header)
+SUPABASE_SERVICE_ROLE_KEY — admin client, pipeline ops
+NEXT_PUBLIC_SUPABASE_URL  — Supabase project URL
+GOOGLE_GENERATIVE_AI_API_KEY — Gemini enrichment
+OPENAI_API_KEY            — embeddings
+ANTHROPIC_API_KEY         — Claude writing
+STRIPE_SECRET_KEY         — payments (Phase 4B)
+STRIPE_WEBHOOK_SECRET     — Stripe webhook verification (Phase 4B)
+RESEND_API_KEY            — email delivery
+```

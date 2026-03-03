@@ -63,23 +63,29 @@ Always provide clear explanations for your architectural decisions and suggest a
 ```
 src/
   app/                    — Next.js App Router pages and API routes
-    (marketing)/          — Public marketing pages (landing, pricing, about) [Phase 3]
+    (marketing)/          — Public marketing pages (landing, pricing, blog) [Phase 3 + Blog]
+      blog/               — Blog index + [slug] detail (inside marketing layout)
+    blog/                 — Blog routes outside marketing layout (feed.xml RSS)
     (app)/                — Authenticated app shell [Phase 3]
       dashboard/          — Main product feed, filtered by subscriber's products
       products/           — Product management (add, edit, remove)
       search/             — AI search interface (Monitor+Research tier)
       enforcement/        — Enforcement database (Monitor+Research tier)
     api/
+      blog/route.ts       — Clawdbot POST endpoint (API key auth, upsert on slug) [Blog]
       inngest/route.ts    — Inngest serve handler (EXISTING — add functions here)
       webhooks/           — Stripe + Resend webhook handlers [Phase 4]
     globals.css           — @import "tailwindcss"; only (brand tokens added by brand-guardian)
     layout.tsx            — Root layout
     page.tsx              — Placeholder "coming soon"
-  components/             — Shared React components [to be created]
+  components/             — Shared React components
+    blog/                 — Blog components (PostCard, CategoryFilter, MarkdownContent) [Blog]
+    marketing/            — Marketing site components (Header, Footer, Hero, etc.) [Phase 3]
     ui/                   — Primitives (Badge, Button, Card, Input, etc.)
     regulatory/           — Domain components (RegulatoryCard, UrgencyDot, etc.)
     products/             — Product-specific components
   lib/                    — Business logic and utilities
+    blog/                 — Blog types + server-only query functions [Blog]
     supabase/
       client.ts           — Browser client (EXISTING)
       server.ts           — Server component client (EXISTING)
@@ -108,6 +114,7 @@ src/
 
 supabase/
   migrations/001_initial_schema.sql  — Full v1 schema (EXISTING — apply with supabase db push)
+  migrations/003_blog_posts.sql      — Blog posts table (applied via Supabase MCP)
   seeds/001_sources.sql              — 9 sources + regulatory_categories (EXISTING)
 
 scripts/                — Standalone scripts excluded from tsconfig — run with npx tsx

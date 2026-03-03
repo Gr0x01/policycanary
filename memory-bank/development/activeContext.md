@@ -1,14 +1,14 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-04
+last-updated: 2026-03-05
 maintainer: RB
 status: Active
 ---
 
 # Active Development Context
 
-**Phase:** Cross-reference inference layer built — Steps 1b + 1c implemented, type-check clean
+**Phase:** Blog section shipped — content marketing funnel live. Cross-reference inference layer built.
 **Next up:** Re-run GSRS bootstrap (captures codes), re-enrich existing items, then Phase 4B (Stripe)
 
 ---
@@ -44,6 +44,12 @@ status: Active
 - [x] **Search API route** — `/api/search` POST: Zod validation, auth, rate limit (10/min/IP), embedding via OpenAI, pgvector RPC with graceful fallback, RAG via claudeSonnet, returns `{ answer, citations }`
 - [x] **Products page** — `/app/products` grouped by status (urgent/review/clear), ProductStatusCard, empty state
 - [x] **Mock data** — `src/lib/mock/app-data.ts` with USE_MOCK flag pattern per page (one-line flip when real data exists)
+
+### What's Done (Blog / Content Marketing)
+- [x] **Blog section** — `/blog` index with category filter + ISR, `/blog/[slug]` detail with JSON-LD + OG tags, `/blog/feed.xml` RSS 2.0
+- [x] **Clawdbot API** — POST `/api/blog` with X-API-Key auth, Zod validation, upsert on slug, `published_at` preservation
+- [x] **Migration** — `003_blog_posts` (table, indexes, RLS public read, updated_at trigger)
+- [x] **Code-reviewed** — JSON-LD injection fix, timing-safe key comparison, type-safe query projections (`BlogPostSummary`/`BlogPostRSS`), RSS null guard, content max length
 
 ### Up Next
 - [ ] **Re-run GSRS bootstrap** — reset checkpoint (`echo "" > .gsrs-checkpoint`), run `npx tsx scripts/bootstrap-gsrs.ts` to capture codes into `substance_codes` table. ~169K substances, ~500K-850K codes.

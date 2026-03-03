@@ -16,6 +16,7 @@ You are the frontend developer for Policy Canary. Build in the exact visual lang
 - **UI primitives**: Radix UI for accessible interactive components
 - **Icons**: Lucide React
 - **Animation**: Framer Motion as the primary animation tool. CSS transitions for simple hover states only.
+- **Markdown rendering**: `react-markdown` + `remark-gfm` — used in blog post detail pages. Styled via Tailwind arbitrary variant selectors (no @tailwindcss/typography).
 - **Email**: React Email + Resend
 - **Database client**: Supabase JS client (`src/lib/supabase/`)
 
@@ -41,6 +42,12 @@ src/components/marketing/PricingTable.tsx        — 3-tier pricing table with L
 src/components/marketing/SampleReport.tsx        — hardcoded Marine Collagen Powder report card (BUILT — email mockup pattern)
 src/components/marketing/StatCounter.tsx         — 'use client' count-up animation, useInView + rAF ease-out cubic, useReducedMotion fallback (BUILT)
 src/components/marketing/ProductShowcase.tsx     — 'use client' browser-chrome dashboard mockup, product list sidebar + intelligence detail panel, AnimatePresence slide transition (BUILT)
+src/app/(marketing)/blog/page.tsx                — blog index: CategoryFilter (Suspense), PostCard grid, SignupForm CTA (BUILT)
+src/app/(marketing)/blog/[slug]/page.tsx         — blog post detail: generateStaticParams, ISR 1h, JSON-LD Article, OG tags, MarkdownContent, SignupForm CTA (BUILT)
+src/app/blog/feed.xml/route.ts                   — RSS 2.0 feed, raw XML response outside marketing layout (BUILT)
+src/components/blog/PostCard.tsx                 — server component, category badge + date + excerpt card (BUILT)
+src/components/blog/CategoryFilter.tsx           — 'use client' category pill filter, useSearchParams + URLSearchParams (BUILT)
+src/components/blog/MarkdownContent.tsx          — 'use client' react-markdown + remark-gfm, Tailwind arbitrary variant styling for h2/h3/p/ul/ol/a/blockquote/code/table (BUILT)
 src/app/dashboard/layout.tsx                     — sidebar + main content shell [to build]
 src/app/dashboard/page.tsx                       — product-filtered regulatory feed [to build]
 src/components/RegulatoryCard.tsx                — core regulatory item component [to build]

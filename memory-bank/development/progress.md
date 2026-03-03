@@ -1,7 +1,7 @@
 ---
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-05
 Maintainer: RB
-Status: Active — Cross-reference inference layer built, code-reviewed, type-check clean
+Status: Active — Blog section shipped, cross-reference inference layer built
 ---
 
 # Progress: Policy Canary
@@ -29,6 +29,7 @@ Status: Active — Cross-reference inference layer built, code-reviewed, type-ch
 | Stripe Subscriptions (Phase 4B) | - | Pending |
 | **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed.** |
 | **Cross-Reference Inference Layer** | **2026-03-04** | **Built — Steps 1b + 1c. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap re-run needed.** |
+| **Blog Section** | **2026-03-05** | **Shipped — /blog, /blog/[slug], RSS feed, Clawdbot POST API. Migration 003_blog_posts. Code-reviewed (3 critical + 4 warning fixes). react-markdown + remark-gfm added.** |
 | Inngest wiring (Phase 2C) | - | Pending |
 | Product Onboarding (DSLD + FDC) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
@@ -183,6 +184,20 @@ Status: Active — Cross-reference inference layer built, code-reviewed, type-ch
 - **Products** (`/app/products`) — grouped by status (urgent/review/clear). `ProductStatusCard` component, empty state.
 - **Mock data** (`src/lib/mock/app-data.ts`) — `USE_MOCK` flag pattern: one-line swap from mock to real Supabase queries when enrichment pipeline is live.
 - Commits: `b9122b6` through `b5543f6`.
+
+### 2026-03-05 — Blog Section + Clawdbot Write Path
+
+- **Blog pages** — `/blog` index (server component, category filter via URL params, `Suspense`-wrapped `CategoryFilter` client component), `/blog/[slug]` detail (ISR with `revalidate = 3600`, `generateStaticParams`, JSON-LD Article structured data, OG tags via `generateMetadata`). Both inside `(marketing)` route group (gets Header + Footer).
+- **Components** — `PostCard` (server, `BlogPostSummary` type), `CategoryFilter` (`"use client"`, `useSearchParams` + `URLSearchParams`), `MarkdownContent` (`"use client"`, `react-markdown` + `remark-gfm`, Tailwind arbitrary variant styling).
+- **API route** (`/api/blog`) — POST endpoint for Clawdbot. `X-API-Key` auth with `timingSafeEqual`. Zod validation (slug regex, content max 500K, category derived from `BLOG_CATEGORIES`). Upsert on slug. `published_at` preserved on re-publish. `{ data, error }` envelope matching signup route pattern.
+- **RSS feed** (`/blog/feed.xml`) — RSS 2.0 with `atom:link` self-reference, `lastBuildDate`, XML escaping. Outside `(marketing)` route group (raw XML response). `revalidate = 3600`.
+- **Migration** — `003_blog_posts` applied via Supabase MCP. Table with slug (unique), title, excerpt, content (markdown), category (CHECK), status (draft/published), published_at, seo_title, seo_description. RLS enabled: public read for published posts only. Service role bypasses for writes.
+- **Types** — `BlogPost` (full row), `BlogPostSummary` (index queries), `BlogPostRSS` (feed queries). Eliminates unsafe `as BlogPost` casts on partial selects.
+- **Nav** — Blog link added to Header (via `NavLink` component with active indicator) and Footer.
+- **Dependencies** — `react-markdown`, `remark-gfm` installed.
+- **Env** — `BLOG_API_KEY` required in `.env.local`.
+- **Code review fixes** — (1) JSON-LD `</script>` injection: escape `<` as `\u003c`. (2) `BLOG_API_KEY` runtime guard: 500 if unset. (3) Timing-safe API key comparison via `crypto.timingSafeEqual`. (4) Type-safe query projections. (5) RSS null `published_at` filter. (6) `CategoryFilter` preserves existing URL params. (7) Content max length 500K. (8) `<time>` semantic elements. (9) Richer JSON-LD (`dateModified`, `url`). (10) RSS `lastBuildDate`. (11) Zod category enum derived from `BLOG_CATEGORIES`.
+- **Build clean.** `npm run build` passes.
 
 ### 2026-03-04 — Cross-Reference Inference Layer (Steps 1b + 1c)
 

@@ -22,6 +22,7 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **State Management**: React Context + useState/useReducer
 - **Styling**: Tailwind CSS 4
 - **UI Components**: Custom components + Lucide React icons
+- **Markdown**: `react-markdown` + `remark-gfm` (blog post rendering)
 - **Search**: AI search interface (RAG with pgvector)
 
 ### Infrastructure
@@ -84,6 +85,9 @@ STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
 
 # Email (Required for digest delivery)
 RESEND_API_KEY=your_resend_key  # or POSTMARK_SERVER_TOKEN
+
+# Blog (Clawdbot write path)
+BLOG_API_KEY=your_blog_api_key  # X-API-Key header for POST /api/blog
 
 # Analytics (Optional)
 NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key

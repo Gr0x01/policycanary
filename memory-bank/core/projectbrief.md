@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-05
 Maintainer: RB
 Status: Active
 ---
@@ -276,7 +276,7 @@ Detailed research: `/memory-bank/research/data-sources.md`
 
 ## Go-to-Market
 
-- **Content marketing:** Blog posts analyzing regulatory trends, LinkedIn thought leadership. The weekly update email (free) IS the content marketing — demonstrates value, builds audience.
+- **Content marketing:** Blog section live at `/blog` — warning letter analyses, regulatory trend posts, weekly roundups. Clawdbot (OpenClaw on Vultr VPS) drafts posts via `/api/blog` POST, publishes after Discord approval. RSS feed at `/blog/feed.xml`. The weekly update email (free) IS the content marketing — demonstrates value, builds audience.
 - **Homepage product shot:** Show a real personalized product intelligence email. "This is what you'd get for YOUR products." Makes the value immediately tangible.
 - **Trial:** Full product experience — add your products, get real intelligence. Converts without requiring a sales call.
 - **LinkedIn outreach:** Low volume, high intent — 30-50 targeted conversations

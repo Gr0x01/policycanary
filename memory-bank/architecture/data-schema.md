@@ -1,7 +1,7 @@
 ---
 Title: Data Schema v1
 Version: v1
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-05
 Maintainer: RB
 Status: Active
 ---
@@ -1417,3 +1417,4 @@ INSERT INTO sources (name, source_type, base_url) VALUES
 | 23 | email_campaigns | Users & Email | Digest/alert assembly (generic + per-subscriber) |
 | 24 | email_campaign_items | Users & Email | Items included in each campaign |
 | 25 | email_sends | Users & Email | Individual dispatch records with delivery tracking |
+| 26 | blog_posts | Blog (standalone) | Clawdbot-authored posts, public read for published, upsert on slug |

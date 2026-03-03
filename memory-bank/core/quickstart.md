@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-05
 Maintainer: RB
 Status: Active
 ---
@@ -8,7 +8,7 @@ Status: Active
 
 ## Current State
 
-- **Status**: Cross-reference inference layer built — Steps 1b (deterministic use-context lookup) + 1c (Gemini 2.5 Pro reasoning). Type-check clean. GSRS bootstrap needs re-run to capture codes.
+- **Status**: Blog section shipped — `/blog`, `/blog/[slug]`, RSS feed, Clawdbot API. Cross-reference inference layer built. Type-check clean.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Next**: Re-run GSRS bootstrap (codes), re-enrich existing items, then Phase 4B (Stripe)
@@ -17,7 +17,7 @@ Status: Active
 
 ## What's Happening
 
-Cross-reference inference layer built. Step 1b: deterministic GSRS code → use-context mapping (food additive, supplement, cosmetic, pharma, etc.). Step 1c: Gemini 2.5 Pro with thinking (budget: 4096) reasons about cross-segment risk transfer. Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). `signal_source` column on `segment_impacts` and `item_enrichment_tags` distinguishes direct from inferred signals. Non-fatal failure mode — Step 1c errors don't break enrichment. **GSRS bootstrap must be re-run** to capture codes into new `substance_codes` table. Then re-enrich 422 WLs (one pass with cross-reference).
+Blog section shipped. SEO-ready `/blog` index (category filter, ISR), `/blog/[slug]` detail pages (JSON-LD, OG tags), RSS feed at `/blog/feed.xml`, and POST API at `/api/blog` for Clawdbot (API key auth, upsert on slug, `published_at` preservation). Migration `003_blog_posts` applied. `BLOG_API_KEY` env var required. Cross-reference inference layer built (Steps 1b + 1c). **GSRS bootstrap must be re-run** to capture codes. Then re-enrich 422 WLs.
 
 ---
 
@@ -87,6 +87,7 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 - [x] **Web app MVP (Phase 6)** — feed, item detail, search, products. AppNav, mock data layer (USE_MOCK flag). `/app/dashboard` redirects to `/app/feed`.
 - [x] **Enrichment pipeline (Phase 2B)** — stabilized. Content-fetch, prompt fixes, golden tests 10/10.
 - [x] **Cross-reference inference layer** — Steps 1b + 1c built. Schema migration applied. Type-check clean. GSRS bootstrap updated. KEY DIFFERENTIATOR.
+- [x] **Blog section** — `/blog`, `/blog/[slug]`, RSS feed, Clawdbot POST API. Migration `003_blog_posts`. Code-reviewed (3 critical + 4 warning fixes applied).
 - [ ] Re-run GSRS bootstrap (captures codes into `substance_codes`)
 - [ ] Re-enrich existing 422 WLs (with cross-reference, one pass)
 - [ ] Stripe subscriptions (Phase 4B)
@@ -118,6 +119,9 @@ OPENAI_API_KEY=...
 
 # Email
 RESEND_API_KEY=...  # or POSTMARK_SERVER_TOKEN
+
+# Blog (Clawdbot write path)
+BLOG_API_KEY=...    # X-API-Key header for POST /api/blog
 
 # Analytics
 NEXT_PUBLIC_POSTHOG_KEY=...

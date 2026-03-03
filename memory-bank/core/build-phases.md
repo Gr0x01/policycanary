@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-05
 Maintainer: RB
 Status: Active
 ---
@@ -119,6 +119,8 @@ src/
       page.tsx                                      (Phase 3)
       pricing/page.tsx                              (Phase 3)
       sample/page.tsx                               (Phase 3)
+      blog/page.tsx                                 (Blog)
+      blog/[slug]/page.tsx                          (Blog)
     login/page.tsx                                  (Phase 4A — magic link form)
     auth/callback/route.ts                          (Phase 4A — PKCE exchange + users upsert)
     app/
@@ -139,7 +141,9 @@ src/
       products/page.tsx                             (Phase 4B)
       products/[id]/page.tsx                        (Phase 6, stretch)
       onboarding/page.tsx                           (Phase 4B)
+    blog/feed.xml/route.ts                          (Blog — RSS feed)
     api/
+      blog/route.ts                                 (Blog — Clawdbot POST)
       signup/route.ts                               (Phase 3)
       stripe/
         checkout/route.ts                           (Phase 4)
@@ -153,6 +157,9 @@ src/
         pipeline/route.ts                           (Phase 2C)
         email-weekly/route.ts                       (Phase 5)
   lib/
+    blog/
+      types.ts                                      (Blog — BlogPost, BlogCategory, CATEGORY_LABELS)
+      queries.ts                                    (Blog — getPublishedPosts, getPostBySlug, getPostsForRSS)
     supabase/
       client.ts                                     (Phase 1)
       server.ts                                     (Phase 1)
@@ -209,6 +216,10 @@ src/
       matcher.ts                                    (Phase 4C)
       normalizer.ts                                 (Phase 4C)
   components/
+    blog/
+      PostCard.tsx                                  (Blog)
+      CategoryFilter.tsx                            (Blog)
+      MarkdownContent.tsx                           (Blog)
     marketing/
       Header.tsx                                    (Phase 3)
       Footer.tsx                                    (Phase 3)
