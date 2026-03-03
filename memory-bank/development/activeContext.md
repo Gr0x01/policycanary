@@ -8,8 +8,8 @@ status: Active
 
 # Active Development Context
 
-**Phase:** Phase 2A-2 Complete — All 4 data fetchers built and tested
-**Next up:** Phase 2B (LLM enrichment pipeline) — required before full backfills make sense
+**Phase:** Phase 4A Complete — Magic link auth live end-to-end
+**Next up:** Phase 4B (Stripe subscriptions) to complete the conversion surface
 
 ---
 
@@ -32,10 +32,11 @@ status: Active
 - [x] **Phase 2A-1 complete** — FR + openFDA enforcement fetchers in `src/pipeline/fetchers/`. Test with `npm run pipeline:fr-backfill` / `npm run pipeline:enforcement-backfill`
 - [x] **Phase 2A-2 complete** — Warning Letters + FDA RSS fetchers. `npm run pipeline:wl-incremental` / `npm run pipeline:wl-backfill` / `npm run pipeline:rss-poll`. Uses `fast-xml-parser`.
 - [x] **Phase 3 complete** — Marketing site: landing page, pricing page, sample report page, email signup API. Design tokens in globals.css, IBM Plex fonts, framer-motion animations. All routes static-rendered. `npm run build` passes clean.
+- [x] **Phase 4A complete** — Magic link auth. `src/proxy.ts` (session refresh + route protection), `/login` (magic link form), `/auth/callback` (PKCE exchange + `public.users` upsert), `/app/layout` (server auth guard), `/app/dashboard` (placeholder + sign out). Dev bypass via `NODE_ENV === 'development'`. Tested end-to-end. `NEXT_PUBLIC_SITE_URL` in `.env.local`. Supabase redirect allowlist configured for localhost + policycanary.io.
 
 ### Up Next
+- [ ] **Phase 4B: Stripe subscriptions** — checkout, webhook, access_level update on `public.users`
 - [ ] **Phase 2B: Enrichment pipeline** — Gemini Flash tagging, embeddings, segment classification. Gating dependency for full backfills.
-- [ ] Phase 4: Auth + Stripe (next conversion surface)
 - [ ] Wire fetchers into Inngest functions (Phase 2C)
 - [ ] Product onboarding (DSLD + FDC integration)
 

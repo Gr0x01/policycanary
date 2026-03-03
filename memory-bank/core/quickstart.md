@@ -8,16 +8,16 @@ Status: Active
 
 ## Current State
 
-- **Status**: Phase 2A-2 complete — All 4 data fetchers built and tested. Marketing site live. Supabase has real data.
+- **Status**: Phase 4A complete — Magic link auth working end-to-end. Marketing site live. Data pipeline built. Supabase has real data.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Next**: Phase 4 (Auth + Stripe) or Phase 2C (Inngest wiring)
+- **Next**: Phase 4B (Stripe subscriptions) or Phase 2B (LLM enrichment)
 
 ---
 
 ## What's Happening
 
-Product-level model is locked in. Data schema v1 live in Supabase. Marketing site up. All 4 data fetchers built and tested (FR, openFDA, Warning Letters, FDA RSS). Full backfills are deferred until LLM enrichment is wired — ingesting raw data without enrichment creates unprocessed noise. Next conversion surface is Auth + Stripe.
+Auth is live. Users can sign in via magic link → land on `/app/dashboard`. `public.users` row is created on first login. Marketing site, data pipeline (4 fetchers), and auth are all done. Full data backfills are deferred until LLM enrichment is wired. Next: Stripe subscriptions (Phase 4B) to complete the conversion surface.
 
 ---
 
@@ -76,12 +76,13 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 - [x] **Marketing site** — landing, pricing, sample report, signup API. Static-rendered. Build passes.
 - [x] **Data pipeline: FR + openFDA** — fetchers built, tested. 175 items + 109 enforcement details in DB.
 - [x] Data pipeline: Warning Letters + FDA RSS (Phase 2A-2)
+- [x] **Auth: Magic link** — `/login`, `/auth/callback`, `/app/dashboard`, `proxy.ts`. Verified end-to-end.
+- [ ] Stripe subscriptions (Phase 4B)
 - [ ] Wire fetchers into Inngest (Phase 2C)
 - [ ] Enrichment pipeline (Gemini Flash + embeddings)
 - [ ] Product onboarding (DSLD + FDC integration)
 - [ ] Product intelligence email MVP
 - [ ] Web app — search + enforcement DB
-- [ ] Auth & subscription (Stripe)
 - [ ] Validation — sample emails, trial signups
 - [ ] Launch
 - [ ] **Expansion:** State compliance layer (month 3-5)
@@ -96,6 +97,9 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 NEXT_PUBLIC_SUPABASE_URL=...
 NEXT_PUBLIC_SUPABASE_ANON_KEY=...
 SUPABASE_SERVICE_ROLE_KEY=...
+
+# Auth
+NEXT_PUBLIC_SITE_URL=http://localhost:3000  # used in magic link emailRedirectTo
 
 # LLM
 GEMINI_API_KEY=...

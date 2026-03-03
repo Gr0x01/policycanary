@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-03
 Maintainer: RB
-Status: Active — Phase 2A-2 complete
+Status: Active — Phase 4A complete
 ---
 
 # Progress: Policy Canary
@@ -28,7 +28,8 @@ Status: Active — Phase 2A-2 complete
 | Product Onboarding (DSLD + FDC) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
 | Web App (search + enforcement DB) | - | Pending |
-| Auth & Subscriptions (Stripe) | - | Pending |
+| **Auth: Magic Link (Phase 4A)** | **2026-03-03** | **Done — verified end-to-end. Magic link → PKCE exchange → public.users upsert → dashboard.** |
+| Stripe Subscriptions (Phase 4B) | - | Pending |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
 
@@ -149,6 +150,16 @@ Status: Active — Phase 2A-2 complete
 - **Dev test script** (`scripts/run-fetcher.ts`) — loads `.env.local`, runs narrow Jan–Feb 2025 window
 - **npm scripts** — `pipeline:fr-backfill`, `pipeline:enforcement-backfill`
 - **Tested against real APIs**: 66 FR docs + 109 recalls inserted, 2 `pipeline_runs` logged as `success`, `enforcement_details` 1:1 with recalls. `npm run type-check` clean.
+
+### 2026-03-03 — Phase 4A: Auth (Magic Link)
+
+- **`src/proxy.ts`** — Next.js 16 middleware (exports `proxy` function). Refreshes Supabase session on every request, redirects unauthenticated users from `/app/*` to `/login`, redirects authenticated users away from `/login` to `/app/dashboard`. Dev bypass: skips all checks when `NODE_ENV === 'development'`.
+- **`/login`** (`src/app/login/page.tsx`) — `"use client"`, magic link form using `supabase.auth.signInWithOtp({ shouldCreateUser: true })`. `useSearchParams` in child component wrapped in `<Suspense>` (required for static prerender). Shows "Check your inbox" success state with submitted email in canary yellow. Dev bypass link ("↳ dev bypass") visible only in development.
+- **`/auth/callback`** (`src/app/auth/callback/route.ts`) — PKCE code exchange via `exchangeCodeForSession`. On success: upserts into `public.users` via `adminClient` (creates row on first login, no-op on re-login; `access_level` defaults to `'free'` in DB). Redirects to `/app/dashboard`. Error paths redirect to `/login?error=...`.
+- **`/app/layout`** (`src/app/app/layout.tsx`) — Server component, belt-and-suspenders auth check (middleware is primary). Wraps app shell in dark surface.
+- **`/app/dashboard`** (`src/app/app/dashboard/page.tsx`) — Server component. Shows user email. "Dashboard coming soon" placeholder. Sign-out via `"use server"` form action. Dev mode shows `dev@localhost`.
+- **Env**: `NEXT_PUBLIC_SITE_URL=http://localhost:3000` in `.env.local`. Supabase Auth → URL Configuration: redirect allowlist includes both `http://localhost:3000/auth/callback` and `https://policycanary.io/auth/callback`.
+- **Verified end-to-end**: magic link email received, PKCE exchange succeeded, `public.users` row created with `access_level = 'free'`, sign-out returns to `/login`.
 
 ### 2026-03-03 — Phase 3: Marketing Site
 
