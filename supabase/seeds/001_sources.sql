@@ -9,8 +9,8 @@ INSERT INTO sources (name, source_type, base_url) VALUES
   ('openfda_caers',      'api',    'https://api.fda.gov/food/event.json'),
   ('fda_rss',            'rss',    'https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds'),
   ('warning_letters',    'scrape', 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/compliance-actions-and-activities/warning-letters'),
-  ('prop65',             'api',    'https://oehha.ca.gov/proposition-65/proposition-65-list'),
-  ('cscp',               'api',    'https://www.calhhs.ca.gov/applications/safe-cosmetics/search/'),
+  ('prop65',             'csv',    'https://oehha.ca.gov/media/downloads/proposition-65/p65plain.csv'),
+  ('cscp',               'csv',    'https://www.calhhs.ca.gov/applications/safe-cosmetics/search/'),
   ('dsld',               'api',    'https://api.ods.od.nih.gov/dsld/'),
   ('usda_fdc',           'api',    'https://api.nal.usda.gov/fdc/v1')
 ON CONFLICT (name) DO NOTHING;

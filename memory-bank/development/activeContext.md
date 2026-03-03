@@ -109,6 +109,11 @@ status: Active
 
 **Phase 2A-1: Build the Federal Register ingestion Inngest function. Fetch docs from FR API, insert into `regulatory_items`, log to `pipeline_runs`.**
 
+## Infrastructure Status
+- **GitHub**: https://github.com/Gr0x01/policycanary (main branch, pushed 2026-03-03)
+- **Supabase**: Schema live — 25 tables, RLS enabled, seed data applied
+- **Local**: `npm run dev` starts on localhost:3000
+
 ## Phase 1 File Map (Scaffolded 2026-03-03)
 
 ```

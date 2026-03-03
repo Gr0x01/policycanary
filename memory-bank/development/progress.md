@@ -19,6 +19,7 @@ Status: Active
 | **Data Schema v1** | **2026-03-03** | **Done — 25 tables, 9 layers, substances-based matching** |
 | Build Phase Revision | 2026-03-03 | Done — Phase 1 plan executed directly |
 | **Project Scaffolding** | **2026-03-03** | **Done — Next.js 16, AI SDK v6, Supabase, Inngest, Tailwind v4** |
+| **Schema Live (Supabase)** | **2026-03-03** | **Done — 25 tables, RLS, seeds applied. GitHub: Gr0x01/policycanary** |
 | Data Pipeline (Federal Register + openFDA + RSS) | - | Pending |
 | Product Onboarding (DSLD + FDC) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |

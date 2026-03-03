@@ -26,10 +26,11 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 
 ### Infrastructure
 - **Hosting**: Vercel (seamless Next.js integration)
-- **Database Hosting**: Supabase (managed Postgres)
+- **Database Hosting**: Supabase (managed Postgres) — **schema live, 25 tables applied**
 - **CDN**: Vercel Edge Network (included)
 - **Analytics**: PostHog (product analytics)
-- **Email**: TBD (for digest delivery — Resend or Postmark)
+- **Email**: Resend (chosen)
+- **GitHub**: https://github.com/Gr0x01/policycanary
 
 ### Data Pipeline
 - **Federal Register**: JSON API → parse → enrich with LLM → store

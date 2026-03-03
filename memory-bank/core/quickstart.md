@@ -8,8 +8,10 @@ Status: Planning
 
 ## Current State
 
-- **Status**: Pre-build — schema done, pricing done, build phases need revision then scaffolding
+- **Status**: Phase 1 complete — project scaffolded, schema live in Supabase, code on GitHub
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
+- **GitHub**: https://github.com/Gr0x01/policycanary
+- **Next**: Phase 2A-1 — Federal Register ingestion (Inngest function)
 
 ---
 
@@ -64,8 +66,9 @@ npm run test:e2e:ui      # Interactive mode
 - [x] **Product-level pivot** — product-centric model, new pricing research, new market sizing
 - [x] Pricing finalization — Monitor $49/mo, Monitor+Research $249/mo, +$6/product
 - [x] **Data schema v1** — 25 tables, 9 layers, substances-based matching, flexible classification
-- [ ] Build phase revision
-- [ ] Project setup (Next.js, Supabase, Tailwind)
+- [x] Build phase revision
+- [x] **Project setup** — Next.js 16, Supabase, Tailwind v4, AI SDK v6, Inngest
+- [x] **Schema live** — 25 tables applied to Supabase, RLS enabled, seeds run
 - [ ] Data pipeline — Federal Register + openFDA + RSS
 - [ ] Product onboarding (DSLD + FDC integration)
 - [ ] Product intelligence email MVP
