@@ -1,23 +1,23 @@
 ---
 Last-Updated: 2026-03-03
 Maintainer: RB
-Status: Planning
+Status: Active
 ---
 
 # Quickstart: Policy Canary
 
 ## Current State
 
-- **Status**: Phase 1 complete — project scaffolded, schema live in Supabase, code on GitHub
+- **Status**: Phase 2A-2 complete — All 4 data fetchers built and tested. Marketing site live. Supabase has real data.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Next**: Phase 2A-1 — Federal Register ingestion (Inngest function)
+- **Next**: Phase 4 (Auth + Stripe) or Phase 2C (Inngest wiring)
 
 ---
 
 ## What's Happening
 
-Product-level model is locked in. Data schema v1 is complete (25 tables, 9 layers, substances-based matching). Pricing finalized (Monitor $49/mo, Monitor+Research $249/mo, +$6/product). Next: revise build phases for the new schema, then scaffold and start building.
+Product-level model is locked in. Data schema v1 live in Supabase. Marketing site up. All 4 data fetchers built and tested (FR, openFDA, Warning Letters, FDA RSS). Full backfills are deferred until LLM enrichment is wired — ingesting raw data without enrichment creates unprocessed noise. Next conversion surface is Auth + Stripe.
 
 ---
 
@@ -36,7 +36,7 @@ Product-level model is locked in. Data schema v1 is complete (25 tables, 9 layer
 ## Key Commands
 
 ```bash
-# Development (once scaffolded)
+# Development
 npm run dev              # Start dev server (localhost:3000)
 npm run build            # Production build
 npm run type-check       # TypeScript verification
@@ -45,11 +45,15 @@ npm run type-check       # TypeScript verification
 npm run test:e2e         # Playwright tests
 npm run test:e2e:ui      # Interactive mode
 
-# Data Pipeline (TBD)
-# npm run pipeline:federal-register   # Fetch Federal Register data
-# npm run pipeline:openfda            # Fetch openFDA enforcement data
-# npm run pipeline:warning-letters    # Fetch FDA warning letters
-# npm run pipeline:email              # Generate and send email digest
+# Data Pipeline (test window: Jan–Feb 2025 for date-ranged fetchers)
+npm run pipeline:fr-backfill            # Federal Register backfill
+npm run pipeline:enforcement-backfill   # openFDA enforcement/recalls backfill
+npm run pipeline:wl-backfill            # Warning letters full backfill (~3,313 records, ~11 min) — run AFTER LLM enrichment is wired
+npm run pipeline:wl-incremental         # Warning letters incremental (recent, stops on known page)
+npm run pipeline:rss-poll               # Poll all 8 FDA RSS feeds
+
+# One-time seeds
+npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 ```
 
 ---
@@ -69,7 +73,11 @@ npm run test:e2e:ui      # Interactive mode
 - [x] Build phase revision
 - [x] **Project setup** — Next.js 16, Supabase, Tailwind v4, AI SDK v6, Inngest
 - [x] **Schema live** — 25 tables applied to Supabase, RLS enabled, seeds run
-- [ ] Data pipeline — Federal Register + openFDA + RSS
+- [x] **Marketing site** — landing, pricing, sample report, signup API. Static-rendered. Build passes.
+- [x] **Data pipeline: FR + openFDA** — fetchers built, tested. 175 items + 109 enforcement details in DB.
+- [x] Data pipeline: Warning Letters + FDA RSS (Phase 2A-2)
+- [ ] Wire fetchers into Inngest (Phase 2C)
+- [ ] Enrichment pipeline (Gemini Flash + embeddings)
 - [ ] Product onboarding (DSLD + FDC integration)
 - [ ] Product intelligence email MVP
 - [ ] Web app — search + enforcement DB

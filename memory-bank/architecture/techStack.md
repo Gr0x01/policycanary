@@ -35,6 +35,7 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 ### Data Pipeline
 - **Federal Register**: JSON API → parse → enrich with LLM → store
 - **FDA.gov**: Structured pages / scraping → parse → enrich → store
+- **XML parsing**: **`fast-xml-parser`** — used by the RSS fetcher to parse FDA RSS feeds in Node.js (no DOMParser in Node)
 - **Scheduling**: **Inngest** (background jobs, pipeline orchestration, retries)
   - `/api/inngest` route registered in Next.js
   - `INNGEST_SIGNING_KEY` required in env

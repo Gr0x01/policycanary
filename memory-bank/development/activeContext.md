@@ -8,8 +8,8 @@ status: Active
 
 # Active Development Context
 
-**Phase:** Phase 1 Complete — Foundation scaffolded, moving to Phase 2A-1 (Federal Register pipeline)
-**Goal:** Build data pipeline starting with Federal Register + openFDA
+**Phase:** Phase 2A-2 Complete — All 4 data fetchers built and tested
+**Next up:** Phase 2B (LLM enrichment pipeline) — required before full backfills make sense
 
 ---
 
@@ -29,13 +29,22 @@ status: Active
 - [x] Pricing finalization — Monitor $49/mo, Monitor+Research $249/mo, +$6/product beyond 5 included
 - [x] **Data schema v1 complete** — 25 tables across 9 layers, substances-based product matching, flexible classification. See `architecture/data-schema.md`
 - [x] **Phase 1 scaffolded** — Next.js 16, Tailwind v4, Supabase clients, AI SDK v6, Inngest, TypeScript types, Playwright config
+- [x] **Phase 2A-1 complete** — FR + openFDA enforcement fetchers in `src/pipeline/fetchers/`. Test with `npm run pipeline:fr-backfill` / `npm run pipeline:enforcement-backfill`
+- [x] **Phase 2A-2 complete** — Warning Letters + FDA RSS fetchers. `npm run pipeline:wl-incremental` / `npm run pipeline:wl-backfill` / `npm run pipeline:rss-poll`. Uses `fast-xml-parser`.
+- [x] **Phase 3 complete** — Marketing site: landing page, pricing page, sample report page, email signup API. Design tokens in globals.css, IBM Plex fonts, framer-motion animations. All routes static-rendered. `npm run build` passes clean.
 
 ### Up Next
-- [ ] Data pipeline Phase 2A-1: Federal Register ingestion (Inngest function + API fetch)
-- [ ] Data pipeline Phase 2A-2: openFDA enforcement + recalls
-- [ ] Data pipeline Phase 2A-3: FDA RSS feeds
-- [ ] Enrichment pipeline (Gemini Flash/Pro + embeddings)
+- [ ] **Phase 2B: Enrichment pipeline** — Gemini Flash tagging, embeddings, segment classification. Gating dependency for full backfills.
+- [ ] Phase 4: Auth + Stripe (next conversion surface)
+- [ ] Wire fetchers into Inngest functions (Phase 2C)
 - [ ] Product onboarding (DSLD + FDC integration)
+
+### Deferred Until Phase 2B Enrichment Is Built
+Full backfills are intentionally held back. Ingesting thousands of raw records without enrichment creates unprocessable noise — no segment tags, no embeddings, no substance extractions. Run these only once the enrichment pipeline runs alongside the fetchers.
+
+- `npm run pipeline:wl-backfill` — full 3,313 warning letters (~11 min). Currently 422 in DB from a mid-session partial run.
+- `npm run pipeline:fr-backfill` — Federal Register full history (currently 66 items from Jan 2025 test window only)
+- `npm run pipeline:enforcement-backfill` — openFDA full history (currently 109 items from Jan 2025 test window only)
 
 ---
 
@@ -105,46 +114,27 @@ status: Active
 
 ---
 
-## Next Action
-
-**Phase 2A-1: Build the Federal Register ingestion Inngest function. Fetch docs from FR API, insert into `regulatory_items`, log to `pipeline_runs`.**
-
 ## Infrastructure Status
-- **GitHub**: https://github.com/Gr0x01/policycanary (main branch, pushed 2026-03-03)
-- **Supabase**: Schema live — 25 tables, RLS enabled, seed data applied
+- **GitHub**: https://github.com/Gr0x01/policycanary (main branch)
+- **Supabase**: Schema live — 25 tables, RLS enabled, seed data applied. 175 regulatory items + 109 enforcement details in DB.
 - **Local**: `npm run dev` starts on localhost:3000
 
-## Phase 1 File Map (Scaffolded 2026-03-03)
+## Pipeline File Map
 
 ```
-src/
-  app/
-    layout.tsx            # Root layout, minimal
-    page.tsx              # "coming soon" placeholder
-    globals.css           # @import "tailwindcss"; only
-    api/inngest/route.ts  # Inngest serve handler
-  lib/
-    supabase/client.ts    # Browser client
-    supabase/server.ts    # Server component client
-    supabase/admin.ts     # Service role client (pipeline use)
-    ai/gemini.ts          # geminiFlash + geminiPro
-    ai/anthropic.ts       # claudeSonnet
-    ai/openai.ts          # generateEmbedding()
-    inngest/client.ts     # Inngest client
-  types/
-    database.ts           # Hand-written DB types (all 25 tables)
-    enums.ts              # Shared string literal types
-    api.ts                # API request/response types
-
-supabase/
-  migrations/001_initial_schema.sql  # Full v1 schema
-  seeds/001_sources.sql              # 9 sources + category rows
+src/pipeline/fetchers/
+  utils.ts                          # FetcherResult, parseFdaDate, dateWindowsFor, sleep, logPipelineRun
+  federal-register.ts               # FR fetcher — accepts SupabaseClient, mode, date range
+  openfda-enforcement.ts            # Recall fetcher — accepts SupabaseClient, mode, date range
+  warning-letters.ts                # WL fetcher — AJAX list + per-letter page scraping, MARCS extraction
+  fda-rss.ts                        # RSS fetcher — polls 8 FDA feeds via fast-xml-parser
+  schemas/
+    federal-register.ts             # Zod: FRListResponseSchema, FRDetailDocumentSchema
+    openfda-enforcement.ts          # Zod: EnforcementResponseSchema
+    warning-letters.ts              # Zod: WLRowSchema, WLAjaxResponseSchema
+    rss.ts                          # Zod: RssItemSchema
 
 scripts/
-  bootstrap-gsrs.ts       # One-time GSRS substances seed
-
-e2e/.gitkeep              # Playwright placeholder
-playwright.config.ts
-.env.local.example
-vercel.json               # Cron stub
+  run-fetcher.ts                    # Dev CLI: fr-backfill, enforcement-backfill, wl-backfill, wl-incremental, rss-poll
+  bootstrap-gsrs.ts                 # One-time: seeds 169K FDA substances
 ```

@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-03
 Maintainer: RB
-Status: Active
+Status: Active — Phase 2A-2 complete
 ---
 
 # Progress: Policy Canary
@@ -20,7 +20,11 @@ Status: Active
 | Build Phase Revision | 2026-03-03 | Done — Phase 1 plan executed directly |
 | **Project Scaffolding** | **2026-03-03** | **Done — Next.js 16, AI SDK v6, Supabase, Inngest, Tailwind v4** |
 | **Schema Live (Supabase)** | **2026-03-03** | **Done — 25 tables, RLS, seeds applied. GitHub: Gr0x01/policycanary** |
-| Data Pipeline (Federal Register + openFDA + RSS) | - | Pending |
+| **Marketing Site** | **2026-03-03** | **Done — landing page, pricing, sample report, signup API** |
+| **Data Pipeline: FR + openFDA** | **2026-03-03** | **Done — fetchers built + tested. 175 items, 109 enforcement details in DB** |
+| **Data Pipeline: Warning Letters + RSS** | **2026-03-03** | **Done — fetchers built + tested. 422 WL items in DB (partial; full 3,313-record backfill deferred to Phase 2B). 131 RSS items. 364 MARCS numbers extracted.** |
+| Enrichment Pipeline (Phase 2B) | - | Pending — blocks full backfills |
+| Inngest wiring (Phase 2C) | - | Pending |
 | Product Onboarding (DSLD + FDC) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
 | Web App (search + enforcement DB) | - | Pending |
@@ -34,10 +38,10 @@ Status: Active
 
 | Source | Coverage | Status |
 |--------|----------|--------|
-| Federal Register API | Rules, proposed rules, notices (1994-present) | Researched — no auth, JSON, ready to build |
-| openFDA API | Enforcement/recalls, adverse events (2004-present) | Researched — free key, JSON, ready to build |
-| FDA RSS Feeds | Recalls, safety alerts, press releases (13+ feeds) | Researched — no auth, ready to build |
-| FDA Warning Letters | ~3,300 letters, all centers | Researched — XLSX export + scraping, Phase 2 |
+| Federal Register API | Rules, proposed rules, notices (1994-present) | **Live** — fetcher built, 66 docs inserted (Jan 2025 test) |
+| openFDA API | Enforcement/recalls, adverse events (2004-present) | **Live** — fetcher built, 109 recalls inserted (Jan 2025 test) |
+| FDA RSS Feeds | Recalls, safety alerts, press releases (8 feeds) | **Live** — fda-rss fetcher built. 131 items inserted (first poll). |
+| FDA Warning Letters | ~3,313 letters, all centers | **Live** — warning-letters fetcher built. AJAX + per-letter scraping. MARCS-CMS extraction. |
 | Regulations.gov | Comment periods, dockets | Researched — free key, Phase 2 |
 | FDA Data Dashboard | Inspections, 483s, compliance actions | Researched — requires registration, Phase 3 |
 | State regulations | Prop 65, state-level rules | Deferred (expansion) |
@@ -78,6 +82,7 @@ Status: Active
 | 2026-03-03 | **100 product self-serve cap** | Beyond 100 is a different UX and cost problem. Custom pricing via sales conversation. |
 | 2026-03-03 | **Pricing finalized: $49/$249 + $6/product** | Monitor $49/mo, Monitor+Research $249/mo. Both include 5 products, $6/product beyond. $200 gap reflects research platform as moat. 5.1x multiplier validated by Westlaw/LexisNexis/Gartner comparables. |
 | 2026-03-03 | **Research platform = the moat** | Enforcement DB, AI search, trends, regulatory archive. Fills $100-$500/mo gap between free FDA tools and $25K+ enterprise. One Redica 483 doc costs $289 — our full platform is $249/mo. |
+| 2026-03-03 | **Full backfills deferred until Phase 2B enrichment** | Don't flood DB with thousands of unenriched records. Raw ingestion without segment tags, embeddings, and substance extractions creates noise that's expensive to reprocess. Backfills run once the enrichment pipeline exists and can run alongside. |
 
 ---
 
@@ -124,6 +129,38 @@ Status: Active
   - **Deferred expansion tables**: state compliance (chemicals, state_chemical_bans, cosmetic_chemical_reports) and adverse events deferred to when those features are built.
 - **Research findings preserved**: FDA industry codes (53=cosmetics, 54=supplements), openFDA enforcement classification gap (supplements/cosmetics both show as "Food"), warning letters have zero structured metadata, CFR references are the structural hook for Federal Register classification.
 - Schema saved to `architecture/data-schema.md`.
+
+### 2026-03-03 — Phase 2A-2: Data Pipeline (Warning Letters + FDA RSS)
+
+- **Warning letters fetcher** (`src/pipeline/fetchers/warning-letters.ts`) — paginates FDA DataTables AJAX endpoint (100/page), fetches each letter page for full text + MARCS-CMS number extraction, 200ms rate limiting on page fetches, `backfill` + `incremental` modes (incremental stops when a full page is all known). Date fields returned as `<time datetime="...">` HTML — parsed via `datetime` attribute.
+- **FDA RSS fetcher** (`src/pipeline/fetchers/fda-rss.ts`) — polls 8 feeds (recalls, food-safety-recalls, medwatch, press-releases, tainted-supplements, health-fraud, food-allergies, fda-outbreaks), 300ms between feeds, `fast-xml-parser` for XML parsing, normalises single vs. array `item` fields. One `pipeline_runs` entry per poll covering all feeds.
+- **Zod schemas** (`schemas/warning-letters.ts`, `schemas/rss.ts`) — validates AJAX response and RSS items respectively
+- **npm scripts** — `pipeline:wl-backfill`, `pipeline:wl-incremental`, `pipeline:rss-poll`
+- **Tested live**: 422 WL items created (mid-run partial — full backfill deferred to Phase 2B), 364 MARCS numbers extracted. 131 RSS items on first poll; second poll correctly skipped 149/150 as duplicates.
+- **Security fix**: `extractHref` validates path starts with `/` to prevent SSRF from unexpected AJAX response data.
+- **DB state after this phase**: 422 warning letters + 131 RSS items + 175 FR items + 109 enforcement items = 837 total regulatory_items. All fetchers tested against live APIs. `npm run type-check` clean.
+
+### 2026-03-03 — Phase 2A-1: Data Pipeline (Federal Register + openFDA Enforcement)
+
+- **Federal Register fetcher** (`src/pipeline/fetchers/federal-register.ts`) — paginated list + per-doc detail fetch, 100ms rate limiting, 6-month backfill windows, deduplication via `(source_id, source_ref)`, maps FR types to `rule/proposed_rule/notice`
+- **openFDA enforcement fetcher** (`src/pipeline/fetchers/openfda-enforcement.ts`) — skip-based pagination, 250ms rate limiting, 3-month backfill windows, writes to both `regulatory_items` + `enforcement_details`, deterministic `source_ref` from recall_number → event_id → hash
+- **Shared utilities** (`src/pipeline/fetchers/utils.ts`) — `FetcherResult` type, `parseFdaDate`, `dateWindowsFor`, `sleep`, `logPipelineRun`
+- **Zod schemas** (`src/pipeline/fetchers/schemas/`) — validates all API responses, parse failures counted + logged without crashing
+- **Dev test script** (`scripts/run-fetcher.ts`) — loads `.env.local`, runs narrow Jan–Feb 2025 window
+- **npm scripts** — `pipeline:fr-backfill`, `pipeline:enforcement-backfill`
+- **Tested against real APIs**: 66 FR docs + 109 recalls inserted, 2 `pipeline_runs` logged as `success`, `enforcement_details` 1:1 with recalls. `npm run type-check` clean.
+
+### 2026-03-03 — Phase 3: Marketing Site
+
+- **Landing page** (`/`) — Hero with animated gradient, problem stats, how-it-works, FeatureComparison, BuyerRoleCard, SignupForm. All sections server-rendered; RevealSection client wrapper for scroll animations.
+- **Pricing page** (`/pricing`) — PricingTable with 3 tiers (Free / Monitor $49 / Monitor+Research $249), FAQ, signup CTA.
+- **Sample page** (`/sample`) — Hardcoded SampleReport for Marine Collagen Powder (WL-2025-CFSAN-0847), dark CTA with SignupForm.
+- **Signup API** (`/api/signup`) — POST endpoint using adminClient (bypasses RLS). Rate-limited (5/min/IP). Zod validation, duplicate-check, reactivation, `unsubscribe_token` via `crypto.randomUUID()`.
+- **Design tokens** — `globals.css` with `@theme` block (all color + font tokens), `--gradient-dark-surface`, `hero-gradient` CSS class with 12s keyframe animation.
+- **Fonts** — IBM Plex Sans/Serif/Mono via `next/font/google` as CSS variables. No Google Fonts `@import` URL.
+- **framer-motion** installed — RevealSection and SignupForm use scroll-triggered reveals and AnimatePresence with `useReducedMotion` fallback.
+- **e2e tests** — 4 Playwright tests in `e2e/marketing.spec.ts`.
+- **Build** — `npm run build` passes clean. All 3 marketing routes statically rendered.
 
 ### 2026-03-03 — Phase 1: Foundation Scaffolded
 

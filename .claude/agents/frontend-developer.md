@@ -24,9 +24,21 @@ You are the frontend developer for Policy Canary. Build in the exact visual lang
 These are the source of truth before building any new surface. **Update this list as files are established.**
 
 ```
-src/app/globals.css                              — @import "tailwindcss" + @theme tokens + gradient vars (EXISTING — add tokens)
-src/app/layout.tsx                               — root layout (EXISTING)
-src/app/page.tsx                                 — placeholder "coming soon" (EXISTING — will become marketing homepage)
+src/app/globals.css                              — @import "tailwindcss" + @theme color/font tokens + gradient vars + hero-gradient keyframe (BUILT)
+src/app/layout.tsx                               — root layout, IBM Plex fonts via next/font/google as CSS vars (BUILT)
+src/app/(marketing)/layout.tsx                   — marketing route group: Header + Footer wrapper (BUILT)
+src/app/(marketing)/page.tsx                     — landing page: Hero, Problem, HowItWorks, FeatureComparison, BuyerRoleCard, SignupForm (BUILT)
+src/app/(marketing)/pricing/page.tsx             — pricing page: PricingTable, FAQ, SignupForm CTA (BUILT)
+src/app/(marketing)/sample/page.tsx              — sample report page: SampleReport, SignupForm CTA (BUILT)
+src/components/marketing/Header.tsx              — marketing header, dark gradient, canary logo dot, sticky (BUILT)
+src/components/marketing/Footer.tsx              — marketing footer, dark bg, links, tagline (BUILT)
+src/components/marketing/Hero.tsx                — hero section, hero-gradient class, email mockup card (BUILT)
+src/components/marketing/SignupForm.tsx          — 'use client' signup form, useReducer, AnimatePresence, Zod validation (BUILT — client component pattern)
+src/components/marketing/RevealSection.tsx       — 'use client' scroll-triggered reveal wrapper, useReducedMotion (BUILT — client wrapper pattern)
+src/components/marketing/FeatureComparison.tsx   — Free vs Monitor side-by-side comparison (BUILT)
+src/components/marketing/BuyerRoleCard.tsx       — 4-card buyer role grid (BUILT)
+src/components/marketing/PricingTable.tsx        — 3-tier pricing table with Lucide Check/Minus icons (BUILT)
+src/components/marketing/SampleReport.tsx        — hardcoded Marine Collagen Powder report card (BUILT — email mockup pattern)
 src/app/dashboard/layout.tsx                     — sidebar + main content shell [to build]
 src/app/dashboard/page.tsx                       — product-filtered regulatory feed [to build]
 src/components/RegulatoryCard.tsx                — core regulatory item component [to build]
@@ -80,16 +92,19 @@ As you build each file, add it here so future sessions inherit the source of tru
 
 ### Typography
 
-Load IBM Plex family. Self-host for performance or use Google Fonts. In `globals.css`:
+IBM Plex family loaded via `next/font/google` in `src/app/layout.tsx` — injected as CSS variables on `<html>`. The `@theme` block in `globals.css` reads them at render time. **Do NOT add a Google Fonts `@import` URL to globals.css.**
+
+```tsx
+// layout.tsx pattern (already implemented)
+const ibmPlexSans = IBM_Plex_Sans({ variable: '--font-ibm-sans', ... })
+// html className={`${ibmPlexSans.variable} ...`}
+```
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
-@theme {
-  --font-serif: 'IBM Plex Serif', Georgia, serif;
-  --font-sans:  'IBM Plex Sans', system-ui, sans-serif;
-  --font-mono:  'IBM Plex Mono', 'Courier New', monospace;
-}
+/* globals.css @theme (already implemented) */
+--font-sans: var(--font-ibm-sans), system-ui, sans-serif;
+--font-serif: var(--font-ibm-serif), Georgia, serif;
+--font-mono: var(--font-ibm-mono), 'Courier New', monospace;
 ```
 
 **No `tailwind.config.ts` — Tailwind v4 reads fonts from `@theme` in globals.css.**
