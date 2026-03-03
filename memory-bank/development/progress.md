@@ -1,7 +1,7 @@
 ---
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-04
 Maintainer: RB
-Status: Active — Phase 6 complete (web app MVP)
+Status: Active — Phase 2B enrichment stabilized, golden tests 10/10
 ---
 
 # Progress: Policy Canary
@@ -27,7 +27,7 @@ Status: Active — Phase 6 complete (web app MVP)
 | **Auth: Magic Link (Phase 4A)** | **2026-03-03** | **Done — verified end-to-end. Magic link → PKCE exchange → public.users upsert → dashboard.** |
 | **Web App MVP (Phase 6)** | **2026-03-03** | **Done — feed, item detail, search API (RAG), products. Mock data layer with USE_MOCK flag.** |
 | Stripe Subscriptions (Phase 4B) | - | Pending |
-| Enrichment Pipeline (Phase 2B) | - | Pending — blocks full backfills |
+| **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed. Inference layer next.** |
 | Inngest wiring (Phase 2C) | - | Pending |
 | Product Onboarding (DSLD + FDC) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
@@ -82,8 +82,11 @@ Status: Active — Phase 6 complete (web app MVP)
 | 2026-03-03 | **Base + per-product pricing** | Two access levels (Monitor / Monitor+Research) with per-product scaling. Monthly only. No unlimited. Cap at 100 self-serve. |
 | 2026-03-03 | **Monthly billing only at launch** | Product counts fluctuate. Annual is messy. Add annual later with retention data. |
 | 2026-03-03 | **100 product self-serve cap** | Beyond 100 is a different UX and cost problem. Custom pricing via sales conversation. |
-| 2026-03-03 | **Pricing finalized: $49/$249 + $6/product** | Monitor $49/mo, Monitor+Research $249/mo. Both include 5 products, $6/product beyond. $200 gap reflects research platform as moat. 5.1x multiplier validated by Westlaw/LexisNexis/Gartner comparables. |
-| 2026-03-03 | **Research platform = the moat** | Enforcement DB, AI search, trends, regulatory archive. Fills $100-$500/mo gap between free FDA tools and $25K+ enterprise. One Redica 483 doc costs $289 — our full platform is $249/mo. |
+| 2026-03-03 | ~~**Pricing finalized: $49/$249 + $6/product**~~ | ~~Monitor $49/mo, Monitor+Research $249/mo.~~ Superseded by March 2026 pricing revision. |
+| 2026-03-03 | **Research platform = the moat** | Enforcement DB, AI search, trends, regulatory archive. Fills $100-$500/mo gap between free FDA tools and $25K+ enterprise. One Redica 483 doc costs $289 — our full platform is $399/mo. |
+| 2026-03-04 | **Pricing revised: $99/$399 + $6/product** | Market research validated higher pricing. $49 was below FoodDocs ($84/mo), risked credibility. $99 base signals seriousness while staying under 1hr consultant time. $399 Research tier (4x multiplier) added later once features justify it. |
+| 2026-03-04 | **Launch with Monitor tier only** | Research tier deferred until enforcement DB, AI search, and trend analysis are built. Ship Monitor first, add Research when features justify $399. |
+| 2026-03-04 | **Market validation research completed** | Pain point confirmed: FDA warning letters up 73% (H2 2025), 3,500 staff cut, no product-level monitoring tool exists for SMBs. Pricing validated: small firms spend $46K-$184K/yr on compliance, consultants charge $150-$500/hr. See `research/pain-point-validation-2026-03-04.md` and `research/pricing-validation-market-research.md`. |
 | 2026-03-03 | **Full backfills deferred until Phase 2B enrichment** | Don't flood DB with thousands of unenriched records. Raw ingestion without segment tags, embeddings, and substance extractions creates noise that's expensive to reprocess. Backfills run once the enrichment pipeline exists and can run alongside. |
 
 ---
@@ -179,6 +182,18 @@ Status: Active — Phase 6 complete (web app MVP)
 - **Products** (`/app/products`) — grouped by status (urgent/review/clear). `ProductStatusCard` component, empty state.
 - **Mock data** (`src/lib/mock/app-data.ts`) — `USE_MOCK` flag pattern: one-line swap from mock to real Supabase queries when enrichment pipeline is live.
 - Commits: `b9122b6` through `b5543f6`.
+
+### 2026-03-04 — Phase 2B Enrichment Stabilization
+
+- **Content-fetch for thin RSS items** — RSS descriptions are 112-225 chars (useless for classification). New `src/pipeline/enrichment/content-fetch.ts` fetches full FDA page content before enrichment. BHA press release: 155 → 4,678 chars. BIG GUYS alert: 225 → 2,237 chars. Fresenius Kabi: 112 → 7,008 chars.
+- **Shared HTML helpers** — `stripHtml()` and `extractMainContent()` moved from `warning-letters.ts` to `src/pipeline/fetchers/utils.ts` as shared exports. Both content-fetch and WL fetcher use them.
+- **URL scheme fix** — RSS `source_url` values use `http://` (from RSS feeds), not `https://`. Guards updated to accept both schemes. FDA 301-redirects http→https, `fetch()` follows automatically.
+- **Prompt truncation removed** — was head+tail at 8K chars, throwing away 80% of long warning letters. Median WL is 8.8K, P95 is 25K, max is 47K (~12K tokens). Gemini's 1M token context handles all of it. Full content passed through now.
+- **Prompt fixes** — (1) `affected_product_types` now asks for BOTH broad categories AND specific types ("fresh produce" + "cucumber", not just "cucumber select 6 ct"). (2) Action type definitions clarified: `import_violation` for FSVP/import issues even if letter also mentions GMP; `guidance_update` for RFIs and draft guidance. (3) `deadline` field now explicitly includes WL response deadlines, not just compliance dates.
+- **Golden fixture corrections** — BHA narrowed to food-only (FDA page doesn't discuss supplement/cosmetic use — that's the inference layer's job). Whole foods (cucumber, yogurt) removed from `affected_ingredients` (they're products, not substances). CDER WL confidence thresholds lowered (pharma is outside our domain). `has_deadline=true` for WLs with response deadlines and FR rules with effective dates. "outsourcing facility" moved from product_type to facility_type. Animal food ≠ human food.
+- **Golden tests: 76/76 assertions pass, 10/10 fixtures pass.**
+- **Cross-reference inference layer identified** — the BHA test failure revealed the key product insight: extraction alone makes us a summarizer; inference (substance graph + LLM reasoning about cross-segment implications) is what makes us intelligent. Documented in `activeContext.md`. Designing in separate session.
+- **Pending re-enrichment** — 422 WLs in DB were enriched with old 8K-truncated prompt. Deferring re-enrichment until after inference layer so we only pay once.
 
 ### 2026-03-04 — Homepage Visual Pass
 

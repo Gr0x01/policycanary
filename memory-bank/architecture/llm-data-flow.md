@@ -1,7 +1,7 @@
 ---
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-04
 Maintainer: RB
-Status: Draft
+Status: Active
 ---
 
 # LLM & Data Flow Architecture
@@ -123,7 +123,13 @@ flowchart TB
 
 ## 2. Enrichment Detail — What the LLM Produces Per Item
 
-Single Gemini Flash call per regulatory item at ingest time. The deep tagging is what makes product-level matching possible.
+**Pipeline steps per item:**
+1. **Content-fetch** — if source_url points to FDA.gov and content is thin (<1K chars), fetch full page and extract `<main>` text. RSS items go from ~200 chars to 2K-7K chars.
+2. **LLM extraction** — single Gemini call (Flash for simple items, Pro for complex). Produces all structured outputs below.
+3. **Cross-reference inference** (PLANNED — designing in separate session) — look up extracted substances in GSRS → find all known use contexts → LLM reasons about cross-segment implications. This is what turns extraction into intelligence. See `development/activeContext.md § Cross-Reference Inference Layer`.
+4. **Embeddings** — chunk content, generate OpenAI embeddings for vector search.
+
+Full content is sent to the LLM — no truncation. Longest item is ~47K chars (~12K tokens), well within Gemini's 1M token context.
 
 ```mermaid
 flowchart LR

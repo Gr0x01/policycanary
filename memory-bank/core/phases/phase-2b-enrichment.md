@@ -321,6 +321,17 @@ STEP 4: ENRICHMENT RUNNER (src/pipeline/enrichment/runner.ts)
   e) Support partial runs: unenriched query naturally resumes
   f) Support re-enrichment: parameter for enrichment_version < CURRENT_VERSION
 
+CROSS-REFERENCE INFERENCE LAYER (Phase 2B+ — after pipeline stabilization):
+  After LLM extraction, a second pass that:
+  1. Looks up extracted substances in GSRS → finds all known use contexts
+  2. LLM reasons about cross-segment implications given the nature of the action
+  This is NOT deterministic lookup alone — the LLM must judge whether a food-focused
+  action also affects supplement/cosmetic use of the same substance.
+  Example: BHA FDA reassessment → text says "food" → GSRS says BHA is in food,
+  supplements, cosmetics → inference LLM says supplements:high (oral exposure same
+  risk), cosmetics:medium (dermal exposure, different risk but regulatory precedent).
+  Full design: /memory-bank/development/activeContext.md § Cross-Reference Inference Layer
+
 CRITICAL DECISIONS:
 - enrichment_version starts at 1. Bump when prompt/schema changes.
 - Re-enrichment inserts new version, keeps old for comparison.

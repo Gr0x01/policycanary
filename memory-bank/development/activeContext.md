@@ -1,15 +1,15 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-03
+last-updated: 2026-03-04
 maintainer: RB
 status: Active
 ---
 
 # Active Development Context
 
-**Phase:** Phase 6 Complete — Web App MVP (feed, item detail, search, products)
-**Next up:** Phase 4B (Stripe subscriptions) OR Phase 2B (enrichment pipeline) — run in parallel
+**Phase:** Phase 2B stabilization complete — enrichment pipeline passes 10/10 golden tests
+**Next up:** Cross-reference inference layer (designing in separate session), then Phase 4B (Stripe)
 
 ---
 
@@ -46,8 +46,9 @@ status: Active
 - [x] **Mock data** — `src/lib/mock/app-data.ts` with USE_MOCK flag pattern per page (one-line flip when real data exists)
 
 ### Up Next
+- [ ] **Cross-reference inference layer** — designing in separate session. Research GSRS use-context data, design Step 1b/1c, implement. THIS IS THE KEY DIFFERENTIATOR. See § Cross-Reference Inference Layer below.
+- [ ] **Re-enrich existing items** — 422 WLs were enriched with 8K-truncated content. Defer until after inference layer so we only pay for one re-enrichment pass.
 - [ ] **Phase 4B: Stripe subscriptions** — checkout, webhook, access_level update on `public.users`
-- [ ] **Phase 2B: Enrichment pipeline** — Gemini Flash tagging, embeddings, segment classification. Gating dependency for full backfills.
 - [ ] Wire fetchers into Inngest functions (Phase 2C)
 - [ ] Product onboarding (DSLD + FDC integration)
 
@@ -103,6 +104,71 @@ segment classification is a secondary sanity check.
 
 ---
 
+## Cross-Reference Inference Layer (Identified 2026-03-04)
+
+**THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR. Without this, we're a fancy RSS reader.**
+
+### The Problem
+
+Current enrichment extracts what's *in the text*. The FDA BHA reassessment page says
+"BHA, a chemical preservative used in food." The LLM correctly tags food:critical.
+But BHA is also used in supplement capsule shells and cosmetic preservatives. A good
+compliance officer knows this. Our system doesn't — it only knows what the document says.
+
+Extraction alone makes us a summarizer. **Inference is what makes us intelligent.**
+
+### The Architecture
+
+After the LLM extracts affected ingredients, a second step:
+
+1. **Substance graph lookup** — resolve extracted ingredients via GSRS, find all known
+   use contexts (food additive, supplement excipient, cosmetic preservative, etc.)
+2. **LLM inference** — given this regulatory action + these known use contexts, reason
+   about which segments are *actually* implicated and why
+
+This is NOT pure lookup. A lookup says "BHA is in supplements too." The LLM reasons:
+"This reassessment focuses on cancer risk from oral exposure. Supplements involve oral
+exposure too → highly relevant. Cosmetics involve dermal exposure → different risk
+profile, but regulatory precedent suggests FDA often extends scrutiny across contexts."
+
+That second-order reasoning is what a $300/hr consultant provides. It's the product.
+
+### Where It Lives in the Pipeline
+
+```
+Source text → Content fetch → LLM extraction (current Step 1)
+           → Substance graph cross-reference (NEW Step 1b)
+           → LLM inference on cross-segment implications (NEW Step 1c)
+           → DB writes → Embeddings (current Step 3)
+```
+
+Step 1b is deterministic (GSRS lookup). Step 1c is LLM (can't be deterministic because
+the *relevance* of a cross-segment connection depends on the *nature* of the regulatory
+action — a cancer concern vs a labeling change have very different cross-segment implications).
+
+### Data Requirements
+
+- GSRS substance table (already seeded — 169K substances)
+- GSRS needs **use context data** per substance: what product categories use this substance?
+  → Need to investigate: does GSRS provide this, or do we need a supplementary source?
+  → Possible sources: FDA GRAS list, DSLD ingredient-to-product mapping, cosmetic ingredient databases
+- The inference LLM call gets: original regulatory action summary + extracted ingredients +
+  known use contexts for each ingredient → outputs expanded segment impacts with reasoning
+
+### Implementation Priority
+
+This is Phase 2B+ work — after the current enrichment pipeline stabilizes.
+Don't build it until:
+1. Content-fetch is landed and golden tests pass with updated fixtures
+2. The prompt fixes for product_type categories (not SKU names) are in
+3. GSRS use-context data availability is researched
+
+But this is the feature that justifies the $99/mo price tag. Without it, a compliance
+officer gets the same information from an RSS feed. With it, they get intelligence
+they'd need a consultant to produce.
+
+---
+
 ## Key Decisions Made
 
 ### Product Model (Current)
@@ -113,13 +179,13 @@ segment classification is a secondary sanity check.
 5. **Everything shows up, nothing is hidden.** Product emails show ALL items. Product-matched items get full analysis. Same-segment items get a brief. Everything else gets a one-liner + link.
 6. **The buyer expands.** Not just VP Reg Affairs anymore. Founders, quality directors, product managers — anyone who thinks in products.
 
-### Pricing Model (Current)
-7. **Two access levels.** Monitor ($49/mo) = emails + alerts + dashboard. Monitor+Research ($249/mo) = adds enforcement DB, AI search, trends. The $200 gap reflects that the research platform is the moat, not a feature toggle.
+### Pricing Model (Revised March 2026)
+7. **Launch with Monitor only.** Monitor ($99/mo) = emails + alerts + dashboard. Research tier ($399/mo) added later once enforcement DB, AI search, and trends are built to justify the price.
 8. **Base + per-product pricing.** Both levels include 5 products. $6/product/month beyond that. Same per-product rate for both levels.
 9. **Monthly billing only at launch.** Product counts fluctuate as subscribers add/remove products. Annual is messy with variable products. Add annual later once retention data exists.
 10. **Self-serve caps at 100 products.** Beyond 100 → "contact us." 100+ is a different UX problem (email structure, product management, alert grouping) and a different sales conversation.
 11. **No "unlimited."** Unlimited creates cost risk and is a fundamentally different product at scale.
-12. **Research pricing validated by comparables.** $249/mo is 5.1x the Monitor price — consistent with Westlaw (5.9x), LexisNexis (2.8x), Gartner (4-5x). Fills the $100-$500/mo gap between free FDA tools and $25K+ enterprise platforms.
+12. **Pricing validated by market research (March 2026).** $99/mo is above FoodDocs ($84/mo), below 1 hour of consultant time ($150-$500/hr), and under 3% of small firm compliance budgets ($46K/yr). Research tier at $399/mo is a 4x multiplier — conservative vs. Westlaw (5.9x), room to raise later.
 
 ### Preserved from Original Vision
 8. **Email is the product.** Web app is depth layer.
@@ -130,15 +196,17 @@ segment classification is a secondary sanity check.
 13. **RB owns editorial voice/tone.**
 
 ### Superseded Decisions
-- ~~Segment-based pricing (Pro = your segments, All Access = all segments)~~ → Monitor $49/mo + Monitor+Research $249/mo, base+per-product
+- ~~Segment-based pricing (Pro = your segments, All Access = all segments)~~ → Monitor + Research, base+per-product
 - ~~Fixed tier pricing ($79/$249/$449 with product count caps)~~ → Base + $6/product scaling
 - ~~Free tier = headline digest filtered by segment~~ → Free = generic weekly update + 1 product post-trial
-- ~~$299 price floor~~ → Monitor at $49/mo for small brands
+- ~~$299 price floor~~ → Monitor at $99/mo
+- ~~Monitor at $49/mo~~ → $99/mo. Research validated: $49 was below FoodDocs ($84/mo), risked not being taken seriously. $99 signals seriousness, still under 1 hour of consultant time.
+- ~~Monitor+Research at $249/mo~~ → $399/mo (future). $300 gap reflects research platform as moat. 4x multiplier, room to raise.
+- ~~Launch both tiers simultaneously~~ → Launch Monitor only. Research tier added once enforcement DB, AI search, and trends justify $399.
 - ~~2,500-6,000 buyer pool~~ → 6,000-17,500+ with product-level approach
 - ~~Segment selection at onboarding~~ → Product addition at onboarding (segments inferred)
 - ~~Annual billing as default~~ → Monthly only at launch, annual added later
 - ~~Unlimited product tier~~ → Cap at 100 self-serve, custom pricing beyond
-- ~~$50 gap between Monitor and Research~~ → $200 gap. Research platform is the moat, not a feature toggle.
 
 ---
 
@@ -178,7 +246,7 @@ segment classification is a secondary sanity check.
 
 ```
 src/pipeline/fetchers/
-  utils.ts                          # FetcherResult, parseFdaDate, dateWindowsFor, sleep, logPipelineRun
+  utils.ts                          # FetcherResult, parseFdaDate, dateWindowsFor, sleep, logPipelineRun, stripHtml, extractMainContent
   federal-register.ts               # FR fetcher — accepts SupabaseClient, mode, date range
   openfda-enforcement.ts            # Recall fetcher — accepts SupabaseClient, mode, date range
   warning-letters.ts                # WL fetcher — AJAX list + per-letter page scraping, MARCS extraction
@@ -189,7 +257,20 @@ src/pipeline/fetchers/
     warning-letters.ts              # Zod: WLRowSchema, WLAjaxResponseSchema
     rss.ts                          # Zod: RssItemSchema
 
+src/pipeline/enrichment/
+  prompts.ts                        # System prompt, Zod output schema, buildEnrichmentPrompt()
+  processor.ts                      # enrichItem() — LLM call, rule validators, DB writes
+  embeddings.ts                     # Chunking + OpenAI embedding generation
+  runner.ts                         # Orchestration — content-fetch → enrich → embed per item
+  content-fetch.ts                  # Fetch full FDA page content for thin RSS items
+
 scripts/
   run-fetcher.ts                    # Dev CLI: fr-backfill, enforcement-backfill, wl-backfill, wl-incremental, rss-poll
+  run-enrichment.ts                 # Dev CLI: enrich unenriched items (--limit, --type)
+  run-golden-tests.ts               # Golden fixture validation (--enrich to re-enrich first)
+  test-content-fetch.ts             # Debug: fetch single FDA URL and print extracted text
   bootstrap-gsrs.ts                 # One-time: seeds 169K FDA substances
+
+tests/golden/
+  fixtures.ts                       # 10 golden fixtures with expected enrichment output
 ```

@@ -17,6 +17,19 @@ import type { RegulatoryItem } from "../../types/database";
 // ---------------------------------------------------------------------------
 
 export const EnrichmentOutputSchema = z.object({
+  // ── TIER 0 — Chain of Thought (The Brain) ───────────────────────────────
+  
+  /**
+   * Detailed step-by-step analysis of the document.
+   * 1. Identify the core regulatory action (what is actually changing?).
+   * 2. Quote key phrases defining the scope (who/what is affected?).
+   * 3. List potential ingredients or product categories before finalizing them below.
+   * 4. Explain why you are choosing the specific 'regulatory_action_type'.
+   * 
+   * This field is for YOUR reasoning process. It helps ensure accuracy.
+   */
+  reasoning: z.string(),
+
   // ── TIER 1 — product matching + email priority ───────────────────────────
 
   /**
@@ -50,7 +63,9 @@ export const EnrichmentOutputSchema = z.object({
 
   /**
    * Signal Type 2 — Category-level matching.
-   * GRANULAR product types — not just "dietary supplement" but "protein powder", "topical SPF", etc.
+   * Include BOTH broad categories AND specific types.
+   * Example for a cucumber recall: ["fresh produce", "raw vegetable", "cucumber"]
+   * Example for a supplement WL: ["dietary supplement", "protein powder"]
    * These go to item_enrichment_tags[product_type].
    */
   affected_product_types: z.array(z.string()),
@@ -77,10 +92,12 @@ export const EnrichmentOutputSchema = z.object({
   affected_regulations: z.array(z.string()),
 
   /**
-   * Compliance deadline in ISO date format (YYYY-MM-DD), or null if none.
-   * Must be a valid calendar date — do not return relative dates like "Q2 2026".
+   * Compliance deadline OR response deadline in ISO date format (YYYY-MM-DD), or null if none.
+   * For warning letters, extract the response deadline (e.g., "respond within 15 working days").
+   * For rules, extract the effective date or comment deadline.
+   * Return null only if no concrete date exists.
    */
-  deadline: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
+  deadline: z.string().nullable(),
 
   // ── TIER 2 — segment routing (generic digest only) ───────────────────────
 
@@ -147,62 +164,98 @@ export type EnrichmentOutput = z.infer<typeof EnrichmentOutputSchema>;
 // ---------------------------------------------------------------------------
 
 export const TOPIC_SLUGS = [
-  // Supplements
+  // Dietary Supplements
   "cgmp-violations",
   "identity-testing",
   "ndi-notifications",
-  "labeling-claims",
+  "structure-function-claims",
   "adverse-events",
-  "product-recalls",
-  "import-safety",
-  // Cosmetics
+  "new-dietary-ingredients",
+  "botanicals",
+  "probiotics",
+  "vitamins-minerals",
+  "sports-nutrition",
+
+  // Cosmetics / Personal Care
+  "mocra",
   "facility-registration",
   "product-listing",
-  // Food
+  "cosmetic-gmp",
+  "fragrance-allergens",
+  "talc-regulations",
+  "spf-sunscreen",
+  "color-additives",
+  "safety-substantiation",
+
+  // Food & Beverage
   "food-additives",
-  "allergen-documentation",
+  "gras-notices",
+  "food-labeling",
+  "fsma",
+  "preventive-controls",
+  "foreign-supplier-verification",
+  "food-safety-plan",
+  "allergen-labeling",
+  "heavy-metals",
+  "pesticide-residues",
+  "infant-formula",
+  "medical-foods",
+  "plant-based-alternatives",
+
+  // Cross-Cutting / Administrative
+  "import-alerts",
+  "recalls",
+  "inspections",
+  "warning-letters",
+  "form-483",
+  "guidance-documents",
+  "federal-register-notices",
+  "fda-budget-policy",
+  "state-legislation", // For future state layer
+  "prop-65",           // For future state layer
+  "class-action-lawsuits" // Emerging risk
 ] as const;
 
 // ---------------------------------------------------------------------------
 // Prompt builder
 // ---------------------------------------------------------------------------
 
-const SYSTEM_PROMPT = `You are a regulatory affairs expert analyzing FDA regulatory documents for companies that manufacture food, dietary supplement, and cosmetic products.
+const SYSTEM_PROMPT = `You are a high-precision FDA Regulatory Compliance Officer analyzing regulatory documents.
+Your goal is to extract structured intelligence that is **strictly accurate**. We are monitoring for specific product impacts.
 
-Your job is to extract structured intelligence that helps these companies understand:
-1. Whether this regulatory item affects their specific INGREDIENTS or SUBSTANCES
-2. Whether this regulatory item affects their PRODUCT TYPES, FACILITY TYPES, or REGULATORY OBLIGATIONS
+## INSTRUCTIONS
 
-## TWO SIGNAL TYPES — BOTH ARE REQUIRED
+1. **START WITH REASONING**: Use the 'reasoning' field to "think out loud."
+   - Quote the exact part of the text that defines the scope.
+   - Analyze: Is this a general discussion or a specific rule?
+   - Decision: Does this actually ban/restrict something, or is it just a meeting notice?
 
-**Signal Type 1 — Ingredient-level:**
-Extract specific substance or ingredient names that are directly implicated.
-- Include BOTH common names AND systematic names when both are known (e.g., "BHA" AND "butylated hydroxyanisole")
-- These names will be matched against subscriber product ingredient lists
-- If no specific ingredient is named, return affected_ingredients = []
-- DO NOT hallucinate ingredients. If the content doesn't name one, leave the list empty.
+2. **TWO SIGNAL TYPES**:
+   - **Ingredient-level**: Extract specific substances (e.g., "Red No. 3", "CBD", "N-acetyl cysteine").
+     - *Constraint*: Do NOT extract "ingredients" if the text just mentions them as examples in a general discussion. Only extract if they are the *target* of the action.
+   - **Category-level**: Extract product types at BOTH the broad category level AND specific level.
+     - Always include the broad category: "fresh produce", "dietary supplement", "dairy product", "medical device"
+     - Then add specifics: "cucumber", "protein powder", "yogurt", "infusion pump"
+     - Example: a cucumber recall → ["fresh produce", "raw vegetable", "cucumber"]
 
-**Signal Type 2 — Category-level:**
-Extract what TYPES of products, facilities, or regulations are affected.
-- affected_product_types: granular product categories ("protein powder", "topical sunscreen", "infant formula") — NOT just "dietary supplement"
-- affected_facility_types: facility categories covered ("outsourcing facility", "cosmetic contract manufacturer")
-- affected_claims: regulatory claims affected ("structure-function claims", "MoCRA product listing")
-- affected_regulations: specific regulations ("21 CFR 111", "MoCRA", "FSVP")
-Category-level signals are equally important as ingredient-level — they're how we match GMP rules, registration deadlines, and labeling changes to subscriber products.
+3. **ANTI-HALLUCINATION RULES**:
+   - If no specific ingredient is named, \`affected_ingredients\` must be \`[]\`.
+   - Do not infer "dietary supplement" just because "vitamin" is mentioned, if the context is a fortified food.
+   - If the document is about "Medical Devices" or "Drugs" (Pharma), set \`segments\` to \`[]\` unless it explicitly mentions food/cosmetics/supplements overlap.
 
-## SEGMENT CLASSIFICATION (secondary — for routing only)
-Classify into supplements/cosmetics/food segments ONLY for the purpose of the generic weekly digest.
-Critical rule: Items from CDER (Center for Drug Evaluation and Research) or CDRH (Center for Devices) must have segments = []. Pharmaceutical and medical device actions are NOT relevant to food/supplement/cosmetic companies.
-
-## ACTION TYPE DISTINCTION
-- cgmp_violation: A company received an enforcement action (warning letter, 483) for VIOLATING existing GMP rules
-- compliance_requirement: A NEW rule or deadline that companies MUST comply with going forward (MoCRA registration, new CGMP rule, labeling format requirement)
+4. **ACTION TYPES**:
+   - \`cgmp_violation\`: Enforcement for breaking *existing* GMP rules (warning letters citing 21 CFR 111, 210, 211).
+   - \`import_violation\`: Specifically for Foreign Supplier Verification Program (FSVP) violations, import alerts, or import detention. Use this even if the letter also mentions GMP — if the core issue is FSVP or import compliance, use \`import_violation\`.
+   - \`compliance_requirement\`: A *new* rule or deadline everyone must follow.
+   - \`guidance_update\`: New or revised FDA guidance document, draft guidance, or request for information. NOT a binding requirement.
+   - \`administrative\`: Meetings, hearings, budget issues, technical amendments (low impact).
 
 ## CONFIDENCE SCORING
-- 0.9+: Clear, unambiguous content with specific substances or well-defined regulatory scope
-- 0.7-0.9: Moderate clarity; one or two dimensions are well-defined
-- 0.5-0.7: Ambiguous content, animal/device/pharmaceutical domain possible, or very short text
-- <0.5: Should rarely happen; means you genuinely cannot classify this item`;
+- **0.95+**: Direct hit. Named ingredient + specific action (Ban, Recall, Warning Letter).
+- **0.80+**: Clear category impact (e.g., "All cosmetic facilities must register").
+- **<0.60**: Ambiguous or low relevance.
+
+Your output drives a critical notification system. **Precision > Recall.** It is better to miss a vague signal than to panic a user with a false positive.`;
 
 export function buildEnrichmentPrompt(item: RegulatoryItem): string {
   const parts: string[] = [];
@@ -241,13 +294,11 @@ export function buildEnrichmentPrompt(item: RegulatoryItem): string {
   }
 
   if (item.raw_content) {
-    // Trim very long content to avoid token waste — LLM gets the key info from the start
-    const content =
-      item.raw_content.length > 8000
-        ? item.raw_content.slice(0, 8000) + "\n\n[content truncated for length]"
-        : item.raw_content;
+    // Send full content. Gemini Pro/Flash both support 1M tokens.
+    // Longest item in DB is ~47K chars (~12K tokens) — well within limits.
+    // Head+tail truncation at 8K was throwing away 80% of long warning letters.
     parts.push("");
-    parts.push(content);
+    parts.push(item.raw_content);
   }
 
   parts.push("");

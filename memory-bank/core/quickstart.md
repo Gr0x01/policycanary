@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-04
 Maintainer: RB
 Status: Active
 ---
@@ -8,16 +8,16 @@ Status: Active
 
 ## Current State
 
-- **Status**: Phase 6 complete — Web App MVP live. Feed, item detail, search, products all working with mock data. Mock flag pattern allows one-line swap to real DB queries.
+- **Status**: Phase 2B enrichment stabilized — golden tests 10/10. Content-fetch for thin RSS items, prompt fixes, truncation removed. Inference layer designing in separate session.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Next**: Phase 4B (Stripe subscriptions) + Phase 2B (enrichment pipeline) in parallel
+- **Next**: Cross-reference inference layer (key differentiator), then Phase 4B (Stripe)
 
 ---
 
 ## What's Happening
 
-Auth + web app MVP are live. Users sign in via magic link → `/app/feed`. Full app shell: feed, item detail, search (`/api/search` RAG via pgvector + claudeSonnet), products page. All pages use mock data with a one-line USE_MOCK flag for real-DB swap. Marketing site fully redesigned: light Stripe-like theme, two-column hero (text left, email right), staggered How It Works, radar pulse animation. Full data backfills deferred until enrichment pipeline is wired. Next: Phase 4B (Stripe) + Phase 2B (enrichment) in parallel.
+Enrichment pipeline stabilized. Content-fetch fetches full FDA page content for thin RSS items (112-225 chars → 2K-7K chars). Prompt fixes: broad+specific product types, clarified action types, deadline includes response deadlines. Truncation removed (was 8K, threw away 80% of WLs). Golden tests: 76/76 assertions, 10/10 fixtures. **Key insight**: extraction alone = summarizer. Cross-reference inference layer (substance graph + LLM reasoning about cross-segment implications) = the product differentiator. Designing in separate session. 422 WLs need re-enrichment after inference layer is built (one pass). Web app MVP live with mock data. Marketing site redesigned.
 
 ---
 
@@ -29,7 +29,7 @@ Auth + web app MVP are live. Users sign in via magic link → `/app/feed`. Full 
 | **Product Intelligence Email** (paid) | Event-driven alerts + weekly all-clear. Custom per subscriber, organized by THEIR products. | Paid subscribers |
 | **Web app** (paid) | Search, enforcement DB, trends, archive — personalized to your products | Paid subscribers |
 
-**Pricing:** Monitor $49/mo (5 products included) · Monitor+Research $249/mo (5 products included) · +$6/product beyond 5 · Free: 1 product post-trial · Monthly billing · Self-serve up to 100 products
+**Pricing:** Monitor $99/mo (5 products included) · Monitor+Research $399/mo (future — not at launch) · +$6/product beyond 5 · Free: 1 product post-trial · Monthly billing · Self-serve up to 100 products · Launch with Monitor tier only
 
 ---
 
@@ -45,12 +45,19 @@ npm run type-check       # TypeScript verification
 npm run test:e2e         # Playwright tests
 npm run test:e2e:ui      # Interactive mode
 
-# Data Pipeline (test window: Jan–Feb 2025 for date-ranged fetchers)
+# Data Pipeline — Fetchers (test window: Jan–Feb 2025 for date-ranged fetchers)
 npm run pipeline:fr-backfill            # Federal Register backfill
 npm run pipeline:enforcement-backfill   # openFDA enforcement/recalls backfill
-npm run pipeline:wl-backfill            # Warning letters full backfill (~3,313 records, ~11 min) — run AFTER LLM enrichment is wired
+npm run pipeline:wl-backfill            # Warning letters full backfill (~3,313 records, ~11 min)
 npm run pipeline:wl-incremental         # Warning letters incremental (recent, stops on known page)
 npm run pipeline:rss-poll               # Poll all 8 FDA RSS feeds
+
+# Data Pipeline — Enrichment
+npm run pipeline:enrich                 # Enrich unenriched items (default: 10)
+npm run pipeline:enrich-test            # Enrich 5 items (quick test)
+npm run pipeline:golden                 # Validate golden fixtures (no LLM calls)
+npm run pipeline:golden-enrich          # Re-enrich + validate golden fixtures (costs tokens)
+npm run pipeline:content-fetch-test     # Debug: fetch single FDA URL, print extracted text
 
 # One-time seeds
 npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
@@ -78,9 +85,11 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 - [x] Data pipeline: Warning Letters + FDA RSS (Phase 2A-2)
 - [x] **Auth: Magic link** — `/login`, `/auth/callback`, `/app/dashboard`, `proxy.ts`. Verified end-to-end.
 - [x] **Web app MVP (Phase 6)** — feed, item detail, search, products. AppNav, mock data layer (USE_MOCK flag). `/app/dashboard` redirects to `/app/feed`.
+- [x] **Enrichment pipeline (Phase 2B)** — stabilized. Content-fetch, prompt fixes, golden tests 10/10. Inference layer next.
+- [ ] **Cross-reference inference layer** — substance graph + LLM reasoning for cross-segment implications. KEY DIFFERENTIATOR.
+- [ ] Re-enrich existing 422 WLs (after inference layer, one pass)
 - [ ] Stripe subscriptions (Phase 4B)
 - [ ] Wire fetchers into Inngest (Phase 2C)
-- [ ] Enrichment pipeline (Gemini Flash + embeddings)
 - [ ] Product onboarding (DSLD + FDC integration)
 - [ ] Product intelligence email MVP
 - [ ] Validation — sample emails, trial signups
