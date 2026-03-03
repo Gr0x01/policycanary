@@ -70,6 +70,9 @@ NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 
+# Auth (Required)
+NEXT_PUBLIC_SITE_URL=http://localhost:3000  # used in magic link emailRedirectTo; set to https://policycanary.io in Vercel env
+
 # LLM — Multi-provider via Vercel AI SDK (Required)
 GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_key    # Data processing / enrichment
 OPENAI_API_KEY=your_openai_key                   # Embeddings

@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-04
 Maintainer: RB
 Status: Active
 ---
@@ -8,10 +8,10 @@ Status: Active
 
 ## Current State
 
-- **Status**: Phase 4A complete — Magic link auth working end-to-end. Marketing site live. Data pipeline built. Supabase has real data.
+- **Status**: Phase 6 complete — Web App MVP live. Feed, item detail, search, products all working with mock data. Mock flag pattern allows one-line swap to real DB queries.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Next**: Phase 4B (Stripe subscriptions) or Phase 2B (LLM enrichment)
+- **Next**: Phase 4B (Stripe subscriptions) + Phase 2B (enrichment pipeline) in parallel
 
 ---
 
@@ -73,7 +73,7 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 - [x] Build phase revision
 - [x] **Project setup** — Next.js 16, Supabase, Tailwind v4, AI SDK v6, Inngest
 - [x] **Schema live** — 25 tables applied to Supabase, RLS enabled, seeds run
-- [x] **Marketing site** — landing, pricing, sample report, signup API. Static-rendered. Build passes.
+- [x] **Marketing site** — landing, pricing, sample report, signup API. Static-rendered. Build passes. Homepage visual pass: gradient fix, ProductShowcase dashboard mockup, How It Works rebuild.
 - [x] **Data pipeline: FR + openFDA** — fetchers built, tested. 175 items + 109 enforcement details in DB.
 - [x] Data pipeline: Warning Letters + FDA RSS (Phase 2A-2)
 - [x] **Auth: Magic link** — `/login`, `/auth/callback`, `/app/dashboard`, `proxy.ts`. Verified end-to-end.

@@ -8,8 +8,8 @@ status: Active
 
 # Active Development Context
 
-**Phase:** Phase 4A Complete — Magic link auth live end-to-end
-**Next up:** Phase 4B (Stripe subscriptions) to complete the conversion surface
+**Phase:** Phase 6 Complete — Web App MVP (feed, item detail, search, products)
+**Next up:** Phase 4B (Stripe subscriptions) OR Phase 2B (enrichment pipeline) — run in parallel
 
 ---
 
@@ -31,8 +31,18 @@ status: Active
 - [x] **Phase 1 scaffolded** — Next.js 16, Tailwind v4, Supabase clients, AI SDK v6, Inngest, TypeScript types, Playwright config
 - [x] **Phase 2A-1 complete** — FR + openFDA enforcement fetchers in `src/pipeline/fetchers/`. Test with `npm run pipeline:fr-backfill` / `npm run pipeline:enforcement-backfill`
 - [x] **Phase 2A-2 complete** — Warning Letters + FDA RSS fetchers. `npm run pipeline:wl-incremental` / `npm run pipeline:wl-backfill` / `npm run pipeline:rss-poll`. Uses `fast-xml-parser`.
-- [x] **Phase 3 complete** — Marketing site: landing page, pricing page, sample report page, email signup API. Design tokens in globals.css, IBM Plex fonts, framer-motion animations. All routes static-rendered. `npm run build` passes clean.
+- [x] **Phase 3 complete + homepage visual pass** — Marketing site: landing page, pricing page, sample report page, email signup API. Design tokens in globals.css, IBM Plex fonts, framer-motion animations. All routes static-rendered. Homepage subsequently improved: hero gradient boosted (10→22-28% opacity), How It Works rebuilt (removed invisible text-8xl watermark layout bug), `ProductShowcase` component added (interactive browser-chrome dashboard mockup with product list + intelligence detail panel).
 - [x] **Phase 4A complete** — Magic link auth. `src/proxy.ts` (session refresh + route protection), `/login` (magic link form), `/auth/callback` (PKCE exchange + `public.users` upsert), `/app/layout` (server auth guard), `/app/dashboard` (placeholder + sign out). Dev bypass via `NODE_ENV === 'development'`. Tested end-to-end. `NEXT_PUBLIC_SITE_URL` in `.env.local`. Supabase redirect allowlist configured for localhost + policycanary.io.
+
+### What's Done (Phase 6)
+- [x] **App shell** — `AppNav` (server) + `NavLinks` (client, usePathname). Dark nav `#07111F`, canary logo dot, Feed·Search·Products links, user email + sign out.
+- [x] **Feed page** — `/app/feed` with URL-param filters (type, date range, My Products). 10 mock items, graceful degradation if not enriched. Dashboard → redirect.
+- [x] **FeedItemCard, ItemTypeTag, ProductMatchBadge, FeedFilters** — full feed component set
+- [x] **Item detail** — `/app/items/[id]` with 8 conditional sections (header, status bar, what happened, action items, your products, substances, enforcement, source footer)
+- [x] **Search page** — `/app/search` client component, POSTs to `/api/search`, handles JSON response, citation cards, suggested queries
+- [x] **Search API route** — `/api/search` POST: Zod validation, auth, rate limit (10/min/IP), embedding via OpenAI, pgvector RPC with graceful fallback, RAG via claudeSonnet, returns `{ answer, citations }`
+- [x] **Products page** — `/app/products` grouped by status (urgent/review/clear), ProductStatusCard, empty state
+- [x] **Mock data** — `src/lib/mock/app-data.ts` with USE_MOCK flag pattern per page (one-line flip when real data exists)
 
 ### Up Next
 - [ ] **Phase 4B: Stripe subscriptions** — checkout, webhook, access_level update on `public.users`
@@ -46,6 +56,23 @@ Full backfills are intentionally held back. Ingesting thousands of raw records w
 - `npm run pipeline:wl-backfill` — full 3,313 warning letters (~11 min). Currently 422 in DB from a mid-session partial run.
 - `npm run pipeline:fr-backfill` — Federal Register full history (currently 66 items from Jan 2025 test window only)
 - `npm run pipeline:enforcement-backfill` — openFDA full history (currently 109 items from Jan 2025 test window only)
+
+---
+
+## Enrichment Design Principle (Established 2026-03-03)
+
+**Ingredient-first, not segment-first.**
+
+The enrichment pipeline is organized around what actually drives product matching:
+1. `regulatory_action_type` — what is happening (ban, recall, cgmp_violation, etc.)
+2. `affected_ingredients` — label-friendly substance names (backbone of Phase 4C matching)
+3. `affected_product_types` — GRANULAR ("protein powder", not just "dietary supplement")
+4. `deadline` — any compliance date
+
+Segment tags (food/supplement/cosmetics) are a **secondary** output for routing the generic
+weekly digest. They are not the matching mechanism. The schema has `regulatory_action_type`
+added to `item_enrichments` to reflect this. Golden fixtures in `tests/golden/fixtures.ts`
+test ingredient extraction quality first, segments second.
 
 ---
 

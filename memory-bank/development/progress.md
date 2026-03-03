@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-03
+Last-Updated: 2026-03-04
 Maintainer: RB
 Status: Active — Phase 4A complete
 ---
@@ -20,7 +20,7 @@ Status: Active — Phase 4A complete
 | Build Phase Revision | 2026-03-03 | Done — Phase 1 plan executed directly |
 | **Project Scaffolding** | **2026-03-03** | **Done — Next.js 16, AI SDK v6, Supabase, Inngest, Tailwind v4** |
 | **Schema Live (Supabase)** | **2026-03-03** | **Done — 25 tables, RLS, seeds applied. GitHub: Gr0x01/policycanary** |
-| **Marketing Site** | **2026-03-03** | **Done — landing page, pricing, sample report, signup API** |
+| **Marketing Site** | **2026-03-03** | **Done — landing page, pricing, sample report, signup API. Homepage visual pass: gradient fix, ProductShowcase, How It Works rebuild.** |
 | **Data Pipeline: FR + openFDA** | **2026-03-03** | **Done — fetchers built + tested. 175 items, 109 enforcement details in DB** |
 | **Data Pipeline: Warning Letters + RSS** | **2026-03-03** | **Done — fetchers built + tested. 422 WL items in DB (partial; full 3,313-record backfill deferred to Phase 2B). 131 RSS items. 364 MARCS numbers extracted.** |
 | Enrichment Pipeline (Phase 2B) | - | Pending — blocks full backfills |
@@ -160,6 +160,13 @@ Status: Active — Phase 4A complete
 - **`/app/dashboard`** (`src/app/app/dashboard/page.tsx`) — Server component. Shows user email. "Dashboard coming soon" placeholder. Sign-out via `"use server"` form action. Dev mode shows `dev@localhost`.
 - **Env**: `NEXT_PUBLIC_SITE_URL=http://localhost:3000` in `.env.local`. Supabase Auth → URL Configuration: redirect allowlist includes both `http://localhost:3000/auth/callback` and `https://policycanary.io/auth/callback`.
 - **Verified end-to-end**: magic link email received, PKCE exchange succeeded, `public.users` row created with `access_level = 'free'`, sign-out returns to `/login`.
+
+### 2026-03-04 — Homepage Visual Pass
+
+- **Hero gradient** — boosted from 10-12% to 22-28% opacity across 3 radial layers so canary/amber warmth is actually visible on the dark background.
+- **How It Works** — removed broken `text-8xl text-slate-100` watermark numbers (invisible on `bg-white` but ~100px tall each, creating a massive white gap). Replaced with clean step-badge cards (`01/02/03` in amber) on `bg-surface-muted`, with source tag pills and stat chips.
+- **ProductShowcase** (`src/components/marketing/ProductShowcase.tsx`) — new client component. Browser-chrome + dashboard layout: left sidebar lists 5 monitored products with colored status dots (urgent/review/clear); right panel shows the selected product's full intelligence detail (analysis, action items, deadline, citation). Framer Motion `AnimatePresence` transition on selection. Inserted after FeatureComparison.
+- Committed: `0dcf512`. `npm run type-check` clean.
 
 ### 2026-03-03 — Phase 3: Marketing Site
 

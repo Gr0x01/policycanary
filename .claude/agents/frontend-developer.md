@@ -39,6 +39,8 @@ src/components/marketing/FeatureComparison.tsx   — Free vs Monitor side-by-sid
 src/components/marketing/BuyerRoleCard.tsx       — 4-card buyer role grid (BUILT)
 src/components/marketing/PricingTable.tsx        — 3-tier pricing table with Lucide Check/Minus icons (BUILT)
 src/components/marketing/SampleReport.tsx        — hardcoded Marine Collagen Powder report card (BUILT — email mockup pattern)
+src/components/marketing/StatCounter.tsx         — 'use client' count-up animation, useInView + rAF ease-out cubic, useReducedMotion fallback (BUILT)
+src/components/marketing/ProductShowcase.tsx     — 'use client' browser-chrome dashboard mockup, product list sidebar + intelligence detail panel, AnimatePresence slide transition (BUILT)
 src/app/dashboard/layout.tsx                     — sidebar + main content shell [to build]
 src/app/dashboard/page.tsx                       — product-filtered regulatory feed [to build]
 src/components/RegulatoryCard.tsx                — core regulatory item component [to build]
@@ -154,9 +156,9 @@ Border-radius:  rounded (4px) on cards, buttons, badges, and inputs.
     #0F172A;
 
   --gradient-hero-animated:
-    radial-gradient(ellipse at 30% 40%, rgba(234,193,0,0.10) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 60%, rgba(217,119,6,0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 10%, rgba(15,23,42,0.95) 0%, transparent 70%),
+    radial-gradient(ellipse at 25% 35%, rgba(234,193,0,0.22) 0%, transparent 52%),
+    radial-gradient(ellipse at 75% 65%, rgba(217,119,6,0.28) 0%, transparent 52%),
+    radial-gradient(ellipse at 55% 20%, rgba(234,193,0,0.08) 0%, transparent 65%),
     #0F172A;
 }
 ```

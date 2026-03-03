@@ -9,7 +9,7 @@ Status: Active
 Each phase has a self-contained session brief in the `phases/` directory.
 
 ---
-
+ 
 ## Dependency & Parallelization Map
 
 ```
@@ -74,9 +74,13 @@ Phase 6: Web App ─────────────────────
 **Purpose:** Build the public-facing marketing site — landing page, pricing page, and sample report page. Plus email signup API.
 → Session brief: `/memory-bank/core/phases/phase-3-marketing.md`
 
-## Phase 4: Auth & Subscriptions
-**Complexity:** Medium-High | **Sessions:** 2 | **Dependencies:** Phase 1, Phase 3
-**Purpose:** Add Supabase Auth, Stripe checkout, webhook handling, and route protection. Connect email_subscribers to users on upgrade.
+## Phase 4A: Auth — Magic Link ✓ DONE
+**Complexity:** Medium | **Dependencies:** Phase 1, Phase 3
+**Purpose:** Supabase magic link auth. Route protection via `src/proxy.ts`, `/login`, `/auth/callback` (PKCE + users upsert), `/app/dashboard` placeholder. Dev bypass via `NODE_ENV`.
+
+## Phase 4B: Stripe Subscriptions
+**Complexity:** Medium | **Dependencies:** Phase 4A
+**Purpose:** Stripe checkout, webhook handling, `access_level` update on `public.users`. Connect email_subscribers to users on upgrade.
 → Session brief: `/memory-bank/core/phases/phase-4-auth-stripe.md`
 
 ## Phase 4B: Product Onboarding
@@ -115,8 +119,12 @@ src/
       page.tsx                                      (Phase 3)
       pricing/page.tsx                              (Phase 3)
       sample/page.tsx                               (Phase 3)
-    (auth)/
-      login/page.tsx                                (Phase 4)
+    login/page.tsx                                  (Phase 4A — magic link form)
+    auth/callback/route.ts                          (Phase 4A — PKCE exchange + users upsert)
+    app/
+      layout.tsx                                    (Phase 4A — auth guard)
+      dashboard/page.tsx                            (Phase 4A — placeholder)
+  proxy.ts                                          (Phase 4A — session refresh + route protection)
       signup/page.tsx                               (Phase 4)
       callback/route.ts                             (Phase 4)
     (app)/
