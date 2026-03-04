@@ -56,7 +56,6 @@ let query = supabase
       ? `id, external_id, item_type, title, source_url, published_date, created_at,
          item_enrichments (
            enrichment_title, regulatory_action_type, urgency_level, deadline,
-           segment_impacts (segment_name, impact_level, signal_source),
            regulatory_item_substances (substance_name, context),
            item_enrichment_tags (tag_dimension, tag_value, signal_source)
          )`

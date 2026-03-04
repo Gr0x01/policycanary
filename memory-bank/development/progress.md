@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-05
 Maintainer: RB
-Status: Active — Clawdbot deployed. Product categories designed, Session 0 next. Stripe, blog, cross-ref, auth shipped.
+Status: Active — GSRS data loaded (949K codes). Product categories designed, Session 0 next. Stripe, blog, cross-ref, auth shipped.
 ---
 
 # Progress: Policy Canary
@@ -28,7 +28,7 @@ Status: Active — Clawdbot deployed. Product categories designed, Session 0 nex
 | **Web App MVP (Phase 6)** | **2026-03-03** | **Done — feed, item detail, search API (RAG), products. Mock data layer with USE_MOCK flag.** |
 | **Stripe Subscriptions (Phase 4B)** | **2026-03-05** | **Shipped — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed (4 critical + 9 warning fixes). Migration `004`. Stripe Dashboard setup needed.** |
 | **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed.** |
-| **Cross-Reference Inference Layer** | **2026-03-04** | **Built — Steps 1b + 1c. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap re-run needed.** |
+| **Cross-Reference Inference Layer** | **2026-03-04** | **Built + data loaded — Steps 1b + 1c. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap complete: 949K codes, 96 systems, 166K substances.** |
 | **Blog Section** | **2026-03-05** | **Shipped — /blog, /blog/[slug], RSS feed, Clawdbot POST API. Migration 003_blog_posts. Code-reviewed (3 critical + 4 warning fixes). react-markdown + remark-gfm added.** |
 | **Product Categories Taxonomy** | **2026-03-04** | **Designed — ~79 categories from MoCRA/VCRP, 21 CFR 170.3(n), DSLD. Sacred controlled vocab (no free text). Ready for migration `005`.** |
 | **Clawdbot (OpenClaw) Deployed** | **2026-03-05** | **Live — Vultr VPS (108.61.151.130), Discord bot on Bizniz server, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.** |
@@ -245,14 +245,16 @@ Status: Active — Clawdbot deployed. Product categories designed, Session 0 nex
 **THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR.** Without this, we're a summarizer. With it, we provide intelligence worth $99/mo.
 
 - **Schema migration** (`002_substance_codes_and_signal_source.sql`) — new `substance_codes` table (id, substance_id, code_system, code_value, code_type, is_classification, comments). `signal_source` column added to `segment_impacts` and `item_enrichment_tags` (values: `'direct'` | `'cross_reference'`). Applied to Supabase.
-- **Bootstrap updated** (`scripts/bootstrap-gsrs.ts`) — captures codes from 10 relevant GSRS code systems (CFR, CODEX, JECFA, DSLD, CIR, RXCUI, DRUGBANK, DAILYMED, EPA PESTICIDE CODE, Food Contact Substance Notif). Filters irrelevant systems. Batch upserts into `substance_codes` (500/batch). `RELEVANT_CODE_SYSTEMS` Set with "KEEP IN SYNC" comment.
+- **Bootstrap updated** (`scripts/bootstrap-gsrs.ts`) — captures ALL code systems from GSRS (no ingestion filter). Filtering to relevant systems happens at query time in `cross-reference.ts`. Supports `--codes-only` flag for fast backfills when substances are already loaded. ID lookup batched in chunks of 50 (avoids Supabase URL length limit). Batch upserts into `substance_codes` (500/batch).
 - **Step 1b: Use-context derivation** (`src/pipeline/enrichment/cross-reference.ts`) — `lookupUseContexts()`: pure TypeScript, no LLM. Queries `substance_codes` for resolved substance_ids, maps to 8 `UseContextCategory` types. CFR Part mapping: 175-178 → food_contact (checked first), 170-189 → food_additive, 73-82 → color_additive, 310-369 → otc_drug, 700-740 → cosmetic_ingredient. CODEX/JECFA functional class parsing from pipe-delimited comments.
 - **Step 1c: LLM cross-segment inference** (`cross-reference.ts`) — `inferCrossSegments()`: Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal segments BEYOND Step 1's direct extraction (~20-30% of items). Detailed system prompt with exposure route reasoning, regulatory precedent, confidence thresholds (>= 0.7). Additive-only — never modifies Step 1's direct extraction.
 - **Processor restructured** (`processor.ts`) — new flow: Steps 1-6 unchanged → step 7 (substance resolution via `Promise.all`) → step 8 (use-context lookup, 0.95 threshold) → step 9 (cross-segment inference, non-fatal) → steps 10-16 (DB writes with signal_source). N+1 UNII lookup replaced with batch `.in()` query. Tag deduplication via `existingTagKeys` Set.
 - **Types updated** (`database.ts`) — `SubstanceCode` interface, `signal_source` on `SegmentImpact` and `ItemEnrichmentTag`, `crossReferenced` on runner result types.
-- **Golden fixtures updated** — BHA expects `supplements` (min_relevance: "medium") and `cosmetics` (min_relevance: "low") via cross-reference. Tests can't validate yet — `substance_codes` table is empty until GSRS bootstrap re-run.
+- **Golden fixtures updated** — BHA expects `supplements` (min_relevance: "medium") and `cosmetics` (min_relevance: "low") via cross-reference.
 - **Code review completed** — 3 critical bugs fixed: (1) CFR food_contact range unreachable (overlap), (2) CFR regex matched title number instead of part number, (3) duplicate tag insertion on unique constraint. 2 performance fixes: N+1 UNII queries → batch, sequential substance resolution → Promise.all.
-- **Type-check clean.** Code uncommitted.
+- **GSRS code system name fixes** — discovered via API inspection that GSRS uses `DRUG BANK` (with space, not `DRUGBANK`), `Food Contact Sustance Notif, (FCN No.)` (GSRS has typo "Sustance" + suffix), and `COSMETIC INGREDIENT REVIEW (CIR)` does not exist in GSRS at all. Updated both `bootstrap-gsrs.ts` and `cross-reference.ts`.
+- **GSRS bootstrap complete** — 949,770 codes across 96 code systems, 166,532 substances with codes (98% of 169K). Key cross-ref systems: DAILYMED (15,493), RXCUI (14,622), DRUG BANK (11,878), CFR (3,430), EPA PESTICIDE CODE (2,957), JECFA EVALUATION (1,912), DSLD (1,527), Food Contact (731), CODEX (326).
+- **Type-check clean.** Committed.
 
 ### 2026-03-04 — Phase 2B Enrichment Stabilization
 
@@ -294,7 +296,7 @@ Status: Active — Clawdbot deployed. Product categories designed, Session 0 nex
 - **Inngest** client + `/api/inngest` route handler ready for pipeline functions
 - **Full v1 schema migration**: `supabase/migrations/001_initial_schema.sql` — all 25 tables, 9 layers, vector(1536) embeddings, pg_trgm indexes, moddatetime triggers
 - **Seed file**: `supabase/seeds/001_sources.sql` — 9 sources + regulatory_categories (segments, topics, product classes)
-- **GSRS bootstrap script**: `scripts/bootstrap-gsrs.ts` — one-time seed of 169K FDA substances
+- **GSRS bootstrap script**: `scripts/bootstrap-gsrs.ts` — seeds 169K FDA substances + 950K codes. Supports `--codes-only` flag for fast code backfills.
 - **TypeScript types**: hand-written types for all 25 tables (`database.ts`), enums (`enums.ts`), API types (`api.ts`)
 - **Playwright config**: chromium + firefox + webkit, webServer auto-start
 - **Verified**: `npm run type-check` passes, `npm run build` passes cleanly

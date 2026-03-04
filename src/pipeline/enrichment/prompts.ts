@@ -5,8 +5,6 @@
  * - Ingredient-level: affected_ingredients → regulatory_item_substances → substance_id matching
  * - Category-level: affected_product_categories / facility_type_tags / claims_tags / regulation_tags
  *   → item_enrichment_tags (4 dimensions) → Phase 4C category_overlap matching
- *
- * segment_impacts (food/supplement/cosmetics) = PRESENTATION ONLY — not used for matching.
  */
 
 import { z } from "zod";
@@ -62,12 +60,10 @@ export const EnrichmentOutputSchema = z.object({
   affected_ingredients: z.array(z.string()),
 
   /**
-   * Signal Type 2 — Category-level matching (controlled vocabulary).
-   * Assign product category slugs from the PRODUCT_CATEGORY_SLUGS list.
-   * Example for a cucumber recall: ["fresh_fruits_vegetables"]
-   * Example for a supplement WL: ["protein_powders"]
-   * If the item is about pharma, medical devices, or animal drugs → return [].
-   * These go to item_enrichment_tags[product_type].
+   * Signal Type 2 — Product category matching (controlled vocabulary).
+   * Which product categories from the PRODUCT_CATEGORY_SLUGS list does this item affect?
+   * Return [] if the item doesn't affect any categories in our vocabulary
+   * (e.g., pharma drugs, medical devices).
    */
   affected_product_categories: z.array(z.string()),
 
@@ -100,24 +96,7 @@ export const EnrichmentOutputSchema = z.object({
    */
   deadline: z.string().nullable(),
 
-  // ── TIER 2 — segment routing (generic digest only) ───────────────────────
-
-  /**
-   * Segment impacts for the generic weekly digest.
-   * Only include segments with relevance != 'none'.
-   * This is NOT used for Phase 4C product matching.
-   */
-  segments: z.array(
-    z.object({
-      segment: z.enum(["supplements", "cosmetics", "food"]),
-      relevance: z.enum(["critical", "high", "medium", "low"]),
-      impact_summary: z.string().max(500),
-      action_items: z.array(z.string()),
-      who_affected: z.string().max(200),
-    })
-  ),
-
-  // ── TIER 3 — metadata ────────────────────────────────────────────────────
+  // ── TIER 2 — metadata ─────────────────────────────────────────────────────
 
   /** 2-3 sentence plain-language summary for dashboard display. */
   summary: z.string().max(1000),
@@ -322,19 +301,17 @@ Your goal is to extract structured intelligence that is **strictly accurate**. W
    - Decision: Does this actually ban/restrict something, or is it just a meeting notice?
 
 2. **TWO SIGNAL TYPES**:
-   - **Ingredient-level**: Extract specific substances (e.g., "Red No. 3", "CBD", "N-acetyl cysteine").
-     - *Constraint*: Do NOT extract "ingredients" if the text just mentions them as examples in a general discussion. Only extract if they are the *target* of the action.
-   - **Category-level**: Assign product category slugs from the PRODUCT CATEGORY SLUGS list below.
-     - Only use slugs from the provided controlled vocabulary.
-     - Example: a cucumber recall → ["fresh_fruits_vegetables"]
-     - Example: a supplement GMP warning letter → ["protein_powders"] (if specific) or ["other_supplement"] (if generic)
-     - If the item is about pharma, medical devices, or animal drugs → return \`[]\`.
+   - **Ingredient-level**: Extract specific substances that are the *target* of the action (e.g., "Red No. 3", "CBD", "BHA").
+     - Do NOT extract ingredients mentioned only as examples in general discussions.
+   - **Product categories**: Which product categories does this item affect? Use ONLY slugs from the PRODUCT CATEGORY SLUGS list provided below.
+     - Pick the most specific matching categories. A cucumber recall → \`["fresh_fruits_vegetables"]\`. A supplement GMP warning letter about protein products → \`["protein_powders"]\`.
+     - Items outside our vocabulary (pharma drugs, medical devices) → return \`[]\`.
 
 3. **ANTI-HALLUCINATION RULES**:
    - If no specific ingredient is named, \`affected_ingredients\` must be \`[]\`.
-   - Do not infer supplement categories just because "vitamin" is mentioned, if the context is a fortified food.
-   - If the document is about "Medical Devices" or "Drugs" (Pharma), set \`segments\` to \`[]\` AND \`affected_product_categories\` to \`[]\` unless it explicitly mentions food/cosmetics/supplements overlap.
-   - Only use slugs from the PRODUCT CATEGORY SLUGS list. Do not invent new slugs.
+   - Do not infer supplement categories just because "vitamin" is mentioned in a fortified food context.
+   - \`affected_product_categories\` must ONLY contain slugs from the provided list. Do not invent slugs.
+   - If no slug in the list fits the item, return \`[]\`. This is correct for pharma drugs, medical devices, and other items outside our food/supplement/cosmetic scope.
 
 4. **ACTION TYPES**:
    - \`cgmp_violation\`: Enforcement for breaking *existing* GMP rules (warning letters citing 21 CFR 111, 210, 211).

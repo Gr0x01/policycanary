@@ -18,7 +18,7 @@ Status: Active
 
 ## What's Happening
 
-**Clawdbot (OpenClaw) deployed to Vultr VPS.** Discord bot live on the `Bizniz` server with 5 channels (blog-drafts, linkedin-drafts, weekly-roundup, alerts, clawdbot). Weekly FDA Roundup cron fires Fridays 9 AM ET → drafts blog post → posts to #weekly-roundup for review → publishes to `/blog` on approval. Uses `query-supabase.mjs` to pull enriched items and `publish-blog.mjs` to POST to the blog API. **Product onboarding phase planned.** `product_categories` table (~79 categories) as sacred controlled vocab. **GSRS bootstrap must be re-run** to capture codes. Then re-enrich all items.
+**Clawdbot (OpenClaw) deployed to Vultr VPS.** Discord bot live on the `Bizniz` server with 5 channels (blog-drafts, linkedin-drafts, weekly-roundup, alerts, clawdbot). Weekly FDA Roundup cron fires Fridays 9 AM ET → drafts blog post → posts to #weekly-roundup for review → publishes to `/blog` on approval. Uses `query-supabase.mjs` to pull enriched items and `publish-blog.mjs` to POST to the blog API. **GSRS bootstrap complete** — 949K codes across 96 systems, 166K substances with codes. Cross-reference inference data is loaded. **Product onboarding phase planned.** `product_categories` table (~79 categories) as sacred controlled vocab. Re-enrich all items next.
 
 ---
 
@@ -61,7 +61,8 @@ npm run pipeline:golden-enrich          # Re-enrich + validate golden fixtures (
 npm run pipeline:content-fetch-test     # Debug: fetch single FDA URL, print extracted text
 
 # One-time seeds
-npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
+npx tsx scripts/bootstrap-gsrs.ts              # Full bootstrap: 169K substances + 950K codes
+npx tsx scripts/bootstrap-gsrs.ts --codes-only  # Codes-only backfill (substances already loaded)
 
 # Clawdbot (OpenClaw) — VPS at 108.61.151.130
 ssh root@108.61.151.130                           # SSH into VPS
@@ -97,14 +98,14 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] **Auth: Magic link** — `/login`, `/auth/callback`, `/app/dashboard`, `proxy.ts`. Verified end-to-end.
 - [x] **Web app MVP (Phase 6)** — feed, item detail, search, products. AppNav, mock data layer (USE_MOCK flag). `/app/dashboard` redirects to `/app/feed`.
 - [x] **Enrichment pipeline (Phase 2B)** — stabilized. Content-fetch, prompt fixes, golden tests 10/10.
-- [x] **Cross-reference inference layer** — Steps 1b + 1c built. Schema migration applied. Type-check clean. GSRS bootstrap updated. KEY DIFFERENTIATOR.
+- [x] **Cross-reference inference layer** — Steps 1b + 1c built. Schema migration applied. GSRS bootstrap complete (949K codes, 96 systems). KEY DIFFERENTIATOR.
 - [x] **Blog section** — `/blog`, `/blog/[slug]`, RSS feed, Clawdbot POST API. Migration `003_blog_posts`. Code-reviewed (3 critical + 4 warning fixes applied).
 - [x] **Stripe subscriptions (Phase 4B)** — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed. Migration `004`. Stripe Dashboard configured (live mode). Commit `497ec6d`.
 - [x] Stripe Dashboard setup — products + prices created (Monitor $99, Extra $6), customer portal configured, webhook endpoint pending deploy
 - [x] **Product categories taxonomy designed** — ~79 categories from MoCRA, 21 CFR 170.3, DSLD. Sacred controlled vocab — no free text.
 - [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.
 - [ ] **Session 0: Product categories migration + enrichment update** — migration `005`, seed categories, update `prompts.ts`/`processor.ts`/`cross-reference.ts` to controlled vocab
-- [ ] Re-run GSRS bootstrap (captures codes into `substance_codes`)
+- [x] GSRS bootstrap complete — 949K codes, 96 code systems, 166K substances with codes
 - [ ] Re-enrich existing items (cross-reference + controlled product categories, one pass)
 - [ ] **Session 1: Onboarding backend** — GSRS search utility, ingredient parsing (Gemini Flash), product API routes, GSRS autocomplete
 - [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page

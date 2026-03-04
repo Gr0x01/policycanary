@@ -5,34 +5,27 @@
  *
  * PHILOSOPHY: This product is ingredient-centric, not segment-centric.
  * The matching engine (Phase 4C) connects regulatory items → subscriber products
- * via SUBSTANCES. Segment tags (food/supplement/cosmetics) are secondary — useful
- * for routing the generic digest, but they are NOT the product.
+ * via SUBSTANCES and PRODUCT CATEGORIES. Coarse segment tags have been removed.
  *
- * The primary assertions are therefore:
+ * The primary assertions are:
  *   1. regulatory_action_type — what is actually happening (drives email priority)
  *   2. affected_ingredients   — the substances affected (drives product matching)
  *   3. affected_product_categories — granular product types (pre-filter before substance match)
- *
- * Segment classification is tested as a secondary/sanity check.
  *
  * How to use:
  *   - `expected.affected_ingredients`: every listed string must appear in the pipeline
  *     output (case-insensitive, substring match OK). Extra ingredients are fine.
  *   - `expected.affected_product_categories`: same subset rule.
  *   - `expected.regulatory_action_type`: must match exactly.
- *   - `expected.segments`: each listed segment must appear with AT LEAST the given relevance.
- *   - `expected.segments_absent`: these segments must NOT appear above "none".
  *
  * Review cadence:
  *   - Run against the pipeline before any full backfill
  *   - Re-run whenever the enrichment prompt version bumps
  *   - Human review of pipeline output vs expected takes ~20 min for 10 items
  *
- * Last reviewed: 2026-03-03
+ * Last reviewed: 2026-03-04
  */
 
-export type Segment = "supplements" | "food" | "cosmetics"
-export type Relevance = "critical" | "high" | "medium" | "low" | "none"
 export type ActionType =
   | "recall"                // product pulled from market
   | "ban_restriction"       // ingredient/substance banned or restricted (final)
@@ -55,7 +48,6 @@ export interface GoldenFixture {
   item_type: string
   issuing_office: string | null
   expected: {
-    // ── PRIMARY: these drive product matching and email prioritization ─────────
     /** What regulatory action is actually happening */
     regulatory_action_type: ActionType
     /** Substance/ingredient names that must appear in output (label-friendly) */
@@ -64,13 +56,7 @@ export interface GoldenFixture {
     affected_product_categories: string[]
     /** True if there is a concrete compliance deadline */
     has_deadline: boolean
-
-    // ── SECONDARY: segment routing for the generic weekly digest ──────────────
-    segments: { segment: Segment; min_relevance: Relevance }[]
-    /** These segments must NOT appear with relevance above "none" */
-    segments_absent: Segment[]
-
-    // ── QUALITY ───────────────────────────────────────────────────────────────
+    /** Minimum confidence threshold */
     min_confidence: number
   }
   /** Why this item is in the golden set — what it validates */
@@ -90,12 +76,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: ["BHA", "butylated hydroxyanisole"],
       affected_product_categories: ["food_preservatives"],
       has_deadline: false,
-      segments: [
-        { segment: "food", min_relevance: "critical" },
-        { segment: "supplements", min_relevance: "medium" },  // cross-reference: BHA in DSLD (oral exposure)
-        { segment: "cosmetics", min_relevance: "low" },       // cross-reference: BHA in CIR (dermal, lower risk)
-      ],
-      segments_absent: [],
       min_confidence: 0.9,
     },
     rationale:
@@ -118,8 +98,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [],
       affected_product_categories: ["specialty_supplements"],
       has_deadline: false,
-      segments: [{ segment: "supplements", min_relevance: "critical" }],
-      segments_absent: ["food", "cosmetics"],
       min_confidence: 0.9,
     },
     rationale:
@@ -139,8 +117,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [],
       affected_product_categories: ["other_food"],
       has_deadline: false,
-      segments: [{ segment: "food", min_relevance: "high" }],
-      segments_absent: ["supplements", "cosmetics"],
       min_confidence: 0.8,
     },
     rationale:
@@ -160,8 +136,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [], // cucumber is the product, not a substance/ingredient
       affected_product_categories: ["fresh_fruits_vegetables"],
       has_deadline: false,
-      segments: [{ segment: "food", min_relevance: "high" }],
-      segments_absent: ["supplements", "cosmetics"],
       min_confidence: 0.9,
     },
     rationale:
@@ -179,8 +153,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [], // yogurt is the product, not a substance/ingredient
       affected_product_categories: ["dairy_products"],
       has_deadline: false,
-      segments: [{ segment: "food", min_relevance: "high" }],
-      segments_absent: ["supplements", "cosmetics"],
       min_confidence: 0.85,
     },
     rationale:
@@ -200,16 +172,12 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [],
       affected_product_categories: [], // pharma — outside controlled vocab, rule validator clears
       has_deadline: false, // LLM inconsistently extracts WL response deadlines; don't fail on this
-      segments: [],
-      segments_absent: ["supplements", "food", "cosmetics"],
       min_confidence: 0.3,
     },
     rationale:
       "Pharmaceutical CGMP WL from CDER (21 CFR Parts 210 and 211). " +
       "THE most critical negative test. A misclassification as supplements causes " +
-      "false product matches. CDER issuing office must drive segments to none. " +
-      "Rule-based validator MUST fire on CDER office → clear all segment tags. " +
-      "has_deadline=true: WLs have 15-working-day response deadlines. " +
+      "false product matches. Rule-based validator MUST fire on CDER office → clear all categories. " +
       "min_confidence lowered: pharma WLs are outside our core domain, low confidence is expected and fine.",
   },
 
@@ -223,8 +191,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [],
       affected_product_categories: [], // pharma — outside controlled vocab, rule validator clears
       has_deadline: true,
-      segments: [],
-      segments_absent: ["supplements", "food", "cosmetics"],
       min_confidence: 0.3,
     },
     rationale:
@@ -243,8 +209,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [],
       affected_product_categories: [], // medical device — no device categories in controlled vocab
       has_deadline: false,
-      segments: [],
-      segments_absent: ["supplements", "food", "cosmetics"],
       min_confidence: 0.4, // device alert outside our domain — low confidence is correct and expected
     },
     rationale:
@@ -263,8 +227,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [],
       affected_product_categories: [], // animal drug — rule validator clears, no pharma slugs
       has_deadline: true, // FR rules have effective dates
-      segments: [],
-      segments_absent: ["supplements", "food", "cosmetics"],
       min_confidence: 0.1, // animal drugs are completely outside our domain — very low confidence expected
     },
     rationale:
@@ -285,8 +247,6 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
       affected_ingredients: [],
       affected_product_categories: ["animal_feed"],
       has_deadline: false,
-      segments: [], // animal food ≠ human food — no segment impact expected
-      segments_absent: ["supplements", "cosmetics"],
       min_confidence: 0.6,
     },
     rationale:

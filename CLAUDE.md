@@ -171,6 +171,14 @@ brand-guardian → ui-designer → frontend-developer → code-reviewer
   - Output: Prioritized feedback (Critical / Warning / Suggestion)
   - Model: sonnet
 
+**LEGAL & COMPLIANCE**
+
+- **legal-compliance-checker**: Privacy policies, terms of service, AI disclaimers, data handling review
+  - Use for: Drafting/reviewing privacy policy, terms of service, AI accuracy disclaimers, "not legal advice" positioning, CAN-SPAM compliance, data handling questions, sub-processor documentation, incident response planning
+  - Read: `.claude/agents/legal-compliance-checker.md`
+  - Key principle: Policy Canary provides intelligence, NOT legal advice — this distinction must be reinforced everywhere
+  - Model: opus
+
 **RESEARCH & CONTENT**
 
 - **trend-researcher**: Market research, competitive intelligence, regulatory landscape analysis
@@ -195,6 +203,7 @@ Subagents are not mandatory for every change. Use judgment:
 6. **code-reviewer**: After any significant feature or refactor. Not one-line fixes.
 7. **trend-researcher**: Competitive research, data source discovery, market validation.
 8. **visual-storyteller**: Marketing assets, pitch materials, explainer diagrams.
+9. **legal-compliance-checker**: Drafting privacy policy, terms of service, disclaimer language, data handling reviews, AI disclosure requirements. Any user-facing legal text.
 
 ### Integration Workflows
 
@@ -216,6 +225,11 @@ Subagents are not mandatory for every change. Use judgment:
 1. Use trend-researcher for competitive or market questions
 2. Use general-purpose agent for multi-step technical investigations
 
+**LEGAL / PUBLIC-FACING TEXT**:
+1. Run legal-compliance-checker for any privacy policy, terms, disclaimers, or AI disclosure text
+2. Run brand-guardian after for tone/voice consistency
+3. Implement — both agents review before publishing
+
 **PRAGMATIC RULE**: Under 50 lines following existing patterns → just ship it with type checking. Subagents for anything with real design, architecture, or correctness stakes.
 
 ### Keeping Agent Files Current
@@ -228,6 +242,8 @@ Subagents are not mandatory for every change. Use judgment:
 | New database table or schema change | `backend-architect.md` (key tables) |
 | New architectural pattern adopted | Both architect files |
 | Brand/visual direction change | `brand-guardian.md`, `ui-designer.md`, `frontend-developer.md` |
+| New AI provider or data flow added | `legal-compliance-checker.md` (sub-processors, AI disclosure) |
+| New user-facing legal text or disclaimer | `legal-compliance-checker.md` (compliance checklist) |
 | New canonical reference file created | `frontend-developer.md` (canonical files list) |
 
 **When to update**: Same trigger as the memory bank — when you finish a feature, establish a convention, or make an architectural decision that should guide future sessions. Stale agent files produce bad suggestions.

@@ -79,7 +79,7 @@ status: Active
 - [ ] **Migration `005_product_categories`** — create `product_categories` table, seed ~79 categories, add `product_category_id` FK to `subscriber_products`, add `company_name` to `users`, RLS policies
 - [ ] **Update enrichment pipeline** — `prompts.ts`: `PRODUCT_CATEGORY_SLUGS` constant, `affected_product_types` → `affected_product_categories` (controlled slugs), update system prompt. `processor.ts`: write slugs to `item_enrichment_tags`. `cross-reference.ts`: Step 1c output switches to slugs. `database.ts`: add `ProductCategory` interface.
 - [ ] **Update golden tests** — fixture expectations for controlled category slugs
-- [ ] **Re-run GSRS bootstrap** — `echo "" > .gsrs-checkpoint && npx tsx scripts/bootstrap-gsrs.ts` (~30-60 min)
+- [x] **GSRS bootstrap complete** — 949K codes, 96 systems, 166K substances. `--codes-only` mode added for future backfills.
 - [ ] **Re-enrich all items** — cross-reference + controlled product categories, one pass
 
 #### Session 1: Onboarding Backend
@@ -154,13 +154,13 @@ segment classification is a secondary sanity check.
 
 ---
 
-## Cross-Reference Inference Layer (Built 2026-03-04)
+## Cross-Reference Inference Layer (Built 2026-03-04, Data Loaded)
 
-**THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR. Built and code-reviewed. Awaiting GSRS bootstrap re-run.**
+**THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR. Built, code-reviewed, and data loaded. Ready to activate.**
 
 ### What It Does
 
-Step 1b: Deterministic use-context derivation from GSRS substance codes. Maps 10 code systems (CFR, CODEX, JECFA, DSLD, CIR, RXCUI, DRUGBANK, DAILYMED, EPA PESTICIDE CODE, Food Contact Substance Notif) to 8 `UseContextCategory` types. Pure TypeScript, no LLM. GSRS codes are ground truth.
+Step 1b: Deterministic use-context derivation from GSRS substance codes. Maps 9 code systems (CFR, CODEX, JECFA, DSLD, RXCUI, DRUG BANK, DAILYMED, EPA PESTICIDE CODE, Food Contact Sustance Notif) to 8 `UseContextCategory` types. Pure TypeScript, no LLM. GSRS codes are ground truth.
 
 Step 1c: LLM cross-segment inference using Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). Reasons about exposure routes, regulatory precedent, and action mechanism to determine which additional segments are genuinely implicated.
 
@@ -168,8 +168,15 @@ Step 1c: LLM cross-segment inference using Gemini 2.5 Pro with thinking (budget:
 
 - `src/pipeline/enrichment/cross-reference.ts` — Steps 1b (`lookupUseContexts`) + 1c (`inferCrossSegments`)
 - `src/pipeline/enrichment/processor.ts` — restructured `enrichItem()` integrating cross-ref
-- `scripts/bootstrap-gsrs.ts` — updated to capture codes from 10 relevant systems
+- `scripts/bootstrap-gsrs.ts` — captures ALL 96 GSRS code systems; `--codes-only` flag for fast backfills
 - `supabase/migrations/002_substance_codes_and_signal_source.sql` — schema migration (applied)
+
+### Data State
+
+- **949,770 codes** across **96 code systems**, **166,532 substances** with codes (98% of 169K)
+- All code systems captured at ingestion; filtering to 9 relevant systems at query time in `cross-reference.ts`
+- Key cross-ref systems: DAILYMED (15K), RXCUI (15K), DRUG BANK (12K), CFR (3.4K), EPA PESTICIDE (3K), JECFA (1.9K), DSLD (1.5K), Food Contact (731), CODEX (326)
+- CIR (cosmetic) does not exist in GSRS — cosmetic ingredient data needs a separate source
 
 ### Trust Safeguards
 
@@ -182,9 +189,8 @@ Step 1c: LLM cross-segment inference using Gemini 2.5 Pro with thinking (budget:
 
 ### What's Needed to Activate
 
-1. **Re-run GSRS bootstrap** — `echo "" > .gsrs-checkpoint && npx tsx scripts/bootstrap-gsrs.ts` (~30-60 min, captures ~500K-850K codes)
-2. **Run golden tests** — `npm run pipeline:golden-enrich` to validate BHA cross-reference expansion
-3. **Re-enrich 422 WLs** — one pass with cross-reference inference
+1. **Run golden tests** — `npm run pipeline:golden-enrich` to validate BHA cross-reference expansion
+2. **Re-enrich 422 WLs** — one pass with cross-reference inference
 
 ---
 
@@ -289,7 +295,7 @@ scripts/
   run-enrichment.ts                 # Dev CLI: enrich unenriched items (--limit, --type)
   run-golden-tests.ts               # Golden fixture validation (--enrich to re-enrich first)
   test-content-fetch.ts             # Debug: fetch single FDA URL and print extracted text
-  bootstrap-gsrs.ts                 # One-time: seeds 169K FDA substances
+  bootstrap-gsrs.ts                 # Seeds 169K substances + 950K codes. --codes-only for fast backfills.
 
 tests/golden/
   fixtures.ts                       # 10 golden fixtures with expected enrichment output

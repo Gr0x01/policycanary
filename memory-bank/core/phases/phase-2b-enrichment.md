@@ -327,17 +327,18 @@ CROSS-REFERENCE INFERENCE LAYER (BUILT — 2026-03-04):
   Step 1b: DETERMINISTIC USE-CONTEXT LOOKUP (src/pipeline/enrichment/cross-reference.ts)
     lookupUseContexts(substanceIds, supabase) → Map<substanceId, UseContext[]>
     Queries substance_codes table for resolved substances (similarity >= 0.95).
-    Maps 10 GSRS code systems → 8 UseContextCategory types:
+    All 96 GSRS code systems stored; filtering to 9 relevant systems at query time.
+    Maps 9 GSRS code systems → 8 UseContextCategory types:
     - CFR Part 170-189 → food_additive (175-178 → food_contact checked first)
     - CFR Part 73-82 → color_additive
     - CFR Part 310-369 → otc_drug
     - CFR Part 700-740 → cosmetic_ingredient
     - CODEX/JECFA → food_additive (+ functional class from comments)
     - DSLD → supplement_ingredient
-    - CIR → cosmetic_ingredient
-    - RXCUI/DRUGBANK/DAILYMED → pharmaceutical
+    - RXCUI/DRUG BANK/DAILYMED → pharmaceutical (note: GSRS spells "DRUG BANK" with space)
     - EPA PESTICIDE CODE → pesticide
-    - Food Contact Substance Notif → food_contact
+    - Food Contact Sustance Notif, (FCN No.) → food_contact (note: GSRS has typo)
+    NOT in GSRS: CIR (cosmetic) — needs separate source.
     Pure TypeScript, no LLM. GSRS codes are ground truth.
 
   Step 1c: LLM CROSS-SEGMENT INFERENCE (same file)
@@ -357,7 +358,8 @@ CROSS-REFERENCE INFERENCE LAYER (BUILT — 2026-03-04):
     Additive-only: Step 1c NEVER modifies Step 1's direct extraction.
 
   Schema: substance_codes table + signal_source columns (migration 002 applied).
-  GSRS bootstrap updated to capture codes. Must be re-run from 0.
+  GSRS bootstrap complete: 949K codes, 96 systems, 166K substances with codes.
+  Bootstrap captures ALL code systems; filtering at query time in cross-reference.ts.
   Cost: ~$0.02/call, fires on ~20-30% of items.
 
 CRITICAL DECISIONS:

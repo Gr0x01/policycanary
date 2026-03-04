@@ -126,7 +126,7 @@ flowchart TB
 **Pipeline steps per item:**
 1. **Content-fetch** — if source_url points to FDA.gov and content is thin (<1K chars), fetch full page and extract `<main>` text. RSS items go from ~200 chars to 2K-7K chars.
 2. **LLM extraction** — single Gemini call (Flash for simple items, Pro for complex). Produces all structured outputs below.
-3. **Cross-reference inference** (BUILT) — Step 1b: deterministic lookup of extracted substances in GSRS `substance_codes` → maps to use-context categories. Step 1c: Gemini 2.5 Pro with thinking (budget: 4096) reasons about cross-segment risk transfer. Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). `signal_source` column distinguishes direct vs inferred. See `src/pipeline/enrichment/cross-reference.ts`.
+3. **Cross-reference inference** (BUILT + DATA LOADED) — Step 1b: deterministic lookup of extracted substances in GSRS `substance_codes` (949K codes, 96 systems) → maps 9 relevant systems to use-context categories. Step 1c: Gemini 2.5 Pro with thinking (budget: 4096) reasons about cross-segment risk transfer. Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). `signal_source` column distinguishes direct vs inferred. See `src/pipeline/enrichment/cross-reference.ts`.
 4. **Embeddings** — chunk content, generate OpenAI embeddings for vector search.
 
 Full content is sent to the LLM — no truncation. Longest item is ~47K chars (~12K tokens), well within Gemini's 1M token context.

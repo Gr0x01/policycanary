@@ -1,7 +1,7 @@
 ---
 Title: Data Schema v1
 Version: v1
-Last-Updated: 2026-03-05
+Last-Updated: 2026-03-04
 Maintainer: RB
 Status: Active
 ---
@@ -345,13 +345,13 @@ Synonym resolution table. A single substance may have dozens of names across dif
 
 Use-context codes per substance from GSRS. Powers cross-reference inference (Step 1b): maps code systems to use-context categories (food additive, supplement ingredient, cosmetic ingredient, pharmaceutical, etc.). This is the data foundation for the cross-segment intelligence feature.
 
-**Status:** Live (migration 002 applied, table empty until GSRS bootstrap re-run)
+**Status:** Live — 949,770 codes across 96 code systems, 166,532 substances with codes (GSRS bootstrap complete)
 
 | Column | Type | Constraints | Notes |
 |--------|------|-------------|-------|
 | id | UUID | PK, DEFAULT gen_random_uuid() | |
 | substance_id | UUID | NOT NULL, FK --> substances ON DELETE CASCADE | |
-| code_system | TEXT | NOT NULL | e.g. 'CFR', 'CODEX ALIMENTARIUS (GSFA)', 'DSLD', 'COSMETIC INGREDIENT REVIEW (CIR)' |
+| code_system | TEXT | NOT NULL | e.g. 'CFR', 'CODEX ALIMENTARIUS (GSFA)', 'DSLD', 'DRUG BANK', 'PUBCHEM' — 96 systems stored, 9 used by Step 1b |
 | code_value | TEXT | NOT NULL | The actual code: '21 CFR 172.110', 'DSLD-12345', etc. |
 | code_type | TEXT | | 'PRIMARY', 'CLASSIFICATION', etc. |
 | is_classification | BOOLEAN | DEFAULT false | Whether this code represents a classification vs a specific registration |
@@ -365,24 +365,27 @@ Use-context codes per substance from GSRS. Powers cross-reference inference (Ste
 - `idx_substance_codes_substance` on (substance_id)
 - `idx_substance_codes_system` on (code_system)
 
-**Relevant code systems (10 total):**
+**Storage approach:** ALL 96 GSRS code systems are captured at ingestion time. Filtering to relevant systems happens at query time in `cross-reference.ts` (Step 1b). This avoids re-running the full bootstrap whenever a new code system becomes useful.
 
-| Code System | Use-Context Signal |
+**Code systems used by Step 1b (9 total):**
+
+| Code System (exact GSRS name) | Use-Context Signal |
 |---|---|
 | CFR | Food additive (Part 170-189), food-contact (Part 175-178), color additive (Part 73-82), OTC drug (Part 310-369), cosmetic (Part 700-740) |
 | CODEX ALIMENTARIUS (GSFA) | Food additive + functional class (from comments) |
 | JECFA EVALUATION | Food additive evaluation |
 | DSLD | Supplement ingredient presence |
-| COSMETIC INGREDIENT REVIEW (CIR) | Cosmetic safety reviewed |
 | RXCUI | Pharmaceutical use |
-| DRUGBANK | Pharmaceutical use |
+| DRUG BANK | Pharmaceutical use (note: GSRS spells it with a space) |
 | DAILYMED | Drug/pharmaceutical |
 | EPA PESTICIDE CODE | Pesticide registration |
-| Food Contact Substance Notif | Food-contact material |
+| Food Contact Sustance Notif, (FCN No.) | Food-contact material (note: GSRS has typo "Sustance") |
 
-**Estimated volume:** ~500K-850K rows (169K substances × ~3-5 relevant codes each).
+**Not in GSRS:** COSMETIC INGREDIENT REVIEW (CIR) does not exist in GSRS. Cosmetic ingredient data needs a separate source.
 
-**Cross-reference pipeline:** `lookupUseContexts()` in `src/pipeline/enrichment/cross-reference.ts` queries this table for resolved substances and maps codes to `UseContextCategory` types deterministically (no LLM). Step 1c then uses these use contexts to reason about cross-segment risk transfer via Gemini 2.5 Pro.
+**Actual volume:** 949,770 rows across 96 code systems. Top systems by count: FDA UNII (164K), CAS (133K), PUBCHEM (120K), EPA CompTox (84K), NCI_THESAURUS (38K), DAILYMED (15K), RXCUI (15K), DRUG BANK (12K), CFR (3.4K), DSLD (1.5K), Food Contact (731), CODEX (326).
+
+**Cross-reference pipeline:** `lookupUseContexts()` in `src/pipeline/enrichment/cross-reference.ts` queries this table for resolved substances and maps the 9 known code systems to `UseContextCategory` types deterministically (no LLM). Step 1c then uses these use contexts to reason about cross-segment risk transfer via Gemini 2.5 Pro.
 
 ---
 
@@ -1326,13 +1329,24 @@ Source: https://gsrs.ncats.nih.gov/ (public API, paginated)
 
 Import script: `scripts/bootstrap-gsrs.ts` (run via `npx tsx scripts/bootstrap-gsrs.ts`)
 
+Usage:
+```bash
+npx tsx scripts/bootstrap-gsrs.ts              # Full bootstrap (substances + names + codes)
+npx tsx scripts/bootstrap-gsrs.ts --codes-only  # Backfill codes only (when substances already loaded)
+```
+
 Import process:
 1. Paginate GSRS API (500/page, ~169K substances)
-2. For each substance: extract canonical_name, UNII, CAS, substance_class → upsert into `substances`
-3. Extract all names/synonyms → upsert into `substance_names` with name_type and source='gsrs'
-4. Extract relevant codes (10 code systems) → upsert into `substance_codes` with code_system, code_value, code_type, is_classification, comments
+2. For each substance: extract canonical_name, UNII, CAS, substance_class → upsert into `substances` (skipped in `--codes-only` mode)
+3. Extract all names/synonyms → upsert into `substance_names` (skipped in `--codes-only` mode)
+4. Extract ALL codes from ALL code systems → upsert into `substance_codes` (no code system filter — capture everything, filter at query time)
 5. Checkpoint file (`.gsrs-checkpoint`) enables resume on interruption
-6. Estimated row counts: ~169K substances, ~500K-1M substance_names, ~500K-850K substance_codes
+6. ID lookup batched in chunks of 50 (avoids Supabase URL length limit with long substance names)
+
+Actual row counts (completed):
+- 169,794 substances
+- ~1M substance_names
+- 949,770 substance_codes (96 code systems, 166,532 substances with codes)
 
 This is a one-time bulk import with monthly refresh (Phase 2C). Run before any product onboarding so DSLD ingredients can resolve immediately and cross-reference inference has data.
 

@@ -93,8 +93,8 @@ COMPONENT 4: NPM SCRIPTS (package.json)
 
 COMPONENT 5: GSRS MONTHLY SYNC (src/pipeline/gsrs-sync.ts)
 
-  The substances table (169K FDA substances) + substance_codes table (~500K-850K
-  use-context codes) needs monthly refresh to pick up new registrations and codes.
+  The substances table (169K FDA substances) + substance_codes table (950K codes
+  across 96 code systems) needs monthly refresh to pick up new registrations and codes.
   New botanical ingredients, novel NDIs, and new food additives are registered
   periodically. Monthly sync keeps substance matching AND cross-reference inference
   current, and retroactively resolves items with match_status='unresolved'.
@@ -107,7 +107,7 @@ COMPONENT 5: GSRS MONTHLY SYNC (src/pipeline/gsrs-sync.ts)
   async function syncGsrs(): Promise<{ upserted: number; durationMs: number }>
 
   - Same logic as scripts/bootstrap-gsrs.ts but wrapped as an async function
-  - Captures substances, substance_names, AND substance_codes (10 relevant code systems)
+  - Captures substances, substance_names, AND substance_codes (all code systems — no filter)
   - Uses upsert on canonical_name conflict — always safe to re-run
   - Takes ~5 hours; must run as background Inngest job (not HTTP handler)
   - Schedule: monthly, 1st of month at 2 AM UTC
