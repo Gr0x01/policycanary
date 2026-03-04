@@ -83,9 +83,12 @@ Phase 6: Web App ─────────────────────
 **Purpose:** Stripe checkout, webhook handling, `access_level` update on `public.users`. Connect email_subscribers to users on upgrade.
 → Session brief: `/memory-bank/core/phases/phase-4-auth-stripe.md`
 
-## Phase 4B: Product Onboarding
-**Complexity:** Medium | **Sessions:** 1-2 | **Dependencies:** Phase 4 (Auth)
-**Purpose:** Allow subscribers to add their actual products and hydrate with ingredient data from DSLD and USDA FDC.
+## Phase 4B: Product Onboarding — Session 1 API Routes ✓ DONE
+**Complexity:** Medium | **Sessions:** 2-3 | **Dependencies:** Phase 4 (Auth)
+**Purpose:** Allow subscribers to add their actual products and hydrate with ingredient data from DSLD (local DB) and USDA FDC.
+**Session 1 shipped:** DSLD search/detail API, product CRUD, substance resolution, plan limits, duplicate guards. Triple code-reviewed.
+**Remaining (Session 1b):** Ingredient parsing (Gemini Flash for non-DSLD), GSRS search utility, product classification.
+**Remaining (Session 2):** Frontend — product management page, DSLD typeahead UI, onboarding flow.
 → Session brief: `/memory-bank/core/phases/phase-4b-product-onboarding.md`
 
 ## Phase 4C: Product Matching Engine
