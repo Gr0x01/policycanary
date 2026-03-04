@@ -1,0 +1,102 @@
+#!/usr/bin/env node
+/**
+ * publish-blog.mjs — Publish a blog post to Policy Canary via the API
+ *
+ * Usage:
+ *   node publish-blog.mjs --title "Title" --slug "my-slug" --content "# Markdown..." --category "weekly_roundup" --excerpt "Short summary"
+ *   node publish-blog.mjs --title "Title" --slug "my-slug" --content-file /tmp/post.md --category "weekly_roundup" --excerpt "Summary" --status published
+ *
+ * Flags:
+ *   --title       Post title (required)
+ *   --slug        URL slug (required, lowercase-hyphen)
+ *   --content     Markdown content (required unless --content-file)
+ *   --content-file  Read content from file instead of arg
+ *   --category    One of: weekly_roundup, warning_letter_analysis, regulatory_trends, breaking_analysis
+ *   --excerpt     Short summary (required)
+ *   --status      "draft" (default) or "published"
+ *   --base-url    API base URL (default: https://policycanary.io)
+ *
+ * Env vars (required):
+ *   BLOG_API_KEY
+ */
+
+import { parseArgs } from "node:util";
+import { readFileSync } from "node:fs";
+
+const { values: args } = parseArgs({
+  options: {
+    title: { type: "string" },
+    slug: { type: "string" },
+    content: { type: "string" },
+    "content-file": { type: "string" },
+    category: { type: "string", default: "weekly_roundup" },
+    excerpt: { type: "string" },
+    status: { type: "string", default: "draft" },
+    "base-url": { type: "string", default: "https://policycanary.io" },
+  },
+});
+
+const BLOG_API_KEY = process.env.BLOG_API_KEY;
+if (!BLOG_API_KEY) {
+  console.error("Missing BLOG_API_KEY env var");
+  process.exit(1);
+}
+
+if (!args.title || !args.slug || !args.excerpt) {
+  console.error("Required: --title, --slug, --excerpt");
+  process.exit(1);
+}
+
+let content = args.content;
+if (args["content-file"]) {
+  content = readFileSync(args["content-file"], "utf-8");
+}
+if (!content) {
+  console.error("Required: --content or --content-file");
+  process.exit(1);
+}
+
+const VALID_CATEGORIES = [
+  "weekly_roundup",
+  "warning_letter_analysis",
+  "regulatory_trends",
+  "breaking_analysis",
+];
+if (!VALID_CATEGORIES.includes(args.category)) {
+  console.error(`Invalid category. Must be one of: ${VALID_CATEGORIES.join(", ")}`);
+  process.exit(1);
+}
+
+const body = {
+  title: args.title,
+  slug: args.slug,
+  content,
+  category: args.category,
+  excerpt: args.excerpt,
+  status: args.status,
+};
+
+const url = `${args["base-url"]}/api/blog`;
+
+try {
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-API-Key": BLOG_API_KEY,
+    },
+    body: JSON.stringify(body),
+  });
+
+  const json = await res.json();
+
+  if (!res.ok) {
+    console.error(`API error (${res.status}):`, JSON.stringify(json, null, 2));
+    process.exit(1);
+  }
+
+  console.log(JSON.stringify(json, null, 2));
+} catch (err) {
+  console.error("Request failed:", err.message);
+  process.exit(1);
+}

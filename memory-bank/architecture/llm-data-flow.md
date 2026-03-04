@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-05
 Maintainer: RB
 Status: Active
 ---
@@ -282,19 +282,39 @@ flowchart TB
     CONFIRM --> SAVE
 ```
 
-## 5. LLM Usage Summary
+## 5. Content Automation — Clawdbot (OpenClaw)
+
+Clawdbot is a live AI agent on a Vultr VPS that reads enriched data from Supabase and produces content for the blog and (future) LinkedIn. It runs Claude Sonnet via the OpenClaw gateway and communicates through Discord.
+
+```
+Supabase (enriched items)
+    ↓ query-supabase.mjs
+Clawdbot (Claude Sonnet via OpenClaw)
+    ↓ drafts blog post
+Discord #weekly-roundup (human review)
+    ↓ "publish" command
+publish-blog.mjs → POST /api/blog
+    ↓
+policycanary.io/blog (live)
+```
+
+**Current skills:** `weekly-roundup` (Fridays 9 AM ET)
+**Future skills:** `wl-deep-dive`, `daily-scan`, `data-nugget`, LinkedIn drafts
+
+## 6. LLM Usage Summary
 
 | Layer | Model | When | Cost Driver |
 |-------|-------|------|-------------|
 | **Data Enrichment + Deep Tagging** | Gemini 2.5 Flash / Pro | At ingest (once per item, single call). Flash for simple items, Pro for complex (WLs, rules). | ~50-100 items/week |
 | **Cross-Reference Inference (Step 1c)** | Gemini 2.5 Pro + thinking | After enrichment, only when use contexts reveal new segments (~20-30% of items). Budget: 4096 thinking tokens. | ~$0.02/call, ~10-30 items/week |
+| **Content Automation (Clawdbot)** | Claude Sonnet 4.6 | Weekly roundup + ad-hoc content drafts via OpenClaw | ~1-4 calls/week |
 | **Onboarding — manual entry parsing** | Claude Sonnet 4.6 | When product not found in database | Low — most supplements auto-populate from DSLD |
 | **Email Composition** | Claude Sonnet 4.6 | Weekly per paid subscriber | Subscriber count × weekly |
 | **Urgent Alert** | Claude Sonnet 4.6 | Per high-impact event × matched subscribers | Low frequency |
 | **AI Search** | Claude Sonnet 4.6 | Per user query in web app | Usage-dependent |
 | **Embeddings** | text-embedding-3-small | At ingest (chunked) | Volume of items |
 
-## 6. Key Design Decisions
+## 7. Key Design Decisions
 
 1. **Products are the core unit, not segments.** The email says "Your Marine Collagen Powder" not "This week in supplements." Segments are backend classification only.
 
@@ -310,7 +330,7 @@ flowchart TB
 
 7. **Three LLM providers, each for their strength.** Gemini for bulk data enrichment (cheap, fast). Claude for writing quality (emails, search). OpenAI for embeddings.
 
-## 7. Product-Level Matching — How It Works
+## 8. Product-Level Matching — How It Works
 
 The enrichment layer tags each regulatory item with affected ingredients, product types, claims, etc. The subscriber has real products with verified ingredient lists. Matching is dimensional:
 

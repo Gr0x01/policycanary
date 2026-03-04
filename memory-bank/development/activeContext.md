@@ -8,8 +8,9 @@ status: Active
 
 # Active Development Context
 
-**Phase:** Stripe subscriptions shipped (Phase 4B). Auth, blog, enrichment, cross-reference all complete.
-**Next up:** Stripe Dashboard setup (manual), re-run GSRS bootstrap (captures codes), re-enrich existing items
+**Phase:** Clawdbot (OpenClaw) deployed to Vultr VPS. Product onboarding planned. Stripe, blog, cross-reference, auth all shipped.
+**Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
+**Next up:** Session 0 (migration `005_product_categories` + enrichment pipeline update), then Sessions 1-2 (onboarding backend + frontend)
 
 ---
 
@@ -64,12 +65,42 @@ status: Active
 - [x] **Migration `004`** — `stripe_subscription_id TEXT` column + `UNIQUE` constraint on `stripe_customer_id`
 - [x] **Triple code-reviewed** — code-architect, backend-architect, code-reviewer. 4 criticals + 9 warnings fixed.
 
+### What's Done (Clawdbot / Content Automation)
+- [x] **Clawdbot VPS** — Vultr `vc2-1c-2gb` ($12/mo), Ubuntu 24.04, Node.js 22, OpenClaw v2026.3.2. IP: `108.61.151.130`. Systemd service `openclaw.service`.
+- [x] **Discord bot** — `ClawdBot - Canary` on `Bizniz` server. 5 channels: `#blog-drafts`, `#linkedin-drafts`, `#weekly-roundup`, `#alerts`, `#clawdbot` (general chat). `requireMention: false`.
+- [x] **Helper scripts** — `query-supabase.mjs` (query enriched items), `publish-blog.mjs` (POST to `/api/blog`). Deployed to VPS workspace.
+- [x] **Weekly roundup skill** — queries enriched items → drafts 800-1200 word blog post → posts to Discord → publishes on approval
+- [x] **Cron job** — `weekly-roundup` fires Fridays 9 AM ET → `#weekly-roundup` channel
+- [x] **Local repo files** — `scripts/clawdbot/` with cloud-init, scripts, skill, setup automation
+
 ### Up Next
-- [ ] **Stripe Dashboard setup (manual)** — create products + prices in Stripe test mode, configure customer portal, add webhook endpoint URL, collect env vars (`STRIPE_PRICE_MONITOR`, `STRIPE_PRICE_EXTRA_PRODUCT`)
-- [ ] **Re-run GSRS bootstrap** — reset checkpoint (`echo "" > .gsrs-checkpoint`), run `npx tsx scripts/bootstrap-gsrs.ts` to capture codes into `substance_codes` table. ~169K substances, ~500K-850K codes.
-- [ ] **Re-enrich existing items** — 422 WLs were enriched with 8K-truncated content. Now includes cross-reference inference. One pass.
-- [ ] Wire fetchers into Inngest functions (Phase 2C)
-- [ ] Product onboarding (DSLD + FDC integration)
+
+#### Session 0: Product Categories + Enrichment Update (CURRENT)
+- [ ] **Migration `005_product_categories`** — create `product_categories` table, seed ~79 categories, add `product_category_id` FK to `subscriber_products`, add `company_name` to `users`, RLS policies
+- [ ] **Update enrichment pipeline** — `prompts.ts`: `PRODUCT_CATEGORY_SLUGS` constant, `affected_product_types` → `affected_product_categories` (controlled slugs), update system prompt. `processor.ts`: write slugs to `item_enrichment_tags`. `cross-reference.ts`: Step 1c output switches to slugs. `database.ts`: add `ProductCategory` interface.
+- [ ] **Update golden tests** — fixture expectations for controlled category slugs
+- [ ] **Re-run GSRS bootstrap** — `echo "" > .gsrs-checkpoint && npx tsx scripts/bootstrap-gsrs.ts` (~30-60 min)
+- [ ] **Re-enrich all items** — cross-reference + controlled product categories, one pass
+
+#### Session 1: Onboarding Backend
+- [ ] **GSRS search utility** (`src/lib/products/gsrs.ts`) — queries local `substances` + `substance_names` tables (pg_trgm), not external API
+- [ ] **Ingredient parsing** (`src/lib/products/parse-ingredients.ts`) — Gemini Flash for photo/paste/URL parsing, `matchToGSRS()` for substance linking
+- [ ] **Product classification** — Gemini Flash picks `product_type` + `product_category_slug` from controlled vocab
+- [ ] **Product API routes** — CRUD at `/api/products`, ingredient parse at `/api/products/[id]/ingredients/parse`, ingredient save at `/api/products/[id]/ingredients`, GSRS autocomplete at `/api/gsrs/search`
+- [ ] Plan limit enforcement: DB trigger `check_max_products()` + API-level 403
+
+#### Session 2: Onboarding Frontend
+- [ ] **Components**: `ProductCard`, `AddProductForm`, `IngredientIngestion` (4 tabs), `IngredientConfirmation` (✅/⚠️/❌), `GSRSAutocomplete`
+- [ ] **Product management page** (`/app/products`) — replace mock data, add "Add Product" flow
+- [ ] **Onboarding page** (`/app/onboarding`) — post-signup, skippable, uses same components
+- [ ] **Onboarding routing** — post-signup redirect, 0-products banner on feed
+
+#### Deferred
+- [ ] Batch/CSV import for 50+ products
+- [ ] DSLD auto-populate (search DSLD by product name)
+- [ ] USDA FDC integration
+- [ ] Product matching engine (Phase 4C — runs against product profiles)
+- [ ] Wire fetchers into Inngest (Phase 2C)
 
 ### Deferred Until Phase 2B Enrichment Is Built
 Full backfills are intentionally held back. Ingesting thousands of raw records without enrichment creates unprocessable noise — no segment tags, no embeddings, no substance extractions. Run these only once the enrichment pipeline runs alongside the fetchers.
@@ -96,10 +127,10 @@ BOTH signal types with equal rigor:
 ### Signal Type 2 — Category-level
 *"All cosmetic facilities must register by July 2026"* / *"CGMP rules now apply to all supplement manufacturers"*
 - Vehicle: `item_enrichment_tags` with 4 tag dimensions → matched against subscriber product profile
-  - `product_type` — "protein powder", "sunscreen", "infant formula" (GRANULAR — not just "dietary supplement")
-  - `facility_type` — "outsourcing facility", "food manufacturer", "cosmetic contract manufacturer"
-  - `claims` — "structure-function claims", "health claims", "organic"
-  - `regulation` — "21 CFR 111", "MoCRA", "FSVP"
+  - `product_type` — **CONTROLLED VOCAB from `product_categories` table** (~79 slugs: `skin_care`, `protein_powders`, `infant_formula`, etc.). No free text.
+  - `facility_type` — "outsourcing facility", "food manufacturer", "cosmetic contract manufacturer" (free text)
+  - `claims` — "structure-function claims", "health claims", "organic" (free text)
+  - `regulation` — "21 CFR 111", "MoCRA", "FSVP" (free text)
 - Phase 4C match_type: `'category_overlap'`
 - Examples: MoCRA registration deadlines, GMP rule changes, labeling format requirements, testing protocol requirements
 - Key: `affected_ingredients = []` is CORRECT for these items. Do not hallucinate substances.

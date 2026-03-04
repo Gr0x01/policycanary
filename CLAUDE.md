@@ -35,6 +35,41 @@ Update the memory bank when:
 
 Always adjust the metadata header (`Last-Updated`, `Maintainer`) when you edit a living doc.
 
+## CLAWDBOT — LIVE PARTNER
+
+**There is a live AI agent (Clawdbot) running on a Vultr VPS that works alongside you.**
+
+Clawdbot is an OpenClaw instance running Claude Sonnet on a Vultr VPS (`108.61.151.130`). It connects to Discord and handles content automation — drafting blog posts from enriched regulatory data, posting drafts for review, and publishing to `/blog` via the existing API.
+
+### What Clawdbot Does
+- **Weekly FDA Roundup** — Cron fires Fridays 9 AM ET. Queries Supabase for enriched items, drafts a blog post, posts to `#weekly-roundup` on Discord for RB's review, publishes on approval.
+- **General chat** — Available in `#clawdbot` Discord channel for ad-hoc requests.
+- **Future skills** — LinkedIn drafts, deep-dive analyses, daily scans (not yet built).
+
+### Infrastructure
+- **VPS**: `ssh root@108.61.151.130` — Vultr vc2-1c-2gb ($12/mo), Ubuntu 24.04
+- **Service**: `systemctl {status|restart|stop} openclaw.service`
+- **Logs**: `journalctl -u openclaw.service -f`
+- **Config**: `/home/openclaw/.openclaw/openclaw.json`
+- **Scripts**: `/home/openclaw/.openclaw/workspace/scripts/` (query-supabase.mjs, publish-blog.mjs)
+- **Skills**: `/home/openclaw/.openclaw/workspace/skills/`
+- **Local repo**: `scripts/clawdbot/` — source files, setup automation
+
+### Discord Channels
+| Channel | ID | Purpose |
+|---------|-----|---------|
+| `#clawdbot` | `1478667558931529881` | General chat with bot |
+| `#weekly-roundup` | `1478651330011599044` | Weekly FDA roundup drafts |
+| `#blog-drafts` | `1478651251381239952` | Blog post drafts |
+| `#linkedin-drafts` | `1478651295924486195` | LinkedIn content (future) |
+| `#alerts` | `1478651361573994549` | Urgent alerts (future) |
+
+### When Working on Clawdbot
+- Helper scripts and skills are maintained in `scripts/clawdbot/` locally, deployed to VPS via `scp`
+- After modifying scripts locally, redeploy: `scp scripts/clawdbot/*.mjs root@108.61.151.130:/home/openclaw/.openclaw/workspace/scripts/`
+- After modifying skills: `scp scripts/clawdbot/skills/weekly-roundup/SKILL.md root@108.61.151.130:/home/openclaw/.openclaw/workspace/skills/weekly-roundup/`
+- Restart gateway after config changes: `ssh root@108.61.151.130 systemctl restart openclaw.service`
+
 ## BEHAVIORAL RULES
 
 ### Project Context: Solo Developer MVP

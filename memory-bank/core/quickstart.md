@@ -8,16 +8,17 @@ Status: Active
 
 ## Current State
 
-- **Status**: Stripe subscriptions shipped (Phase 4B). Blog section, cross-reference inference layer, auth all complete. Type-check clean.
+- **Status**: Clawdbot (OpenClaw) live on Vultr VPS. Product onboarding planned. Stripe, blog, cross-reference, auth all shipped.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Next**: Stripe Dashboard setup (manual), re-run GSRS bootstrap, re-enrich existing items, then Phase 2C (Inngest) or Phase 4C (product onboarding)
+- **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot, weekly roundup cron
+- **Next**: Session 0 (migration `005_product_categories` + enrichment pipeline update to controlled vocab), then Session 1 (onboarding backend), Session 2 (onboarding frontend)
 
 ---
 
 ## What's Happening
 
-Stripe subscriptions (Phase 4B) shipped. Checkout flow with 14-day trial, webhook handler (checkout.completed, subscription.updated/deleted, invoice.payment_failed), billing portal, PricingTable updated ($99 Monitor, $399 Research coming soon). Triple code-reviewed (code-architect, backend-architect, code-reviewer) — 4 criticals + 9 warnings fixed. Migration `004` applied (stripe_subscription_id + unique constraint on stripe_customer_id). **Stripe Dashboard setup needed** before testing (products, prices, webhook endpoint, customer portal). **GSRS bootstrap must be re-run** to capture codes. Then re-enrich 422 WLs.
+**Clawdbot (OpenClaw) deployed to Vultr VPS.** Discord bot live on the `Bizniz` server with 5 channels (blog-drafts, linkedin-drafts, weekly-roundup, alerts, clawdbot). Weekly FDA Roundup cron fires Fridays 9 AM ET → drafts blog post → posts to #weekly-roundup for review → publishes to `/blog` on approval. Uses `query-supabase.mjs` to pull enriched items and `publish-blog.mjs` to POST to the blog API. **Product onboarding phase planned.** `product_categories` table (~79 categories) as sacred controlled vocab. **GSRS bootstrap must be re-run** to capture codes. Then re-enrich all items.
 
 ---
 
@@ -61,6 +62,16 @@ npm run pipeline:content-fetch-test     # Debug: fetch single FDA URL, print ext
 
 # One-time seeds
 npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
+
+# Clawdbot (OpenClaw) — VPS at 108.61.151.130
+ssh root@108.61.151.130                           # SSH into VPS
+systemctl {status|restart} openclaw.service       # Manage gateway
+journalctl -u openclaw.service -f                 # Stream logs
+# Cron management (run as openclaw user on VPS):
+su - openclaw -c 'openclaw cron list'             # List scheduled jobs
+su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
+# Local setup script:
+./scripts/clawdbot/setup-clawdbot.sh {provision|deploy|configure|cron|ssh|status}
 ```
 
 ---
@@ -88,12 +99,16 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 - [x] **Enrichment pipeline (Phase 2B)** — stabilized. Content-fetch, prompt fixes, golden tests 10/10.
 - [x] **Cross-reference inference layer** — Steps 1b + 1c built. Schema migration applied. Type-check clean. GSRS bootstrap updated. KEY DIFFERENTIATOR.
 - [x] **Blog section** — `/blog`, `/blog/[slug]`, RSS feed, Clawdbot POST API. Migration `003_blog_posts`. Code-reviewed (3 critical + 4 warning fixes applied).
-- [x] **Stripe subscriptions (Phase 4B)** — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed. Migration `004`. Stripe Dashboard setup needed.
-- [ ] Stripe Dashboard setup (manual — products, prices, webhook, portal config)
+- [x] **Stripe subscriptions (Phase 4B)** — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed. Migration `004`. Stripe Dashboard configured (live mode). Commit `497ec6d`.
+- [x] Stripe Dashboard setup — products + prices created (Monitor $99, Extra $6), customer portal configured, webhook endpoint pending deploy
+- [x] **Product categories taxonomy designed** — ~79 categories from MoCRA, 21 CFR 170.3, DSLD. Sacred controlled vocab — no free text.
+- [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.
+- [ ] **Session 0: Product categories migration + enrichment update** — migration `005`, seed categories, update `prompts.ts`/`processor.ts`/`cross-reference.ts` to controlled vocab
 - [ ] Re-run GSRS bootstrap (captures codes into `substance_codes`)
-- [ ] Re-enrich existing 422 WLs (with cross-reference, one pass)
+- [ ] Re-enrich existing items (cross-reference + controlled product categories, one pass)
+- [ ] **Session 1: Onboarding backend** — GSRS search utility, ingredient parsing (Gemini Flash), product API routes, GSRS autocomplete
+- [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page
 - [ ] Wire fetchers into Inngest (Phase 2C)
-- [ ] Product onboarding (DSLD + FDC integration)
 - [ ] Product intelligence email MVP
 - [ ] Validation — sample emails, trial signups
 - [ ] Launch
@@ -133,6 +148,19 @@ STRIPE_SECRET_KEY=...
 STRIPE_WEBHOOK_SECRET=...
 STRIPE_PRICE_MONITOR=...         # Stripe Price ID for Monitor tier ($99/mo)
 STRIPE_PRICE_EXTRA_PRODUCT=...   # Stripe Price ID for per-product overage ($6/mo, deferred)
+
+# Vultr
+VULTR_PAT=...                    # Vultr API key for VPS management
+
+# Discord / Clawdbot
+CLAWDBOT_TOKEN=...               # Discord bot token
+DISCORD_GUILD_ID=...             # Discord server ID
+DISCORD_CHANNEL_WEEKLY_ROUNDUP=...
+DISCORD_CHANNEL_BLOG_DRAFTS=...
+DISCORD_CHANNEL_ALERTS=...
+DISCORD_CHANNEL_CLAWDBOT=...     # General chat channel
+CLAWDBOT_VPS_IP=...              # Vultr VPS IP
+CLAWDBOT_VPS_ID=...              # Vultr instance ID
 ```
 
 ---

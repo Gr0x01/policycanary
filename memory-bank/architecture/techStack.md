@@ -33,6 +33,15 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **Email**: Resend (chosen)
 - **GitHub**: https://github.com/Gr0x01/policycanary
 
+### Content Automation (Clawdbot)
+- **VPS**: Vultr `vc2-1c-2gb` (1 vCPU, 2GB RAM, $12/mo) — `108.61.151.130`, Ubuntu 24.04, Node.js 22
+- **Agent**: OpenClaw v2026.3.2 — personal AI agent running Claude Sonnet via gateway
+- **Discord**: Bot `ClawdBot - Canary` on `Bizniz` server — 5 channels (blog-drafts, linkedin-drafts, weekly-roundup, alerts, clawdbot)
+- **Cron**: Weekly FDA Roundup — Fridays 9 AM ET → drafts blog post → Discord review → publish to `/blog` API
+- **Scripts**: `query-supabase.mjs` (read enriched data), `publish-blog.mjs` (write to blog API)
+- **Service**: `systemctl {status|restart} openclaw.service` (system-level systemd)
+- **Local repo**: `scripts/clawdbot/` — source files + setup automation
+
 ### Data Pipeline
 - **Federal Register**: JSON API → parse → enrich with LLM → store
 - **FDA.gov**: Structured pages / scraping → parse → enrich → store
@@ -50,7 +59,7 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 |----------|-------|---------|-------------------|
 | **Google Gemini** | gemini-2.5-flash / gemini-2.5-pro | Data processing: enrichment, summarization, segment classification, topic tagging. Flash for simple classification, Pro for nuanced regulatory analysis. **Pro + thinking (budget: 4096)** also used for cross-reference inference (Step 1c) — reasoning about cross-segment risk transfer. | Cost-effective, large context window. Vercel AI SDK makes it easy to route by complexity. |
 | **OpenAI** | text-embedding-3-small | Embeddings for semantic search (pgvector) | Best-in-class embeddings, well-supported in pgvector ecosystem. |
-| **Anthropic** | claude-sonnet-4-6 | Writing: email intelligence content, AI search answers, editorial voice | Best writing quality. The intelligence email IS the product — writing quality matters most here. |
+| **Anthropic** | claude-sonnet-4-6 | Writing: email intelligence content, AI search answers, editorial voice, **Clawdbot content drafting** (blog posts, roundups) | Best writing quality. The intelligence email IS the product — writing quality matters most here. Clawdbot uses Sonnet via OpenClaw gateway. |
 
 **Note on Gemini model selection:** Not everything in the pipeline is simple classification. Extracting accurate action items from a 50-page Federal Register rule requires real comprehension. Use Flash for high-volume/simple tasks (segment tagging, topic classification) and Pro for tasks requiring deeper understanding (impact analysis, action item extraction, cross-reference inference). Pro with thinking (Step 1c) gets a 4096-token thinking budget — the model needs to reason about exposure routes, regulatory precedent, and the nature of the concern before deciding whether to expand to additional segments. Vercel AI SDK makes routing between models trivial.
 
@@ -91,6 +100,20 @@ RESEND_API_KEY=your_resend_key  # or POSTMARK_SERVER_TOKEN
 # Blog (Clawdbot write path)
 BLOG_API_KEY=your_blog_api_key  # X-API-Key header for POST /api/blog
 
+# Vultr (VPS management)
+VULTR_PAT=your_vultr_api_key
+
+# Discord / Clawdbot
+CLAWDBOT_TOKEN=your_discord_bot_token
+DISCORD_GUILD_ID=your_discord_server_id
+DISCORD_CHANNEL_WEEKLY_ROUNDUP=channel_id
+DISCORD_CHANNEL_BLOG_DRAFTS=channel_id
+DISCORD_CHANNEL_LINKEDIN_DRAFTS=channel_id
+DISCORD_CHANNEL_ALERTS=channel_id
+DISCORD_CHANNEL_CLAWDBOT=channel_id       # General chat
+CLAWDBOT_VPS_IP=vps_ip_address
+CLAWDBOT_VPS_ID=vultr_instance_id
+
 # Analytics (Optional)
 NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key
 NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
@@ -130,8 +153,9 @@ NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ### Ongoing (Monthly)
 - Supabase: Free tier → ~$25/mo (as data grows)
 - Vercel: Free tier → ~$20/mo (Pro)
+- Vultr VPS (Clawdbot): $12/mo
 - Gemini (daily enrichment): ~$3-8/mo
 - OpenAI (embeddings for new items): ~$1-3/mo
-- Anthropic (email writing + AI search): ~$5-20/mo (scales with subscribers)
+- Anthropic (email writing + AI search + Clawdbot): ~$8-25/mo (scales with subscribers + content volume)
 - Stripe: 2.9% + $0.30 per transaction
-- **Total: ~$10-75/month** (scales with usage and subscribers)
+- **Total: ~$22-90/month** (scales with usage and subscribers)

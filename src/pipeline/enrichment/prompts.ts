@@ -3,7 +3,7 @@
  *
  * DESIGN: Two signal types, both first-class.
  * - Ingredient-level: affected_ingredients → regulatory_item_substances → substance_id matching
- * - Category-level: affected_product_types / facility_type_tags / claims_tags / regulation_tags
+ * - Category-level: affected_product_categories / facility_type_tags / claims_tags / regulation_tags
  *   → item_enrichment_tags (4 dimensions) → Phase 4C category_overlap matching
  *
  * segment_impacts (food/supplement/cosmetics) = PRESENTATION ONLY — not used for matching.
@@ -62,13 +62,14 @@ export const EnrichmentOutputSchema = z.object({
   affected_ingredients: z.array(z.string()),
 
   /**
-   * Signal Type 2 — Category-level matching.
-   * Include BOTH broad categories AND specific types.
-   * Example for a cucumber recall: ["fresh produce", "raw vegetable", "cucumber"]
-   * Example for a supplement WL: ["dietary supplement", "protein powder"]
+   * Signal Type 2 — Category-level matching (controlled vocabulary).
+   * Assign product category slugs from the PRODUCT_CATEGORY_SLUGS list.
+   * Example for a cucumber recall: ["fresh_fruits_vegetables"]
+   * Example for a supplement WL: ["protein_powders"]
+   * If the item is about pharma, medical devices, or animal drugs → return [].
    * These go to item_enrichment_tags[product_type].
    */
-  affected_product_types: z.array(z.string()),
+  affected_product_categories: z.array(z.string()),
 
   /**
    * Facility types affected (for item_enrichment_tags[facility_type]).
@@ -216,6 +217,96 @@ export const TOPIC_SLUGS = [
   "class-action-lawsuits" // Emerging risk
 ] as const;
 
+export const PRODUCT_CATEGORY_SLUGS = [
+  // Cosmetics (17) — MoCRA/VCRP 21 CFR 720.4
+  "baby_products",
+  "bath_preparations",
+  "eye_makeup",
+  "fragrance",
+  "hair_coloring",
+  "hair_preparations_non_coloring",
+  "lipstick",
+  "makeup_not_eye",
+  "manicuring",
+  "oral_hygiene",
+  "personal_cleanliness",
+  "shaving_preparations",
+  "skin_care",
+  "suntan_preparations",
+  "tattoo",
+  "other_cosmetic",
+  "professional_salon",
+
+  // Food (46) — 21 CFR 170.3(n) + extensions
+  "baked_goods",
+  "nonalcoholic_beverages",
+  "breakfast_cereals",
+  "chewing_gum",
+  "coffee_tea",
+  "condiments_relishes",
+  "confections_frostings",
+  "dairy_products",
+  "egg_products",
+  "fats_oils",
+  "fish_products",
+  "fresh_fruits_vegetables",
+  "frozen_dairy",
+  "fruit_vegetable_juices",
+  "gelatins_puddings",
+  "grain_products_pastas",
+  "gravies_sauces",
+  "hard_candy_cough_drops",
+  "herbs_spices_seasonings",
+  "instant_coffee_tea",
+  "jams_jellies",
+  "meat_products",
+  "milk_products",
+  "imitation_dairy",
+  "nut_products",
+  "plant_protein_products",
+  "poultry_products",
+  "processed_fruits_vegetables",
+  "reconstituted_vegetables",
+  "snack_foods",
+  "soft_candy",
+  "soups_soup_mixes",
+  "sugar_substitutes",
+  "sugars_syrups",
+  "sweet_sauces_toppings",
+  "alcoholic_beverages",
+  "bottled_water",
+  "baby_food",
+  "food_contact_materials",
+  "food_preservatives",
+  "infant_formula",
+  "medical_foods",
+  "pet_food",
+  "animal_feed",
+  "dietary_conventional_foods",
+  "other_food",
+
+  // Supplements (19) — DSLD-derived
+  "amino_acids_peptides",
+  "botanicals_herbal",
+  "enzymes",
+  "essential_fatty_acids",
+  "fiber_supplements",
+  "mineral_supplements",
+  "multivitamins",
+  "mushroom_supplements",
+  "probiotics_prebiotics",
+  "protein_powders",
+  "single_vitamins",
+  "specialty_supplements",
+  "sports_performance",
+  "weight_management",
+  "joint_bone_health",
+  "digestive_health",
+  "immune_support",
+  "beauty_supplements",
+  "other_supplement",
+] as const;
+
 // ---------------------------------------------------------------------------
 // Prompt builder
 // ---------------------------------------------------------------------------
@@ -233,15 +324,17 @@ Your goal is to extract structured intelligence that is **strictly accurate**. W
 2. **TWO SIGNAL TYPES**:
    - **Ingredient-level**: Extract specific substances (e.g., "Red No. 3", "CBD", "N-acetyl cysteine").
      - *Constraint*: Do NOT extract "ingredients" if the text just mentions them as examples in a general discussion. Only extract if they are the *target* of the action.
-   - **Category-level**: Extract product types at BOTH the broad category level AND specific level.
-     - Always include the broad category: "fresh produce", "dietary supplement", "dairy product", "medical device"
-     - Then add specifics: "cucumber", "protein powder", "yogurt", "infusion pump"
-     - Example: a cucumber recall → ["fresh produce", "raw vegetable", "cucumber"]
+   - **Category-level**: Assign product category slugs from the PRODUCT CATEGORY SLUGS list below.
+     - Only use slugs from the provided controlled vocabulary.
+     - Example: a cucumber recall → ["fresh_fruits_vegetables"]
+     - Example: a supplement GMP warning letter → ["protein_powders"] (if specific) or ["other_supplement"] (if generic)
+     - If the item is about pharma, medical devices, or animal drugs → return \`[]\`.
 
 3. **ANTI-HALLUCINATION RULES**:
    - If no specific ingredient is named, \`affected_ingredients\` must be \`[]\`.
-   - Do not infer "dietary supplement" just because "vitamin" is mentioned, if the context is a fortified food.
-   - If the document is about "Medical Devices" or "Drugs" (Pharma), set \`segments\` to \`[]\` unless it explicitly mentions food/cosmetics/supplements overlap.
+   - Do not infer supplement categories just because "vitamin" is mentioned, if the context is a fortified food.
+   - If the document is about "Medical Devices" or "Drugs" (Pharma), set \`segments\` to \`[]\` AND \`affected_product_categories\` to \`[]\` unless it explicitly mentions food/cosmetics/supplements overlap.
+   - Only use slugs from the PRODUCT CATEGORY SLUGS list. Do not invent new slugs.
 
 4. **ACTION TYPES**:
    - \`cgmp_violation\`: Enforcement for breaking *existing* GMP rules (warning letters citing 21 CFR 111, 210, 211).
@@ -305,6 +398,13 @@ export function buildEnrichmentPrompt(item: RegulatoryItem): string {
   parts.push("## Topic Slugs (controlled vocabulary)");
   parts.push(
     "Only assign topics from this list: " + TOPIC_SLUGS.join(", ")
+  );
+
+  parts.push("");
+  parts.push("## Product Category Slugs (controlled vocabulary)");
+  parts.push(
+    "Only assign product categories from this list: " +
+      PRODUCT_CATEGORY_SLUGS.join(", ")
   );
 
   return parts.join("\n");

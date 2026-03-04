@@ -196,4 +196,13 @@ STRIPE_WEBHOOK_SECRET     — Stripe webhook verification
 STRIPE_PRICE_MONITOR      — Stripe Price ID for Monitor tier ($99/mo)
 STRIPE_PRICE_EXTRA_PRODUCT — Stripe Price ID for per-product overage ($6/mo, deferred)
 RESEND_API_KEY            — email delivery
+VULTR_PAT                 — Vultr VPS management API key
+CLAWDBOT_TOKEN            — Discord bot token (OpenClaw on VPS)
+CLAWDBOT_VPS_IP           — Vultr VPS IP (108.61.151.130)
 ```
+
+### Content Automation (Clawdbot VPS)
+- **OpenClaw** agent on Vultr VPS reads enriched data from Supabase, drafts blog posts, publishes via `POST /api/blog`
+- Scripts on VPS: `query-supabase.mjs` (reads `regulatory_items` + `item_enrichments`), `publish-blog.mjs` (POSTs to blog API)
+- Local source: `scripts/clawdbot/` — deployed to VPS via `scp`
+- VPS service: `systemctl {status|restart} openclaw.service`

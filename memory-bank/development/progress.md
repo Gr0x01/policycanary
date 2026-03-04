@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-05
 Maintainer: RB
-Status: Active — Stripe subscriptions shipped (Phase 4B), blog + auth + enrichment complete
+Status: Active — Clawdbot deployed. Product categories designed, Session 0 next. Stripe, blog, cross-ref, auth shipped.
 ---
 
 # Progress: Policy Canary
@@ -30,8 +30,12 @@ Status: Active — Stripe subscriptions shipped (Phase 4B), blog + auth + enrich
 | **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed.** |
 | **Cross-Reference Inference Layer** | **2026-03-04** | **Built — Steps 1b + 1c. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap re-run needed.** |
 | **Blog Section** | **2026-03-05** | **Shipped — /blog, /blog/[slug], RSS feed, Clawdbot POST API. Migration 003_blog_posts. Code-reviewed (3 critical + 4 warning fixes). react-markdown + remark-gfm added.** |
+| **Product Categories Taxonomy** | **2026-03-04** | **Designed — ~79 categories from MoCRA/VCRP, 21 CFR 170.3(n), DSLD. Sacred controlled vocab (no free text). Ready for migration `005`.** |
+| **Clawdbot (OpenClaw) Deployed** | **2026-03-05** | **Live — Vultr VPS (108.61.151.130), Discord bot on Bizniz server, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.** |
+| Session 0: Categories Migration + Enrichment | - | Next |
+| Session 1: Onboarding Backend | - | Pending |
+| Session 2: Onboarding Frontend | - | Pending |
 | Inngest wiring (Phase 2C) | - | Pending |
-| Product Onboarding (DSLD + FDC) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
@@ -89,6 +93,7 @@ Status: Active — Stripe subscriptions shipped (Phase 4B), blog + auth + enrich
 | 2026-03-04 | **Pricing revised: $99/$399 + $6/product** | Market research validated higher pricing. $49 was below FoodDocs ($84/mo), risked credibility. $99 base signals seriousness while staying under 1hr consultant time. $399 Research tier (4x multiplier) added later once features justify it. |
 | 2026-03-04 | **Launch with Monitor tier only** | Research tier deferred until enforcement DB, AI search, and trend analysis are built. Ship Monitor first, add Research when features justify $399. |
 | 2026-03-04 | **Market validation research completed** | Pain point confirmed: FDA warning letters up 73% (H2 2025), 3,500 staff cut, no product-level monitoring tool exists for SMBs. Pricing validated: small firms spend $46K-$184K/yr on compliance, consultants charge $150-$500/hr. See `research/pain-point-validation-2026-03-04.md` and `research/pricing-validation-market-research.md`. |
+| 2026-03-04 | **Sacred product categories vocabulary** | ~79 categories from 3 official sources (MoCRA/VCRP cosmetics, 21 CFR 170.3(n) food, DSLD-derived supplements). No free text anywhere — both enrichment tagging AND subscriber product classification reference same slugs. New categories added by manual INSERT only. Enrichment pipeline `affected_product_types` (free text) → `affected_product_categories` (controlled slugs). |
 | 2026-03-03 | **Full backfills deferred until Phase 2B enrichment** | Don't flood DB with thousands of unenriched records. Raw ingestion without segment tags, embeddings, and substance extractions creates noise that's expensive to reprocess. Backfills run once the enrichment pipeline exists and can run alongside. |
 
 ---
@@ -101,9 +106,10 @@ Status: Active — Stripe subscriptions shipped (Phase 4B), blog + auth + enrich
 | Monthly infrastructure | ~$10-75/mo |
 | Domain (policycanary.io) | ~$30/year |
 | Consultant validation (3-4 hours) | ~$500-$1,200 |
+| Clawdbot VPS (Vultr) | $12/mo |
 | **Total to MVP** | **~$555-$1,340** |
 
-**Ongoing:** ~$10-75/month (scales with usage and subscribers)
+**Ongoing:** ~$22-87/month (scales with usage and subscribers; includes $12/mo VPS)
 
 ---
 
@@ -205,7 +211,8 @@ Status: Active — Stripe subscriptions shipped (Phase 4B), blog + auth + enrich
 - **Migration `004`** (`add_stripe_subscription_id_and_customer_unique`) — `stripe_subscription_id TEXT` column on users + `UNIQUE` constraint on `stripe_customer_id`.
 - **Dependencies** — `stripe` npm package added.
 - **Triple code-reviewed** — code-architect, backend-architect, code-reviewer. 4 criticals fixed: (1) dead checkout=start flow, (2) hardcoded trial_ends_at, (3) race condition on customer create, (4) no stripe_subscription_id stored. 9 warnings fixed: hasSubscription logic, type guards, past_due handling, error checks, double-sub guard, client error states, non-null assertions, try/catch, max_products overwrite.
-- **Build clean.** `npm run type-check` + `npm run build` pass.
+- **Build clean.** `npm run type-check` + `npm run build` pass. Commit `497ec6d`.
+- **Stripe Dashboard configured (live mode)** — Monitor product ($99/mo), Extra Monitored Products ($6/mo flat rate per unit), customer portal (cancel at end of period, collect cancellation reason, no plan switching/quantity changes). Webhook endpoint pending Vercel deploy.
 
 ### 2026-03-05 — Blog Section + Clawdbot Write Path
 
@@ -220,6 +227,18 @@ Status: Active — Stripe subscriptions shipped (Phase 4B), blog + auth + enrich
 - **Env** — `BLOG_API_KEY` required in `.env.local`.
 - **Code review fixes** — (1) JSON-LD `</script>` injection: escape `<` as `\u003c`. (2) `BLOG_API_KEY` runtime guard: 500 if unset. (3) Timing-safe API key comparison via `crypto.timingSafeEqual`. (4) Type-safe query projections. (5) RSS null `published_at` filter. (6) `CategoryFilter` preserves existing URL params. (7) Content max length 500K. (8) `<time>` semantic elements. (9) Richer JSON-LD (`dateModified`, `url`). (10) RSS `lastBuildDate`. (11) Zod category enum derived from `BLOG_CATEGORIES`.
 - **Build clean.** `npm run build` passes.
+
+### 2026-03-05 — Clawdbot (OpenClaw) Deployment
+
+- **VPS provisioned** — Vultr `vc2-1c-2gb` (1 vCPU, 2GB RAM, $12/mo), region `ewr` (US East), Ubuntu 24.04. IP: `108.61.151.130`. Instance ID: `7f95a4c4-9e90-4438-b30c-2be85fa40fa3`.
+- **OpenClaw v2026.3.2** — installed globally, `gateway.mode=local`, `agents.defaults.model=sonnet` (resolves to `anthropic/claude-sonnet-4-6`). System-level systemd service (`openclaw.service`). ANTHROPIC_API_KEY in service `Environment=` directive.
+- **Discord bot** — `ClawdBot - Canary` (app ID: `1478649439420813335`). Connected to `Bizniz` server (`1464751221112963355`). 5 channels configured: `#blog-drafts`, `#linkedin-drafts`, `#weekly-roundup`, `#alerts`, `#clawdbot` (general chat). `requireMention: false` on all channels. `groupPolicy: allowlist`.
+- **Helper scripts** — `query-supabase.mjs` (queries enriched items from Supabase, flags: `--days`, `--type`, `--limit`, `--enriched-only`, `--summary`) + `publish-blog.mjs` (POSTs to `/api/blog` with `X-API-Key`, flags: `--title`, `--slug`, `--content`/`--content-file`, `--category`, `--excerpt`, `--status`). Both in `/home/openclaw/.openclaw/workspace/scripts/`. Env vars in `workspace/.env`.
+- **Weekly roundup skill** — `SKILL.md` in `workspace/skills/weekly-roundup/`. Instructs LLM to: (1) query enriched items via `query-supabase.mjs`, (2) analyze/prioritize by urgency/breadth/novelty, (3) draft 800-1200 word blog post with lead story + key developments + quick hits, (4) post draft to Discord with metadata block, (5) publish via `publish-blog.mjs` on user approval.
+- **Cron job** — `weekly-roundup` fires `0 9 * * 5` (Fridays 9 AM ET), isolated session, announces to `#weekly-roundup` channel. Job ID: `8c9ab46d-42c9-42e9-8a2d-004ef56a1fb4`.
+- **Local repo files** — `scripts/clawdbot/` directory with: `cloud-init.yaml`, `query-supabase.mjs`, `publish-blog.mjs`, `setup-clawdbot.sh` (provisioning automation), `skills/weekly-roundup/SKILL.md`, `.vultr-instance-id`.
+- **BLOG_API_KEY generated** — added to `.env.local` (was missing).
+- **Config notes** — `gateway.mode` must be `"local"` for headless VPS. `agents.defaults.provider` is NOT a valid config key. `openclaw onboard --install-daemon` is interactive — manual systemd service needed on VPS.
 
 ### 2026-03-04 — Cross-Reference Inference Layer (Steps 1b + 1c)
 

@@ -11,14 +11,14 @@
  * The primary assertions are therefore:
  *   1. regulatory_action_type — what is actually happening (drives email priority)
  *   2. affected_ingredients   — the substances affected (drives product matching)
- *   3. affected_product_types — granular product types (pre-filter before substance match)
+ *   3. affected_product_categories — granular product types (pre-filter before substance match)
  *
  * Segment classification is tested as a secondary/sanity check.
  *
  * How to use:
  *   - `expected.affected_ingredients`: every listed string must appear in the pipeline
  *     output (case-insensitive, substring match OK). Extra ingredients are fine.
- *   - `expected.affected_product_types`: same subset rule.
+ *   - `expected.affected_product_categories`: same subset rule.
  *   - `expected.regulatory_action_type`: must match exactly.
  *   - `expected.segments`: each listed segment must appear with AT LEAST the given relevance.
  *   - `expected.segments_absent`: these segments must NOT appear above "none".
@@ -61,7 +61,7 @@ export interface GoldenFixture {
     /** Substance/ingredient names that must appear in output (label-friendly) */
     affected_ingredients: string[]
     /** Granular product types — NOT just "food", but "protein powder", "topical SPF", etc. */
-    affected_product_types: string[]
+    affected_product_categories: string[]
     /** True if there is a concrete compliance deadline */
     has_deadline: boolean
 
@@ -88,7 +88,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "guidance_update", // Request for Information — not yet a proposed restriction
       affected_ingredients: ["BHA", "butylated hydroxyanisole"],
-      affected_product_types: ["food preservative", "food"],
+      affected_product_categories: ["food_preservatives"],
       has_deadline: false,
       segments: [
         { segment: "food", min_relevance: "critical" },
@@ -116,7 +116,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "safety_alert",
       affected_ingredients: [],
-      affected_product_types: ["dietary supplement", "male enhancement supplement"],
+      affected_product_categories: ["specialty_supplements"],
       has_deadline: false,
       segments: [{ segment: "supplements", min_relevance: "critical" }],
       segments_absent: ["food", "cosmetics"],
@@ -137,7 +137,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "import_violation",
       affected_ingredients: [],
-      affected_product_types: ["imported food"],
+      affected_product_categories: ["other_food"],
       has_deadline: false,
       segments: [{ segment: "food", min_relevance: "high" }],
       segments_absent: ["supplements", "cosmetics"],
@@ -158,7 +158,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "recall",
       affected_ingredients: [], // cucumber is the product, not a substance/ingredient
-      affected_product_types: ["fresh produce", "raw vegetable"],
+      affected_product_categories: ["fresh_fruits_vegetables"],
       has_deadline: false,
       segments: [{ segment: "food", min_relevance: "high" }],
       segments_absent: ["supplements", "cosmetics"],
@@ -177,7 +177,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "recall",
       affected_ingredients: [], // yogurt is the product, not a substance/ingredient
-      affected_product_types: ["dairy"],
+      affected_product_categories: ["dairy_products"],
       has_deadline: false,
       segments: [{ segment: "food", min_relevance: "high" }],
       segments_absent: ["supplements", "cosmetics"],
@@ -198,7 +198,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "cgmp_violation",
       affected_ingredients: [],
-      affected_product_types: ["pharmaceutical", "finished drug product"],
+      affected_product_categories: [], // pharma — outside controlled vocab, rule validator clears
       has_deadline: false, // LLM inconsistently extracts WL response deadlines; don't fail on this
       segments: [],
       segments_absent: ["supplements", "food", "cosmetics"],
@@ -221,7 +221,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "cgmp_violation",
       affected_ingredients: [],
-      affected_product_types: ["compounded drug"], // "outsourcing facility" is a facility_type, not product_type
+      affected_product_categories: [], // pharma — outside controlled vocab, rule validator clears
       has_deadline: true,
       segments: [],
       segments_absent: ["supplements", "food", "cosmetics"],
@@ -241,7 +241,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "safety_alert",
       affected_ingredients: [],
-      affected_product_types: ["medical device", "infusion pump"],
+      affected_product_categories: [], // medical device — no device categories in controlled vocab
       has_deadline: false,
       segments: [],
       segments_absent: ["supplements", "food", "cosmetics"],
@@ -261,7 +261,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "administrative",
       affected_ingredients: [],
-      affected_product_types: ["animal drug", "veterinary drug"],
+      affected_product_categories: [], // animal drug — rule validator clears, no pharma slugs
       has_deadline: true, // FR rules have effective dates
       segments: [],
       segments_absent: ["supplements", "food", "cosmetics"],
@@ -283,7 +283,7 @@ export const GOLDEN_FIXTURES: GoldenFixture[] = [
     expected: {
       regulatory_action_type: "guidance_update",
       affected_ingredients: [],
-      affected_product_types: ["animal food", "animal food ingredient"],
+      affected_product_categories: ["animal_feed"],
       has_deadline: false,
       segments: [], // animal food ≠ human food — no segment impact expected
       segments_absent: ["supplements", "cosmetics"],
