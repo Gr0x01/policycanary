@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-05
 Maintainer: RB
-Status: Active — GSRS data loaded (949K codes). Product categories designed, Session 0 next. Stripe, blog, cross-ref, auth shipped.
+Status: Active — Session 0 complete. Full enrichment run in progress. Stripe, blog, cross-ref, auth shipped.
 ---
 
 # Progress: Policy Canary
@@ -28,11 +28,12 @@ Status: Active — GSRS data loaded (949K codes). Product categories designed, S
 | **Web App MVP (Phase 6)** | **2026-03-03** | **Done — feed, item detail, search API (RAG), products. Mock data layer with USE_MOCK flag.** |
 | **Stripe Subscriptions (Phase 4B)** | **2026-03-05** | **Shipped — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed (4 critical + 9 warning fixes). Migration `004`. Stripe Dashboard setup needed.** |
 | **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed.** |
-| **Cross-Reference Inference Layer** | **2026-03-04** | **Built + data loaded — Steps 1b + 1c. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap complete: 949K codes, 96 systems, 166K substances.** |
+| **Cross-Reference Inference Layer** | **2026-03-04** | **Built + data loaded + refocused — Steps 1b + 1c. Segments removed; Step 1c now infers product categories. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap complete: 949K codes, 96 systems, 166K substances.** |
 | **Blog Section** | **2026-03-05** | **Shipped — /blog, /blog/[slug], RSS feed, Clawdbot POST API. Migration 003_blog_posts. Code-reviewed (3 critical + 4 warning fixes). react-markdown + remark-gfm added.** |
 | **Product Categories Taxonomy** | **2026-03-04** | **Designed — ~79 categories from MoCRA/VCRP, 21 CFR 170.3(n), DSLD. Sacred controlled vocab (no free text). Ready for migration `005`.** |
 | **Clawdbot (OpenClaw) Deployed** | **2026-03-05** | **Live — Vultr VPS (108.61.151.130), Discord bot on Bizniz server, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.** |
-| Session 0: Categories Migration + Enrichment | - | Next |
+| **Session 0: Categories Migration + Enrichment** | **2026-03-04** | **Done — migration `20260304082551_product_categories_and_company_name` applied (82 categories seeded). Pipeline updated to controlled slugs. Golden tests 10/10 (38/38 assertions).** |
+| Full Enrichment Run | - | In Progress |
 | Session 1: Onboarding Backend | - | Pending |
 | Session 2: Onboarding Frontend | - | Pending |
 | Inngest wiring (Phase 2C) | - | Pending |
@@ -94,6 +95,7 @@ Status: Active — GSRS data loaded (949K codes). Product categories designed, S
 | 2026-03-04 | **Launch with Monitor tier only** | Research tier deferred until enforcement DB, AI search, and trend analysis are built. Ship Monitor first, add Research when features justify $399. |
 | 2026-03-04 | **Market validation research completed** | Pain point confirmed: FDA warning letters up 73% (H2 2025), 3,500 staff cut, no product-level monitoring tool exists for SMBs. Pricing validated: small firms spend $46K-$184K/yr on compliance, consultants charge $150-$500/hr. See `research/pain-point-validation-2026-03-04.md` and `research/pricing-validation-market-research.md`. |
 | 2026-03-04 | **Sacred product categories vocabulary** | ~79 categories from 3 official sources (MoCRA/VCRP cosmetics, 21 CFR 170.3(n) food, DSLD-derived supplements). No free text anywhere — both enrichment tagging AND subscriber product classification reference same slugs. New categories added by manual INSERT only. Enrichment pipeline `affected_product_types` (free text) → `affected_product_categories` (controlled slugs). |
+| 2026-03-04 | **Segments removed from enrichment pipeline** | `segment_impacts` table dropped. Coarse food/supplement/cosmetics segments were never used for matching and no MVP shipped. 82 product category slugs + substance matching fully replace them. Cross-reference inference now infers product categories, not segments. Migration `drop_segment_impacts` applied. |
 | 2026-03-03 | **Full backfills deferred until Phase 2B enrichment** | Don't flood DB with thousands of unenriched records. Raw ingestion without segment tags, embeddings, and substance extractions creates noise that's expensive to reprocess. Backfills run once the enrichment pipeline exists and can run alongside. |
 
 ---
@@ -137,7 +139,7 @@ Status: Active — GSRS data loaded (949K codes). Product categories designed, S
   - **Substances layer**: Canonical `substances` table (bootstrapped from FDA GSRS, 169K substances) + `substance_names` synonym table with pg_trgm fuzzy search. Both product ingredients AND regulatory item extractions resolve to substance_ids. Matching is ID-to-ID, not string-to-string.
   - **Flexible classification**: `regulatory_categories` lookup table + `item_categories` junction replaces hardcoded segment ENUMs. Topics merged into same system. Adding pet food = INSERT, not migration.
   - **Jurisdiction as dimension**: `regulatory_items` has `jurisdiction` (federal/state) + `jurisdiction_state`. State regulations flow through same pipeline as federal.
-  - **Two-layer matching**: `segment_impacts` powers search/trends/free digest. `product_matches` (the money table) sits on top for personalized intelligence. Substances bridge the two.
+  - **Product matching**: `product_matches` (the money table) matches regulatory items to subscriber products via substances + product categories. `item_enrichment_tags` provides the category-level matching layer.
   - **TEXT + CHECK instead of ENUM everywhere** for easy iteration.
   - **Deferred expansion tables**: state compliance (chemicals, state_chemical_bans, cosmetic_chemical_reports) and adverse events deferred to when those features are built.
 - **Research findings preserved**: FDA industry codes (53=cosmetics, 54=supplements), openFDA enforcement classification gap (supplements/cosmetics both show as "Food"), warning letters have zero structured metadata, CFR references are the structural hook for Federal Register classification.
@@ -244,12 +246,12 @@ Status: Active — GSRS data loaded (949K codes). Product categories designed, S
 
 **THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR.** Without this, we're a summarizer. With it, we provide intelligence worth $99/mo.
 
-- **Schema migration** (`002_substance_codes_and_signal_source.sql`) — new `substance_codes` table (id, substance_id, code_system, code_value, code_type, is_classification, comments). `signal_source` column added to `segment_impacts` and `item_enrichment_tags` (values: `'direct'` | `'cross_reference'`). Applied to Supabase.
+- **Schema migration** (`002_substance_codes_and_signal_source.sql`) — new `substance_codes` table (id, substance_id, code_system, code_value, code_type, is_classification, comments). `signal_source` column added to `item_enrichment_tags` (values: `'direct'` | `'cross_reference'`). Applied to Supabase. (Note: `segment_impacts` table and its `signal_source` column were subsequently dropped in `drop_segment_impacts` migration.)
 - **Bootstrap updated** (`scripts/bootstrap-gsrs.ts`) — captures ALL code systems from GSRS (no ingestion filter). Filtering to relevant systems happens at query time in `cross-reference.ts`. Supports `--codes-only` flag for fast backfills when substances are already loaded. ID lookup batched in chunks of 50 (avoids Supabase URL length limit). Batch upserts into `substance_codes` (500/batch).
 - **Step 1b: Use-context derivation** (`src/pipeline/enrichment/cross-reference.ts`) — `lookupUseContexts()`: pure TypeScript, no LLM. Queries `substance_codes` for resolved substance_ids, maps to 8 `UseContextCategory` types. CFR Part mapping: 175-178 → food_contact (checked first), 170-189 → food_additive, 73-82 → color_additive, 310-369 → otc_drug, 700-740 → cosmetic_ingredient. CODEX/JECFA functional class parsing from pipe-delimited comments.
-- **Step 1c: LLM cross-segment inference** (`cross-reference.ts`) — `inferCrossSegments()`: Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal segments BEYOND Step 1's direct extraction (~20-30% of items). Detailed system prompt with exposure route reasoning, regulatory precedent, confidence thresholds (>= 0.7). Additive-only — never modifies Step 1's direct extraction.
+- **Step 1c: LLM cross-category inference** (`cross-reference.ts`) — `inferCrossCategories()`: Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal sectors BEYOND Step 1's product categories (~20-30% of items). Detailed system prompt with exposure route reasoning, regulatory precedent. Additive-only — never modifies Step 1's direct extraction. (Originally inferred segments; refocused to product categories 2026-03-04 when segments were removed.)
 - **Processor restructured** (`processor.ts`) — new flow: Steps 1-6 unchanged → step 7 (substance resolution via `Promise.all`) → step 8 (use-context lookup, 0.95 threshold) → step 9 (cross-segment inference, non-fatal) → steps 10-16 (DB writes with signal_source). N+1 UNII lookup replaced with batch `.in()` query. Tag deduplication via `existingTagKeys` Set.
-- **Types updated** (`database.ts`) — `SubstanceCode` interface, `signal_source` on `SegmentImpact` and `ItemEnrichmentTag`, `crossReferenced` on runner result types.
+- **Types updated** (`database.ts`) — `SubstanceCode` interface, `signal_source` on `ItemEnrichmentTag`, `crossReferenced` on runner result types. (`SegmentImpact` type subsequently removed when segments were dropped.)
 - **Golden fixtures updated** — BHA expects `supplements` (min_relevance: "medium") and `cosmetics` (min_relevance: "low") via cross-reference.
 - **Code review completed** — 3 critical bugs fixed: (1) CFR food_contact range unreachable (overlap), (2) CFR regex matched title number instead of part number, (3) duplicate tag insertion on unique constraint. 2 performance fixes: N+1 UNII queries → batch, sequential substance resolution → Promise.all.
 - **GSRS code system name fixes** — discovered via API inspection that GSRS uses `DRUG BANK` (with space, not `DRUGBANK`), `Food Contact Sustance Notif, (FCN No.)` (GSRS has typo "Sustance" + suffix), and `COSMETIC INGREDIENT REVIEW (CIR)` does not exist in GSRS at all. Updated both `bootstrap-gsrs.ts` and `cross-reference.ts`.

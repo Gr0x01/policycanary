@@ -1,16 +1,16 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-05
+last-updated: 2026-03-04
 maintainer: RB
 status: Active
 ---
 
 # Active Development Context
 
-**Phase:** Clawdbot (OpenClaw) deployed to Vultr VPS. Product onboarding planned. Stripe, blog, cross-reference, auth all shipped.
+**Phase:** Session 0 complete. Full enrichment run in progress. Product onboarding planned next.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Session 0 (migration `005_product_categories` + enrichment pipeline update), then Sessions 1-2 (onboarding backend + frontend)
+**Next up:** Full enrichment of all items (backfills + re-enrich), then Session 1 (onboarding backend), Session 2 (onboarding frontend)
 
 ---
 
@@ -75,12 +75,11 @@ status: Active
 
 ### Up Next
 
-#### Session 0: Product Categories + Enrichment Update (CURRENT)
-- [ ] **Migration `005_product_categories`** — create `product_categories` table, seed ~79 categories, add `product_category_id` FK to `subscriber_products`, add `company_name` to `users`, RLS policies
-- [ ] **Update enrichment pipeline** — `prompts.ts`: `PRODUCT_CATEGORY_SLUGS` constant, `affected_product_types` → `affected_product_categories` (controlled slugs), update system prompt. `processor.ts`: write slugs to `item_enrichment_tags`. `cross-reference.ts`: Step 1c output switches to slugs. `database.ts`: add `ProductCategory` interface.
-- [ ] **Update golden tests** — fixture expectations for controlled category slugs
+#### Session 0: Product Categories + Enrichment Update (DONE)
+- [x] **Migration `20260304082551_product_categories_and_company_name`** — `product_categories` table with 82 seeded rows, `product_category_id` FK on `subscriber_products`, `company_name` on `users`, RLS policies. Applied via Supabase MCP.
+- [x] **Enrichment pipeline updated** — `prompts.ts`: `PRODUCT_CATEGORY_SLUGS` constant, `affected_product_categories` (controlled slugs). `processor.ts`: writes slugs to `item_enrichment_tags`. `cross-reference.ts`: Step 1c uses controlled slugs. Golden tests 10/10, 38/38 assertions.
 - [x] **GSRS bootstrap complete** — 949K codes, 96 systems, 166K substances. `--codes-only` mode added for future backfills.
-- [ ] **Re-enrich all items** — cross-reference + controlled product categories, one pass
+- [ ] **Full enrichment run** — backfill all historical data, reset stale enrichments, enrich all items with current pipeline
 
 #### Session 1: Onboarding Backend
 - [ ] **GSRS search utility** (`src/lib/products/gsrs.ts`) — queries local `substances` + `substance_names` tables (pg_trgm), not external API
@@ -102,20 +101,21 @@ status: Active
 - [ ] Product matching engine (Phase 4C — runs against product profiles)
 - [ ] Wire fetchers into Inngest (Phase 2C)
 
-### Deferred Until Phase 2B Enrichment Is Built
-Full backfills are intentionally held back. Ingesting thousands of raw records without enrichment creates unprocessable noise — no segment tags, no embeddings, no substance extractions. Run these only once the enrichment pipeline runs alongside the fetchers.
+### Backfills (Running Now)
+Enrichment pipeline is ready (Session 0 complete). Running full backfills, then enriching all items in one pass.
 
-- `npm run pipeline:wl-backfill` — full 3,313 warning letters (~11 min). Currently 422 in DB from a mid-session partial run.
+- `npm run pipeline:wl-backfill` — full warning letters backfill. Currently 422 in DB from prior partial run.
 - `npm run pipeline:fr-backfill` — Federal Register full history (currently 66 items from Jan 2025 test window only)
 - `npm run pipeline:enforcement-backfill` — openFDA full history (currently 109 items from Jan 2025 test window only)
+- `npm run pipeline:rss-poll` — fresh RSS poll
 
 ---
 
-## Enrichment Design Principle (Established 2026-03-03)
+## Enrichment Design Principle (Established 2026-03-03, Simplified 2026-03-04)
 
-**Two matching signal types. Both are first-class. Neither collapses into segments.**
+**Two matching signal types. Both are first-class. No segments.**
 
-Not all regulatory changes are ingredient-level. The enrichment pipeline must produce
+Not all regulatory changes are ingredient-level. The enrichment pipeline produces
 BOTH signal types with equal rigor:
 
 ### Signal Type 1 — Ingredient-level
@@ -135,26 +135,20 @@ BOTH signal types with equal rigor:
 - Examples: MoCRA registration deadlines, GMP rule changes, labeling format requirements, testing protocol requirements
 - Key: `affected_ingredients = []` is CORRECT for these items. Do not hallucinate substances.
 
-### What segment_impacts IS and IS NOT
-- `segment_impacts` (food/supplement/cosmetics) = **PRESENTATION ONLY**
-  → used to route the generic weekly digest and for UI filtering
-  → NOT used in Phase 4C product matching
-  → the broad "3 FDA product classes" lens, not a matching mechanism
-- `item_enrichment_tags` = **THE MATCHING LAYER**
-  → this is what Phase 4C queries against subscriber product profiles
-  → much more granular than supplement/food/cosmetics
+### Segments removed (2026-03-04)
+- `segment_impacts` table **DROPPED** — the coarse food/supplement/cosmetics layer was never used for matching, no users, no MVP shipped. The 82 product category slugs + substance matching fully replace it.
+- Cross-reference inference (Step 1c) now infers new product **categories**, not segments. Gate check uses `slugToSector()` to derive covered sectors from Step 1's product categories.
+- `EnrichmentOutputSchema` no longer has a `segments` field. Rule validators only clear `affected_product_categories`.
 
 ### Schema additions (Supabase migration applied 2026-03-03)
 - `item_enrichments.regulatory_action_type` — what is happening (recall, ban_restriction, compliance_requirement, cgmp_violation, etc.)
 - `item_enrichments.deadline` — compliance date if any (ISO date)
-- Full `ActionType` enum includes `compliance_requirement` (new obligation: registration/GMP deadline) distinct from `cgmp_violation` (enforcement for violating existing rules)
 
-Golden fixtures in `tests/golden/fixtures.ts` test ingredient extraction and action type first;
-segment classification is a secondary sanity check.
+Golden fixtures in `tests/golden/fixtures.ts` test ingredient extraction, action type, and product categories.
 
 ---
 
-## Cross-Reference Inference Layer (Built 2026-03-04, Data Loaded)
+## Cross-Reference Inference Layer (Built 2026-03-04, Refocused 2026-03-04)
 
 **THE SINGLE BIGGEST PRODUCT DIFFERENTIATOR. Built, code-reviewed, and data loaded. Ready to activate.**
 
@@ -162,11 +156,11 @@ segment classification is a secondary sanity check.
 
 Step 1b: Deterministic use-context derivation from GSRS substance codes. Maps 9 code systems (CFR, CODEX, JECFA, DSLD, RXCUI, DRUG BANK, DAILYMED, EPA PESTICIDE CODE, Food Contact Sustance Notif) to 8 `UseContextCategory` types. Pure TypeScript, no LLM. GSRS codes are ground truth.
 
-Step 1c: LLM cross-segment inference using Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). Reasons about exposure routes, regulatory precedent, and action mechanism to determine which additional segments are genuinely implicated.
+Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal **sectors** beyond Step 1's product categories (~20-30% of items). Reasons about exposure routes, regulatory precedent, and action mechanism to determine which additional **product categories** are genuinely affected.
 
 ### Key Files
 
-- `src/pipeline/enrichment/cross-reference.ts` — Steps 1b (`lookupUseContexts`) + 1c (`inferCrossSegments`)
+- `src/pipeline/enrichment/cross-reference.ts` — Steps 1b (`lookupUseContexts`) + 1c (`inferCrossCategories`)
 - `src/pipeline/enrichment/processor.ts` — restructured `enrichItem()` integrating cross-ref
 - `scripts/bootstrap-gsrs.ts` — captures ALL 96 GSRS code systems; `--codes-only` flag for fast backfills
 - `supabase/migrations/002_substance_codes_and_signal_source.sql` — schema migration (applied)
@@ -197,11 +191,11 @@ Step 1c: LLM cross-segment inference using Gemini 2.5 Pro with thinking (budget:
 ## Key Decisions Made
 
 ### Product Model (Current)
-1. **Products are the core unit, not segments.** The email says "Your Marine Collagen Powder" not "This week in supplements." Segments are backend pipeline classification only.
+1. **Products are the core unit.** The email says "Your Marine Collagen Powder" not "This week in supplements." Sectors (food/supplement/cosmetic) are derived from product categories, not stored separately.
 2. **Real product data from public databases.** DSLD for supplements (214K products, structured ingredients), USDA FDC for food (454K products). Cosmetics is manual entry (no public database). Not self-reported guesses — verified ingredient lists.
 3. **Two emails, two jobs.** Weekly Update (generic, free, content marketing) + Product Intelligence Email (custom per subscriber, paid, event-driven).
 4. **Product intelligence is event-driven.** Something affects your products → email immediately. Nothing happened → weekly "all clear." Don't wait for Friday if something is urgent.
-5. **Everything shows up, nothing is hidden.** Product emails show ALL items. Product-matched items get full analysis. Same-segment items get a brief. Everything else gets a one-liner + link.
+5. **Everything shows up, nothing is hidden.** Product emails show ALL items. Product-matched items get full analysis. Same-industry items get a brief. Everything else gets a one-liner + link.
 6. **The buyer expands.** Not just VP Reg Affairs anymore. Founders, quality directors, product managers — anyone who thinks in products.
 
 ### Pricing Model (Revised March 2026)
@@ -285,7 +279,7 @@ src/pipeline/fetchers/
 src/pipeline/enrichment/
   prompts.ts                        # System prompt, Zod output schema, buildEnrichmentPrompt()
   processor.ts                      # enrichItem() — LLM call, rule validators, cross-ref, DB writes
-  cross-reference.ts                # Steps 1b (use-context lookup) + 1c (LLM cross-segment inference)
+  cross-reference.ts                # Steps 1b (use-context lookup) + 1c (LLM cross-category inference)
   embeddings.ts                     # Chunking + OpenAI embedding generation
   runner.ts                         # Orchestration — content-fetch → enrich → embed per item
   content-fetch.ts                  # Fetch full FDA page content for thin RSS items

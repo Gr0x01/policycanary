@@ -1,7 +1,7 @@
 ---
 Title: Data Schema v1
 Version: v1
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-06
 Maintainer: RB
 Status: Active
 ---
@@ -34,7 +34,7 @@ LAYER 1: SOURCE DATA
       v
 LAYER 2: CLASSIFICATION
   regulatory_categories  <--junction-->  item_categories
-  (segments + topics + product classes, flexible lookup)
+  (topics + product classes, flexible lookup)
       |
       v
 LAYER 3: SUBSTANCE REFERENCE
@@ -44,9 +44,9 @@ LAYER 3: SUBSTANCE REFERENCE
       v
 LAYER 4: ENRICHMENT
   item_enrichments -----> item_citations
-  segment_impacts ------> item_citations
   item_enrichment_tags    (product_type, facility_type, claims, regulation)
   regulatory_item_substances  (extracted substances per item, FK to substances)
+  NOTE: segment_impacts table DROPPED (migration drop_segment_impacts, 2026-03-06)
       |
       v
 LAYER 5: SEARCH & RETRIEVAL
@@ -74,13 +74,13 @@ LAYER 9: USERS & EMAIL
 
 ```
 1. INGEST: Source API --> regulatory_items (raw content preserved)
-2. CLASSIFY: LLM tags item --> item_categories (segments, topics, product classes)
+2. CLASSIFY: LLM tags item --> item_categories (topics, product classes)
 3. EXTRACT SUBSTANCES: LLM + structured fields --> regulatory_item_substances
 4. RESOLVE: Match raw substance names --> substances table (UNII, CAS, fuzzy)
 4b. USE-CONTEXT LOOKUP: substance_codes --> UseContextCategory mapping (deterministic)
-4c. CROSS-REFERENCE: Gemini Pro reasons about cross-segment risk transfer (LLM, ~20-30% of items)
-5. ENRICH: LLM generates --> item_enrichments, segment_impacts, item_enrichment_tags, item_citations
-   (segment_impacts + item_enrichment_tags include signal_source = 'direct' | 'cross_reference')
+4c. CROSS-REFERENCE: Gemini Pro reasons about cross-category risk transfer (LLM, ~20-30% of items)
+5. ENRICH: LLM generates --> item_enrichments, item_enrichment_tags, item_citations
+   (item_enrichment_tags includes signal_source = 'direct' | 'cross_reference')
 6. EMBED: Chunk content --> item_chunks with vector(1536) embeddings
 7. MATCH: For each subscriber product:
      a. Primary: substance_id match (product_ingredients <-> regulatory_item_substances)
@@ -196,7 +196,7 @@ The core entity. Every piece of regulatory data that enters the system. Covers: 
 
 ### `regulatory_categories`
 
-Flexible lookup table for all classification dimensions. Replaces hardcoded segment ENUMs and the separate `topics` table. Segments, topics, product classes, and regulatory programs are all rows here, differentiated by `category_type`.
+Flexible lookup table for all classification dimensions. Topics, product classes, and regulatory programs are all rows here, differentiated by `category_type`. (Segment rows still exist for backwards compatibility but are no longer written to by the enrichment pipeline — sectors are derived from product categories.)
 
 **Status:** New
 
@@ -206,7 +206,7 @@ Flexible lookup table for all classification dimensions. Replaces hardcoded segm
 | slug | TEXT | UNIQUE, NOT NULL | 'supplements', 'cosmetics', 'identity-testing', 'cgmp-violations' |
 | label | TEXT | NOT NULL | 'Dietary Supplements', 'Identity Testing' |
 | category_type | TEXT | NOT NULL, CHECK (category_type IN ('segment', 'topic', 'product_class', 'regulatory_program')) | What kind of category this is |
-| parent_id | UUID | FK --> regulatory_categories | Self-referential for hierarchy: segment > topic |
+| parent_id | UUID | FK --> regulatory_categories | Self-referential for hierarchy |
 | sort_order | INT | NOT NULL, DEFAULT 0 | Display ordering within category_type |
 | is_active | BOOLEAN | NOT NULL, DEFAULT true | LLM can propose categories; human sets is_active = true to approve |
 | description | TEXT | | Optional context for the category |
@@ -257,7 +257,7 @@ Flexible lookup table for all classification dimensions. Replaces hardcoded segm
 
 ### `item_categories`
 
-Many-to-many junction between regulatory items and categories. An item can belong to multiple segments, topics, and product classes simultaneously. This is critical because cross-cutting regulations are the norm (e.g., color additive rules span food/drug/cosmetic/device).
+Many-to-many junction between regulatory items and categories. An item can belong to multiple topics and product classes simultaneously. This is critical because cross-cutting regulations are the norm (e.g., color additive rules span food/drug/cosmetic/device).
 
 **Status:** New
 
@@ -343,7 +343,7 @@ Synonym resolution table. A single substance may have dozens of names across dif
 
 ### `substance_codes`
 
-Use-context codes per substance from GSRS. Powers cross-reference inference (Step 1b): maps code systems to use-context categories (food additive, supplement ingredient, cosmetic ingredient, pharmaceutical, etc.). This is the data foundation for the cross-segment intelligence feature.
+Use-context codes per substance from GSRS. Powers cross-reference inference (Step 1b): maps code systems to use-context categories (food additive, supplement ingredient, cosmetic ingredient, pharmaceutical, etc.). This is the data foundation for the cross-category intelligence feature.
 
 **Status:** Live — 949,770 codes across 96 code systems, 166,532 substances with codes (GSRS bootstrap complete)
 
@@ -385,7 +385,7 @@ Use-context codes per substance from GSRS. Powers cross-reference inference (Ste
 
 **Actual volume:** 949,770 rows across 96 code systems. Top systems by count: FDA UNII (164K), CAS (133K), PUBCHEM (120K), EPA CompTox (84K), NCI_THESAURUS (38K), DAILYMED (15K), RXCUI (15K), DRUG BANK (12K), CFR (3.4K), DSLD (1.5K), Food Contact (731), CODEX (326).
 
-**Cross-reference pipeline:** `lookupUseContexts()` in `src/pipeline/enrichment/cross-reference.ts` queries this table for resolved substances and maps the 9 known code systems to `UseContextCategory` types deterministically (no LLM). Step 1c then uses these use contexts to reason about cross-segment risk transfer via Gemini 2.5 Pro.
+**Cross-reference pipeline:** `lookupUseContexts()` in `src/pipeline/enrichment/cross-reference.ts` queries this table for resolved substances and maps the 9 known code systems to `UseContextCategory` types deterministically (no LLM). Step 1c then uses these use contexts to reason about cross-category risk transfer via Gemini 2.5 Pro.
 
 ---
 
@@ -424,40 +424,11 @@ Structured LLM output per regulatory item. Separate from source data so enrichme
 
 ---
 
-### `segment_impacts`
+### `segment_impacts` — **DROPPED**
 
-Per-category relevance scoring. Powers the search feed, trend detection, and free digest. "What does this mean for supplements/cosmetics/food?"
+**Dropped in migration `drop_segment_impacts` (2026-03-06).** Segments (food/supplement/cosmetic) were a coarse 3-bucket presentation layer designed for a segment-based weekly digest that was never built. The product now uses ~82 controlled product category slugs (`product_categories` table) + substance matching for personalized alerts via `product_matches`. Sectors (food/supplement/cosmetic) are derived from product category slugs when needed, not stored separately.
 
-**Status:** New
-
-| Column | Type | Constraints | Notes |
-|--------|------|-------------|-------|
-| id | UUID | PK, DEFAULT gen_random_uuid() | |
-| item_id | UUID | NOT NULL, FK --> regulatory_items ON DELETE CASCADE | |
-| category_id | UUID | NOT NULL, FK --> regulatory_categories ON DELETE CASCADE | Points to a segment-type category |
-| relevance | TEXT | NOT NULL, CHECK (relevance IN ('critical', 'high', 'medium', 'low', 'none')) | |
-| impact_summary | TEXT | | Segment-specific "what this means for you" |
-| action_items | JSONB | | ["Review SOPs...", "Submit comments by..."] |
-| who_affected | TEXT | | "All supplement manufacturers using botanicals" |
-| deadline | DATE | | Segment-specific deadline if different from item |
-| published_date | DATE | NOT NULL | Denormalized from regulatory_items. Enables single-table feed query without JOIN. |
-| signal_source | TEXT | NOT NULL, DEFAULT 'direct', CHECK (signal_source IN ('direct', 'cross_reference')) | Whether this segment was from LLM extraction (direct) or cross-reference inference (cross_reference) |
-| verification_status | TEXT | NOT NULL, DEFAULT 'unverified', CHECK (verification_status IN ('unverified', 'verified', 'rejected')) | Manual spot-check flag |
-| created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
-
-**Constraints:**
-- `uq_segment_impacts_item_category` UNIQUE(item_id, category_id)
-
-**Indexes:**
-- `idx_segment_impacts_feed` on (category_id, relevance, published_date DESC) -- THE feed index
-- `idx_segment_impacts_item` on (item_id)
-- `idx_segment_impacts_published` on (published_date DESC)
-
-**Design notes:**
-- `category_id` replaces the old segment ENUM. Points to a `regulatory_categories` row where category_type = 'segment'.
-- `published_date` is denormalized from `regulatory_items` to enable single-table feed queries without JOIN. The feed query is the hottest path in the system.
-- The feed index `(category_id, relevance, published_date DESC)` covers: "Show me all critical+high items for supplements, newest first" as a single index scan.
-- `signal_source` distinguishes direct LLM extraction from cross-reference inference. Phase 4C (product matching) can weight inferred signals differently. The UI can show "Inferred: this substance is also used in supplements" with reasoning.
+FK references (`segment_impact_id`) were also dropped from `item_citations` and `item_chunks`.
 
 ---
 
@@ -488,7 +459,7 @@ Deep tagging for NON-ingredient dimensions. Captures product types, facility typ
 - This table handles the "non-ingredient" dimensions of product matching. When a warning letter is about contract manufacturers who make protein powders, that's captured here as tag_dimension='product_type', tag_value='protein_powder' and tag_dimension='facility_type', tag_value='contract_manufacturer'.
 - Ingredients extracted from regulatory items go to `regulatory_item_substances` instead, because they need substance resolution.
 - Together, `item_enrichment_tags` + `regulatory_item_substances` provide complete deep tagging of each regulatory item.
-- `signal_source` marks tags from cross-reference inference (Step 1c) vs direct LLM extraction. Cross-reference adds `product_type` tags for newly inferred segments.
+- `signal_source` marks tags from cross-reference inference (Step 1c) vs direct LLM extraction. Cross-reference adds `product_type` tags for newly inferred product categories.
 
 ---
 
@@ -533,8 +504,7 @@ Links every AI-generated claim back to an exact source quote. Produced during en
 | Column | Type | Constraints | Notes |
 |--------|------|-------------|-------|
 | id | UUID | PK, DEFAULT gen_random_uuid() | |
-| enrichment_id | UUID | FK --> item_enrichments ON DELETE CASCADE | Nullable. Set when citation supports a summary claim. |
-| segment_impact_id | UUID | FK --> segment_impacts ON DELETE CASCADE | Nullable. Set when citation supports an impact assessment. |
+| enrichment_id | UUID | FK --> item_enrichments ON DELETE CASCADE | Set when citation supports a summary claim. |
 | item_id | UUID | NOT NULL, FK --> regulatory_items ON DELETE CASCADE | Denormalized for direct query access. |
 | claim_text | TEXT | NOT NULL | The AI assertion from the summary or impact assessment |
 | quote_text | TEXT | NOT NULL | Exact source text that supports the claim |
@@ -546,11 +516,8 @@ Links every AI-generated claim back to an exact source quote. Produced during en
 | created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
 
 **Constraints:**
-- CHECK (enrichment_id IS NOT NULL OR segment_impact_id IS NOT NULL) -- must reference at least one parent
-
 **Indexes:**
 - `idx_item_citations_enrichment` on (enrichment_id)
-- `idx_item_citations_segment_impact` on (segment_impact_id)
 - `idx_item_citations_item` on (item_id)
 
 **How it works:**
@@ -573,7 +540,6 @@ Sectioned content + vector embeddings for RAG-based AI search. Chunks carry meta
 |--------|------|-------------|-------|
 | id | UUID | PK, DEFAULT gen_random_uuid() | |
 | item_id | UUID | NOT NULL, FK --> regulatory_items ON DELETE CASCADE | |
-| segment_impact_id | UUID | FK --> segment_impacts ON DELETE CASCADE | Nullable. NULL = general chunk, set = segment-specific impact chunk. |
 | chunk_index | INT | NOT NULL | Ordering within the item |
 | section_title | TEXT | | 'Background', 'Proposed Changes', 'Dates', etc. |
 | content | TEXT | NOT NULL | The chunk text |
@@ -583,7 +549,6 @@ Sectioned content + vector embeddings for RAG-based AI search. Chunks carry meta
 
 **Indexes:**
 - `idx_item_chunks_item` on (item_id)
-- `idx_item_chunks_segment_impact` on (segment_impact_id) WHERE segment_impact_id IS NOT NULL
 - HNSW index on embedding: **DO NOT CREATE ON EMPTY TABLE.** Create after 1,000+ rows:
   ```sql
   CREATE INDEX CONCURRENTLY idx_item_chunks_embedding
@@ -593,7 +558,6 @@ Sectioned content + vector embeddings for RAG-based AI search. Chunks carry meta
 
 **Design notes:**
 - Embedding dimension is vector(1536) for OpenAI text-embedding-3-small. Changing embedding models requires re-embedding the entire corpus.
-- Segment-specific impact chunks get their own embeddings so "how does this affect cosmetics companies?" retrieves the cosmetics impact assessment, not the generic summary.
 - pgvector extension required: `CREATE EXTENSION IF NOT EXISTS vector;`
 
 ---
@@ -851,7 +815,7 @@ Authenticated accounts managed by Supabase Auth. A user may or may not also be a
 - `stripe_subscription_id` enables server-side subscription management (cancel, pause, quantity updates). Set by `checkout.session.completed` and `customer.subscription.updated` webhooks, cleared on `customer.subscription.deleted`.
 - `max_products` is set to 5 on free→paid transition only (not overwritten on every subscription update, to preserve custom overrides). The app checks this before allowing product creation.
 - `trial_ends_at` is read from Stripe's authoritative `subscription.trial_end`, not hardcoded.
-- No segments column on users. Segments are derived from the subscriber's products (a user with supplement products gets supplement intelligence).
+- No segments column on users. Sectors are derived from the subscriber's product categories (a user with supplement products gets supplement intelligence).
 
 ---
 
@@ -880,7 +844,7 @@ The subscriber list. Independent of `users` -- free subscribers sign up with jus
 - `idx_email_subscribers_token` on (unsubscribe_token)
 
 **Design notes:**
-- No tier or segments columns on email_subscribers. Tier comes from users.access_level (or 'free' if no linked user). Segments come from the user's products.
+- No tier or segments columns on email_subscribers. Tier comes from users.access_level (or 'free' if no linked user). Sectors come from the user's product categories.
 - This keeps the subscriber list simple: it's about email delivery, not access control.
 
 ---
@@ -999,11 +963,11 @@ Source API (Federal Register, openFDA, etc.) --> `regulatory_items` with raw_con
 ### Step 2: Classify
 
 LLM reads title + raw_content and assigns categories:
-- Segments: supplements, cosmetics, food (via `item_categories` junction to `regulatory_categories`)
+- Product categories: ~82 controlled slugs (via `item_enrichment_tags` with tag_dimension='product_type')
 - Topics: identity-testing, facility-registration, cgmp-violations, etc.
 - Product classes: botanical-supplements, protein-powders, color-additives, etc.
 
-Cross-cutting items get multiple segment assignments. A color additive rule might get tagged supplements + cosmetics + food.
+Cross-cutting items get multiple product category tags. A color additive rule might get tagged across food, supplement, and cosmetic categories.
 
 ### Step 3: Extract Substances
 
@@ -1029,13 +993,13 @@ Update `substance_id` and `match_status` accordingly.
 
 LLM generates:
 - `item_enrichments`: summary, key_regulations, key_entities
-- `segment_impacts`: per-segment relevance + impact assessment + action items
+- `item_enrichment_tags`: product category tags + facility type + claims + regulation
 - `item_enrichment_tags`: product_type, facility_type, claims, regulation dimensions
 - `item_citations`: every claim linked to a source quote, verified against raw_content
 
 ### Step 6: Embed
 
-Chunk the content by section (Background, Proposed Changes, Dates, Regulatory Text, etc.). Generate vector(1536) embeddings via OpenAI text-embedding-3-small. Store in `item_chunks`. Also embed segment-specific impact summaries as their own chunks.
+Chunk the content by section (Background, Proposed Changes, Dates, Regulatory Text, etc.). Generate vector(1536) embeddings via OpenAI text-embedding-3-small. Store in `item_chunks`.
 
 ### Step 7: Match Products
 
@@ -1099,11 +1063,11 @@ For matches above confidence threshold:
 
 ### 1. Flexible Categories Over Hardcoded ENUMs
 
-**Decision:** `regulatory_categories` lookup table with `category_type` dimension, connected via `item_categories` junction table. Replaces segment ENUMs and the separate topics table.
+**Decision:** `regulatory_categories` lookup table with `category_type` dimension, connected via `item_categories` junction table. Topics and product classes use the same infrastructure.
 
-**Rationale:** Cross-cutting regulations are the norm at FDA. A color additive rule affects food, cosmetics, drugs, and devices simultaneously. Hardcoded ENUMs require migrations to add new segments. A lookup table lets us add "pet_food" or "hemp_cbd" by inserting a row, not altering columns. Topics and product classes use the same infrastructure, reducing schema complexity.
+**Rationale:** Cross-cutting regulations are the norm at FDA. A color additive rule affects food, cosmetics, drugs, and devices simultaneously. A lookup table lets us add new categories by inserting a row, not altering columns. Topics and product classes use the same infrastructure, reducing schema complexity.
 
-**Trade-off:** Slightly more complex queries (JOIN through junction table instead of WHERE segment = 'supplements'). Mitigated by the composite feed index on segment_impacts.
+**Trade-off:** Slightly more complex queries (JOIN through junction table). Mitigated by proper indexing.
 
 ### 2. Substances Layer for Ingredient Matching
 
@@ -1131,11 +1095,9 @@ For matches above confidence threshold:
 
 **Rationale:** Altering ENUMs in PostgreSQL requires `ALTER TYPE ... ADD VALUE` which cannot run inside a transaction and is irreversible (you can't remove values). TEXT + CHECK constraints can be modified with a simple `ALTER TABLE ... DROP CONSTRAINT ... ADD CONSTRAINT`. For a solo developer iterating on an MVP, this flexibility matters more than the marginal storage savings of ENUMs.
 
-### 6. Denormalized published_date on segment_impacts
+### 6. ~~Denormalized published_date on segment_impacts~~ (REMOVED)
 
-**Decision:** `segment_impacts.published_date` is copied from `regulatory_items.published_date`.
-
-**Rationale:** The feed query ("show me all critical+high items for supplements, newest first") is the hottest path in the system. With denormalized `published_date`, this is a single-table index scan on `(category_id, relevance, published_date DESC)`. Without it, every feed query requires a JOIN to regulatory_items just to sort. The duplication cost is one DATE column; the query cost savings are on every page load.
+**`segment_impacts` table was dropped (2026-03-06).** Feed queries now go through `product_matches` for personalized feeds or `regulatory_items` for the generic free feed.
 
 ### 7. Per-Subscriber Email Campaigns
 
@@ -1145,9 +1107,9 @@ For matches above confidence threshold:
 
 ### 8. No Segments on Users or Email Subscribers
 
-**Decision:** Users and email_subscribers have no segments column. Segments are derived from the user's products.
+**Decision:** Users and email_subscribers have no segments column. Sectors (food/supplement/cosmetic) are derived from the user's product categories.
 
-**Rationale:** Subscribers don't think in segments. They think in products. A subscriber with 3 supplement products and 2 cosmetic products is implicitly subscribed to both segments. Deriving segments from products means there's no state to synchronize when products are added or removed.
+**Rationale:** Subscribers don't think in sectors. They think in products. A subscriber with 3 supplement products and 2 cosmetic products implicitly covers both sectors. Deriving sectors from product categories means there's no state to synchronize when products are added or removed.
 
 ---
 
@@ -1164,15 +1126,15 @@ These tables will be added when the state compliance layer is built. No schema c
 ### Deferred to Adverse Events Phase (Post-MVP)
 
 - **`adverse_event_reports`** -- one row per CAERS report. Consumer/practitioner reports with outcomes and reactions.
-- **`adverse_event_products`** -- products cited in each report. Each has its own segment classification via FDA industry codes.
+- **`adverse_event_products`** -- products cited in each report. Each has its own classification via FDA industry codes.
 - These tables feed trend detection but don't appear individually in the feed. Patterns surface as `trend_signals`.
 
-### Future Segment Expansion
+### Future Sector Expansion
 
-Adding new segments (pet food, hemp/CBD) requires:
-1. INSERT a new row in `regulatory_categories` with `category_type = 'segment'`.
-2. Update enrichment prompts to recognize the new segment.
-3. No migrations. No schema changes. The junction table architecture handles it.
+Adding new sectors (pet food, hemp/CBD) requires:
+1. INSERT new product category rows in `product_categories` for the new sector.
+2. Update `PRODUCT_CATEGORY_SLUGS` in `prompts.ts` and `slugToSector()` in `cross-reference.ts`.
+3. Update enrichment prompts to recognize the new sector's categories.
 
 ---
 
@@ -1247,7 +1209,7 @@ CREATE POLICY subscribers_select ON email_subscribers
 
 -- Public-read content tables (no RLS needed for reads, but pipeline writes use service role key)
 -- These tables don't need RLS enabled because they're read by everyone:
---   regulatory_items, item_enrichments, segment_impacts, item_citations,
+--   regulatory_items, item_enrichments, item_citations,
 --   item_enrichment_tags, regulatory_item_substances, item_chunks,
 --   item_relations, enforcement_details, trend_signals,
 --   regulatory_categories, item_categories, sources, pipeline_runs,
@@ -1374,11 +1336,11 @@ INSERT INTO sources (name, source_type, base_url) VALUES
 
 | Use Case | How It Works |
 |----------|-------------|
-| **Feed (free)** | `segment_impacts` WHERE category_id = :segment AND relevance IN ('critical','high','medium') ORDER BY published_date DESC. Single-table index scan. |
-| **Item detail** | `regulatory_items` + `item_enrichments` + `segment_impacts` (user's segments) + `item_citations` + `item_relations` for full context. |
+| **Feed (free)** | `regulatory_items` JOIN `item_enrichments` ORDER BY published_date DESC. Generic feed for all free subscribers. |
+| **Item detail** | `regulatory_items` + `item_enrichments` + `item_enrichment_tags` + `item_citations` + `item_relations` for full context. |
 | **My products affected** | `product_matches` WHERE product_id IN (user's products) AND is_dismissed = false ORDER BY created_at DESC. The personalized feed. |
 | **Match detail** | `product_matches` + `regulatory_items` + matched_substances JSONB + `item_citations`. "Why was my product flagged?" |
-| **Trend detection** | `trend_signals` WHERE category_id = :segment AND trend_direction = 'rising'. |
+| **Trend detection** | `trend_signals` WHERE category_id = :topic AND trend_direction = 'rising'. |
 | **Enforcement patterns** | `enforcement_details` JOIN `item_categories` GROUP BY violation_types. |
 | **AI search** | Embed query --> pgvector cosine similarity on `item_chunks` + filter by category/date --> pass chunks to LLM with citation-required prompt. |
 | **Substance search** | `substance_names` WHERE name % :query (trigram) or to_tsvector @@ plainto_tsquery (full-text) --> substances --> regulatory_item_substances --> regulatory_items. "Show me everything about titanium dioxide." |
@@ -1411,13 +1373,13 @@ INSERT INTO sources (name, source_type, base_url) VALUES
 | 1 | sources | Source Data | Data pipeline registry |
 | 2 | pipeline_runs | Source Data | Pipeline execution log |
 | 3 | regulatory_items | Source Data | Core regulatory data entity |
-| 4 | regulatory_categories | Classification | Segments, topics, product classes (flexible lookup) |
+| 4 | regulatory_categories | Classification | Topics, product classes (flexible lookup) |
 | 5 | item_categories | Classification | Many-to-many item-to-category junction |
 | 6 | substances | Substance Reference | Canonical substances (GSRS-bootstrapped) |
 | 7 | substance_names | Substance Reference | Synonym resolution with fuzzy search |
 | 7b | substance_codes | Substance Reference | GSRS use-context codes for cross-reference inference |
 | 8 | item_enrichments | Enrichment | LLM summaries, key entities, key regulations |
-| 9 | segment_impacts | Enrichment | Per-category relevance scoring (feed + trends) |
+| ~~9~~ | ~~segment_impacts~~ | ~~Enrichment~~ | **DROPPED** (2026-03-06) — sectors derived from product categories |
 | 10 | item_enrichment_tags | Enrichment | Deep tagging: product_type, facility_type, claims, regulation |
 | 11 | regulatory_item_substances | Enrichment | Extracted substances per regulatory item |
 | 12 | item_citations | Enrichment | Source quotes for every AI claim |

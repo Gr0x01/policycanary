@@ -105,7 +105,7 @@ The email is the product. Design it like a premium intelligence briefing, not a 
 
 **Three-zone structure** (always this order, always clearly delineated):
 1. **YOUR PRODUCTS** — full analysis per affected product. This is what they paid for.
-2. **YOUR SEGMENT** — brief summaries of other relevant items in their space.
+2. **YOUR INDUSTRY** — brief summaries of other relevant items in their space.
 3. **ACROSS FDA** — one-liner + source link for general FDA activity.
 
 **Per-product section layout**:
@@ -121,7 +121,7 @@ The email is the product. Design it like a premium intelligence briefing, not a 
 **All-clear email** — minimal by design:
 - Brief confirmed-state message: "Nothing affected your products this week."
 - No filler, no padding, no inflated urgency. Peace of mind is the value.
-- Brief segment summary below only if something notable happened in their space.
+- Brief industry summary below only if something notable happened in their space.
 
 **Email client constraints** (design within these from the start):
 - No CSS Grid — table-based or single-column flex layouts only

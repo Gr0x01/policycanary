@@ -90,7 +90,7 @@ FETCHER 2: OPENFDA ENFORCEMENT (src/pipeline/fetchers/openfda-enforcement.ts)
 
   CRITICAL GOTCHAS:
   - product_type is ALWAYS "Food" even for supplements — cannot use for
-    segment classification
+    sector classification
   - openfda harmonized fields are ALWAYS EMPTY on food enforcement
   - Dates are YYYYMMDD strings, not ISO — convert on ingest
   - No cosmetics enforcement data in this endpoint
@@ -129,7 +129,7 @@ FETCHER 3: OPENFDA CAERS (src/pipeline/fetchers/openfda-caers.ts)
   - Skip maxes at 25,000 — MUST use date-range windowing
   - industry_code is the GOLDEN classification field:
     54 = supplements, 53 = cosmetics, everything else = food
-  - Multi-product reports are common — one report can span segments
+  - Multi-product reports are common — one report can span sectors
   - No company/manufacturer field — only name_brand
   - 148K+ total records
 
@@ -150,7 +150,7 @@ FETCHER 3: OPENFDA CAERS (src/pipeline/fetchers/openfda-caers.ts)
      - name_brand = products[].name_brand
      - industry_code = products[].industry_code
      - industry_name = products[].industry_name
-     - segment = derived: code 54 → supplements, 53 → cosmetics, else → food
+     - sector = derived: code 54 → supplements, 53 → cosmetics, else → food
 
   d) Backfill strategy (date windowing to avoid 25K skip limit):
      - Use 3-month windows: 2020-Q1, 2020-Q2, etc.
@@ -185,7 +185,7 @@ ACCEPTANCE CRITERIA:
 - [ ] FR fetcher does individual doc detail fetches for full metadata
 - [ ] openFDA enforcement fetcher inserts items + enforcement_details
 - [ ] openFDA enforcement converts YYYYMMDD dates correctly
-- [ ] CAERS fetcher inserts reports + products with correct segment mapping
+- [ ] CAERS fetcher inserts reports + products with correct sector mapping
 - [ ] CAERS fetcher uses date windowing to stay under 25K skip limit
 - [ ] All fetchers log to pipeline_runs
 - [ ] All fetchers deduplicate on (source_id, source_ref)

@@ -123,15 +123,13 @@ Your goal is to create backend systems that can handle millions of users while r
 ```
 Ingest (Federal Register API, openFDA, FDA RSS, Warning Letters)
   → Parse & normalize → regulatory_items
-  → Enrich with LLM (Gemini) — INGREDIENT-FIRST, not segment-first:
+  → Enrich with LLM (Gemini) — INGREDIENT-FIRST:
       PRIMARY outputs (drive product matching):
         regulatory_action_type  — what is happening (recall, ban, cgmp_violation, etc.)
         affected_ingredients    — label-friendly substance names ("BHA", "whey protein isolate")
-        affected_product_types  — GRANULAR ("protein powder", not just "dietary supplement")
+        affected_product_categories — controlled slugs from product_categories table (~82 slugs)
         deadline                — compliance date if any
-      SECONDARY outputs (route generic digest):
-        segment_impacts         — food/supplement/cosmetics relevance
-      → item_enrichments, segment_impacts, item_enrichment_tags, item_citations
+      → item_enrichments, item_enrichment_tags, item_citations
   → Resolve substances → regulatory_item_substances → substance_id FK to substances table
   → Embed (OpenAI) → item_chunks with halfvec embeddings
   → Match → product_matches (Phase 4C — joins substance_ids from items to subscriber products)
@@ -139,8 +137,8 @@ Ingest (Federal Register API, openFDA, FDA RSS, Warning Letters)
 ```
 
 **Enrichment design principle:** The value prop is "YOUR product is affected" not "here's
-what happened in supplements." Substance extraction is the backbone. Segment tags are
-secondary. See `tests/golden/fixtures.ts` for the quality target.
+what happened in supplements." Substance extraction is the backbone. Product category
+tags drive matching. See `tests/golden/fixtures.ts` for the quality target.
 
 **Established Patterns** (follow these, don't reinvent):
 - **Repository Pattern** — all database access through repository classes in `lib/repositories/`
@@ -159,7 +157,7 @@ secondary. See `tests/golden/fixtures.ts` for the quality target.
 **Layer 1 — Sources**: `sources`, `pipeline_runs`, `regulatory_items`
 **Layer 2 — Classification**: `regulatory_categories` (slug lookup), `item_categories` (junction)
 **Layer 3 — Substances**: `substances` (169K GSRS, canonical + UNII/CAS), `substance_names` (synonyms, pg_trgm fuzzy)
-**Layer 4 — Enrichment**: `item_enrichments`, `segment_impacts`, `item_enrichment_tags`, `regulatory_item_substances`, `item_citations`
+**Layer 4 — Enrichment**: `item_enrichments`, `item_enrichment_tags`, `regulatory_item_substances`, `item_citations`
 **Layer 5 — Search**: `item_chunks` (vector(1536) embeddings)
 **Layer 6 — Intelligence**: `item_relations`, `enforcement_details`, `trend_signals`
 **Layer 7 — Users & Email**: `users`, `email_subscribers`, `user_bookmarks`, `email_campaigns`, `email_campaign_items`, `email_sends`

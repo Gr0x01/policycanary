@@ -152,7 +152,7 @@
 <body>
     <h1>Policy Canary — LLM & Data Flow Architecture</h1>
     <p class="subtitle">Draft — March 3, 2026</p>
-    <p class="model-note">Product-centric model: emails organized around subscriber's actual products, not segments</p>
+    <p class="model-note">Product-centric model: emails organized around subscriber's actual products</p>
 
     <nav class="nav">
         <a href="#overview">System Overview</a>
@@ -193,23 +193,20 @@ flowchart TB
 
     subgraph ENRICH["Enrichment — Gemini Flash"]
         SUMMARY["Summary + Analysis + Action Items"]
-        SEGMENT["Segment Classification"]
         TOPIC["Topic Tagging"]
         DEEP["Deep Tagging:
         affected ingredients,
-        product types, facility types,
+        product categories, facility types,
         claims at risk, regulations cited"]
-        IMPACT["Impact Assessment"]
         CITE["Citation Extraction"]
     end
 
     subgraph STORE["Enriched Data Store"]
         ENR[("enrichments")]
-        SI[("segment_impacts")]
         IT[("item_topics")]
         IC[("citations")]
         TAGS[("affected_ingredients
-        affected_product_types
+        affected_product_categories
         regulations_cited")]
         CHUNKS[("chunks + embeddings")]
     end
@@ -253,30 +250,28 @@ flowchart TB
     end
 
     SOURCES --> PARSE --> RAW
-    RAW --> SUMMARY & SEGMENT & TOPIC & DEEP & IMPACT & CITE
+    RAW --> SUMMARY & TOPIC & DEEP & CITE
     SUMMARY --> ENR
-    SEGMENT --> SI
     TOPIC --> IT
     DEEP --> TAGS
-    IMPACT --> SI
     CITE --> IC
     RAW --> CHUNKS
 
     PRODUCT_DBS --> LOOKUP --> PRODUCTS
     LOOKUP -.-> FALLBACK -.-> PRODUCTS
 
-    ENR & SI --> FREE_T --> FREE_OUT
+    ENR --> FREE_T --> FREE_OUT
 
     ENR & SI & IT & TAGS --> MATCH
     PRODUCTS --> MATCH
     MATCH --> COMPOSE --> PAID_OUT
 
-    ENR & SI --> HIGH --> ALERT_M
+    ENR --> HIGH --> ALERT_M
     PRODUCTS --> ALERT_M --> ALERT_OUT
 
     Q --> EMB --> VEC
     CHUNKS --> VEC --> RAG
-    ENR & SI & IC --> BROWSE
+    ENR & IC --> BROWSE
 
     classDef llm fill:#f3e8ff,stroke:#7c3aed,stroke-width:2px,color:#1e1b4b
     classDef data fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0c4a6e
@@ -284,8 +279,8 @@ flowchart TB
     classDef input fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#78350f
     classDef product fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#78350f
 
-    class SUMMARY,SEGMENT,TOPIC,DEEP,IMPACT,CITE,FALLBACK,COMPOSE,RAG llm
-    class RAW,ENR,SI,IT,IC,TAGS,CHUNKS,PRODUCTS data
+    class SUMMARY,TOPIC,DEEP,CITE,FALLBACK,COMPOSE,RAG llm
+    class RAW,ENR,IT,IC,TAGS,CHUNKS,PRODUCTS data
     class FREE_OUT,PAID_OUT,ALERT_OUT output
     class FR,OFDA,RSS,WL,P65,DSLD,FDC,MANUAL,Q input
         </pre>
@@ -310,17 +305,15 @@ flowchart LR
     subgraph OUTPUT["Enrichment Outputs"]
         direction TB
         O1["plain_english_summary"]
-        O2["segments: supplements, cosmetics, food"]
         O3["topics: labeling, GMP, ingredients, enforcement"]
         O4["affected_ingredients:
         marine collagen, ashwagandha, retinol"]
-        O5["affected_product_types:
-        capsules, powders, topical creams"]
+        O5["affected_product_categories:
+        controlled slugs from product_categories"]
         O6["affected_facility_types:
         manufacturer, packager, testing lab"]
         O7["affected_claims:
         joint health, anti-aging, immune support"]
-        O8["impact_level: high / medium / low"]
         O9["action_items: specific steps + deadlines"]
         O10["citations: claim to source quote + URL"]
         O11["regulations_cited:
@@ -335,12 +328,12 @@ flowchart LR
 
     class LLM,PROMPT llm
     class INPUT,TITLE,BODY,META input
-    class OUTPUT,O1,O2,O3,O4,O5,O6,O7,O8,O9,O10,O11 output
+    class OUTPUT,O1,O3,O4,O5,O6,O7,O9,O10,O11 output
         </pre>
     </div>
 
     <h2 id="email">3. Email Structure — Product-Centric</h2>
-    <p class="section-desc">Everything shows up. Items matching subscriber's actual products get full analysis referencing their specific products. Same-segment items get a brief. Everything else gets a one-liner + link. Nothing hidden.</p>
+    <p class="section-desc">Everything shows up. Items matching subscriber's actual products get full analysis referencing their specific products. Same-industry items get a brief. Everything else gets a one-liner + link. Nothing hidden.</p>
     <div class="diagram-container">
         <pre class="mermaid">
 flowchart TB
@@ -364,7 +357,7 @@ flowchart TB
     PRODUCTS --> SCORE
 
     SCORE --> HIT["Matches YOUR products"]
-    SCORE --> SEG["In your segment"]
+    SCORE --> SEG["In your industry"]
     SCORE --> OTHER["Other FDA activity"]
 
     subgraph EMAIL["Personalized Email"]
@@ -385,7 +378,7 @@ flowchart TB
         is below the flagged threshold, but
         here is what to monitor."]
 
-        S2["YOUR SEGMENT
+        S2["YOUR INDUSTRY
 
         New CGMP proposed rule
         Affects contract manufacturers.
@@ -518,7 +511,7 @@ flowchart LR
         supports joint health"]
         PF["facility:
         contract manufacturer"]
-        PS["segment:
+        PS["sector:
         supplements"]
     end
 
@@ -597,10 +590,10 @@ flowchart LR
     <h2 id="decisions">7. Key Design Decisions</h2>
     <div class="decisions">
         <ol>
-            <li><strong>Products are the core unit, not segments.</strong> The email says "Your Marine Collagen Powder" not "This week in supplements." Segments are backend classification only.</li>
+            <li><strong>Products are the core unit.</strong> The email says "Your Marine Collagen Powder" not "This week in supplements." Product categories drive matching.</li>
             <li><strong>Real product data from public databases.</strong> DSLD for supplements (214K products, structured ingredients), USDA FDC for food (454K products). Verified ingredient lists, not self-reported guesses.</li>
             <li><strong>Cosmetics is the gap.</strong> No public product database. Onboarding uses manual entry (paste/upload/describe) with LLM extraction.</li>
-            <li><strong>Everything shows up, nothing is hidden.</strong> Paid emails show ALL items. Product-matched items get full analysis. Same-segment gets a brief. Everything else gets a one-liner + link.</li>
+            <li><strong>Everything shows up, nothing is hidden.</strong> Paid emails show ALL items. Product-matched items get full analysis. Same-industry gets a brief. Everything else gets a one-liner + link.</li>
             <li><strong>Free email is content marketing.</strong> Generic digest, same for everyone. Drives trial signups via product shot on homepage showing the personalized experience.</li>
             <li><strong>Enrichment does the heavy lifting once.</strong> Deep tagging on affected ingredients, product types, claims, facility types happens at ingest. Email assembly just matches tags against product profiles.</li>
             <li><strong>Three LLM providers for their strengths.</strong> Gemini for bulk enrichment (cheap, fast). Claude for writing (emails, search). OpenAI for embeddings.</li>

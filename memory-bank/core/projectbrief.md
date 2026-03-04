@@ -82,12 +82,12 @@ Policy Canary tells you: "Your Marine Collagen Powder is affected. The FDA is ti
 
 **When something affects your products (event-driven, immediate):**
 - YOUR PRODUCTS — full analysis per affected product, why it matters, action items with deadlines
-- YOUR SEGMENT — brief summaries of other relevant items + links
+- YOUR INDUSTRY — brief summaries of other relevant items + links
 - ACROSS FDA — one-liner + link for everything else
 
 **When nothing happened (weekly):**
 - "All clear — nothing affecting your products this week." (Peace of mind is part of the value.)
-- YOUR SEGMENT — anything notable in your space
+- YOUR INDUSTRY — anything notable in your space
 - ACROSS FDA — one-liners for general FDA activity
 
 ---
@@ -96,7 +96,7 @@ Policy Canary tells you: "Your Marine Collagen Powder is affected. The FDA is ti
 
 | We Are | We're Not |
 |--------|-----------|
-| Product-level regulatory monitoring | Segment-level newsletter |
+| Product-level regulatory monitoring | Generic industry newsletter |
 | "What does this mean for YOUR products" | "What happened in supplements" |
 | Dynamic monitoring (will you comply tomorrow?) | Static checking (do you comply today?) |
 | Email-first, event-driven alerts | App-first SaaS platform |
@@ -111,7 +111,7 @@ Policy Canary tells you: "Your Marine Collagen Powder is affected. The FDA is ti
 
 **Primary:** Founders and product owners at small-to-mid supplement, food, and cosmetics brands ($500K-$50M revenue). They think in products, not regulatory categories. "Tell me what affects my 5 products" — not "tell me about supplements."
 
-**Expanded buyer personas (vs. segment-level approach):**
+**Expanded buyer personas (vs. generic industry approach):**
 
 | Role | Why They Buy Product-Level | Company Size |
 |------|---------------------------|-------------|
@@ -130,7 +130,7 @@ Policy Canary tells you: "Your Marine Collagen Powder is affected. The FDA is ti
 
 Product-level monitoring expands the addressable market significantly by reaching small brands that would never buy "regulatory intelligence."
 
-| Segment | Estimated Count | Likely Tier |
+| Buyer Sector | Estimated Count | Likely Tier |
 |---------|----------------|-------------|
 | Small supplement/cosmetics/food brands ($500K-$5M) | 5,000-15,000+ | Starter |
 | Mid-size brands ($5M-$50M) | 500-1,300 | Pro |
@@ -212,22 +212,24 @@ Research confirmed affordability and competitive positioning:
 
 ---
 
-## Segments (Backend Only)
+## Sectors & Product Categories
 
-Segments are **pipeline plumbing**, not a subscriber-facing concept. They help classify incoming regulatory data. Subscribers never see or choose segments — they just add their products.
+Sectors (food / supplement / cosmetic) are **derived from product categories**, not a separate classification layer. The enrichment pipeline tags each regulatory item with controlled product category slugs (~82 categories from MoCRA, 21 CFR 170.3, and DSLD). Subscribers never see sectors — they just add their products.
 
-### Launch (2026)
-| Segment | Pipeline Purpose |
-|---------|-----------------|
-| **Supplements** | Classify regulatory items affecting dietary supplements (DSHEA, 21 CFR Part 111, NDI) |
-| **Cosmetics** | Classify items affecting cosmetics/personal care (MoCRA, facility registration) |
-| **Food** | Classify items affecting conventional food/beverages (FSMA, GRAS, food additives) |
+### Product Categories (~82 controlled slugs)
+| Sector | Source | Count |
+|--------|--------|-------|
+| **Cosmetics** | MoCRA/VCRP 21 CFR 720.4 | ~17 |
+| **Food** | 21 CFR 170.3(n) + infant formula/medical foods | ~46 |
+| **Supplements** | DSLD ingredient categories + market conventions | ~19 |
+
+Stored in `product_categories` table. New categories added manually, never by LLM invention.
 
 ### Expansion
 | Addition | Timeline | Notes |
 |----------|----------|-------|
 | **State Compliance Layer** | Month 3-5 | 140+ bills across 38 states, Prop 65. Same pipeline, new data sources. |
-| **Pet Food / Animal Supplements** | Month 5-7 | $29B market, 85-95% pipeline reuse. |
+| **Pet Food / Animal Supplements** | Month 5-7 | $29B market, 85-95% pipeline reuse. New product category slugs added. |
 
 ### Not Pursuing Under This Brand
 - Hemp/CBD (stigma repels core buyers)
@@ -311,7 +313,7 @@ Detailed research: `/memory-bank/research/data-sources.md`
 | Month 2 | Product intelligence emails generating, 5-10 paying subscribers |
 | Month 3 | Web app live, 15-25 paying subscribers, begin state compliance research |
 | Month 5 | State compliance layer, 30-50 subscribers |
-| Month 7 | Pet food segment, 50-75 subscribers |
+| Month 7 | Pet food sector expansion, 50-75 subscribers |
 
 ---
 

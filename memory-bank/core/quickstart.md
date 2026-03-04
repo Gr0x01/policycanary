@@ -8,17 +8,17 @@ Status: Active
 
 ## Current State
 
-- **Status**: Clawdbot (OpenClaw) live on Vultr VPS. Product onboarding planned. Stripe, blog, cross-reference, auth all shipped.
+- **Status**: Session 0 complete (product categories migration + enrichment pipeline update). Full enrichment run in progress. Stripe, blog, cross-reference, auth all shipped.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot, weekly roundup cron
-- **Next**: Session 0 (migration `005_product_categories` + enrichment pipeline update to controlled vocab), then Session 1 (onboarding backend), Session 2 (onboarding frontend)
+- **Next**: Full enrichment of all items, then Session 1 (onboarding backend), Session 2 (onboarding frontend)
 
 ---
 
 ## What's Happening
 
-**Clawdbot (OpenClaw) deployed to Vultr VPS.** Discord bot live on the `Bizniz` server with 5 channels (blog-drafts, linkedin-drafts, weekly-roundup, alerts, clawdbot). Weekly FDA Roundup cron fires Fridays 9 AM ET → drafts blog post → posts to #weekly-roundup for review → publishes to `/blog` on approval. Uses `query-supabase.mjs` to pull enriched items and `publish-blog.mjs` to POST to the blog API. **GSRS bootstrap complete** — 949K codes across 96 systems, 166K substances with codes. Cross-reference inference data is loaded. **Product onboarding phase planned.** `product_categories` table (~79 categories) as sacred controlled vocab. Re-enrich all items next.
+**Session 0 complete.** Product categories migration applied (82 categories seeded from MoCRA/VCRP, 21 CFR 170.3(n), DSLD). Enrichment pipeline updated to controlled vocab — golden tests 10/10. Full enrichment run in progress (backfills + re-enrich all items with current pipeline). Clawdbot live on Discord (weekly roundup cron Fridays 9 AM ET). GSRS bootstrap complete (949K codes, 96 systems, 166K substances). Cross-reference inference ready. **Next: onboarding backend (Session 1).**
 
 ---
 
@@ -82,9 +82,9 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] Project idea definition
 - [x] Market research (competitive landscape, data sources, market opportunity)
 - [x] Product vision & positioning (email-first, intelligence lane)
-- [x] ~~Pricing validated (segment-based)~~ → superseded by product-level pivot
+- [x] ~~Pricing validated (segment-based)~~ → superseded by product-level pivot (segments removed from pipeline 2026-03-06)
 - [x] Expansion roadmap defined (state compliance → pet food)
-- [x] ~~Data schema design (v3, segment-based)~~ — superseded
+- [x] ~~Data schema design (v3, segment-based)~~ — superseded (segment_impacts table dropped)
 - [x] Build phase planning (needs revision for product-level model)
 - [x] **Product-level pivot** — product-centric model, new pricing research, new market sizing
 - [x] Pricing finalization — Monitor $49/mo, Monitor+Research $249/mo, +$6/product
@@ -104,9 +104,9 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] Stripe Dashboard setup — products + prices created (Monitor $99, Extra $6), customer portal configured, webhook endpoint pending deploy
 - [x] **Product categories taxonomy designed** — ~79 categories from MoCRA, 21 CFR 170.3, DSLD. Sacred controlled vocab — no free text.
 - [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.
-- [ ] **Session 0: Product categories migration + enrichment update** — migration `005`, seed categories, update `prompts.ts`/`processor.ts`/`cross-reference.ts` to controlled vocab
+- [x] **Session 0: Product categories migration + enrichment update** — migration applied (82 categories), pipeline uses controlled slugs, golden tests 10/10
 - [x] GSRS bootstrap complete — 949K codes, 96 code systems, 166K substances with codes
-- [ ] Re-enrich existing items (cross-reference + controlled product categories, one pass)
+- [ ] Full enrichment run (backfills + re-enrich all items with current pipeline)
 - [ ] **Session 1: Onboarding backend** — GSRS search utility, ingredient parsing (Gemini Flash), product API routes, GSRS autocomplete
 - [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page
 - [ ] Wire fetchers into Inngest (Phase 2C)

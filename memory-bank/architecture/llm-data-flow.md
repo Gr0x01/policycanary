@@ -8,7 +8,7 @@ Status: Active
 
 ## Product-Centric Model
 
-The core unit is the subscriber's **actual products**, not segments. Segments (supplements, cosmetics, food) are backend classification for the data pipeline. The subscriber experience is organized around their real products and ingredients.
+The core unit is the subscriber's **actual products**. Product categories (~82 controlled slugs across food, supplement, and cosmetic sectors) are used for classification in the data pipeline. The subscriber experience is organized around their real products and ingredients.
 
 Onboarding collects real products via database lookup (DSLD for supplements, USDA FoodData Central for food) or manual entry (cosmetics, unlisted products). The system knows exactly what ingredients are in each product and matches regulatory items against them.
 
@@ -37,19 +37,16 @@ flowchart TB
 
     subgraph ENRICH["Enrichment — Gemini Flash"]
         SUMMARY[Summary + Analysis<br/>+ Action Items]
-        SEGMENT[Segment Classification<br/>supplements / cosmetics / food]
         TOPIC[Topic Tagging<br/>labeling / GMP / ingredients / enforcement]
-        DEEP[Deep Tagging<br/>affected ingredients,<br/>product types, facility types,<br/>regulations cited, claims at risk]
-        IMPACT[Per-Segment Impact<br/>Assessment]
+        DEEP[Deep Tagging<br/>affected ingredients,<br/>product categories, facility types,<br/>regulations cited, claims at risk]
         CITE[Citation Extraction<br/>claim → source quote + URL]
     end
 
     subgraph ENRICHED_STORE["Enriched Data"]
         ENR[(item_enrichments)]
-        SI[(segment_impacts)]
         IT[(item_topics)]
         IC[(item_citations)]
-        TAGS[(affected_ingredients<br/>affected_product_types<br/>regulations_cited)]
+        TAGS[(affected_ingredients<br/>affected_product_categories<br/>regulations_cited)]
         CHUNKS[(item_chunks<br/>+ embeddings)]
     end
 
@@ -88,12 +85,10 @@ flowchart TB
 
     %% Regulatory data flow
     SOURCES --> PARSE --> RAW
-    RAW --> SUMMARY & SEGMENT & TOPIC & DEEP & IMPACT & CITE
+    RAW --> SUMMARY & TOPIC & DEEP & CITE
     SUMMARY --> ENR
-    SEGMENT --> SI
     TOPIC --> IT
     DEEP --> TAGS
-    IMPACT --> SI
     CITE --> IC
     RAW --> CHUNKS
 
@@ -104,21 +99,21 @@ flowchart TB
     PROFILE_LLM --> PRODUCTS
 
     %% Free email
-    ENR & SI --> FREE_TEMPLATE --> FREE_EMAIL
+    ENR --> FREE_TEMPLATE --> FREE_EMAIL
 
     %% Paid email
-    ENR & SI & IT & TAGS --> MATCH
+    ENR & IT & TAGS --> MATCH
     PRODUCTS --> MATCH
     MATCH --> COMPOSE --> PAID_EMAIL
 
     %% Alerts
-    ENR & SI --> HIGH --> ALERT_MATCH
+    ENR --> HIGH --> ALERT_MATCH
     PRODUCTS --> ALERT_MATCH --> ALERT_EMAIL
 
     %% Search
     QUERY --> EMBED_Q --> VECTOR
     CHUNKS --> VECTOR --> RAG
-    ENR & SI & IC --> BROWSE
+    ENR & IC --> BROWSE
 ```
 
 ## 2. Enrichment Detail — What the LLM Produces Per Item
@@ -126,7 +121,7 @@ flowchart TB
 **Pipeline steps per item:**
 1. **Content-fetch** — if source_url points to FDA.gov and content is thin (<1K chars), fetch full page and extract `<main>` text. RSS items go from ~200 chars to 2K-7K chars.
 2. **LLM extraction** — single Gemini call (Flash for simple items, Pro for complex). Produces all structured outputs below.
-3. **Cross-reference inference** (BUILT + DATA LOADED) — Step 1b: deterministic lookup of extracted substances in GSRS `substance_codes` (949K codes, 96 systems) → maps 9 relevant systems to use-context categories. Step 1c: Gemini 2.5 Pro with thinking (budget: 4096) reasons about cross-segment risk transfer. Only fires when use contexts reveal segments beyond Step 1's direct extraction (~20-30% of items). `signal_source` column distinguishes direct vs inferred. See `src/pipeline/enrichment/cross-reference.ts`.
+3. **Cross-reference inference** (BUILT + DATA LOADED) — Step 1b: deterministic lookup of extracted substances in GSRS `substance_codes` (949K codes, 96 systems) → maps 9 relevant systems to use-context categories. Step 1c: Gemini 2.5 Pro with thinking (budget: 4096) reasons about cross-category risk transfer. Only fires when use contexts reveal sectors beyond Step 1's direct extraction (~20-30% of items). `signal_source` column on `item_enrichment_tags` distinguishes direct vs inferred. See `src/pipeline/enrichment/cross-reference.ts`.
 4. **Embeddings** — chunk content, generate OpenAI embeddings for vector search.
 
 Full content is sent to the LLM — no truncation. Longest item is ~47K chars (~12K tokens), well within Gemini's 1M token context.
@@ -147,13 +142,11 @@ flowchart LR
     subgraph OUTPUT["Enrichment Outputs"]
         direction TB
         O1["plain_english_summary"]
-        O2["segments[]<br/>supplements, cosmetics, food"]
         O3["topics[]<br/>labeling, GMP, ingredients, enforcement"]
         O4["affected_ingredients[]<br/>marine collagen, ashwagandha, retinol..."]
-        O5["affected_product_types[]<br/>capsules, powders, topical creams..."]
+        O5["affected_product_categories[]<br/>controlled slugs from product_categories"]
         O6["affected_facility_types[]<br/>manufacturer, packager, lab"]
         O7["affected_claims[]<br/>joint health, anti-aging..."]
-        O8["impact_level per segment<br/>high / medium / low"]
         O9["action_items[]<br/>specific steps + deadlines"]
         O10["citations[]<br/>claim → source quote + URL"]
         O11["regulations_cited[]<br/>21 CFR 111.70, MoCRA §607"]
@@ -186,7 +179,7 @@ flowchart TB
     PROFILE --> SCORE
 
     SCORE --> PRODUCT_HIT["Matches YOUR products — 3 items"]
-    SCORE --> SEGMENT_HIT["In your segment — 4 items"]
+    SCORE --> INDUSTRY_HIT["In your industry — 4 items"]
     SCORE --> OTHER["Other FDA activity — 8 items"]
 
     subgraph EMAIL["Generated Email — Personalized"]
@@ -207,7 +200,7 @@ flowchart TB
         is below the threshold flagged, but
         here is what to monitor..."]
 
-        SECTION2["YOUR SEGMENT
+        SECTION2["YOUR INDUSTRY
 
         New CGMP proposed rule for contract manufacturers
         Brief summary — affects your facility type
@@ -227,7 +220,7 @@ flowchart TB
     end
 
     PRODUCT_HIT --> SECTION1
-    SEGMENT_HIT --> SECTION2
+    INDUSTRY_HIT --> SECTION2
     OTHER --> SECTION3
 ```
 
@@ -237,7 +230,7 @@ High-level flow. Specific UI is RB's design.
 
 **Data sources for product lookup:**
 
-| Segment | Primary Source | Products | Key Data |
+| Sector | Primary Source | Products | Key Data |
 |---------|---------------|----------|----------|
 | Supplements | DSLD (NIH) | 214,780 (121K on-market) | Structured ingredients with amounts, categories, UNII codes, claims, form, manufacturer |
 | Food | USDA FoodData Central | 454,596 branded | Ingredients (text), nutrition data, UPC barcodes, brand |
@@ -306,7 +299,7 @@ policycanary.io/blog (live)
 | Layer | Model | When | Cost Driver |
 |-------|-------|------|-------------|
 | **Data Enrichment + Deep Tagging** | Gemini 2.5 Flash / Pro | At ingest (once per item, single call). Flash for simple items, Pro for complex (WLs, rules). | ~50-100 items/week |
-| **Cross-Reference Inference (Step 1c)** | Gemini 2.5 Pro + thinking | After enrichment, only when use contexts reveal new segments (~20-30% of items). Budget: 4096 thinking tokens. | ~$0.02/call, ~10-30 items/week |
+| **Cross-Reference Inference (Step 1c)** | Gemini 2.5 Pro + thinking | After enrichment, only when use contexts reveal new sectors (~20-30% of items). Budget: 4096 thinking tokens. | ~$0.02/call, ~10-30 items/week |
 | **Content Automation (Clawdbot)** | Claude Sonnet 4.6 | Weekly roundup + ad-hoc content drafts via OpenClaw | ~1-4 calls/week |
 | **Onboarding — manual entry parsing** | Claude Sonnet 4.6 | When product not found in database | Low — most supplements auto-populate from DSLD |
 | **Email Composition** | Claude Sonnet 4.6 | Weekly per paid subscriber | Subscriber count × weekly |
@@ -316,13 +309,13 @@ policycanary.io/blog (live)
 
 ## 7. Key Design Decisions
 
-1. **Products are the core unit, not segments.** The email says "Your Marine Collagen Powder" not "This week in supplements." Segments are backend classification only.
+1. **Products are the core unit.** The email says "Your Marine Collagen Powder" not "This week in supplements." Sectors (food/supplement/cosmetic) are derived from product category slugs, not stored separately.
 
 2. **Real product data from public databases.** DSLD for supplements (214K products, structured ingredients), USDA FDC for food (454K products). No guessing — verified ingredient lists pulled from authoritative sources.
 
 3. **Cosmetics is the gap.** No good public product database exists. MoCRA data isn't public. Onboarding falls back to manual entry (paste/upload/describe) with LLM extraction.
 
-4. **Everything shows up, nothing is hidden.** Paid emails show ALL items for the week. Items matching subscriber's products get full analysis. Same-segment items get a brief. Cross-segment items get a one-liner + link.
+4. **Everything shows up, nothing is hidden.** Paid emails show ALL items for the week. Items matching subscriber's products get full analysis. Same-industry items get a brief. Other FDA activity gets a one-liner + link.
 
 5. **Free email is content marketing, not stripped product.** Same generic digest for everyone. No personalization. It's a newsletter that drives trial signups.
 
@@ -340,6 +333,6 @@ The enrichment layer tags each regulatory item with affected ingredients, produc
 | Product types | `[collagen supplements, protein powders]` | `[collagen powder]` |
 | Claims | `[joint health, anti-aging]` | `[supports joint health]` |
 | Facility types | `[manufacturer]` | `[contract manufacturer]` |
-| Regulations | `[21 CFR 111.70]` | (tracked via segment) |
+| Regulations | `[21 CFR 111.70]` | (tracked via product category sector) |
 
 Match = intersection across any dimension. The more dimensions that match, the higher the relevance score. A regulatory item about "identity testing for marine collagen" hits on both ingredient AND product type for a subscriber with a marine collagen powder → critical relevance.

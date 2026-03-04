@@ -51,11 +51,8 @@ FUNDAMENTAL DESIGN PRINCIPLE — READ THIS FIRST:
                                     "21 CFR 172", "MoCRA Section 605"
                                     Cross-references for the matching engine
 
-  CRITICAL SEPARATION:
-    segment_impacts  → PRESENTATION ONLY. Used for the generic weekly digest
-                       and UI filtering. NOT used by the Phase 4C matching engine.
-    item_enrichment_tags → MATCHING. This is what Phase 4C queries. Must be
-                           populated accurately for every item.
+  item_enrichment_tags → MATCHING. This is what Phase 4C queries. Must be
+                         populated accurately for every item.
 
   The enrichment prompt MUST produce item_enrichment_tags across all 4 dimensions.
   Ingredient-level items get tags AND substances.
@@ -65,12 +62,11 @@ FUNDAMENTAL DESIGN PRINCIPLE — READ THIS FIRST:
     1. regulatory_action_type   — what is happening (drives email priority)
     2. affected_ingredients     → regulatory_item_substances (ingredient signals)
     3. item_enrichment_tags     → all 4 dimensions (category signals)
-    4. deadline                 — is there a compliance date?
+    4. affected_product_categories — controlled slugs from product_categories table
+    5. deadline                 — is there a compliance date?
 
-  Secondary outputs (digest routing / display / search):
-    5. segments/segment_impacts — for generic digest only
-    6. affected_product_types   — granular free text for display and AI search
-    7. summary, citations, topics — supporting metadata
+  Secondary outputs (display / search):
+    6. summary, citations, topics — supporting metadata
 
 WHAT TO READ FIRST:
 - /memory-bank/architecture/data-schema.md — enrichment tables (Layer 2+3+4)
@@ -83,7 +79,7 @@ ARCHITECTURE:
   Then: item_chunks → OpenAI embeddings → vector store
 
   Two steps:
-  1. LLM enrichment (Gemini Flash/Pro → item_enrichments, segment_impacts,
+  1. LLM enrichment (Gemini Flash/Pro → item_enrichments,
      item_enrichment_tags, regulatory_item_substances, item_citations)
   2. Embedding generation (OpenAI → item_chunks with vectors)
 
@@ -129,19 +125,7 @@ STEP 1: ENRICHMENT PROMPT (src/pipeline/enrichment/prompts.ts)
     deadline: string | null,
       // ISO date of compliance deadline if stated. Null otherwise.
 
-    // ── TIER 2: segment routing (generic digest) ────────────────────────────
-    segments: [{
-      segment: "supplements" | "cosmetics" | "food",
-      relevance: "critical" | "high" | "medium" | "low" | "none",
-      impact_summary: string,   // Segment-specific "what this means for you" (1-2 sentences)
-      action_items: string[],   // Specific actions with deadlines where possible
-      who_affected: string,     // "All supplement manufacturers using X"
-    }],
-      // Only include segments with relevance != "none".
-      // A single item can legitimately affect 0, 1, 2, or all 3 segments.
-      // If issuing_office is CDER or CDRH, all segments should be empty.
-
-    // ── TIER 3: supporting metadata ─────────────────────────────────────────
+    // ── TIER 2: supporting metadata ──────────────────────────────────────────
     summary: string,            // 2-4 sentence plain-English summary
     key_regulations: string[],  // ["21 CFR 111.70", "MoCRA Section 605"]
     key_entities: string[],     // Companies, agencies cited
@@ -210,13 +194,6 @@ STEP 1: ENRICHMENT PROMPT (src/pipeline/enrichment/prompts.ts)
     that would restrict an ingredient is a proposed_restriction. Be accurate —
     this drives how urgently subscribers are notified."
 
-  - For segments: "Only populate for items that directly affect the business
-    operations of food manufacturers, dietary supplement manufacturers, or
-    cosmetic/personal care product manufacturers. If the issuing office is CDER
-    or CDRH, or if the subject is pharmaceutical drugs, medical devices, or
-    veterinary products, leave segments empty. A segment entry means 'a company
-    making this type of product needs to take action or be aware.'"
-
   - For citations: "For EVERY claim you make, cite the EXACT text from the
     source document. If you cannot find supporting text, do not make the claim."
 
@@ -252,18 +229,16 @@ STEP 2: ENRICHMENT PROCESSOR (src/pipeline/enrichment/processor.ts)
      - Verify citations: substring check quote_text in raw_content
        Set quote_verified = true/false on each citation
      - Validate topic slugs against topics table, drop any not in vocabulary
+     - Validate product category slugs against PRODUCT_CATEGORY_SLUGS
      - RULE-BASED VALIDATORS (run after LLM, before DB write):
-       · CDER/CDRH issuing_office → clear segments[] regardless of LLM output
-       · CFR Parts 500-599 in cfr_references → animal drugs → clear segments[]
-       · item_type = recall AND no affected_ingredients → flag needs_review
-       · Any segment claim when issuing_office is a device center → clear segment
+       · CDER/CDRH issuing_office → clear affected_product_categories
+       · CFR Parts 500-599 in cfr_references → animal drugs → clear affected_product_categories
 
   d) Insert results:
      - item_enrichments: summary, key_regulations, key_entities, regulatory_action_type,
        enrichment_model, enrichment_version, confidence, raw_response,
-       affected_ingredients, affected_product_types, deadline
-     - segment_impacts: one row per segment with relevance != 'none'
-       Copy published_date from regulatory_items for denormalization
+       affected_ingredients, affected_product_categories, deadline
+     - item_enrichment_tags: product_type tags (from controlled slugs), facility_type, claims, regulation
      - item_citations: one row per citation
      - item_topics: one row per topic tag
      - regulatory_item_substances: one row per affected_ingredient
@@ -281,8 +256,6 @@ STEP 3: EMBEDDING GENERATION (src/pipeline/enrichment/embeddings.ts)
   a) Chunking strategy (section-based):
      - Split raw_content by section headers (if HTML/structured)
      - Each section becomes a chunk
-     - Also create chunks from segment_impacts.impact_summary
-       (segment-specific chunks get segment_impact_id set)
      - Target chunk size: 500-1000 tokens
      - If a section exceeds 1500 tokens, split at paragraph boundaries
 
@@ -341,9 +314,9 @@ CROSS-REFERENCE INFERENCE LAYER (BUILT — 2026-03-04):
     NOT in GSRS: CIR (cosmetic) — needs separate source.
     Pure TypeScript, no LLM. GSRS codes are ground truth.
 
-  Step 1c: LLM CROSS-SEGMENT INFERENCE (same file)
-    inferCrossSegments(output, useContextMap, resolvedSubstances, google) → CrossReferenceOutput | null
-    Only fires when use contexts reveal segments BEYOND Step 1's direct extraction.
+  Step 1c: LLM CROSS-CATEGORY INFERENCE (same file)
+    inferCrossCategories(output, useContextMap, resolvedSubstances, google) → CrossReferenceOutput | null
+    Only fires when use contexts reveal sectors BEYOND Step 1's direct extraction.
     Gemini 2.5 Pro with thinking (budget: 4096). Reasons about:
     - Exposure routes (oral vs dermal vs inhalation)
     - Regulatory precedent (FDA historically extends food bans to supplements)
@@ -352,12 +325,13 @@ CROSS-REFERENCE INFERENCE LAYER (BUILT — 2026-03-04):
     Confidence threshold: >= 0.7. Below that, not included.
     NON-FATAL: if Step 1c fails, item proceeds with direct-only signals.
 
-  signal_source column on segment_impacts and item_enrichment_tags:
+  signal_source column on item_enrichment_tags:
     'direct' = from Step 1 LLM extraction
     'cross_reference' = from Step 1c inference
     Additive-only: Step 1c NEVER modifies Step 1's direct extraction.
 
-  Schema: substance_codes table + signal_source columns (migration 002 applied).
+  Schema: substance_codes table + signal_source column on item_enrichment_tags (migration 002 applied).
+  NOTE: segment_impacts table DROPPED (migration drop_segment_impacts, 2026-03-06).
   GSRS bootstrap complete: 949K codes, 96 systems, 166K substances with codes.
   Bootstrap captures ALL code systems; filtering at query time in cross-reference.ts.
   Cost: ~$0.02/call, fires on ~20-30% of items.
@@ -381,10 +355,10 @@ ACCEPTANCE CRITERIA:
 - [ ] affected_ingredients uses label-friendly names (e.g. "BHA" not just "butylated hydroxyanisole")
 - [ ] affected_product_types is granular ("protein powder" not just "dietary supplement")
 - [ ] Flash/Pro routing works correctly based on item_type
-- [ ] Rule-based validators fire correctly (CDER/CDRH → clear segments)
+- [ ] Rule-based validators fire correctly (CDER/CDRH → clear affected_product_categories)
 - [ ] Citation verification checks quote_text against raw_content
 - [ ] Topic slugs are validated against the topics table
-- [ ] Segment impacts are created for each relevant segment
+- [ ] Product category tags are populated accurately for every item
 - [ ] Embeddings are generated at correct dimensions (confirm halfvec vs vector)
 - [ ] Section-based chunking works for various content formats
 - [ ] Error handling: bad items are flagged, not crashed on
@@ -403,7 +377,7 @@ SUBAGENTS:
 |------|-------------|--------|
 | `src/pipeline/enrichment/prompts.ts` | Enrichment prompt templates + Zod output schema | Done |
 | `src/pipeline/enrichment/processor.ts` | Main enrichment function + rule-based validators + cross-ref integration | Done |
-| `src/pipeline/enrichment/cross-reference.ts` | Steps 1b (use-context lookup) + 1c (LLM cross-segment inference) | Done |
+| `src/pipeline/enrichment/cross-reference.ts` | Steps 1b (use-context lookup) + 1c (LLM cross-category inference) | Done |
 | `src/pipeline/enrichment/content-fetch.ts` | Full FDA page content fetching for thin RSS items | Done |
 | `src/pipeline/enrichment/embeddings.ts` | Chunking + embedding generation | Done |
 | `src/pipeline/enrichment/runner.ts` | Orchestration — content-fetch → enrich → embed per item | Done |

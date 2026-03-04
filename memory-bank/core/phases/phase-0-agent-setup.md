@@ -13,7 +13,7 @@ food, supplement, and cosmetic companies. It monitors FDA changes and delivers
 structured, plain-English analysis via email. The email IS the product.
 
 WHAT TO READ FIRST:
-- /memory-bank/core/projectbrief.md — product definition, positioning, segments
+- /memory-bank/core/projectbrief.md — product definition, positioning, product categories
 - /tmp/brand-guardian.md — structural template (Finch brand, different product)
 
 WHAT TO CREATE:
@@ -60,7 +60,7 @@ WHAT TO CREATE:
         "I'm scanning the Federal Register manually every morning."
         "My consultant charges $300/hour to tell me what happened last week."
         "I missed a comment deadline because nobody flagged it."
-      - Onboarding mindset: They don't think in "segments" — they think in
+      - Onboarding mindset: They don't think in industry sectors — they think in
         products. After signup, they add their actual products. Policy Canary
         then monitors FDA for those specific products by ingredient.
 

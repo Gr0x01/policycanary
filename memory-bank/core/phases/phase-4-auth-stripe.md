@@ -27,7 +27,7 @@ COMPONENT 1: SUPABASE AUTH (src/lib/supabase/)
      - src/app/(auth)/login/page.tsx — login form
      - src/app/(auth)/signup/page.tsx — registration form
        Collects: email, password, name, company_name
-       No segment selection — "We'll personalize based on the products you add"
+       No sector selection — "We'll personalize based on the products you add"
        After signup → redirect to /app/onboarding (Phase 4B)
      - src/app/(auth)/callback/route.ts — OAuth/magic link callback
 

@@ -56,15 +56,15 @@ PAGE 1: LANDING PAGE (src/app/(marketing)/page.tsx)
        e.g., Founder: "Which of my 32 SKUs is affected by this warning?"
              QA Manager: "Does the new BHA guidance affect our moisturizer line?"
              Product Manager: "What does this recall mean for my collagen launch?"
-     - NOT segment cards — segments are backend classification, not how buyers think
+     - NOT industry cards — organize by buyer role, not product sector
 
   f) SOCIAL PROOF (placeholder for now)
      - "Trusted by regulatory teams at..." (fill in after launch)
      - Or: industry logos (FDA, Federal Register as data sources)
 
-  g) EMAIL SIGNUP (email + name only — no segment selection)
+  g) EMAIL SIGNUP (email + name only)
      - Email, name fields only
-     - NO segment checkboxes — segments are inferred from products, not selected at signup
+     - NO industry checkboxes — sectors are inferred from products, not selected at signup
      - Tagline: "We'll personalize based on the products you add after signup"
      - "Get the free weekly digest"
      - On submit → POST /api/signup → insert email_subscribers
@@ -97,7 +97,7 @@ PAGE 2: PRICING PAGE (src/app/(marketing)/pricing/page.tsx)
     - "Can I change my plan?" — yes, upgrade/downgrade anytime via account settings
     - "Is there an annual option?" — not yet, monthly billing only at launch
   - Value justification: "$49/mo < 1 hour of a regulatory consultant's time"
-  - Remove: annual/monthly toggle, All Access tier, segment selection explanation
+  - Remove: annual/monthly toggle, All Access tier
 
 PAGE 3: SAMPLE REPORT (src/app/(marketing)/sample/page.tsx)
 
@@ -105,7 +105,7 @@ PAGE 3: SAMPLE REPORT (src/app/(marketing)/sample/page.tsx)
 
   - Render a realistic product intelligence email as a web page
   - Use a specific product example: "Your Marine Collagen Powder" — organized
-    around the subscriber's product, not a generic segment digest
+    around the subscriber's product, not a generic industry digest
   - Show: product name in subject/header, full analysis of how the regulatory
     action affects that specific product's ingredients, action items with deadlines,
     citation links, ingredient-level specificity ("your product contains whey protein
@@ -118,7 +118,7 @@ API ROUTE: EMAIL SIGNUP (src/app/api/signup/route.ts)
 
   POST /api/signup
   Body: { email, name?, source?: string }
-  (No segments — segments are inferred from products, not selected at signup)
+  (No sector selection — sectors are inferred from products, not selected at signup)
 
   Logic:
   1. Validate email format
@@ -147,7 +147,7 @@ COMPONENTS TO BUILD:
     PricingTable.tsx         # Pricing comparison component
     SignupForm.tsx           # Email signup form
     FeatureComparison.tsx    # Free vs paid side-by-side
-    BuyerRoleCard.tsx        # Buyer role cards (Founder, QA Manager, etc.) — replaces SegmentCard
+    BuyerRoleCard.tsx        # Buyer role cards (Founder, QA Manager, etc.)
     SampleReport.tsx         # Sample intelligence email display
 
   src/app/(marketing)/layout.tsx  # Marketing layout with header/footer
@@ -167,7 +167,7 @@ ACCEPTANCE CRITERIA:
 - [ ] Per-product pricing note is visible (+$6/mo per product beyond 5)
 - [ ] NO annual/monthly toggle (monthly billing only)
 - [ ] Sample report page shows realistic intelligence email
-- [ ] Email signup form has no segment checkboxes (email + name only)
+- [ ] Email signup form is email + name only (no sector selection)
 - [ ] Email signup form submits successfully
 - [ ] /api/signup creates email_subscriber records
 - [ ] Duplicate emails are handled gracefully
@@ -197,6 +197,6 @@ SUBAGENTS:
 - **Sample report is the conversion tool.** Don't skimp on it. Use realistic regulatory content.
 - **Copy is critical.** This is a B2B product for regulatory professionals. Startup-speak will kill credibility.
 - **Monthly only at launch.** No annual/monthly toggle. No annual pricing in the UI.
-- **No segment checkboxes on the signup form.** Segments are backend classification only. Subscribers add products, not segments.
+- **No sector checkboxes on the signup form.** Sectors are derived from products. Subscribers add products, not sectors.
 - **No Stripe integration yet.** Pricing CTAs link to signup form (free) or a "coming soon" state (paid). Stripe comes in Phase 4.
 - **SSR these pages.** Marketing pages should be server-rendered for SEO. No client components unless needed for interactivity (signup form, pricing toggle).

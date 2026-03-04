@@ -108,9 +108,9 @@ changes get their own numbered migrations.
 The migration should create everything in FK-dependency order:
 
   1. Extensions: pgvector, moddatetime
-  2. ENUMs: item_type, segment, relevance, relation_type
+  2. ENUMs: item_type, relation_type
   3. Layer 1 — Source data: sources, pipeline_runs, regulatory_items
-  4. Layer 2 — Enrichment: item_enrichments, segment_impacts, item_citations,
+  4. Layer 2 — Enrichment: item_enrichments, item_citations,
      topics, item_topics
   5. Layer 3 — Search: item_chunks with vector(768) column
      NOTE: Do NOT create HNSW index on empty table. Add a comment:
@@ -135,7 +135,7 @@ The migration should create everything in FK-dependency order:
         product_item_matches: users can read rows for their products.
   11. RLS policies:
       - Public read (authenticated): regulatory_items, item_enrichments,
-        segment_impacts, topics, item_topics, trend_signals
+        topics, item_topics, trend_signals
       - User-scoped: users (own row), user_bookmarks (own bookmarks)
       - Service role only: pipeline tables, email tables, enforcement_details
       - email_subscribers: users can read own row (via user_id FK)
@@ -198,7 +198,7 @@ STEP 6: SHARED UTILITIES
 
   g) src/types/enums.ts
      TypeScript enums/types matching the database enums:
-     - Segment, ItemType, Relevance, RelationType
+     - ItemType, RelationType
 
   h) src/types/database.ts
      Run: npx supabase gen types typescript --local > src/types/database.ts
@@ -259,4 +259,4 @@ SUBAGENTS:
 - **Supabase types:** If Supabase isn't running locally, manually create `database.ts` matching the schema. Regenerate from live DB later.
 - **vector(768):** This is locked to `text-embedding-3-small`. Changing models = re-embed entire corpus. Document this constraint.
 - **RLS policies:** Service role client (`admin.ts`) bypasses RLS — this is intentional for pipeline operations. Never expose service role key to the client.
-- **Enum vs lookup table for segments:** Using ENUM for MVP. Will migrate to lookup table before 4th segment (expansion roadmap).
+- **Sectors derived from product categories.** No separate segment ENUM or table — sectors (food/supplement/cosmetic) are derived from the `product_categories` table.

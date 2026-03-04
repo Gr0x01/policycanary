@@ -15,8 +15,8 @@ WHAT TO READ FIRST:
 - /memory-bank/architecture/techStack.md — DSLD and USDA FDC API details
 
 WHY THIS MATTERS:
-Segments are backend-only pipeline classifications. Subscribers don't think
-in segments — they think in products. "Which of my 47 products contains BHA?"
+Sectors (food/supplement/cosmetic) are derived from product categories.
+Subscribers don't think in sectors — they think in products. "Which of my 47 products contains BHA?"
 Product profiles are the foundation of personalized intelligence emails and
 the product matching engine (Phase 4C). Without products, email is generic.
 

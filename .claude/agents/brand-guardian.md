@@ -300,7 +300,7 @@ Email body:      16px / 400 / IBM Plex Sans   — Analysis paragraphs
 **Product Intelligence Email**:
 - 3px canary yellow rule at the very top — the brand mark before anything else
 - Product name in IBM Plex Serif, large — the editorial moment this surface earns
-- Three-zone structure: YOUR PRODUCTS → YOUR SEGMENT → ACROSS FDA
+- Three-zone structure: YOUR PRODUCTS → YOUR INDUSTRY → ACROSS FDA
 - Action items as a numbered block, visually separated from analysis prose
 - Deadline: amber, bold, its own line
 - Confidence indicator: small inline label — "Rule Final" / "Proposed" / "Guidance Pending"

@@ -57,28 +57,24 @@ COMPONENT 3: TREND SIGNAL COMPUTATION (src/pipeline/trends.ts)
 
   async function computeTrendSignals(): Promise<void>
 
-  For each (segment, topic) pair:
+  For each topic (from item_categories):
   a) Count items in 30/60/90 day windows:
-     SELECT COUNT(*) FROM segment_impacts si
-     JOIN item_topics it ON si.item_id = it.item_id
-     WHERE si.segment = $1 AND it.topic_id = $2
-     AND si.published_date >= NOW() - INTERVAL '30 days'
+     SELECT COUNT(*) FROM item_categories ic
+     JOIN regulatory_items ri ON ic.item_id = ri.id
+     WHERE ic.category_id = $1
+     AND ri.published_date >= NOW() - INTERVAL '30 days'
 
   b) Compare current 30-day count to previous 30-day count:
      trend_direction = current > prev * 1.3 ? 'rising'
                      : current < prev * 0.7 ? 'declining'
                      : 'stable'
 
-  c) Compute avg_relevance:
-     Map relevance enum to numeric: critical=4, high=3, medium=2, low=1, none=0
-     Average across items in the window
-
   d) Generate trend_summary (Gemini Flash):
      "Identity testing enforcement is rising in supplements: 8 items in
      the last 30 days vs. 3 in the prior period. Recent warning letters
      cite 21 CFR 111.70 specifically."
 
-  e) UPSERT into trend_signals on (segment, topic_id, period_start, period_end)
+  e) UPSERT into trend_signals on (category_id, period_start, period_end)
 
   Run: nightly for incremental, after backfill for initial load.
 

@@ -57,11 +57,11 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 
 | Provider | Model | Purpose | Why This Provider |
 |----------|-------|---------|-------------------|
-| **Google Gemini** | gemini-2.5-flash / gemini-2.5-pro | Data processing: enrichment, summarization, segment classification, topic tagging. Flash for simple classification, Pro for nuanced regulatory analysis. **Pro + thinking (budget: 4096)** also used for cross-reference inference (Step 1c) — reasoning about cross-segment risk transfer. | Cost-effective, large context window. Vercel AI SDK makes it easy to route by complexity. |
+| **Google Gemini** | gemini-2.5-flash / gemini-2.5-pro | Data processing: enrichment, summarization, product category classification, topic tagging. Flash for simple classification, Pro for nuanced regulatory analysis. **Pro + thinking (budget: 4096)** also used for cross-reference inference (Step 1c) — reasoning about cross-category risk transfer. | Cost-effective, large context window. Vercel AI SDK makes it easy to route by complexity. |
 | **OpenAI** | text-embedding-3-small | Embeddings for semantic search (pgvector) | Best-in-class embeddings, well-supported in pgvector ecosystem. |
 | **Anthropic** | claude-sonnet-4-6 | Writing: email intelligence content, AI search answers, editorial voice, **Clawdbot content drafting** (blog posts, roundups) | Best writing quality. The intelligence email IS the product — writing quality matters most here. Clawdbot uses Sonnet via OpenClaw gateway. |
 
-**Note on Gemini model selection:** Not everything in the pipeline is simple classification. Extracting accurate action items from a 50-page Federal Register rule requires real comprehension. Use Flash for high-volume/simple tasks (segment tagging, topic classification) and Pro for tasks requiring deeper understanding (impact analysis, action item extraction, cross-reference inference). Pro with thinking (Step 1c) gets a 4096-token thinking budget — the model needs to reason about exposure routes, regulatory precedent, and the nature of the concern before deciding whether to expand to additional segments. Vercel AI SDK makes routing between models trivial.
+**Note on Gemini model selection:** Not everything in the pipeline is simple classification. Extracting accurate action items from a 50-page Federal Register rule requires real comprehension. Use Flash for high-volume/simple tasks (product category tagging, topic classification) and Pro for tasks requiring deeper understanding (impact analysis, action item extraction, cross-reference inference). Pro with thinking (Step 1c) gets a 4096-token thinking budget — the model needs to reason about exposure routes, regulatory precedent, and the nature of the concern before deciding whether to expand to additional product categories. Vercel AI SDK makes routing between models trivial.
 
 **DO NOT change model names or providers without explicit authorization.**
 
@@ -125,7 +125,7 @@ NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 
 | Model | Provider | Purpose | Cost |
 |-------|----------|---------|------|
-| gemini-2.5-flash | Google | High-volume: segment tagging, topic classification, simple summarization | ~$0.15/1M input, ~$0.60/1M output (+ thinking) |
+| gemini-2.5-flash | Google | High-volume: product category tagging, topic classification, simple summarization | ~$0.15/1M input, ~$0.60/1M output (+ thinking) |
 | gemini-2.5-pro | Google | Complex: impact analysis, action item extraction, regulatory nuance | ~$1.25/1M input, ~$10/1M output (+ thinking) |
 | text-embedding-3-small | OpenAI | Semantic search embeddings (1536d, pgvector) | ~$0.02/1M tokens |
 | claude-sonnet-4-6 | Anthropic | Email intelligence writing, AI search synthesis | ~$3/1M input, ~$15/1M output |

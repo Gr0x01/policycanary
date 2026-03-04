@@ -23,20 +23,15 @@ gets an email, needs to research something, logs in.
 
 PAGE 1: REGULATORY FEED (src/app/(app)/feed/page.tsx)
 
-  The main page after login. Shows regulatory items filtered by the user's
-  segments, sorted by date and relevance.
-
-  Query: segment_impacts WHERE segment IN (user.segments)
-    AND relevance >= 'low'
-    ORDER BY published_date DESC
-    with item_enrichments and regulatory_items joined
+  The main page after login. Shows regulatory items relevant to the user's
+  products, sorted by date and match score.
 
   Features:
-  - Filter bar: segment dropdown, relevance filter, item_type filter,
+  - Filter bar: product category filter, item_type filter,
     date range, topic filter
   - Item cards showing: title, published_date, item_type badge,
-    relevance badge (color-coded), impact_summary (first 2 lines),
-    segment tags, topic tags
+    action_type badge (color-coded), summary (first 2 lines),
+    product category tags, topic tags
   - Click → item detail page
   - Bookmark button on each card
   - Infinite scroll or pagination (50 items per page)
@@ -47,12 +42,11 @@ PAGE 1: REGULATORY FEED (src/app/(app)/feed/page.tsx)
   - Product match indicator on item cards: "Matches: Marine Collagen Powder (score: 0.8)"
 
   Default query (My Products tab):
-    SELECT ri.*, ie.summary, si.relevance, sp.product_name, pim.match_score
+    SELECT ri.*, ie.summary, ie.regulatory_action_type, sp.product_name, pim.match_score
     FROM product_item_matches pim
     JOIN subscriber_products sp ON pim.product_id = sp.id
     JOIN regulatory_items ri ON pim.item_id = ri.id
     JOIN item_enrichments ie ON ri.id = ie.item_id
-    LEFT JOIN segment_impacts si ON ri.id = si.item_id
     WHERE sp.user_id = current_user_id
     ORDER BY pim.match_score DESC, ri.published_date DESC
 
@@ -73,8 +67,8 @@ PAGE 2: ITEM DETAIL (src/app/(app)/items/[id]/page.tsx)
   Sections:
   a) Header: title, published_date, item_type, source link
   b) Summary: plain-English summary from enrichment
-  c) Impact Assessment: per-segment impact blocks
-     - Relevance badge, impact_summary, action_items, who_affected,
+  c) Impact Assessment: enrichment details
+     - Action type badge, summary, action_items,
        deadline, cited regulations
   d) Citations: claim → source quote pairs
      - quote_verified indicator
@@ -92,17 +86,17 @@ PAGE 3: ENFORCEMENT DATABASE (src/app/(app)/enforcement/page.tsx)
 
   Searchable/filterable database of enforcement actions.
 
-  Query: enforcement_details JOIN regulatory_items JOIN segment_impacts
+  Query: enforcement_details JOIN regulatory_items JOIN item_enrichments
 
   Features:
   - Table view with sortable columns:
     company_name, item_type (warning_letter/recall/import_alert),
-    violation_types, published_date, segment, relevance
-  - Filters: company search, violation type, segment, date range,
+    violation_types, published_date, regulatory_action_type
+  - Filters: company search, violation type, product category, date range,
     item_type, recall classification
   - Click → item detail page
   - Export option (CSV) for compliance teams
-  - Stats bar at top: total warning letters, recalls, by segment
+  - Stats bar at top: total warning letters, recalls, by product category
 
 PAGE 4: AI SEARCH (src/app/(app)/search/page.tsx)
 
@@ -116,14 +110,13 @@ PAGE 4: AI SEARCH (src/app/(app)/search/page.tsx)
      1. Embed the query using text-embedding-3-small (768d)
      2. pgvector similarity search on item_chunks:
         SELECT ic.content, ic.section_title, ri.title, ri.source_url,
-               ri.published_date, si.segment, si.relevance,
+               ri.published_date,
                1 - (ic.embedding <=> $1) AS similarity
         FROM item_chunks ic
         JOIN regulatory_items ri ON ic.item_id = ri.id
-        LEFT JOIN segment_impacts si ON ic.segment_impact_id = si.id
         WHERE 1 - (ic.embedding <=> $1) > 0.7
         ORDER BY similarity DESC LIMIT 10
-     3. Filter by user's segments (Pro) or all (All Access)
+     3. Filter by user's product categories (Pro) or all (All Access)
      4. Pass retrieved chunks + query to Claude Sonnet:
         "Answer the following question using ONLY the provided sources.
          Cite each claim with [Source N]. If you cannot answer from the
@@ -147,7 +140,7 @@ PAGE 5: TRENDS (src/app/(app)/trends/page.tsx)
   Visualization of trend_signals data.
 
   Features:
-  - Segment selector
+  - Category/sector selector
   - Rising topics: cards showing topic_label, item_count, trend_direction,
     period, trend_summary
   - Comparison: current period vs previous period counts
@@ -159,7 +152,7 @@ PAGE 6: BOOKMARKS (src/app/(app)/bookmarks/page.tsx)
 
   Simple list of bookmarked items.
 
-  Query: user_bookmarks JOIN regulatory_items JOIN segment_impacts
+  Query: user_bookmarks JOIN regulatory_items JOIN item_enrichments
   Sorted by bookmark date DESC.
 
   Features:
@@ -174,8 +167,8 @@ SHARED COMPONENTS:
                             # Links: Feed, Products, Enforcement*, Search*, Trends*, Bookmarks
                             # (* = Monitor+Research only)
     ItemCard.tsx            # Regulatory item card (used in feed, bookmarks)
-    RelevanceBadge.tsx      # Color-coded relevance indicator
-    SegmentBadge.tsx        # Segment tag
+    ActionTypeBadge.tsx     # Color-coded regulatory action type indicator
+    CategoryBadge.tsx       # Product category tag
     TopicTag.tsx            # Topic tag with link
     FilterBar.tsx           # Shared filter controls
     SearchInput.tsx         # Search input with streaming support
@@ -194,14 +187,14 @@ ACCOUNT SETTINGS:
   "You're monitoring X products. Your plan includes 5; you're paying for X extra."
 
 ACCEPTANCE CRITERIA:
-- [ ] Feed page loads items filtered by user's segments
-- [ ] All filters work (segment, relevance, type, date, topic)
+- [ ] Feed page loads items matched to user's products
+- [ ] All filters work (product category, type, date, topic)
 - [ ] Item detail page shows all enrichment data
 - [ ] Citations display with verified/unverified indicators
 - [ ] Related items show cross-references
 - [ ] Enforcement database is searchable and filterable
 - [ ] AI search returns sourced answers via streaming
-- [ ] Search respects segment access (Pro vs All Access)
+- [ ] Search respects access level (Pro vs All Access)
 - [ ] Trends page shows rising topics with context
 - [ ] Bookmarks work (add/remove/list)
 - [ ] All pages are responsive
@@ -234,7 +227,7 @@ SUBAGENTS:
 ### Gotchas
 - **pgvector query performance:** Ensure HNSW index exists before this phase. Without it, similarity search scans the full table. With 10K+ chunks, this is unacceptably slow.
 - **Streaming search responses:** Use Vercel AI SDK `streamText()` with the `useChat()` hook on the client. This gives real-time response rendering.
-- **Segment access control:** Pro users see only their subscribed segments. All Access sees everything. This filtering must happen server-side, not client-side.
+- **Access control:** Product-matched items are user-scoped. General feed items are public. This filtering must happen server-side, not client-side.
 - **SQL injection in search/filter:** Use parameterized queries ONLY. Never interpolate user input into SQL.
 - **Feed pagination:** Use cursor-based pagination (last item's published_date + id), not OFFSET. OFFSET gets slower as pages increase.
 - **Enforcement export:** CSV export should be server-rendered to avoid large client-side data transfers.

@@ -17,7 +17,7 @@ WHAT TO READ FIRST:
 - Phase 4B product onboarding — ingredient_normalized field
 
 WHY THIS MATTERS:
-Segments tell us "this affects supplement companies." Products tell us "this
+Product categories tell us "this affects protein powder manufacturers." Products tell us "this
 affects YOUR Marine Collagen Powder because it contains whey protein isolate."
 The matching engine bridges enrichment data to subscriber products.
 
@@ -29,7 +29,7 @@ File: src/pipeline/matching/matcher.ts
   Algorithm:
   1. Fetch affected_ingredients from item_enrichments WHERE item_id = itemId
      Also fetch affected_product_types for pre-filtering
-     Also fetch item relevance from segment_impacts for urgent alert logic
+     Also fetch regulatory_action_type from item_enrichments for urgent alert logic
   2. Fetch all subscriber products with their normalized ingredients:
      SELECT sp.id, sp.user_id, sp.product_name, sp.product_type,
             pi.ingredient_normalized
@@ -83,7 +83,7 @@ URGENT ALERT TRIGGER:
 
   After inserting matches, for each match where:
   - match_score > 0.5 (strong ingredient match)
-  - item relevance = 'critical' (from segment_impacts, any segment)
+  - regulatory_action_type IN ('recall', 'ban_restriction', 'safety_alert') (from item_enrichments)
   Call: sendUrgentAlert(item, subscriber) from the email system (Phase 5)
 
   This is fire-and-forget — catch errors, log them, do not block enrichment.
@@ -103,7 +103,7 @@ ACCEPTANCE CRITERIA:
 - [ ] Match scores computed correctly (ratio of matched/total affected)
 - [ ] Product type pre-filter works (supplement products skip food-only items)
 - [ ] Only matches above 0.1 threshold are stored
-- [ ] Urgent alert triggered for critical + high-score matches
+- [ ] Urgent alert triggered for high-priority action type + high-score matches
 - [ ] product_item_matches table is populated correctly after enrichment
 - [ ] Errors in matching don't crash the enrichment pipeline
 
