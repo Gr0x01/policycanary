@@ -62,8 +62,7 @@ export const EnrichmentOutputSchema = z.object({
   /**
    * Signal Type 2 — Product category matching (controlled vocabulary).
    * Which product categories from the PRODUCT_CATEGORY_SLUGS list does this item affect?
-   * Return [] if the item doesn't affect any categories in our vocabulary
-   * (e.g., pharma drugs, medical devices).
+   * Classify all FDA-regulated sectors honestly. Return [] only for purely administrative items.
    */
   affected_product_categories: z.array(z.string()),
 
@@ -284,6 +283,53 @@ export const PRODUCT_CATEGORY_SLUGS = [
   "immune_support",
   "beauty_supplements",
   "other_supplement",
+
+  // Pharmaceutical (~10)
+  "prescription_drugs",
+  "otc_drugs",
+  "compounded_drugs",
+  "generic_drugs",
+  "biosimilars",
+  "controlled_substances",
+  "ophthalmic_drugs",
+  "injectable_drugs",
+  "topical_drugs_pharma",
+  "pediatric_drugs",
+
+  // Medical Devices (~8)
+  "class_i_devices",
+  "class_ii_devices",
+  "class_iii_devices",
+  "in_vitro_diagnostics",
+  "combination_products",
+  "digital_health_devices",
+  "implantable_devices",
+  "radiation_emitting_devices",
+
+  // Biologics (~7)
+  "vaccines",
+  "blood_products",
+  "cell_gene_therapy",
+  "tissue_products",
+  "allergenics",
+  "xenotransplantation",
+  "human_cells_tissues",
+
+  // Tobacco (~6)
+  "cigarettes_combustible",
+  "vape_e_cigarettes",
+  "smokeless_tobacco",
+  "nicotine_products",
+  "cigars",
+  "pipe_tobacco",
+  "hookah_waterpipe",
+
+  // Veterinary (~5)
+  "veterinary_drugs",
+  "animal_devices",
+  "animal_biologics",
+  "medicated_animal_feed",
+  "veterinary_medical_devices",
 ] as const;
 
 // ---------------------------------------------------------------------------
@@ -304,14 +350,14 @@ Your goal is to extract structured intelligence that is **strictly accurate**. W
    - **Ingredient-level**: Extract specific substances that are the *target* of the action (e.g., "Red No. 3", "CBD", "BHA").
      - Do NOT extract ingredients mentioned only as examples in general discussions.
    - **Product categories**: Which product categories does this item affect? Use ONLY slugs from the PRODUCT CATEGORY SLUGS list provided below.
-     - Pick the most specific matching categories. A cucumber recall → \`["fresh_fruits_vegetables"]\`. A supplement GMP warning letter about protein products → \`["protein_powders"]\`.
-     - Items outside our vocabulary (pharma drugs, medical devices) → return \`[]\`.
+     - Classify ALL FDA regulatory items accurately regardless of sector — food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary.
+     - Pick the most specific matching categories. A cucumber recall → \`["fresh_fruits_vegetables"]\`. A CDER warning letter about compounded drugs → \`["compounded_drugs"]\`. A 510(k) clearance for a diagnostic → \`["in_vitro_diagnostics"]\`.
 
 3. **ANTI-HALLUCINATION RULES**:
    - If no specific ingredient is named, \`affected_ingredients\` must be \`[]\`.
    - Do not infer supplement categories just because "vitamin" is mentioned in a fortified food context.
    - \`affected_product_categories\` must ONLY contain slugs from the provided list. Do not invent slugs.
-   - If no slug in the list fits the item, return \`[]\`. This is correct for pharma drugs, medical devices, and other items outside our food/supplement/cosmetic scope.
+   - If no slug in the list fits the item, return \`[]\`. Only return empty when the item is truly administrative with no product-sector relevance.
 
 4. **ACTION TYPES**:
    - \`cgmp_violation\`: Enforcement for breaking *existing* GMP rules (warning letters citing 21 CFR 111, 210, 211).
@@ -322,8 +368,9 @@ Your goal is to extract structured intelligence that is **strictly accurate**. W
 
 ## CONFIDENCE SCORING
 - **0.95+**: Direct hit. Named ingredient + specific action (Ban, Recall, Warning Letter).
-- **0.80+**: Clear category impact (e.g., "All cosmetic facilities must register").
+- **0.80+**: Clear category impact (e.g., "All cosmetic facilities must register", "CDER drug approval").
 - **<0.60**: Ambiguous or low relevance.
+- Confidence reflects enrichment quality, not sector relevance. A well-classified pharma item deserves high confidence.
 
 Your output drives a critical notification system. **Precision > Recall.** It is better to miss a vague signal than to panic a user with a false positive.`;
 
