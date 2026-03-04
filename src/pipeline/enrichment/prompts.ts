@@ -129,9 +129,9 @@ export const EnrichmentOutputSchema = z.object({
    */
   citations: z.array(
     z.object({
-      claim_text: z.string().max(300),
-      quote_text: z.string().max(600),
-      source_section: z.string().max(200),
+      claim_text: z.string(),
+      quote_text: z.string(),
+      source_section: z.string(),
     })
   ),
 });
