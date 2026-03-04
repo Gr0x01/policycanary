@@ -150,6 +150,9 @@ secondary. See `tests/golden/fixtures.ts` for the quality target.
 - **Admin client** — use `src/lib/supabase/admin.ts` (service role) for all pipeline ops and server-side content queries; never in browser code
 - **API key auth** — machine-to-machine routes (e.g., `/api/blog`) use `X-API-Key` header + `crypto.timingSafeEqual` comparison. Pattern: check key exists in env (500 if missing), then timing-safe compare (401 if wrong). See `src/app/api/blog/route.ts`.
 - **API response envelope** — `{ data, error: null }` on success, `{ error: { message } }` on failure. Consistent across `/api/signup` and `/api/blog`.
+- **Stripe client** — `src/lib/stripe/index.ts`, lazy `getStripe()` singleton (NOT eager like `adminClient`). Stripe env vars may not exist at build time.
+- **Stripe webhook pattern** — read raw body with `request.text()` FIRST, verify signature with `constructEvent()`, always return 200 after verification (even if DB write fails). See `src/app/api/stripe/webhook/route.ts`.
+- **Stripe checkout pattern** — auth required, get-or-create customer (unique constraint prevents duplicates), guard against double-subscription, try/catch around Stripe API calls. See `src/app/api/stripe/checkout/route.ts`.
 
 ### Key Tables (v1 Schema — 25 tables, 9 layers)
 
@@ -164,8 +167,11 @@ secondary. See `tests/golden/fixtures.ts` for the quality target.
 **Layer 9 — Matching**: `product_matches` (THE money table — item × subscriber product)
 **Standalone — Blog**: `blog_posts` (slug unique, category CHECK, status draft/published, RLS public read for published)
 
+**users table Stripe columns**: `stripe_customer_id` (TEXT, UNIQUE), `stripe_subscription_id` (TEXT), `access_level` (TEXT CHECK 'free'|'monitor'|'monitor_research', default 'free'), `max_products` (INT, default 1), `trial_ends_at` (TIMESTAMPTZ)
+
 Full schema: `supabase/migrations/001_initial_schema.sql`
 Blog schema: `supabase/migrations/003_blog_posts.sql` (applied via Supabase MCP)
+Stripe schema: `supabase/migrations/004_add_stripe_subscription_id_and_customer_unique.sql` (applied via Supabase MCP)
 TypeScript types: `src/types/database.ts`, `src/lib/blog/types.ts` (blog-specific)
 
 ### Supabase Specifics
@@ -185,7 +191,9 @@ NEXT_PUBLIC_SUPABASE_URL  — Supabase project URL
 GOOGLE_GENERATIVE_AI_API_KEY — Gemini enrichment
 OPENAI_API_KEY            — embeddings
 ANTHROPIC_API_KEY         — Claude writing
-STRIPE_SECRET_KEY         — payments (Phase 4B)
-STRIPE_WEBHOOK_SECRET     — Stripe webhook verification (Phase 4B)
+STRIPE_SECRET_KEY         — payments
+STRIPE_WEBHOOK_SECRET     — Stripe webhook verification
+STRIPE_PRICE_MONITOR      — Stripe Price ID for Monitor tier ($99/mo)
+STRIPE_PRICE_EXTRA_PRODUCT — Stripe Price ID for per-product overage ($6/mo, deferred)
 RESEND_API_KEY            — email delivery
 ```

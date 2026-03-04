@@ -3,6 +3,8 @@
 **Complexity:** Medium-High | **Sessions:** 2 | **Dependencies:** Phase 1, Phase 3
 **Purpose:** Add Supabase Auth, Stripe checkout, webhook handling, and route protection. Connect email_subscribers to users on upgrade.
 
+**STATUS:** Phase 4A (Auth) COMPLETE. Phase 4B (Stripe Subscriptions) COMPLETE. Stripe Dashboard setup needed (manual).
+
 ### Session Brief
 
 ```
@@ -130,18 +132,22 @@ COMPONENT 4: ACCOUNT PAGES
     Sidebar navigation, user menu, plan badge
 
 ACCEPTANCE CRITERIA:
-- [ ] Users can sign up with email/password
-- [ ] Users table is populated on signup
-- [ ] Existing email_subscribers are linked on signup
-- [ ] Stripe checkout creates subscriptions with 14-day trial
-- [ ] Webhook correctly updates subscription_tier on payment events
-- [ ] Webhook verifies Stripe signature
-- [ ] Middleware protects /app/* routes
-- [ ] Free users see limited content
-- [ ] Monitor users access /app/products and /app/feed
-- [ ] Monitor+Research users access /app/search, /app/enforcement, /app/trends
-- [ ] Stripe customer portal works for subscription management
-- [ ] Auth session persists across page reloads
+- [x] Users can sign up with magic link (email/OTP)
+- [x] Users table is populated on signup (via auth/callback upsert)
+- [x] Existing email_subscribers are linked on checkout (webhook matches by email)
+- [x] Stripe checkout creates subscriptions with 14-day trial
+- [x] Webhook correctly updates access_level on payment events
+- [x] Webhook verifies Stripe signature
+- [x] Proxy (middleware) protects /app/* routes
+- [ ] Free users see limited content (UI gating not yet implemented)
+- [ ] Monitor users access /app/products and /app/feed (product onboarding Phase 4C)
+- [ ] Monitor+Research users access /app/search, /app/enforcement, /app/trends (deferred — coming soon)
+- [x] Stripe customer portal works for subscription management
+- [x] Auth session persists across page reloads
+- [x] PricingTable updated ($99 Monitor, $399 Research coming soon)
+- [x] AppNav shows Upgrade/Manage Billing based on access_level
+- [x] Login next=checkout flow works (unauthenticated → login → auto-checkout)
+- [x] Triple code-reviewed (4 critical + 9 warning fixes applied)
 
 SUBAGENTS:
 - During: backend-architect for auth flow review

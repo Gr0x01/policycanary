@@ -829,10 +829,11 @@ Authenticated accounts managed by Supabase Auth. A user may or may not also be a
 | id | UUID | PK | Matches Supabase auth.users.id |
 | email | TEXT | UNIQUE, NOT NULL | |
 | name | TEXT | | |
-| stripe_customer_id | TEXT | UNIQUE | |
-| access_level | TEXT | NOT NULL, DEFAULT 'monitor', CHECK (access_level IN ('free', 'monitor', 'monitor_research')) | Determines feature access |
+| stripe_customer_id | TEXT | UNIQUE | Stripe customer ID. Set on first checkout. |
+| stripe_subscription_id | TEXT | | Active Stripe subscription ID. Set by webhook, cleared on deletion. |
+| access_level | TEXT | NOT NULL, DEFAULT 'free', CHECK (access_level IN ('free', 'monitor', 'monitor_research')) | Determines feature access |
 | max_products | INT | NOT NULL, DEFAULT 1 | Product limit for current plan. Free=1, Monitor base=5, scales with billing. |
-| trial_ends_at | TIMESTAMPTZ | | Null if no active trial or trial expired |
+| trial_ends_at | TIMESTAMPTZ | | Read from Stripe subscription.trial_end. Null if no active trial. |
 | created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
 | updated_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | moddatetime trigger |
 
@@ -843,8 +844,10 @@ Authenticated accounts managed by Supabase Auth. A user may or may not also be a
 
 **Design notes:**
 - `id` is the same UUID as Supabase auth.users.id. Do NOT use gen_random_uuid() -- this is set by Supabase Auth on signup.
-- `access_level` replaces the old subscription_tier. Maps to pricing: free = post-trial free tier (1 product), monitor = $49/mo base, monitor_research = $249/mo base.
-- `max_products` is updated by Stripe webhook when billing changes. The app checks this before allowing product creation.
+- `access_level` replaces the old subscription_tier. Maps to pricing: free = post-trial free tier (1 product), monitor = $99/mo base, monitor_research = $399/mo base (coming soon).
+- `stripe_subscription_id` enables server-side subscription management (cancel, pause, quantity updates). Set by `checkout.session.completed` and `customer.subscription.updated` webhooks, cleared on `customer.subscription.deleted`.
+- `max_products` is set to 5 on free→paid transition only (not overwritten on every subscription update, to preserve custom overrides). The app checks this before allowing product creation.
+- `trial_ends_at` is read from Stripe's authoritative `subscription.trial_end`, not hardcoded.
 - No segments column on users. Segments are derived from the subscriber's products (a user with supplement products gets supplement intelligence).
 
 ---

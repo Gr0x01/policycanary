@@ -8,8 +8,8 @@ status: Active
 
 # Active Development Context
 
-**Phase:** Blog section shipped — content marketing funnel live. Cross-reference inference layer built.
-**Next up:** Re-run GSRS bootstrap (captures codes), re-enrich existing items, then Phase 4B (Stripe)
+**Phase:** Stripe subscriptions shipped (Phase 4B). Auth, blog, enrichment, cross-reference all complete.
+**Next up:** Stripe Dashboard setup (manual), re-run GSRS bootstrap (captures codes), re-enrich existing items
 
 ---
 
@@ -51,10 +51,23 @@ status: Active
 - [x] **Migration** — `003_blog_posts` (table, indexes, RLS public read, updated_at trigger)
 - [x] **Code-reviewed** — JSON-LD injection fix, timing-safe key comparison, type-safe query projections (`BlogPostSummary`/`BlogPostRSS`), RSS null guard, content max length
 
+### What's Done (Phase 4B: Stripe Subscriptions)
+- [x] **Stripe client** — `src/lib/stripe/index.ts`, lazy `getStripe()` singleton (avoids build-time crash when env vars missing)
+- [x] **Checkout route** — POST `/api/stripe/checkout`, auth required, get-or-create Stripe customer, 14-day trial, guards against double-subscription and duplicate customers (unique constraint + conflict handling)
+- [x] **Webhook handler** — POST `/api/stripe/webhook`, signature verification, 4 events: checkout.session.completed (upgrade + link email_subscribers), subscription.updated (active/trialing/past_due = monitor, else = free), subscription.deleted (reset), invoice.payment_failed (log only). `resolveCustomerId()` type-safe helper. `trial_ends_at` from Stripe's authoritative `subscription.trial_end`. `stripe_subscription_id` stored.
+- [x] **Billing portal** — POST `/api/stripe/portal`, auth required, creates Stripe billing portal session
+- [x] **PricingTable** — Monitor $99/mo with CheckoutButton ("Start 14-day free trial"), Monitor+Research $399/mo (Coming Soon, disabled), Free links to `/login`
+- [x] **AppNav** — free users see amber "Upgrade" button → `/pricing`, paid users see "Manage Billing" link. `hasSubscription` derived from `access_level`, not `stripe_customer_id`.
+- [x] **Login next=checkout flow** — `?next` param passed through auth callback (allowlisted), redirects to `/app/feed?checkout=start`, AutoCheckout component auto-fires checkout POST
+- [x] **Client components** — `CheckoutButton` (marketing), `BillingButton` (app), `AutoCheckout` (app) — all with error states
+- [x] **App layout** — fetches `access_level`, `max_products`, `stripe_customer_id` from `public.users`, passes to AppNav
+- [x] **Migration `004`** — `stripe_subscription_id TEXT` column + `UNIQUE` constraint on `stripe_customer_id`
+- [x] **Triple code-reviewed** — code-architect, backend-architect, code-reviewer. 4 criticals + 9 warnings fixed.
+
 ### Up Next
+- [ ] **Stripe Dashboard setup (manual)** — create products + prices in Stripe test mode, configure customer portal, add webhook endpoint URL, collect env vars (`STRIPE_PRICE_MONITOR`, `STRIPE_PRICE_EXTRA_PRODUCT`)
 - [ ] **Re-run GSRS bootstrap** — reset checkpoint (`echo "" > .gsrs-checkpoint`), run `npx tsx scripts/bootstrap-gsrs.ts` to capture codes into `substance_codes` table. ~169K substances, ~500K-850K codes.
 - [ ] **Re-enrich existing items** — 422 WLs were enriched with 8K-truncated content. Now includes cross-reference inference. One pass.
-- [ ] **Phase 4B: Stripe subscriptions** — checkout, webhook, access_level update on `public.users`
 - [ ] Wire fetchers into Inngest functions (Phase 2C)
 - [ ] Product onboarding (DSLD + FDC integration)
 

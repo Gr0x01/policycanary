@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-05
 Maintainer: RB
 Status: Active
 ---
@@ -82,6 +82,8 @@ ANTHROPIC_API_KEY=your_anthropic_key              # Writing / email content
 # Payments (Required for subscriptions)
 STRIPE_SECRET_KEY=your_stripe_secret_key
 STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+STRIPE_PRICE_MONITOR=your_stripe_price_id          # Monitor tier ($99/mo)
+STRIPE_PRICE_EXTRA_PRODUCT=your_stripe_price_id     # Per-product overage ($6/mo, deferred to Phase 4C)
 
 # Email (Required for digest delivery)
 RESEND_API_KEY=your_resend_key  # or POSTMARK_SERVER_TOKEN

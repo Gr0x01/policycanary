@@ -8,16 +8,16 @@ Status: Active
 
 ## Current State
 
-- **Status**: Blog section shipped — `/blog`, `/blog/[slug]`, RSS feed, Clawdbot API. Cross-reference inference layer built. Type-check clean.
+- **Status**: Stripe subscriptions shipped (Phase 4B). Blog section, cross-reference inference layer, auth all complete. Type-check clean.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Next**: Re-run GSRS bootstrap (codes), re-enrich existing items, then Phase 4B (Stripe)
+- **Next**: Stripe Dashboard setup (manual), re-run GSRS bootstrap, re-enrich existing items, then Phase 2C (Inngest) or Phase 4C (product onboarding)
 
 ---
 
 ## What's Happening
 
-Blog section shipped. SEO-ready `/blog` index (category filter, ISR), `/blog/[slug]` detail pages (JSON-LD, OG tags), RSS feed at `/blog/feed.xml`, and POST API at `/api/blog` for Clawdbot (API key auth, upsert on slug, `published_at` preservation). Migration `003_blog_posts` applied. `BLOG_API_KEY` env var required. Cross-reference inference layer built (Steps 1b + 1c). **GSRS bootstrap must be re-run** to capture codes. Then re-enrich 422 WLs.
+Stripe subscriptions (Phase 4B) shipped. Checkout flow with 14-day trial, webhook handler (checkout.completed, subscription.updated/deleted, invoice.payment_failed), billing portal, PricingTable updated ($99 Monitor, $399 Research coming soon). Triple code-reviewed (code-architect, backend-architect, code-reviewer) — 4 criticals + 9 warnings fixed. Migration `004` applied (stripe_subscription_id + unique constraint on stripe_customer_id). **Stripe Dashboard setup needed** before testing (products, prices, webhook endpoint, customer portal). **GSRS bootstrap must be re-run** to capture codes. Then re-enrich 422 WLs.
 
 ---
 
@@ -88,9 +88,10 @@ npx tsx scripts/bootstrap-gsrs.ts      # Seed 169K FDA substances (run once)
 - [x] **Enrichment pipeline (Phase 2B)** — stabilized. Content-fetch, prompt fixes, golden tests 10/10.
 - [x] **Cross-reference inference layer** — Steps 1b + 1c built. Schema migration applied. Type-check clean. GSRS bootstrap updated. KEY DIFFERENTIATOR.
 - [x] **Blog section** — `/blog`, `/blog/[slug]`, RSS feed, Clawdbot POST API. Migration `003_blog_posts`. Code-reviewed (3 critical + 4 warning fixes applied).
+- [x] **Stripe subscriptions (Phase 4B)** — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed. Migration `004`. Stripe Dashboard setup needed.
+- [ ] Stripe Dashboard setup (manual — products, prices, webhook, portal config)
 - [ ] Re-run GSRS bootstrap (captures codes into `substance_codes`)
 - [ ] Re-enrich existing 422 WLs (with cross-reference, one pass)
-- [ ] Stripe subscriptions (Phase 4B)
 - [ ] Wire fetchers into Inngest (Phase 2C)
 - [ ] Product onboarding (DSLD + FDC integration)
 - [ ] Product intelligence email MVP
@@ -130,6 +131,8 @@ NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 # Payments
 STRIPE_SECRET_KEY=...
 STRIPE_WEBHOOK_SECRET=...
+STRIPE_PRICE_MONITOR=...         # Stripe Price ID for Monitor tier ($99/mo)
+STRIPE_PRICE_EXTRA_PRODUCT=...   # Stripe Price ID for per-product overage ($6/mo, deferred)
 ```
 
 ---

@@ -74,7 +74,10 @@ src/
     api/
       blog/route.ts       — Clawdbot POST endpoint (API key auth, upsert on slug) [Blog]
       inngest/route.ts    — Inngest serve handler (EXISTING — add functions here)
-      webhooks/           — Stripe + Resend webhook handlers [Phase 4]
+      stripe/
+        checkout/route.ts — Stripe Checkout Session creation (auth required) [Phase 4B]
+        webhook/route.ts  — Stripe webhook handler (signature verified) [Phase 4B]
+        portal/route.ts   — Stripe billing portal session (auth required) [Phase 4B]
     globals.css           — @import "tailwindcss"; only (brand tokens added by brand-guardian)
     layout.tsx            — Root layout
     page.tsx              — Placeholder "coming soon"
@@ -103,7 +106,8 @@ src/
       deliver/            — Email generation and dispatch
     repositories/         — Database access layer (one file per entity) [Phase 2]
     services/             — Single-purpose business logic services [Phase 2]
-    stripe/               — Stripe client and billing utilities [Phase 4]
+    stripe/
+      index.ts            — Lazy getStripe() singleton, server-only (BUILT)
   emails/                 — React Email templates [Phase 2D]
     ProductIntelligence.tsx
     WeeklyUpdate.tsx
@@ -115,6 +119,7 @@ src/
 supabase/
   migrations/001_initial_schema.sql  — Full v1 schema (EXISTING — apply with supabase db push)
   migrations/003_blog_posts.sql      — Blog posts table (applied via Supabase MCP)
+  migrations/004_add_stripe_subscription_id_and_customer_unique.sql — stripe_subscription_id + unique constraint (applied via Supabase MCP)
   seeds/001_sources.sql              — 9 sources + regulatory_categories (EXISTING)
 
 scripts/                — Standalone scripts excluded from tsconfig — run with npx tsx

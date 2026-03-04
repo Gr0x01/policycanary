@@ -48,6 +48,10 @@ src/app/blog/feed.xml/route.ts                   — RSS 2.0 feed, raw XML respo
 src/components/blog/PostCard.tsx                 — server component, category badge + date + excerpt card (BUILT)
 src/components/blog/CategoryFilter.tsx           — 'use client' category pill filter, useSearchParams + URLSearchParams (BUILT)
 src/components/blog/MarkdownContent.tsx          — 'use client' react-markdown + remark-gfm, Tailwind arbitrary variant styling for h2/h3/p/ul/ol/a/blockquote/code/table (BUILT)
+src/components/marketing/CheckoutButton.tsx      — 'use client' Stripe checkout trigger, POST to /api/stripe/checkout, 401→login redirect, error state (BUILT)
+src/components/app/BillingButton.tsx             — 'use client' Stripe portal trigger, POST to /api/stripe/portal, error state (BUILT)
+src/components/app/AutoCheckout.tsx              — 'use client' detects ?checkout=start, auto-fires checkout POST on mount (BUILT)
+src/components/app/AppNav.tsx                    — server component, dark header bar, logo, NavLinks, email, Upgrade/Manage Billing, sign out (BUILT)
 src/app/dashboard/layout.tsx                     — sidebar + main content shell [to build]
 src/app/dashboard/page.tsx                       — product-filtered regulatory feed [to build]
 src/components/RegulatoryCard.tsx                — core regulatory item component [to build]

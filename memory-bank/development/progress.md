@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-05
 Maintainer: RB
-Status: Active — Blog section shipped, cross-reference inference layer built
+Status: Active — Stripe subscriptions shipped (Phase 4B), blog + auth + enrichment complete
 ---
 
 # Progress: Policy Canary
@@ -26,7 +26,7 @@ Status: Active — Blog section shipped, cross-reference inference layer built
 | **Homepage Visual Overhaul** | **2026-03-03** | **Done — light theme, two-column hero, stagger animations** |
 | **Auth: Magic Link (Phase 4A)** | **2026-03-03** | **Done — verified end-to-end. Magic link → PKCE exchange → public.users upsert → dashboard.** |
 | **Web App MVP (Phase 6)** | **2026-03-03** | **Done — feed, item detail, search API (RAG), products. Mock data layer with USE_MOCK flag.** |
-| Stripe Subscriptions (Phase 4B) | - | Pending |
+| **Stripe Subscriptions (Phase 4B)** | **2026-03-05** | **Shipped — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed (4 critical + 9 warning fixes). Migration `004`. Stripe Dashboard setup needed.** |
 | **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed.** |
 | **Cross-Reference Inference Layer** | **2026-03-04** | **Built — Steps 1b + 1c. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap re-run needed.** |
 | **Blog Section** | **2026-03-05** | **Shipped — /blog, /blog/[slug], RSS feed, Clawdbot POST API. Migration 003_blog_posts. Code-reviewed (3 critical + 4 warning fixes). react-markdown + remark-gfm added.** |
@@ -184,6 +184,28 @@ Status: Active — Blog section shipped, cross-reference inference layer built
 - **Products** (`/app/products`) — grouped by status (urgent/review/clear). `ProductStatusCard` component, empty state.
 - **Mock data** (`src/lib/mock/app-data.ts`) — `USE_MOCK` flag pattern: one-line swap from mock to real Supabase queries when enrichment pipeline is live.
 - Commits: `b9122b6` through `b5543f6`.
+
+### 2026-03-05 — Phase 4B: Stripe Subscriptions
+
+- **Stripe client** (`src/lib/stripe/index.ts`) — lazy `getStripe()` singleton. NOT eager like `adminClient` — Stripe env vars may not exist at build time.
+- **Checkout route** (`/api/stripe/checkout`) — POST, auth required. Get-or-create Stripe customer (unique constraint prevents duplicates). `trial_period_days: 14`, `allow_promotion_codes: true`, `metadata: { userId }`. Guards: already-subscribed check, price ID validation before customer create, email non-null assertion, try/catch around Stripe API calls.
+- **Webhook handler** (`/api/stripe/webhook`) — POST, signature verification. Handles 4 events:
+  - `checkout.session.completed` — sets `access_level='monitor'`, `max_products=5`, stores `stripe_customer_id` + `stripe_subscription_id`, reads `trial_end` from Stripe subscription (not hardcoded), links `email_subscribers` by email match.
+  - `customer.subscription.updated` — active/trialing/past_due = keep monitor access (past_due: Stripe handles dunning). `max_products` only set on free→paid transition. Else downgrade to free.
+  - `customer.subscription.deleted` — reset to free, clear `stripe_subscription_id`.
+  - `invoice.payment_failed` — log with event ID only (Stripe handles dunning emails).
+  - `resolveCustomerId()` helper handles `string | Customer | DeletedCustomer` union safely.
+  - Always returns 200 after signature verification (even on DB errors).
+- **Billing portal** (`/api/stripe/portal`) — POST, auth required, try/catch around Stripe API call.
+- **PricingTable** — Monitor $99/mo (CheckoutButton: "Start 14-day free trial"), Monitor+Research $399/mo (Coming Soon badge, disabled CTA), Free links to `/login`.
+- **AppNav** — free users see amber "Upgrade" → `/pricing`, paid users see "Manage Billing" button. `hasSubscription` derived from `access_level`, not `stripe_customer_id` (prevents canceled users seeing wrong CTA).
+- **Login next=checkout flow** — `?next` param passed through auth callback URL. Callback allowlists valid values (prevents open redirect). `next=checkout` → `/app/feed?checkout=start`. New `AutoCheckout` component on feed page auto-fires checkout POST.
+- **Client components** — `CheckoutButton` (marketing), `BillingButton` (app), `AutoCheckout` (app). All with error state UI (not dead spinners).
+- **App layout** — fetches `access_level`, `max_products`, `stripe_customer_id` from `public.users` via `adminClient`, passes `accessLevel` + `hasSubscription` to `AppNav`.
+- **Migration `004`** (`add_stripe_subscription_id_and_customer_unique`) — `stripe_subscription_id TEXT` column on users + `UNIQUE` constraint on `stripe_customer_id`.
+- **Dependencies** — `stripe` npm package added.
+- **Triple code-reviewed** — code-architect, backend-architect, code-reviewer. 4 criticals fixed: (1) dead checkout=start flow, (2) hardcoded trial_ends_at, (3) race condition on customer create, (4) no stripe_subscription_id stored. 9 warnings fixed: hasSubscription logic, type guards, past_due handling, error checks, double-sub guard, client error states, non-null assertions, try/catch, max_products overwrite.
+- **Build clean.** `npm run type-check` + `npm run build` pass.
 
 ### 2026-03-05 — Blog Section + Clawdbot Write Path
 
