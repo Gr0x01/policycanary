@@ -46,10 +46,15 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **Federal Register**: JSON API → parse → enrich with LLM → store
 - **FDA.gov**: Structured pages / scraping → parse → enrich → store
 - **XML parsing**: **`fast-xml-parser`** — used by the RSS fetcher to parse FDA RSS feeds in Node.js (no DOMParser in Node)
-- **Scheduling**: **Inngest** (background jobs, pipeline orchestration, retries)
-  - `/api/inngest` route registered in Next.js
-  - `INNGEST_SIGNING_KEY` required in env
-  - Run dev server: `npx inngest-cli@latest dev`
+- **Scheduling**: **Inngest v3** (background jobs, pipeline orchestration, retries)
+  - `/api/inngest` route serves both functions
+  - `daily-ingest` — cron `0 6,18 * * *` (6 AM + 6 PM UTC). 4 fetchers in parallel (`Promise.all`) + enrichment (limit: 100). Catch-everything error handling per step.
+  - `enrich-batch` — event `pipeline/enrich.requested`. On-demand enrichment, limit clamped 1-200.
+  - Concurrency: `{ limit: 1 }` on both functions (no overlapping runs)
+  - Client: `src/lib/inngest/client.ts` with typed `Events` schema
+  - Functions: `src/lib/inngest/functions/{daily-ingest,enrich-batch}.ts`
+  - Env: `INNGEST_SIGNING_KEY` (Vercel prod), `INNGEST_EVENT_KEY` (external events)
+  - Local dev: `npx inngest-cli@latest dev` (dashboard at http://localhost:8288)
 
 ## LLM Architecture
 
@@ -113,6 +118,10 @@ DISCORD_CHANNEL_ALERTS=channel_id
 DISCORD_CHANNEL_CLAWDBOT=channel_id       # General chat
 CLAWDBOT_VPS_IP=vps_ip_address
 CLAWDBOT_VPS_ID=vultr_instance_id
+
+# Inngest (Pipeline scheduling)
+INNGEST_SIGNING_KEY=your_signing_key        # Required in Vercel for production
+INNGEST_EVENT_KEY=your_event_key            # Required if sending events externally
 
 # Analytics (Optional)
 NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key

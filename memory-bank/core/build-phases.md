@@ -64,9 +64,9 @@ Phase 6: Web App ─────────────────────
 **Purpose:** Build the LLM enrichment pipeline that transforms raw regulatory data into structured intelligence. This is the core product logic.
 → Session brief: `/memory-bank/core/phases/phase-2b-enrichment.md`
 
-## Phase 2C: Pipeline Orchestration
+## Phase 2C: Pipeline Orchestration — DONE (Minimal)
 **Complexity:** Medium | **Sessions:** 1 | **Dependencies:** Phase 2A-1, 2A-2, 2B
-**Purpose:** Wire all fetchers and enrichment into a single pipeline runner with scheduling, logging, backfill support, and trend signal computation.
+**Status:** Shipped — Inngest functions wired (daily-ingest cron + enrich-batch on-demand). Trend signals, backfill orchestration, GSRS monthly sync deferred.
 → Session brief: `/memory-bank/core/phases/phase-2c-orchestration.md`
 
 ## Phase 3: Marketing Site
@@ -153,10 +153,16 @@ src/
       search/route.ts                               (Phase 6)
       bookmarks/route.ts                            (Phase 6)
       products/route.ts                             (Phase 4B)
+      inngest/route.ts                              (Phase 2C — serves dailyIngest + enrichBatch)
       cron/
-        pipeline/route.ts                           (Phase 2C)
         email-weekly/route.ts                       (Phase 5)
   lib/
+    inngest/
+      client.ts                                     (Phase 2C — Inngest client + Events schema)
+      index.ts                                      (Phase 2C — barrel export)
+      functions/
+        daily-ingest.ts                             (Phase 2C — cron 0 6,18 * * *)
+        enrich-batch.ts                             (Phase 2C — event-driven enrichment)
     blog/
       types.ts                                      (Blog — BlogPost, BlogCategory, CATEGORY_LABELS)
       queries.ts                                    (Blog — getPublishedPosts, getPostBySlug, getPostsForRSS)
@@ -189,9 +195,6 @@ src/
     enums.ts                                        (Phase 1)
     api.ts                                          (Phase 1)
   pipeline/
-    orchestrator.ts                                 (Phase 2C)
-    backfill.ts                                     (Phase 2C)
-    trends.ts                                       (Phase 2C)
     fetchers/
       federal-register.ts                           (Phase 2A-1)
       openfda-enforcement.ts                        (Phase 2A-1)
@@ -242,7 +245,7 @@ src/
       BookmarkButton.tsx                            (Phase 6)
       ProductCard.tsx                               (Phase 4B)
       AddProductForm.tsx                            (Phase 4B)
-  middleware.ts                                     (Phase 4)
+  proxy.ts                                          (Phase 4 — Next.js 16 proxy, NOT middleware.ts)
 
 supabase/
   migrations/
@@ -250,6 +253,5 @@ supabase/
   seed.sql                                          (Phase 1)
 
 .env.local.example                                  (Phase 1)
-vercel.json                                         (Phase 2C)
 playwright.config.ts                                (Phase 1)
 ```

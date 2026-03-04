@@ -3,12 +3,12 @@ title: Active Development Context
 created: 2026-03-03
 last-updated: 2026-03-04
 maintainer: RB
-status: Active
+status: Active — Inngest pipeline wired. Onboarding backend next.
 ---
 
 # Active Development Context
 
-**Phase:** Session 0 complete. Full enrichment run in progress. Product onboarding planned next.
+**Phase:** Session 0 complete. Inngest pipeline wired (Phase 2C minimal). Full enrichment run in progress.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
 **Next up:** Full enrichment of all items (backfills + re-enrich), then Session 1 (onboarding backend), Session 2 (onboarding frontend)
 
@@ -94,12 +94,18 @@ status: Active
 - [ ] **Onboarding page** (`/app/onboarding`) — post-signup, skippable, uses same components
 - [ ] **Onboarding routing** — post-signup redirect, 0-products banner on feed
 
+### What's Done (Phase 2C: Inngest Pipeline Orchestration)
+- [x] **Inngest functions wired** — `daily-ingest` (cron `0 6,18 * * *`, 4 parallel fetchers + enrichment) and `enrich-batch` (event-driven, limit 1-200)
+- [x] **Error handling** — catch-everything inside each `step.run()` (Inngest v3 step failure blocks all subsequent steps). Error messages truncated to 500 chars.
+- [x] **Concurrency guards** — `{ limit: 1 }` on both functions prevents overlapping runs
+- [x] **Code-reviewed** — 2 criticals + 4 warnings fixed (error handling, limit validation, parallel fetchers, concurrency key, RSS param cleanup, error truncation)
+- [x] **RSS fetcher cleanup** — removed unused `{ mode: "poll" }` param from `fetchFdaRss()` signature
+
 #### Deferred
 - [ ] Batch/CSV import for 50+ products
 - [ ] DSLD auto-populate (search DSLD by product name)
 - [ ] USDA FDC integration
 - [ ] Product matching engine (Phase 4C — runs against product profiles)
-- [ ] Wire fetchers into Inngest (Phase 2C)
 
 ### Backfills (Running Now)
 Enrichment pipeline is ready (Session 0 complete). Running full backfills, then enriching all items in one pass.
@@ -264,12 +270,21 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 ## Pipeline File Map
 
 ```
+src/lib/inngest/
+  client.ts                         # Inngest client + Events type schema
+  index.ts                          # Barrel export for all functions
+  functions/
+    daily-ingest.ts                 # Cron 0 6,18 * * * — 4 parallel fetchers + enrichment
+    enrich-batch.ts                 # Event-driven enrichment (pipeline/enrich.requested)
+
+src/app/api/inngest/route.ts        # Inngest serve handler — registers dailyIngest + enrichBatch
+
 src/pipeline/fetchers/
   utils.ts                          # FetcherResult, parseFdaDate, dateWindowsFor, sleep, logPipelineRun, stripHtml, extractMainContent
   federal-register.ts               # FR fetcher — accepts SupabaseClient, mode, date range
   openfda-enforcement.ts            # Recall fetcher — accepts SupabaseClient, mode, date range
   warning-letters.ts                # WL fetcher — AJAX list + per-letter page scraping, MARCS extraction
-  fda-rss.ts                        # RSS fetcher — polls 8 FDA feeds via fast-xml-parser
+  fda-rss.ts                        # RSS fetcher — polls 8 FDA feeds via fast-xml-parser (no params)
   schemas/
     federal-register.ts             # Zod: FRListResponseSchema, FRDetailDocumentSchema
     openfda-enforcement.ts          # Zod: EnforcementResponseSchema

@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-05
+Last-Updated: 2026-03-04
 Maintainer: RB
 Status: Active
 ---
@@ -8,7 +8,7 @@ Status: Active
 
 ## Current State
 
-- **Status**: Session 0 complete (product categories migration + enrichment pipeline update). Full enrichment run in progress. Stripe, blog, cross-reference, auth all shipped.
+- **Status**: Session 0 complete. Inngest pipeline wired (Phase 2C). Full enrichment run in progress. Stripe, blog, cross-reference, auth all shipped.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot, weekly roundup cron
@@ -18,7 +18,7 @@ Status: Active
 
 ## What's Happening
 
-**Session 0 complete.** Product categories migration applied (82 categories seeded from MoCRA/VCRP, 21 CFR 170.3(n), DSLD). Enrichment pipeline updated to controlled vocab — golden tests 10/10. Full enrichment run in progress (backfills + re-enrich all items with current pipeline). Clawdbot live on Discord (weekly roundup cron Fridays 9 AM ET). GSRS bootstrap complete (949K codes, 96 systems, 166K substances). Cross-reference inference ready. **Next: onboarding backend (Session 1).**
+**Session 0 complete. Inngest pipeline wired (Phase 2C minimal).** Twice-daily automated pipeline — fetch new FDA data from 4 sources (parallel), enrich with LLM, generate embeddings. Plus on-demand enrichment trigger. Clawdbot live on Discord (weekly roundup cron Fridays 9 AM ET). GSRS bootstrap complete (949K codes, 96 systems, 166K substances). Cross-reference inference ready. **Next: full enrichment run, then onboarding backend (Session 1).**
 
 ---
 
@@ -59,6 +59,11 @@ npm run pipeline:enrich-test            # Enrich 5 items (quick test)
 npm run pipeline:golden                 # Validate golden fixtures (no LLM calls)
 npm run pipeline:golden-enrich          # Re-enrich + validate golden fixtures (costs tokens)
 npm run pipeline:content-fetch-test     # Debug: fetch single FDA URL, print extracted text
+
+# Inngest (automated pipeline)
+npx inngest-cli@latest dev                     # Local Inngest dev server (dashboard: http://localhost:8288)
+# daily-ingest: cron 0 6,18 * * * (6 AM + 6 PM UTC) — 4 fetchers parallel + enrichment
+# enrich-batch: send event "pipeline/enrich.requested" with { limit?, itemTypeFilter? }
 
 # One-time seeds
 npx tsx scripts/bootstrap-gsrs.ts              # Full bootstrap: 169K substances + 950K codes
@@ -109,7 +114,7 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [ ] Full enrichment run (backfills + re-enrich all items with current pipeline)
 - [ ] **Session 1: Onboarding backend** — GSRS search utility, ingredient parsing (Gemini Flash), product API routes, GSRS autocomplete
 - [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page
-- [ ] Wire fetchers into Inngest (Phase 2C)
+- [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [ ] Product intelligence email MVP
 - [ ] Validation — sample emails, trial signups
 - [ ] Launch
@@ -149,6 +154,10 @@ STRIPE_SECRET_KEY=...
 STRIPE_WEBHOOK_SECRET=...
 STRIPE_PRICE_MONITOR=...         # Stripe Price ID for Monitor tier ($99/mo)
 STRIPE_PRICE_EXTRA_PRODUCT=...   # Stripe Price ID for per-product overage ($6/mo, deferred)
+
+# Inngest
+INNGEST_SIGNING_KEY=...          # Required in Vercel for production (not needed locally)
+INNGEST_EVENT_KEY=...            # Required if sending events from outside serve handler
 
 # Vultr
 VULTR_PAT=...                    # Vultr API key for VPS management

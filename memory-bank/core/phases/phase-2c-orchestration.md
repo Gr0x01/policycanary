@@ -1,161 +1,63 @@
 # Phase 2C: Pipeline Orchestration
 
 **Complexity:** Medium | **Sessions:** 1 | **Dependencies:** Phase 2A-1, 2A-2, 2B
-**Purpose:** Wire all fetchers and enrichment into a single pipeline runner with scheduling, logging, backfill support, and trend signal computation.
+**Status:** DONE (Minimal) — Inngest functions wired, twice-daily cron, on-demand enrichment. Trend signals, backfill orchestration, and GSRS monthly sync deferred.
 
-### Session Brief
+---
 
-```
-TASK: Build the main pipeline orchestrator that runs all fetchers, triggers
-enrichment, and computes trend signals. This is the daily/weekly automation.
+## What Was Built (2026-03-04)
 
-WHAT TO READ FIRST:
-- /memory-bank/architecture/data-schema.md — pipeline_runs, trend_signals tables
-- Source code from Phase 2A and 2B (fetchers + enrichment)
+**Architecture:** Single Inngest function with `step.run()` per phase. Inngest-native cron (not Vercel Cron). Catch-everything error handling inside each step (in Inngest v3, a failed step blocks ALL subsequent steps).
 
-COMPONENT 1: MAIN ORCHESTRATOR (src/pipeline/orchestrator.ts)
+### Files Created/Modified
 
-  async function runPipeline(options: PipelineOptions): Promise<PipelineResult>
+| File | Action | Description |
+|------|--------|-------------|
+| `src/lib/inngest/client.ts` | Modified | Added `Events` type schema for `pipeline/enrich.requested` |
+| `src/lib/inngest/functions/daily-ingest.ts` | Created | Daily pipeline: 4 fetcher steps (parallel) + enrichment step |
+| `src/lib/inngest/functions/enrich-batch.ts` | Created | On-demand enrichment trigger (event-driven, limit clamped 1-200) |
+| `src/lib/inngest/index.ts` | Created | Barrel export |
+| `src/app/api/inngest/route.ts` | Modified | Registers both functions |
+| `src/pipeline/fetchers/fda-rss.ts` | Modified | Removed unused `{ mode: "poll" }` param |
 
-  Options:
-  - mode: 'incremental' | 'backfill'
-  - sources: string[] (which sources to run, default all)
-  - dateRange?: { start: Date, end: Date } (for backfill)
-  - skipEnrichment?: boolean (fetch only, enrich separately)
+### Schedule
 
-  Flow:
-  1. Create pipeline_run record with status 'running'
-  2. Run fetchers in sequence (FR → openFDA → CAERS → warning letters →
-     RSS → prop65 → cscp)
-     - Each fetcher returns {fetched, created, updated, skipped, errors}
-  3. Run enrichment on all new items (if !skipEnrichment)
-  4. Run trend signal computation (if incremental mode)
-  5. Update pipeline_run with final stats and status
-  6. Return summary
+| Function | Trigger | Schedule |
+|----------|---------|----------|
+| `daily-ingest` | Inngest cron | `0 6,18 * * *` (6 AM + 6 PM UTC = 2 AM + 2 PM ET) |
+| `enrich-batch` | Event `pipeline/enrich.requested` | On-demand |
 
-COMPONENT 2: BACKFILL STRATEGY (src/pipeline/backfill.ts)
+### Key Design Decisions
 
-  Backfill date ranges per source:
-  - Federal Register: 2020-01-01 to today, 6-month windows
-  - openFDA Enforcement: 2020-01-01 to today, 1-year windows
-  - openFDA CAERS: 2020-01-01 to today, 3-month windows
-  - Warning Letters: all records (pagination, not date-windowed)
-  - Prop 65: full CSV (one-shot)
-  - CSCP: full CSV (one-shot)
-  - RSS: current items only (no historical)
+- **Parallel fetchers:** All 4 fetchers run via `Promise.all` (independent APIs), enrichment sequential after
+- **Catch-everything:** Each `step.run()` catches errors internally and returns result objects. Partial data today beats no data until tomorrow. Next cron run (12h) naturally retries.
+- **Concurrency guards:** `concurrency: [{ limit: 1 }]` on both functions prevents overlapping runs
+- **Limit validation:** `enrich-batch` clamps `event.data.limit` to `[1, 200]`
+- **Error truncation:** `safeError()` helper truncates error messages to 500 chars (prevents credential leaks to Inngest dashboard)
 
-  Backfill orchestration:
-  - Run fetchers first for ALL sources (populate raw data)
-  - Then run enrichment in batches (newest first — prioritize recent items)
-  - Generate embeddings after enrichment
-  - Create HNSW index after 1000+ chunks loaded
-  - Compute initial trend signals
+### Environment
 
-COMPONENT 3: TREND SIGNAL COMPUTATION (src/pipeline/trends.ts)
+- `INNGEST_SIGNING_KEY` — required in Vercel for production
+- `INNGEST_EVENT_KEY` — required if sending events from outside the serve handler
+- Local dev: `npx inngest-cli@latest dev` (dashboard at http://localhost:8288)
 
-  Recompute rolling window aggregations. This table is REBUILT, not appended.
+### Code Review (2026-03-04)
 
-  async function computeTrendSignals(): Promise<void>
+- **C1 fixed:** `enrichBatch` missing error handling (infinite retry risk) → added try/catch
+- **C2 fixed:** No limit validation on event data → clamped to `[1, 200]`
+- **W1 fixed:** Sequential fetchers → `Promise.all` for parallel execution
+- **W2 fixed:** Useless `key: "enrichment"` on concurrency → removed
+- **W3 fixed:** RSS `{ mode: "poll" }` unused param → removed from function signature
+- **W4 fixed:** Error message truncation via `safeError()`
 
-  For each topic (from item_categories):
-  a) Count items in 30/60/90 day windows:
-     SELECT COUNT(*) FROM item_categories ic
-     JOIN regulatory_items ri ON ic.item_id = ri.id
-     WHERE ic.category_id = $1
-     AND ri.published_date >= NOW() - INTERVAL '30 days'
+---
 
-  b) Compare current 30-day count to previous 30-day count:
-     trend_direction = current > prev * 1.3 ? 'rising'
-                     : current < prev * 0.7 ? 'declining'
-                     : 'stable'
+## Deferred (Not Built)
 
-  d) Generate trend_summary (Gemini Flash):
-     "Identity testing enforcement is rising in supplements: 8 items in
-     the last 30 days vs. 3 in the prior period. Recent warning letters
-     cite 21 CFR 111.70 specifically."
-
-  e) UPSERT into trend_signals on (category_id, period_start, period_end)
-
-  Run: nightly for incremental, after backfill for initial load.
-
-COMPONENT 4: NPM SCRIPTS (package.json)
-
-  Add scripts:
-  "pipeline:incremental": "npx tsx src/pipeline/orchestrator.ts --mode=incremental"
-  "pipeline:backfill": "npx tsx src/pipeline/orchestrator.ts --mode=backfill"
-  "pipeline:fetch-only": "npx tsx src/pipeline/orchestrator.ts --mode=incremental --skip-enrichment"
-  "pipeline:enrich": "npx tsx src/pipeline/enrichment/runner.ts"
-  "pipeline:trends": "npx tsx src/pipeline/trends.ts"
-
-COMPONENT 5: GSRS MONTHLY SYNC (src/pipeline/gsrs-sync.ts)
-
-  The substances table (169K FDA substances) + substance_codes table (950K codes
-  across 96 code systems) needs monthly refresh to pick up new registrations and codes.
-  New botanical ingredients, novel NDIs, and new food additives are registered
-  periodically. Monthly sync keeps substance matching AND cross-reference inference
-  current, and retroactively resolves items with match_status='unresolved'.
-
-  WHY MONTHLY (not weekly): GSRS has no incremental API — every sync fetches all
-  169K substances (~5 hours). Weekly = 20 hrs/month of compute for marginal gain.
-  New substance registrations relevant to food/supplements/cosmetics trickle in
-  slowly; monthly cadence easily captures them.
-
-  async function syncGsrs(): Promise<{ upserted: number; durationMs: number }>
-
-  - Same logic as scripts/bootstrap-gsrs.ts but wrapped as an async function
-  - Captures substances, substance_names, AND substance_codes (all code systems — no filter)
-  - Uses upsert on canonical_name conflict — always safe to re-run
-  - Takes ~5 hours; must run as background Inngest job (not HTTP handler)
-  - Schedule: monthly, 1st of month at 2 AM UTC
-
-  Inngest function:
-  - inngest.createFunction(
-      { id: "gsrs-monthly-sync", name: "GSRS Monthly Substance Sync" },
-      { cron: "0 2 1 * *" },   // 1st of month, 2 AM UTC
-      async ({ step }) => { ... }
-    )
-
-  After sync completes: re-attempt resolution of 'unresolved' substance rows
-  - UPDATE regulatory_item_substances SET match_status='pending'
-    WHERE match_status='unresolved'
-  - Then re-run substance matching pass against updated substances table
-
-COMPONENT 6: CRON CONFIGURATION
-
-  For Vercel Cron (vercel.json):
-  {
-    "crons": [{
-      "path": "/api/cron/pipeline",
-      "schedule": "0 6 * * *"    // Daily at 6 AM UTC
-    }]
-  }
-
-  Create API route: src/app/api/cron/pipeline/route.ts
-  - Verify cron secret header
-  - Call runPipeline({ mode: 'incremental' })
-  - Return status
-
-ACCEPTANCE CRITERIA:
-- [ ] Orchestrator runs all fetchers in sequence
-- [ ] Enrichment runs automatically on new items
-- [ ] Backfill works for all sources with correct date ranges
-- [ ] Trend signals compute correctly for 30/60/90 day windows
-- [ ] HNSW index creation is triggered after sufficient data
-- [ ] NPM scripts work for manual runs
-- [ ] Cron endpoint works for scheduled runs
-- [ ] Pipeline can be interrupted and resumed
-- [ ] Full pipeline status is logged in pipeline_runs
-
-SUBAGENTS:
-- After completion: code-reviewer
-- For trend computation logic: optionally consult backend-architect
-```
-
-### Files to Create
-| File | Description |
-|------|-------------|
-| `src/pipeline/orchestrator.ts` | Main pipeline runner |
-| `src/pipeline/backfill.ts` | Backfill date range configuration + runner |
-| `src/pipeline/trends.ts` | Trend signal computation |
-| `src/app/api/cron/pipeline/route.ts` | Cron endpoint for daily pipeline |
-| `vercel.json` | Cron schedule configuration |
+- **Trend signal computation** — needs product categories + re-enrichment first
+- **GSRS monthly sync** — needs incremental API strategy; full sync takes ~5 hours
+- **Backfill orchestration via Inngest** — CLI scripts work fine for now
+- **Vercel Cron integration** — Inngest handles scheduling natively
+- **HNSW index automation**
+- **Discord #alerts on pipeline failure** — nice-to-have, not MVP
+- **Per-item fan-out enrichment** — sequential runner is fine at current scale

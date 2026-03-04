@@ -1,7 +1,7 @@
 ---
-Last-Updated: 2026-03-05
+Last-Updated: 2026-03-04
 Maintainer: RB
-Status: Active — Session 0 complete. Full enrichment run in progress. Stripe, blog, cross-ref, auth shipped.
+Status: Active — Inngest pipeline wired (Phase 2C). Full enrichment run in progress. Stripe, blog, cross-ref, auth shipped.
 ---
 
 # Progress: Policy Canary
@@ -33,10 +33,10 @@ Status: Active — Session 0 complete. Full enrichment run in progress. Stripe, 
 | **Product Categories Taxonomy** | **2026-03-04** | **Designed — ~79 categories from MoCRA/VCRP, 21 CFR 170.3(n), DSLD. Sacred controlled vocab (no free text). Ready for migration `005`.** |
 | **Clawdbot (OpenClaw) Deployed** | **2026-03-05** | **Live — Vultr VPS (108.61.151.130), Discord bot on Bizniz server, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.** |
 | **Session 0: Categories Migration + Enrichment** | **2026-03-04** | **Done — migration `20260304082551_product_categories_and_company_name` applied (82 categories seeded). Pipeline updated to controlled slugs. Golden tests 10/10 (38/38 assertions).** |
+| **Inngest Pipeline Orchestration (Phase 2C)** | **2026-03-04** | **Shipped (minimal) — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed (2C + 4W fixed).** |
 | Full Enrichment Run | - | In Progress |
 | Session 1: Onboarding Backend | - | Pending |
 | Session 2: Onboarding Frontend | - | Pending |
-| Inngest wiring (Phase 2C) | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
@@ -241,6 +241,19 @@ Status: Active — Session 0 complete. Full enrichment run in progress. Stripe, 
 - **Local repo files** — `scripts/clawdbot/` directory with: `cloud-init.yaml`, `query-supabase.mjs`, `publish-blog.mjs`, `setup-clawdbot.sh` (provisioning automation), `skills/weekly-roundup/SKILL.md`, `.vultr-instance-id`.
 - **BLOG_API_KEY generated** — added to `.env.local` (was missing).
 - **Config notes** — `gateway.mode` must be `"local"` for headless VPS. `agents.defaults.provider` is NOT a valid config key. `openclaw onboard --install-daemon` is interactive — manual systemd service needed on VPS.
+
+### 2026-03-04 — Phase 2C: Inngest Pipeline Orchestration (Minimal)
+
+- **Two Inngest functions** — `daily-ingest` (cron `0 6,18 * * *` = 6 AM + 6 PM UTC) and `enrich-batch` (event `pipeline/enrich.requested`, on-demand).
+- **daily-ingest** — 4 fetcher steps run in parallel via `Promise.all` (Federal Register, openFDA enforcement, warning letters, FDA RSS), followed by sequential enrichment step (limit: 100). Each step catches errors internally (Inngest v3: failed step blocks all subsequent steps). Returns summary with per-source created/error counts.
+- **enrich-batch** — single enrichment step with configurable `limit` (clamped 1-200) and optional `itemTypeFilter`. Triggered via `inngest.send("pipeline/enrich.requested", { data: { limit: 50 } })`.
+- **Concurrency guards** — `{ limit: 1 }` on both functions prevents overlapping runs.
+- **Error safety** — `safeError()` helper truncates error messages to 500 chars (prevents credential leaks to Inngest dashboard). All step errors caught and encoded in return values.
+- **RSS fetcher cleanup** — removed unused `{ mode: "poll" }` param from `fetchFdaRss()` signature. Updated 2 call sites (Inngest function + CLI script).
+- **Code-reviewed** — 2 criticals fixed (missing error handling on enrichBatch, no limit validation), 4 warnings fixed (sequential→parallel fetchers, useless concurrency key, RSS param cleanup, error truncation).
+- **Files**: `src/lib/inngest/{client.ts, index.ts, functions/daily-ingest.ts, functions/enrich-batch.ts}`, `src/app/api/inngest/route.ts`, `src/pipeline/fetchers/fda-rss.ts`, `scripts/run-fetcher.ts`.
+- **Env vars**: `INNGEST_SIGNING_KEY` (Vercel prod), `INNGEST_EVENT_KEY` (external event sending). Local dev: `npx inngest-cli@latest dev`.
+- **Build clean.** `npm run type-check` + `npm run build` pass.
 
 ### 2026-03-04 — Cross-Reference Inference Layer (Steps 1b + 1c)
 
