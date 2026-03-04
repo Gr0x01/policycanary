@@ -4,6 +4,8 @@ Maintainer: RB
 Status: Active
 ---
 
+> **SCOPE NOTE (2026-03-05):** Policy Canary monitors ALL FDA-regulated sectors — food, supplements, cosmetics, pharma, medical devices, biologics, tobacco, veterinary. The system, pipeline, enrichment, and product categories are sector-agnostic. Marketing may focus on specific verticals for GTM, but strategic thinking and analysis must consider all sectors. Do not artificially constrain analysis to food/supplements/cosmetics.
+
 # Project Brief: Policy Canary
 
 ## Overview
@@ -15,7 +17,7 @@ Status: Active
 
 **Positioning:** Policy Canary monitors the FDA for YOUR products. Not "what happened in supplements" — that's a newsletter. We know your Gold Standard Whey contains whey protein isolate, lecithin, and sucralose. When the FDA changes identity testing requirements for whey protein, we tell you immediately, explain what it means for your specific product, and give you action items with deadlines.
 
-**The gap:** Nobody does product-level FDA monitoring for food/supplement/cosmetics. Tools exist for static compliance checking ("does my formula comply today?") but NOT dynamic monitoring ("will my formula still comply tomorrow?"). The market sits between free Federal Register alerts and $50K+/year enterprise platforms. Nobody watches the FDA for YOUR specific products.
+**The gap:** Nobody does affordable, product-level FDA monitoring. Tools exist for static compliance checking ("does my formula comply today?") but NOT dynamic monitoring ("will my formula still comply tomorrow?"). The market sits between free Federal Register alerts and $50K+/year enterprise platforms. Nobody watches the FDA for YOUR specific products — across any sector.
 
 **Domain:** policycanary.io
 
@@ -46,7 +48,7 @@ Product-level research: `/memory-bank/research/product-level-monitoring-research
 | Operational compliance | Trustwell, Allera, MasterControl | SOPs, traceability, audit management | Different job — they manage, we monitor |
 | Free newsletters | AgencyIQ FDA Today, NutraIngredients | "Here's what happened in supplements" | We tell you what affects YOUR specific products |
 
-**Our lane:** Product-level FDA monitoring. Nobody does this. The closest things are either EU-focused (FoodChain ID, SGS Digicomply), enterprise-priced ($50K+/year like Freyr), or in different industries (chemicals, pharma).
+**Our lane:** Affordable, product-level FDA monitoring across all regulated sectors. The closest things are either EU-focused (FoodChain ID, SGS Digicomply), enterprise-priced ($50K+/year like Freyr), or sector-specific silos that don't cross FDA center boundaries.
 
 **Key competitive insight:** The gap between static compliance checking ("does my formula comply today?") and dynamic regulatory monitoring ("will my formula still comply tomorrow?") is where the product lives.
 
@@ -109,9 +111,11 @@ Policy Canary tells you: "Your Marine Collagen Powder is affected. The FDA is ti
 
 ## Target Customer
 
-**Primary:** Founders and product owners at small-to-mid supplement, food, and cosmetics brands ($500K-$50M revenue). They think in products, not regulatory categories. "Tell me what affects my 5 products" — not "tell me about supplements."
+**Primary:** Any company making FDA-regulated products that thinks in products, not regulatory categories. "Tell me what affects my 5 products" — not "tell me about my sector."
 
-**Expanded buyer personas (vs. generic industry approach):**
+**Current marketing focus:** Food, supplements, cosmetics (website GTM). But the system and strategic thinking are not limited to these.
+
+**Buyer personas (across sectors):**
 
 | Role | Why They Buy Product-Level | Company Size |
 |------|---------------------------|-------------|
@@ -132,13 +136,13 @@ Product-level monitoring expands the addressable market significantly by reachin
 
 | Buyer Sector | Estimated Count | Likely Tier |
 |---------|----------------|-------------|
-| Small supplement/cosmetics/food brands ($500K-$5M) | 5,000-15,000+ | Starter |
+| Small FDA-regulated product brands ($500K-$5M) | 5,000-15,000+ | Starter |
 | Mid-size brands ($5M-$50M) | 500-1,300 | Pro |
 | Contract manufacturers | 270-700 | Business |
 | Regulatory consultants | 200-500 | TBD |
 | **Total realistic buyers** | **~6,000-17,500+** | |
 
-At 2-5% capture: 120-875 paying customers.
+At 2-5% capture: 120-875 paying customers. (Estimate based on food/supplement/cosmetics research — expands further if other FDA sectors are actively marketed.)
 
 ---
 
@@ -152,8 +156,8 @@ At 2-5% capture: 120-875 paying customers.
 
 | Level | Base Price | Includes | Per Extra Product | What You Get | Status |
 |-------|-----------|----------|-------------------|-------------|--------|
-| **Monitor** | $99/mo | 5 products | $6/product/mo | Product intelligence emails (event-driven + weekly all-clear), urgent alerts, product dashboard, weekly update email | **Launch tier** |
-| **Monitor + Research** | $399/mo | 5 products | $6/product/mo | Everything in Monitor + enforcement database, AI search, trend analysis, full regulatory archive | **Added later** — needs enforcement DB, AI search, and trends to justify price |
+| **Monitor** | $99/mo | 5 products | $10/product/mo | Product intelligence emails (event-driven + weekly all-clear), urgent alerts, product dashboard, weekly update email | **Launch tier** |
+| **Monitor + Research** | $399/mo | 5 products | $10/product/mo | Everything in Monitor + enforcement database, AI search, trend analysis, full regulatory archive | **Added later** — needs enforcement DB, AI search, and trends to justify price |
 
 **Free tier (post-trial):** 1 product, Monitor level only. Weekly update email. Keeps them in the funnel.
 
@@ -162,11 +166,11 @@ At 2-5% capture: 120-875 paying customers.
 | Products | Monitor | Monitor+Research (future) |
 |----------|---------|--------------------------|
 | 5 (base) | $99 | $399 |
-| 10 | $129 | $429 |
-| 15 | $159 | $459 |
-| 25 | $219 | $519 |
-| 50 | $369 | $669 |
-| 100 | $669 | $969 |
+| 10 | $149 | $449 |
+| 15 | $199 | $499 |
+| 25 | $299 | $599 |
+| 50 | $549 | $849 |
+| 100 | $1,049 | $1,349 |
 
 **Product cap:** Self-serve handles up to 100 products. Beyond 100 → "contact us" for custom pricing. 100+ is a different UX problem (email structure, product management, alert grouping) and a different sales conversation.
 
@@ -188,9 +192,12 @@ At 2-5% capture: 120-875 paying customers.
 - Comparable tools: Westlaw Edge $194/mo, FoodDocs Standard $181/mo, YouCompli $300/mo, LexisNexis Enhanced $257/mo.
 - **Not launching at start** — needs enforcement DB, AI search, and trend analysis features built first to justify the price.
 
-**$6/product:**
-- Scales linearly. No surprises. A 50-product company on Monitor pays $369/mo — still well under a warning letter.
+**$10/product (launch, roadmap to $15-20 as intelligence deepens):**
+- Validated by market research: $10 sits at the floor of intelligence-layer monitoring tools. BrandMentions charges $5-8/keyword for social scraping. Ahrefs/Semrush charge $10-17/project for SEO monitoring. $10 for LLM-powered regulatory analysis is defensible and arguably modest.
+- Round number psychology: instant mental math ("5 extra products = $50"). $8 reads arbitrary, $12 requires justification.
+- Scales linearly. No surprises. A 50-product company on Monitor pays $549/mo ($6.6K/yr) — still far under enterprise alternatives ($25K-$200K/yr).
 - Same rate for both levels. The access level upgrade is a flat $300/mo regardless of product count. Clean.
+- **Future increases to $15-20/product** as cross-reference intelligence, enforcement trend analysis, and matching accuracy improve. No timeline committed — raise when the product justifies it.
 
 ### Pricing Validation (March 2026)
 
@@ -206,9 +213,9 @@ Research confirmed affordability and competitive positioning:
 
 - Trial model (reverse trial vs standard)
 - Whether to offer annual billing at launch or add later
-- Per-product rate validation — $6 needs testing with real buyers
 - Research tier launch timing — what features are the minimum to justify $399?
 - Potential to raise Research to $499 once established with 20+ subscribers
+- When to raise per-product rate from $10 to $15-20 (tied to intelligence depth milestones)
 
 ---
 
@@ -238,7 +245,6 @@ Stored in `product_categories` table. New categories added manually, never by LL
 
 ### Not Pursuing Under This Brand
 - Hemp/CBD (stigma repels core buyers)
-- Medical devices (different market, well-funded competitors)
 - EU/International (separate product)
 
 ---
@@ -250,6 +256,7 @@ Stored in `product_categories` table. New categories added manually, never by LL
 | **Supplements** | DSLD (NIH) API | 214,780 (121K on-market) | Structured ingredients with amounts, categories, UNII codes, claims, form, manufacturer. No auth. |
 | **Food** | USDA FoodData Central API | 454,596 branded | Ingredients (text), nutrition, UPC barcodes. Free API key. |
 | **Cosmetics** | Manual entry | N/A | Paste ingredients, upload label photo, describe. No public product database exists. |
+| **Pharma / Devices / Tobacco / Other** | Manual entry or TBD | TBD | Onboarding data sources for non-food/supplement sectors not yet researched. Manual entry available for all. |
 
 Detailed research: `/memory-bank/architecture/llm-data-flow.md`
 
@@ -287,7 +294,7 @@ Detailed research: `/memory-bank/research/data-sources.md`
 - **Homepage product shot:** Show a real personalized product intelligence email. "This is what you'd get for YOUR products." Makes the value immediately tangible.
 - **Trial:** Full product experience — add your products, get real intelligence. Converts without requiring a sales call.
 - **LinkedIn outreach:** Low volume, high intent — 30-50 targeted conversations
-- **Loss aversion narrative:** "One warning letter costs $50,000+. Policy Canary costs $948/year." Also: "The FDA cut 3,859 employees. They're focusing enforcement on the easiest targets. Don't be the easy target."
+- **Loss aversion narrative:** "The FDA cut 3,859 employees. They're focusing enforcement on the easiest targets. Don't be the easy target." (Note: warning letter pitch needs rethinking — see data analysis 2026-03-05. Most WLs are tobacco/pharma; food/supplement/cosmetics volume is low. Recalls and regulatory changes are the stronger value drivers.)
 - **Consultant partnerships:** EAS, FDAImports, Lachman as referral partners
 - **Self-serve signup** — this product should sell itself. No forced sales calls.
 

@@ -161,10 +161,11 @@ BOTH signal types with equal rigor:
 - Examples: MoCRA registration deadlines, GMP rule changes, labeling format requirements, testing protocol requirements
 - Key: `affected_ingredients = []` is CORRECT for these items. Do not hallucinate substances.
 
-### Segments removed (2026-03-04), Sectors removed (2026-03-05)
+### Segments removed (2026-03-04), Sectors removed (2026-03-05), Sector scope removed (2026-03-05)
 - `segment_impacts` table **DROPPED** — the coarse food/supplement/cosmetics layer was never used for matching, no users, no MVP shipped. The product category slugs + substance matching fully replace it.
 - Cross-reference inference (Step 1c) infers new product **categories** directly. No sector-based gate — fires whenever use contexts exist for resolved substances.
 - `EnrichmentOutputSchema` no longer has a `segments` field. `slugToSector()`, `useContextToSector()`, and `type Sector` deleted from `cross-reference.ts`.
+- **ALL FDA sectors in scope for thinking.** The system already monitors pharma, devices, biologics, tobacco, veterinary — not just food/supplements/cosmetics. 119 product categories across 8 sectors. Marketing may focus specific verticals for GTM, but strategic analysis must consider the full FDA landscape.
 
 ### Schema additions (Supabase migration applied 2026-03-03)
 - `item_enrichments.regulatory_action_type` — what is happening (recall, ban_restriction, compliance_requirement, cgmp_violation, etc.)
@@ -226,7 +227,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 
 ### Pricing Model (Revised March 2026)
 7. **Launch with Monitor only.** Monitor ($99/mo) = emails + alerts + dashboard. Research tier ($399/mo) added later once enforcement DB, AI search, and trends are built to justify the price.
-8. **Base + per-product pricing.** Both levels include 5 products. $6/product/month beyond that. Same per-product rate for both levels.
+8. **Base + per-product pricing.** Both levels include 5 products. $10/product/month beyond that (raised from $6 — market research validated $10 as floor for intelligence-layer monitoring tools). Same per-product rate for both levels. Roadmap to $15-20/product as intelligence deepens.
 9. **Monthly billing only at launch.** Product counts fluctuate as subscribers add/remove products. Annual is messy with variable products. Add annual later once retention data exists.
 10. **Self-serve caps at 100 products.** Beyond 100 → "contact us." 100+ is a different UX problem (email structure, product management, alert grouping) and a different sales conversation.
 11. **No "unlimited."** Unlimited creates cost risk and is a fundamentally different product at scale.
@@ -247,6 +248,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 - ~~$299 price floor~~ → Monitor at $99/mo
 - ~~Monitor at $49/mo~~ → $99/mo. Research validated: $49 was below FoodDocs ($84/mo), risked not being taken seriously. $99 signals seriousness, still under 1 hour of consultant time.
 - ~~Monitor+Research at $249/mo~~ → $399/mo (future). $300 gap reflects research platform as moat. 4x multiplier, room to raise.
+- ~~$6/product/mo~~ → $10/product/mo. Market research confirmed $6 was below every intelligence-layer monitoring comparable (BrandMentions $5-8, Ahrefs $10-17, Brand24 $16-50). $10 is the floor. Roadmap to $15-20.
 - ~~Launch both tiers simultaneously~~ → Launch Monitor only. Research tier added once enforcement DB, AI search, and trends justify $399.
 - ~~2,500-6,000 buyer pool~~ → 6,000-17,500+ with product-level approach
 - ~~Segment selection at onboarding~~ → Product addition at onboarding (segments inferred)

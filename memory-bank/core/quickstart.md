@@ -9,7 +9,8 @@ Status: Active
 ## Current State
 
 - **Status**: Session 1 API routes shipped. Enrichment pending (~7,567 items). Inngest pipeline wired. Stripe, blog, cross-reference, auth all shipped.
-- **Goal**: Monitor FDA for YOUR specific products, not just your industry
+- **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
+- **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot, weekly roundup cron
 - **Next**: Enrich all items (`npm run pipeline:enrich -- --limit 500`), then Session 2 (onboarding frontend)
@@ -30,7 +31,7 @@ Status: Active
 | **Product Intelligence Email** (paid) | Event-driven alerts + weekly all-clear. Custom per subscriber, organized by THEIR products. | Paid subscribers |
 | **Web app** (paid) | Search, enforcement DB, trends, archive — personalized to your products | Paid subscribers |
 
-**Pricing:** Monitor $99/mo (5 products included) · Monitor+Research $399/mo (future — not at launch) · +$6/product beyond 5 · Free: 1 product post-trial · Monthly billing · Self-serve up to 100 products · Launch with Monitor tier only
+**Pricing:** Monitor $99/mo (5 products included) · Monitor+Research $399/mo (future — not at launch) · +$10/product beyond 5 (roadmap to $15-20) · Free: 1 product post-trial · Monthly billing · Self-serve up to 100 products · Launch with Monitor tier only · All FDA sectors accepted at same price
 
 ---
 
