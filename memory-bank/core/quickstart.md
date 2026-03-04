@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-05
 Maintainer: RB
 Status: Active
 ---
@@ -8,17 +8,17 @@ Status: Active
 
 ## Current State
 
-- **Status**: Session 0 complete. Inngest pipeline wired (Phase 2C). Full enrichment run in progress. Stripe, blog, cross-reference, auth all shipped.
+- **Status**: Session 1 API routes shipped. Enrichment pending (~7,567 items). Inngest pipeline wired. Stripe, blog, cross-reference, auth all shipped.
 - **Goal**: Monitor FDA for YOUR specific products, not just your industry
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot, weekly roundup cron
-- **Next**: Full enrichment of all items, then Session 1 (onboarding backend), Session 2 (onboarding frontend)
+- **Next**: Enrich all items (`npm run pipeline:enrich -- --limit 500`), then Session 2 (onboarding frontend)
 
 ---
 
 ## What's Happening
 
-**Session 0 complete. Inngest pipeline wired (Phase 2C minimal).** Twice-daily automated pipeline — fetch new FDA data from 4 sources (parallel), enrich with LLM, generate embeddings. Plus on-demand enrichment trigger. Clawdbot live on Discord (weekly roundup cron Fridays 9 AM ET). GSRS bootstrap complete (949K codes, 96 systems, 166K substances). Cross-reference inference ready. **Next: full enrichment run, then onboarding backend (Session 1).**
+**Session 1 API routes shipped.** DSLD search + detail, product CRUD (create/read/update/soft-delete), substance resolution on DSLD ingredient ingestion. Triple code-reviewed (3 critical + 6 warning fixes). Migration `add_unique_subscriber_products_external` applied. Shared rate limiter extracted. **Next: enrich all items, then Session 2 (onboarding frontend).**
 
 ---
 
@@ -106,13 +106,16 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] **Cross-reference inference layer** — Steps 1b + 1c built. Schema migration applied. GSRS bootstrap complete (949K codes, 96 systems). KEY DIFFERENTIATOR.
 - [x] **Blog section** — `/blog`, `/blog/[slug]`, RSS feed, Clawdbot POST API. Migration `003_blog_posts`. Code-reviewed (3 critical + 4 warning fixes applied).
 - [x] **Stripe subscriptions (Phase 4B)** — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed. Migration `004`. Stripe Dashboard configured (live mode). Commit `497ec6d`.
-- [x] Stripe Dashboard setup — products + prices created (Monitor $99, Extra $6), customer portal configured, webhook endpoint pending deploy
-- [x] **Product categories taxonomy designed** — ~79 categories from MoCRA, 21 CFR 170.3, DSLD. Sacred controlled vocab — no free text.
+- [x] Stripe Dashboard setup — products + prices created (Monitor $99, Extra $6), customer portal configured, webhook endpoint live
+- [x] **Product categories taxonomy designed** — ~111 categories across 8 groups. Sacred controlled vocab — no free text. Sectors are display-only metadata.
 - [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.
 - [x] **Session 0: Product categories migration + enrichment update** — migration applied (82 categories), pipeline uses controlled slugs, golden tests 10/10
 - [x] GSRS bootstrap complete — 949K codes, 96 code systems, 166K substances with codes
-- [ ] Full enrichment run (backfills + re-enrich all items with current pipeline)
-- [ ] **Session 1: Onboarding backend** — GSRS search utility, ingredient parsing (Gemini Flash), product API routes, GSRS autocomplete
+- [x] **DSLD database loaded** — 214K products, 2M ingredients, 1.47M statements, 253K companies. pg_trgm typeahead (12ms). `scripts/bootstrap-dsld.ts`.
+- [x] **Backfills complete** — 7,572 items (2-year FR + enforcement, full WL, RSS). `run-fetcher.ts` supports `--start`/`--end`.
+- [ ] Enrich all items (~7,567 pending, `npm run pipeline:enrich -- --limit 500`)
+- [x] **Session 1: Onboarding backend (API routes)** — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed.
+- [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility, product classification
 - [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [ ] Product intelligence email MVP

@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-05
+Last-Updated: 2026-03-06
 Maintainer: RB
 Status: Active
 ---
@@ -8,7 +8,7 @@ Status: Active
 
 ## Product-Centric Model
 
-The core unit is the subscriber's **actual products**. Product categories (~82 controlled slugs across food, supplement, and cosmetic sectors) are used for classification in the data pipeline. The subscriber experience is organized around their real products and ingredients.
+The core unit is the subscriber's **actual products**. Product categories (~111 controlled slugs across 8 groups: cosmetics, food, supplements, pharma, devices, biologics, tobacco, veterinary) are used for classification in the data pipeline. The subscriber experience is organized around their real products and ingredients.
 
 Onboarding collects real products via database lookup (DSLD for supplements, USDA FoodData Central for food) or manual entry (cosmetics, unlisted products). The system knows exactly what ingredients are in each product and matches regulatory items against them.
 
@@ -230,7 +230,7 @@ High-level flow. Specific UI is RB's design.
 
 **Data sources for product lookup:**
 
-| Sector | Primary Source | Products | Key Data |
+| Group | Primary Source | Products | Key Data |
 |---------|---------------|----------|----------|
 | Supplements | DSLD (NIH) | 214,780 (121K on-market) | Structured ingredients with amounts, categories, UNII codes, claims, form, manufacturer |
 | Food | USDA FoodData Central | 454,596 branded | Ingredients (text), nutrition data, UPC barcodes, brand |
@@ -299,7 +299,7 @@ policycanary.io/blog (live)
 | Layer | Model | When | Cost Driver |
 |-------|-------|------|-------------|
 | **Data Enrichment + Deep Tagging** | Gemini 2.5 Flash / Pro | At ingest (once per item, single call). Flash for simple items, Pro for complex (WLs, rules). | ~50-100 items/week |
-| **Cross-Reference Inference (Step 1c)** | Gemini 2.5 Pro + thinking | After enrichment, only when use contexts reveal new sectors (~20-30% of items). Budget: 4096 thinking tokens. | ~$0.02/call, ~10-30 items/week |
+| **Cross-Reference Inference (Step 1c)** | Gemini 2.5 Pro + thinking | After enrichment, when use contexts exist for resolved substances. Budget: 4096 thinking tokens. | ~$0.02/call, varies by item mix |
 | **Content Automation (Clawdbot)** | Claude Sonnet 4.6 | Weekly roundup + ad-hoc content drafts via OpenClaw | ~1-4 calls/week |
 | **Onboarding — manual entry parsing** | Claude Sonnet 4.6 | When product not found in database | Low — most supplements auto-populate from DSLD |
 | **Email Composition** | Claude Sonnet 4.6 | Weekly per paid subscriber | Subscriber count × weekly |
@@ -309,7 +309,7 @@ policycanary.io/blog (live)
 
 ## 7. Key Design Decisions
 
-1. **Products are the core unit.** The email says "Your Marine Collagen Powder" not "This week in supplements." Sectors (food/supplement/cosmetic) are derived from product category slugs, not stored separately.
+1. **Products are the core unit.** The email says "Your Marine Collagen Powder" not "This week in supplements." Product categories are the classification layer — sectors exist only as display metadata, not used in pipeline logic.
 
 2. **Real product data from public databases.** DSLD for supplements (214K products, structured ingredients), USDA FDC for food (454K products). No guessing — verified ingredient lists pulled from authoritative sources.
 
@@ -333,6 +333,6 @@ The enrichment layer tags each regulatory item with affected ingredients, produc
 | Product types | `[collagen supplements, protein powders]` | `[collagen powder]` |
 | Claims | `[joint health, anti-aging]` | `[supports joint health]` |
 | Facility types | `[manufacturer]` | `[contract manufacturer]` |
-| Regulations | `[21 CFR 111.70]` | (tracked via product category sector) |
+| Regulations | `[21 CFR 111.70]` | (tracked via product category) |
 
 Match = intersection across any dimension. The more dimensions that match, the higher the relevance score. A regulatory item about "identity testing for marine collagen" hits on both ingredient AND product type for a subscriber with a marine collagen powder → critical relevance.

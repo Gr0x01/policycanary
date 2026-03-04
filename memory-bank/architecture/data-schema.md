@@ -196,7 +196,7 @@ The core entity. Every piece of regulatory data that enters the system. Covers: 
 
 ### `regulatory_categories`
 
-Flexible lookup table for all classification dimensions. Topics, product classes, and regulatory programs are all rows here, differentiated by `category_type`. (Segment rows still exist for backwards compatibility but are no longer written to by the enrichment pipeline — sectors are derived from product categories.)
+Flexible lookup table for all classification dimensions. Topics, product classes, and regulatory programs are all rows here, differentiated by `category_type`. (3 legacy segment rows still exist as parent groupings for 11 topic categories — not written to by the pipeline. Sectors are display-only metadata on `product_categories`, not used in pipeline logic.)
 
 **Status:** New
 
@@ -1129,12 +1129,12 @@ These tables will be added when the state compliance layer is built. No schema c
 - **`adverse_event_products`** -- products cited in each report. Each has its own classification via FDA industry codes.
 - These tables feed trend detection but don't appear individually in the feed. Patterns surface as `trend_signals`.
 
-### Future Sector Expansion
+### Future Category Expansion
 
-Adding new sectors (pet food, hemp/CBD) requires:
-1. INSERT new product category rows in `product_categories` for the new sector.
-2. Update `PRODUCT_CATEGORY_SLUGS` in `prompts.ts` and `slugToSector()` in `cross-reference.ts`.
-3. Update enrichment prompts to recognize the new sector's categories.
+Adding new product groups (pet food, hemp/CBD) requires:
+1. INSERT new product category rows in `product_categories`.
+2. Update `PRODUCT_CATEGORY_SLUGS` in `prompts.ts`.
+3. Update enrichment prompts to recognize the new categories.
 
 ---
 

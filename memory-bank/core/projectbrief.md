@@ -212,16 +212,21 @@ Research confirmed affordability and competitive positioning:
 
 ---
 
-## Sectors & Product Categories
+## Product Categories
 
-Sectors (food / supplement / cosmetic) are **derived from product categories**, not a separate classification layer. The enrichment pipeline tags each regulatory item with controlled product category slugs (~82 categories from MoCRA, 21 CFR 170.3, and DSLD). Subscribers never see sectors — they just add their products.
+Product categories are the classification layer for both regulatory items and subscriber products. The enrichment pipeline tags each regulatory item with controlled product category slugs (~111 categories across cosmetics, food, supplements, pharma, devices, biologics, tobacco, and veterinary). Sectors exist only as display metadata on the `product_categories` table — they are never used for pipeline logic or gating.
 
-### Product Categories (~82 controlled slugs)
-| Sector | Source | Count |
-|--------|--------|-------|
+### Product Categories (~111 controlled slugs)
+| Group | Source | Count |
+|-------|--------|-------|
 | **Cosmetics** | MoCRA/VCRP 21 CFR 720.4 | ~17 |
-| **Food** | 21 CFR 170.3(n) + infant formula/medical foods | ~46 |
+| **Food** | 21 CFR 170.3(n) + extensions | ~46 |
 | **Supplements** | DSLD ingredient categories + market conventions | ~19 |
+| **Pharmaceutical** | CDER/OTC categories | ~10 |
+| **Medical Devices** | CDRH classification | ~8 |
+| **Biologics** | CBER categories | ~4 |
+| **Tobacco** | CTP product types | ~4 |
+| **Veterinary** | CVM categories | ~3 |
 
 Stored in `product_categories` table. New categories added manually, never by LLM invention.
 

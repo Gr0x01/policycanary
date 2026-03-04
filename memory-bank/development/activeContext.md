@@ -1,16 +1,17 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-04
+last-updated: 2026-03-06
+deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Inngest pipeline wired. Onboarding backend next.
+status: Active — Session 1 API routes shipped. Onboarding frontend next.
 ---
 
 # Active Development Context
 
-**Phase:** Session 0 complete. Inngest pipeline wired (Phase 2C minimal). Full enrichment run in progress.
+**Phase:** Session 1 API routes shipped. Enrichment pending (~7,567 items to enrich).
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Full enrichment of all items (backfills + re-enrich), then Session 1 (onboarding backend), Session 2 (onboarding frontend)
+**Next up:** Enrich all ~7,567 items (`npm run pipeline:enrich -- --limit 500`, repeat), then Session 2 (onboarding frontend)
 
 ---
 
@@ -65,6 +66,16 @@ status: Active — Inngest pipeline wired. Onboarding backend next.
 - [x] **Migration `004`** — `stripe_subscription_id TEXT` column + `UNIQUE` constraint on `stripe_customer_id`
 - [x] **Triple code-reviewed** — code-architect, backend-architect, code-reviewer. 4 criticals + 9 warnings fixed.
 
+### What's Done (Session 1: Onboarding Backend — API Routes)
+- [x] **Types + queries module** — `src/lib/products/types.ts` (Zod schemas with DSLD numeric refinement), `src/lib/products/queries.ts` (server-only: DSLD search/detail, product CRUD, substance resolution, ingredient ingestion)
+- [x] **DSLD search API** — `GET /api/dsld/search?q=...&limit=...`, ILIKE prefix on `product_name`, `market_status = 'On Market'`, 30/min rate limit, auth required (dev bypass)
+- [x] **DSLD detail API** — `GET /api/dsld/[id]`, 3 parallel queries (product + ingredients + other_ingredients), auth required (dev bypass)
+- [x] **Products API** — `GET/POST /api/products` (list with ingredient counts + create with plan limit + duplicate check + DSLD ingestion), `GET/PATCH/DELETE /api/products/[id]` (single + update name/brand + soft delete, UUID validation, 10/min rate limit)
+- [x] **Shared rate limiter** — `src/lib/rate-limit.ts` extracted from 3 inline copies. Configurable limit + window per caller.
+- [x] **Migration** — `add_unique_subscriber_products_external` (unique partial index, race condition guard for duplicates)
+- [x] **Type consolidation** — `AddProductRequest` in `api.ts` now re-exports `CreateProductInput` from Zod schema
+- [x] **Triple code-reviewed** — 3 criticals (plan limit race error handling, duplicate race unique index, UUID validation) + 6 warnings (redundant updated_at, throw-on-error for count/limit, numeric external_id, ingredient warning, deferred product_category_id, is_active via DELETE only)
+
 ### What's Done (Clawdbot / Content Automation)
 - [x] **Clawdbot VPS** — Vultr `vc2-1c-2gb` ($12/mo), Ubuntu 24.04, Node.js 22, OpenClaw v2026.3.2. IP: `108.61.151.130`. Systemd service `openclaw.service`.
 - [x] **Discord bot** — `ClawdBot - Canary` on `Bizniz` server. 5 channels: `#blog-drafts`, `#linkedin-drafts`, `#weekly-roundup`, `#alerts`, `#clawdbot` (general chat). `requireMention: false`.
@@ -77,19 +88,28 @@ status: Active — Inngest pipeline wired. Onboarding backend next.
 
 #### Session 0: Product Categories + Enrichment Update (DONE)
 - [x] **Migration `20260304082551_product_categories_and_company_name`** — `product_categories` table with 82 seeded rows, `product_category_id` FK on `subscriber_products`, `company_name` on `users`, RLS policies. Applied via Supabase MCP.
-- [x] **Enrichment pipeline updated** — `prompts.ts`: `PRODUCT_CATEGORY_SLUGS` constant, `affected_product_categories` (controlled slugs). `processor.ts`: writes slugs to `item_enrichment_tags`. `cross-reference.ts`: Step 1c uses controlled slugs. Golden tests 10/10, 38/38 assertions.
+- [x] **Enrichment pipeline updated** — `prompts.ts`: `PRODUCT_CATEGORY_SLUGS` constant (~111 slugs), `affected_product_categories` (controlled slugs). `processor.ts`: writes slugs to `item_enrichment_tags`. `cross-reference.ts`: Step 1c uses controlled slugs, no sector gate. Golden tests 10/10, 38/38 assertions.
 - [x] **GSRS bootstrap complete** — 949K codes, 96 systems, 166K substances. `--codes-only` mode added for future backfills.
-- [ ] **Full enrichment run** — backfill all historical data, reset stale enrichments, enrich all items with current pipeline
+- [x] **DSLD database loaded** — 214K products, 2M ingredients, 1.47M statements, 253K companies (4.2M rows, ~900MB). pg_trgm typeahead at 12ms. `scripts/bootstrap-dsld.ts`. Refresh quarterly.
+- [x] **Backfills complete** — 7,572 items in DB (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). Stale enrichments reset (23 enriched + 2 error → ok).
+- [ ] **Enrich all items** — ~7,567 at `ok` status, ~5 enriched. Run `npm run pipeline:enrich -- --limit 500` in batches. Est. 6-10 hrs, $15-30.
 
-#### Session 1: Onboarding Backend
-- [ ] **GSRS search utility** (`src/lib/products/gsrs.ts`) — queries local `substances` + `substance_names` tables (pg_trgm), not external API
-- [ ] **Ingredient parsing** (`src/lib/products/parse-ingredients.ts`) — Gemini Flash for photo/paste/URL parsing, `matchToGSRS()` for substance linking
+#### Session 1: Onboarding Backend — API Routes (DONE)
+- [x] **DSLD typeahead API** (`/api/dsld/search`, `/api/dsld/[id]`) — ILIKE prefix search on local `dsld_products`, product detail + ingredients join. 30/min rate limit, auth required (dev bypass for curl testing).
+- [x] **Product API routes** (`/api/products`, `/api/products/[id]`) — GET list + POST create + GET single + PATCH update + DELETE (soft). Wires DSLD selection → `subscriber_products` + `product_ingredients` with substance resolution via `find_substance_by_name` RPC.
+- [x] **Plan limit enforcement** — DB trigger `check_max_products()` (23514) + API-level fast-path 403. Both paths return friendly PLAN_LIMIT error code.
+- [x] **Duplicate guard** — unique partial index `uq_subscriber_products_external` on `(user_id, data_source, external_id) WHERE external_id IS NOT NULL AND is_active = true`. API detects 23505 + returns DUPLICATE code.
+- [x] **Shared rate limiter** — `src/lib/rate-limit.ts` extracted, used by DSLD search (30/min) and product mutations (10/min).
+- [x] **Triple code-reviewed** — code-reviewer, backend-architect, code-architect. 3 criticals + 6 warnings fixed. See progress.md for details.
+
+#### Session 1b: Onboarding Backend (Remaining)
+- [ ] **Ingredient parsing** (`src/lib/products/parse-ingredients.ts`) — Gemini Flash for photo/paste/URL parsing (non-DSLD products), `matchToGSRS()` for substance linking
 - [ ] **Product classification** — Gemini Flash picks `product_type` + `product_category_slug` from controlled vocab
-- [ ] **Product API routes** — CRUD at `/api/products`, ingredient parse at `/api/products/[id]/ingredients/parse`, ingredient save at `/api/products/[id]/ingredients`, GSRS autocomplete at `/api/gsrs/search`
-- [ ] Plan limit enforcement: DB trigger `check_max_products()` + API-level 403
+- [ ] **GSRS search utility** (`src/lib/products/gsrs.ts`) — queries local `substances` + `substance_names` tables (pg_trgm) for manual ingredient entry
 
 #### Session 2: Onboarding Frontend
-- [ ] **Components**: `ProductCard`, `AddProductForm`, `IngredientIngestion` (4 tabs), `IngredientConfirmation` (✅/⚠️/❌), `GSRSAutocomplete`
+- [ ] **DSLD typeahead UI component** — autocomplete dropdown, user selects product, pull ingredients from `dsld_ingredients`
+- [ ] **Components**: `ProductCard`, `AddProductForm`, `IngredientIngestion` (4 tabs), `IngredientConfirmation` (matched/ambiguous/unmatched), `GSRSAutocomplete`
 - [ ] **Product management page** (`/app/products`) — replace mock data, add "Add Product" flow
 - [ ] **Onboarding page** (`/app/onboarding`) — post-signup, skippable, uses same components
 - [ ] **Onboarding routing** — post-signup redirect, 0-products banner on feed
@@ -103,17 +123,17 @@ status: Active — Inngest pipeline wired. Onboarding backend next.
 
 #### Deferred
 - [ ] Batch/CSV import for 50+ products
-- [ ] DSLD auto-populate (search DSLD by product name)
-- [ ] USDA FDC integration
+- [ ] USDA FDC integration (food products)
 - [ ] Product matching engine (Phase 4C — runs against product profiles)
 
-### Backfills (Running Now)
-Enrichment pipeline is ready (Session 0 complete). Running full backfills, then enriching all items in one pass.
+### Backfills (Done)
+All backfills complete. 7,572 items in DB ready for enrichment.
 
-- `npm run pipeline:wl-backfill` — full warning letters backfill. Currently 422 in DB from prior partial run.
-- `npm run pipeline:fr-backfill` — Federal Register full history (currently 66 items from Jan 2025 test window only)
-- `npm run pipeline:enforcement-backfill` — openFDA full history (currently 109 items from Jan 2025 test window only)
-- `npm run pipeline:rss-poll` — fresh RSS poll
+- WL: 3,343 warning letters (full backfill, all records)
+- FR: 1,310 items (2-year range: 2024-03 → 2026-03). `run-fetcher.ts` now supports `--start`/`--end` CLI flags.
+- Enforcement: 2,809 recalls (2-year range: 2024-03 → 2026-03, 1 transient 502 error on Supabase)
+- RSS: 2 new items from latest poll (148 skipped as known)
+- Stale enrichments: 23 enriched + 2 error items reset to `ok` via SQL
 
 ---
 
@@ -133,7 +153,7 @@ BOTH signal types with equal rigor:
 ### Signal Type 2 — Category-level
 *"All cosmetic facilities must register by July 2026"* / *"CGMP rules now apply to all supplement manufacturers"*
 - Vehicle: `item_enrichment_tags` with 4 tag dimensions → matched against subscriber product profile
-  - `product_type` — **CONTROLLED VOCAB from `product_categories` table** (~79 slugs: `skin_care`, `protein_powders`, `infant_formula`, etc.). No free text.
+  - `product_type` — **CONTROLLED VOCAB from `product_categories` table** (~111 slugs across 8 groups: `skin_care`, `protein_powders`, `prescription_drugs`, `class_ii_devices`, etc.). No free text.
   - `facility_type` — "outsourcing facility", "food manufacturer", "cosmetic contract manufacturer" (free text)
   - `claims` — "structure-function claims", "health claims", "organic" (free text)
   - `regulation` — "21 CFR 111", "MoCRA", "FSVP" (free text)
@@ -141,10 +161,10 @@ BOTH signal types with equal rigor:
 - Examples: MoCRA registration deadlines, GMP rule changes, labeling format requirements, testing protocol requirements
 - Key: `affected_ingredients = []` is CORRECT for these items. Do not hallucinate substances.
 
-### Segments removed (2026-03-04)
-- `segment_impacts` table **DROPPED** — the coarse food/supplement/cosmetics layer was never used for matching, no users, no MVP shipped. The 82 product category slugs + substance matching fully replace it.
-- Cross-reference inference (Step 1c) now infers new product **categories**, not segments. Gate check uses `slugToSector()` to derive covered sectors from Step 1's product categories.
-- `EnrichmentOutputSchema` no longer has a `segments` field. Rule validators only clear `affected_product_categories`.
+### Segments removed (2026-03-04), Sectors removed (2026-03-05)
+- `segment_impacts` table **DROPPED** — the coarse food/supplement/cosmetics layer was never used for matching, no users, no MVP shipped. The product category slugs + substance matching fully replace it.
+- Cross-reference inference (Step 1c) infers new product **categories** directly. No sector-based gate — fires whenever use contexts exist for resolved substances.
+- `EnrichmentOutputSchema` no longer has a `segments` field. `slugToSector()`, `useContextToSector()`, and `type Sector` deleted from `cross-reference.ts`.
 
 ### Schema additions (Supabase migration applied 2026-03-03)
 - `item_enrichments.regulatory_action_type` — what is happening (recall, ban_restriction, compliance_requirement, cgmp_violation, etc.)
@@ -162,7 +182,7 @@ Golden fixtures in `tests/golden/fixtures.ts` test ingredient extraction, action
 
 Step 1b: Deterministic use-context derivation from GSRS substance codes. Maps 9 code systems (CFR, CODEX, JECFA, DSLD, RXCUI, DRUG BANK, DAILYMED, EPA PESTICIDE CODE, Food Contact Sustance Notif) to 8 `UseContextCategory` types. Pure TypeScript, no LLM. GSRS codes are ground truth.
 
-Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal **sectors** beyond Step 1's product categories (~20-30% of items). Reasons about exposure routes, regulatory precedent, and action mechanism to determine which additional **product categories** are genuinely affected.
+Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (budget: 4096). Fires whenever use contexts exist for resolved substances. Reasons about exposure routes, regulatory precedent, and action mechanism to determine which additional **product categories** are genuinely affected. No sector-based gating — product categories are the decision layer.
 
 ### Key Files
 
@@ -197,7 +217,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 ## Key Decisions Made
 
 ### Product Model (Current)
-1. **Products are the core unit.** The email says "Your Marine Collagen Powder" not "This week in supplements." Sectors (food/supplement/cosmetic) are derived from product categories, not stored separately.
+1. **Products are the core unit.** The email says "Your Marine Collagen Powder" not "This week in supplements." Product categories are the classification layer — sectors exist only as display metadata.
 2. **Real product data from public databases.** DSLD for supplements (214K products, structured ingredients), USDA FDC for food (454K products). Cosmetics is manual entry (no public database). Not self-reported guesses — verified ingredient lists.
 3. **Two emails, two jobs.** Weekly Update (generic, free, content marketing) + Product Intelligence Email (custom per subscriber, paid, event-driven).
 4. **Product intelligence is event-driven.** Something affects your products → email immediately. Nothing happened → weekly "all clear." Don't wait for Friday if something is urgent.
@@ -264,7 +284,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 
 ## Infrastructure Status
 - **GitHub**: https://github.com/Gr0x01/policycanary (main branch)
-- **Supabase**: Schema live — 25 tables, RLS enabled, seed data applied. 175 regulatory items + 109 enforcement details in DB.
+- **Supabase**: Schema live — 25+ tables, RLS enabled, seed data applied. **7,572 regulatory items** (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 169K substances, 950K codes.
 - **Local**: `npm run dev` starts on localhost:3000
 
 ## Pipeline File Map
@@ -293,7 +313,7 @@ src/pipeline/fetchers/
 
 src/pipeline/enrichment/
   prompts.ts                        # System prompt, Zod output schema, buildEnrichmentPrompt()
-  processor.ts                      # enrichItem() — LLM call, rule validators, cross-ref, DB writes
+  processor.ts                      # enrichItem() — LLM call, cross-ref, DB writes
   cross-reference.ts                # Steps 1b (use-context lookup) + 1c (LLM cross-category inference)
   embeddings.ts                     # Chunking + OpenAI embedding generation
   runner.ts                         # Orchestration — content-fetch → enrich → embed per item
@@ -308,4 +328,18 @@ scripts/
 
 tests/golden/
   fixtures.ts                       # 10 golden fixtures with expected enrichment output
+
+src/lib/products/
+  types.ts                          # Zod schemas (CreateProduct, UpdateProduct, DSLDSearch) + response types
+  queries.ts                        # Server-only: DSLD search/detail, product CRUD, substance resolution, ingredient ingestion
+
+src/lib/rate-limit.ts               # Shared in-memory rate limiter (configurable limit + window)
+
+src/app/api/dsld/
+  search/route.ts                   # GET typeahead — ILIKE prefix, 30/min, auth (dev bypass)
+  [id]/route.ts                     # GET product detail + ingredients (3 parallel queries)
+
+src/app/api/products/
+  route.ts                          # GET list (with ingredient counts) + POST create (plan limit, duplicate check, DSLD ingestion)
+  [id]/route.ts                     # GET single + PATCH update + DELETE soft delete (UUID validation, ownership, 10/min)
 ```

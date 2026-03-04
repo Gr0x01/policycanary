@@ -1,7 +1,7 @@
 ---
-Last-Updated: 2026-03-04
+Last-Updated: 2026-03-06
 Maintainer: RB
-Status: Active — Inngest pipeline wired (Phase 2C). Full enrichment run in progress. Stripe, blog, cross-ref, auth shipped.
+Status: Active — Session 1 API routes shipped. Enrichment pending. Inngest wired. Stripe, blog, cross-ref, auth shipped. Sectors removed from pipeline.
 ---
 
 # Progress: Policy Canary
@@ -26,16 +26,19 @@ Status: Active — Inngest pipeline wired (Phase 2C). Full enrichment run in pro
 | **Homepage Visual Overhaul** | **2026-03-03** | **Done — light theme, two-column hero, stagger animations** |
 | **Auth: Magic Link (Phase 4A)** | **2026-03-03** | **Done — verified end-to-end. Magic link → PKCE exchange → public.users upsert → dashboard.** |
 | **Web App MVP (Phase 6)** | **2026-03-03** | **Done — feed, item detail, search API (RAG), products. Mock data layer with USE_MOCK flag.** |
-| **Stripe Subscriptions (Phase 4B)** | **2026-03-05** | **Shipped — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed (4 critical + 9 warning fixes). Migration `004`. Stripe Dashboard setup needed.** |
+| **Stripe Subscriptions (Phase 4B)** | **2026-03-05** | **Shipped — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed (4 critical + 9 warning fixes). Migration `004`. Stripe Dashboard configured, webhook live. Deployed to Vercel.** |
 | **Enrichment Pipeline (Phase 2B)** | **2026-03-04** | **Stabilized — golden tests 10/10. Content-fetch, prompt fixes, truncation removed.** |
-| **Cross-Reference Inference Layer** | **2026-03-04** | **Built + data loaded + refocused — Steps 1b + 1c. Segments removed; Step 1c now infers product categories. Schema migration, bootstrap updated, processor restructured. Code-reviewed (3 critical bugs fixed). GSRS bootstrap complete: 949K codes, 96 systems, 166K substances.** |
+| **Cross-Reference Inference Layer** | **2026-03-04** | **Built + data loaded + refocused — Steps 1b + 1c. Segments removed (2026-03-04), sectors removed (2026-03-05). Step 1c fires whenever use contexts exist (no sector gate). Schema migration, bootstrap updated, processor restructured. Code-reviewed. GSRS bootstrap complete: 949K codes, 96 systems, 166K substances.** |
 | **Blog Section** | **2026-03-05** | **Shipped — /blog, /blog/[slug], RSS feed, Clawdbot POST API. Migration 003_blog_posts. Code-reviewed (3 critical + 4 warning fixes). react-markdown + remark-gfm added.** |
-| **Product Categories Taxonomy** | **2026-03-04** | **Designed — ~79 categories from MoCRA/VCRP, 21 CFR 170.3(n), DSLD. Sacred controlled vocab (no free text). Ready for migration `005`.** |
+| **Product Categories Taxonomy** | **2026-03-04** | **Designed — ~111 categories across 8 groups (cosmetics, food, supplements, pharma, devices, biologics, tobacco, veterinary). Sacred controlled vocab (no free text). Migration applied.** |
 | **Clawdbot (OpenClaw) Deployed** | **2026-03-05** | **Live — Vultr VPS (108.61.151.130), Discord bot on Bizniz server, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.** |
 | **Session 0: Categories Migration + Enrichment** | **2026-03-04** | **Done — migration `20260304082551_product_categories_and_company_name` applied (82 categories seeded). Pipeline updated to controlled slugs. Golden tests 10/10 (38/38 assertions).** |
 | **Inngest Pipeline Orchestration (Phase 2C)** | **2026-03-04** | **Shipped (minimal) — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed (2C + 4W fixed).** |
-| Full Enrichment Run | - | In Progress |
-| Session 1: Onboarding Backend | - | Pending |
+| **DSLD Database Loaded** | **2026-03-04** | **214K products, 2M ingredients, 1.47M statements, 253K companies (4.2M rows, ~900MB). pg_trgm typeahead 12ms. Migration `dsld_product_database`. Bootstrap script `scripts/bootstrap-dsld.ts`.** |
+| **Backfills Complete** | **2026-03-04** | **Done — 7,572 items (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 2-year range for FR + enforcement. `run-fetcher.ts` supports `--start`/`--end`.** |
+| Full Enrichment Run | - | Pending (~7,567 items) |
+| **Session 1: Onboarding Backend (API Routes)** | **2026-03-05** | **Shipped — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed (3C + 6W fixed). Migration `add_unique_subscriber_products_external`. Shared rate limiter extracted.** |
+| Session 1b: Onboarding Backend (Remaining) | - | Pending — ingredient parsing (Gemini Flash), GSRS search, product classification |
 | Session 2: Onboarding Frontend | - | Pending |
 | Product Intelligence Email MVP | - | Pending |
 | Validation (sample emails, trial signups) | - | Pending |
@@ -47,14 +50,14 @@ Status: Active — Inngest pipeline wired (Phase 2C). Full enrichment run in pro
 
 | Source | Coverage | Status |
 |--------|----------|--------|
-| Federal Register API | Rules, proposed rules, notices (1994-present) | **Live** — fetcher built, 66 docs inserted (Jan 2025 test) |
-| openFDA API | Enforcement/recalls, adverse events (2004-present) | **Live** — fetcher built, 109 recalls inserted (Jan 2025 test) |
-| FDA RSS Feeds | Recalls, safety alerts, press releases (8 feeds) | **Live** — fda-rss fetcher built. 131 items inserted (first poll). |
-| FDA Warning Letters | ~3,313 letters, all centers | **Live** — warning-letters fetcher built. AJAX + per-letter scraping. MARCS-CMS extraction. |
+| Federal Register API | Rules, proposed rules, notices (1994-present) | **Backfilled** — 1,310 items (2-year: 2024-03 → 2026-03). `--start`/`--end` CLI flags added. |
+| openFDA API | Enforcement/recalls, adverse events (2004-present) | **Backfilled** — 2,809 recalls (2-year: 2024-03 → 2026-03). |
+| FDA RSS Feeds | Recalls, safety alerts, press releases (8 feeds) | **Live** — 133 items. Latest poll: 2 new. |
+| FDA Warning Letters | ~3,352 letters, all centers | **Backfilled** — 3,343 letters (full). AJAX + per-letter scraping. MARCS-CMS extraction. |
 | Regulations.gov | Comment periods, dockets | Researched — free key, Phase 2 |
 | FDA Data Dashboard | Inspections, 483s, compliance actions | Researched — requires registration, Phase 3 |
 | State regulations | Prop 65, state-level rules | Deferred (expansion) |
-| **DSLD (Supplement Products)** | **214K supplement products, structured ingredients** | **Researched — no auth, ready for onboarding** |
+| **DSLD (Supplement Products)** | **214K supplement products, structured ingredients** | **Loaded — 4.2M rows in Supabase (products, ingredients, companies, statements). pg_trgm typeahead 12ms. Refresh quarterly.** |
 | **USDA FoodData Central** | **454K branded food products** | **Researched — free key, ready for onboarding** |
 
 ---
@@ -94,8 +97,9 @@ Status: Active — Inngest pipeline wired (Phase 2C). Full enrichment run in pro
 | 2026-03-04 | **Pricing revised: $99/$399 + $6/product** | Market research validated higher pricing. $49 was below FoodDocs ($84/mo), risked credibility. $99 base signals seriousness while staying under 1hr consultant time. $399 Research tier (4x multiplier) added later once features justify it. |
 | 2026-03-04 | **Launch with Monitor tier only** | Research tier deferred until enforcement DB, AI search, and trend analysis are built. Ship Monitor first, add Research when features justify $399. |
 | 2026-03-04 | **Market validation research completed** | Pain point confirmed: FDA warning letters up 73% (H2 2025), 3,500 staff cut, no product-level monitoring tool exists for SMBs. Pricing validated: small firms spend $46K-$184K/yr on compliance, consultants charge $150-$500/hr. See `research/pain-point-validation-2026-03-04.md` and `research/pricing-validation-market-research.md`. |
-| 2026-03-04 | **Sacred product categories vocabulary** | ~79 categories from 3 official sources (MoCRA/VCRP cosmetics, 21 CFR 170.3(n) food, DSLD-derived supplements). No free text anywhere — both enrichment tagging AND subscriber product classification reference same slugs. New categories added by manual INSERT only. Enrichment pipeline `affected_product_types` (free text) → `affected_product_categories` (controlled slugs). |
-| 2026-03-04 | **Segments removed from enrichment pipeline** | `segment_impacts` table dropped. Coarse food/supplement/cosmetics segments were never used for matching and no MVP shipped. 82 product category slugs + substance matching fully replace them. Cross-reference inference now infers product categories, not segments. Migration `drop_segment_impacts` applied. |
+| 2026-03-04 | **Sacred product categories vocabulary** | ~111 categories across 8 groups (cosmetics, food, supplements, pharma, devices, biologics, tobacco, veterinary). No free text anywhere — both enrichment tagging AND subscriber product classification reference same slugs. New categories added by manual INSERT only. |
+| 2026-03-04 | **Segments removed from enrichment pipeline** | `segment_impacts` table dropped. Coarse food/supplement/cosmetics segments were never used for matching and no MVP shipped. Product category slugs + substance matching fully replace them. Migration `drop_segment_impacts` applied. |
+| 2026-03-05 | **Sectors removed from pipeline logic** | `slugToSector()`, `useContextToSector()`, `type Sector`, `SegmentType` all deleted. Step 1c cross-reference fires whenever use contexts exist (no sector gate). Sector field on `product_categories` table kept as display-only metadata (`@deprecated`). `ProductType` enum updated for new groups. `segment` fields removed from API types. All LLM prompts updated: "cross-sector" → "cross-category". |
 | 2026-03-03 | **Full backfills deferred until Phase 2B enrichment** | Don't flood DB with thousands of unenriched records. Raw ingestion without segment tags, embeddings, and substance extractions creates noise that's expensive to reprocess. Backfills run once the enrichment pipeline exists and can run alongside. |
 
 ---
@@ -242,6 +246,30 @@ Status: Active — Inngest pipeline wired (Phase 2C). Full enrichment run in pro
 - **BLOG_API_KEY generated** — added to `.env.local` (was missing).
 - **Config notes** — `gateway.mode` must be `"local"` for headless VPS. `agents.defaults.provider` is NOT a valid config key. `openclaw onboard --install-daemon` is interactive — manual systemd service needed on VPS.
 
+### 2026-03-05 — Session 1: Onboarding Backend (API Routes)
+
+- **Types + queries module** (`src/lib/products/types.ts`, `src/lib/products/queries.ts`) — Zod schemas (`CreateProductSchema` with DSLD numeric refinement, `UpdateProductSchema`, `DSLDSearchSchema`), response types (`DSLDSearchResult`, `DSLDProductDetail`, `ProductSummary`, `ProductDetail`), server-only query functions (DSLD search/detail, user products with ingredient counts, product CRUD helpers, substance resolution, DSLD ingredient ingestion).
+- **DSLD search** (`/api/dsld/search`) — GET, ILIKE prefix on `product_name`, `market_status = 'On Market'`, auth required (dev bypass), 30/min rate limit.
+- **DSLD detail** (`/api/dsld/[id]`) — GET, 3 parallel queries (product + ingredients + other_ingredients), auth required (dev bypass).
+- **Products list + create** (`/api/products`) — GET (user's active products with ingredient counts), POST (Zod validation, plan limit check with try/catch, duplicate check, insert, DSLD ingredient ingestion with substance resolution via `find_substance_by_name` RPC in `Promise.all`).
+- **Product single + update + delete** (`/api/products/[id]`) — GET (ownership check), PATCH (name/brand only, 10/min rate limit), DELETE (soft delete `is_active=false`, 10/min rate limit). UUID validation on all handlers.
+- **Shared rate limiter** (`src/lib/rate-limit.ts`) — extracted from 3 duplicated inline implementations. Single module-level Map, configurable limit + window per caller.
+- **Type consolidation** — `AddProductRequest` in `src/types/api.ts` now re-exports `CreateProductInput` derived from Zod schema via `z.infer`.
+- **Migration** (`add_unique_subscriber_products_external`) — unique partial index on `(user_id, data_source, external_id)` WHERE `external_id IS NOT NULL AND is_active = true`. Guards against duplicate race condition.
+- **Triple code-reviewed** — code-reviewer, backend-architect, code-architect. Fixes applied:
+  - **C1**: Plan limit race — detect DB trigger `23514` error, return 403 with `PLAN_LIMIT` code (not generic 500)
+  - **C2**: Duplicate race — unique partial index + detect `23505` error, return 409 with `DUPLICATE` code
+  - **C3**: UUID validation — regex check on all `[id]` route params before DB queries
+  - **W1**: Removed redundant `updated_at` manual assignment (DB trigger handles it)
+  - **W2**: `countActiveProducts`/`getMaxProducts` now throw on error (not misleading defaults)
+  - **W3**: DSLD `external_id` must be numeric (Zod `.refine()`)
+  - **W4**: Ingredient ingestion failure returns `warning` field in 201 response
+  - **W5**: Removed `product_category_id` from `UpdateProductSchema` (column migration pending)
+  - **W6**: Removed `is_active` from `UpdateProductSchema` (soft deletes via DELETE only)
+- **Substance resolution thresholds** — `>= 0.8` matched, `>= 0.5` ambiguous, `< 0.5` unmatched. More permissive than enrichment pipeline (0.90/0.95) — intentional for user-facing ingredient matching where showing "ambiguous" is useful.
+- **Files created**: `src/lib/products/types.ts`, `src/lib/products/queries.ts`, `src/lib/rate-limit.ts`, `src/app/api/dsld/search/route.ts`, `src/app/api/dsld/[id]/route.ts`, `src/app/api/products/route.ts`, `src/app/api/products/[id]/route.ts`
+- **Build clean.** `npm run type-check` + `npm run build` pass.
+
 ### 2026-03-04 — Phase 2C: Inngest Pipeline Orchestration (Minimal)
 
 - **Two Inngest functions** — `daily-ingest` (cron `0 6,18 * * *` = 6 AM + 6 PM UTC) and `enrich-batch` (event `pipeline/enrich.requested`, on-demand).
@@ -262,8 +290,8 @@ Status: Active — Inngest pipeline wired (Phase 2C). Full enrichment run in pro
 - **Schema migration** (`002_substance_codes_and_signal_source.sql`) — new `substance_codes` table (id, substance_id, code_system, code_value, code_type, is_classification, comments). `signal_source` column added to `item_enrichment_tags` (values: `'direct'` | `'cross_reference'`). Applied to Supabase. (Note: `segment_impacts` table and its `signal_source` column were subsequently dropped in `drop_segment_impacts` migration.)
 - **Bootstrap updated** (`scripts/bootstrap-gsrs.ts`) — captures ALL code systems from GSRS (no ingestion filter). Filtering to relevant systems happens at query time in `cross-reference.ts`. Supports `--codes-only` flag for fast backfills when substances are already loaded. ID lookup batched in chunks of 50 (avoids Supabase URL length limit). Batch upserts into `substance_codes` (500/batch).
 - **Step 1b: Use-context derivation** (`src/pipeline/enrichment/cross-reference.ts`) — `lookupUseContexts()`: pure TypeScript, no LLM. Queries `substance_codes` for resolved substance_ids, maps to 8 `UseContextCategory` types. CFR Part mapping: 175-178 → food_contact (checked first), 170-189 → food_additive, 73-82 → color_additive, 310-369 → otc_drug, 700-740 → cosmetic_ingredient. CODEX/JECFA functional class parsing from pipe-delimited comments.
-- **Step 1c: LLM cross-category inference** (`cross-reference.ts`) — `inferCrossCategories()`: Gemini 2.5 Pro with thinking (budget: 4096). Only fires when use contexts reveal sectors BEYOND Step 1's product categories (~20-30% of items). Detailed system prompt with exposure route reasoning, regulatory precedent. Additive-only — never modifies Step 1's direct extraction. (Originally inferred segments; refocused to product categories 2026-03-04 when segments were removed.)
-- **Processor restructured** (`processor.ts`) — new flow: Steps 1-6 unchanged → step 7 (substance resolution via `Promise.all`) → step 8 (use-context lookup, 0.95 threshold) → step 9 (cross-segment inference, non-fatal) → steps 10-16 (DB writes with signal_source). N+1 UNII lookup replaced with batch `.in()` query. Tag deduplication via `existingTagKeys` Set.
+- **Step 1c: LLM cross-category inference** (`cross-reference.ts`) — `inferCrossCategories()`: Gemini 2.5 Pro with thinking (budget: 4096). Fires whenever use contexts exist for resolved substances (no sector gate — removed 2026-03-05). Detailed system prompt with exposure route reasoning, regulatory precedent. Additive-only — never modifies Step 1's direct extraction.
+- **Processor restructured** (`processor.ts`) — new flow: Steps 1-6 unchanged → step 7 (substance resolution via `Promise.all`) → step 8 (use-context lookup, 0.95 threshold) → step 9 (cross-category inference, non-fatal) → steps 10-16 (DB writes with signal_source). N+1 UNII lookup replaced with batch `.in()` query. Tag deduplication via `existingTagKeys` Set.
 - **Types updated** (`database.ts`) — `SubstanceCode` interface, `signal_source` on `ItemEnrichmentTag`, `crossReferenced` on runner result types. (`SegmentImpact` type subsequently removed when segments were dropped.)
 - **Golden fixtures updated** — BHA expects `supplements` (min_relevance: "medium") and `cosmetics` (min_relevance: "low") via cross-reference.
 - **Code review completed** — 3 critical bugs fixed: (1) CFR food_contact range unreachable (overlap), (2) CFR regex matched title number instead of part number, (3) duplicate tag insertion on unique constraint. 2 performance fixes: N+1 UNII queries → batch, sequential substance resolution → Promise.all.
