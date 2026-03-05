@@ -336,7 +336,7 @@ export const PRODUCT_CATEGORY_SLUGS = [
 // Prompt builder
 // ---------------------------------------------------------------------------
 
-const SYSTEM_PROMPT = `You are a high-precision FDA Regulatory Compliance Officer analyzing regulatory documents.
+const SYSTEM_PROMPT = `You are a high-precision regulatory document analyst reviewing FDA regulatory documents.
 Your goal is to extract structured intelligence that is **strictly accurate**. We are monitoring for specific product impacts.
 
 ## INSTRUCTIONS
