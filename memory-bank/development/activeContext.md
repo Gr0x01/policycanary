@@ -29,7 +29,7 @@ status: Active — Session 1 API routes shipped. Onboarding frontend next.
 - [x] Two-email model decided: generic weekly update (free) + product intelligence email (paid, event-driven)
 - [x] Core memory bank updated to reflect product-centric model
 - [x] Pricing finalization — Monitor $49/mo, Monitor+Research $249/mo, +$6/product beyond 5 included
-- [x] **Data schema v1 complete** — 25 tables across 9 layers, substances-based product matching, flexible classification. See `architecture/data-schema.md`
+- [x] **Data schema v1 complete** — 22 live tables (originally 25, schema cleanup 2026-03-05). Substances-based product matching, flexible classification. See `architecture/data-schema.md`
 - [x] **Phase 1 scaffolded** — Next.js 16, Tailwind v4, Supabase clients, AI SDK v6, Inngest, TypeScript types, Playwright config
 - [x] **Phase 2A-1 complete** — FR + openFDA enforcement fetchers in `src/pipeline/fetchers/`. Test with `npm run pipeline:fr-backfill` / `npm run pipeline:enforcement-backfill`
 - [x] **Phase 2A-2 complete** — Warning Letters + FDA RSS fetchers. `npm run pipeline:wl-incremental` / `npm run pipeline:wl-backfill` / `npm run pipeline:rss-poll`. Uses `fast-xml-parser`.
@@ -286,7 +286,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 
 ## Infrastructure Status
 - **GitHub**: https://github.com/Gr0x01/policycanary (main branch)
-- **Supabase**: Schema live — 25+ tables, RLS enabled, seed data applied. **7,572 regulatory items** (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 169K substances, 950K codes.
+- **Supabase**: Schema live — 22 tables (was 25+, schema cleanup 2026-03-05), RLS enabled. **7,572 regulatory items** (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 169K substances, 950K codes. Enforcement fields now on `regulatory_items` directly (no separate table).
 - **Local**: `npm run dev` starts on localhost:3000
 
 ## Pipeline File Map

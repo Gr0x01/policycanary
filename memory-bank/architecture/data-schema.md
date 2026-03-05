@@ -1,9 +1,9 @@
 ---
 Title: Data Schema v1
 Version: v1
-Last-Updated: 2026-03-06
+Last-Updated: 2026-03-05
 Maintainer: RB
-Status: Active
+Status: Active — 22 live tables (6 dropped: segment_impacts, enforcement_details merged, item_relations, trend_signals, user_bookmarks, email_campaign_items)
 ---
 
 # Data Schema: Policy Canary v1
@@ -54,7 +54,8 @@ LAYER 5: SEARCH & RETRIEVAL
       |
       v
 LAYER 6: INTELLIGENCE
-  item_relations | enforcement_details | trend_signals
+  (enforcement fields merged into regulatory_items, 2026-03-05)
+  (item_relations, trend_signals DROPPED — premature, 2026-03-05)
       |
       v
 LAYER 7: SUBSCRIBER PRODUCTS
@@ -66,8 +67,9 @@ LAYER 8: PRODUCT MATCHING
       |
       v
 LAYER 9: USERS & EMAIL
-  users | email_subscribers | user_bookmarks
-  email_campaigns --> email_campaign_items --> email_sends
+  users | email_subscribers
+  email_campaigns --> email_sends
+  (user_bookmarks, email_campaign_items DROPPED — premature, 2026-03-05)
 ```
 
 ### Matching Flow (Ingest to Email)
@@ -170,8 +172,26 @@ The core entity. Every piece of regulatory data that enters the system. Covers: 
 | significant | BOOLEAN | | FR API `significant` flag. Null for Notices. |
 | processing_status | TEXT | NOT NULL, DEFAULT 'pending', CHECK (processing_status IN ('pending', 'ok', 'parse_error', 'incomplete_source')) | Flags bad source data before enrichment |
 | processing_error | TEXT | | Error details when processing_status != 'ok' |
+| enforcement_company_name | TEXT | | Populated for recalls + warning letters |
+| enforcement_company_address | TEXT | | |
+| enforcement_products | JSONB | | ["Product A", "Product B"] |
+| enforcement_violation_types | TEXT[] | | ['cgmp', 'adulteration', 'misbranding'] |
+| enforcement_cited_regulations | TEXT[] | | ['21 CFR 111.70', '21 CFR 101.36'] |
+| enforcement_fei_number | TEXT | | FDA Establishment Identifier |
+| enforcement_marcs_cms_number | TEXT | | Warning letter identifier from FDA |
+| enforcement_recipient_name | TEXT | | Person the letter was addressed to |
+| enforcement_recipient_title | TEXT | | |
+| enforcement_response_received | BOOLEAN | | Whether FDA received a response |
+| enforcement_closeout | BOOLEAN | | Whether the matter has been closed |
+| enforcement_recall_classification | TEXT | CHECK IN ('Class I', 'Class II', 'Class III') | Recall-specific |
+| enforcement_recall_status | TEXT | CHECK IN ('Ongoing', 'Completed', 'Terminated') | Recall-specific |
+| enforcement_voluntary_mandated | TEXT | | "Voluntary: Firm initiated" or "FDA Mandated" |
+| enforcement_distribution_pattern | TEXT | | Geographic distribution of recalled product |
+| enforcement_product_quantity | TEXT | | |
 | created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
 | updated_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | moddatetime trigger |
+
+**Note (2026-03-05):** Enforcement fields were merged from the dropped `enforcement_details` table. Previously 1:1 with regulatory_items, always JOINed together. Now direct columns — no JOIN needed.
 
 **Constraints:**
 - `uq_regulatory_items_source_ref` UNIQUE(source_id, source_ref) -- no duplicate imports
@@ -182,6 +202,10 @@ The core entity. Every piece of regulatory data that enters the system. Covers: 
 - `idx_regulatory_items_type_date` on (item_type, published_date DESC)
 - `idx_regulatory_items_jurisdiction` on (jurisdiction)
 - `idx_regulatory_items_processing_status` on (processing_status) WHERE processing_status != 'ok'
+- `idx_regulatory_items_enforcement_company` on (enforcement_company_name) WHERE NOT NULL
+- `idx_regulatory_items_enforcement_marcs` on (enforcement_marcs_cms_number) WHERE NOT NULL
+- `idx_regulatory_items_enforcement_fei` on (enforcement_fei_number) WHERE NOT NULL
+- `idx_regulatory_items_enforcement_violations` GIN on (enforcement_violation_types) WHERE NOT NULL
 
 **Design notes:**
 - FR API list endpoint is stripped down -- must fetch each doc individually for cfr_references, docket_number, effective_date, comment_deadline, action_text.
@@ -564,94 +588,17 @@ Sectioned content + vector embeddings for RAG-based AI search. Chunks carry meta
 
 ## Layer 6: Intelligence
 
-### `item_relations`
+### `item_relations` — **DROPPED**
 
-Cross-references between regulatory items. Builds the "full story" view: a proposed rule links to its final rule, which links to related enforcement actions.
+**Dropped in migration `merge_enforcement_details_and_drop_empty_tables` (2026-03-05).** Zero rows, no code references. Premature — will recreate when item cross-referencing is built.
 
-**Status:** New
+### `enforcement_details` — **MERGED INTO `regulatory_items`**
 
-| Column | Type | Constraints | Notes |
-|--------|------|-------------|-------|
-| id | UUID | PK, DEFAULT gen_random_uuid() | |
-| source_item_id | UUID | NOT NULL, FK --> regulatory_items ON DELETE CASCADE | |
-| target_item_id | UUID | NOT NULL, FK --> regulatory_items ON DELETE CASCADE | |
-| relation_type | TEXT | NOT NULL, CHECK (relation_type IN ('supersedes', 'amends', 'references', 'responds_to', 'related_enforcement', 'follow_up')) | TEXT+CHECK instead of ENUM |
-| created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
+**Merged in migration `merge_enforcement_details_and_drop_empty_tables` (2026-03-05).** Was a 1:1 table (6,126 rows) always queried via JOIN. All columns now live on `regulatory_items` with `enforcement_` prefix. Data migrated, table dropped. Fetchers (`openfda-enforcement.ts`, `warning-letters.ts`) updated to write directly to `regulatory_items`.
 
-**Constraints:**
-- `uq_item_relations` UNIQUE(source_item_id, target_item_id, relation_type)
+### `trend_signals` — **DROPPED**
 
-**Indexes:**
-- `idx_item_relations_source` on (source_item_id)
-- `idx_item_relations_target` on (target_item_id)
-
----
-
-### `enforcement_details`
-
-Structured extension for enforcement-type items (warning letters, 483s, recalls). One-to-one with the parent regulatory_item. Captures the structured fields that only enforcement items have.
-
-**Status:** New
-
-| Column | Type | Constraints | Notes |
-|--------|------|-------------|-------|
-| id | UUID | PK, DEFAULT gen_random_uuid() | |
-| item_id | UUID | NOT NULL, UNIQUE, FK --> regulatory_items ON DELETE CASCADE | One-to-one |
-| company_name | TEXT | | |
-| company_address | TEXT | | |
-| products | JSONB | | ["Product A", "Product B"] |
-| violation_types | TEXT[] | | ['cgmp', 'adulteration', 'misbranding'] |
-| cited_regulations | TEXT[] | | ['21 CFR 111.70', '21 CFR 101.36'] |
-| fei_number | TEXT | | FDA Establishment Identifier |
-| marcs_cms_number | TEXT | | Warning letter identifier from FDA |
-| recipient_name | TEXT | | Person the letter was addressed to |
-| recipient_title | TEXT | | |
-| response_received | BOOLEAN | | Whether FDA received a response |
-| closeout | BOOLEAN | | Whether the matter has been closed |
-| recall_classification | TEXT | CHECK (recall_classification IN ('Class I', 'Class II', 'Class III')) | Recall-specific |
-| recall_status | TEXT | CHECK (recall_status IN ('Ongoing', 'Completed', 'Terminated')) | Recall-specific |
-| voluntary_mandated | TEXT | | "Voluntary: Firm initiated" or "FDA Mandated" |
-| distribution_pattern | TEXT | | Geographic distribution of recalled product |
-| product_quantity | TEXT | | |
-| created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
-
-**Indexes:**
-- `idx_enforcement_company` on (company_name)
-- `idx_enforcement_violation_types` GIN on (violation_types)
-- `idx_enforcement_marcs` on (marcs_cms_number) WHERE marcs_cms_number IS NOT NULL
-- `idx_enforcement_fei` on (fei_number) WHERE fei_number IS NOT NULL
-
----
-
-### `trend_signals`
-
-Nightly-computed rolling window aggregations per category. Recomputed, not appended.
-
-**Status:** New
-
-| Column | Type | Constraints | Notes |
-|--------|------|-------------|-------|
-| id | UUID | PK, DEFAULT gen_random_uuid() | |
-| category_id | UUID | NOT NULL, FK --> regulatory_categories ON DELETE CASCADE | Points to a segment or topic |
-| period_start | DATE | NOT NULL | |
-| period_end | DATE | NOT NULL | |
-| item_count | INT | NOT NULL | Items in this window |
-| avg_relevance | REAL | | Numeric average of relevance levels (critical=5, high=4, medium=3, low=2, none=1) |
-| prev_period_count | INT | | Prior window count for comparison |
-| trend_direction | TEXT | NOT NULL, CHECK (trend_direction IN ('rising', 'stable', 'declining')) | |
-| trend_summary | TEXT | | LLM-generated, grounded in actual counts |
-| computed_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
-
-**Constraints:**
-- `uq_trend_signals` UNIQUE(category_id, period_start, period_end)
-
-**Indexes:**
-- `idx_trend_signals_category` on (category_id)
-- `idx_trend_signals_direction` on (trend_direction) WHERE trend_direction = 'rising'
-
-**Design notes:**
-- This table is REBUILT, not appended to. Nightly job truncates and recomputes rolling 30/60/90 day windows.
-- `category_id` replaces the old segment ENUM. Can now compute trends for segments, topics, or product classes.
+**Dropped in migration `merge_enforcement_details_and_drop_empty_tables` (2026-03-05).** Zero rows, no code references. Premature — will recreate when trend detection is built.
 
 ---
 
@@ -849,20 +796,9 @@ The subscriber list. Independent of `users` -- free subscribers sign up with jus
 
 ---
 
-### `user_bookmarks`
+### `user_bookmarks` — **DROPPED**
 
-Saved regulatory items for a user.
-
-**Status:** New
-
-| Column | Type | Constraints | Notes |
-|--------|------|-------------|-------|
-| user_id | UUID | NOT NULL, FK --> users ON DELETE CASCADE | Composite PK |
-| item_id | UUID | NOT NULL, FK --> regulatory_items ON DELETE CASCADE | Composite PK |
-| created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
-
-**Constraints:**
-- PRIMARY KEY (user_id, item_id)
+**Dropped in migration `merge_enforcement_details_and_drop_empty_tables` (2026-03-05).** Zero rows, no code references. Premature — will recreate when bookmarks feature is built.
 
 ---
 
@@ -901,21 +837,9 @@ Each digest or alert that gets assembled and sent. Supports both generic campaig
 
 ---
 
-### `email_campaign_items`
+### `email_campaign_items` — **DROPPED**
 
-Junction table: which regulatory items were included in each campaign. Traceability link for "which intelligence was in this email?"
-
-**Status:** New
-
-| Column | Type | Constraints | Notes |
-|--------|------|-------------|-------|
-| campaign_id | UUID | NOT NULL, FK --> email_campaigns ON DELETE CASCADE | Composite PK |
-| item_id | UUID | NOT NULL, FK --> regulatory_items ON DELETE CASCADE | Composite PK |
-| position | INT | NOT NULL | Order in the email (top story = 1) |
-| content_level | TEXT | NOT NULL, CHECK (content_level IN ('headline', 'summary', 'full_analysis')) | What depth was included |
-
-**Constraints:**
-- PRIMARY KEY (campaign_id, item_id)
+**Dropped in migration `merge_enforcement_details_and_drop_empty_tables` (2026-03-05).** Zero rows, no code references. When email campaigns are built, item references will use JSONB on `email_campaigns` instead of a separate junction table.
 
 ---
 
@@ -946,7 +870,7 @@ Individual dispatch records. One row per subscriber per campaign. The support ta
 - `idx_email_sends_subscriber_recent` on (subscriber_id, sent_at DESC)
 
 **Webhook flow:**
-1. Compile a campaign --> insert `email_campaigns` + `email_campaign_items`
+1. Compile a campaign --> insert `email_campaigns` (items stored as JSONB)
 2. For each active subscriber matching criteria --> insert `email_sends` with status 'queued'
 3. Send via Resend/Postmark --> update status to 'sent', store `provider_message_id`
 4. Provider webhooks fire --> update `delivered_at`, `opened_at`, `clicked_at`, `status`
@@ -1141,6 +1065,8 @@ Adding new product groups (pet food, hemp/CBD) requires:
 ## Row-Level Security (RLS) Policies
 
 Supabase RLS policies for client-side access. All content tables are public-read. User-specific tables are restricted to the owning user.
+
+> **Note (2026-03-05):** RLS examples below are from the original schema. Dropped tables (`user_bookmarks`, `enforcement_details`, `item_relations`, `trend_signals`, `email_campaign_items`) no longer exist. Their policies were dropped with the tables.
 
 ```sql
 -- Enable RLS on all tables
@@ -1337,16 +1263,15 @@ INSERT INTO sources (name, source_type, base_url) VALUES
 | Use Case | How It Works |
 |----------|-------------|
 | **Feed (free)** | `regulatory_items` JOIN `item_enrichments` ORDER BY published_date DESC. Generic feed for all free subscribers. |
-| **Item detail** | `regulatory_items` + `item_enrichments` + `item_enrichment_tags` + `item_citations` + `item_relations` for full context. |
+| **Item detail** | `regulatory_items` (includes enforcement_ fields) + `item_enrichments` + `item_enrichment_tags` + `item_citations` for full context. |
 | **My products affected** | `product_matches` WHERE product_id IN (user's products) AND is_dismissed = false ORDER BY created_at DESC. The personalized feed. |
 | **Match detail** | `product_matches` + `regulatory_items` + matched_substances JSONB + `item_citations`. "Why was my product flagged?" |
-| **Trend detection** | `trend_signals` WHERE category_id = :topic AND trend_direction = 'rising'. |
-| **Enforcement patterns** | `enforcement_details` JOIN `item_categories` GROUP BY violation_types. |
+| **Enforcement patterns** | `regulatory_items` WHERE enforcement_company_name IS NOT NULL, GROUP BY enforcement_violation_types. |
 | **AI search** | Embed query --> pgvector cosine similarity on `item_chunks` + filter by category/date --> pass chunks to LLM with citation-required prompt. |
 | **Substance search** | `substance_names` WHERE name % :query (trigram) or to_tsvector @@ plainto_tsquery (full-text) --> substances --> regulatory_item_substances --> regulatory_items. "Show me everything about titanium dioxide." |
 | **Pipeline health** | `pipeline_runs` WHERE source_id = :source ORDER BY started_at DESC. |
 | **Email debug** | `email_sends` WHERE subscriber_id = :sub ORDER BY sent_at DESC --> delivery status, bounce info. |
-| **Campaign contents** | `email_campaign_items` JOIN `regulatory_items` WHERE campaign_id = :id ORDER BY position. |
+| **Campaign contents** | `email_campaigns` JSONB items field (dropped `email_campaign_items` junction table). |
 | **Citation verification** | `item_citations` WHERE enrichment_id = :id --> quote_text, source_url, quote_verified. Hover-to-verify in UI. |
 | **Cross-citation search** | `item_citations` JOIN `regulatory_items` WHERE quote_text ILIKE '%identity testing%'. "Where has FDA mentioned this?" |
 
@@ -1372,28 +1297,29 @@ INSERT INTO sources (name, source_type, base_url) VALUES
 |---|-------|-------|---------|
 | 1 | sources | Source Data | Data pipeline registry |
 | 2 | pipeline_runs | Source Data | Pipeline execution log |
-| 3 | regulatory_items | Source Data | Core regulatory data entity |
+| 3 | regulatory_items | Source Data | Core entity — includes enforcement fields (merged from enforcement_details, 2026-03-05) |
 | 4 | regulatory_categories | Classification | Topics, product classes (flexible lookup) |
 | 5 | item_categories | Classification | Many-to-many item-to-category junction |
 | 6 | substances | Substance Reference | Canonical substances (GSRS-bootstrapped) |
 | 7 | substance_names | Substance Reference | Synonym resolution with fuzzy search |
-| 7b | substance_codes | Substance Reference | GSRS use-context codes for cross-reference inference |
-| 8 | item_enrichments | Enrichment | LLM summaries, key entities, key regulations |
-| ~~9~~ | ~~segment_impacts~~ | ~~Enrichment~~ | **DROPPED** (2026-03-06) — sectors derived from product categories |
+| 8 | substance_codes | Substance Reference | GSRS use-context codes for cross-reference inference |
+| 9 | item_enrichments | Enrichment | LLM summaries, key entities, key regulations |
 | 10 | item_enrichment_tags | Enrichment | Deep tagging: product_type, facility_type, claims, regulation |
 | 11 | regulatory_item_substances | Enrichment | Extracted substances per regulatory item |
 | 12 | item_citations | Enrichment | Source quotes for every AI claim |
 | 13 | item_chunks | Search & Retrieval | Sectioned content + vector(1536) embeddings |
-| 14 | item_relations | Intelligence | Cross-references between regulatory items |
-| 15 | enforcement_details | Intelligence | Structured extension for enforcement items |
-| 16 | trend_signals | Intelligence | Nightly-computed rolling window aggregations |
-| 17 | subscriber_products | Subscriber Products | Products from DSLD/FDC/manual entry |
-| 18 | product_ingredients | Subscriber Products | Structured ingredients with substance resolution |
-| 19 | product_matches | Product Matching | THE money table: regulatory item x product |
-| 20 | users | Users & Email | Authenticated accounts (Supabase Auth) |
-| 21 | email_subscribers | Users & Email | Email subscriber list (independent of users) |
-| 22 | user_bookmarks | Users & Email | Saved regulatory items |
-| 23 | email_campaigns | Users & Email | Digest/alert assembly (generic + per-subscriber) |
-| 24 | email_campaign_items | Users & Email | Items included in each campaign |
-| 25 | email_sends | Users & Email | Individual dispatch records with delivery tracking |
-| 26 | blog_posts | Blog (standalone) | Clawdbot-authored posts, public read for published, upsert on slug |
+| 14 | product_categories | Classification | Controlled vocabulary (~119 slugs across 8 groups) |
+| 15 | subscriber_products | Subscriber Products | Products from DSLD/FDC/manual entry |
+| 16 | product_ingredients | Subscriber Products | Structured ingredients with substance resolution |
+| 17 | product_matches | Product Matching | THE money table: regulatory item x product |
+| 18 | users | Users & Email | Authenticated accounts (Supabase Auth) |
+| 19 | email_subscribers | Users & Email | Email subscriber list (independent of users) |
+| 20 | email_campaigns | Users & Email | Digest/alert assembly (generic + per-subscriber) |
+| 21 | email_sends | Users & Email | Individual dispatch records with delivery tracking |
+| 22 | blog_posts | Blog (standalone) | Clawdbot-authored posts, public read for published, upsert on slug |
+| — | ~~segment_impacts~~ | — | **DROPPED** (2026-03-06) — sectors derived from product categories |
+| — | ~~enforcement_details~~ | — | **MERGED** into regulatory_items (2026-03-05) — was 1:1, always JOINed |
+| — | ~~item_relations~~ | — | **DROPPED** (2026-03-05) — premature, recreate when needed |
+| — | ~~trend_signals~~ | — | **DROPPED** (2026-03-05) — premature, recreate when needed |
+| — | ~~user_bookmarks~~ | — | **DROPPED** (2026-03-05) — premature, recreate when needed |
+| — | ~~email_campaign_items~~ | — | **DROPPED** (2026-03-05) — use JSONB on email_campaigns instead |

@@ -16,10 +16,10 @@ Status: Active — Session 1 API routes shipped. Enrichment pending. Inngest wir
 | Build Phase Planning (segment-based) | 2026-03-03 | Done — needs revision for product pivot |
 | **Product-Level Pivot** | **2026-03-03** | **Done — core model, research, pricing draft** |
 | Pricing Finalization | 2026-03-03 | Done — Monitor $49/mo, Monitor+Research $249/mo, +$6/product |
-| **Data Schema v1** | **2026-03-03** | **Done — 25 tables, 9 layers, substances-based matching** |
+| **Data Schema v1** | **2026-03-03** | **Done — 22 live tables (was 25, schema cleanup dropped 5 + merged 1). Substances-based matching.** |
 | Build Phase Revision | 2026-03-03 | Done — Phase 1 plan executed directly |
 | **Project Scaffolding** | **2026-03-03** | **Done — Next.js 16, AI SDK v6, Supabase, Inngest, Tailwind v4** |
-| **Schema Live (Supabase)** | **2026-03-03** | **Done — 25 tables, RLS, seeds applied. GitHub: Gr0x01/policycanary** |
+| **Schema Live (Supabase)** | **2026-03-03** | **Done — 22 live tables, RLS, seeds applied. GitHub: Gr0x01/policycanary** |
 | **Marketing Site** | **2026-03-03** | **Done — landing page, pricing, sample report, signup API. Homepage visual pass: gradient fix, ProductShowcase, How It Works rebuild.** |
 | **Data Pipeline: FR + openFDA** | **2026-03-03** | **Done — fetchers built + tested. 175 items, 109 enforcement details in DB** |
 | **Data Pipeline: Warning Letters + RSS** | **2026-03-03** | **Done — fetchers built + tested. 422 WL items in DB (partial; full 3,313-record backfill deferred to Phase 2B). 131 RSS items. 364 MARCS numbers extracted.** |
@@ -104,6 +104,7 @@ Status: Active — Session 1 API routes shipped. Enrichment pending. Inngest wir
 | 2026-03-05 | **Per-product price raised to $10/mo (from $6)** | Market research validated: $6 was below every intelligence-layer monitoring comparable. BrandMentions $5-8/keyword (social scraping), Ahrefs $10-17/project (SEO). $10 is floor for LLM-powered regulatory analysis. Round number psychology, instant mental math. Roadmap to $15-20 as intelligence deepens (cross-reference, trends, matching). |
 | 2026-03-05 | **All FDA sectors accepted, no tier gating** | Pharma/device/tobacco/biologics products welcome at same $99/mo + $10/product. No sector-based pricing tiers. Research showed 5,500+ small device companies with no affordable monitoring tool (gap from free → $25K+/yr). These buyers have 2-8 products, manual entry is fine. Don't block money. Marketing focuses food/supplements/cosmetics; system accepts all. Device companies are the best expansion target after core sectors. |
 | 2026-03-03 | **Full backfills deferred until Phase 2B enrichment** | Don't flood DB with thousands of unenriched records. Raw ingestion without segment tags, embeddings, and substance extractions creates noise that's expensive to reprocess. Backfills run once the enrichment pipeline exists and can run alongside. |
+| 2026-03-05 | **Schema cleanup: 33 → 28 tables** | `enforcement_details` merged into `regulatory_items` (was 1:1, 6,126 rows migrated, eliminated JOIN tax). Dropped 5 premature empty tables: `trend_signals`, `item_relations`, `user_bookmarks`, `email_campaign_items`. Fetchers updated to write enforcement fields directly. TypeScript types cleaned up (removed 5 dead interfaces, 2 unused enum types). Migration: `merge_enforcement_details_and_drop_empty_tables`. |
 
 ---
 
@@ -140,7 +141,7 @@ Status: Active — Session 1 API routes shipped. Enrichment pending. Inngest wir
 - Visual data flow diagrams created: `architecture/llm-data-flow.html`
 
 ### 2026-03-03 — Data Schema v1
-- **Designed v1 schema from scratch** — 25 tables across 9 layers. Replaces the draft v3 segment-based schema (never built).
+- **Designed v1 schema from scratch** — originally 25 tables across 9 layers (now 22 after schema cleanup). Replaces the draft v3 segment-based schema (never built).
 - **Three research streams synthesized**: backend-architect schema proposal, ingredient matching research (UNII/GSRS/synonym resolution), FDA classification research (CFR structure, openFDA fields, cross-cutting regulations, state regulatory patterns).
 - **Key architectural decisions**:
   - **Substances layer**: Canonical `substances` table (bootstrapped from FDA GSRS, 169K substances) + `substance_names` synonym table with pg_trgm fuzzy search. Both product ingredients AND regulatory item extractions resolve to substance_ids. Matching is ID-to-ID, not string-to-string.
@@ -165,12 +166,12 @@ Status: Active — Session 1 API routes shipped. Enrichment pending. Inngest wir
 ### 2026-03-03 — Phase 2A-1: Data Pipeline (Federal Register + openFDA Enforcement)
 
 - **Federal Register fetcher** (`src/pipeline/fetchers/federal-register.ts`) — paginated list + per-doc detail fetch, 100ms rate limiting, 6-month backfill windows, deduplication via `(source_id, source_ref)`, maps FR types to `rule/proposed_rule/notice`
-- **openFDA enforcement fetcher** (`src/pipeline/fetchers/openfda-enforcement.ts`) — skip-based pagination, 250ms rate limiting, 3-month backfill windows, writes to both `regulatory_items` + `enforcement_details`, deterministic `source_ref` from recall_number → event_id → hash
+- **openFDA enforcement fetcher** (`src/pipeline/fetchers/openfda-enforcement.ts`) — skip-based pagination, 250ms rate limiting, 3-month backfill windows, writes enforcement fields directly to `regulatory_items`, deterministic `source_ref` from recall_number → event_id → hash
 - **Shared utilities** (`src/pipeline/fetchers/utils.ts`) — `FetcherResult` type, `parseFdaDate`, `dateWindowsFor`, `sleep`, `logPipelineRun`
 - **Zod schemas** (`src/pipeline/fetchers/schemas/`) — validates all API responses, parse failures counted + logged without crashing
 - **Dev test script** (`scripts/run-fetcher.ts`) — loads `.env.local`, runs narrow Jan–Feb 2025 window
 - **npm scripts** — `pipeline:fr-backfill`, `pipeline:enforcement-backfill`
-- **Tested against real APIs**: 66 FR docs + 109 recalls inserted, 2 `pipeline_runs` logged as `success`, `enforcement_details` 1:1 with recalls. `npm run type-check` clean.
+- **Tested against real APIs**: 66 FR docs + 109 recalls inserted, 2 `pipeline_runs` logged as `success`, enforcement fields populated on recalls. `npm run type-check` clean.
 
 ### 2026-03-03 — Phase 4A: Auth (Magic Link)
 
@@ -340,10 +341,10 @@ Status: Active — Session 1 API routes shipped. Enrichment pending. Inngest wir
 - **Supabase clients**: browser (`client.ts`), server (`server.ts`), admin service role (`admin.ts`)
 - **AI SDK v6** clients: `geminiFlash`/`geminiPro` (enrichment), `claudeSonnet` (writing), `generateEmbedding()` (OpenAI, 1536d)
 - **Inngest** client + `/api/inngest` route handler ready for pipeline functions
-- **Full v1 schema migration**: `supabase/migrations/001_initial_schema.sql` — all 25 tables, 9 layers, vector(1536) embeddings, pg_trgm indexes, moddatetime triggers
+- **Full v1 schema migration**: `supabase/migrations/001_initial_schema.sql` — original 25 tables (now 22 after cleanup), 9 layers, vector(1536) embeddings, pg_trgm indexes, moddatetime triggers
 - **Seed file**: `supabase/seeds/001_sources.sql` — 9 sources + regulatory_categories (segments, topics, product classes)
 - **GSRS bootstrap script**: `scripts/bootstrap-gsrs.ts` — seeds 169K FDA substances + 950K codes. Supports `--codes-only` flag for fast code backfills.
-- **TypeScript types**: hand-written types for all 25 tables (`database.ts`), enums (`enums.ts`), API types (`api.ts`)
+- **TypeScript types**: hand-written types for all tables (`database.ts`), enums (`enums.ts`), API types (`api.ts`)
 - **Playwright config**: chromium + firefox + webkit, webServer auto-start
 - **Verified**: `npm run type-check` passes, `npm run build` passes cleanly
 

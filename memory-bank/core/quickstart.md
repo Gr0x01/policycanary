@@ -94,10 +94,10 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] Build phase planning (needs revision for product-level model)
 - [x] **Product-level pivot** — product-centric model, new pricing research, new market sizing
 - [x] Pricing finalization — Monitor $49/mo, Monitor+Research $249/mo, +$6/product
-- [x] **Data schema v1** — 25 tables, 9 layers, substances-based matching, flexible classification
+- [x] **Data schema v1** — 22 live tables (originally 25, schema cleanup merged enforcement_details + dropped 5 premature). Substances-based matching, flexible classification
 - [x] Build phase revision
 - [x] **Project setup** — Next.js 16, Supabase, Tailwind v4, AI SDK v6, Inngest
-- [x] **Schema live** — 25 tables applied to Supabase, RLS enabled, seeds run
+- [x] **Schema live** — 22 tables in Supabase, RLS enabled, seeds run
 - [x] **Marketing site** — landing, pricing, sample report, signup API. Static-rendered. Visual overhaul: light Stripe-like theme, two-column hero, staggered How It Works with step connectors, radar pulse on urgent dot.
 - [x] **Data pipeline: FR + openFDA** — fetchers built, tested. 175 items + 109 enforcement details in DB.
 - [x] Data pipeline: Warning Letters + FDA RSS (Phase 2A-2)
@@ -116,6 +116,7 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] **Backfills complete** — 7,572 items (2-year FR + enforcement, full WL, RSS). `run-fetcher.ts` supports `--start`/`--end`.
 - [ ] Enrich all items (~7,567 pending, `npm run pipeline:enrich -- --limit 500`)
 - [x] **Session 1: Onboarding backend (API routes)** — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed.
+- [x] **Schema cleanup** — enforcement_details merged into regulatory_items, dropped 5 premature empty tables (trend_signals, item_relations, user_bookmarks, email_campaign_items). 33→28 tables.
 - [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility, product classification
 - [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.

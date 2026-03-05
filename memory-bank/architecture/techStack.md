@@ -27,7 +27,7 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 
 ### Infrastructure
 - **Hosting**: Vercel (seamless Next.js integration)
-- **Database Hosting**: Supabase (managed Postgres) — **schema live, 25 tables applied**
+- **Database Hosting**: Supabase (managed Postgres) — **schema live, 22 tables (was 25, cleanup 2026-03-05)**
 - **CDN**: Vercel Edge Network (included)
 - **Analytics**: PostHog (product analytics)
 - **Email**: Resend (chosen)
