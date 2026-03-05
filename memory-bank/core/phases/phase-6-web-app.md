@@ -231,3 +231,15 @@ SUBAGENTS:
 - **SQL injection in search/filter:** Use parameterized queries ONLY. Never interpolate user input into SQL.
 - **Feed pagination:** Use cursor-based pagination (last item's published_date + id), not OFFSET. OFFSET gets slower as pages increase.
 - **Enforcement export:** CSV export should be server-rendered to avoid large client-side data transfers.
+
+### Post-Phase Update: Lifecycle State System (2026-03-06)
+
+`urgency_score` is **no longer used for display**. It has been replaced by the lifecycle state system:
+
+- **`src/lib/utils/lifecycle.ts`** — pure `getLifecycleState()` classifies items as `urgent | active | grace | archived` from `item_type`, `published_date`, and `deadline`. No DB changes.
+- **Feed** defaults to live items only (urgent/active/grace). "Include Archived" toggle pill reveals older items.
+- **FeedItemCard** shows lifecycle dots (red=urgent, amber=grace) + `opacity-60` for grace/archived.
+- **FeedDetailPanel** shows always-visible lifecycle badge (replaces conditional `urgencyBadge()`).
+- **ProductsLayout** splits verdicts into live (`activeMatches`) vs archived (`resolvedHistory`) via `isLiveState()`. Status derived from live verdicts only.
+- **MatchCard** maps lifecycle→status (`urgent→action_required`, `active→under_review`, `grace→watch`, `archived→all_clear`).
+- **`getProductVerdictCounts()`** skips archived items — sidebar badges reflect live verdicts only.

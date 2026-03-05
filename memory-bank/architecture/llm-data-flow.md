@@ -101,7 +101,7 @@ flowchart TB
     %% Free email
     ENR --> FREE_TEMPLATE --> FREE_EMAIL
 
-    %% Paid email
+    %% Paid email (lifecycle state computed at query time, not stored)
     ENR & IT & TAGS --> MATCH
     PRODUCTS --> MATCH
     MATCH --> COMPOSE --> PAID_EMAIL

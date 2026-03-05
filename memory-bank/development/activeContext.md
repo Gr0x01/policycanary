@@ -4,12 +4,12 @@ created: 2026-03-03
 last-updated: 2026-03-06
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — All 7,573 items enriched. Session 2 onboarding frontend continuing.
+status: Active — Lifecycle state system shipped. Session 2 onboarding frontend continuing.
 ---
 
 # Active Development Context
 
-**Phase:** Session 2 onboarding frontend in progress. Multi-image label upload + substance matching UI shipped. **All 7,573 items enriched.**
+**Phase:** Lifecycle state system shipped. Session 2 onboarding frontend in progress. **All 7,573 items enriched.**
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
 **Next up:** Continue Session 2 frontend (manual entry tab, product classification, onboarding routing).
 
@@ -136,13 +136,14 @@ status: Active — All 7,573 items enriched. Session 2 onboarding frontend conti
 - [x] **Urgent alert check** — `checkItemForUrgentMatches(itemId)` for post-enrichment recall/ban/safety_alert detection.
 - [x] **Migrations applied**: `add_match_rpc_functions`, `update_match_rpcs_with_specificity_v2`, `optimize_substance_matches_rpc`
 
-#### Next: Verdict Aging & Alert Lifecycle
-Verdicts currently show as "ACTIVE" regardless of age. Need a tiered approach:
-- **Deadline-driven items** (rules, proposed rules, guidance) — active until deadline passes, then archive
-- **Recalls/safety alerts** — active for 30-60 days, then archive (brand-specific recalls shouldn't linger)
-- **Warning letters** — informational for ~30 days, then archive
-- **Industry-wide rules/labeling changes** — active until compliance deadline, could be years
-Key: it's not a simple age cutoff. Item type + deadline presence determines lifecycle. Items with a future `deadline` field stay active regardless of `published_date`.
+### What's Done (Lifecycle State System)
+- [x] **Lifecycle utility** — `src/lib/utils/lifecycle.ts`: pure `getLifecycleState()` + `isLiveState()`. Deadline-first decision tree: has deadline → >90d=active, ≤90d=urgent, passed<30d=grace, passed≥30d=archived. No deadline → active window by item_type (recalls/safety/import=90d, WL/483=60d, else=30d) → archived. UTC date parsing. Injectable `now` for testability.
+- [x] **Types updated** — `lifecycle_state: LifecycleState` on `FeedItemEnriched` + `ProductVerdictItem`. No DB changes — pure computation from existing `item_type`, `published_date`, `deadline`.
+- [x] **Query functions** — `getFeedItems()`, `getProductVerdicts()` compute lifecycle per item. `getProductVerdictCounts()` skips archived items (only live verdicts count toward sidebar badges).
+- [x] **Feed page** — defaults to live items only. `showArchived` URL param + "Include Archived" toggle pill in `FeedFilters`.
+- [x] **Feed cards** — `FeedItemCard`: red dot for urgent, amber for grace, `opacity-60` for grace/archived. `FeedDetailPanel`: always-visible lifecycle badge (Urgent/Active/Grace Period/Archived) replaces old `urgencyBadge()`.
+- [x] **Products page** — `ProductsLayout.toDetailData()` splits verdicts into live vs archived via `isLiveState()`. Status derived from live verdicts only. `resolvedHistory` now populated from archived verdicts (was always empty). `MatchCard` uses lifecycle-to-status mapping.
+- [x] **Code-reviewed** — W1 fixed (UTC `Z` suffix on date parsing). W2 noted (verdict count query growth, not urgent). `urgency_score` left vestigial per plan.
 
 #### Deferred
 - [ ] Batch/CSV import for 50+ products
@@ -359,6 +360,7 @@ src/lib/products/
   queries.ts                        # Server-only: DSLD search/detail, product CRUD, substance resolution, ingredient ingestion, product_images fetch
   vision.ts                         # Multi-image vision extraction (Gemini Flash → GPT-4o-mini → Claude Haiku fallback chain)
 
+src/lib/utils/lifecycle.ts            # Lifecycle state: getLifecycleState() + isLiveState(). Pure, isomorphic.
 src/lib/rate-limit.ts               # Shared in-memory rate limiter (configurable limit + window)
 
 src/app/api/dsld/

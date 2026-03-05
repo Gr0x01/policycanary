@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-05
+Last-Updated: 2026-03-06
 Maintainer: RB
 Status: Active
 ---
@@ -95,6 +95,11 @@ Phase 6: Web App ─────────────────────
 **Complexity:** Medium | **Sessions:** 1 | **Dependencies:** Phase 2B + 4B
 **Purpose:** Score newly enriched regulatory items against subscriber product profiles and store matches for the email system.
 → Session brief: `/memory-bank/core/phases/phase-4c-product-matching-engine.md`
+
+## Lifecycle State System ✓ DONE
+**Complexity:** Low | **Sessions:** 1 | **Dependencies:** Phase 4C, Phase 6
+**Purpose:** Classify items as urgent/active/grace/archived based on deadlines and age. Pure computation from existing DB fields — no schema changes. Threads lifecycle through feed (default to live items, "Include Archived" toggle), product pages (split active vs resolved history), and item cards (lifecycle badges/dots replace urgency_score).
+**Key file:** `src/lib/utils/lifecycle.ts` — `getLifecycleState()` + `isLiveState()`
 
 ## Phase 5: Intelligence Email
 **Complexity:** High | **Sessions:** 2-3 | **Dependencies:** Phase 2C, Phase 4C

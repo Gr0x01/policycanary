@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-06
 Maintainer: RB
-Status: Active — All 7,573 items enriched. Session 2 onboarding frontend continuing. Inngest wired. Stripe, blog, cross-ref, auth shipped.
+Status: Active — Lifecycle state system shipped. Session 2 onboarding frontend continuing. Inngest wired. Stripe, blog, cross-ref, auth shipped.
 ---
 
 # Progress: Policy Canary
@@ -39,6 +39,7 @@ Status: Active — All 7,573 items enriched. Session 2 onboarding frontend conti
 | **Full Enrichment Run** | **2026-03-05** | **Done — 7,573/7,573 enriched, 0 errors. Honest classification (all FDA sectors), concurrent (p-limit@15), 119 product categories.** |
 | **Session 1: Onboarding Backend (API Routes)** | **2026-03-05** | **Shipped — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed (3C + 6W fixed). Migration `add_unique_subscriber_products_external`. Shared rate limiter extracted.** |
 | **Session 2: Multi-Image Label Upload** | **2026-03-05** | **Shipped — multi-image vision extraction (up to 5), substance hot-check at parse time, ingredient preview with match status UI, substance typeahead autocomplete. Migration `create_product_images_drop_label_image_path`. `product_images` junction table.** |
+| **Lifecycle State System** | **2026-03-06** | **Shipped — `src/lib/utils/lifecycle.ts`. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items + "Include Archived" toggle. Products page splits active vs resolved history. No DB changes — pure computation. Code-reviewed (W1 UTC fix applied).** |
 | Session 2 (Remaining) | - | Pending — manual entry tab, product classification, onboarding routing, product detail image display |
 | Product Intelligence Email MVP | - | Pending |
 | Validation (sample emails, trial signups) | - | Pending |
@@ -194,10 +195,10 @@ Status: Active — All 7,573 items enriched. Session 2 onboarding frontend conti
 ### 2026-03-03 — Phase 6: Web App MVP
 
 - **App shell** — `AppNav` (server component) + `NavLinks` (client, `usePathname`). Dark sidebar `#07111F`, amber canary dot, Feed / Search / Products links, user email + sign out. `/app/layout.tsx` provides auth guard + shell. `/app/dashboard` redirects to `/app/feed`.
-- **Feed** (`/app/feed`) — split-panel layout: feed list left, inline item detail sidebar right. URL-param filters (type, date range, My Products). `FeedItemCard`, `ItemTypeTag`, `ProductMatchBadge`, `FeedFilters` components.
+- **Feed** (`/app/feed`) — split-panel layout: feed list left, inline item detail sidebar right. URL-param filters (type, date range, My Products, Include Archived). Lifecycle state system: items classified urgent/active/grace/archived, feed defaults to live items. `FeedItemCard` (lifecycle dots + reduced opacity for grace/archived), `FeedDetailPanel` (lifecycle badge), `ItemTypeTag`, `ProductMatchBadge`, `FeedFilters` components.
 - **Item detail** (`/app/items/[id]`) — 8 conditional sections: header, status bar, what happened, action items, your products, substances, enforcement details, source footer.
 - **Search** (`/app/search`) — client component, POSTs to `/api/search`. Search API: Zod validation, auth check, rate limit (10/min/IP), OpenAI embedding, pgvector RPC with graceful fallback, RAG synthesis via `claudeSonnet`, returns `{ answer, citations }`.
-- **Products** (`/app/products`) — grouped by status (urgent/review/clear). `ProductStatusCard` component, empty state.
+- **Products** (`/app/products`) — three-panel layout. Verdicts split into live (`activeMatches`) vs archived (`resolvedHistory`) via lifecycle state. Status derived from live verdicts only. `MatchCard` maps lifecycle→status.
 - **Mock data** (`src/lib/mock/app-data.ts`) — `USE_MOCK` flag pattern: one-line swap from mock to real Supabase queries when enrichment pipeline is live.
 - Commits: `b9122b6` through `b5543f6`.
 

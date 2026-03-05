@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-05
+Last-Updated: 2026-03-06
 Maintainer: RB
 Status: Active
 ---
@@ -8,7 +8,7 @@ Status: Active
 
 ## Current State
 
-- **Status**: Session 2 onboarding frontend in progress. **All 7,573 items enriched** (0 errors). Inngest pipeline wired. Stripe, blog, cross-reference, auth all shipped.
+- **Status**: Lifecycle state system shipped. Session 2 onboarding frontend in progress. **All 7,573 items enriched** (0 errors). Inngest pipeline wired. Stripe, blog, cross-reference, auth all shipped.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GitHub**: https://github.com/Gr0x01/policycanary
@@ -19,7 +19,7 @@ Status: Active
 
 ## What's Happening
 
-**Session 2 onboarding frontend in progress.** Multi-image label upload + substance matching UI shipped. **All 7,573 items enriched** (honest classification across all FDA sectors, concurrent processing via p-limit @ 15 parallel, 119 product categories). Next: manual entry tab, product classification, onboarding routing.
+**Lifecycle state system shipped.** Feed items classified as urgent/active/grace/archived based on deadline + age. Feed defaults to live items, "Include Archived" toggle. Products page splits verdicts into active vs resolved history. No DB changes — pure computation. Session 2 onboarding frontend in progress. Next: manual entry tab, product classification, onboarding routing.
 
 ---
 
@@ -123,6 +123,7 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.
+- [x] **Lifecycle state system** — `src/lib/utils/lifecycle.ts`. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items. Products page splits active vs resolved history. No DB changes.
 - [ ] Product intelligence email MVP
 - [ ] Validation — sample emails, trial signups
 - [ ] Launch

@@ -1,7 +1,7 @@
 ---
 Title: Data Schema v1
 Version: v1
-Last-Updated: 2026-03-05
+Last-Updated: 2026-03-06
 Maintainer: RB
 Status: Active — 22 live tables (6 dropped: segment_impacts, enforcement_details merged, item_relations, trend_signals, user_bookmarks, email_campaign_items)
 ---
@@ -90,7 +90,10 @@ LAYER 9: USERS & EMAIL
      c. Category: item_enrichment_tags overlap for non-ingredient dimensions
      d. Semantic: embedding similarity for edge cases
    --> product_matches scored with confidence
-8. DELIVER: product_matches --> email_campaigns (personalized per subscriber) --> email_sends
+8. LIFECYCLE: Pure computation from item_type + published_date + deadline
+   --> urgent (deadline ≤90d) | active | grace (deadline passed <30d) | archived
+   No DB changes — computed at query time in src/lib/utils/lifecycle.ts
+9. DELIVER: product_matches --> email_campaigns (personalized per subscriber) --> email_sends
 ```
 
 ---

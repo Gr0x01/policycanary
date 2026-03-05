@@ -128,3 +128,10 @@ SUBAGENTS:
 - **Urgent alert is fire-and-forget.** Use try/catch + logging. Never let email failures block the enrichment pipeline.
 - **Synonym map is a living document.** Start with the most common FDA-regulated ingredients. Add entries as false negatives are found during QA.
 - **Empty affected_ingredients.** If enrichment returns an empty array for affected_ingredients, skip matching for that item (no ingredients to match against).
+
+## Post-Phase Update: Lifecycle State Layer (2026-03-06)
+
+The lifecycle state system sits on top of matching. Matches/verdicts are now classified as `urgent | active | grace | archived` via `src/lib/utils/lifecycle.ts` using `item_type`, `published_date`, and `deadline`. This is pure computation — no DB changes. Key effects:
+- `getProductVerdictCounts()` skips archived verdicts (sidebar badges show live items only)
+- `ProductsLayout.toDetailData()` splits verdicts into `activeMatches` (live) vs `resolvedHistory` (archived)
+- Status derivation uses `lifecycle_state === "urgent"` instead of `URGENT_TYPES` set
