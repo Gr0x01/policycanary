@@ -8,18 +8,18 @@ Status: Active
 
 ## Current State
 
-- **Status**: Session 1 API routes shipped. Enrichment pending (~7,567 items). Inngest pipeline wired. Stripe, blog, cross-reference, auth all shipped.
+- **Status**: Session 2 onboarding frontend in progress. **All 7,573 items enriched** (0 errors). Inngest pipeline wired. Stripe, blog, cross-reference, auth all shipped.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot, weekly roundup cron
-- **Next**: Enrich all items (`npm run pipeline:enrich -- --limit 500`), then Session 2 (onboarding frontend)
+- **Next**: Session 2 onboarding frontend (manual entry tab, product classification, onboarding routing)
 
 ---
 
 ## What's Happening
 
-**Session 1 API routes shipped.** DSLD search + detail, product CRUD (create/read/update/soft-delete), substance resolution on DSLD ingredient ingestion. Triple code-reviewed (3 critical + 6 warning fixes). Migration `add_unique_subscriber_products_external` applied. Shared rate limiter extracted. **Next: enrich all items, then Session 2 (onboarding frontend).**
+**Session 2 onboarding frontend in progress.** Multi-image label upload + substance matching UI shipped. **All 7,573 items enriched** (honest classification across all FDA sectors, concurrent processing via p-limit @ 15 parallel, 119 product categories). Next: manual entry tab, product classification, onboarding routing.
 
 ---
 
@@ -55,11 +55,13 @@ npm run pipeline:wl-incremental         # Warning letters incremental (recent, s
 npm run pipeline:rss-poll               # Poll all 8 FDA RSS feeds
 
 # Data Pipeline — Enrichment
-npm run pipeline:enrich                 # Enrich unenriched items (default: 10)
+npm run pipeline:enrich                 # Enrich unenriched items (default: 10, concurrency: 15)
 npm run pipeline:enrich-test            # Enrich 5 items (quick test)
+npx tsx scripts/run-enrichment.ts --limit 500 --concurrency 15  # Custom batch
+npx tsx scripts/run-enrichment.ts --limit 8000 --no-cap         # Full run (removes 2000-item safety cap)
 npm run pipeline:golden                 # Validate golden fixtures (no LLM calls)
 npm run pipeline:golden-enrich          # Re-enrich + validate golden fixtures (costs tokens)
-npm run pipeline:content-fetch-test     # Debug: fetch single FDA URL, print extracted text
+npm run pipeline:content-fetch-test     # Debug: fetch single source URL, print extracted text
 
 # Inngest (automated pipeline)
 npx inngest-cli@latest dev                     # Local Inngest dev server (dashboard: http://localhost:8288)
@@ -108,18 +110,19 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] **Blog section** — `/blog`, `/blog/[slug]`, RSS feed, Clawdbot POST API. Migration `003_blog_posts`. Code-reviewed (3 critical + 4 warning fixes applied).
 - [x] **Stripe subscriptions (Phase 4B)** — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed. Migration `004`. Stripe Dashboard configured (live mode). Commit `497ec6d`.
 - [x] Stripe Dashboard setup — products + prices created (Monitor $99, Extra $6), customer portal configured, webhook endpoint live
-- [x] **Product categories taxonomy designed** — ~111 categories across 8 groups. Sacred controlled vocab — no free text. Sectors are display-only metadata.
+- [x] **Product categories taxonomy designed** — 119 categories across 8 sectors. Sacred controlled vocab — no free text. Sectors are display-only metadata.
 - [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.
 - [x] **Session 0: Product categories migration + enrichment update** — migration applied (82 categories), pipeline uses controlled slugs, golden tests 10/10
 - [x] GSRS bootstrap complete — 949K codes, 96 code systems, 166K substances with codes
 - [x] **DSLD database loaded** — 214K products, 2M ingredients, 1.47M statements, 253K companies. pg_trgm typeahead (12ms). `scripts/bootstrap-dsld.ts`.
 - [x] **Backfills complete** — 7,572 items (2-year FR + enforcement, full WL, RSS). `run-fetcher.ts` supports `--start`/`--end`.
-- [ ] Enrich all items (~7,567 pending, `npm run pipeline:enrich -- --limit 500`)
+- [x] **Enrich all items** — 7,573/7,573 enriched, 0 errors. Honest classification (all FDA sectors), concurrent (p-limit @ 15), content-fetch expanded to all source URLs.
 - [x] **Session 1: Onboarding backend (API routes)** — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed.
 - [x] **Schema cleanup** — enforcement_details merged into regulatory_items, dropped 5 premature empty tables (trend_signals, item_relations, user_bookmarks, email_campaign_items). 33→28 tables.
 - [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility, product classification
 - [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
+- [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.
 - [ ] Product intelligence email MVP
 - [ ] Validation — sample emails, trial signups
 - [ ] Launch

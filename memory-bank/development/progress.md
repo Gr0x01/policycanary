@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-06
 Maintainer: RB
-Status: Active — Session 2 multi-image label upload shipped. Enrichment pending. Inngest wired. Stripe, blog, cross-ref, auth shipped.
+Status: Active — All 7,573 items enriched. Session 2 onboarding frontend continuing. Inngest wired. Stripe, blog, cross-ref, auth shipped.
 ---
 
 # Progress: Policy Canary
@@ -36,7 +36,7 @@ Status: Active — Session 2 multi-image label upload shipped. Enrichment pendin
 | **Inngest Pipeline Orchestration (Phase 2C)** | **2026-03-04** | **Shipped (minimal) — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed (2C + 4W fixed).** |
 | **DSLD Database Loaded** | **2026-03-04** | **214K products, 2M ingredients, 1.47M statements, 253K companies (4.2M rows, ~900MB). pg_trgm typeahead 12ms. Migration `dsld_product_database`. Bootstrap script `scripts/bootstrap-dsld.ts`.** |
 | **Backfills Complete** | **2026-03-04** | **Done — 7,572 items (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 2-year range for FR + enforcement. `run-fetcher.ts` supports `--start`/`--end`.** |
-| Full Enrichment Run | - | Pending (~7,567 items) |
+| **Full Enrichment Run** | **2026-03-05** | **Done — 7,573/7,573 enriched, 0 errors. Honest classification (all FDA sectors), concurrent (p-limit@15), 119 product categories.** |
 | **Session 1: Onboarding Backend (API Routes)** | **2026-03-05** | **Shipped — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed (3C + 6W fixed). Migration `add_unique_subscriber_products_external`. Shared rate limiter extracted.** |
 | **Session 2: Multi-Image Label Upload** | **2026-03-05** | **Shipped — multi-image vision extraction (up to 5), substance hot-check at parse time, ingredient preview with match status UI, substance typeahead autocomplete. Migration `create_product_images_drop_label_image_path`. `product_images` junction table.** |
 | Session 2 (Remaining) | - | Pending — manual entry tab, product classification, onboarding routing, product detail image display |

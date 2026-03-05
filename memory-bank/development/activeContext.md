@@ -4,14 +4,14 @@ created: 2026-03-03
 last-updated: 2026-03-06
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Session 2 multi-image label upload shipped. Onboarding frontend continuing.
+status: Active — All 7,573 items enriched. Session 2 onboarding frontend continuing.
 ---
 
 # Active Development Context
 
-**Phase:** Session 2 onboarding frontend in progress. Multi-image label upload + substance matching UI shipped.
+**Phase:** Session 2 onboarding frontend in progress. Multi-image label upload + substance matching UI shipped. **All 7,573 items enriched.**
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Enrich all ~7,567 items (`npm run pipeline:enrich -- --limit 500`, repeat). Continue Session 2 frontend (manual entry tab, product classification, onboarding routing).
+**Next up:** Continue Session 2 frontend (manual entry tab, product classification, onboarding routing).
 
 ---
 
@@ -88,11 +88,11 @@ status: Active — Session 2 multi-image label upload shipped. Onboarding fronte
 
 #### Session 0: Product Categories + Enrichment Update (DONE)
 - [x] **Migration `20260304082551_product_categories_and_company_name`** — `product_categories` table with 82 seeded rows, `product_category_id` FK on `subscriber_products`, `company_name` on `users`, RLS policies. Applied via Supabase MCP.
-- [x] **Enrichment pipeline updated** — `prompts.ts`: `PRODUCT_CATEGORY_SLUGS` constant (~111 slugs), `affected_product_categories` (controlled slugs). `processor.ts`: writes slugs to `item_enrichment_tags`. `cross-reference.ts`: Step 1c uses controlled slugs, no sector gate. Golden tests 10/10, 38/38 assertions.
+- [x] **Enrichment pipeline updated** — `prompts.ts`: 119 `PRODUCT_CATEGORY_SLUGS` across 8 sectors, honest classification (no artificial scoping). `processor.ts`: upsert for idempotent re-enrichment, `maxRetries: 2`. `runner.ts`: concurrent via p-limit (default 15). `content-fetch.ts`: no host allowlist (trusts source URLs from our fetchers).
 - [x] **GSRS bootstrap complete** — 949K codes, 96 systems, 166K substances. `--codes-only` mode added for future backfills.
 - [x] **DSLD database loaded** — 214K products, 2M ingredients, 1.47M statements, 253K companies (4.2M rows, ~900MB). pg_trgm typeahead at 12ms. `scripts/bootstrap-dsld.ts`. Refresh quarterly.
-- [x] **Backfills complete** — 7,572 items in DB (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). Stale enrichments reset (23 enriched + 2 error → ok).
-- [ ] **Enrich all items** — ~7,567 at `ok` status, ~5 enriched. Run `npm run pipeline:enrich -- --limit 500` in batches. Est. 6-10 hrs, $15-30.
+- [x] **Backfills complete** — 7,572 items in DB (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases).
+- [x] **All 7,573 items enriched** — 0 errors. Honest classification across all FDA sectors. Concurrent processing (p-limit @ 15). Content fetched from FDA.gov + federalregister.gov. 119 product categories in DB.
 
 #### Session 1: Onboarding Backend — API Routes (DONE)
 - [x] **DSLD typeahead API** (`/api/dsld/search`, `/api/dsld/[id]`) — ILIKE prefix search on local `dsld_products`, product detail + ingredients join. 30/min rate limit, auth required (dev bypass for curl testing).
@@ -127,10 +127,27 @@ status: Active — Session 2 multi-image label upload shipped. Onboarding fronte
 - [x] **Code-reviewed** — 2 criticals + 4 warnings fixed (error handling, limit validation, parallel fetchers, concurrency key, RSS param cleanup, error truncation)
 - [x] **RSS fetcher cleanup** — removed unused `{ mode: "poll" }` param from `fetchFdaRss()` signature
 
+### What's Done (Phase 4C: Product Matching Engine)
+- [x] **Matching query module** — `src/lib/products/matches.ts`. No new tables — matches computed via JOINs on existing data.
+- [x] **Two match signals**: substance matches (`regulatory_item_substances` ↔ `product_ingredients` on `substance_id`) + category matches (`item_enrichment_tags` product_type ↔ `subscriber_products` via `product_category_id`)
+- [x] **Relevance scoring** — substance specificity (IDF-like: `1/log2(count+1)`) weights down ubiquitous substances (Sugar, Listeria) and boosts specific ones (Gum Acacia, Semaglutide). Category overlap and action type (ban_restriction) boost score.
+- [x] **3 Postgres RPC functions** — `get_substance_matches(user_id, since?)`, `get_category_matches(user_id, since?)`, `check_urgent_matches(item_id)`. Optimized CTE scopes frequency counting to user's substances only (~3.8ms).
+- [x] **15-minute in-memory cache** — `invalidateUserMatches(userId)` on product add/remove, `invalidateAllMatches()` after enrichment.
+- [x] **Urgent alert check** — `checkItemForUrgentMatches(itemId)` for post-enrichment recall/ban/safety_alert detection.
+- [x] **Migrations applied**: `add_match_rpc_functions`, `update_match_rpcs_with_specificity_v2`, `optimize_substance_matches_rpc`
+
+#### Next: Verdict Aging & Alert Lifecycle
+Verdicts currently show as "ACTIVE" regardless of age. Need a tiered approach:
+- **Deadline-driven items** (rules, proposed rules, guidance) — active until deadline passes, then archive
+- **Recalls/safety alerts** — active for 30-60 days, then archive (brand-specific recalls shouldn't linger)
+- **Warning letters** — informational for ~30 days, then archive
+- **Industry-wide rules/labeling changes** — active until compliance deadline, could be years
+Key: it's not a simple age cutoff. Item type + deadline presence determines lifecycle. Items with a future `deadline` field stay active regardless of `published_date`.
+
 #### Deferred
 - [ ] Batch/CSV import for 50+ products
 - [ ] USDA FDC integration (food products)
-- [ ] Product matching engine (Phase 4C — runs against product profiles)
+- [ ] Supplier/company detail on products — enables matching facility-specific actions to actual suppliers
 
 ### Backfills (Done)
 All backfills complete. 7,572 items in DB ready for enrichment.
@@ -159,7 +176,7 @@ BOTH signal types with equal rigor:
 ### Signal Type 2 — Category-level
 *"All cosmetic facilities must register by July 2026"* / *"CGMP rules now apply to all supplement manufacturers"*
 - Vehicle: `item_enrichment_tags` with 4 tag dimensions → matched against subscriber product profile
-  - `product_type` — **CONTROLLED VOCAB from `product_categories` table** (~111 slugs across 8 groups: `skin_care`, `protein_powders`, `prescription_drugs`, `class_ii_devices`, etc.). No free text.
+  - `product_type` — **CONTROLLED VOCAB from `product_categories` table** (119 slugs across 8 sectors: `skin_care`, `protein_powders`, `prescription_drugs`, `class_ii_devices`, etc.). No free text.
   - `facility_type` — "outsourcing facility", "food manufacturer", "cosmetic contract manufacturer" (free text)
   - `claims` — "structure-function claims", "health claims", "organic" (free text)
   - `regulation` — "21 CFR 111", "MoCRA", "FSVP" (free text)
@@ -217,7 +234,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 ### What's Needed to Activate
 
 1. **Run golden tests** — `npm run pipeline:golden-enrich` to validate BHA cross-reference expansion
-2. **Re-enrich 422 WLs** — one pass with cross-reference inference
+2. ~~**Re-enrich 422 WLs**~~ — DONE. All 7,573 items enriched with cross-reference inference active.
 
 ---
 
@@ -292,7 +309,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 
 ## Infrastructure Status
 - **GitHub**: https://github.com/Gr0x01/policycanary (main branch)
-- **Supabase**: Schema live — 22 tables (was 25+, schema cleanup 2026-03-05), RLS enabled. **7,572 regulatory items** (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 169K substances, 950K codes. Enforcement fields now on `regulatory_items` directly (no separate table).
+- **Supabase**: Pro plan (Small compute, 2GB RAM, 2-core ARM). Schema live — 22 tables, RLS enabled. **7,573 regulatory items ALL ENRICHED** (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 169K substances, 950K codes, 119 product categories. Enforcement fields on `regulatory_items` directly.
 - **Local**: `npm run dev` starts on localhost:3000
 
 ## Pipeline File Map
@@ -325,11 +342,11 @@ src/pipeline/enrichment/
   cross-reference.ts                # Steps 1b (use-context lookup) + 1c (LLM cross-category inference)
   embeddings.ts                     # Chunking + OpenAI embedding generation
   runner.ts                         # Orchestration — content-fetch → enrich → embed per item
-  content-fetch.ts                  # Fetch full FDA page content for thin RSS items
+  content-fetch.ts                  # Fetch full page content for thin RSS items (any source URL, no host allowlist)
 
 scripts/
   run-fetcher.ts                    # Dev CLI: fr-backfill, enforcement-backfill, wl-backfill, wl-incremental, rss-poll
-  run-enrichment.ts                 # Dev CLI: enrich unenriched items (--limit, --type)
+  run-enrichment.ts                 # Dev CLI: enrich unenriched items (--limit, --type, --concurrency, --no-cap)
   run-golden-tests.ts               # Golden fixture validation (--enrich to re-enrich first)
   test-content-fetch.ts             # Debug: fetch single FDA URL and print extracted text
   bootstrap-gsrs.ts                 # Seeds 169K substances + 950K codes. --codes-only for fast backfills.
