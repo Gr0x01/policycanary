@@ -152,18 +152,18 @@ tags drive matching. See `tests/golden/fixtures.ts` for the quality target.
 - **Stripe webhook pattern** — read raw body with `request.text()` FIRST, verify signature with `constructEvent()`, always return 200 after verification (even if DB write fails). See `src/app/api/stripe/webhook/route.ts`.
 - **Stripe checkout pattern** — auth required, get-or-create customer (unique constraint prevents duplicates), guard against double-subscription, try/catch around Stripe API calls. See `src/app/api/stripe/checkout/route.ts`.
 
-### Key Tables (v1 Schema — 25 tables, 9 layers)
+### Key Tables (v1 Schema — 22 live tables)
 
-**Layer 1 — Sources**: `sources`, `pipeline_runs`, `regulatory_items`
-**Layer 2 — Classification**: `regulatory_categories` (slug lookup), `item_categories` (junction)
-**Layer 3 — Substances**: `substances` (169K GSRS, canonical + UNII/CAS), `substance_names` (synonyms, pg_trgm fuzzy)
+**Layer 1 — Sources**: `sources`, `pipeline_runs`, `regulatory_items` (includes enforcement_ columns — merged from dropped `enforcement_details`)
+**Layer 2 — Classification**: `regulatory_categories` (slug lookup), `item_categories` (junction), `product_categories` (controlled vocab, ~119 slugs)
+**Layer 3 — Substances**: `substances` (169K GSRS, canonical + UNII/CAS), `substance_names` (synonyms, pg_trgm fuzzy), `substance_codes` (GSRS cross-ref)
 **Layer 4 — Enrichment**: `item_enrichments`, `item_enrichment_tags`, `regulatory_item_substances`, `item_citations`
 **Layer 5 — Search**: `item_chunks` (vector(1536) embeddings)
-**Layer 6 — Intelligence**: `item_relations`, `enforcement_details`, `trend_signals`
-**Layer 7 — Users & Email**: `users`, `email_subscribers`, `user_bookmarks`, `email_campaigns`, `email_campaign_items`, `email_sends`
+**Layer 7 — Users & Email**: `users`, `email_subscribers`, `email_campaigns`, `email_sends`
 **Layer 8 — Products**: `subscriber_products`, `product_ingredients`
 **Layer 9 — Matching**: `product_matches` (THE money table — item × subscriber product)
 **Standalone — Blog**: `blog_posts` (slug unique, category CHECK, status draft/published, RLS public read for published)
+**Dropped (2026-03-05)**: `enforcement_details` (merged into regulatory_items), `item_relations`, `trend_signals`, `user_bookmarks`, `email_campaign_items` — all premature, will recreate when needed
 
 **users table Stripe columns**: `stripe_customer_id` (TEXT, UNIQUE), `stripe_subscription_id` (TEXT), `access_level` (TEXT CHECK 'free'|'monitor'|'monitor_research', default 'free'), `max_products` (INT, default 1), `trial_ends_at` (TIMESTAMPTZ)
 
