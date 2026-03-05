@@ -281,15 +281,47 @@ Worth it. One consultant who brings 5 clients pays for themselves. And the quali
 
 ---
 
+## SEO Keyword Research (DataForSEO, March 2026)
+
+### Key Finding
+**40 of 71 tested keywords have ZERO search volume** — including everything that describes our product category directly ("FDA regulatory monitoring", "FDA compliance monitoring tool", "ingredient compliance monitoring"). Nobody is searching for what we build by name. SEO must target **what they're already searching for**, not what we are.
+
+### High-Value Keyword Clusters
+
+| Cluster | Keywords | Vol | CPC | Strategy |
+|---------|----------|-----|-----|----------|
+| **FDA Warning Letters** | "FDA warning letter" (5,400), "FDA warning letter database" (480) | 5,880 | $11-13 | Deep-dive analysis posts per notable WL. Public searchable WL page. |
+| **FDA Recalls** | "FDA recall list" (4,400), "food recall FDA" (2,900) | 7,300 | $2-3 | Weekly recall recap posts from enriched data. |
+| **MoCRA** | "MoCRA FDA" (210), "MoCRA registration" (170), "MoCRA requirements" (70), "MoCRA compliance" (50) | 500 | $3-5 | Deadline-driven content. Evergreen guides. Time-sensitive = high conversion. |
+| **Supplement Regulations** | "FDA supplement regulations" (480), "FDA 483 observations" (90) | 570 | $8-9 | Enforcement pattern analysis. CGMP deep-dives. |
+| **Food Additives/Bans** | "FDA red 40 ban" (40), "FDA banned ingredients" (20) | 60 | $0 | Low volume but EXACT target buyer. Ingredient-specific posts. |
+| **Consultant Adjacent** | "FDA regulatory consultant" (40) | 40 | $21.67 | Highest CPC = highest intent. Content targeting people looking for consultant alternatives. |
+
+### Zero-Volume Keywords (Don't Target These)
+FDA regulatory monitoring, FDA regulatory intelligence, FDA regulatory alerts, FDA compliance monitoring tool, supplement product monitoring, ingredient compliance monitoring, product recall monitoring, regulatory risk monitoring, affordable FDA compliance, FDA compliance cost
+
+### SEO Content Strategy
+1. **Warning letter analysis** = rank for "FDA warning letter" cluster (5,400 vol, $11.78 CPC)
+2. **Recall recaps** = rank for "FDA recall list" / "food recall FDA" (7,300 combined vol)
+3. **MoCRA guides** = deadline-driven, high conversion intent
+4. **Public warning letter database page** = rank for "FDA warning letter database" (480 vol, $12.95 CPC) — our enriched data IS this
+5. **483 observation analysis** = rank for "FDA 483 observations" (90 vol, $9.31 CPC)
+
+### Blog Post to Conversion Funnel
+Blog post (organic) -> "Policy Canary monitors this for YOUR products" CTA -> email signup -> free weekly update -> trial -> paid
+
+---
+
 ## Open Questions
 
-1. **Blog design** — should it feel like part of the marketing site (light, Stripe-ish) or have its own editorial feel? Leaning toward consistent with the rest of the site.
-2. **Seed content** — write 2-3 posts manually before building clawdbot automation? Or launch blog + clawdbot simultaneously?
+1. ~~**Blog design**~~ — DONE. Consistent with marketing site.
+2. ~~**Seed content**~~ — DONE. Clawdbot + weekly roundup live.
 3. **Content calendar** — should clawdbot maintain a content calendar in Supabase? Or just react to incoming data?
 4. **Cover images** — generate with AI (DALL-E/Midjourney)? Use stock? Skip images entirely for MVP?
 5. **Byline** — RB's name on personal LinkedIn, "Policy Canary" on company posts and blog?
 6. **Consultant selection** — who specifically? Need to research active FDA consultants on LinkedIn who work with small supplement/food brands.
 7. **Consultant review format** — structured rubric (accuracy score, nuance score) or freeform feedback?
+8. **Public warning letter database** — high-SEO-value page. Build as /app/warnings public view? Or /resources/warning-letters?
 
 ---
 
