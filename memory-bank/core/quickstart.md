@@ -8,18 +8,19 @@ Status: Active
 
 ## Current State
 
-- **Status**: Lifecycle state system shipped. Session 2 onboarding frontend in progress. **All 7,573 items enriched** (0 errors). Inngest pipeline wired. Stripe, blog, cross-reference, auth all shipped.
+- **Status**: Pilot program signup live. Re-enrichment complete. Verdict system live. Lifecycle state shipped.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
+- **GTM**: Pilot program (no pricing surfaced). Signup collects name+company+email+consent → magic link → monitor access (5 products). Pricing page hidden from nav but accessible via direct URL.
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot, weekly roundup cron
+- **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 3 cron jobs: weekly-roundup (Fri 9AM), seo-blog-post (Tue+Thu 10AM)
 - **Next**: Session 2 onboarding frontend (manual entry tab, product classification, onboarding routing)
 
 ---
 
 ## What's Happening
 
-**Lifecycle state system shipped.** Feed items classified as urgent/active/grace/archived based on deadline + age. Feed defaults to live items, "Include Archived" toggle. Products page splits verdicts into active vs resolved history. No DB changes — pure computation. Session 2 onboarding frontend in progress. Next: manual entry tab, product classification, onboarding routing.
+**Full re-enrichment complete + verdict system live.** All 7,566 items re-enriched with tightened cross-ref + verdict prompts (8 errors). Verdict system evaluates item-product relevance via Gemini Flash — brand-specific recalls filtered as noise, industry-wide actions flagged. App pages (feed, products, item detail) wired to real data, mocks removed. Lifecycle state system classifies items as urgent/active/grace/archived. Search hidden (not at launch). Next: Session 2 onboarding frontend (manual entry tab, product classification, onboarding routing).
 
 ---
 
@@ -32,6 +33,7 @@ Status: Active
 | **Web app** (paid) | Search, enforcement DB, trends, archive — personalized to your products | Paid subscribers |
 
 **Pricing:** Monitor $99/mo (5 products included) · Monitor+Research $399/mo (future — not at launch) · +$10/product beyond 5 (roadmap to $15-20) · Free: 1 product post-trial · Monthly billing · Self-serve up to 100 products · Launch with Monitor tier only · All FDA sectors accepted at same price
+**Pilot program (current GTM):** No pricing shown. Signup → magic link → full Monitor access (5 products). Pricing page hidden from nav, accessible via direct URL with "pilot program active" banner. No Stripe checkout surfaced. Key copy shift: recalls + regulatory deadlines (not warning letters).
 
 ---
 
@@ -68,6 +70,10 @@ npx inngest-cli@latest dev                     # Local Inngest dev server (dashb
 # daily-ingest: cron 0 6,18 * * * (6 AM + 6 PM UTC) — 4 fetchers parallel + enrichment
 # enrich-batch: send event "pipeline/enrich.requested" with { limit?, itemTypeFilter? }
 
+# Verdicts (product-item relevance evaluation)
+npx tsx scripts/run-verdicts.ts                    # Backfill verdicts for dev user's products (concurrent)
+npx tsx scripts/run-verdicts.ts --user <userId>    # Backfill for specific user
+
 # One-time seeds
 npx tsx scripts/bootstrap-gsrs.ts              # Full bootstrap: 169K substances + 950K codes
 npx tsx scripts/bootstrap-gsrs.ts --codes-only  # Codes-only backfill (substances already loaded)
@@ -81,6 +87,11 @@ su - openclaw -c 'openclaw cron list'             # List scheduled jobs
 su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 # Local setup script:
 ./scripts/clawdbot/setup-clawdbot.sh {provision|deploy|configure|cron|ssh|status}
+# Skills on VPS: weekly-roundup, seo-blog-post
+# Cron: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), seo-blog-thursday (Thu 10AM)
+
+# SEO Keyword Research
+npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volume + difficulty
 ```
 
 ---
@@ -111,7 +122,8 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] **Stripe subscriptions (Phase 4B)** — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed. Migration `004`. Stripe Dashboard configured (live mode). Commit `497ec6d`.
 - [x] Stripe Dashboard setup — products + prices created (Monitor $99, Extra $6), customer portal configured, webhook endpoint live
 - [x] **Product categories taxonomy designed** — 119 categories across 8 sectors. Sacred controlled vocab — no free text. Sectors are display-only metadata.
-- [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, weekly-roundup cron (Fridays 9 AM ET), blog publish pipeline. `scripts/clawdbot/` in repo.
+- [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, blog publish pipeline. `scripts/clawdbot/` in repo. 3 cron jobs: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), seo-blog-thursday (Thu 10AM).
+- [x] **SEO keyword research + content strategy** — DataForSEO API, 5 target keyword clusters, seo-blog-post skill deployed. Content marketing plan updated with data.
 - [x] **Session 0: Product categories migration + enrichment update** — migration applied (82 categories), pipeline uses controlled slugs, golden tests 10/10
 - [x] GSRS bootstrap complete — 949K codes, 96 code systems, 166K substances with codes
 - [x] **DSLD database loaded** — 214K products, 2M ingredients, 1.47M statements, 253K companies. pg_trgm typeahead (12ms). `scripts/bootstrap-dsld.ts`.
@@ -124,6 +136,9 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.
 - [x] **Lifecycle state system** — `src/lib/utils/lifecycle.ts`. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items. Products page splits active vs resolved history. No DB changes.
+- [x] **Verdict system** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates item-product relevance. Tightened prompt filters brand-specific recall noise. Three triggers: post-enrichment, post-product-add, CLI backfill (`scripts/run-verdicts.ts`).
+- [x] **App pages → real data** — feed, item detail, products wired to real DB. Mocks removed. Search hidden.
+- [x] **Full re-enrichment (2026-03-06)** — 7,566/7,574 re-enriched, 979 cross-refs, 669 verdicts. Tightened prompts. `server-only` removed from `admin.ts`.
 - [ ] Product intelligence email MVP
 - [ ] Validation — sample emails, trial signups
 - [ ] Launch
@@ -180,6 +195,11 @@ DISCORD_CHANNEL_ALERTS=...
 DISCORD_CHANNEL_CLAWDBOT=...     # General chat channel
 CLAWDBOT_VPS_IP=...              # Vultr VPS IP
 CLAWDBOT_VPS_ID=...              # Vultr instance ID
+
+# DataForSEO
+DATAFORSEO_LOGIN=...             # DataForSEO API login
+DATAFORSEO_PASSWORD=...          # DataForSEO API password
+DATAFORSEO_BASE64=...            # Base64-encoded login:password
 ```
 
 ---

@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-06
 Maintainer: RB
-Status: Active — Lifecycle state system shipped. Session 2 onboarding frontend continuing. Inngest wired. Stripe, blog, cross-ref, auth shipped.
+Status: Active — Pilot program signup live. Verdict system live. Lifecycle state shipped. Session 2 frontend continuing.
 ---
 
 # Progress: Policy Canary
@@ -37,9 +37,12 @@ Status: Active — Lifecycle state system shipped. Session 2 onboarding frontend
 | **DSLD Database Loaded** | **2026-03-04** | **214K products, 2M ingredients, 1.47M statements, 253K companies (4.2M rows, ~900MB). pg_trgm typeahead 12ms. Migration `dsld_product_database`. Bootstrap script `scripts/bootstrap-dsld.ts`.** |
 | **Backfills Complete** | **2026-03-04** | **Done — 7,572 items (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 2-year range for FR + enforcement. `run-fetcher.ts` supports `--start`/`--end`.** |
 | **Full Enrichment Run** | **2026-03-05** | **Done — 7,573/7,573 enriched, 0 errors. Honest classification (all FDA sectors), concurrent (p-limit@15), 119 product categories.** |
+| **Verdict System** | **2026-03-06** | **Shipped — Gemini Flash evaluates item-product relevance. Tightened prompt filters brand-specific recall noise. Three trigger points (post-enrichment, post-product-add, CLI backfill). `scripts/run-verdicts.ts` for backfills.** |
+| **App Pages → Real Data** | **2026-03-06** | **Shipped — feed, item detail, products wired to real DB. Mocks removed. Search hidden. `parseEnrichment` crash fixed. Dev auth bypass on all pages.** |
+| **Full Re-Enrichment** | **2026-03-06** | **Done — 7,566/7,574 re-enriched (8 errors), 979 cross-refs, 669 verdicts inline. Tightened cross-ref + verdict prompts. ~4.2 hours @ concurrency 15. `server-only` removed from `admin.ts` to unblock CLI.** |
 | **Session 1: Onboarding Backend (API Routes)** | **2026-03-05** | **Shipped — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed (3C + 6W fixed). Migration `add_unique_subscriber_products_external`. Shared rate limiter extracted.** |
 | **Session 2: Multi-Image Label Upload** | **2026-03-05** | **Shipped — multi-image vision extraction (up to 5), substance hot-check at parse time, ingredient preview with match status UI, substance typeahead autocomplete. Migration `create_product_images_drop_label_image_path`. `product_images` junction table.** |
-| **Lifecycle State System** | **2026-03-06** | **Shipped — `src/lib/utils/lifecycle.ts`. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items + "Include Archived" toggle. Products page splits active vs resolved history. No DB changes — pure computation. Code-reviewed (W1 UTC fix applied).** |
+| **Lifecycle State System** | **2026-03-06** | **Shipped — `src/lib/utils/lifecycle.ts` + `get_live_verdict_counts` RPC. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items + "Include Archived" toggle. Products page splits active vs resolved history. SQL-level filtering: verdict counts run entirely in Postgres, feed query adds `published_date` floor. Migration `add_get_live_verdict_counts_rpc`.** |
 | Session 2 (Remaining) | - | Pending — manual entry tab, product classification, onboarding routing, product detail image display |
 | Product Intelligence Email MVP | - | Pending |
 | Validation (sample emails, trial signups) | - | Pending |
@@ -125,6 +128,15 @@ Status: Active — Lifecycle state system shipped. Session 2 onboarding frontend
 ---
 
 ## Completed Work
+
+### 2026-03-06 — Pilot Program Signup
+- **Converted from pricing/checkout to pilot program.** No dollar amounts on homepage, no Stripe checkout surfaced. Pricing page hidden from nav (accessible via direct URL with amber "pilot program active" banner).
+- **Signup flow**: name (required) + company (required) + email + feedback consent checkbox → `email_subscribers` insert → magic link via `adminClient.auth.signInWithOtp` with user metadata → auth callback grants `access_level='monitor'`, `max_products=5` for new users only.
+- **Auth callback safety**: existing users only get profile updates (preserves Stripe-managed access_level/max_products). Login page `shouldCreateUser: false` prevents bypass.
+- **Copy shift**: Warning letter framing ($25K-$100K) removed — wrong for ICP (78% WLs are tobacco/pharma). Replaced with recalls (97% food, 1,115 Class I) and regulatory deadlines (MoCRA July 2026).
+- **Migration `add_pilot_columns_to_users`**: `pilot_feedback_consent BOOLEAN`, `pilot_consented_at TIMESTAMPTZ`, `terms_version TEXT`.
+- **Files modified**: 11 files (signup API, auth callback, SignupForm, Header, Hero, Footer, homepage, pricing page, login page, database types).
+- **Code-reviewed**: 3 criticals fixed (callback overwrites paid users, source CHECK constraint, login bypass), plus email normalization, autoComplete attrs, dark/light success text.
 
 ### 2026-03-03 — Product-Level Pivot
 - **Identified fundamental problem with segment-based approach**: "What about supplements?" isn't actionable. Users think in products, not segments. The email needs to say "Your Marine Collagen Powder is affected" not "here's what happened in supplements."

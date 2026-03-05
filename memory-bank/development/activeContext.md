@@ -4,12 +4,12 @@ created: 2026-03-03
 last-updated: 2026-03-06
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Lifecycle state system shipped. Session 2 onboarding frontend continuing.
+status: Active — Pilot program signup live. Session 2 onboarding frontend continuing.
 ---
 
 # Active Development Context
 
-**Phase:** Lifecycle state system shipped. Session 2 onboarding frontend in progress. **All 7,573 items enriched.**
+**Phase:** Pilot program signup live. Re-enrichment complete. Verdict system live. Session 2 onboarding frontend continuing.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
 **Next up:** Continue Session 2 frontend (manual entry tab, product classification, onboarding routing).
 
@@ -53,6 +53,17 @@ status: Active — Lifecycle state system shipped. Session 2 onboarding frontend
 - [x] **Migration** — `003_blog_posts` (table, indexes, RLS public read, updated_at trigger)
 - [x] **Code-reviewed** — JSON-LD injection fix, timing-safe key comparison, type-safe query projections (`BlogPostSummary`/`BlogPostRSS`), RSS null guard, content max length
 
+### What's Done (Pilot Program Signup)
+- [x] **Pilot signup flow** — `/api/signup` accepts name+company+email+consent, inserts `email_subscribers`, sends magic link via `adminClient.auth.signInWithOtp` with user metadata (name, company_name, pilot_feedback_consent, terms_version)
+- [x] **Auth callback updated** — reads pilot metadata from `user.user_metadata`, new users get `access_level='monitor'`, `max_products=5`, pilot fields. Existing users: only email/profile updated (preserves Stripe-managed access). Links `email_subscribers` by email.
+- [x] **SignupForm** — name (required), company (required), email, feedback consent checkbox with Terms/Privacy links. "Join the Pilot" button. Success shows "Check your email" with canary-colored email.
+- [x] **Homepage rewrite** — Social proof: "PILOT PROGRAM" badge, capability statement (no fabricated quote). Dark CTA: "Don't find out from a recall notice" + pilot onboarding copy. No dollar amounts anywhere.
+- [x] **Nav/footer** — Pricing link removed from Header + Footer. CTAs changed to "Join the Pilot".
+- [x] **Pricing page** — accessible via direct URL, amber "Pilot program active" banner, bottom CTA rewritten with pilot framing.
+- [x] **Login page** — "Not signed up yet? Join the pilot". `shouldCreateUser: false` (login only works for existing users).
+- [x] **DB migration** — `pilot_feedback_consent`, `pilot_consented_at`, `terms_version` columns on `users` table.
+- [x] **Code-reviewed** — 3 criticals fixed: callback no longer overwrites paid users (C1), source CHECK constraint (C3), login bypass prevention (W3). Plus: email normalization, autoComplete attributes, dark/light success text.
+
 ### What's Done (Phase 4B: Stripe Subscriptions)
 - [x] **Stripe client** — `src/lib/stripe/index.ts`, lazy `getStripe()` singleton (avoids build-time crash when env vars missing)
 - [x] **Checkout route** — POST `/api/stripe/checkout`, auth required, get-or-create Stripe customer, 14-day trial, guards against double-subscription and duplicate customers (unique constraint + conflict handling)
@@ -83,6 +94,9 @@ status: Active — Lifecycle state system shipped. Session 2 onboarding frontend
 - [x] **Weekly roundup skill** — queries enriched items → drafts 800-1200 word blog post → posts to Discord → publishes on approval
 - [x] **Cron job** — `weekly-roundup` fires Fridays 9 AM ET → `#weekly-roundup` channel
 - [x] **Local repo files** — `scripts/clawdbot/` with cloud-init, scripts, skill, setup automation
+- [x] **SEO keyword research** — DataForSEO API (`scripts/seo-research.ts`). 71 keywords tested, 31 with volume, 40 zero-volume. Key clusters: FDA warning letters (5,400 vol/$11.78 CPC), FDA recalls (7,300 combined), MoCRA (500 combined), supplement regs (570). Nobody searches for "FDA regulatory monitoring" — must target what buyers already search.
+- [x] **SEO blog post skill** — `scripts/clawdbot/skills/seo-blog-post/SKILL.md` deployed to VPS. Targets 5 keyword clusters with SEO-optimized structure. References editorial voice doc.
+- [x] **SEO blog cron** — `seo-blog-tuesday` (Tue 10AM ET) + `seo-blog-thursday` (Thu 10AM ET) → `#blog-drafts`. Rotates clusters.
 
 ### Up Next
 
@@ -134,16 +148,25 @@ status: Active — Lifecycle state system shipped. Session 2 onboarding frontend
 - [x] **3 Postgres RPC functions** — `get_substance_matches(user_id, since?)`, `get_category_matches(user_id, since?)`, `check_urgent_matches(item_id)`. Optimized CTE scopes frequency counting to user's substances only (~3.8ms).
 - [x] **15-minute in-memory cache** — `invalidateUserMatches(userId)` on product add/remove, `invalidateAllMatches()` after enrichment.
 - [x] **Urgent alert check** — `checkItemForUrgentMatches(itemId)` for post-enrichment recall/ban/safety_alert detection.
-- [x] **Migrations applied**: `add_match_rpc_functions`, `update_match_rpcs_with_specificity_v2`, `optimize_substance_matches_rpc`
+- [x] **Migrations applied**: `add_match_rpc_functions`, `update_match_rpcs_with_specificity_v2`, `optimize_substance_matches_rpc`, `add_get_live_verdict_counts_rpc`
 
 ### What's Done (Lifecycle State System)
 - [x] **Lifecycle utility** — `src/lib/utils/lifecycle.ts`: pure `getLifecycleState()` + `isLiveState()`. Deadline-first decision tree: has deadline → >90d=active, ≤90d=urgent, passed<30d=grace, passed≥30d=archived. No deadline → active window by item_type (recalls/safety/import=90d, WL/483=60d, else=30d) → archived. UTC date parsing. Injectable `now` for testability.
 - [x] **Types updated** — `lifecycle_state: LifecycleState` on `FeedItemEnriched` + `ProductVerdictItem`. No DB changes — pure computation from existing `item_type`, `published_date`, `deadline`.
-- [x] **Query functions** — `getFeedItems()`, `getProductVerdicts()` compute lifecycle per item. `getProductVerdictCounts()` skips archived items (only live verdicts count toward sidebar badges).
-- [x] **Feed page** — defaults to live items only. `showArchived` URL param + "Include Archived" toggle pill in `FeedFilters`.
+- [x] **Query functions** — `getFeedItems()`, `getProductVerdicts()` compute lifecycle per item. `getProductVerdictCounts()` uses `get_live_verdict_counts` RPC — lifecycle filtering runs entirely in Postgres.
+- [x] **SQL-level filtering** — `get_live_verdict_counts` RPC (migration `add_get_live_verdict_counts_rpc`): same decision tree as `lifecycle.ts` in SQL. Deadline items live if `deadline > now - 30d`, no-deadline items use type-based windows (90/60/30d). `getFeedItems()` adds `published_date >= now - 120d` floor when `includeArchived=false`.
+- [x] **Feed page** — defaults to live items only. `showArchived` URL param + "Include Archived" toggle pill in `FeedFilters`. Passes `includeArchived` to `getFeedItems()` for SQL-level filtering.
 - [x] **Feed cards** — `FeedItemCard`: red dot for urgent, amber for grace, `opacity-60` for grace/archived. `FeedDetailPanel`: always-visible lifecycle badge (Urgent/Active/Grace Period/Archived) replaces old `urgencyBadge()`.
 - [x] **Products page** — `ProductsLayout.toDetailData()` splits verdicts into live vs archived via `isLiveState()`. Status derived from live verdicts only. `resolvedHistory` now populated from archived verdicts (was always empty). `MatchCard` uses lifecycle-to-status mapping.
-- [x] **Code-reviewed** — W1 fixed (UTC `Z` suffix on date parsing). W2 noted (verdict count query growth, not urgent). `urgency_score` left vestigial per plan.
+- [x] **Code-reviewed** — W1 fixed (UTC `Z` suffix on date parsing). W2 (verdict count query growth) fixed with RPC. `urgency_score` left vestigial per plan.
+
+### What's Done (Verdict System + Re-Enrichment)
+- [x] **Verdict system live** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates whether regulatory items actually affect subscriber products. Three trigger points: post-enrichment (runner step d), post-product-add (API route), CLI backfill (`scripts/run-verdicts.ts` with p-limit concurrency).
+- [x] **Verdict prompt tightened** — brand-specific recalls (with UPC/lot/company) filtered as noise. Only industry-wide rules, systemic contamination, and genuine gray areas flagged. False positives dropped from 7→1 on test product (Bum Itholate Protein).
+- [x] **App pages wired to real data** — feed, item detail, products all query real DB. Mock data removed. Search hidden from nav (not available at launch).
+- [x] **Full re-enrichment complete (2026-03-06)** — 7,566/7,574 enriched (8 errors), 979 cross-references, 669 verdicts generated inline. ~4.2 hours at concurrency 15. Tightened cross-ref + verdict prompts applied.
+- [x] **`server-only` removed from `admin.ts`** — was blocking CLI scripts (enrichment runner, verdict backfill). Next.js tree-shaking already prevents client-side import of service role key.
+- [x] **`scripts/run-verdicts.ts`** — one-off verdict backfill script. Concurrent (p-limit@15). Evaluates all products against candidate items by substance + category overlap.
 
 #### Deferred
 - [ ] Batch/CSV import for 50+ products
@@ -351,6 +374,11 @@ scripts/
   run-golden-tests.ts               # Golden fixture validation (--enrich to re-enrich first)
   test-content-fetch.ts             # Debug: fetch single FDA URL and print extracted text
   bootstrap-gsrs.ts                 # Seeds 169K substances + 950K codes. --codes-only for fast backfills.
+  seo-research.ts                   # DataForSEO keyword research (bulk volume + difficulty)
+
+scripts/clawdbot/skills/
+  weekly-roundup/SKILL.md           # Weekly FDA roundup skill (Fri 9AM cron)
+  seo-blog-post/SKILL.md            # SEO-targeted blog post skill (Tue+Thu 10AM cron)
 
 tests/golden/
   fixtures.ts                       # 10 golden fixtures with expected enrichment output
