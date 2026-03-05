@@ -4,14 +4,14 @@ created: 2026-03-03
 last-updated: 2026-03-06
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Session 1 API routes shipped. Onboarding frontend next.
+status: Active — Session 2 multi-image label upload shipped. Onboarding frontend continuing.
 ---
 
 # Active Development Context
 
-**Phase:** Session 1 API routes shipped. Enrichment pending (~7,567 items to enrich).
+**Phase:** Session 2 onboarding frontend in progress. Multi-image label upload + substance matching UI shipped.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Enrich all ~7,567 items (`npm run pipeline:enrich -- --limit 500`, repeat), then Session 2 (onboarding frontend)
+**Next up:** Enrich all ~7,567 items (`npm run pipeline:enrich -- --limit 500`, repeat). Continue Session 2 frontend (manual entry tab, product classification, onboarding routing).
 
 ---
 
@@ -102,17 +102,23 @@ status: Active — Session 1 API routes shipped. Onboarding frontend next.
 - [x] **Shared rate limiter** — `src/lib/rate-limit.ts` extracted, used by DSLD search (30/min) and product mutations (10/min).
 - [x] **Triple code-reviewed** — code-reviewer, backend-architect, code-architect. 3 criticals + 6 warnings fixed. See progress.md for details.
 
-#### Session 1b: Onboarding Backend (Remaining)
-- [ ] **Ingredient parsing** (`src/lib/products/parse-ingredients.ts`) — Gemini Flash for photo/paste/URL parsing (non-DSLD products), `matchToGSRS()` for substance linking
-- [ ] **Product classification** — Gemini Flash picks `product_type` + `product_category_slug` from controlled vocab
-- [ ] **GSRS search utility** (`src/lib/products/gsrs.ts`) — queries local `substances` + `substance_names` tables (pg_trgm) for manual ingredient entry
+### What's Done (Session 2: Onboarding Frontend — Multi-Image Label Upload)
+- [x] **DB migration `create_product_images_drop_label_image_path`** — `product_images` junction table (id, product_id FK CASCADE, storage_path, sort_order, created_at) replaces `label_image_path` column on `subscriber_products`
+- [x] **Multi-image vision extraction** — `src/lib/products/vision.ts` sends all images (up to 5) in one vision API call. Fallback chain: Gemini Flash → GPT-4o-mini → Claude Haiku. Principled prompt: extracts individual FDA-matchable substances, flattens parenthetical sub-ingredients recursively.
+- [x] **Multi-image upload UI** — `LabelUpload.tsx` supports drag-and-drop + file picker for multiple images, preview grid with per-image remove buttons, "Add photo" tile with drop target, client-side cap at 5
+- [x] **Substance hot-check at parse time** — `parse-label/route.ts` resolves ALL extracted ingredients against GSRS (`resolveSubstance`) BEFORE returning to client. Users see match status immediately, not after save.
+- [x] **Ingredient preview with match status** — AddProductPanel shows green dot ("Monitoring as [canonical name]"), amber ("Possible: [name]"), gray ("Not in FDA substance database — won't generate alerts"). Header: "X monitored, Y not trackable".
+- [x] **Substance typeahead autocomplete** — `SubstanceAutocomplete` component with debounced search against `substance_names` table (166K substances). Users can add specific substances for unmatched items (e.g., add individual ingredients within "Natural & Artificial Flavors").
+- [x] **API endpoints** — `GET /api/products/search-substances?q=...` (typeahead, dedup by substance_id), `GET /api/products/resolve-ingredient?name=...` (single resolution)
+- [x] **Products API updated** — `image_paths` array replaces `label_image_path`, bulk-insert into `product_images` after product creation
+- [x] **Dev auth bypass** — consistent UUID (`70360df8-...`) across products page, parse-label route, and products route (GET/POST)
 
-#### Session 2: Onboarding Frontend
-- [ ] **DSLD typeahead UI component** — autocomplete dropdown, user selects product, pull ingredients from `dsld_ingredients`
-- [ ] **Components**: `ProductCard`, `AddProductForm`, `IngredientIngestion` (4 tabs), `IngredientConfirmation` (matched/ambiguous/unmatched), `GSRSAutocomplete`
-- [ ] **Product management page** (`/app/products`) — replace mock data, add "Add Product" flow
+#### Session 2: Onboarding Frontend (Remaining)
+- [ ] **Manual entry tab** — ingredient entry without label scan (text input + substance resolution)
+- [ ] **Product classification** — Gemini Flash picks `product_type` + `product_category_slug` from controlled vocab
 - [ ] **Onboarding page** (`/app/onboarding`) — post-signup, skippable, uses same components
 - [ ] **Onboarding routing** — post-signup redirect, 0-products banner on feed
+- [ ] **Product detail image display** — show stored product_images in ProductContextPanel (signed URLs)
 
 ### What's Done (Phase 2C: Inngest Pipeline Orchestration)
 - [x] **Inngest functions wired** — `daily-ingest` (cron `0 6,18 * * *`, 4 parallel fetchers + enrichment) and `enrich-batch` (event-driven, limit 1-200)
@@ -332,8 +338,9 @@ tests/golden/
   fixtures.ts                       # 10 golden fixtures with expected enrichment output
 
 src/lib/products/
-  types.ts                          # Zod schemas (CreateProduct, UpdateProduct, DSLDSearch) + response types
-  queries.ts                        # Server-only: DSLD search/detail, product CRUD, substance resolution, ingredient ingestion
+  types.ts                          # Zod schemas (CreateProduct, UpdateProduct, DSLDSearch, ParsedLabel, ParsedIngredient) + response types
+  queries.ts                        # Server-only: DSLD search/detail, product CRUD, substance resolution, ingredient ingestion, product_images fetch
+  vision.ts                         # Multi-image vision extraction (Gemini Flash → GPT-4o-mini → Claude Haiku fallback chain)
 
 src/lib/rate-limit.ts               # Shared in-memory rate limiter (configurable limit + window)
 
@@ -342,6 +349,13 @@ src/app/api/dsld/
   [id]/route.ts                     # GET product detail + ingredients (3 parallel queries)
 
 src/app/api/products/
-  route.ts                          # GET list (with ingredient counts) + POST create (plan limit, duplicate check, DSLD ingestion)
+  route.ts                          # GET list (with ingredient counts) + POST create (plan limit, duplicate check, DSLD ingestion, product_images bulk insert)
   [id]/route.ts                     # GET single + PATCH update + DELETE soft delete (UUID validation, ownership, 10/min)
+  parse-label/route.ts              # POST multi-image upload — vision extraction + substance hot-check + storage upload
+  search-substances/route.ts        # GET typeahead against substance_names (for manual ingredient entry)
+  resolve-ingredient/route.ts       # GET single ingredient resolution against GSRS
+
+src/components/app/products/
+  LabelUpload.tsx                   # Multi-image upload UI (drag-and-drop, previews, cap at 5)
+  AddProductPanel.tsx               # Product creation panel — DSLD search, label scan, ingredient preview with match status, substance autocomplete
 ```

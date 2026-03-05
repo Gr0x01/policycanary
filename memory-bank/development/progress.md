@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-06
 Maintainer: RB
-Status: Active — Session 1 API routes shipped. Enrichment pending. Inngest wired. Stripe, blog, cross-ref, auth shipped. Sectors removed from pipeline.
+Status: Active — Session 2 multi-image label upload shipped. Enrichment pending. Inngest wired. Stripe, blog, cross-ref, auth shipped.
 ---
 
 # Progress: Policy Canary
@@ -38,8 +38,8 @@ Status: Active — Session 1 API routes shipped. Enrichment pending. Inngest wir
 | **Backfills Complete** | **2026-03-04** | **Done — 7,572 items (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 2-year range for FR + enforcement. `run-fetcher.ts` supports `--start`/`--end`.** |
 | Full Enrichment Run | - | Pending (~7,567 items) |
 | **Session 1: Onboarding Backend (API Routes)** | **2026-03-05** | **Shipped — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed (3C + 6W fixed). Migration `add_unique_subscriber_products_external`. Shared rate limiter extracted.** |
-| Session 1b: Onboarding Backend (Remaining) | - | Pending — ingredient parsing (Gemini Flash), GSRS search, product classification |
-| Session 2: Onboarding Frontend | - | Pending |
+| **Session 2: Multi-Image Label Upload** | **2026-03-05** | **Shipped — multi-image vision extraction (up to 5), substance hot-check at parse time, ingredient preview with match status UI, substance typeahead autocomplete. Migration `create_product_images_drop_label_image_path`. `product_images` junction table.** |
+| Session 2 (Remaining) | - | Pending — manual entry tab, product classification, onboarding routing, product detail image display |
 | Product Intelligence Email MVP | - | Pending |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
