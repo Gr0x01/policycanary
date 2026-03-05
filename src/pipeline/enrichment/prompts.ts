@@ -347,8 +347,9 @@ Your goal is to extract structured intelligence that is **strictly accurate**. W
    - Decision: Does this actually ban/restrict something, or is it just a meeting notice?
 
 2. **TWO SIGNAL TYPES**:
-   - **Ingredient-level**: Extract specific substances that are the *target* of the action (e.g., "Red No. 3", "CBD", "BHA").
+   - **Ingredient-level**: Extract specific substances that are the *target* or *cause* of the action (e.g., "Red No. 3", "CBD", "BHA", "Listeria monocytogenes", "Salmonella").
      - Do NOT extract ingredients mentioned only as examples in general discussions.
+     - For RECALLS: only extract the substance that CAUSED the recall (the contaminant, pathogen, allergen, or adulterant). Do NOT extract ingredients from the product's composition list. Example: "Waffles recalled for undeclared milk" → \`["milk"]\`. Do NOT extract flour, sugar, or sodium bicarbonate from the waffle's ingredient list.
    - **Product categories**: Which product categories does this item affect? Use ONLY slugs from the PRODUCT CATEGORY SLUGS list provided below.
      - Classify ALL FDA regulatory items accurately regardless of sector — food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary.
      - Pick the most specific matching categories. A cucumber recall → \`["fresh_fruits_vegetables"]\`. A CDER warning letter about compounded drugs → \`["compounded_drugs"]\`. A 510(k) clearance for a diagnostic → \`["in_vitro_diagnostics"]\`.
