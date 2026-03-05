@@ -232,6 +232,18 @@ SUBAGENTS:
 - **Feed pagination:** Use cursor-based pagination (last item's published_date + id), not OFFSET. OFFSET gets slower as pages increase.
 - **Enforcement export:** CSV export should be server-rendered to avoid large client-side data transfers.
 
+### Post-Phase Update: Pre-Email Plumbing (2026-03-06)
+
+Product page enriched as email deep-link destination:
+
+- **URL deep linking** — `?product={uuid}&item={uuid}` on `/app/products`. Server validates UUIDs, client syncs via `replaceState`. Ready for email CTAs.
+- **Ingredient highlighting** — fixed from first-ingredient heuristic to actual `substance_id` intersection between regulatory item substances and product ingredients.
+- **Portfolio summary header** — centered bar above 3-panel layout with product count/max and status breakdown (need attention, watching, all clear).
+- **Product status banner** — per-product stats row: active items, action item total, nearest deadline, ingredients monitored. Only shows when matches > 0.
+- **Use context badges** — GSRS code system labels (e.g., "Food Additive (JECFA)") on ingredients via `getIngredientUseCodes()` querying `substance_codes` table.
+- **Cross-sector alert flags** — amber "Cross-sector" badge on MatchCards for items with `signal_source = 'cross_reference'` tags.
+- **Key files changed**: `queries.ts` (+`getIngredientUseCodes`, `ProductVerdictItem` extended with `substance_ids` + `has_cross_reference`), `[id]/route.ts` (returns `use_codes`), `ProductsLayout.tsx` (URL sync, summary header, substance intersection), `IntelligencePanel.tsx` (status banner, initial expanded item), `ProductContextPanel.tsx` (highlight fix, use context badges), `MatchCard.tsx` (cross-sector badge).
+
 ### Post-Phase Update: Lifecycle State System (2026-03-06)
 
 `urgency_score` is **no longer used for display**. It has been replaced by the lifecycle state system:
@@ -242,4 +254,5 @@ SUBAGENTS:
 - **FeedDetailPanel** shows always-visible lifecycle badge (replaces conditional `urgencyBadge()`).
 - **ProductsLayout** splits verdicts into live (`activeMatches`) vs archived (`resolvedHistory`) via `isLiveState()`. Status derived from live verdicts only.
 - **MatchCard** maps lifecycle→status (`urgent→action_required`, `active→under_review`, `grace→watch`, `archived→all_clear`).
-- **`getProductVerdictCounts()`** skips archived items — sidebar badges reflect live verdicts only.
+- **`getProductVerdictCounts()`** uses `get_live_verdict_counts` RPC — lifecycle filtering runs entirely in Postgres. Sidebar badges reflect live verdicts only.
+- **`getFeedItems()`** adds `published_date >= now - 120d` SQL floor when `includeArchived=false`, preventing ancient items from being fetched.

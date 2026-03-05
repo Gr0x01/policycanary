@@ -8,19 +8,19 @@ Status: Active
 
 ## Current State
 
-- **Status**: Pilot program signup live. Re-enrichment complete. Verdict system live. Lifecycle state shipped.
+- **Status**: Onboarding flow + manufacturer fields shipped. Route group architecture. Pilot program signup live.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
-- **GTM**: Pilot program (no pricing surfaced). Signup collects name+company+email+consent → magic link → monitor access (5 products). Pricing page hidden from nav but accessible via direct URL.
+- **GTM**: Pilot program (no pricing surfaced). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 3 cron jobs: weekly-roundup (Fri 9AM), seo-blog-post (Tue+Thu 10AM)
-- **Next**: Session 2 onboarding frontend (manual entry tab, product classification, onboarding routing)
+- **Next**: Session 2 remaining (manual entry tab, product classification). Then Phase 5 — Product Intelligence Briefing (email system).
 
 ---
 
 ## What's Happening
 
-**Full re-enrichment complete + verdict system live.** All 7,566 items re-enriched with tightened cross-ref + verdict prompts (8 errors). Verdict system evaluates item-product relevance via Gemini Flash — brand-specific recalls filtered as noise, industry-wide actions flagged. App pages (feed, products, item detail) wired to real data, mocks removed. Lifecycle state system classifies items as urgent/active/grace/archived. Search hidden (not at launch). Next: Session 2 onboarding frontend (manual entry tab, product classification, onboarding routing).
+**Onboarding flow + manufacturer fields shipped.** New users hit `/app/onboarding` (first_name, last_name, company, role, FEI) before accessing the app. Route group architecture: `(main)/` has AppNav + onboarding guard, `(onboarding)/` has minimal header. Manufacturer name + FEI collected per product for future facility-level matching against warning letters/483s. Users table: `name` column replaced with `first_name` + `last_name`. Auth callback no longer overwrites profile data on returning logins. Next: Session 2 remaining (manual entry tab, product classification), then Phase 5 email system.
 
 ---
 
@@ -32,7 +32,8 @@ Status: Active
 | **Product Intelligence Email** (paid) | Event-driven alerts + weekly all-clear. Custom per subscriber, organized by THEIR products. | Paid subscribers |
 | **Web app** (paid) | Search, enforcement DB, trends, archive — personalized to your products | Paid subscribers |
 
-**Pricing:** Monitor $99/mo (5 products included) · Monitor+Research $399/mo (future — not at launch) · +$10/product beyond 5 (roadmap to $15-20) · Free: 1 product post-trial · Monthly billing · Self-serve up to 100 products · Launch with Monitor tier only · All FDA sectors accepted at same price
+**Pricing:** Monitor $99/mo (5 products included) · Monitor+Research $399/mo (future — not at launch) · +$10/product beyond 5 (roadmap to $15-20) · **No free tier** — 14-day reverse trial, then hard cutoff · Monthly billing · Self-serve up to 100 products · Launch with Monitor tier only · All FDA sectors accepted at same price
+**Product naming:** Product Intelligence Briefing (paid weekly), Regulatory Alert (urgent), All-Clear Report (weekly no-news), Policy Canary Weekly (free newsletter, content marketing). Never say "email" in product context.
 **Pilot program (current GTM):** No pricing shown. Signup → magic link → full Monitor access (5 products). Pricing page hidden from nav, accessible via direct URL with "pilot program active" banner. No Stripe checkout surfaced. Key copy shift: recalls + regulatory deadlines (not warning letters).
 
 ---
@@ -132,7 +133,8 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Session 1: Onboarding backend (API routes)** — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed.
 - [x] **Schema cleanup** — enforcement_details merged into regulatory_items, dropped 5 premature empty tables (trend_signals, item_relations, user_bookmarks, email_campaign_items). 33→28 tables.
 - [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility, product classification
-- [ ] **Session 2: Onboarding frontend** — product management page, ingestion UI (photo/paste/URL/manual), confirmation screen, onboarding page
+- [x] **Session 2: Onboarding flow + manufacturer fields** — `/app/onboarding` (first_name, last_name, company, role, FEI). Route groups `(main)` / `(onboarding)`. Manufacturer name + FEI per product. Migrations: `add_onboarding_and_manufacturer_fields`, `split_name_into_first_last`. Brand/UI/arch consulted.
+- [ ] **Session 2 remaining** — manual entry tab, product classification, product detail image display
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.
 - [x] **Lifecycle state system** — `src/lib/utils/lifecycle.ts`. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items. Products page splits active vs resolved history. No DB changes.

@@ -90,9 +90,11 @@ LAYER 9: USERS & EMAIL
      c. Category: item_enrichment_tags overlap for non-ingredient dimensions
      d. Semantic: embedding similarity for edge cases
    --> product_matches scored with confidence
-8. LIFECYCLE: Pure computation from item_type + published_date + deadline
+8. LIFECYCLE: Computed from item_type + published_date + deadline
    --> urgent (deadline ≤90d) | active | grace (deadline passed <30d) | archived
-   No DB changes — computed at query time in src/lib/utils/lifecycle.ts
+   Client-side: src/lib/utils/lifecycle.ts (feed items, verdict display)
+   SQL-side: get_live_verdict_counts RPC (sidebar badge counts, filters archived in Postgres)
+   getFeedItems() adds published_date >= now-120d floor when not showing archived
 9. DELIVER: product_matches --> email_campaigns (personalized per subscriber) --> email_sends
 ```
 
@@ -619,13 +621,15 @@ Products belonging to a subscriber. Populated from DSLD (supplements), FoodData 
 | user_id | UUID | NOT NULL, FK --> users ON DELETE CASCADE | |
 | name | TEXT | NOT NULL | Product name as shown on label |
 | brand | TEXT | | Brand name |
-| product_type | TEXT | NOT NULL, CHECK (product_type IN ('supplement', 'food', 'cosmetic')) | |
-| data_source | TEXT | NOT NULL, CHECK (data_source IN ('dsld', 'fdc', 'manual', 'openfoodfacts')) | Where product data came from |
+| product_type | TEXT | NOT NULL, CHECK (8 values) | supplement, food, cosmetic, drug, medical_device, biologic, tobacco, veterinary |
+| data_source | TEXT | NOT NULL, CHECK (5 values) | dsld, fdc, manual, openfoodfacts, label_scan |
 | external_id | TEXT | | DSLD product ID, FDC fdcId, etc. |
 | upc_barcode | TEXT | | UPC/EAN if available |
-| label_image_url | TEXT | | Supabase Storage path for uploaded label photo |
+| label_image_url | TEXT | | Deprecated — replaced by product_images table |
 | raw_ingredients_text | TEXT | | Full ingredients list as it appears on the label |
 | product_metadata | JSONB | | Source-specific extra fields: DSLD dosage form, FDC brand owner, etc. |
+| manufacturer_name | TEXT | | Optional. Who manufactures/co-packs this product |
+| manufacturer_fei | TEXT | | Optional. Manufacturer's FDA FEI (7-10 digits). Matched against enforcement_fei_number on regulatory_items. |
 | is_active | BOOLEAN | NOT NULL, DEFAULT true | Soft delete for removed products |
 | created_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | |
 | updated_at | TIMESTAMPTZ | NOT NULL, DEFAULT now() | moddatetime trigger |
@@ -745,7 +749,12 @@ Authenticated accounts managed by Supabase Auth. A user may or may not also be a
 |--------|------|-------------|-------|
 | id | UUID | PK | Matches Supabase auth.users.id |
 | email | TEXT | UNIQUE, NOT NULL | |
-| name | TEXT | | |
+| first_name | TEXT | | Set during onboarding |
+| last_name | TEXT | | Set during onboarding |
+| company_name | TEXT | | Set during onboarding |
+| role | TEXT | | Optional. Regulatory Affairs, QA, R&D, etc. |
+| fei_number | TEXT | | Optional. FDA Facility Establishment Identifier (7-10 digits) |
+| onboarding_completed_at | TIMESTAMPTZ | | Set when user completes onboarding form. NULL = redirect to /app/onboarding |
 | stripe_customer_id | TEXT | UNIQUE | Stripe customer ID. Set on first checkout. |
 | stripe_subscription_id | TEXT | | Active Stripe subscription ID. Set by webhook, cleared on deletion. |
 | access_level | TEXT | NOT NULL, DEFAULT 'free', CHECK (access_level IN ('free', 'monitor', 'monitor_research')) | Determines feature access |

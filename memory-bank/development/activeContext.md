@@ -4,14 +4,14 @@ created: 2026-03-03
 last-updated: 2026-03-06
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Pilot program signup live. Session 2 onboarding frontend continuing.
+status: Active — Onboarding flow shipped. Manufacturer fields on products. Session 2 remaining items continuing.
 ---
 
 # Active Development Context
 
-**Phase:** Pilot program signup live. Re-enrichment complete. Verdict system live. Session 2 onboarding frontend continuing.
+**Phase:** Onboarding flow + manufacturer fields shipped. Route group architecture for app layout. Session 2 remaining items.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Continue Session 2 frontend (manual entry tab, product classification, onboarding routing).
+**Next up:** Session 2 remaining (manual entry tab, product classification). Then Phase 5 — Product Intelligence Briefing (email system).
 
 ---
 
@@ -116,6 +116,15 @@ status: Active — Pilot program signup live. Session 2 onboarding frontend cont
 - [x] **Shared rate limiter** — `src/lib/rate-limit.ts` extracted, used by DSLD search (30/min) and product mutations (10/min).
 - [x] **Triple code-reviewed** — code-reviewer, backend-architect, code-architect. 3 criticals + 6 warnings fixed. See progress.md for details.
 
+### What's Done (Product Page Pre-Email Plumbing)
+- [x] **URL deep linking** — `?product=&item=` query params on `/app/products`. Server validates UUIDs, client syncs selection via `replaceState`. Emails can now link directly to specific products and expanded match cards.
+- [x] **Ingredient highlighting fix** — `getProductVerdicts` now includes `regulatory_item_substances(substance_id)`. `verdictToMatch()` computes substance intersection with product ingredients. Context panel highlights by actual `substance_id` match, not first-ingredient heuristic.
+- [x] **Portfolio summary header** — Centered bar above 3-panel layout: product count/max, status counts (need attention, watching, all clear) with colored dots. Always shows watching row.
+- [x] **Product status banner** — Compact stats row between product header and match cards: active items count, total action items, nearest deadline, ingredients monitored. Only renders when matches exist.
+- [x] **Use context badges** — `getIngredientUseCodes()` in queries.ts queries `substance_codes` for 8 GSRS code systems (CFR, DSLD, JECFA, CODEX, RXCUI, DRUG BANK, DAILYMED, EPA PESTICIDE). API returns `use_codes` map. Context panel renders small mono badges per ingredient (e.g., "Food Additive (JECFA)").
+- [x] **Cross-sector alert flags** — `getProductVerdicts` includes `item_enrichment_tags(signal_source)`, derives `has_cross_reference: boolean`. MatchCard renders amber "Cross-sector" badge next to type label for cross-referenced items.
+- [x] **No new migrations, LLM calls, or dependencies.**
+
 ### What's Done (Session 2: Onboarding Frontend — Multi-Image Label Upload)
 - [x] **DB migration `create_product_images_drop_label_image_path`** — `product_images` junction table (id, product_id FK CASCADE, storage_path, sort_order, created_at) replaces `label_image_path` column on `subscriber_products`
 - [x] **Multi-image vision extraction** — `src/lib/products/vision.ts` sends all images (up to 5) in one vision API call. Fallback chain: Gemini Flash → GPT-4o-mini → Claude Haiku. Principled prompt: extracts individual FDA-matchable substances, flattens parenthetical sub-ingredients recursively.
@@ -127,11 +136,17 @@ status: Active — Pilot program signup live. Session 2 onboarding frontend cont
 - [x] **Products API updated** — `image_paths` array replaces `label_image_path`, bulk-insert into `product_images` after product creation
 - [x] **Dev auth bypass** — consistent UUID (`70360df8-...`) across products page, parse-label route, and products route (GET/POST)
 
+### What's Done (Session 2: Onboarding Flow + Manufacturer Fields)
+- [x] **Onboarding screen** — `/app/onboarding` collects first_name, last_name, company_name, role (custom dropdown), fei_number (optional). POST `/api/onboarding` saves + sets `onboarding_completed_at`. Brand-reviewed copy: "Let's set up your regulatory watch."
+- [x] **Route group architecture** — `(main)/` gets AppNav + onboarding redirect guard, `(onboarding)/` gets minimal header (logo + sign out only). Outer `app/layout.tsx` is auth-only. No `x-pathname` header hack needed.
+- [x] **DB migrations** — `add_onboarding_and_manufacturer_fields` (role, fei_number, onboarding_completed_at on users; manufacturer_name, manufacturer_fei on subscriber_products). `split_name_into_first_last` (first_name + last_name replace name column on users). Existing users backfilled as onboarded.
+- [x] **Manufacturer fields on products** — manufacturer_name + manufacturer_fei added to AddProductPanel (both IngredientPreviewLayout and DSLDPreviewLayout), CreateProductSchema, POST `/api/products`. Per-product, not global.
+- [x] **Auth callback fix** — returning users: only email updated (no overwrite of onboarding profile data).
+- [x] **Brand/UI consultation** — brand-guardian, ui-designer, code-architect. No icons on labels, custom dropdown (not native select), 4px radius, subtle card shadow, fade-in animation.
+
 #### Session 2: Onboarding Frontend (Remaining)
 - [ ] **Manual entry tab** — ingredient entry without label scan (text input + substance resolution)
 - [ ] **Product classification** — Gemini Flash picks `product_type` + `product_category_slug` from controlled vocab
-- [ ] **Onboarding page** (`/app/onboarding`) — post-signup, skippable, uses same components
-- [ ] **Onboarding routing** — post-signup redirect, 0-products banner on feed
 - [ ] **Product detail image display** — show stored product_images in ProductContextPanel (signed URLs)
 
 ### What's Done (Phase 2C: Inngest Pipeline Orchestration)
@@ -385,7 +400,7 @@ tests/golden/
 
 src/lib/products/
   types.ts                          # Zod schemas (CreateProduct, UpdateProduct, DSLDSearch, ParsedLabel, ParsedIngredient) + response types
-  queries.ts                        # Server-only: DSLD search/detail, product CRUD, substance resolution, ingredient ingestion, product_images fetch
+  queries.ts                        # Server-only: DSLD search/detail, product CRUD, substance resolution, ingredient ingestion, getIngredientUseCodes, product verdicts (with substance_ids + has_cross_reference)
   vision.ts                         # Multi-image vision extraction (Gemini Flash → GPT-4o-mini → Claude Haiku fallback chain)
 
 src/lib/utils/lifecycle.ts            # Lifecycle state: getLifecycleState() + isLiveState(). Pure, isomorphic.
@@ -395,14 +410,32 @@ src/app/api/dsld/
   search/route.ts                   # GET typeahead — ILIKE prefix, 30/min, auth (dev bypass)
   [id]/route.ts                     # GET product detail + ingredients (3 parallel queries)
 
+src/app/api/onboarding/route.ts     # POST onboarding form — first_name, last_name, company_name, role, fei_number → sets onboarding_completed_at
+
 src/app/api/products/
-  route.ts                          # GET list (with ingredient counts) + POST create (plan limit, duplicate check, DSLD ingestion, product_images bulk insert)
+  route.ts                          # GET list (with ingredient counts) + POST create (plan limit, duplicate check, DSLD ingestion, product_images bulk insert, manufacturer fields)
   [id]/route.ts                     # GET single + PATCH update + DELETE soft delete (UUID validation, ownership, 10/min)
   parse-label/route.ts              # POST multi-image upload — vision extraction + substance hot-check + storage upload
   search-substances/route.ts        # GET typeahead against substance_names (for manual ingredient entry)
   resolve-ingredient/route.ts       # GET single ingredient resolution against GSRS
 
+src/app/app/
+  layout.tsx                        # Auth-only guard (redirect to /login if no session). No AppNav.
+  (main)/
+    layout.tsx                      # AppNav + onboarding redirect guard (→ /app/onboarding if !onboarding_completed_at)
+    feed/page.tsx
+    products/page.tsx
+    items/[id]/page.tsx
+    search/page.tsx
+    dashboard/page.tsx              # Redirects to /app/feed
+  (onboarding)/
+    layout.tsx                      # Minimal header (canary dot + wordmark + sign out). Redirects to /app/feed if already onboarded.
+    onboarding/page.tsx             # Thin server wrapper → OnboardingForm
+
+src/components/app/
+  OnboardingForm.tsx                # Client: first_name, last_name, company_name, role (custom dropdown), fei_number. POST /api/onboarding → /app/products
+
 src/components/app/products/
   LabelUpload.tsx                   # Multi-image upload UI (drag-and-drop, previews, cap at 5)
-  AddProductPanel.tsx               # Product creation panel — DSLD search, label scan, ingredient preview with match status, substance autocomplete
+  AddProductPanel.tsx               # Product creation panel — DSLD search, label scan, ingredient preview with match status, substance autocomplete, manufacturer fields
 ```

@@ -131,7 +131,10 @@ SUBAGENTS:
 
 ## Post-Phase Update: Lifecycle State Layer (2026-03-06)
 
-The lifecycle state system sits on top of matching. Matches/verdicts are now classified as `urgent | active | grace | archived` via `src/lib/utils/lifecycle.ts` using `item_type`, `published_date`, and `deadline`. This is pure computation — no DB changes. Key effects:
-- `getProductVerdictCounts()` skips archived verdicts (sidebar badges show live items only)
+The lifecycle state system sits on top of matching. Matches/verdicts are classified as `urgent | active | grace | archived` using `item_type`, `published_date`, and `deadline`. Key effects:
+- `getProductVerdictCounts()` uses `get_live_verdict_counts` RPC — lifecycle filtering in Postgres, zero archived rows leave the DB
+- `getFeedItems()` adds `published_date` SQL floor when not showing archived
+- `getProductVerdicts()` computes lifecycle per item in JS via `src/lib/utils/lifecycle.ts`
 - `ProductsLayout.toDetailData()` splits verdicts into `activeMatches` (live) vs `resolvedHistory` (archived)
 - Status derivation uses `lifecycle_state === "urgent"` instead of `URGENT_TYPES` set
+- Migration: `add_get_live_verdict_counts_rpc`

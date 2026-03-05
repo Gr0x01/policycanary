@@ -134,7 +134,7 @@ NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 
 | Model | Provider | Purpose | Cost |
 |-------|----------|---------|------|
-| gemini-2.5-flash | Google | High-volume: category tagging, topic classification, simple summarization | ~$0.15/1M input, ~$0.60/1M output (+ thinking) |
+| gemini-2.5-flash | Google | High-volume: category tagging, topic classification, simple summarization, **verdict evaluation** (item-product relevance) | ~$0.15/1M input, ~$0.60/1M output (+ thinking) |
 | gemini-2.5-pro | Google | Complex: impact analysis, action item extraction, regulatory nuance | ~$1.25/1M input, ~$10/1M output (+ thinking) |
 | text-embedding-3-small | OpenAI | Semantic search embeddings (1536d, pgvector) | ~$0.02/1M tokens |
 | claude-sonnet-4-6 | Anthropic | Email intelligence writing, AI search synthesis | ~$3/1M input, ~$15/1M output |
