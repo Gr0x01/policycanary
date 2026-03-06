@@ -1,17 +1,17 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-06
+last-updated: 2026-03-07
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Performance pass shipped (auth caching, feed pagination). Phase 5 email system shipped.
+status: Active — PostHog analytics fully instrumented. Pilot Monitoring dashboard ready.
 ---
 
 # Active Development Context
 
-**Phase:** Performance pass shipped. Phase 5 email system shipped.
+**Phase:** PostHog analytics fully instrumented. Pilot Monitoring dashboard populated. Email pipeline ready for production testing.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Welcome email, vercel.json cron config, DNS/domain setup (SPF/DKIM/DMARC), domain warming. Session 2 remaining (manual entry tab, product classification).
+**Next up:** Session 2 remaining (manual entry tab, product classification).
 
 ---
 
@@ -38,7 +38,8 @@ status: Active — Performance pass shipped (auth caching, feed pagination). Pha
 - [x] **Homepage visual overhaul** — Stripe-like light theme: Header, Hero, ProductShowcase, Stats, Social Proof all converted to white/surface-muted; CTA remains the single dark contrast section. Hero rebuilt as two-column layout (text left, email mockup right). `HowItWorksSection` extracted to client component with Framer Motion stagger-on-scroll + animated step connectors between cards (desktop). Radar pulse (`animate-ping`) on urgent dot in email mockup.
 
 ### What's Done (Phase 6)
-- [x] **App shell** — `AppNav` (server) + `NavLinks` (client, usePathname). Dark nav `#07111F`, canary logo dot, Feed·Search·Products links, user email + sign out.
+- [x] **App shell** — `AppNav` (server) + `NavLinks` (client, usePathname). Dark nav `#07111F`, canary logo dot, Feed·Products links, initials avatar linking to settings, sign out.
+- [x] **User settings page** — `/app/settings` with profile editing (name, company, role, FEI), read-only account info (email, plan, member since), email notification toggle (`email_opted_out`), and account deletion (Stripe cleanup + Supabase auth cascade). Initials avatar in AppNav replaces email display. `getDbUser` expanded to include profile fields.
 - [x] **Feed page** — `/app/feed` with URL-param filters (type, date range, My Products). 10 mock items, graceful degradation if not enriched. Dashboard → redirect.
 - [x] **FeedItemCard, ItemTypeTag, ProductMatchBadge, FeedFilters** — full feed component set
 - [x] **Item detail** — `/app/items/[id]` with 8 conditional sections (header, status bar, what happened, action items, your products, substances, enforcement, source footer)
@@ -194,6 +195,22 @@ status: Active — Performance pass shipped (auth caching, feed pagination). Pha
 - [x] **Feed pagination API** — `GET /api/feed` with query params: offset, limit (max 50), type, range, myProducts, showArchived. Auth required (dev bypass). Limit+1 trick for `hasMore` detection without separate count query.
 - [x] **Lazy load with IntersectionObserver** — `FeedPageClient.tsx` receives initial 25 items from server, loads more pages via API. Refs (`loadingRef`, `offsetRef`, `filterQsRef`) keep observer stable — no effect teardown on state changes. Observer effect only depends on `hasMore`.
 - [x] **Framer Motion fix** — Replaced parent-orchestrated stagger animation with per-item independent `initial/animate`. Parent stagger broke when new children were appended to existing date groups (parent already finished animation → new children stuck at `opacity: 0`).
+
+### What's Done (PostHog Analytics — 2026-03-07)
+- [x] **Client-side SDK** — `posthog-js`. `PostHogProvider` wraps app (SPA manual pageview capture, session replay w/ password masking). `PostHogIdentify` identifies auth'd users by userId + email.
+- [x] **Server-side SDK** — `posthog-node`. `src/lib/analytics.ts` exports `track()`, `identifyUser()`, `trackLLM()`. Serverless-optimized: `flushAt: 1, flushInterval: 0`.
+- [x] **Client helper** — `src/lib/analytics-client.ts` exports `trackEvent()` for UI components.
+- [x] **Server events** (12 API routes): `user_login`, `onboarding_completed`, `product_created`, `product_updated`, `product_deleted`, `label_scanned`, `verdict_resolved`, `search_query`, `checkout_started`, `subscription_activated`, `subscription_downgraded`, `subscription_cancelled`, `newsletter_signup`, `pilot_signup`, `welcome_email_sent`, `monitoring_active_email_sent`
+- [x] **Client events**: `feed_item_clicked` (with item metadata), `feed_filter_changed` (filter key + value), `item_viewed` (via `TrackItemView` server→client bridge component)
+- [x] **LLM call tracking** — `trackLLM()` wrapper on all 9 AI call sites. Captures `duration_ms`, `model`, `operation`, `success`, `error_message`. Event: `llm_call`. Operations: `label_extraction`, `editorial_opening`, `lead_story`, `the_number`, `weekly_snapshot`, `enrichment`, `cross_reference`, `verdict_evaluation`, `search_answer`.
+- [x] **User identification** — `identifyUser()` in `src/app/app/layout.tsx` sets person properties (email, company, access_level, product_count, max_products, onboarding_completed, has_subscription) + company group analytics. Uses React `cache()` — zero extra DB queries.
+- [x] **Anonymous events** — Pre-auth events (`newsletter_signup`, `pilot_signup`) use `$process_person_profile: false`.
+- [x] **Pilot Monitoring dashboard** (id: 1338727) — 11 insights: Activation Funnel (login→onboard→product, 7d window), Daily Active Users, Daily Signups, Products Created, LLM Latency p50/p95, Feed Engagement, LLM Calls by Operation, WAU/Retention, Email Engagement, Time to First Product, MRR.
+- [x] **Test account cohort** — "Internal / Test Accounts" (id: 221871): rbaten@gmail.com, gr0x01@pm.me. `filterTestAccounts: true` on retention + revenue insights.
+- [x] **Revenue tracking** — `subscription_activated/downgraded/cancelled` events include `revenue` + `currency` properties for MRR insight.
+- [x] **Activation timing** — `product_created` event includes `is_first_product` boolean + `time_to_first_product_hours` (hours since signup, only on first product). Dashboard shows median.
+- [x] **Person profiles** — `person_profiles: "identified_only"` in PostHog client init (no profiles for anonymous visitors).
+- [x] **Dependencies**: `posthog-js`, `posthog-node`
 
 ### What's Done (Verdict System + Re-Enrichment)
 - [x] **Verdict system live** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates whether regulatory items actually affect subscriber products. Three trigger points: post-enrichment (runner step d), post-product-add (API route), CLI backfill (`scripts/run-verdicts.ts` with p-limit concurrency).

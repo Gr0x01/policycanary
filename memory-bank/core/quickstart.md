@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-06
+Last-Updated: 2026-03-07
 Maintainer: RB
 Status: Active
 ---
@@ -8,13 +8,13 @@ Status: Active
 
 ## Current State
 
-- **Status**: Performance pass shipped (auth caching, feed pagination). Edit product + delete shipped. Onboarding flow + manufacturer fields shipped. Route group architecture. Pilot program signup live.
+- **Status**: User settings page shipped (profile editing, account deletion, initials avatar). Alert system hardened. Welcome email + PostHog analytics shipped.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GTM**: Pilot program (no pricing surfaced). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 3 cron jobs: weekly-roundup (Fri 9AM), seo-blog-post (Tue+Thu 10AM)
-- **Next**: Session 2 remaining (manual entry tab, product classification). Welcome email, vercel.json cron config, DNS/domain setup.
+- **Next**: Session 2 remaining (manual entry tab, product classification).
 
 ---
 
@@ -136,6 +136,12 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Session 2: Onboarding flow + manufacturer fields** — `/app/onboarding` (first_name, last_name, company, role, FEI). Route groups `(main)` / `(onboarding)`. Manufacturer name + FEI per product. Migrations: `add_onboarding_and_manufacturer_fields`, `split_name_into_first_last`. Brand/UI/arch consulted.
 - [x] **Edit product + remove from monitoring** — AddProductPanel reused in edit mode, PATCH API expanded (ingredients, manufacturer, product_type), soft-delete with inline confirmation, brand-guardian reviewed
 - [x] **Performance pass: auth caching + feed pagination** — React `cache()` on auth + queries (eliminates duplicate DB calls per page), feed uses server-side DB filtering + `GET /api/feed` pagination (25/page) + IntersectionObserver lazy load
+- [x] **Phase 5: Email system** — BriefingEmail (paid, 3-zone BLUF), AlertEmail (urgent), WeeklyNewsletter (free, lead story + THE NUMBER). Compiler (Claude Sonnet editorial), Resend sender, cron endpoint (`/api/email/send-weekly`), webhook (svix HMAC), token-based unsubscribe. `vercel.json` cron configured (Fri 2pm UTC). Preview: `npm run email:dev`.
+- [x] **Welcome email template** — `WelcomeEmail.tsx` (post-onboarding confirmation, product list with green dots, what-to-expect, single CTA). Brand-guardian + ui-designer consulted.
+- [x] **Email webhook: open/click tracking + PostHog** — Resend webhook extended to track `delivered`, `opened`, `clicked`, `bounced`, `complained`. Populates `opened_at`, `clicked_at`, `delivered_at`, `bounce_type` in `email_sends`. All events forwarded to PostHog via server-side `track()`. Resend webhook configured in dashboard.
+- [x] **Pilot cleanup: subscription links removed** — "Manage your subscription" (Stripe portal) removed from BriefingEmail, AlertEmail, WelcomeEmail footers. Re-add when pilot ends.
+- [x] **Alert system hardened** — RFC 8058 token-based unsubscribe (email_unsubscribe_token on users). Alerts decoupled via Inngest event (`alerts/urgent.requested`), CLI fallback. `email_opted_out` flag (not access_level) for paid user unsubscribe. Settings page toggle. Orphaned `checkItemForUrgentMatches` deleted. Triple-reviewed (code/arch/backend).
+- [x] **User settings page** — `/app/settings` with profile editing (name, company, role, FEI), read-only account info (email, plan, member since), email notification toggle, and account deletion (Stripe cleanup + Supabase auth cascade). Initials avatar in AppNav links to settings.
 - [ ] **Session 2 remaining** — manual entry tab, product classification, product detail image display
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.

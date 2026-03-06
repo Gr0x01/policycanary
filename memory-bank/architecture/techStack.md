@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-05
+Last-Updated: 2026-03-07
 Maintainer: RB
 Status: Active
 ---
@@ -29,7 +29,7 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **Hosting**: Vercel (seamless Next.js integration)
 - **Database Hosting**: Supabase (managed Postgres) — **schema live, 22 tables (was 25, cleanup 2026-03-05)**
 - **CDN**: Vercel Edge Network (included)
-- **Analytics**: PostHog (product analytics)
+- **Analytics**: PostHog (product analytics, session replay, funnels) — project 334096, Pilot Monitoring dashboard id 1338727
 - **Email**: Resend (sending) + React Email (templates) + `@react-email/components` (render). `npm run email:dev` for preview.
 - **GitHub**: https://github.com/Gr0x01/policycanary
 
@@ -41,6 +41,23 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **Scripts**: `query-supabase.mjs` (read enriched data), `publish-blog.mjs` (write to blog API)
 - **Service**: `systemctl {status|restart} openclaw.service` (system-level systemd)
 - **Local repo**: `scripts/clawdbot/` — source files + setup automation
+
+### Analytics (PostHog)
+- **Project**: 334096 (US cloud)
+- **Client SDK**: `posthog-js` — `src/components/PostHogProvider.tsx` (SPA pageviews, session replay w/ password masking), `src/components/PostHogIdentify.tsx` (auth'd user identification)
+- **Server SDK**: `posthog-node` — `src/lib/analytics.ts` (`track()`, `identifyUser()`, `trackLLM()`)
+- **Client helper**: `src/lib/analytics-client.ts` (`trackEvent()` wrapper for UI components)
+- **Session replay**: Enabled, `maskInputOptions: { password: true }`
+- **Serverless config**: `flushAt: 1, flushInterval: 0` (Vercel compatibility)
+- **User identification**: `identifyUser()` runs on every app page load (in `src/app/app/layout.tsx`), sets person properties + company group. Leverages React `cache()` for zero extra DB queries.
+- **Events tracked** (server-side): `user_login`, `onboarding_completed`, `product_created`, `product_updated`, `product_deleted`, `label_scanned`, `verdict_resolved`, `search_query`, `checkout_started`, `subscription_activated`, `subscription_downgraded`, `subscription_cancelled`, `newsletter_signup`, `pilot_signup`, `welcome_email_sent`, `monitoring_active_email_sent`
+- **Events tracked** (client-side): `feed_item_clicked`, `feed_filter_changed`, `item_viewed`
+- **LLM tracking**: `trackLLM()` wraps all 9 AI call sites — captures `duration_ms`, `model`, `operation`, `success`, `error_message`. Event name: `llm_call`
+- **Dashboard**: "Pilot Monitoring" (id: 1338727) — 11 tiles: activation funnel, DAU, daily signups, products created, LLM latency p50/p95, feed engagement, LLM calls by operation, WAU/retention, email engagement, time to first product, MRR
+- **Cohort**: "Internal / Test Accounts" (id: 221871) — rbaten@gmail.com, gr0x01@pm.me. Applied via `filterTestAccounts: true` on key insights.
+- **Anonymous events**: Pre-auth events (newsletter signup, pilot signup) use `$process_person_profile: false`
+- **Revenue tracking**: `subscription_activated/downgraded/cancelled` events include `revenue` + `currency` properties for MRR insight
+- **Activation timing**: `product_created` event includes `is_first_product` + `time_to_first_product_hours` (median tracked on dashboard)
 
 ### Data Pipeline
 - **Federal Register**: JSON API → parse → enrich with LLM → store
@@ -125,9 +142,9 @@ CLAWDBOT_VPS_ID=vultr_instance_id
 INNGEST_SIGNING_KEY=your_signing_key        # Required in Vercel for production
 INNGEST_EVENT_KEY=your_event_key            # Required if sending events externally
 
-# Analytics (Optional)
+# Analytics (Required — PostHog)
 NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key
-NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
+NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com  # default, can omit
 ```
 
 ## LLM Model Reference

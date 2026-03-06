@@ -1,7 +1,7 @@
 ---
-Last-Updated: 2026-03-06
+Last-Updated: 2026-03-07
 Maintainer: RB
-Status: Active — Performance pass shipped. Auth caching + feed pagination.
+Status: Active — PostHog analytics fully instrumented. Pilot Monitoring dashboard ready.
 ---
 
 # Progress: Policy Canary
@@ -49,6 +49,7 @@ Status: Active — Performance pass shipped. Auth caching + feed pagination.
 | **Onboarding Flow + Manufacturer Fields** | **2026-03-06** | **Shipped — OnboardingForm, route group architecture ((main) + (onboarding)), migrations for name split + manufacturer fields.** |
 | **Edit Product + Remove from Monitoring** | **2026-03-06** | **Shipped — AddProductPanel reused in edit mode (pre-filled from ProductDetail). PATCH API expanded: product_type, manufacturer_name/fei, raw_ingredients_text, parsed_ingredients (delete+re-insert). Soft-delete with "Remove from Monitoring" inline confirmation (active match count shown). Brand-guardian + ui-designer consulted. Dev mode (isDev/DEV_USER_ID) added to PATCH+DELETE routes.** |
 | **Performance Pass: Auth Caching + Feed Pagination** | **2026-03-06** | **Shipped — (1) Auth dedup: `getAuthUser()` + `getDbUser()` wrapped in React `cache()`, all layouts/pages use cached auth (eliminates 2-3 redundant `getUser()` calls per page). (2) Query dedup: 8 read-only query functions wrapped in `cache()`. (3) Feed pagination: server-side DB filtering (type, range, myProducts, showArchived), `GET /api/feed` for cursor-based pagination (25/page), IntersectionObserver lazy load on client. (4) Framer Motion fix: parent-orchestrated stagger replaced with per-item independent animation (stagger hid paginated items at opacity:0).** |
+| **PostHog Analytics** | **2026-03-07** | **Shipped — Full instrumentation: (1) Client: PostHogProvider (SPA pageviews, session replay w/ password masking), PostHogIdentify (auth'd users). (2) Server: `track()` on all 12 API routes (signup, onboarding, product CRUD, checkout, subscriptions, search, newsletter). (3) LLM tracking: `trackLLM()` wrapper on all 9 AI call sites (duration_ms, model, operation, success). (4) User properties: `identifyUser()` with company groups on every app page load (leverages React cache()). (5) Client engagement: feed clicks, filter changes, item views. (6) Pilot Monitoring dashboard (id: 1338727) with 7 insights: activation funnel, DAU, signups, products created, LLM latency p50/p95, feed engagement, LLM calls by operation. Deps: `posthog-js`, `posthog-node`.** |
 | Session 2 (Remaining) | - | Pending — manual entry tab, product classification, product detail image display |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
