@@ -37,46 +37,60 @@ node scripts/query-analytics.mjs --report all --days 14        # Everything at o
 
 ## Target Keyword Clusters (pick one per post, or as specified)
 
-### 1. Warning Letter Analysis (primary target: "FDA warning letter")
-- Volume: 5,400/mo, CPC: $11.78
-- Related: "FDA warning letter database" (480), "FDA warning letter search" (70)
-- Format: Deep-dive on a specific recent warning letter or pattern across multiple WLs
+Validated via DataForSEO (March 2026). Ordered by traffic value (volume x CPC).
+People search for *problems* (warning letters, recalls), not solution categories ("FDA monitoring tool" = 0 volume).
+
+### 1. Warning Letters (PRIMARY — highest traffic value)
+- **"FDA warning letter"** — 5,400/mo, $11.78 CPC
+- **"FDA warning letter database"** — 480/mo, $12.95 CPC (highest CPC in our space)
+- **"FDA warning letter search"** — 70/mo
+- **"FDA enforcement actions"** — 70/mo
+- Format: Deep-dive on a specific recent warning letter, or pattern analysis across multiple WLs
 - Data: `--report substance-detail` for the substance involved, `--report trends` for WL quarterly data
 - Research: Search for company response, industry reaction, similar past enforcement
+- Angles: company-specific analysis, violation pattern trends, sector crackdowns
 
-### 2. Recall Recap (primary target: "FDA recall list")
-- Volume: 4,400/mo, CPC: $3.29
-- Related: "food recall FDA" (2,900), "FDA food recalls this week" (2,900)
-- Format: Data-driven recap with charts showing top recall reasons, allergen breakdown, classification split
+### 2. Recalls (HIGH — huge volume)
+- **"FDA recall list"** — 4,400/mo, $3.05 CPC
+- **"food recall FDA"** — 2,900/mo, $2.14 CPC
+- Format: Data-driven recap with charts — top recall reasons, allergen breakdown, classification split
 - Data: `--report allergens`, `--report recalls`, `--report weekly`
-- Charts: Allergen bar chart, Class I/II/III pie chart, trend line
+- Charts: Allergen bar chart, Class I/II/III doughnut, trend line
+- Angles: weekly/monthly roundup, allergen deep-dives, seasonal patterns
 
-### 3. MoCRA Compliance (primary target: "MoCRA compliance")
-- Volume: 500/mo combined, CPC: $3-5
-- Related: "MoCRA FDA" (210), "MoCRA registration" (170), "MoCRA requirements" (70), "MoCRA deadline" (10)
-- Format: Evergreen guide or deadline-driven update
-- Data: `--report deadlines` for upcoming MoCRA dates, `--report categories` for cosmetics category counts
-- Research: Search for latest MoCRA guidance docs, industry compliance surveys
-
-### 4. Supplement Enforcement (primary target: "FDA supplement regulations")
-- Volume: 480/mo, CPC: $8.59
-- Related: "FDA 483 observations" (90), "supplement CGMP requirements" (0 vol but high intent)
-- Format: Enforcement trend analysis with data — CGMP violation counts, quarterly WL trends, top cited substances
+### 3. Supplement Enforcement (MEDIUM — high CPC, exact buyer match)
+- **"FDA supplement regulations"** — 480/mo, $8.59 CPC
+- **"FDA 483 observations"** — 90/mo, $9.31 CPC
+- Format: Enforcement trend analysis — CGMP violation counts, quarterly WL trends, top cited substances
 - Data: `--report trends`, `--report substances`, item queries filtered to warning_letter
 - Charts: WL trend by quarter, top violation types
+- Angles: CGMP crackdown patterns, identity testing failures, specific substance enforcement
 
-### 5. Ingredient Ban/Safety (targets: "FDA red 40 ban", "FDA banned ingredients", "FDA BHA ban")
-- Volume: Low (40-60/mo) but EXACT buyer match
-- Format: Specific ingredient deep-dive with substance history from our database
-- Data: `--report substance-detail --substance "[substance name]"` for full history
-- Research: Search for current regulatory status, industry reformulation news, state-level bans
-- Charts: Enforcement actions over time for that substance
+### 4. MoCRA / Cosmetics (MEDIUM — niche but growing)
+- **"MoCRA FDA"** — 210/mo, $3.79 CPC
+- **"MoCRA registration"** — 170/mo, $4.83 CPC
+- **"MoCRA requirements"** — 70/mo, $3.30 CPC
+- **"MoCRA compliance"** — 50/mo, $4.60 CPC
+- **"cosmetic registration FDA"** — 10/mo, $12.99 CPC
+- Format: Evergreen guide or deadline-driven update
+- Data: `--report deadlines` for upcoming MoCRA dates, `--report categories` for cosmetics category counts
+- Research: Search for latest MoCRA guidance docs, enforcement actions post-deadline
+- Angles: registration deadline aftermath, mandatory recall authority, facility listing requirements
 
-### 6. GLP-1/Weight Loss Enforcement (targets: "FDA compounding", "semaglutide FDA", "GLP-1 FDA")
-- Volume: Growing rapidly, high CPC
-- Format: Crackdown analysis — 183 items in our database, 20+ WLs in a single day
-- Data: `--report substance-detail --substance "SEMAGLUTIDE"`, `--report substance-detail --substance "Tirzepatide"`
-- Research: Hims & Hers, compounding pharmacy lawsuits, Kennedy/MAHA peptide policy
+### 5. Food Safety / FSMA (MEDIUM — regulatory evergreen)
+- **"food safety modernization act requirements"** — 70/mo, $4.55 CPC
+- **"FDA food additive regulations"** — 30/mo, $5.52 CPC
+- **"FDA food safety regulations"** — 50/mo
+- Format: Regulatory explainer with enforcement data backing
+- Data: `--report categories` for food categories, `--report trends`
+- Research: GRAS changes, Human Foods Program rollout, additive bans
+- Angles: FSMA compliance gaps, food additive reformulation, GRAS revocations
+
+### Opportunistic (write ONLY when news breaks)
+- **GLP-1/compounding crackdown** — search volume surges around enforcement waves (30 WLs in one day = news)
+- **Ingredient bans** (red 40, BHA, titanium dioxide) — low steady volume (10-40/mo) but surges on ban announcements
+- **"FDA regulatory consultant"** — only 40/mo but $21.67 CPC — the highest-intent keyword. Worth one definitive post.
+- Data: `--report substance-detail --substance "[name]"` for any substance deep-dive
 
 ## Step 1 — Gather Data
 
@@ -244,8 +258,8 @@ When choosing what to write about, prioritize by:
 
 1. **Timeliness** — if something just happened that maps to a high-volume keyword, write about it now
 2. **Data advantage** — pick topics where our 2-year database gives us an edge nobody else has
-3. **Volume x CPC** — higher = more valuable traffic
-4. **Cluster coverage** — rotate across clusters, don't write 5 warning letter posts in a row
+3. **Volume x CPC** — higher = more valuable traffic (warning letters and recalls dominate)
+4. **Cluster rotation** — cycle through clusters 1-5, don't write 3 warning letter posts in a row
 5. **Chart potential** — stories that benefit from data visualization stand out more
 
-Ideal cadence: 2-3 SEO posts per week across different clusters, plus the weekly roundup.
+Cadence: 1 SEO post per week (Tuesday). Rotate clusters. Friday is the weekly roundup (separate skill).
