@@ -239,8 +239,25 @@ cat > /tmp/blog-post.md << 'CONTENT'
 CONTENT
 ```
 
-2. Publish:
+2. If you generated a hero image, upload it first:
 ```bash
+node scripts/upload-image.mjs --file /tmp/seo-hero.png --slug "[slug]"
+```
+This prints the public URL. Save it for the next step.
+
+3. Publish (with or without image):
+```bash
+# With cover image:
+node scripts/publish-blog.mjs \
+  --title "[title]" \
+  --slug "[slug]" \
+  --content-file /tmp/blog-post.md \
+  --category "[category]" \
+  --excerpt "[excerpt]" \
+  --status "published" \
+  --cover-image-url "[url from upload-image.mjs]"
+
+# Without cover image:
 node scripts/publish-blog.mjs \
   --title "[title]" \
   --slug "[slug]" \
@@ -250,7 +267,7 @@ node scripts/publish-blog.mjs \
   --status "published"
 ```
 
-3. Report the result.
+4. Report the result.
 
 ## Keyword Cluster Priority
 

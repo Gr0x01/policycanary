@@ -32,6 +32,7 @@ const { values: args } = parseArgs({
     category: { type: "string", default: "weekly_roundup" },
     excerpt: { type: "string" },
     status: { type: "string", default: "draft" },
+    "cover-image-url": { type: "string" },
     "base-url": { type: "string", default: "https://policycanary.io" },
   },
 });
@@ -79,6 +80,7 @@ const body = {
   category: args.category,
   excerpt: args.excerpt,
   status: args.status,
+  ...(args["cover-image-url"] && { cover_image_url: args["cover-image-url"] }),
 };
 
 const url = `${args["base-url"]}/api/blog`;
