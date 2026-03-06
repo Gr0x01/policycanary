@@ -8,7 +8,7 @@ Status: Active
 
 ## Current State
 
-- **Status**: Edit product + delete (remove from monitoring) shipped. Onboarding flow + manufacturer fields shipped. Route group architecture. Pilot program signup live.
+- **Status**: Performance pass shipped (auth caching, feed pagination). Edit product + delete shipped. Onboarding flow + manufacturer fields shipped. Route group architecture. Pilot program signup live.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GTM**: Pilot program (no pricing surfaced). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
@@ -135,6 +135,7 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility, product classification
 - [x] **Session 2: Onboarding flow + manufacturer fields** — `/app/onboarding` (first_name, last_name, company, role, FEI). Route groups `(main)` / `(onboarding)`. Manufacturer name + FEI per product. Migrations: `add_onboarding_and_manufacturer_fields`, `split_name_into_first_last`. Brand/UI/arch consulted.
 - [x] **Edit product + remove from monitoring** — AddProductPanel reused in edit mode, PATCH API expanded (ingredients, manufacturer, product_type), soft-delete with inline confirmation, brand-guardian reviewed
+- [x] **Performance pass: auth caching + feed pagination** — React `cache()` on auth + queries (eliminates duplicate DB calls per page), feed uses server-side DB filtering + `GET /api/feed` pagination (25/page) + IntersectionObserver lazy load
 - [ ] **Session 2 remaining** — manual entry tab, product classification, product detail image display
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.

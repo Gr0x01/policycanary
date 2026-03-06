@@ -4,12 +4,12 @@ created: 2026-03-03
 last-updated: 2026-03-06
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Edit product + remove from monitoring shipped. Phase 5 email system shipped.
+status: Active — Performance pass shipped (auth caching, feed pagination). Phase 5 email system shipped.
 ---
 
 # Active Development Context
 
-**Phase:** Edit product + remove from monitoring shipped. Phase 5 email system shipped.
+**Phase:** Performance pass shipped. Phase 5 email system shipped.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
 **Next up:** Welcome email, vercel.json cron config, DNS/domain setup (SPF/DKIM/DMARC), domain warming. Session 2 remaining (manual entry tab, product classification).
 
@@ -186,6 +186,14 @@ status: Active — Edit product + remove from monitoring shipped. Phase 5 email 
 - [x] **Feed cards** — `FeedItemCard`: red dot for urgent, amber for grace, `opacity-60` for grace/archived. `FeedDetailPanel`: always-visible lifecycle badge (Urgent/Active/Grace Period/Archived) replaces old `urgencyBadge()`.
 - [x] **Products page** — `ProductsLayout.toDetailData()` splits verdicts into live vs archived via `isLiveState()`. Status derived from live verdicts only. `resolvedHistory` now populated from archived verdicts (was always empty). `MatchCard` uses lifecycle-to-status mapping.
 - [x] **Code-reviewed** — W1 fixed (UTC `Z` suffix on date parsing). W2 (verdict count query growth) fixed with RPC. `urgency_score` left vestigial per plan.
+
+### What's Done (Performance Pass: Auth Caching + Feed Pagination)
+- [x] **Cached auth layer** — `src/lib/supabase/auth.ts`: `getAuthUser()` and `getDbUser()` wrapped in React `cache()`. Eliminates 2-3x duplicate `auth.getUser()` calls per page load (root layout → main layout → page). All layouts + pages updated to use cached helpers.
+- [x] **Cached query functions** — All 8 read-only functions in `src/lib/products/queries.ts` wrapped in React `cache()`: `getUserProducts`, `getProductById`, `countActiveProducts`, `getMaxProducts`, `getFeedItems`, `getItemDetail`, `getProductVerdicts`, `getProductVerdictCounts`.
+- [x] **Server-side DB filtering** — `getFeedItems()` refactored from simple limit/offset to full DB-level filtering via `FeedFilters` interface (type, range, myProducts, showArchived). Client-side filtering removed — it was fundamentally broken with pagination (filtering 25 items out of 7,500 produces wrong results).
+- [x] **Feed pagination API** — `GET /api/feed` with query params: offset, limit (max 50), type, range, myProducts, showArchived. Auth required (dev bypass). Limit+1 trick for `hasMore` detection without separate count query.
+- [x] **Lazy load with IntersectionObserver** — `FeedPageClient.tsx` receives initial 25 items from server, loads more pages via API. Refs (`loadingRef`, `offsetRef`, `filterQsRef`) keep observer stable — no effect teardown on state changes. Observer effect only depends on `hasMore`.
+- [x] **Framer Motion fix** — Replaced parent-orchestrated stagger animation with per-item independent `initial/animate`. Parent stagger broke when new children were appended to existing date groups (parent already finished animation → new children stuck at `opacity: 0`).
 
 ### What's Done (Verdict System + Re-Enrichment)
 - [x] **Verdict system live** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates whether regulatory items actually affect subscriber products. Three trigger points: post-enrichment (runner step d), post-product-add (API route), CLI backfill (`scripts/run-verdicts.ts` with p-limit concurrency).

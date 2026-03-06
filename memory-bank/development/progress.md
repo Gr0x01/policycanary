@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-06
 Maintainer: RB
-Status: Active — Phase 5 email system shipped. Compliance + brand reviewed.
+Status: Active — Performance pass shipped. Auth caching + feed pagination.
 ---
 
 # Progress: Policy Canary
@@ -48,6 +48,7 @@ Status: Active — Phase 5 email system shipped. Compliance + brand reviewed.
 | **Pilot Launch Audit** | **2026-03-06** | **Shipped — security (CSP, rate limits, input sanitization), SEO (meta tags, robots, sitemap), performance hardening.** |
 | **Onboarding Flow + Manufacturer Fields** | **2026-03-06** | **Shipped — OnboardingForm, route group architecture ((main) + (onboarding)), migrations for name split + manufacturer fields.** |
 | **Edit Product + Remove from Monitoring** | **2026-03-06** | **Shipped — AddProductPanel reused in edit mode (pre-filled from ProductDetail). PATCH API expanded: product_type, manufacturer_name/fei, raw_ingredients_text, parsed_ingredients (delete+re-insert). Soft-delete with "Remove from Monitoring" inline confirmation (active match count shown). Brand-guardian + ui-designer consulted. Dev mode (isDev/DEV_USER_ID) added to PATCH+DELETE routes.** |
+| **Performance Pass: Auth Caching + Feed Pagination** | **2026-03-06** | **Shipped — (1) Auth dedup: `getAuthUser()` + `getDbUser()` wrapped in React `cache()`, all layouts/pages use cached auth (eliminates 2-3 redundant `getUser()` calls per page). (2) Query dedup: 8 read-only query functions wrapped in `cache()`. (3) Feed pagination: server-side DB filtering (type, range, myProducts, showArchived), `GET /api/feed` for cursor-based pagination (25/page), IntersectionObserver lazy load on client. (4) Framer Motion fix: parent-orchestrated stagger replaced with per-item independent animation (stagger hid paginated items at opacity:0).** |
 | Session 2 (Remaining) | - | Pending — manual entry tab, product classification, product detail image display |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
