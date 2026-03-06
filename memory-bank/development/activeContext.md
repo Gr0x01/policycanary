@@ -4,14 +4,14 @@ created: 2026-03-03
 last-updated: 2026-03-06
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Onboarding flow shipped. Manufacturer fields on products. Session 2 remaining items continuing.
+status: Active — Phase 5 email system shipped. Compliance + brand reviewed.
 ---
 
 # Active Development Context
 
-**Phase:** Onboarding flow + manufacturer fields shipped. Route group architecture for app layout. Session 2 remaining items.
+**Phase:** Phase 5 email system shipped. All templates, compiler, sending, webhooks built and reviewed.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Session 2 remaining (manual entry tab, product classification). Then Phase 5 — Product Intelligence Briefing (email system).
+**Next up:** Welcome email, vercel.json cron config, DNS/domain setup (SPF/DKIM/DMARC), domain warming. Session 2 remaining (manual entry tab, product classification).
 
 ---
 
@@ -135,6 +135,18 @@ status: Active — Onboarding flow shipped. Manufacturer fields on products. Ses
 - [x] **API endpoints** — `GET /api/products/search-substances?q=...` (typeahead, dedup by substance_id), `GET /api/products/resolve-ingredient?name=...` (single resolution)
 - [x] **Products API updated** — `image_paths` array replaces `label_image_path`, bulk-insert into `product_images` after product creation
 - [x] **Dev auth bypass** — consistent UUID (`70360df8-...`) across products page, parse-label route, and products route (GET/POST)
+
+### What's Done (Phase 5: Email System)
+- [x] **Email templates** — `BriefingEmail.tsx` (paid, 3-zone: YOUR PRODUCTS / YOUR INDUSTRY / ACROSS FDA, BLUF pattern, status + confidence badges, action items with amber border, per-section AI disclaimer), `WeeklyNewsletter.tsx` (free, lead story, THE NUMBER, bridge CTA, inline AI disclosure), `AlertEmail.tsx` (urgent, red top rule, confidence badge)
+- [x] **Email compiler** — `compiler.ts`: Claude Sonnet editorial opening (confidence-calibrated prompts), lead story + THE NUMBER generation for newsletter, React Email rendering via `render()`. Subject lines: story-led for newsletter, product-named for briefing, all-clear with review count.
+- [x] **Email sender** — `sender.ts`: Resend API, single + batch (100/call), `List-Unsubscribe` + `List-Unsubscribe-Post` headers for Gmail/Yahoo compliance.
+- [x] **Email query layer** — `queries.ts`: `getBriefingData()` (3 zones via matches + category overlap + other), `getWeeklyDigestData()` (with bridge stats), `getActiveSubscribers()`, `getNewsletterSubscribers()` (with unsubscribe_token), `createCampaign()`, `recordEmailSend()`, `updateCampaignStatus()`.
+- [x] **Constants** — `constants.ts`: design tokens (canary, amber, urgent red, confirmed green), IBM Plex fonts, FROM/REPLY-TO addresses, physical address.
+- [x] **Cron endpoint** — `GET /api/email/send-weekly?secret=<CRON_SECRET>`: sends paid briefings (per-subscriber) + free newsletter (per-subscriber for token-based unsub). Timing-safe secret comparison.
+- [x] **Webhook** — `POST /api/email/webhook`: svix HMAC verification (replay protection, timing-safe compare), delivered/bounced/complained tracking, auto-deactivate on bounce/complaint.
+- [x] **Unsubscribe** — `GET/POST /api/email/unsubscribe?token=<token>`: uses `unsubscribe_token` (unique indexed), fallback to id for legacy, sets `unsubscribed_at`. POST handler for RFC 8058 one-click.
+- [x] **Preview system** — `emails/` directory with 4 previews (briefing affected, briefing all-clear, newsletter, alert). `npm run email:dev` on port 3001.
+- [x] **Compliance + brand reviewed** — legal-compliance-checker + brand-guardian. All criticals fixed: newsletter disclaimer, token-based unsub, List-Unsubscribe headers, confidence calibration in LLM prompts, product name formatting, bridge specificity, alert confidence badge.
 
 ### What's Done (Session 2: Onboarding Flow + Manufacturer Fields)
 - [x] **Onboarding screen** — `/app/onboarding` collects first_name, last_name, company_name, role (custom dropdown), fei_number (optional). POST `/api/onboarding` saves + sets `onboarding_completed_at`. Brand-reviewed copy: "Let's set up your regulatory watch."
@@ -402,6 +414,27 @@ src/lib/products/
   types.ts                          # Zod schemas (CreateProduct, UpdateProduct, DSLDSearch, ParsedLabel, ParsedIngredient) + response types
   queries.ts                        # Server-only: DSLD search/detail, product CRUD, substance resolution, ingredient ingestion, getIngredientUseCodes, product verdicts (with substance_ids + has_cross_reference)
   vision.ts                         # Multi-image vision extraction (Gemini Flash → GPT-4o-mini → Claude Haiku fallback chain)
+
+src/lib/email/
+  constants.ts                        # Design tokens, FROM address, physical address
+  queries.ts                          # Email data layer — briefing, newsletter, subscribers, campaigns, sends
+  compiler.ts                         # Claude Sonnet editorial + React Email render for all templates
+  sender.ts                           # Resend API — single + batch send, List-Unsubscribe headers
+  templates/
+    BriefingEmail.tsx                 # Paid weekly — 3-zone, BLUF, badges, action items
+    WeeklyNewsletter.tsx              # Free newsletter — lead story, THE NUMBER, bridge
+    AlertEmail.tsx                    # Urgent alert — red top rule, confidence badge
+
+src/app/api/email/
+  send-weekly/route.ts                # GET cron — sends paid briefings + free newsletter
+  webhook/route.ts                    # POST — Resend delivery/bounce tracking (svix HMAC)
+  unsubscribe/route.ts                # GET/POST — CAN-SPAM one-click unsub (token-based)
+
+emails/                               # React Email preview files (npm run email:dev)
+  BriefingPreview.tsx                 # Affected state — 2 products matched
+  BriefingAllClearPreview.tsx         # All-clear state — 5 products, none affected
+  WeeklyNewsletterPreview.tsx         # Full newsletter with lead story + THE NUMBER
+  AlertPreview.tsx                    # Recall alert
 
 src/lib/utils/lifecycle.ts            # Lifecycle state: getLifecycleState() + isLiveState(). Pure, isomorphic.
 src/lib/rate-limit.ts               # Shared in-memory rate limiter (configurable limit + window)

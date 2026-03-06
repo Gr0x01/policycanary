@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-06
 Maintainer: RB
-Status: Active — Pilot program signup live. Verdict system live. Lifecycle state shipped. Session 2 frontend continuing.
+Status: Active — Phase 5 email system shipped. Compliance + brand reviewed.
 ---
 
 # Progress: Policy Canary
@@ -44,8 +44,10 @@ Status: Active — Pilot program signup live. Verdict system live. Lifecycle sta
 | **Session 2: Multi-Image Label Upload** | **2026-03-05** | **Shipped — multi-image vision extraction (up to 5), substance hot-check at parse time, ingredient preview with match status UI, substance typeahead autocomplete. Migration `create_product_images_drop_label_image_path`. `product_images` junction table.** |
 | **Lifecycle State System** | **2026-03-06** | **Shipped — `src/lib/utils/lifecycle.ts` + `get_live_verdict_counts` RPC. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items + "Include Archived" toggle. Products page splits active vs resolved history. SQL-level filtering: verdict counts run entirely in Postgres, feed query adds `published_date` floor. Migration `add_get_live_verdict_counts_rpc`.** |
 | **Product Page Pre-Email Plumbing** | **2026-03-06** | **Shipped — URL deep linking (`?product=&item=`), ingredient highlighting fix (substance_id intersection), portfolio summary header, per-product status banner, GSRS use-context badges on ingredients, cross-sector alert flags on MatchCards. No new migrations/deps/LLM calls.** |
-| Session 2 (Remaining) | - | Pending — manual entry tab, product classification, onboarding routing, product detail image display |
-| Product Intelligence Email MVP | - | Pending |
+| **Phase 5: Email System** | **2026-03-06** | **Shipped — BriefingEmail (3-zone, BLUF), WeeklyNewsletter (lead story, bridge CTA), AlertEmail (red top, confidence badge). Compiler with Claude Sonnet editorial. Resend sender with List-Unsubscribe. Cron endpoint, webhook (svix HMAC), token-based unsubscribe. Compliance + brand reviewed (all criticals fixed). `npm run email:dev` preview on port 3001.** |
+| **Pilot Launch Audit** | **2026-03-06** | **Shipped — security (CSP, rate limits, input sanitization), SEO (meta tags, robots, sitemap), performance hardening.** |
+| **Onboarding Flow + Manufacturer Fields** | **2026-03-06** | **Shipped — OnboardingForm, route group architecture ((main) + (onboarding)), migrations for name split + manufacturer fields.** |
+| Session 2 (Remaining) | - | Pending — manual entry tab, product classification, product detail image display |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
 

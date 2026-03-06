@@ -30,7 +30,7 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **Database Hosting**: Supabase (managed Postgres) — **schema live, 22 tables (was 25, cleanup 2026-03-05)**
 - **CDN**: Vercel Edge Network (included)
 - **Analytics**: PostHog (product analytics)
-- **Email**: Resend (chosen)
+- **Email**: Resend (sending) + React Email (templates) + `@react-email/components` (render). `npm run email:dev` for preview.
 - **GitHub**: https://github.com/Gr0x01/policycanary
 
 ### Content Automation (Clawdbot)
@@ -100,7 +100,9 @@ STRIPE_PRICE_MONITOR=your_stripe_price_id          # Monitor tier ($99/mo)
 STRIPE_PRICE_EXTRA_PRODUCT=your_stripe_price_id     # Per-product overage ($6/mo, deferred to Phase 4C)
 
 # Email (Required for digest delivery)
-RESEND_API_KEY=your_resend_key  # or POSTMARK_SERVER_TOKEN
+RESEND_API_KEY=your_resend_key
+RESEND_WEBHOOK_SECRET=your_webhook_secret  # whsec_... format (svix HMAC)
+CRON_SECRET=your_cron_secret               # Protects /api/email/send-weekly
 
 # Blog (Clawdbot write path)
 BLOG_API_KEY=your_blog_api_key  # X-API-Key header for POST /api/blog
