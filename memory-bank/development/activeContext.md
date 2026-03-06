@@ -4,12 +4,12 @@ created: 2026-03-03
 last-updated: 2026-03-06
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Phase 5 email system shipped. Compliance + brand reviewed.
+status: Active — Edit product + remove from monitoring shipped. Phase 5 email system shipped.
 ---
 
 # Active Development Context
 
-**Phase:** Phase 5 email system shipped. All templates, compiler, sending, webhooks built and reviewed.
+**Phase:** Edit product + remove from monitoring shipped. Phase 5 email system shipped.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
 **Next up:** Welcome email, vercel.json cron config, DNS/domain setup (SPF/DKIM/DMARC), domain warming. Session 2 remaining (manual entry tab, product classification).
 

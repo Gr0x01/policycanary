@@ -8,19 +8,19 @@ Status: Active
 
 ## Current State
 
-- **Status**: Onboarding flow + manufacturer fields shipped. Route group architecture. Pilot program signup live.
+- **Status**: Edit product + delete (remove from monitoring) shipped. Onboarding flow + manufacturer fields shipped. Route group architecture. Pilot program signup live.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GTM**: Pilot program (no pricing surfaced). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 3 cron jobs: weekly-roundup (Fri 9AM), seo-blog-post (Tue+Thu 10AM)
-- **Next**: Session 2 remaining (manual entry tab, product classification). Then Phase 5 — Product Intelligence Briefing (email system).
+- **Next**: Session 2 remaining (manual entry tab, product classification). Welcome email, vercel.json cron config, DNS/domain setup.
 
 ---
 
 ## What's Happening
 
-**Onboarding flow + manufacturer fields shipped.** New users hit `/app/onboarding` (first_name, last_name, company, role, FEI) before accessing the app. Route group architecture: `(main)/` has AppNav + onboarding guard, `(onboarding)/` has minimal header. Manufacturer name + FEI collected per product for future facility-level matching against warning letters/483s. Users table: `name` column replaced with `first_name` + `last_name`. Auth callback no longer overwrites profile data on returning logins. Next: Session 2 remaining (manual entry tab, product classification), then Phase 5 email system.
+**Edit product + remove from monitoring shipped.** Users can edit any product field (name, brand, ingredients, manufacturer, type) by reusing the AddProductPanel in edit mode. Delete is a soft-delete ("Remove from Monitoring") with inline confirmation showing active match count. PATCH API expanded to handle full product updates including ingredient replacement + verdict re-evaluation. Both PATCH and DELETE routes now support dev mode (isDev/DEV_USER_ID). Brand-guardian consulted: "Remove from Monitoring" language (not "Delete"), calm confirmation tone, no alarmism.
 
 ---
 
@@ -134,6 +134,7 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Schema cleanup** — enforcement_details merged into regulatory_items, dropped 5 premature empty tables (trend_signals, item_relations, user_bookmarks, email_campaign_items). 33→28 tables.
 - [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility, product classification
 - [x] **Session 2: Onboarding flow + manufacturer fields** — `/app/onboarding` (first_name, last_name, company, role, FEI). Route groups `(main)` / `(onboarding)`. Manufacturer name + FEI per product. Migrations: `add_onboarding_and_manufacturer_fields`, `split_name_into_first_last`. Brand/UI/arch consulted.
+- [x] **Edit product + remove from monitoring** — AddProductPanel reused in edit mode, PATCH API expanded (ingredients, manufacturer, product_type), soft-delete with inline confirmation, brand-guardian reviewed
 - [ ] **Session 2 remaining** — manual entry tab, product classification, product detail image display
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.

@@ -47,6 +47,7 @@ Status: Active — Phase 5 email system shipped. Compliance + brand reviewed.
 | **Phase 5: Email System** | **2026-03-06** | **Shipped — BriefingEmail (3-zone, BLUF), WeeklyNewsletter (lead story, bridge CTA), AlertEmail (red top, confidence badge). Compiler with Claude Sonnet editorial. Resend sender with List-Unsubscribe. Cron endpoint, webhook (svix HMAC), token-based unsubscribe. Compliance + brand reviewed (all criticals fixed). `npm run email:dev` preview on port 3001.** |
 | **Pilot Launch Audit** | **2026-03-06** | **Shipped — security (CSP, rate limits, input sanitization), SEO (meta tags, robots, sitemap), performance hardening.** |
 | **Onboarding Flow + Manufacturer Fields** | **2026-03-06** | **Shipped — OnboardingForm, route group architecture ((main) + (onboarding)), migrations for name split + manufacturer fields.** |
+| **Edit Product + Remove from Monitoring** | **2026-03-06** | **Shipped — AddProductPanel reused in edit mode (pre-filled from ProductDetail). PATCH API expanded: product_type, manufacturer_name/fei, raw_ingredients_text, parsed_ingredients (delete+re-insert). Soft-delete with "Remove from Monitoring" inline confirmation (active match count shown). Brand-guardian + ui-designer consulted. Dev mode (isDev/DEV_USER_ID) added to PATCH+DELETE routes.** |
 | Session 2 (Remaining) | - | Pending — manual entry tab, product classification, product detail image display |
 | Validation (sample emails, trial signups) | - | Pending |
 | Launch | - | Pending |
