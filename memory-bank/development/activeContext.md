@@ -11,7 +11,7 @@ status: Active — PostHog analytics fully instrumented. Pilot Monitoring dashbo
 
 **Phase:** PostHog analytics fully instrumented. Pilot Monitoring dashboard populated. Email pipeline ready for production testing.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Session 2 remaining (manual entry tab, product classification).
+**Next up:** Session 2 remaining (product detail image display). Ingredient parsing (Gemini Flash), GSRS search utility.
 
 ---
 

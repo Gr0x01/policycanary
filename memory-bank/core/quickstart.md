@@ -14,7 +14,7 @@ Status: Active
 - **GTM**: Pilot program (no pricing surfaced). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 3 cron jobs: weekly-roundup (Fri 9AM), seo-blog-post (Tue+Thu 10AM)
-- **Next**: Session 2 remaining (manual entry tab, product classification).
+- **Next**: Session 2 remaining (product detail image display). Ingredient parsing (Gemini Flash), GSRS search utility.
 
 ---
 
@@ -62,6 +62,7 @@ npm run pipeline:enrich                 # Enrich unenriched items (default: 10, 
 npm run pipeline:enrich-test            # Enrich 5 items (quick test)
 npx tsx scripts/run-enrichment.ts --limit 500 --concurrency 15  # Custom batch
 npx tsx scripts/run-enrichment.ts --limit 8000 --no-cap         # Full run (removes 2000-item safety cap)
+npm run pipeline:classify               # Classify unclassified products into categories
 npm run pipeline:golden                 # Validate golden fixtures (no LLM calls)
 npm run pipeline:golden-enrich          # Re-enrich + validate golden fixtures (costs tokens)
 npm run pipeline:content-fetch-test     # Debug: fetch single source URL, print extracted text
@@ -132,7 +133,7 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Enrich all items** — 7,573/7,573 enriched, 0 errors. Honest classification (all FDA sectors), concurrent (p-limit @ 15), content-fetch expanded to all source URLs.
 - [x] **Session 1: Onboarding backend (API routes)** — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed.
 - [x] **Schema cleanup** — enforcement_details merged into regulatory_items, dropped 5 premature empty tables (trend_signals, item_relations, user_bookmarks, email_campaign_items). 33→28 tables.
-- [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility, product classification
+- [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility
 - [x] **Session 2: Onboarding flow + manufacturer fields** — `/app/onboarding` (first_name, last_name, company, role, FEI). Route groups `(main)` / `(onboarding)`. Manufacturer name + FEI per product. Migrations: `add_onboarding_and_manufacturer_fields`, `split_name_into_first_last`. Brand/UI/arch consulted.
 - [x] **Edit product + remove from monitoring** — AddProductPanel reused in edit mode, PATCH API expanded (ingredients, manufacturer, product_type), soft-delete with inline confirmation, brand-guardian reviewed
 - [x] **Performance pass: auth caching + feed pagination** — React `cache()` on auth + queries (eliminates duplicate DB calls per page), feed uses server-side DB filtering + `GET /api/feed` pagination (25/page) + IntersectionObserver lazy load
@@ -142,7 +143,8 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Pilot cleanup: subscription links removed** — "Manage your subscription" (Stripe portal) removed from BriefingEmail, AlertEmail, WelcomeEmail footers. Re-add when pilot ends.
 - [x] **Alert system hardened** — RFC 8058 token-based unsubscribe (email_unsubscribe_token on users). Alerts decoupled via Inngest event (`alerts/urgent.requested`), CLI fallback. `email_opted_out` flag (not access_level) for paid user unsubscribe. Settings page toggle. Orphaned `checkItemForUrgentMatches` deleted. Triple-reviewed (code/arch/backend).
 - [x] **User settings page** — `/app/settings` with profile editing (name, company, role, FEI), read-only account info (email, plan, member since), email notification toggle, and account deletion (Stripe cleanup + Supabase auth cascade). Initials avatar in AppNav links to settings.
-- [ ] **Session 2 remaining** — manual entry tab, product classification, product detail image display
+- [x] **Product classification** — `src/lib/products/classify.ts`. Gemini Flash assigns `product_category_id` from 119-slug controlled vocab. Wired into POST + PATCH routes (non-blocking). Backfill: `npm run pipeline:classify` (`--force` to reclassify). Code-reviewed.
+- [ ] **Session 2 remaining** — product detail image display
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.
 - [x] **Lifecycle state system** — `src/lib/utils/lifecycle.ts`. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items. Products page splits active vs resolved history. No DB changes.
