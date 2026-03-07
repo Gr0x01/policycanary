@@ -4,14 +4,14 @@ created: 2026-03-03
 last-updated: 2026-03-07
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — PostHog analytics fully instrumented. Pilot Monitoring dashboard ready.
+status: Active — LinkedIn content automation live. Blog redesigned. PostHog analytics instrumented.
 ---
 
 # Active Development Context
 
-**Phase:** PostHog analytics fully instrumented. Pilot Monitoring dashboard populated. Email pipeline ready for production testing.
-**Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content). VPS: `ssh root@108.61.151.130`.
-**Next up:** Session 2 remaining (product detail image display). Ingredient parsing (Gemini Flash), GSRS search utility.
+**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Clawdbot) running. PostHog instrumented.
+**Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content, `#linkedin-drafts` for LinkedIn posts). VPS: `ssh root@108.61.151.130`.
+**Next up:** Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner). Minor: product detail image display.
 
 ---
 
@@ -50,6 +50,7 @@ status: Active — PostHog analytics fully instrumented. Pilot Monitoring dashbo
 
 ### What's Done (Blog / Content Marketing)
 - [x] **Blog section** — `/blog` index with category filter + ISR, `/blog/[slug]` detail with JSON-LD + OG tags, `/blog/feed.xml` RSS 2.0
+- [x] **Blog redesign** — Premium editorial layout: two-column article (sidebar TOC, share, newsletter CTA), cover image support (Gemini → Supabase Storage → next/image), reading progress bar, featured post hero, 3-col grid, related posts, breadcrumbs, OG images, RSS enclosures. `upload-image.mjs` script for Clawdbot. All posts backfilled with images + word counts.
 - [x] **Clawdbot API** — POST `/api/blog` with X-API-Key auth, Zod validation, upsert on slug, `published_at` preservation
 - [x] **Migration** — `003_blog_posts` (table, indexes, RLS public read, updated_at trigger)
 - [x] **Code-reviewed** — JSON-LD injection fix, timing-safe key comparison, type-safe query projections (`BlogPostSummary`/`BlogPostRSS`), RSS null guard, content max length

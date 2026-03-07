@@ -13,8 +13,8 @@ Status: Active
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GTM**: Pilot program (no pricing surfaced). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 3 cron jobs: weekly-roundup (Fri 9AM), seo-blog-post (Tue+Thu 10AM)
-- **Next**: Session 2 remaining (product detail image display). Ingredient parsing (Gemini Flash), GSRS search utility.
+- **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 5 cron jobs: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), linkedin-monday (Mon 10AM), linkedin-wednesday (Wed 10AM)
+- **Next**: Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner). Minor: product detail image display.
 
 ---
 
@@ -89,8 +89,8 @@ su - openclaw -c 'openclaw cron list'             # List scheduled jobs
 su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 # Local setup script:
 ./scripts/clawdbot/setup-clawdbot.sh {provision|deploy|configure|cron|ssh|status}
-# Skills on VPS: weekly-roundup, seo-blog-post
-# Cron: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), seo-blog-thursday (Thu 10AM)
+# Skills on VPS: weekly-roundup, seo-blog-post, linkedin-post
+# Cron: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), linkedin-monday (Mon 10AM), linkedin-wednesday (Wed 10AM)
 
 # SEO Keyword Research
 npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volume + difficulty
@@ -124,7 +124,7 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Stripe subscriptions (Phase 4B)** — checkout, webhook, portal, PricingTable, AppNav upgrade/billing. Triple code-reviewed. Migration `004`. Stripe Dashboard configured (live mode). Commit `497ec6d`.
 - [x] Stripe Dashboard setup — products + prices created (Monitor $99, Extra $6), customer portal configured, webhook endpoint live
 - [x] **Product categories taxonomy designed** — 119 categories across 8 sectors. Sacred controlled vocab — no free text. Sectors are display-only metadata.
-- [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, blog publish pipeline. `scripts/clawdbot/` in repo. 3 cron jobs: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), seo-blog-thursday (Thu 10AM).
+- [x] **Clawdbot (OpenClaw) deployed** — Vultr VPS, Discord bot, blog publish + LinkedIn draft pipelines. `scripts/clawdbot/` in repo. 4 cron jobs: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), linkedin-monday (Mon 10AM), linkedin-wednesday (Wed 10AM).
 - [x] **SEO keyword research + content strategy** — DataForSEO API, 5 target keyword clusters, seo-blog-post skill deployed. Content marketing plan updated with data.
 - [x] **Session 0: Product categories migration + enrichment update** — migration applied (82 categories), pipeline uses controlled slugs, golden tests 10/10
 - [x] GSRS bootstrap complete — 949K codes, 96 code systems, 166K substances with codes
@@ -133,7 +133,7 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Enrich all items** — 7,573/7,573 enriched, 0 errors. Honest classification (all FDA sectors), concurrent (p-limit @ 15), content-fetch expanded to all source URLs.
 - [x] **Session 1: Onboarding backend (API routes)** — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed.
 - [x] **Schema cleanup** — enforcement_details merged into regulatory_items, dropped 5 premature empty tables (trend_signals, item_relations, user_bookmarks, email_campaign_items). 33→28 tables.
-- [ ] **Session 1b: Onboarding backend (remaining)** — ingredient parsing (Gemini Flash), GSRS search utility
+- [x] **Session 1b: Onboarding backend** — ingredient parsing (Gemini Flash vision + raw text), label scanning, DSLD search/detail, GSRS substance resolution (`/api/products/resolve-ingredient`). All done.
 - [x] **Session 2: Onboarding flow + manufacturer fields** — `/app/onboarding` (first_name, last_name, company, role, FEI). Route groups `(main)` / `(onboarding)`. Manufacturer name + FEI per product. Migrations: `add_onboarding_and_manufacturer_fields`, `split_name_into_first_last`. Brand/UI/arch consulted.
 - [x] **Edit product + remove from monitoring** — AddProductPanel reused in edit mode, PATCH API expanded (ingredients, manufacturer, product_type), soft-delete with inline confirmation, brand-guardian reviewed
 - [x] **Performance pass: auth caching + feed pagination** — React `cache()` on auth + queries (eliminates duplicate DB calls per page), feed uses server-side DB filtering + `GET /api/feed` pagination (25/page) + IntersectionObserver lazy load
@@ -151,8 +151,8 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Verdict system** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates item-product relevance. Tightened prompt filters brand-specific recall noise. Three triggers: post-enrichment, post-product-add, CLI backfill (`scripts/run-verdicts.ts`).
 - [x] **App pages → real data** — feed, item detail, products wired to real DB. Mocks removed. Search hidden.
 - [x] **Full re-enrichment (2026-03-06)** — 7,566/7,574 re-enriched, 979 cross-refs, 669 verdicts. Tightened prompts. `server-only` removed from `admin.ts`.
-- [ ] Product intelligence email MVP
-- [ ] Validation — sample emails, trial signups
+- [x] **Product intelligence email MVP** — compiler (`src/lib/email/compiler.ts`), cron endpoint (`/api/email/send-weekly`), BriefingEmail/AlertEmail/WeeklyNewsletter templates, Resend sender, webhook tracking
+- [x] **Validation** — product intelligence email confirmed working in production (received in inbox, quality approved)
 - [ ] Launch
 - [ ] **Expansion:** State compliance layer (month 3-5)
 - [ ] **Expansion:** Pet food / animal supplements (month 5-7)
