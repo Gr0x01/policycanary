@@ -4,7 +4,7 @@ created: 2026-03-03
 last-updated: 2026-03-07
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — LinkedIn content automation live. Blog redesigned. PostHog analytics instrumented.
+status: Active — Weekly email moved to Inngest (was broken). LinkedIn content automation live. Blog redesigned. PostHog analytics instrumented.
 ---
 
 # Active Development Context
@@ -144,7 +144,9 @@ status: Active — LinkedIn content automation live. Blog redesigned. PostHog an
 - [x] **Email sender** — `sender.ts`: Resend API, single + batch (100/call), `List-Unsubscribe` + `List-Unsubscribe-Post` headers for Gmail/Yahoo compliance.
 - [x] **Email query layer** — `queries.ts`: `getBriefingData()` (3 zones via matches + category overlap + other), `getWeeklyDigestData()` (with bridge stats), `getActiveSubscribers()`, `getNewsletterSubscribers()` (with unsubscribe_token), `createCampaign()`, `recordEmailSend()`, `updateCampaignStatus()`.
 - [x] **Constants** — `constants.ts`: design tokens (canary, amber, urgent red, confirmed green), IBM Plex fonts, FROM/REPLY-TO addresses, physical address.
-- [x] **Cron endpoint** — `GET /api/email/send-weekly?secret=<CRON_SECRET>`: sends paid briefings (per-subscriber) + free newsletter (per-subscriber for token-based unsub). Timing-safe secret comparison.
+- [x] **Inngest `send-weekly-emails`** — cron `0 14 * * 5`. 3 steps: generate newsletter content (2 LLM calls once), send paid briefings, send free newsletters. Replaced Vercel cron → `vercel.json` crons emptied. Manual trigger kept at `GET /api/email/send-weekly?secret=<CRON_SECRET>` (`maxDuration: 300`).
+- [x] **Compiler split** — `generateNewsletterContent()` (LLM, call once) + `renderNewsletter()` (HTML only, per subscriber). `compileNewsletter()` removed.
+- [x] **FK bug fixed** — `createCampaign()` for paid path no longer passes `subscriber_id` (was `users.id`, FK expects `email_subscribers.id`). `recordEmailSend()` skipped for paid (same FK issue). **Follow-up needed**: paid sends have no per-recipient audit trail (need schema change or email_subscribers row for paid users).
 - [x] **Webhook** — `POST /api/email/webhook`: svix HMAC verification (replay protection, timing-safe compare), delivered/bounced/complained tracking, auto-deactivate on bounce/complaint.
 - [x] **Unsubscribe** — `GET/POST /api/email/unsubscribe?token=<token>`: uses `unsubscribe_token` (unique indexed), fallback to id for legacy, sets `unsubscribed_at`. POST handler for RFC 8058 one-click.
 - [x] **Preview system** — `emails/` directory with 4 previews (briefing affected, briefing all-clear, newsletter, alert). `npm run email:dev` on port 3001.
@@ -164,7 +166,7 @@ status: Active — LinkedIn content automation live. Blog redesigned. PostHog an
 - [ ] **Product detail image display** — show stored product_images in ProductContextPanel (signed URLs)
 
 ### What's Done (Phase 2C: Inngest Pipeline Orchestration)
-- [x] **Inngest functions wired** — `daily-ingest` (cron `0 6,18 * * *`, 4 parallel fetchers + enrichment) and `enrich-batch` (event-driven, limit 1-200)
+- [x] **Inngest functions wired** — `daily-ingest` (cron `0 6,18 * * *`, 4 parallel fetchers + enrichment), `enrich-batch` (event-driven, limit 1-200), `send-weekly-emails` (cron `0 14 * * 5`, 3 steps)
 - [x] **Error handling** — catch-everything inside each `step.run()` (Inngest v3 step failure blocks all subsequent steps). Error messages truncated to 500 chars.
 - [x] **Concurrency guards** — `{ limit: 1 }` on both functions prevents overlapping runs
 - [x] **Code-reviewed** — 2 criticals + 4 warnings fixed (error handling, limit validation, parallel fetchers, concurrency key, RSS param cleanup, error truncation)
@@ -452,7 +454,7 @@ src/lib/email/
     AlertEmail.tsx                    # Urgent alert — red top rule, confidence badge
 
 src/app/api/email/
-  send-weekly/route.ts                # GET cron — sends paid briefings + free newsletter
+  send-weekly/route.ts                # GET manual trigger — sends paid briefings + free newsletter (Inngest handles cron)
   webhook/route.ts                    # POST — Resend delivery/bounce tracking (svix HMAC)
   unsubscribe/route.ts                # GET/POST — CAN-SPAM one-click unsub (token-based)
 

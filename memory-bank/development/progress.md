@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-07
 Maintainer: RB
-Status: Active — PostHog analytics fully instrumented. Pilot Monitoring dashboard ready.
+Status: Active — Weekly email moved to Inngest. PostHog analytics instrumented. Pilot Monitoring dashboard ready.
 ---
 
 # Progress: Policy Canary
@@ -36,6 +36,7 @@ Status: Active — PostHog analytics fully instrumented. Pilot Monitoring dashbo
 | **LinkedIn Content Automation** | **2026-03-07** | **Shipped — linkedin-post skill, query-blog.mjs + mark-linkedin-promoted.mjs scripts, `linkedin_promoted_at` column on blog_posts. 2x/week cron (Mon+Wed 10AM ET) → #linkedin-drafts Discord → manual copy/paste to LinkedIn (no API, avoids reach penalty). First post published.** |
 | **Session 0: Categories Migration + Enrichment** | **2026-03-04** | **Done — migration `20260304082551_product_categories_and_company_name` applied (82 categories seeded). Pipeline updated to controlled slugs. Golden tests 10/10 (38/38 assertions).** |
 | **Inngest Pipeline Orchestration (Phase 2C)** | **2026-03-04** | **Shipped (minimal) — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed (2C + 4W fixed).** |
+| **Weekly Email → Inngest** | **2026-03-07** | **Fixed — moved from Vercel cron to Inngest `send-weekly-emails` (3 steps). Fixed FK violation on `createCampaign` (paid path). Free newsletter now sends (was timing out from per-subscriber LLM calls). Newsletter content generated once. `sendBatch` + `compileNewsletter` dead code removed.** |
 | **DSLD Database Loaded** | **2026-03-04** | **214K products, 2M ingredients, 1.47M statements, 253K companies (4.2M rows, ~900MB). pg_trgm typeahead 12ms. Migration `dsld_product_database`. Bootstrap script `scripts/bootstrap-dsld.ts`.** |
 | **Backfills Complete** | **2026-03-04** | **Done — 7,572 items (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 2-year range for FR + enforcement. `run-fetcher.ts` supports `--start`/`--end`.** |
 | **Full Enrichment Run** | **2026-03-05** | **Done — 7,573/7,573 enriched, 0 errors. Honest classification (all FDA sectors), concurrent (p-limit@15), 119 product categories.** |
@@ -137,6 +138,13 @@ Status: Active — PostHog analytics fully instrumented. Pilot Monitoring dashbo
 ---
 
 ## Completed Work
+
+### 2026-03-07 — Weekly Email: Inngest Migration + Bug Fixes
+- **3 bugs fixed**: (1) FK violation — `createCampaign()` passed `users.id` as `subscriber_id` but FK references `email_subscribers(id)`, now omitted for paid campaigns. (2) Free newsletter never sent — `compileNewsletter()` made 2 LLM calls per subscriber, causing Vercel 60s timeout. Split into `generateNewsletterContent()` (once) + `renderNewsletter()` (per subscriber). (3) Not using Inngest — moved to `send-weekly-emails` Inngest function with 3 steps (generate content → paid briefings → free newsletters).
+- **Dead code removed**: `compileNewsletter()` wrapper, `sendBatch()` + `BatchEmailParams` from sender.ts.
+- **`vercel.json` crons emptied** — Inngest handles `0 14 * * 5` schedule. Manual trigger route kept with `maxDuration: 300`.
+- **Known follow-up**: paid `email_sends` records can't be created (same FK issue on `email_sends.subscriber_id`). Need either email_subscribers rows for paid users or schema change.
+- **Files**: new `src/lib/inngest/functions/send-weekly-emails.ts`, modified `compiler.ts`, `sender.ts`, `route.ts`, `inngest/index.ts`, `api/inngest/route.ts`, `vercel.json`.
 
 ### 2026-03-06 — Pilot Program Signup
 - **Converted from pricing/checkout to pilot program.** No dollar amounts on homepage, no Stripe checkout surfaced. Pricing page hidden from nav (accessible via direct URL with amber "pilot program active" banner).

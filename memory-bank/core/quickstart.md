@@ -8,7 +8,7 @@ Status: Active
 
 ## Current State
 
-- **Status**: User settings page shipped (profile editing, account deletion, initials avatar). Alert system hardened. Welcome email + PostHog analytics shipped.
+- **Status**: Weekly email moved to Inngest (was Vercel cron, free newsletter never sent). FK bug fixed. User settings, alert system, PostHog analytics all shipped.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GTM**: Pilot program (no pricing surfaced). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
@@ -71,6 +71,8 @@ npm run pipeline:content-fetch-test     # Debug: fetch single source URL, print 
 npx inngest-cli@latest dev                     # Local Inngest dev server (dashboard: http://localhost:8288)
 # daily-ingest: cron 0 6,18 * * * (6 AM + 6 PM UTC) — 4 fetchers parallel + enrichment
 # enrich-batch: send event "pipeline/enrich.requested" with { limit?, itemTypeFilter? }
+# send-weekly-emails: cron 0 14 * * 5 (Fri 2pm UTC) — newsletter content gen + paid briefings + free newsletters
+# weekly-snapshot: cron 0 14 * * 5 (Fri 2pm UTC) — intelligence snapshot
 
 # Verdicts (product-item relevance evaluation)
 npx tsx scripts/run-verdicts.ts                    # Backfill verdicts for dev user's products (concurrent)
@@ -151,8 +153,9 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Verdict system** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates item-product relevance. Tightened prompt filters brand-specific recall noise. Three triggers: post-enrichment, post-product-add, CLI backfill (`scripts/run-verdicts.ts`).
 - [x] **App pages → real data** — feed, item detail, products wired to real DB. Mocks removed. Search hidden.
 - [x] **Full re-enrichment (2026-03-06)** — 7,566/7,574 re-enriched, 979 cross-refs, 669 verdicts. Tightened prompts. `server-only` removed from `admin.ts`.
-- [x] **Product intelligence email MVP** — compiler (`src/lib/email/compiler.ts`), cron endpoint (`/api/email/send-weekly`), BriefingEmail/AlertEmail/WeeklyNewsletter templates, Resend sender, webhook tracking
+- [x] **Product intelligence email MVP** — compiler (`src/lib/email/compiler.ts`), BriefingEmail/AlertEmail/WeeklyNewsletter templates, Resend sender, webhook tracking
 - [x] **Validation** — product intelligence email confirmed working in production (received in inbox, quality approved)
+- [x] **Weekly email → Inngest** — moved from Vercel cron to Inngest function (`send-weekly-emails`). Fixed: FK violation on `createCampaign` (passed `users.id` to `email_subscribers.id` FK), free newsletter never sent (timeout from per-subscriber LLM calls). Newsletter content now generated once (2 LLM calls total). `vercel.json` crons emptied. Manual trigger route kept at `/api/email/send-weekly`.
 - [ ] Launch
 - [ ] **Expansion:** State compliance layer (month 3-5)
 - [ ] **Expansion:** Pet food / animal supplements (month 5-7)
