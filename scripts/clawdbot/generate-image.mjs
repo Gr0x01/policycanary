@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * generate-image.mjs — Generate images via Google Gemini (Imagen / Gemini 2.5 Flash)
+ * generate-image.mjs — Generate images via Google Gemini (Nano Banana Pro)
  *
  * Usage:
  *   node generate-image.mjs --prompt "A canary in a coal mine watching over FDA documents, digital art style"
@@ -53,7 +53,7 @@ if (args.style) {
 fullPrompt += ". Professional, clean, modern design. No text overlays.";
 
 // Use Gemini's image generation via the generateContent API with image output
-const model = "gemini-2.0-flash-exp"; // Supports image generation
+const model = "gemini-3-pro-image-preview"; // Supports image generation
 
 try {
   const res = await fetch(
