@@ -30,7 +30,8 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **Database Hosting**: Supabase (managed Postgres) — **schema live, 22 tables (was 25, cleanup 2026-03-05)**
 - **CDN**: Vercel Edge Network (included)
 - **Analytics**: PostHog (product analytics, session replay, funnels) — project 334096, Pilot Monitoring dashboard id 1338727
-- **Email**: Resend (sending) + React Email (templates) + `@react-email/components` (render). `npm run email:dev` for preview.
+- **Email**: Resend (sending) + React Email (templates) + `@react-email/components` (render). `npm run email:dev` for preview. Business email: Google Workspace (`rashaad@policycanary.io`), groups: `team@`, `support@`. DKIM configured in Cloudflare.
+- **Rate Limiting**: Upstash Redis (`@upstash/ratelimit` + `@upstash/redis`) — sliding window, works across Vercel instances. `src/lib/rate-limit.ts`. Falls back to allow-all when env vars missing (local dev). Used on 18 API routes.
 - **GitHub**: https://github.com/Gr0x01/policycanary
 
 ### Content Automation (Clawdbot)
@@ -122,6 +123,10 @@ STRIPE_PRICE_EXTRA_PRODUCT=your_stripe_price_id     # Per-product overage ($6/mo
 RESEND_API_KEY=your_resend_key
 RESEND_WEBHOOK_SECRET=your_webhook_secret  # whsec_... format (svix HMAC)
 CRON_SECRET=your_cron_secret               # Protects /api/email/send-weekly
+
+# Rate Limiting (Required for production, optional local dev)
+UPSTASH_REDIS_REST_URL=your_upstash_url    # Upstash Redis REST URL
+UPSTASH_REDIS_REST_TOKEN=your_upstash_token # Upstash Redis REST token
 
 # Blog (Clawdbot write path)
 BLOG_API_KEY=your_blog_api_key  # X-API-Key header for POST /api/blog

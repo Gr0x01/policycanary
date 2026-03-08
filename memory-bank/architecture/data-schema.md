@@ -1227,12 +1227,12 @@ CREATE TRIGGER set_updated_at_users
 
 Source: https://gsrs.ncats.nih.gov/ (public API, paginated)
 
-Import script: `scripts/bootstrap-gsrs.ts` (run via `npx tsx scripts/bootstrap-gsrs.ts`)
+Import script: `scripts/bootstrap/bootstrap-gsrs.ts` (run via `npx tsx scripts/bootstrap/bootstrap-gsrs.ts`)
 
 Usage:
 ```bash
-npx tsx scripts/bootstrap-gsrs.ts              # Full bootstrap (substances + names + codes)
-npx tsx scripts/bootstrap-gsrs.ts --codes-only  # Backfill codes only (when substances already loaded)
+npx tsx scripts/bootstrap/bootstrap-gsrs.ts              # Full bootstrap (substances + names + codes)
+npx tsx scripts/bootstrap/bootstrap-gsrs.ts --codes-only  # Backfill codes only (when substances already loaded)
 ```
 
 Import process:

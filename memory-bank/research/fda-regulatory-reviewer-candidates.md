@@ -21,7 +21,7 @@ Focused on accuracy review only. No product pitch, no AI architecture, no legal 
 - **Weekly Briefing**: live HTML email embedded (clickable FDA source links)
 - **Urgent Alert**: live HTML email embedded (clickable FDA source links)
 - **Questions**: 3 only — accuracy, urgency calibration, what jumps out as wrong
-- **Build**: `npx tsx scripts/build-consultant-pdf.ts` → HTML + PDF
+- **Build**: `npx tsx scripts/outreach/build-consultant-pdf.ts` → HTML + PDF
 
 **Key decision**: accuracy review and legal review are SEPARATE engagements. These FDA attorneys are being asked "is the regulatory analysis correct" — not "are our disclaimers sufficient." Legal review (disclaimers, liability, ToS) is a different engagement for a business/tech attorney.
 

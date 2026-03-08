@@ -20,7 +20,7 @@ Status: Active
 
 ## What's Happening
 
-**Consultant outreach for pre-launch accuracy validation.** Emailing FDA regulatory attorneys for paid review of AI-generated output. Katherine Giannamore emailed (Mar 7), Kristen Klesh (Loeb & Loeb) next, then Marc Ullman. Ask: 30-60 min paid consultation — is the analysis accurate, is urgency calibrated right, what are we getting wrong. Review packet rebuilt (v2): embedded live HTML emails with clickable FDA source links, 3 accuracy questions. Build: `npx tsx scripts/build-consultant-pdf.ts`.
+**Consultant outreach for pre-launch accuracy validation.** Emailing FDA regulatory attorneys for paid review of AI-generated output. Katherine Giannamore emailed (Mar 7), Kristen Klesh (Loeb & Loeb) next, then Marc Ullman. Ask: 30-60 min paid consultation — is the analysis accurate, is urgency calibrated right, what are we getting wrong. Review packet rebuilt (v2): embedded live HTML emails with clickable FDA source links, 3 accuracy questions. Build: `npx tsx scripts/outreach/build-consultant-pdf.ts`.
 
 ---
 
@@ -60,8 +60,8 @@ npm run pipeline:rss-poll               # Poll all 8 FDA RSS feeds
 # Data Pipeline — Enrichment
 npm run pipeline:enrich                 # Enrich unenriched items (default: 10, concurrency: 15)
 npm run pipeline:enrich-test            # Enrich 5 items (quick test)
-npx tsx scripts/run-enrichment.ts --limit 500 --concurrency 15  # Custom batch
-npx tsx scripts/run-enrichment.ts --limit 8000 --no-cap         # Full run (removes 2000-item safety cap)
+npx tsx scripts/pipeline/run-enrichment.ts --limit 500 --concurrency 15  # Custom batch
+npx tsx scripts/pipeline/run-enrichment.ts --limit 8000 --no-cap         # Full run (removes 2000-item safety cap)
 npm run pipeline:classify               # Classify unclassified products into categories
 npm run pipeline:golden                 # Validate golden fixtures (no LLM calls)
 npm run pipeline:golden-enrich          # Re-enrich + validate golden fixtures (costs tokens)
@@ -75,12 +75,12 @@ npx inngest-cli@latest dev                     # Local Inngest dev server (dashb
 # weekly-snapshot: cron 0 14 * * 5 (Fri 2pm UTC) — intelligence snapshot
 
 # Verdicts (product-item relevance evaluation)
-npx tsx scripts/run-verdicts.ts                    # Backfill verdicts for dev user's products (concurrent)
-npx tsx scripts/run-verdicts.ts --user <userId>    # Backfill for specific user
+npx tsx scripts/pipeline/run-verdicts.ts                    # Backfill verdicts for dev user's products (concurrent)
+npx tsx scripts/pipeline/run-verdicts.ts --user <userId>    # Backfill for specific user
 
 # One-time seeds
-npx tsx scripts/bootstrap-gsrs.ts              # Full bootstrap: 169K substances + 950K codes
-npx tsx scripts/bootstrap-gsrs.ts --codes-only  # Codes-only backfill (substances already loaded)
+npx tsx scripts/bootstrap/bootstrap-gsrs.ts              # Full bootstrap: 169K substances + 950K codes
+npx tsx scripts/bootstrap/bootstrap-gsrs.ts --codes-only  # Codes-only backfill (substances already loaded)
 
 # Clawdbot (OpenClaw) — VPS at 108.61.151.130
 ssh root@108.61.151.130                           # SSH into VPS
@@ -95,7 +95,7 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 # Cron: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), linkedin-monday (Mon 10AM), linkedin-wednesday (Wed 10AM)
 
 # SEO Keyword Research
-npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volume + difficulty
+npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volume + difficulty
 ```
 
 ---

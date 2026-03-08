@@ -3,8 +3,8 @@
  * Build consultant review packet — sample output for FDA practitioner accuracy review.
  * Embeds the actual email HTML (with clickable source links) instead of screenshots.
  *
- * Usage: npx tsx scripts/build-consultant-pdf.ts
- * Output: scripts/demo-output/consultant-review-packet.html (open in browser)
+ * Usage: npx tsx scripts/outreach/build-consultant-pdf.ts
+ * Output: scripts/outreach/demo-output/consultant-review-packet.html (open in browser)
  */
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join } from "path";
