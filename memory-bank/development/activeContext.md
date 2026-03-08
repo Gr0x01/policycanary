@@ -145,7 +145,7 @@ status: Active — Consultant outreach in progress. Weekly email on Inngest. Lin
 - [x] **Email sender** — `sender.ts`: Resend API, single + batch (100/call), `List-Unsubscribe` + `List-Unsubscribe-Post` headers for Gmail/Yahoo compliance.
 - [x] **Email query layer** — `queries.ts`: `getBriefingData()` (3 zones via matches + category overlap + other), `getWeeklyDigestData()` (with bridge stats), `getActiveSubscribers()`, `getNewsletterSubscribers()` (with unsubscribe_token), `createCampaign()`, `recordEmailSend()`, `updateCampaignStatus()`.
 - [x] **Constants** — `constants.ts`: design tokens (canary, amber, urgent red, confirmed green), IBM Plex fonts, FROM/REPLY-TO addresses, physical address.
-- [x] **Inngest `send-weekly-emails`** — cron `0 14 * * 5`. 3 steps: generate newsletter content (2 LLM calls once), send paid briefings, send free newsletters. Replaced Vercel cron → `vercel.json` crons emptied. Manual trigger kept at `GET /api/email/send-weekly?secret=<CRON_SECRET>` (`maxDuration: 300`).
+- [x] **Inngest `send-weekly-emails`** — cron `0 14 * * 5`. 3 steps: generate newsletter content (2 LLM calls once), send paid briefings, send free newsletters. Replaced Vercel cron → `vercel.json` crons emptied. Manual trigger kept at `POST /api/email/send-weekly` (Authorization: Bearer <CRON_SECRET>) (`maxDuration: 300`).
 - [x] **Compiler split** — `generateNewsletterContent()` (LLM, call once) + `renderNewsletter()` (HTML only, per subscriber). `compileNewsletter()` removed.
 - [x] **FK bug fixed** — `createCampaign()` for paid path no longer passes `subscriber_id` (was `users.id`, FK expects `email_subscribers.id`). `recordEmailSend()` skipped for paid (same FK issue). **Follow-up needed**: paid sends have no per-recipient audit trail (need schema change or email_subscribers row for paid users).
 - [x] **Webhook** — `POST /api/email/webhook`: svix HMAC verification (replay protection, timing-safe compare), delivered/bounced/complained tracking, auto-deactivate on bounce/complaint.
@@ -455,7 +455,7 @@ src/lib/email/
     AlertEmail.tsx                    # Urgent alert — red top rule, confidence badge
 
 src/app/api/email/
-  send-weekly/route.ts                # GET manual trigger — sends paid briefings + free newsletter (Inngest handles cron)
+  send-weekly/route.ts                # POST manual trigger — sends paid briefings + free newsletter (Inngest handles cron)
   webhook/route.ts                    # POST — Resend delivery/bounce tracking (svix HMAC)
   unsubscribe/route.ts                # GET/POST — CAN-SPAM one-click unsub (token-based)
 
