@@ -29,10 +29,10 @@ const { values: args } = parseArgs({
 });
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const SUPABASE_SECRET_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-  console.error("Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY env vars");
+if (!SUPABASE_URL || !SUPABASE_SECRET_KEY) {
+  console.error("Missing SUPABASE_URL or SUPABASE_SECRET_KEY env vars");
   process.exit(1);
 }
 
@@ -65,7 +65,7 @@ const fileBuffer = readFileSync(args.file);
 const timestamp = Date.now();
 const storagePath = `${args.slug}/${timestamp}${ext}`;
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+const supabase = createClient(SUPABASE_URL, SUPABASE_SECRET_KEY);
 
 const { error } = await supabase.storage
   .from("blog-images")
