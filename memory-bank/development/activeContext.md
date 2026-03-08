@@ -1,16 +1,17 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-07
+last-updated: 2026-03-08
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Weekly email moved to Inngest (was broken). LinkedIn content automation live. Blog redesigned. PostHog analytics instrumented.
+status: Active — Consultant outreach in progress. Weekly email on Inngest. LinkedIn content automation live. Blog redesigned. PostHog analytics instrumented.
 ---
 
 # Active Development Context
 
-**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Clawdbot) running. PostHog instrumented.
+**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Clawdbot) running. PostHog instrumented. Consultant outreach started.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content, `#linkedin-drafts` for LinkedIn posts). VPS: `ssh root@108.61.151.130`.
+**Current:** Consultant outreach for accuracy validation — Katherine Giannamore emailed (Mar 7), Kristen Klesh next. Review packet rebuilt (v2: embedded live HTML emails with clickable FDA source links, 3 accuracy questions only).
 **Next up:** Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner). Minor: product detail image display.
 
 ---

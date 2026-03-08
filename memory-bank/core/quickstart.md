@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-07
+Last-Updated: 2026-03-08
 Maintainer: RB
 Status: Active
 ---
@@ -20,7 +20,7 @@ Status: Active
 
 ## What's Happening
 
-**Edit product + remove from monitoring shipped.** Users can edit any product field (name, brand, ingredients, manufacturer, type) by reusing the AddProductPanel in edit mode. Delete is a soft-delete ("Remove from Monitoring") with inline confirmation showing active match count. PATCH API expanded to handle full product updates including ingredient replacement + verdict re-evaluation. Both PATCH and DELETE routes now support dev mode (isDev/DEV_USER_ID). Brand-guardian consulted: "Remove from Monitoring" language (not "Delete"), calm confirmation tone, no alarmism.
+**Consultant outreach for pre-launch accuracy validation.** Emailing FDA regulatory attorneys for paid review of AI-generated output. Katherine Giannamore emailed (Mar 7), Kristen Klesh (Loeb & Loeb) next, then Marc Ullman. Ask: 30-60 min paid consultation — is the analysis accurate, is urgency calibrated right, what are we getting wrong. Review packet rebuilt (v2): embedded live HTML emails with clickable FDA source links, 3 accuracy questions. Build: `npx tsx scripts/build-consultant-pdf.ts`.
 
 ---
 
@@ -146,6 +146,7 @@ npx tsx scripts/seo-research.ts                  # DataForSEO bulk keyword volum
 - [x] **Alert system hardened** — RFC 8058 token-based unsubscribe (email_unsubscribe_token on users). Alerts decoupled via Inngest event (`alerts/urgent.requested`), CLI fallback. `email_opted_out` flag (not access_level) for paid user unsubscribe. Settings page toggle. Orphaned `checkItemForUrgentMatches` deleted. Triple-reviewed (code/arch/backend).
 - [x] **User settings page** — `/app/settings` with profile editing (name, company, role, FEI), read-only account info (email, plan, member since), email notification toggle, and account deletion (Stripe cleanup + Supabase auth cascade). Initials avatar in AppNav links to settings.
 - [x] **Product classification** — `src/lib/products/classify.ts`. Gemini Flash assigns `product_category_id` from 119-slug controlled vocab. Wired into POST + PATCH routes (non-blocking). Backfill: `npm run pipeline:classify` (`--force` to reclassify). Code-reviewed.
+- [x] **Consultant outreach started** — Katherine Giannamore emailed (Mar 7). Review packet v2 rebuilt: embedded live HTML emails, clickable source links, accuracy-only focus. Kristen Klesh + Marc Ullman queued.
 - [ ] **Session 2 remaining** — product detail image display
 - [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.
@@ -193,6 +194,10 @@ STRIPE_SECRET_KEY=...
 STRIPE_WEBHOOK_SECRET=...
 STRIPE_PRICE_MONITOR=...         # Stripe Price ID for Monitor tier ($99/mo)
 STRIPE_PRICE_EXTRA_PRODUCT=...   # Stripe Price ID for per-product overage ($6/mo, deferred)
+
+# Rate Limiting (required for production, optional local dev)
+UPSTASH_REDIS_REST_URL=...      # Upstash Redis REST URL
+UPSTASH_REDIS_REST_TOKEN=...    # Upstash Redis REST token
 
 # Inngest
 INNGEST_SIGNING_KEY=...          # Required in Vercel for production (not needed locally)

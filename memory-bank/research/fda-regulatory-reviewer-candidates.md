@@ -7,6 +7,24 @@
 
 **Research Date**: March 2026
 
+### Outreach Status
+| Candidate | Status | Date | Notes |
+|-----------|--------|------|-------|
+| Katherine Giannamore | Emailed | Mar 7 | First outreach. Paid 30-60 min accuracy review. |
+| Kristen Klesh | Drafting | Mar 8 | Next. Cross-sector (food/supp/cosmetics/MoCRA). |
+| Marc Ullman | Queued | — | After Klesh. Supplement depth. |
+
+### Review Packet (v2 — rebuilt Mar 8)
+Focused on accuracy review only. No product pitch, no AI architecture, no legal questions.
+- **Cover**: "Sample Output for Review" — one sentence, what they're looking at
+- **Context**: data sources (4), demo product portfolio (4 products, 3 sectors)
+- **Weekly Briefing**: live HTML email embedded (clickable FDA source links)
+- **Urgent Alert**: live HTML email embedded (clickable FDA source links)
+- **Questions**: 3 only — accuracy, urgency calibration, what jumps out as wrong
+- **Build**: `npx tsx scripts/build-consultant-pdf.ts` → HTML + PDF
+
+**Key decision**: accuracy review and legal review are SEPARATE engagements. These FDA attorneys are being asked "is the regulatory analysis correct" — not "are our disclaimers sufficient." Legal review (disclaimers, liability, ToS) is a different engagement for a business/tech attorney.
+
 ---
 
 ## Tier 1 — Top Candidates (Best Fit)
