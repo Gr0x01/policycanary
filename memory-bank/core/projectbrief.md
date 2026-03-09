@@ -273,12 +273,13 @@ Detailed research: `/memory-bank/research/data-sources.md`
 | openFDA API | Enforcement/recalls, adverse events (2004-present) | REST API, JSON | Free key |
 | FDA RSS Feeds | Recalls, safety alerts, press releases (13+ feeds) | RSS polling | None |
 
-### Phase 2 (Auth or scraping)
-| Source | Coverage | Method | Auth |
-|--------|----------|--------|------|
-| FDA Warning Letters | ~3,300 letters, all FDA centers | XLSX export + AJAX scraping | None |
-| Regulations.gov | Comment periods, dockets | REST API | Free key |
-| FDA Guidance Documents | Draft/final guidance | Web scraping | None |
+### Phase 2 (Shipped 2026-03-09, all enriched)
+| Source | Coverage | Method | Auth | Items |
+|--------|----------|--------|------|-------|
+| FDA Warning Letters | ~3,300 letters, all FDA centers | AJAX scraping | None | 3,344 |
+| Regulations.gov | FDA rules, proposed rules, notices | REST API (v4) | Free key (X-Api-Key header) | 1,178 |
+| FDA Guidance Documents | Draft/final guidance (~2,786 total) | Static JSON endpoint | None | 2,761 |
+| FDA Import Alerts | Detention without physical exam | HTML scraping | None | 154 |
 
 ### Phase 3 — State Compliance Layer
 | Source | Coverage | Method | Auth |

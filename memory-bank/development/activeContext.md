@@ -11,9 +11,9 @@ status: Active — Phase 2 fetchers shipped (7 FDA sources now). Consultant outr
 
 **Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Clawdbot) running. PostHog + Sentry instrumented. Phase 2 data sources deployed.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content, `#linkedin-drafts` for LinkedIn posts). VPS: `ssh root@108.61.151.130`.
-**Just shipped:** Phase 2 FDA fetchers — import alerts (154), guidance documents (2,761), regulations.gov (1,178+). Inngest daily-ingest now runs 7 parallel fetchers. ~4,093 new regulatory items added.
+**Just shipped:** Phase 2 FDA fetchers + full enrichment — import alerts (154), guidance documents (2,761), regulations.gov (1,178). All 4,093 new items enriched (0 errors on guidance, 2 token-limit on IA, 1 on regs). Homepage/pricing updated to "7 FDA data sources".
 **Current:** Consultant outreach for accuracy validation — Katherine Giannamore emailed (Mar 7), Kristen Klesh next. Review packet rebuilt (v2: embedded live HTML emails with clickable FDA source links, 3 accuracy questions only).
-**Next up:** Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner, remove `/pricing` redirect from proxy). Enrich new Phase 2 items. Regulations.gov deeper backfill (extend --start further back).
+**Next up:** Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner, remove `/pricing` redirect from proxy). Regulations.gov deeper backfill (extend --start further back).
 **Following feature:** Research tier ($399/mo) — agentic search. Full planning doc: `memory-bank/projects/research-search.md`
 
 ---
@@ -110,8 +110,8 @@ status: Active — Phase 2 fetchers shipped (7 FDA sources now). Consultant outr
 - [x] **Enrichment pipeline updated** — `prompts.ts`: 119 `PRODUCT_CATEGORY_SLUGS` across 8 sectors, honest classification (no artificial scoping). `processor.ts`: upsert for idempotent re-enrichment, `maxRetries: 2`. `runner.ts`: concurrent via p-limit (default 15). `content-fetch.ts`: no host allowlist (trusts source URLs from our fetchers).
 - [x] **GSRS bootstrap complete** — 949K codes, 96 systems, 166K substances. `--codes-only` mode added for future backfills.
 - [x] **DSLD database loaded** — 214K products, 2M ingredients, 1.47M statements, 253K companies (4.2M rows, ~900MB). pg_trgm typeahead at 12ms. `scripts/bootstrap-dsld.ts`. Refresh quarterly.
-- [x] **Backfills complete** — 7,572 items in DB (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases).
-- [x] **All 7,573 items enriched** — 0 errors. Honest classification across all FDA sectors. Concurrent processing (p-limit @ 15). Content fetched from FDA.gov + federalregister.gov. 119 product categories in DB.
+- [x] **Backfills complete** — ~11,680 items across 7 sources (FR 1,316, openFDA 2,785, WL 3,344, RSS 142, import alerts 154, guidance docs 2,761, regulations.gov 1,178).
+- [x] **All ~11,680 items enriched** — Phase 1: 7,573, Phase 2: 4,093 (guidance 2,761, IA 154, regs 1,178). Honest classification across all FDA sectors. 119 product categories.
 
 #### Session 1: Onboarding Backend — API Routes (DONE)
 - [x] **DSLD typeahead API** (`/api/dsld/search`, `/api/dsld/[id]`) — ILIKE prefix search on local `dsld_products`, product detail + ingredients join. 30/min rate limit, auth required (dev bypass for curl testing).
@@ -169,7 +169,7 @@ status: Active — Phase 2 fetchers shipped (7 FDA sources now). Consultant outr
 - [ ] **Product detail image display** — show stored product_images in ProductContextPanel (signed URLs)
 
 ### What's Done (Phase 2C: Inngest Pipeline Orchestration)
-- [x] **Inngest functions wired** — `daily-ingest` (cron `0 6,18 * * *`, 4 parallel fetchers + enrichment), `enrich-batch` (event-driven, limit 1-200), `send-weekly-emails` (cron `0 14 * * 5`, 3 steps)
+- [x] **Inngest functions wired** — `daily-ingest` (cron `0 6,18 * * *`, 7 parallel fetchers + enrichment), `enrich-batch` (event-driven, limit 1-200), `send-weekly-emails` (cron `0 14 * * 5`, 3 steps)
 - [x] **Error handling** — catch-everything inside each `step.run()` (Inngest v3 step failure blocks all subsequent steps). Error messages truncated to 500 chars.
 - [x] **Concurrency guards** — `{ limit: 1 }` on both functions prevents overlapping runs
 - [x] **Code-reviewed** — 2 criticals + 4 warnings fixed (error handling, limit validation, parallel fetchers, concurrency key, RSS param cleanup, error truncation)
@@ -233,7 +233,7 @@ status: Active — Phase 2 fetchers shipped (7 FDA sources now). Consultant outr
 - [x] **Verdict system live** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates whether regulatory items actually affect subscriber products. Three trigger points: post-enrichment (runner step d), post-product-add (API route), CLI backfill (`scripts/run-verdicts.ts` with p-limit concurrency).
 - [x] **Verdict prompt tightened** — brand-specific recalls (with UPC/lot/company) filtered as noise. Only industry-wide rules, systemic contamination, and genuine gray areas flagged. False positives dropped from 7→1 on test product (Bum Itholate Protein).
 - [x] **App pages wired to real data** — feed, item detail, products all query real DB. Mock data removed. Search hidden from nav (not available at launch).
-- [x] **Full re-enrichment complete (2026-03-06)** — 7,566/7,574 enriched (8 errors), 979 cross-references, 669 verdicts generated inline. ~4.2 hours at concurrency 15. Tightened cross-ref + verdict prompts applied.
+- [x] **Full re-enrichment (2026-03-06)** — 7,566/7,574 enriched (8 errors), 979 cross-references, 669 verdicts. Phase 2 enrichment (2026-03-09): 4,093 additional items enriched (guidance 2,761, IA 152/154, regs 1,177/1,178).
 - [x] **`server-only` removed from `admin.ts`** — was blocking CLI scripts (enrichment runner, verdict backfill). Next.js tree-shaking already prevents client-side import of service role key.
 - [x] **`scripts/run-verdicts.ts`** — one-off verdict backfill script. Concurrent (p-limit@15). Evaluates all products against candidate items by substance + category overlap.
 
@@ -243,7 +243,7 @@ status: Active — Phase 2 fetchers shipped (7 FDA sources now). Consultant outr
 - [ ] Supplier/company detail on products — enables matching facility-specific actions to actual suppliers
 
 ### Backfills (Done)
-All backfills complete. 7,572 items in DB ready for enrichment.
+All backfills complete. ~11,680 items across 7 FDA sources, all enriched.
 
 - WL: 3,343 warning letters (full backfill, all records)
 - FR: 1,310 items (2-year range: 2024-03 → 2026-03). `run-fetcher.ts` now supports `--start`/`--end` CLI flags.
@@ -327,7 +327,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 ### What's Needed to Activate
 
 1. **Run golden tests** — `npm run pipeline:golden-enrich` to validate BHA cross-reference expansion
-2. ~~**Re-enrich 422 WLs**~~ — DONE. All 7,573 items enriched with cross-reference inference active.
+2. ~~**Re-enrich 422 WLs**~~ — DONE. All ~11,680 items enriched (7 sources) with cross-reference inference active.
 
 ---
 
@@ -402,7 +402,7 @@ Step 1c: LLM cross-**category** inference using Gemini 2.5 Pro with thinking (bu
 
 ## Infrastructure Status
 - **GitHub**: https://github.com/Gr0x01/policycanary (main branch)
-- **Supabase**: Pro plan (Small compute, 2GB RAM, 2-core ARM). Schema live — 22 tables, RLS enabled. **7,573 regulatory items ALL ENRICHED** (3,343 WL, 2,809 recalls, 1,124 notices, 136 rules, 89 safety alerts, 50 proposed rules, 21 press releases). 169K substances, 950K codes, 119 product categories. Enforcement fields on `regulatory_items` directly.
+- **Supabase**: Pro plan (Small compute, 2GB RAM, 2-core ARM). Schema live — 22 tables, RLS enabled. **~11,680 regulatory items ALL ENRICHED** across 7 sources (3,344 WL, 2,785 recalls, 2,761 guidance, 1,316 FR, 1,178 regs.gov, 154 import alerts, 142 RSS). 169K substances, 950K codes, 119 product categories. Enforcement fields on `regulatory_items` directly.
 - **Local**: `npm run dev` starts on localhost:3000
 
 ## Pipeline File Map
@@ -412,7 +412,7 @@ src/lib/inngest/
   client.ts                         # Inngest client + Events type schema
   index.ts                          # Barrel export for all functions
   functions/
-    daily-ingest.ts                 # Cron 0 6,18 * * * — 4 parallel fetchers + enrichment
+    daily-ingest.ts                 # Cron 0 6,18 * * * — 7 parallel fetchers + enrichment
     enrich-batch.ts                 # Event-driven enrichment (pipeline/enrich.requested)
 
 src/app/api/inngest/route.ts        # Inngest serve handler — registers dailyIngest + enrichBatch

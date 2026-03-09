@@ -50,12 +50,18 @@ npm run type-check       # TypeScript verification
 npm run test:e2e         # Playwright tests
 npm run test:e2e:ui      # Interactive mode
 
-# Data Pipeline — Fetchers (test window: Jan–Feb 2025 for date-ranged fetchers)
+# Data Pipeline — Fetchers (7 sources, test window: Jan–Feb 2025 for date-ranged fetchers)
 npm run pipeline:fr-backfill            # Federal Register backfill
 npm run pipeline:enforcement-backfill   # openFDA enforcement/recalls backfill
 npm run pipeline:wl-backfill            # Warning letters full backfill (~3,313 records, ~11 min)
 npm run pipeline:wl-incremental         # Warning letters incremental (recent, stops on known page)
 npm run pipeline:rss-poll               # Poll all 8 FDA RSS feeds
+npx tsx scripts/pipeline/run-fetcher.ts ia-backfill          # Import alerts (all ~154)
+npx tsx scripts/pipeline/run-fetcher.ts ia-incremental       # Import alerts (new only)
+npx tsx scripts/pipeline/run-fetcher.ts guidance-backfill    # Guidance documents (all ~2,761)
+npx tsx scripts/pipeline/run-fetcher.ts guidance-incremental # Guidance documents (new only)
+npx tsx scripts/pipeline/run-fetcher.ts regs-backfill --start 2025-01-01 --end 2026-03-09  # Regulations.gov
+npx tsx scripts/pipeline/run-fetcher.ts regs-incremental     # Regulations.gov (last 14 days)
 
 # Data Pipeline — Enrichment
 npm run pipeline:enrich                 # Enrich unenriched items (default: 10, concurrency: 15)
@@ -69,7 +75,7 @@ npm run pipeline:content-fetch-test     # Debug: fetch single source URL, print 
 
 # Inngest (automated pipeline)
 npx inngest-cli@latest dev                     # Local Inngest dev server (dashboard: http://localhost:8288)
-# daily-ingest: cron 0 6,18 * * * (6 AM + 6 PM UTC) — 4 fetchers parallel + enrichment
+# daily-ingest: cron 0 6,18 * * * (6 AM + 6 PM UTC) — 7 fetchers parallel + enrichment
 # enrich-batch: send event "pipeline/enrich.requested" with { limit?, itemTypeFilter? }
 # send-weekly-emails: cron 0 14 * * 5 (Fri 2pm UTC) — newsletter content gen + paid briefings + free newsletters
 # weekly-snapshot: cron 0 14 * * 5 (Fri 2pm UTC) — intelligence snapshot
@@ -132,8 +138,8 @@ npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volu
 - [x] **Session 0: Product categories migration + enrichment update** — migration applied (82 categories), pipeline uses controlled slugs, golden tests 10/10
 - [x] GSRS bootstrap complete — 949K codes, 96 code systems, 166K substances with codes
 - [x] **DSLD database loaded** — 214K products, 2M ingredients, 1.47M statements, 253K companies. pg_trgm typeahead (12ms). `scripts/bootstrap-dsld.ts`.
-- [x] **Backfills complete** — 7,572 items (2-year FR + enforcement, full WL, RSS). `run-fetcher.ts` supports `--start`/`--end`.
-- [x] **Enrich all items** — 7,573/7,573 enriched, 0 errors. Honest classification (all FDA sectors), concurrent (p-limit @ 15), content-fetch expanded to all source URLs.
+- [x] **Backfills complete** — ~11,680 items across 7 sources (FR, openFDA, WL, RSS, import alerts, guidance docs, regulations.gov). `run-fetcher.ts` supports `--start`/`--end`.
+- [x] **All items enriched** — ~11,680 enriched across 7 sources. Phase 2 added 4,093 items (IA 154, GD 2,761, Regs 1,178). 0 errors on guidance, 3 token-limit errors total.
 - [x] **Session 1: Onboarding backend (API routes)** — DSLD search/detail, product CRUD, substance resolution, plan limits. Triple code-reviewed.
 - [x] **Schema cleanup** — enforcement_details merged into regulatory_items, dropped 5 premature empty tables (trend_signals, item_relations, user_bookmarks, email_campaign_items). 33→28 tables.
 - [x] **Session 1b: Onboarding backend** — ingredient parsing (Gemini Flash vision + raw text), label scanning, DSLD search/detail, GSRS substance resolution (`/api/products/resolve-ingredient`). All done.
@@ -149,7 +155,7 @@ npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volu
 - [x] **Product classification** — `src/lib/products/classify.ts`. Gemini Flash assigns `product_category_id` from 119-slug controlled vocab. Wired into POST + PATCH routes (non-blocking). Backfill: `npm run pipeline:classify` (`--force` to reclassify). Code-reviewed.
 - [x] **Consultant outreach started** — Katherine Giannamore emailed (Mar 7). Review packet v2 rebuilt: embedded live HTML emails, clickable source links, accuracy-only focus. Kristen Klesh + Marc Ullman queued.
 - [ ] **Session 2 remaining** — product detail image display
-- [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 4 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
+- [x] **Inngest pipeline orchestration (Phase 2C minimal)** — daily-ingest cron (twice daily, 7 parallel fetchers + enrichment), enrich-batch (on-demand). Code-reviewed.
 - [x] **Product matching engine (Phase 4C)** — query module with relevance scoring. Substance matches (substance_id JOIN) + category matches (product_type tags). IDF-like specificity weighting. 3 Postgres RPCs, 15-min cache. No new tables.
 - [x] **Lifecycle state system** — `src/lib/utils/lifecycle.ts`. Items classified urgent/active/grace/archived via deadline-first decision tree. Feed defaults to live items. Products page splits active vs resolved history. No DB changes.
 - [x] **Verdict system** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates item-product relevance. Tightened prompt filters brand-specific recall noise. Three triggers: post-enrichment, post-product-add, CLI backfill (`scripts/run-verdicts.ts`).
@@ -162,7 +168,8 @@ npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volu
 - [ ] Launch
 - [ ] **Full historical backfill** — Federal Register (1994-present), openFDA enforcement (2004-present) + enrich all. Prerequisite for Research tier.
 - [ ] **Research tier ($399/mo)** — agentic search with 7 tools, three-model pipeline (Flash bouncer/status → Pro researcher → Sonnet writer). Full planning doc: `memory-bank/projects/research-search.md`
-- [ ] **Phase 2-3 federal sources** — Guidance Documents, Regulations.gov, Import Alerts, Adverse Events (FAERS/CAERS). See `research/data-sources.md` Phase 2-3.
+- [x] **Phase 2 federal sources** — Guidance Documents (2,761), Regulations.gov (1,178), Import Alerts (154). All enriched.
+- [ ] **Phase 3 sources** — Adverse Events (FAERS/CAERS), state compliance (Prop 65, state bills). Different data shape — deferred.
 - [ ] **Expansion:** State compliance layer (deferred — federal-only until customer demand justifies)
 - [ ] **Expansion:** Pet food / animal supplements (deferred)
 

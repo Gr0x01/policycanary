@@ -67,7 +67,7 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **XML parsing**: **`fast-xml-parser`** — used by the RSS fetcher to parse FDA RSS feeds in Node.js (no DOMParser in Node)
 - **Scheduling**: **Inngest v3** (background jobs, pipeline orchestration, retries)
   - `/api/inngest` route serves both functions
-  - `daily-ingest` — cron `0 6,18 * * *` (6 AM + 6 PM UTC). 4 fetchers in parallel (`Promise.all`) + enrichment (limit: 100). Catch-everything error handling per step.
+  - `daily-ingest` — cron `0 6,18 * * *` (6 AM + 6 PM UTC). 7 fetchers in parallel (`Promise.all`: FR, openFDA, WL, RSS, import alerts, guidance docs, regulations.gov) + enrichment (limit: 100). Catch-everything error handling per step.
   - `enrich-batch` — event `pipeline/enrich.requested`. On-demand enrichment, limit clamped 1-200.
   - Concurrency: `{ limit: 1 }` on both functions (no overlapping runs)
   - Client: `src/lib/inngest/client.ts` with typed `Events` schema

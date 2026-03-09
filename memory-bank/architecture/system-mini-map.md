@@ -10,13 +10,16 @@
                                                  x FDA items
 
   Federal Register ─┐                           subscriber_products
-  openFDA Recalls  ─┤    ┌──────────────┐         (ingredients,
-  Warning Letters  ─┼──> │ Gemini Flash  │          categories)
-  FDA RSS Feeds    ─┘    │              │              │
-        │                │  summary     │              │
-        v                │  action type │       ┌──────┴──────┐
-  regulatory_items       │  deadline    │       │  Relevance  │
-   (7,573 items)         │  substances  │──────>│  Scoring    │
+  openFDA Recalls  ─┤                                (ingredients,
+  Warning Letters  ─┤    ┌──────────────┐              categories)
+  FDA RSS Feeds    ─┤    │ Gemini Flash  │                │
+  Import Alerts    ─┼──> │              │                │
+  Guidance Docs    ─┤    │  summary     │                │
+  Regulations.gov  ─┘    │  action type │       ┌──────┴──────┐
+        │                │  deadline    │       │  Relevance  │
+        v                │  substances  │──────>│  Scoring    │
+  regulatory_items       │  categories  │       │             │
+   (~11,680 items)       │  action items│       │ substance   │
                          │  categories  │       │             │
                          │  action items│       │ substance   │
                          └──────┬───────┘       │ + category  │
@@ -66,7 +69,7 @@
 
 | Stage | Key Tech | Key Data |
 |-------|----------|----------|
-| **Ingest** | Inngest cron (2x daily), 4 fetchers | 7,573 items across all FDA sectors |
+| **Ingest** | Inngest cron (2x daily), 7 fetchers | ~11,680 items across all FDA sectors |
 | **Enrich** | Gemini Flash/Pro, GSRS cross-ref | Substances, categories (119 slugs), action items |
 | **Match** | 3 Postgres RPCs, IDF scoring | Substance + category overlap, 15-min cache |
 | **Onboard** | DSLD local DB, Vision AI (Gemini Flash) | 214K supplements, 166K substances |

@@ -31,7 +31,7 @@ flowchart TB
     subgraph PIPELINE["Ingest + Orchestration"]
         INNGEST[Inngest Cron<br/>2x daily + on-demand]
         PARSE[Parse & Normalize]
-        RAW[(regulatory_items<br/>7,573 items)]
+        RAW[(regulatory_items<br/>~11,680 items)]
     end
 
     subgraph ENRICH["Enrichment — Gemini Flash + Pro"]
