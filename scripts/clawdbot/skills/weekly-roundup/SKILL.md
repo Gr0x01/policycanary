@@ -153,6 +153,45 @@ Then the full markdown content.
 
 Post this to the Discord channel for review.
 
+## Step 5b — Draft LinkedIn Post
+
+After posting the blog draft for review, also draft a LinkedIn post to promote the roundup. This will be posted on Monday morning to lead the week.
+
+Use the **Listicle Tease** or **Data Hook** format. Pull 3-5 key takeaways or one striking stat from the roundup.
+
+### LinkedIn Formatting Rules
+- **Short paragraphs.** 1-2 sentences max per paragraph.
+- **Line breaks between every paragraph.** LinkedIn collapses dense text.
+- **No markdown.** No `**bold**`, no `[links](url)`. Use CAPS sparingly for emphasis.
+- **No hashtags in the body.** Add 3-5 hashtags at the very end, separated by a blank line.
+- **No emojis.** Professional tone.
+- **Hook in first 2 lines.** LinkedIn truncates after ~140 characters with "...see more".
+- **Plain URLs.** Paste the full URL on its own line.
+- **150-300 words.** Substantive but not long-winded.
+
+### Voice
+- Data-first. Lead with numbers.
+- Specific — name substances, companies, CFR citations.
+- No hype, no corporate speak, no "In today's regulatory landscape..."
+
+### Format the Discord message:
+
+```
+**LinkedIn Post Draft (for Monday)**
+**Source:** [roundup blog post title] — https://policycanary.io/blog/[slug]
+**Format:** [Data Hook / Listicle Tease]
+
+---
+
+[The exact post text, ready to copy/paste into LinkedIn]
+
+---
+
+#FDARegulation #FoodSafety #RegulatoryCompliance #PolicyCanary #[topic-specific tag]
+```
+
+Post this to the **#linkedin-drafts** channel.
+
 ## Step 6 — Publish (On User Command)
 
 When the user says "publish", "looks good", "ship it", or similar approval:

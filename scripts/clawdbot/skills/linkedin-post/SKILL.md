@@ -156,11 +156,12 @@ node scripts/mark-linkedin-promoted.mjs --slug "[slug]"
 
 ## Content Calendar Guidance
 
-- **2 posts per week** — align with blog publishing (Tue/Thu SEO posts, Fri roundup)
+- **2 posts per week** — Monday + Wednesday
+- **Monday = Weekly Roundup promotion.** The weekly-roundup skill (Friday cron) already drafts a LinkedIn post and drops it in #linkedin-drafts. Monday's job is to check for that draft first — if it exists, skip drafting and just confirm it's ready. If no roundup draft exists (e.g., roundup didn't run), fall back to the normal flow below.
+- **Wednesday = Fresh content.** Use the normal flow — find unpromoted blog posts or draft standalone data insights.
 - **Rotate formats** — don't do 3 Data Hooks in a row
 - **Prioritize unpromoted blog posts** — every blog post should get at least one LinkedIn post
 - **One standalone data insight per week max** — the primary goal is driving blog traffic
-- **Best posting times for B2B:** Tuesday-Thursday, 8-10 AM ET. But RB will post manually, so just draft on schedule.
 
 ## Examples
 

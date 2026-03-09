@@ -4,11 +4,11 @@
  *
  * Queries DSLD for supplement companies whose products contain ingredients
  * subject to recent FDA actions, generates personalized DM cheat sheets,
- * and pushes to Airtable for tracking.
+ * and outputs JSON for Notion import (via Claude MCP).
  *
  * Usage:
- *   npx tsx scripts/linkedin-outreach.ts                    # Full run
- *   npx tsx scripts/linkedin-outreach.ts --dry-run          # Preview without Airtable push
+ *   npx tsx scripts/linkedin-outreach.ts                    # Full run → writes outreach-targets.json
+ *   npx tsx scripts/linkedin-outreach.ts --dry-run          # Preview without writing JSON
  *   npx tsx scripts/linkedin-outreach.ts --ingredient turmeric  # Filter by ingredient
  *   npx tsx scripts/linkedin-outreach.ts --limit 20         # Limit records
  */
@@ -32,10 +32,6 @@ if (existsSync(envPath)) {
   }
 }
 
-const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
-const AIRTABLE_BASE_ID = "appaGh4aKp9sEswAW";
-const AIRTABLE_TABLE_NAME = "LinkedIn Outreach";
-
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL ?? "",
   process.env.SUPABASE_SERVICE_ROLE_KEY ?? ""
@@ -51,7 +47,7 @@ const ingredientFilter = args.includes("--ingredient")
   : null;
 const limit = args.includes("--limit")
   ? parseInt(args[args.indexOf("--limit") + 1], 10)
-  : 100;
+  : 500;
 
 // ---------------------------------------------------------------------------
 // FDA action hooks — map ingredient to the most compelling regulatory item
@@ -163,118 +159,139 @@ const FDA_HOOKS: FDAHook[] = [
     dmAngle:
       "the FDA just finalized a rule on beetroot red as a color additive — new compliance requirements take effect March 23",
   },
+  {
+    ingredient: "ginger",
+    patterns: ["%ginger%"],
+    actionTitle:
+      "Organic Ginger Root Herbal Supplement Recall — Unapproved Drug Claims & Misbranded",
+    actionType: "recall",
+    actionDate: "2025-12-31",
+    actionSummary:
+      "Ginger root capsules recalled because the FDA deemed claims like 'natural anti-inflammatory properties' and 'supports gut' to be unapproved drug claims.",
+    dmAngle:
+      "a ginger supplement was recalled because the FDA deemed claims like 'supports gut health' and 'anti-inflammatory' to be unapproved drug claims — a lot of ginger brands are making similar claims right now",
+  },
+  {
+    ingredient: "spirulina",
+    patterns: ["%spirulina%"],
+    actionTitle:
+      "Live it Up Super Greens Recall — Salmonella Typhimurium (Class I)",
+    actionType: "recall",
+    actionDate: "2026-02-04",
+    actionSummary:
+      "Super Greens powder containing spirulina recalled (Class I) for Salmonella Typhimurium contamination.",
+    dmAngle:
+      "a super greens supplement containing spirulina was just recalled Class I for Salmonella Typhimurium — that's the most serious recall classification the FDA uses",
+  },
+  {
+    ingredient: "chlorella",
+    patterns: ["%chlorella%"],
+    actionTitle:
+      "Live it Up Super Greens Recall — Salmonella Typhimurium (Class I)",
+    actionType: "recall",
+    actionDate: "2026-02-04",
+    actionSummary:
+      "Super Greens powder containing chlorella recalled (Class I) for Salmonella Typhimurium contamination.",
+    dmAngle:
+      "a super greens supplement containing chlorella was just recalled Class I for Salmonella Typhimurium — that's the most serious recall classification the FDA uses",
+  },
+  {
+    ingredient: "echinacea",
+    patterns: ["%echinacea%"],
+    actionTitle:
+      "Herbal Supplement Line Recall — Unapproved Drug Claims & Missing Supplement Facts",
+    actionType: "recall",
+    actionDate: "2025-12-31",
+    actionSummary:
+      "An entire line of herbal supplements including echinacea recalled for unapproved drug claims and missing Supplement Facts panels.",
+    dmAngle:
+      "the FDA recalled an entire herbal supplement line for unapproved drug claims and missing Supplement Facts labels — echinacea products were specifically affected",
+  },
+  {
+    ingredient: "fenugreek",
+    patterns: ["%fenugreek%"],
+    actionTitle:
+      "Herbal Supplement Line Recall — Unapproved Drug Claims & Missing Supplement Facts",
+    actionType: "recall",
+    actionDate: "2025-12-31",
+    actionSummary:
+      "An entire line of herbal supplements including fenugreek recalled for unapproved drug claims and missing Supplement Facts panels.",
+    dmAngle:
+      "the FDA recalled an entire herbal supplement line for unapproved drug claims and missing Supplement Facts labels — fenugreek products were specifically affected",
+  },
+  {
+    ingredient: "elderberry",
+    patterns: ["%elderberry%", "%sambucus%"],
+    actionTitle:
+      "Organic Baby Bedtime Drops Recall — Yeast Contamination (Elderberry)",
+    actionType: "recall",
+    actionDate: "2025-10-15",
+    actionSummary:
+      "Elderberry + vitamin C liquid supplement for infants recalled multiple times for yeast contamination.",
+    dmAngle:
+      "an elderberry supplement was recalled multiple times for yeast contamination — and it was marketed to infants, which means heightened FDA scrutiny on elderberry products going forward",
+  },
+  {
+    ingredient: "chaga",
+    patterns: ["%chaga%", "%lion%s mane%", "%reishi%"],
+    actionTitle:
+      "Chaga Mushroom Supplement Recall — Anti-Cancer Claims & Missing Supplement Facts",
+    actionType: "recall",
+    actionDate: "2025-12-31",
+    actionSummary:
+      "Chaga mushroom supplement recalled for making anti-cancer claims and missing its Supplement Facts panel entirely.",
+    dmAngle:
+      "the FDA recalled a mushroom supplement for anti-cancer claims and a missing Supplement Facts label — the claims crackdown is hitting the functional mushroom category hard",
+  },
+  {
+    ingredient: "senna",
+    patterns: ["%senna%"],
+    actionTitle:
+      "Celebration Herbals Senna Leaf Tea Recall — Potential Salmonella",
+    actionType: "recall",
+    actionDate: "2025-12-24",
+    actionSummary:
+      "Senna leaf herbal tea recalled for possible Salmonella contamination.",
+    dmAngle:
+      "a senna leaf tea was recalled for potential Salmonella contamination — senna products are already under scrutiny for laxative-related structure/function claims",
+  },
+  {
+    ingredient: "fish_oil",
+    patterns: ["%fish oil%", "%omega-3%", "%omega 3%"],
+    actionTitle:
+      "Hi-Tech Pharmaceuticals Fish Oil Recall — Unapproved Drug Claims",
+    actionType: "recall",
+    actionDate: "2025-09-24",
+    actionSummary:
+      "Fish oil supplement recalled for claims like 'supports cardiovascular health' and 'may help with joint pain' deemed unapproved drug claims.",
+    dmAngle:
+      "a fish oil supplement was recalled because claims like 'supports cardiovascular health' were deemed unapproved drug claims — a lot of omega-3 brands make these exact claims",
+  },
+  {
+    ingredient: "colostrum_allergen",
+    patterns: ["%colostrum%"],
+    actionTitle:
+      "Two Colostrum Supplement Recalls — Undeclared Milk Allergen (Feb 2026)",
+    actionType: "recall",
+    actionDate: "2026-02-25",
+    actionSummary:
+      "Two separate colostrum supplements recalled in February for failing to declare milk as an allergen — colostrum is a milk product.",
+    dmAngle:
+      "two colostrum supplements were recalled in February for undeclared milk allergen — the FDA considers colostrum a milk product, and a lot of colostrum brands may not be declaring the allergen correctly",
+  },
 ];
 
 // ---------------------------------------------------------------------------
-// Airtable helpers
+// Output helpers
 // ---------------------------------------------------------------------------
 
-async function airtableFetch(
-  path: string,
-  options: RequestInit = {}
-): Promise<any> {
-  const resp = await fetch(`https://api.airtable.com/v0${path}`, {
-    ...options,
-    headers: {
-      Authorization: `Bearer ${AIRTABLE_TOKEN}`,
-      "Content-Type": "application/json",
-      ...(options.headers ?? {}),
-    },
-  });
-  if (!resp.ok) {
-    const text = await resp.text();
-    throw new Error(`Airtable ${resp.status}: ${text}`);
-  }
-  return resp.json();
-}
-
-async function ensureTable(): Promise<string> {
-  // Check if table exists
-  const meta = await airtableFetch(
-    `/meta/bases/${AIRTABLE_BASE_ID}/tables`
-  );
-  const existing = meta.tables.find(
-    (t: any) => t.name === AIRTABLE_TABLE_NAME
-  );
-  if (existing) {
-    console.log(`[airtable] Using existing table: ${AIRTABLE_TABLE_NAME}`);
-    return existing.id;
-  }
-
-  // Create table with fields
-  console.log(`[airtable] Creating table: ${AIRTABLE_TABLE_NAME}`);
-  const result = await airtableFetch(
-    `/meta/bases/${AIRTABLE_BASE_ID}/tables`,
-    {
-      method: "POST",
-      body: JSON.stringify({
-        name: AIRTABLE_TABLE_NAME,
-        fields: [
-          { name: "Company", type: "singleLineText" },
-          { name: "Total Products", type: "number", options: { precision: 0 } },
-          { name: "Ingredient Hook", type: "singleLineText" },
-          {
-            name: "Products Affected",
-            type: "number",
-            options: { precision: 0 },
-          },
-          { name: "Sample Products", type: "multilineText" },
-          { name: "FDA Action", type: "singleLineText" },
-          { name: "FDA Action Type", type: "singleLineText" },
-          { name: "FDA Action Date", type: "date", options: { dateFormat: { name: "us" } } },
-          { name: "DM 1 Draft", type: "multilineText" },
-          { name: "LinkedIn Person", type: "singleLineText" },
-          { name: "LinkedIn URL", type: "url" },
-          { name: "Person Title", type: "singleLineText" },
-          {
-            name: "Status",
-            type: "singleSelect",
-            options: {
-              choices: [
-                { name: "Not Started", color: "grayLight2" },
-                { name: "DM Sent", color: "blueLight2" },
-                { name: "Replied", color: "greenLight2" },
-                { name: "Meeting Set", color: "purpleLight2" },
-                { name: "Not Interested", color: "redLight2" },
-                { name: "Signed Up", color: "yellowLight2" },
-              ],
-            },
-          },
-          {
-            name: "Priority",
-            type: "singleSelect",
-            options: {
-              choices: [
-                { name: "High", color: "redLight2" },
-                { name: "Medium", color: "yellowLight2" },
-                { name: "Low", color: "grayLight2" },
-              ],
-            },
-          },
-          { name: "Notes", type: "multilineText" },
-        ],
-      }),
-    }
-  );
-  console.log(`[airtable] Created table: ${result.id}`);
-  return result.id;
-}
-
-async function pushRecords(
-  tableId: string,
-  records: Record<string, any>[]
-): Promise<void> {
-  // Airtable max 10 records per request
-  for (let i = 0; i < records.length; i += 10) {
-    const batch = records.slice(i, i + 10).map((fields) => ({ fields }));
-    await airtableFetch(`/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`, {
-      method: "POST",
-      body: JSON.stringify({ records: batch }),
-    });
-    console.log(
-      `[airtable] Pushed ${Math.min(i + 10, records.length)}/${records.length} records`
-    );
-  }
+function writeJsonOutput(records: Record<string, any>[]): void {
+  const jsonPath = resolve(process.cwd(), "scripts/outreach/demo-output/outreach-targets.json");
+  const { writeFileSync, mkdirSync } = require("fs");
+  mkdirSync(resolve(process.cwd(), "scripts/outreach/demo-output"), { recursive: true });
+  writeFileSync(jsonPath, JSON.stringify(records, null, 2));
+  console.log(`\n[json] Wrote ${records.length} records to ${jsonPath}`);
+  console.log(`[next] Ask Claude to push these to Notion via MCP`);
 }
 
 // ---------------------------------------------------------------------------
@@ -319,7 +336,7 @@ function scorePriority(
 
 async function main() {
   console.log("=== LinkedIn Outreach Generator ===\n");
-  if (dryRun) console.log("[mode] DRY RUN — no Airtable push\n");
+  if (dryRun) console.log("[mode] DRY RUN\n");
   if (ingredientFilter) console.log(`[filter] Ingredient: ${ingredientFilter}\n`);
 
   const hooks = ingredientFilter
@@ -413,8 +430,8 @@ async function main() {
 
       const totalProducts = count ?? 0;
 
-      // Filter: 5-50 total products, at least 2 with the ingredient
-      if (totalProducts < 5 || totalProducts > 50 || info.dsldIds.size < 2) {
+      // Filter: 3-200 total products, at least 1 with the ingredient
+      if (totalProducts < 3 || totalProducts > 200 || info.dsldIds.size < 1) {
         companyMap.delete(companyName);
         continue;
       }
@@ -494,15 +511,6 @@ async function main() {
   console.log("\nBy priority:");
   for (const [k, v] of byPriority) console.log(`  ${k}: ${v}`);
 
-  // If --json flag, dump full data for subagent DM generation
-  if (args.includes("--json")) {
-    const jsonPath = resolve(process.cwd(), "scripts/demo-output/outreach-targets.json");
-    const { writeFileSync, mkdirSync } = await import("fs");
-    mkdirSync(resolve(process.cwd(), "scripts/demo-output"), { recursive: true });
-    writeFileSync(jsonPath, JSON.stringify(finalRecords, null, 2));
-    console.log(`\n[json] Wrote ${finalRecords.length} records to ${jsonPath}`);
-  }
-
   // Print top 10 for preview
   console.log("\nTop 10 targets:");
   for (const r of finalRecords.slice(0, 10)) {
@@ -511,25 +519,9 @@ async function main() {
     );
   }
 
-  // Push to Airtable
-  if (!dryRun && AIRTABLE_TOKEN) {
-    console.log("\n--- Pushing to Airtable ---");
-    try {
-      const tableId = await ensureTable();
-      await pushRecords(tableId, finalRecords);
-      console.log(
-        `\n[done] ${finalRecords.length} records pushed to Airtable "${AIRTABLE_TABLE_NAME}"`
-      );
-    } catch (err: any) {
-      console.error(`[airtable] Error: ${err.message}`);
-      console.log(
-        "[airtable] Records generated but not pushed. Run again or check token."
-      );
-    }
-  } else if (!AIRTABLE_TOKEN) {
-    console.log("\n[skip] No AIRTABLE_TOKEN — skipping Airtable push");
-  } else {
-    console.log("\n[dry-run] Skipping Airtable push");
+  // Always write JSON output
+  if (!dryRun) {
+    writeJsonOutput(finalRecords);
   }
 }
 
