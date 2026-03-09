@@ -11,10 +11,10 @@ Status: Active
 - **Status**: Weekly email moved to Inngest (was Vercel cron, free newsletter never sent). FK bug fixed. User settings, alert system, PostHog analytics all shipped.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
-- **GTM**: Pilot program (no pricing surfaced). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
+- **GTM**: Pilot program (no pricing surfaced, `/pricing` redirects to `/` via proxy). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 5 cron jobs: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), linkedin-monday (Mon 10AM), linkedin-wednesday (Wed 10AM)
-- **Next**: Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner). Minor: product detail image display.
+- **Next**: Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner, remove `/pricing` redirect from proxy). Minor: product detail image display.
 
 ---
 
@@ -93,6 +93,7 @@ su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
 ./scripts/clawdbot/setup-clawdbot.sh {provision|deploy|configure|cron|ssh|status}
 # Skills on VPS: weekly-roundup, seo-blog-post, linkedin-post
 # Cron: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), linkedin-monday (Mon 10AM), linkedin-wednesday (Wed 10AM)
+# Content flow: Friday roundup generates blog draft + LinkedIn copy → Monday LinkedIn promotes the roundup → Wednesday LinkedIn is fresh content
 
 # SEO Keyword Research
 npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volume + difficulty
@@ -157,9 +158,13 @@ npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volu
 - [x] **Product intelligence email MVP** — compiler (`src/lib/email/compiler.ts`), BriefingEmail/AlertEmail/WeeklyNewsletter templates, Resend sender, webhook tracking
 - [x] **Validation** — product intelligence email confirmed working in production (received in inbox, quality approved)
 - [x] **Weekly email → Inngest** — moved from Vercel cron to Inngest function (`send-weekly-emails`). Fixed: FK violation on `createCampaign` (passed `users.id` to `email_subscribers.id` FK), free newsletter never sent (timeout from per-subscriber LLM calls). Newsletter content now generated once (2 LLM calls total). `vercel.json` crons emptied. Manual trigger route kept at `/api/email/send-weekly`.
+- [x] **Sentry error monitoring** — `@sentry/nextjs`, org `policy-canary`, project `policy-canary-web`. Client/server/edge configs, tunnel at `/monitoring`, 20% trace sampling, replay on errors. Source maps uploaded + deleted. Code-reviewed.
 - [ ] Launch
-- [ ] **Expansion:** State compliance layer (month 3-5)
-- [ ] **Expansion:** Pet food / animal supplements (month 5-7)
+- [ ] **Full historical backfill** — Federal Register (1994-present), openFDA enforcement (2004-present) + enrich all. Prerequisite for Research tier.
+- [ ] **Research tier ($399/mo)** — agentic search with 7 tools, three-model pipeline (Flash bouncer/status → Pro researcher → Sonnet writer). Full planning doc: `memory-bank/projects/research-search.md`
+- [ ] **Phase 2-3 federal sources** — Guidance Documents, Regulations.gov, Import Alerts, Adverse Events (FAERS/CAERS). See `research/data-sources.md` Phase 2-3.
+- [ ] **Expansion:** State compliance layer (deferred — federal-only until customer demand justifies)
+- [ ] **Expansion:** Pet food / animal supplements (deferred)
 
 ---
 
@@ -220,6 +225,10 @@ CLAWDBOT_VPS_ID=...              # Vultr instance ID
 DATAFORSEO_LOGIN=...             # DataForSEO API login
 DATAFORSEO_PASSWORD=...          # DataForSEO API password
 DATAFORSEO_BASE64=...            # Base64-encoded login:password
+
+# Sentry (error monitoring)
+NEXT_PUBLIC_SENTRY_DSN=...       # Sentry DSN (client + server)
+SENTRY_AUTH_TOKEN=...            # Org auth token for source map uploads
 ```
 
 ---
@@ -233,6 +242,7 @@ DATAFORSEO_BASE64=...            # Base64-encoded login:password
 | `development/activeContext.md` | Current focus + next steps |
 | `development/progress.md` | Work log & milestones |
 | `architecture/techStack.md` | Technology decisions & costs |
+| `architecture/clawdbot.md` | Clawdbot VPS, Discord, cron jobs, skills, scripts, content workflows, security |
 | `architecture/llm-data-flow.md` | LLM layers, data flow, email generation, onboarding |
 | `architecture/llm-data-flow.html` | Visual diagrams (open in browser) |
 | `research/competitive-landscape.md` | 20+ competitor profiles |

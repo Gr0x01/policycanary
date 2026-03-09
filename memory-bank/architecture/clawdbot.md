@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-08
+Last-Updated: 2026-03-09
 Maintainer: RB
 Status: Active — Running on Vultr VPS. Pi 5 migration planned.
 ---
@@ -67,7 +67,7 @@ All run on VPS as `openclaw` user. Managed via `openclaw cron {list|add|run|remo
 
 | Job | Schedule | Channel | Job ID |
 |-----|----------|---------|--------|
-| `weekly-roundup` | `0 9 * * 5` (Fri 9AM ET) | `#weekly-roundup` | `8c9ab46d-42c9-42e9-8a2d-004ef56a1fb4` |
+| `weekly-roundup` | `0 9 * * 5` (Fri 9AM ET) | `#weekly-roundup` + `#linkedin-drafts` | `8c9ab46d-42c9-42e9-8a2d-004ef56a1fb4` |
 | `seo-blog-tuesday` | `0 10 * * 2` (Tue 10AM ET) | isolated | `46026091-20fd-4fd0-87d9-a00e96dd64c5` |
 | `linkedin-monday` | `0 10 * * 1` (Mon 10AM ET) | `#linkedin-drafts` | `828d9ced-d7f7-4dce-afa8-c69073ddf2db` |
 | `linkedin-wednesday` | `0 10 * * 3` (Wed 10AM ET) | `#linkedin-drafts` | `59f169a4-b247-4b62-abad-65960d90a745` |
@@ -87,9 +87,9 @@ Skills are markdown instruction files that tell Clawdbot how to perform complex 
 
 | Skill | Location (VPS) | Source (repo) | Purpose |
 |-------|---------------|---------------|---------|
-| **weekly-roundup** | `skills/weekly-roundup/SKILL.md` | `scripts/clawdbot/skills/weekly-roundup/SKILL.md` | Friday roundup: query week's data, research, draft blog post, post to Discord |
+| **weekly-roundup** | `skills/weekly-roundup/SKILL.md` | `scripts/clawdbot/skills/weekly-roundup/SKILL.md` | Friday roundup: query week's data, research, draft blog post + LinkedIn copy, post to Discord |
 | **seo-blog-post** | `skills/seo-blog-post/SKILL.md` | `scripts/clawdbot/skills/seo-blog-post/SKILL.md` | Tuesday SEO post: keyword-targeted, data-driven, charts + images |
-| **linkedin-post** | `skills/linkedin-post/SKILL.md` | `scripts/clawdbot/skills/linkedin-post/SKILL.md` | Mon/Wed LinkedIn drafts: repurpose blog content, copy/paste workflow |
+| **linkedin-post** | `skills/linkedin-post/SKILL.md` | `scripts/clawdbot/skills/linkedin-post/SKILL.md` | Mon (roundup promo) / Wed (fresh content) LinkedIn drafts: copy/paste workflow |
 | **lead-finder** | `skills/lead-finder/SKILL.md` | `scripts/clawdbot/skills/lead-finder/SKILL.md` | Monday leads: companies cited in FDA enforcement that aren't subscribers, with draft outreach |
 
 ---
@@ -261,8 +261,9 @@ ssh root@108.61.151.130 systemctl restart openclaw.service
 3. Researches lead story externally (Tavily)
 4. Generates charts (QuickChart) + optional hero image (Gemini)
 5. Drafts 1,000-1,500 word blog post
-6. Posts draft to `#weekly-roundup` on Discord
-7. RB reviews → says "publish" → Clawdbot publishes via `/api/blog`
+6. Posts blog draft to `#weekly-roundup` on Discord
+7. Drafts LinkedIn post promoting the roundup → posts to `#linkedin-drafts` (for Monday)
+8. RB reviews → says "publish" → Clawdbot publishes via `/api/blog`
 
 ### SEO Blog Post (Tuesday)
 1. Cron fires 10 AM ET → Clawdbot runs `seo-blog-post` skill
@@ -274,11 +275,12 @@ ssh root@108.61.151.130 systemctl restart openclaw.service
 
 ### LinkedIn (Monday + Wednesday)
 1. Cron fires 10 AM ET → Clawdbot runs `linkedin-post` skill
-2. Checks `--not-promoted` blog posts for fresh content
-3. Drafts LinkedIn post (4 formats: Data Hook, Listicle Tease, Hot Take, Did You Know)
-4. Posts to `#linkedin-drafts` on Discord
-5. RB copies/pastes into LinkedIn natively (no API)
-6. RB confirms → Clawdbot runs `mark-linkedin-promoted.mjs`
+2. **Monday**: checks `#linkedin-drafts` for existing roundup draft from Friday — if found, confirms it's ready; if not, falls back to normal flow
+3. **Wednesday**: checks `--not-promoted` blog posts for fresh content
+4. Drafts LinkedIn post (4 formats: Data Hook, Listicle Tease, Hot Take, Did You Know)
+5. Posts to `#linkedin-drafts` on Discord
+6. RB copies/pastes into LinkedIn natively (no API)
+7. RB confirms → Clawdbot runs `mark-linkedin-promoted.mjs`
 
 ---
 

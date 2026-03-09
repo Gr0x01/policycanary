@@ -27,6 +27,9 @@ YOU MUST READ THESE FILES BEFORE ANYTHING ELSE.
 - `/memory-bank/architecture/data-pipeline.md` – scripts, enrichment workflow, commands
 - `/memory-bank/development/progress.md` – milestones, data sources, costs
 
+**Read when working with Clawdbot:**
+- `/memory-bank/architecture/clawdbot.md` – VPS, Discord, cron jobs, skills, scripts, content workflows, security
+
 ### Documentation Updates
 Update the memory bank when:
 - You finish a feature or change operational flow.

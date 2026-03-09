@@ -32,6 +32,7 @@ Modern web stack optimized for rapid solo development and minimal operational ov
 - **Analytics**: PostHog (product analytics, session replay, funnels) — project 334096, Pilot Monitoring dashboard id 1338727
 - **Email**: Resend (sending) + React Email (templates) + `@react-email/components` (render). `npm run email:dev` for preview. Business email: Google Workspace (`rashaad@policycanary.io`), groups: `team@`, `support@`. DKIM configured in Cloudflare.
 - **Rate Limiting**: Upstash Redis (`@upstash/ratelimit` + `@upstash/redis`) — sliding window, works across Vercel instances. `src/lib/rate-limit.ts`. Falls back to allow-all when env vars missing (local dev). Used on 18 API routes.
+- **Error Monitoring**: Sentry (`@sentry/nextjs`) — org `policy-canary`, project `policy-canary-web`. Client/server/edge configs. Tunnel at `/monitoring` (bypasses ad blockers, excluded from proxy auth). 20% trace sampling, session replay on errors only. Disabled in dev. Source maps uploaded + deleted post-build.
 - **GitHub**: https://github.com/Gr0x01/policycanary
 
 ### Content Automation (Clawdbot)
@@ -152,6 +153,10 @@ INNGEST_EVENT_KEY=your_event_key            # Required if sending events externa
 # Analytics (Required — PostHog)
 NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key
 NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com  # default, can omit
+
+# Error Monitoring (Required — Sentry)
+NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn             # Client + server DSN
+SENTRY_AUTH_TOKEN=your_sentry_org_auth_token        # Source map uploads (org:ci scope)
 ```
 
 ## LLM Model Reference

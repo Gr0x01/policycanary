@@ -1,18 +1,20 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-08
+last-updated: 2026-03-09
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Consultant outreach in progress. Weekly email on Inngest. LinkedIn content automation live. Blog redesigned. PostHog analytics instrumented.
+status: Active — Phase 2 fetchers shipped (7 FDA sources now). Consultant outreach in progress. LinkedIn content automation live.
 ---
 
 # Active Development Context
 
-**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Clawdbot) running. PostHog instrumented. Consultant outreach started.
+**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Clawdbot) running. PostHog + Sentry instrumented. Phase 2 data sources deployed.
 **Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content, `#linkedin-drafts` for LinkedIn posts). VPS: `ssh root@108.61.151.130`.
+**Just shipped:** Phase 2 FDA fetchers — import alerts (154), guidance documents (2,761), regulations.gov (1,178+). Inngest daily-ingest now runs 7 parallel fetchers. ~4,093 new regulatory items added.
 **Current:** Consultant outreach for accuracy validation — Katherine Giannamore emailed (Mar 7), Kristen Klesh next. Review packet rebuilt (v2: embedded live HTML emails with clickable FDA source links, 3 accuracy questions only).
-**Next up:** Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner). Minor: product detail image display.
+**Next up:** Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner, remove `/pricing` redirect from proxy). Enrich new Phase 2 items. Regulations.gov deeper backfill (extend --start further back).
+**Following feature:** Research tier ($399/mo) — agentic search. Full planning doc: `memory-bank/projects/research-search.md`
 
 ---
 
@@ -62,7 +64,7 @@ status: Active — Consultant outreach in progress. Weekly email on Inngest. Lin
 - [x] **SignupForm** — name (required), company (required), email, feedback consent checkbox with Terms/Privacy links. "Join the Pilot" button. Success shows "Check your email" with canary-colored email.
 - [x] **Homepage rewrite** — Social proof: "PILOT PROGRAM" badge, capability statement (no fabricated quote). Dark CTA: "Don't find out from a recall notice" + pilot onboarding copy. No dollar amounts anywhere.
 - [x] **Nav/footer** — Pricing link removed from Header + Footer. CTAs changed to "Join the Pilot".
-- [x] **Pricing page** — accessible via direct URL, amber "Pilot program active" banner, bottom CTA rewritten with pilot framing.
+- [x] **Pricing page** — redirects to `/` via `src/proxy.ts` during pilot (was accessible via direct URL with amber banner). **Remove redirect when pilot ends.**
 - [x] **Login page** — "Not signed up yet? Join the pilot". `shouldCreateUser: false` (login only works for existing users).
 - [x] **DB migration** — `pilot_feedback_consent`, `pilot_consented_at`, `terms_version` columns on `users` table.
 - [x] **Code-reviewed** — 3 criticals fixed: callback no longer overwrites paid users (C1), source CHECK constraint (C3), login bypass prevention (W3). Plus: email normalization, autoComplete attributes, dark/light success text.
@@ -94,8 +96,8 @@ status: Active — Consultant outreach in progress. Weekly email on Inngest. Lin
 - [x] **Clawdbot VPS** — Vultr `vc2-1c-2gb` ($12/mo), Ubuntu 24.04, Node.js 22, OpenClaw v2026.3.2. IP: `108.61.151.130`. Systemd service `openclaw.service`.
 - [x] **Discord bot** — `ClawdBot - Canary` on `Bizniz` server. 5 channels: `#blog-drafts`, `#linkedin-drafts`, `#weekly-roundup`, `#alerts`, `#clawdbot` (general chat). `requireMention: false`.
 - [x] **Helper scripts** — `query-supabase.mjs` (query enriched items), `publish-blog.mjs` (POST to `/api/blog`). Deployed to VPS workspace.
-- [x] **Weekly roundup skill** — queries enriched items → drafts 800-1200 word blog post → posts to Discord → publishes on approval
-- [x] **Cron job** — `weekly-roundup` fires Fridays 9 AM ET → `#weekly-roundup` channel
+- [x] **Weekly roundup skill** — queries enriched items → drafts 800-1200 word blog post + LinkedIn copy → posts blog to `#weekly-roundup`, LinkedIn copy to `#linkedin-drafts` → publishes on approval
+- [x] **Cron job** — `weekly-roundup` fires Fridays 9 AM ET → `#weekly-roundup` + `#linkedin-drafts` channels
 - [x] **Local repo files** — `scripts/clawdbot/` with cloud-init, scripts, skill, setup automation
 - [x] **SEO keyword research** — DataForSEO API (`scripts/seo-research.ts`). 71 keywords tested, 31 with volume, 40 zero-volume. Key clusters: FDA warning letters (5,400 vol/$11.78 CPC), FDA recalls (7,300 combined), MoCRA (500 combined), supplement regs (570). Nobody searches for "FDA regulatory monitoring" — must target what buyers already search.
 - [x] **SEO blog post skill** — `scripts/clawdbot/skills/seo-blog-post/SKILL.md` deployed to VPS. Targets 5 keyword clusters with SEO-optimized structure. References editorial voice doc.
@@ -215,6 +217,17 @@ status: Active — Consultant outreach in progress. Weekly email on Inngest. Lin
 - [x] **Activation timing** — `product_created` event includes `is_first_product` boolean + `time_to_first_product_hours` (hours since signup, only on first product). Dashboard shows median.
 - [x] **Person profiles** — `person_profiles: "identified_only"` in PostHog client init (no profiles for anonymous visitors).
 - [x] **Dependencies**: `posthog-js`, `posthog-node`
+
+### What's Done (Sentry Error Monitoring — 2026-03-08)
+- [x] **`@sentry/nextjs` integrated** — org `policy-canary`, project `policy-canary-web`. Client/server/edge configs with DSN via `NEXT_PUBLIC_SENTRY_DSN` env var.
+- [x] **Tunnel route** at `/monitoring` — bypasses ad blockers. Excluded from `proxy.ts` matcher (no auth overhead on Sentry events).
+- [x] **Performance**: 20% trace sampling (`tracesSampleRate: 0.2`). Session replay only on errors (`replaysOnErrorSampleRate: 1.0`, baseline `0`).
+- [x] **Source maps** uploaded via `withSentryConfig` wrapper in `next.config.ts`, deleted post-upload (`deleteSourcemapsAfterUpload: true`).
+- [x] **`global-error.tsx`** — root error boundary captures unhandled errors to Sentry.
+- [x] **`src/instrumentation.ts`** — Next.js instrumentation hook loads server/edge Sentry configs + exports `onRequestError`.
+- [x] **Environment** — `VERCEL_ENV ?? NODE_ENV` for clear Sentry dashboard filtering. Disabled in dev.
+- [x] **Code-reviewed** — DSN extracted to env var, trace rate lowered, proxy exclusion added, `lang="en"` on global-error.
+- [x] **Vercel env vars needed**: `NEXT_PUBLIC_SENTRY_DSN`, `SENTRY_AUTH_TOKEN`
 
 ### What's Done (Verdict System + Re-Enrichment)
 - [x] **Verdict system live** — `src/lib/products/verdicts.ts`. Gemini Flash evaluates whether regulatory items actually affect subscriber products. Three trigger points: post-enrichment (runner step d), post-product-add (API route), CLI backfill (`scripts/run-verdicts.ts` with p-limit concurrency).

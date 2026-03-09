@@ -295,7 +295,8 @@ Detailed research: `/memory-bank/research/data-sources.md`
 - **Trial:** Full product experience — add your products, get real intelligence. Converts without requiring a sales call.
 - **LinkedIn outreach:** Low volume, high intent — 30-50 targeted conversations
 - **Loss aversion narrative:** "The FDA cut 3,859 employees. They're focusing enforcement on the easiest targets. Don't be the easy target." (Note: warning letter pitch needs rethinking — see data analysis 2026-03-05. Most WLs are tobacco/pharma; food/supplement/cosmetics volume is low. Recalls and regulatory changes are the stronger value drivers.)
-- **Consultant partnerships:** EAS, FDAImports, Lachman as referral partners
+- **Consultant partnerships:** EAS, FDAImports, Lachman as referral partners. Mutual referral (they recommend PC to clients, we send them leads) preferred over referral fees at this stage.
+- **White-label (future consideration):** Law firms / regulatory consultancies brand the intelligence as their own. Firm's clients get monitoring emails under the firm's name. Price per-product ($10-15/product/mo to the firm), not per-client — our LLM costs scale with products. Firm marks up 5-10x to their clients (bundled in retainer). Prerequisite: proven intelligence accuracy (consultant validation first). Don't build multi-tenant infrastructure until there's a real deal on the table.
 - **Self-serve signup** — this product should sell itself. No forced sales calls.
 
 ---
@@ -336,9 +337,10 @@ Detailed research: `/memory-bank/research/data-sources.md`
 | 100 Monitor (avg 8 products) | 100 | $67 | $80K |
 | 50 Monitor+Research (avg 15 products) | 50 | $309 | $185K |
 | 10 custom (100+ products) | 10 | ~$1,000 | $120K |
-| **Blended (160 customers)** | **160** | **$200** | **$385K** |
+| 5 white-label firms (avg 30 clients × 8 products) | 5 firms | ~$1,500 | $90K |
+| **Blended (160 direct + 5 WL)** | **165** | — | **$475K** |
 
-Scales with customer acquisition. At 500 customers with similar mix: ~$1.2M ARR.
+Scales with customer acquisition. At 500 customers with similar mix: ~$1.2M ARR. White-label is high-leverage — one firm deal replaces 15-30 direct subscribers.
 
 ---
 
@@ -361,7 +363,7 @@ Scales with customer acquisition. At 500 customers with similar mix: ~$1.2M ARR.
 ## Open Questions
 
 1. **Trial model** — reverse trial (14-day full → downgrade to 1 product) vs standard trial
-2. **Consultants** — still a customer (how?), or just referral partners?
+2. **Consultants** — three possible relationships: referral partners (mutual), white-label partners (they resell under their brand, per-product pricing), or direct customers (TBD how). White-label is the strongest play if intelligence quality validates.
 3. **Web app personalization** — product-centric default view, or generic enforcement DB?
 4. **Data schema revision** — schema needs update for subscriber_products table, product-level matching
 5. **Annual billing** — add at launch or defer until retention data exists? Research suggested $199/mo annual for Monitor+Research as discount lever.
