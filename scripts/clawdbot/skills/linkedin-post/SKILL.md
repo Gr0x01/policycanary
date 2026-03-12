@@ -124,6 +124,33 @@ One surprising fact from our database. No blog link needed.
 - Pure product pitches — LinkedIn penalizes obvious ads
 - Emojis or bullet-point emoji lists
 
+## Step 3.5 — Verify Accuracy
+
+Before posting for review, run the fact-checker to catch errors. This uses a **different AI model** (Gemini) to independently verify claims — it has never seen the content before.
+
+1. Save the draft to a temp file:
+```bash
+cat > /tmp/draft-content.md << 'VERIFY_EOF'
+[the LinkedIn post text]
+VERIFY_EOF
+```
+
+2. Run verification (LinkedIn mode skips URL validation):
+```bash
+node scripts/verify-content.mjs --content-file /tmp/draft-content.md --content-type linkedin --verbose
+```
+
+3. Review the JSON report:
+   - If `confidence_score >= 90` and `errors == 0`: proceed to post
+   - If errors found: **FIX the content** using the `correct` values from the report, then re-verify
+   - If `confidence_score < 80`: re-research flagged claims with `web-research.mjs` before fixing
+   - **Max 2 verification attempts.** If still failing after 2 rounds, post the draft with the verification report attached and flag for human review.
+
+4. Mention verification status in your Discord message:
+```
+**Verification:** PASS — 95/100, 6 claims verified, 0 issues
+```
+
 ## Step 4 — Post to Discord
 
 Format your Discord message like this:

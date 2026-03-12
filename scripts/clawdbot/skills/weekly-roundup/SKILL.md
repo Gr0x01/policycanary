@@ -134,6 +134,38 @@ Write a 1,000-1,500 word blog post following this structure:
 - Posts that could have come from a free Federal Register email alert
 - Exclamation marks or emoji
 
+## Step 4.5 — Verify Accuracy
+
+Before posting for review, run the fact-checker to catch errors. This uses a **different AI model** (Gemini) to independently verify claims — it has never seen the content before.
+
+1. Save the draft to a temp file:
+```bash
+cat > /tmp/draft-content.md << 'VERIFY_EOF'
+[the markdown content]
+VERIFY_EOF
+```
+
+2. Run verification:
+```bash
+node scripts/verify-content.mjs --content-file /tmp/draft-content.md --content-type blog --verbose
+```
+
+3. Review the JSON report:
+   - If `confidence_score >= 90` and `errors == 0`: proceed to post
+   - If errors found: **FIX the content** using the `correct` values from the report, then re-verify
+   - If `confidence_score < 80`: re-research flagged claims with `web-research.mjs` before fixing
+   - Broken links: remove or replace with working URLs
+   - **Max 2 verification attempts.** If still failing after 2 rounds, post the draft with the verification report attached and flag for human review.
+
+4. Include verification status in the metadata block:
+```
+**Verification:** PASS — 95/100, 14 claims verified, 0 issues
+```
+Or if issues were fixed:
+```
+**Verification:** PASS (after fixes) — 92/100, 14 claims verified, 2 corrected
+```
+
 ## Step 5 — Output for Review
 
 Present the draft with this metadata block at the top:
