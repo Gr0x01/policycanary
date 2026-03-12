@@ -74,7 +74,7 @@ This would be the most significant change to the GRAS system since the voluntary
 
 Upon receiving a notice, the FDA would have 180 days to determine whether to add the substance to the GRAS list or issue a preliminary determination to exclude it. If the FDA fails to respond within that timeframe, the substance would be automatically added. Notably, the bill does not include a preemption provision that would override state-level food additive bans — a provision that was reportedly removed after pushback from the Make America Healthy Again (MAHA) movement.
 
-**MAHA executive direction.** HHS Secretary Robert F. Kennedy Jr. has made GRAS reform a centerpiece of the MAHA agenda. In September 2025, Kennedy directed the FDA to explore rulemaking to eliminate the self-affirmed GRAS pathway entirely. He has described GRAS as a statutory "loophole" originating in 1958 that has enabled widespread use of industrial ingredients without premarket FDA review.
+**MAHA executive direction.** HHS Secretary Robert F. Kennedy Jr. has made GRAS reform a centerpiece of the MAHA agenda. In March 2025, Kennedy directed the FDA to explore rulemaking to eliminate the self-affirmed GRAS pathway entirely. He has described GRAS as a statutory "loophole" originating in 1958 that has enabled widespread use of industrial ingredients without premarket FDA review.
 
 The MAHA initiative has provided political cover for FDA action on food chemicals that historically faced industry resistance. Kennedy's public statements framing GRAS reform as a consumer protection issue — rather than a regulatory burden — have created an unusual bipartisan alignment on food safety.
 
