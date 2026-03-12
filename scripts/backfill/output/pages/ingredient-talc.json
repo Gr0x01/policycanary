@@ -1,0 +1,72 @@
+{
+  "page_type": "ingredient",
+  "slug": "talc",
+  "title": "Talc: FDA Review, IARC Reclassification & Regulatory Intelligence",
+  "excerpt": "Comprehensive regulatory intelligence on talc (magnesium silicate), covering FDA expert panel recommendations, IARC Group 2A reclassification, EU Category 1B carcinogen classification, the J&J litigation, asbestos contamination testing, MoCRA implications, and state-level bans on talc in menstrual products.",
+  "status": "draft",
+  "seo_title": "Talc Regulatory Intelligence | FDA, IARC, EU Classification & J&J Litigation | Policy Canary",
+  "seo_description": "Regulatory intelligence on talc. IARC reclassified to Group 2A (probably carcinogenic). EU classifying as Category 1B carcinogen — cosmetics ban expected ~2027. FDA expert panel recommends removal from food and drugs. New York bans talc in menstrual products (Dec 2026). 59,571 pending J&J claims.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "7SEV7J4R1U",
+    "cas_number": "14807-96-6",
+    "fda_status": "under_review",
+    "cfr_references": [
+      "21 CFR 73.1550",
+      "21 CFR 73.2500",
+      "21 CFR 182.70",
+      "21 CFR 182.90"
+    ],
+    "state_bans": [
+      {
+        "state": "New York",
+        "scope": "menstrual_products",
+        "bill": "S.1548/A.1502",
+        "effective": "2026-12-19"
+      }
+    ],
+    "affected_categories": [
+      "cosmetics",
+      "dietary-supplements",
+      "pharmaceutical",
+      "food-additives"
+    ],
+    "key_deadlines": [
+      {
+        "label": "IARC reclassifies talc from Group 2B to Group 2A (probably carcinogenic)",
+        "date": "2024-07-05",
+        "type": "international"
+      },
+      {
+        "label": "ECHA RAC classifies talc as Category 1B carcinogen under CLP Regulation",
+        "date": "2024-09-20",
+        "type": "international"
+      },
+      {
+        "label": "FDA Expert Panel on talc — panelists unanimously support removing talc from food and drugs",
+        "date": "2025-05-20",
+        "type": "federal"
+      },
+      {
+        "label": "FDA withdraws proposed asbestos testing rule for talc cosmetics",
+        "date": "2025-11-28",
+        "type": "federal"
+      },
+      {
+        "label": "New York Governor signs S.1548 banning talc in menstrual products",
+        "date": "2025-12-19",
+        "type": "state"
+      },
+      {
+        "label": "New York talc ban in menstrual products takes effect",
+        "date": "2026-12-19",
+        "type": "state"
+      },
+      {
+        "label": "Expected EU ban on talc in cosmetics following CLP 1B classification",
+        "date": "2027-01-01",
+        "type": "international"
+      }
+    ]
+  }
+}

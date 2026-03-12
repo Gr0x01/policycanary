@@ -1,0 +1,49 @@
+{
+  "page_type": "ingredient",
+  "slug": "sodium-nitrite",
+  "title": "Sodium Nitrite: FDA Status, IARC Processed Meat Classification & Regulatory Intelligence",
+  "excerpt": "Comprehensive regulatory intelligence on sodium nitrite (E250), covering FDA prior-sanctioned status under 21 CFR 181.34, USDA-FSIS limits, IARC Group 1 processed meat classification, EU 2023/2108 lower limits effective October 2025, nitrosamine formation concerns, and the 'uncured' labeling controversy.",
+  "status": "draft",
+  "seo_title": "Sodium Nitrite Regulatory Intelligence | FDA, EU, IARC Status | Policy Canary",
+  "seo_description": "Regulatory intelligence on sodium nitrite (E250, CAS 7632-00-0): FDA prior-sanctioned status, IARC processed meat classification, EU 2023/2108 lower limits, pending US reassessment legislation, and the celery powder labeling controversy.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "M0KG633D4F",
+    "cas_number": "7632-00-0",
+    "fda_status": "approved",
+    "cfr_references": ["21 CFR 172.175", "21 CFR 181.34", "9 CFR 424.21", "9 CFR 424.22"],
+    "state_bans": [],
+    "affected_categories": [
+      "processed-meats",
+      "cured-meats",
+      "smoked-fish"
+    ],
+    "key_deadlines": [
+      {
+        "label": "EU Regulation 2023/2108 lower nitrite limits take effect for meat and fishery products",
+        "date": "2025-10-09",
+        "type": "international"
+      },
+      {
+        "label": "FDA BHA RFI comment deadline — sodium nitrite review expected to follow",
+        "date": "2026-04-13",
+        "type": "federal"
+      },
+      {
+        "label": "Food Chemical Reassessment Act (H.R. 4306) — sodium nitrite listed for priority FDA reassessment",
+        "date": "2025-07-10",
+        "type": "federal"
+      },
+      {
+        "label": "USDA FSIS proposed rule on 'Uncured'/'No Nitrate Added' labeling (pending)",
+        "date": "2026-01-01",
+        "type": "federal"
+      },
+      {
+        "label": "California Prop 65 processed meat listing denied (PCRM v. OEHHA)",
+        "date": "2025-10-01",
+        "type": "legal"
+      }
+    ]
+  }
+}

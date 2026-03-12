@@ -1,0 +1,71 @@
+{
+  "page_type": "ingredient",
+  "slug": "sucralose",
+  "title": "Sucralose: FDA Status, Emerging Safety Concerns & Regulatory Intelligence",
+  "excerpt": "Comprehensive regulatory intelligence on sucralose (Splenda/E955), covering FDA approval under 21 CFR 172.831, the 2026 EFSA re-evaluation, sucralose-6-acetate genotoxicity findings, MAHA Commission scrutiny, and state-level school food restrictions.",
+  "status": "draft",
+  "seo_title": "Sucralose: FDA Status, EFSA Review & Regulatory Risk Assessment | Policy Canary",
+  "seo_description": "Regulatory intelligence on sucralose (Splenda). FDA-approved under 21 CFR 172.831 with ADI of 5 mg/kg/day. EFSA 2026 re-evaluation confirms safety but flags high-heat concerns. MAHA Commission lists sucralose as 'of potential concern.'",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "96K6UQ3ZD4",
+    "cas_number": "56038-13-2",
+    "fda_status": "approved",
+    "cfr_references": ["21 CFR 172.831"],
+    "state_bans": [],
+    "state_restrictions": [
+      {
+        "state": "Texas",
+        "scope": "school_meals",
+        "bill": "SB 25",
+        "effective": "2026"
+      },
+      {
+        "state": "Louisiana",
+        "scope": "school_meals",
+        "bill": "SB 14",
+        "effective": "2028-2029 school year"
+      }
+    ],
+    "affected_categories": [
+      "beverages",
+      "baked-goods",
+      "dairy-products",
+      "confectionery",
+      "dietary-supplements",
+      "frozen-desserts"
+    ],
+    "key_deadlines": [
+      {
+        "label": "EFSA 2026 re-evaluation published — confirmed ADI of 15 mg/kg/day, declined extension to fine bakery wares",
+        "date": "2026-02-17",
+        "type": "international"
+      },
+      {
+        "label": "Texas SB 25 school meal restrictions take effect",
+        "date": "2025-09-01",
+        "type": "state"
+      },
+      {
+        "label": "Louisiana SB 14 school meal ban effective (2028-2029 school year)",
+        "date": "2028-08-01",
+        "type": "state"
+      },
+      {
+        "label": "MAHA Commission strategy released — lists sucralose as 'of potential concern'",
+        "date": "2025-09-09",
+        "type": "federal"
+      },
+      {
+        "label": "Sucralose-6-acetate genotoxicity study published (Schiffman et al.)",
+        "date": "2023-05-29",
+        "type": "international"
+      },
+      {
+        "label": "WHO conditional recommendation against non-sugar sweeteners for weight control",
+        "date": "2023-05-15",
+        "type": "international"
+      }
+    ]
+  }
+}

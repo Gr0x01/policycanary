@@ -1,0 +1,42 @@
+{
+  "page_type": "ingredient",
+  "slug": "carrageenan",
+  "title": "Carrageenan: FDA GRAS Status, IARC Classification & Regulatory Intelligence",
+  "excerpt": "Comprehensive regulatory intelligence on carrageenan (E407), covering FDA GRAS status under 21 CFR 172.620, the critical distinction between food-grade carrageenan and degraded carrageenan (poligeenan), IARC classification, NOSB organic delisting controversy, and EFSA re-evaluation.",
+  "status": "draft",
+  "seo_title": "Carrageenan Regulatory Status 2026 | FDA, IARC, EU & Organic Standards | Policy Canary",
+  "seo_description": "Carrageenan remains FDA GRAS (21 CFR 172.620). IARC Group 2B applies only to degraded carrageenan (poligeenan), not food-grade. NOSB voted to remove from organic but USDA overruled. EU re-evaluation ongoing. No US bans.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "5C69YCD2YJ",
+    "cas_number": "9000-07-1",
+    "fda_status": "approved",
+    "cfr_references": ["21 CFR 172.620", "21 CFR 182.7255"],
+    "state_bans": [],
+    "affected_categories": [
+      "dairy-products",
+      "beverages",
+      "infant-formula",
+      "dietary-supplements",
+      "processed-meats",
+      "confectionery"
+    ],
+    "key_deadlines": [
+      {
+        "label": "EFSA data submission deadline for carrageenan (E407) re-evaluation including infant formula",
+        "date": "2025-11-25",
+        "type": "international"
+      },
+      {
+        "label": "NOSB next sunset review cycle for carrageenan on National List",
+        "date": "2026-01-01",
+        "type": "federal"
+      },
+      {
+        "label": "Carrageenan organic allowance sunset date (if not renewed)",
+        "date": "2028-01-01",
+        "type": "federal"
+      }
+    ]
+  }
+}

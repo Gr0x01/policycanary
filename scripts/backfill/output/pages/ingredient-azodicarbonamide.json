@@ -1,0 +1,64 @@
+{
+  "page_type": "ingredient",
+  "slug": "azodicarbonamide",
+  "title": "Azodicarbonamide (ADA): FDA Status, International Bans & Regulatory Intelligence",
+  "excerpt": "Comprehensive regulatory intelligence on azodicarbonamide (ADA), the 'yoga mat chemical' — FDA-approved under 21 CFR 172.806 at 45 ppm but banned in the EU, UK, Australia, and Singapore. Now on FDA's post-market reassessment priority list under MAHA, with Texas school meal bans and warning label requirements taking effect in 2026-2027.",
+  "status": "draft",
+  "seo_title": "Azodicarbonamide (ADA) Regulatory Intelligence | FDA, EU Ban & MAHA Review | Policy Canary",
+  "seo_description": "Regulatory intelligence on azodicarbonamide (ADA). FDA-approved at 45 ppm under 21 CFR 172.806 but banned in EU, UK, Australia. On FDA post-market reassessment list. Texas bans in school meals (2026) and requires warning labels (2027). 95% of bakers already ADA-free.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "NC4GC2QH4J",
+    "cas_number": "123-77-3",
+    "fda_status": "under_review",
+    "cfr_references": ["21 CFR 172.806"],
+    "state_bans": [
+      {
+        "state": "Texas",
+        "scope": "school_meals",
+        "bill": "SB 314",
+        "effective": "2026-09-01"
+      }
+    ],
+    "state_restrictions": [
+      {
+        "state": "Texas",
+        "scope": "warning_label",
+        "bill": "SB 25",
+        "effective": "2027-01-01"
+      }
+    ],
+    "affected_categories": [
+      "baked-goods",
+      "flour",
+      "cereal-grains"
+    ],
+    "key_deadlines": [
+      {
+        "label": "FDA comment deadline for BHA RFI — ADA review expected to follow",
+        "date": "2026-04-13",
+        "type": "federal"
+      },
+      {
+        "label": "Texas SB 314 takes effect — ADA banned in school meals",
+        "date": "2026-09-01",
+        "type": "state"
+      },
+      {
+        "label": "ABA voluntary industry phase-out target completion",
+        "date": "2026-12-31",
+        "type": "federal"
+      },
+      {
+        "label": "Texas SB 25 warning label requirement takes effect",
+        "date": "2027-01-01",
+        "type": "state"
+      },
+      {
+        "label": "Estimated window for FDA to publish ADA-specific RFI",
+        "date": "2026-06-30",
+        "type": "federal"
+      }
+    ]
+  }
+}
