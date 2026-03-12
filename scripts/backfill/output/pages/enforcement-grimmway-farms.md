@@ -95,7 +95,7 @@ The recall encompassed organic whole carrots and organic baby carrots distribute
 | Nature's Promise | Ahold Delhaize (Stop & Shop, Giant, etc.) |
 | O Organics | Albertsons/Safeway |
 | President's Choice | Canadian retailers |
-| Purely Made | Various |
+| Kroger | Kroger |
 | Raley's | Raley's stores |
 | Simple Truth | Kroger |
 | Sprouts | Sprouts Farmers Market |
