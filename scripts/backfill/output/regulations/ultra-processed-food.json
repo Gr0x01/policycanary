@@ -1,0 +1,87 @@
+{
+  "regulation_name": "Ultra-Processed Food",
+  "search_terms": [
+    "ultra-processed",
+    "UPF",
+    "processed food definition"
+  ],
+  "item_count": 2,
+  "affected_categories": [
+    "dietary_conventional_foods"
+  ],
+  "cfr_references": [],
+  "key_deadlines": [
+    {
+      "item_title": "Ultra-Processed Foods; Request for Information; Extension of Comment Period",
+      "effective_date": null,
+      "comment_deadline": "2025-07-25"
+    },
+    {
+      "item_title": "Ultra-Processed Foods; Request for Information",
+      "effective_date": null,
+      "comment_deadline": "2025-09-23"
+    }
+  ],
+  "items": [
+    {
+      "id": "8d68f392-f65a-4231-a5b9-d6e1f02944fe",
+      "title": "Ultra-Processed Foods; Request for Information; Extension of Comment Period",
+      "item_type": "notice",
+      "published_date": "2025-09-19",
+      "source_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18169/ultra-processed-foods-request-for-information-extension-of-comment-period",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-07-25",
+      "cfr_references": []
+    },
+    {
+      "id": "c1b3c3e2-7934-461e-ab49-782378114993",
+      "title": "Ultra-Processed Foods; Request for Information",
+      "item_type": "notice",
+      "published_date": "2025-07-25",
+      "source_url": "https://www.federalregister.gov/documents/2025/07/25/2025-14089/ultra-processed-foods-request-for-information",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-09-23",
+      "cfr_references": []
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "b261a352-a320-4297-9039-dcb03019c1cc",
+      "item_id": "8d68f392-f65a-4231-a5b9-d6e1f02944fe",
+      "summary": "The FDA has announced an extension of the comment period for its Request for Information (RFI) regarding Ultra-Processed Foods.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "a7c42d15-14d3-4a4f-96cd-0825f90780b1",
+      "item_id": "c1b3c3e2-7934-461e-ab49-782378114993",
+      "summary": "The FDA has issued a Notice and Request for Information (RFI) concerning 'Ultra-Processed Foods.' This RFI seeks public input and data on this food category, which may inform future regulatory actions or guidance from the agency.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2025-09-23"
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "8d68f392-f65a-4231-a5b9-d6e1f02944fe",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c1b3c3e2-7934-461e-ab49-782378114993",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    }
+  ]
+}

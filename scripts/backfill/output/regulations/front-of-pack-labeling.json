@@ -1,0 +1,1267 @@
+{
+  "regulation_name": "Front-of-Pack Labeling",
+  "search_terms": [
+    "front-of-pack",
+    "nutrition label"
+  ],
+  "item_count": 15,
+  "affected_categories": [
+    "dietary_conventional_foods",
+    "other_food",
+    "baked_goods",
+    "nonalcoholic_beverages",
+    "breakfast_cereals",
+    "condiments_relishes",
+    "confections_frostings",
+    "dairy_products",
+    "processed_fruits_vegetables",
+    "snack_foods",
+    "soups_soup_mixes",
+    "other_supplement",
+    "botanicals_herbal",
+    "fats_oils"
+  ],
+  "cfr_references": [
+    {
+      "part": 101,
+      "title": 21
+    },
+    {
+      "part": 101,
+      "title": 21
+    }
+  ],
+  "key_deadlines": [
+    {
+      "item_title": "Food Labeling: Front-of-Package Nutrition Information; Extension of Comment Period",
+      "effective_date": null,
+      "comment_deadline": "2025-07-15"
+    },
+    {
+      "item_title": "Food Labeling: Front-of-Package Nutrition Information",
+      "effective_date": null,
+      "comment_deadline": "2025-05-16"
+    },
+    {
+      "item_title": "Agency Information Collection Activities; Submission for Office of Management and Budget Review; Comment Request; Food Labeling Requirements: Calorie Labeling of Articles of Food in Vending Machines and Nutrition Labeling of Standard Menu Items in Restaurants and Similar Retail Food Establishments",
+      "effective_date": null,
+      "comment_deadline": "2024-05-13"
+    }
+  ],
+  "items": [
+    {
+      "id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "title": "Food Labeling: Front-of-Package Nutrition Information; Extension of Comment Period",
+      "item_type": "proposed_rule",
+      "published_date": "2025-05-09",
+      "source_url": "https://www.federalregister.gov/documents/2025/05/09/2025-08204/food-labeling-front-of-package-nutrition-information-extension-of-comment-period",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-07-15",
+      "cfr_references": [
+        {
+          "part": 101,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "be00523d-c88e-4bd6-b9d5-a33c99a854f9",
+      "title": "Food Labeling: Front-of-Package Nutrition Information",
+      "item_type": "proposed_rule",
+      "published_date": "2025-01-16",
+      "source_url": "https://www.federalregister.gov/documents/2025/01/16/2025-00778/food-labeling-front-of-package-nutrition-information",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-05-16",
+      "cfr_references": [
+        {
+          "part": 101,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "title": "Agency Information Collection Activities; Submission for Office of Management and Budget Review; Comment Request; Food Labeling Requirements: Calorie Labeling of Articles of Food in Vending Machines and Nutrition Labeling of Standard Menu Items in Restaurants and Similar Retail Food Establishments",
+      "item_type": "notice",
+      "published_date": "2024-04-11",
+      "source_url": "https://www.federalregister.gov/documents/2024/04/11/2024-07661/agency-information-collection-activities-submission-for-office-of-management-and-budget-review",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2024-05-13",
+      "cfr_references": []
+    },
+    {
+      "id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "title": "Guidance for Industry: Menu Labeling Supplemental Guidance",
+      "item_type": "guidance",
+      "published_date": "2018-05-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-menu-labeling-supplemental-guidance",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "title": "Guidance for Industry: FDA&#039;s Policy on Declaring Small Amounts of Nutrients and Dietary Ingredients on Nutrition Labels",
+      "item_type": "guidance",
+      "published_date": "2016-07-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-fdas-policy-declaring-small-amounts-nutrients-and-dietary-ingredients-nutrition",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "title": "Small Entity Compliance Guide: Nutrition Labeling of Standard Menu Items in Restaurants and Similar Retail Food Establishments",
+      "item_type": "guidance",
+      "published_date": "2015-03-13",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/small-entity-compliance-guide-nutrition-labeling-standard-menu-items-restaurants-and-similar-retail",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "title": "Guidance for Industry: Food Labeling Guide",
+      "item_type": "guidance",
+      "published_date": "2013-01-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-food-labeling-guide",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "title": "Guidance for Industry: Dear Manufacturer Letter Regarding Front-of-Package Symbols",
+      "item_type": "guidance",
+      "published_date": "2008-12-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-dear-manufacturer-letter-regarding-front-package-symbols",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "title": "Guidance for Industry: A Labeling Guide for Restaurants and Retail Establishments Selling Away-From-Home Foods - Part I",
+      "item_type": "guidance",
+      "published_date": "2008-03-31",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-labeling-guide-restaurants-and-retail-establishments-selling-away-home-foods-part",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "title": "Small Business Nutrition Labeling Exemption Guidance",
+      "item_type": "guidance",
+      "published_date": "2007-05-07",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/small-business-nutrition-labeling-exemption-guidance",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "title": "Guidance for Industry: Dietary Supplement Labeling Guide",
+      "item_type": "guidance",
+      "published_date": "2005-03-31",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-dietary-supplement-labeling-guide",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "title": "Small Entity Compliance Guide: Trans Fatty Acids in Nutrition Labeling, Nutrient Content Claims, and Health Claims",
+      "item_type": "guidance",
+      "published_date": "2003-08-20",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/small-entity-compliance-guide-trans-fatty-acids-nutrition-labeling-nutrient-content-claims-and",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "29cc58ed-68cd-4df6-af86-74960658e1c0",
+      "title": "Redbook 2000: VI.B Epidemiology",
+      "item_type": "guidance",
+      "published_date": "2001-10-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/redbook-2000-vib-epidemiology",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "title": "Small Entity Compliance Guide: Statement of Identity, Nutrition Labeling and Ingredient Labeling of Dietary Supplements",
+      "item_type": "guidance",
+      "published_date": "1999-01-03",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/small-entity-compliance-guide-statement-identity-nutrition-labeling-and-ingredient-labeling-dietary",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "title": "Guidance for Industry: Guide for Developing and Using Data Bases for Nutrition Labeling",
+      "item_type": "guidance",
+      "published_date": "1998-03-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-guide-developing-and-using-data-bases-nutrition-labeling",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "02dc9f4c-e9f6-40ab-9669-7d9e3d6a3f7d",
+      "item_id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "summary": "The FDA is requesting comments regarding information collection activities related to food labeling requirements, specifically calorie labeling for food in vending machines and nutrition labeling for standard menu items in restaurants and similar retail food establishments. This is a submission for Office of Management and Budget review.",
+      "key_regulations": [
+        "Food Labeling Requirements"
+      ],
+      "key_entities": [
+        "Office of Management and Budget",
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": "2024-05-13"
+    },
+    {
+      "id": "50d6efa0-e896-4867-b683-b27031b2752e",
+      "item_id": "29cc58ed-68cd-4df6-af86-74960658e1c0",
+      "summary": "The FDA issued a guidance document (Redbook 2000, Chapter VI.B) detailing the principles of epidemiology used by CFSAN for the safety assessment of food ingredients. The guidance outlines the types of descriptive and analytic epidemiology studies (e.g., cross-sectional, prospective, retrospective, and meta-analyses) and explains how these studies should be utilized to support food safety evaluations and health claims on food labeling.",
+      "key_regulations": [
+        "Nutrition Labeling and Education Act of 1990"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Center for Food Safety and Applied Nutrition (CFSAN)",
+        "Adverse Reaction Monitoring System (ARMS)",
+        "MedWatch"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "9c46af84-94c7-4b27-97b0-c1c8c2560852",
+      "item_id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "summary": "The FDA is revising its 2008 guidance on labeling for restaurants and retail establishments to incorporate the final rules for Nutrition Labeling of Standard Menu Items and Calorie Labeling of Articles of Food in Vending Machines (79 FR 71155 and 79 FR 71259).",
+      "key_regulations": [
+        "21 CFR 101.11",
+        "79 FR 71155",
+        "79 FR 71259"
+      ],
+      "key_entities": [
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "2993410c-c931-43f7-ba69-d60e930f7622",
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "summary": "The FDA has extended the comment period for the proposed rule regarding front-of-package nutrition labeling. The new deadline to submit comments is July 15, 2025.",
+      "key_regulations": [
+        "21 CFR Part 101"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "administrative",
+      "deadline": "2025-07-15"
+    },
+    {
+      "id": "fd1404b2-9104-4b36-91d0-ae7038cd9ee1",
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "summary": "The FDA issued a Small Entity Compliance Guide to assist manufacturers in complying with dietary supplement labeling regulations established under DSHEA. The guidance clarifies the requirements for the 'Supplement Facts' panel, declaration of serving sizes, % Daily Values, proprietary blends, botanical common names, and specifies formatting standards and exemption criteria for small businesses.",
+      "key_regulations": [
+        "21 CFR 101.9",
+        "21 CFR 101.36"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Center for Food Safety and Applied Nutrition",
+        "Office of Food Labeling"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "1999-03-23"
+    },
+    {
+      "id": "e45ae411-8f08-463b-ad71-2caeac9d9c04",
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "summary": "The FDA issued a supplemental guidance document for the food industry regarding menu labeling requirements for covered establishments like restaurants and retail food establishments. The guidance covers calorie disclosures, distinguishing menus from marketing materials, and announces enforcement discretion for the 'calories from fat' declaration requirement under 21 CFR 101.11.",
+      "key_regulations": [
+        "21 CFR 101.11",
+        "21 U.S.C. 343",
+        "21 CFR 10.115"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "4728b806-a44d-493e-a649-bdcdbec89a56",
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "summary": "The FDA issued a guidance letter to food manufacturers and distributors reminding them that front-of-package symbols can constitute explicit or implied nutrient content claims. These claims must comply with 21 CFR 101.13 and Subpart D of Part 101, including the necessity of disclosure statements when foods contain high levels of fat, saturated fat, cholesterol, or sodium.",
+      "key_regulations": [
+        "21 CFR 101.13",
+        "21 CFR 101 Subpart D"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Center for Food Safety and Applied Nutrition",
+        "Office of Nutrition, Labeling and Dietary Supplements"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "af736134-1701-4448-8388-69c1f8fb6949",
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "summary": "The FDA issued a Small Entity Compliance Guide to help small businesses comply with the final rule requiring the declaration of trans fatty acids in the nutrition labels of conventional foods and dietary supplements under 21 CFR 101.9 and 101.36. The rule takes effect on January 1, 2006, and mandates that trans fat be listed on a separate line under saturated fat.",
+      "key_regulations": [
+        "21 CFR 101.9",
+        "21 CFR 101.36"
+      ],
+      "key_entities": [
+        "Food and Drug Administration (FDA)",
+        "Center for Food Safety and Applied Nutrition (CFSAN)",
+        "Center for Science in the Public Interest",
+        "Institute of Medicine of the National Academy of Sciences (IOM/NAS)"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2006-01-01"
+    },
+    {
+      "id": "a200665c-4e81-4f7f-abf2-05ecf173f6d9",
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "summary": "The FDA issued a Small Entity Compliance Guide to assist restaurants and similar retail food establishments in complying with the final rule on nutrition labeling. The rule, effective December 1, 2015, requires chains with 20 or more locations to provide calorie and other nutrition information for standard menu items.",
+      "key_regulations": [
+        "21 CFR 101.11"
+      ],
+      "key_entities": [
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2015-12-01"
+    },
+    {
+      "id": "0a738d6b-5fd6-4dd6-9388-c6c2c84644b8",
+      "item_id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "summary": "The FDA issued a final guidance document addressing how conventional food and dietary supplement manufacturers should declare small amounts of nutrients and dietary ingredients on nutrition labels. The guidance explains the FDA's enforcement discretion policy regarding conflicts between compliance with 21 CFR 101.9(c) and 101.9(g).",
+      "key_regulations": [
+        "21 CFR 101.9(c)",
+        "21 CFR 101.9(g)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration (FDA)"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "4cbedbe3-0d03-471d-821b-ab0500639490",
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "summary": "The FDA has published a final guidance document formatted as questions and answers to assist domestic and foreign industry stakeholders in properly labeling dietary supplements. The guide clarifies existing requirements under the Dietary Supplement Health and Education Act (DSHEA) and 21 CFR 101, including statement of identity, nutrition labeling, ingredient labeling, and allowable claims.",
+      "key_regulations": [
+        "21 CFR 101",
+        "21 CFR 10.115"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Division of Dietary Supplement Programs",
+        "Office of Nutritional Products, Labeling, and Dietary Supplements",
+        "Center for Food Safety and Applied Nutrition"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "d239c4a7-f9f4-4231-b615-7c7415ff5c30",
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "summary": "FDA guidance explaining the requirements for small businesses to file for an exemption from mandatory nutrition labeling for low-volume packaged foods and dietary supplements, including sales, employee, and unit thresholds.",
+      "key_regulations": [
+        "21 CFR 101.9",
+        "21 CFR 101.36"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Center for Food Safety and Applied Nutrition",
+        "Office of Nutritional Products, Labeling and Dietary Supplements"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "c2b006c3-cfa4-4cfc-adbf-e8efa585432f",
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "summary": "The FDA issued a guidance manual detailing procedures for food manufacturers to develop, use, and voluntarily submit nutrition labeling databases. It provides statistical methodologies (e.g., computing 95% prediction intervals), sampling plans, and laboratory analysis guidelines to help ensure product labels comply with FDA nutrient declaration requirements under 21 CFR 101.9(g).",
+      "key_regulations": [
+        "21 CFR 101.9(g)",
+        "21 CFR 101.9(b)",
+        "21 CFR 101.9(c)",
+        "21 CFR 101.12(b)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration (FDA)",
+        "Center for Food Safety and Applied Nutrition (CFSAN)",
+        "Human Foods Program",
+        "AOAC International"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "60e72ce2-5d7c-4f50-a4ab-c6d56b2e243f",
+      "item_id": "be00523d-c88e-4bd6-b9d5-a33c99a854f9",
+      "summary": "The FDA has issued a proposed rule to establish a new requirement for front-of-package nutrition labeling on food products. This rule would amend 21 CFR Part 101. The agency is accepting comments on the proposal until May 16, 2025.",
+      "key_regulations": [
+        "21 CFR Part 101"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-05-16"
+    },
+    {
+      "id": "10a5b0ba-c6f4-4be1-b1de-f58ccdd48556",
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "summary": "The FDA issued a Guidance for Industry acting as a Food Labeling Guide to assist manufacturers, distributors, and importers. The document summarizes the required statements for food labels under the FD&C Act and Fair Packaging and Labeling Act, addressing common questions regarding nutrition and allergen labeling, nutrient content claims, and health messages.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act",
+        "Fair Packaging and Labeling Act",
+        "Nutrition Labeling and Education Act (NLEA)",
+        "Title 21 of the Code of Federal Regulations (CFR)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Center for Food Safety and Applied Nutrition",
+        "Food Labeling and Standards Staff"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "tag_dimension": "facility_type",
+      "tag_value": "Restaurants",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "tag_dimension": "facility_type",
+      "tag_value": "Retail Food Establishments",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "tag_dimension": "facility_type",
+      "tag_value": "Vending Machine Operators",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "tag_dimension": "claims",
+      "tag_value": "Calorie Labeling",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "tag_dimension": "claims",
+      "tag_value": "Nutrition Labeling",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "11faea33-b2cc-49c3-9773-aa10a1e4c982",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Labeling Requirements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "29cc58ed-68cd-4df6-af86-74960658e1c0",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "29cc58ed-68cd-4df6-af86-74960658e1c0",
+      "tag_dimension": "claims",
+      "tag_value": "health claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "29cc58ed-68cd-4df6-af86-74960658e1c0",
+      "tag_dimension": "regulation",
+      "tag_value": "Nutrition Labeling and Education Act of 1990",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "tag_dimension": "facility_type",
+      "tag_value": "Restaurants",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "tag_dimension": "facility_type",
+      "tag_value": "Retail Food Establishments",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "tag_dimension": "facility_type",
+      "tag_value": "Vending Machine Operators",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "tag_dimension": "claims",
+      "tag_value": "Nutrition Labeling",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "tag_dimension": "claims",
+      "tag_value": "Calorie Labeling",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37b3ee34-efda-43a4-847d-6cebcf4475aa",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.11",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "breakfast_cereals",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "condiments_relishes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "soups_soup_mixes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b42ece5-8069-4fe8-8367-930103516c3d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "facility_type",
+      "tag_value": "Dietary Supplement Manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "facility_type",
+      "tag_value": "Small Businesses",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "claims",
+      "tag_value": "nutrient content claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "claims",
+      "tag_value": "health claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(g)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(j)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d71e0d0-22b8-4c4e-870b-939ffb42230e",
+      "tag_dimension": "regulation",
+      "tag_value": "62 FR 49826",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "facility_type",
+      "tag_value": "restaurants",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "facility_type",
+      "tag_value": "retail food establishments",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "facility_type",
+      "tag_value": "covered establishments",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "claims",
+      "tag_value": "calorie disclosure",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "claims",
+      "tag_value": "added sugars",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "claims",
+      "tag_value": "calories from fat",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "claims",
+      "tag_value": "nutrition labeling",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.11(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.11(b)(2)(ii)(A)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 343(q)(5)(H)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68fbabfa-0d8c-46a5-9d5f-80005d60d48c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "claims",
+      "tag_value": "nutrient content claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "claims",
+      "tag_value": "low fat",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "claims",
+      "tag_value": "good source",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "claims",
+      "tag_value": "front-of-package symbols",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.13",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101 Subpart D",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.54",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6946013e-1ebc-4920-a9aa-514c9a1929d0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.65",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "product_type",
+      "tag_value": "fats_oils",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "claims",
+      "tag_value": "Not a significant source of trans fat",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "claims",
+      "tag_value": "nutrient content claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "claims",
+      "tag_value": "health claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71f1818b-6734-4b6a-8719-4bc22b3d5da0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "tag_dimension": "facility_type",
+      "tag_value": "restaurants",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "tag_dimension": "facility_type",
+      "tag_value": "retail food establishments",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "tag_dimension": "claims",
+      "tag_value": "calorie content",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "tag_dimension": "claims",
+      "tag_value": "nutrition information",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.11",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77a3bfbd-25cb-468a-bd3e-077129b87ce4",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 4205 of the Patient Protection and Affordable Care Act of 2010",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8cc643f4-2e53-4ff2-bbeb-5da24132530a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(g)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "facility_type",
+      "tag_value": "importer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "claims",
+      "tag_value": "nutrient content claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "claims",
+      "tag_value": "health claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "regulation",
+      "tag_value": "Dietary Supplement Health and Education Act of 1994",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "99e3f32b-eae1-45b1-82bb-f2b52890ea98",
+      "tag_dimension": "regulation",
+      "tag_value": "Nutrition Labeling and Education Act of 1990",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "facility_type",
+      "tag_value": "retailer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "facility_type",
+      "tag_value": "importer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "claims",
+      "tag_value": "nutrient content claim",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "claims",
+      "tag_value": "sugar free",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "claims",
+      "tag_value": "health claim",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a74a1ced-2996-485c-b381-8b4b85909536",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 403(q) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "tag_dimension": "facility_type",
+      "tag_value": "analytical_laboratory",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(g)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabe7177-f413-4d1d-8272-1f817f8a000a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.12(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "be00523d-c88e-4bd6-b9d5-a33c99a854f9",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "be00523d-c88e-4bd6-b9d5-a33c99a854f9",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "be00523d-c88e-4bd6-b9d5-a33c99a854f9",
+      "tag_dimension": "claims",
+      "tag_value": "nutrient content claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "be00523d-c88e-4bd6-b9d5-a33c99a854f9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributors",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "facility_type",
+      "tag_value": "importers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "claims",
+      "tag_value": "nutrient content claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "claims",
+      "tag_value": "health messages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "regulation",
+      "tag_value": "Fair Packaging and Labeling Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "regulation",
+      "tag_value": "Nutrition Labeling and Education Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2f61bb7-1eae-4048-a5b0-c90ec16fed21",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR",
+      "signal_source": "direct"
+    }
+  ]
+}

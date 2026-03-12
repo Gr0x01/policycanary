@@ -1,0 +1,315 @@
+{
+  "substance": {
+    "id": "c0fca788-afb8-4c09-92c8-dcba3b106f75",
+    "canonical_name": "VANGATALCITE",
+    "unii": "5VFH8TY779",
+    "matched_names": [
+      "VANGATALCITE",
+      "VANGATALCITE",
+      "vangatalcite [INN]"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "c0fca788-afb8-4c09-92c8-dcba3b106f75",
+      "canonical_name": "VANGATALCITE",
+      "unii": "5VFH8TY779",
+      "matched_names": [
+        "VANGATALCITE",
+        "VANGATALCITE",
+        "vangatalcite [INN]"
+      ]
+    },
+    {
+      "id": "c6f07f60-20b4-4f4e-bf76-46f26b76c5ff",
+      "canonical_name": "TALCUM POWDER",
+      "unii": null,
+      "matched_names": [
+        "TALCUM POWDER",
+        "TALCUM POWDER",
+        "TALCUM POWDER [II]"
+      ]
+    },
+    {
+      "id": "7671f5f2-ebe6-493c-b218-394c32a8c651",
+      "canonical_name": "TALC",
+      "unii": "7SEV7J4R1U",
+      "matched_names": [
+        "TALC",
+        "PULVIS TALCI",
+        "PULVIS TALCI [CHP]"
+      ]
+    },
+    {
+      "id": "872b318f-36f2-4fab-b6bf-7747c9f56947",
+      "canonical_name": "HYDROTALCITE",
+      "unii": "17432CG1KU",
+      "matched_names": [
+        "HYDROTALCITE"
+      ]
+    },
+    {
+      "id": "2fc758e2-6866-49b6-a7bd-48bd5dd3315a",
+      "canonical_name": "ALUMINUM MAGNESIUM HYDROXIDE CARBONATE",
+      "unii": "RFJ7QXF345",
+      "matched_names": [
+        "HYDROTALCITE, SYNTHETIC (ANHYDROUS)"
+      ]
+    },
+    {
+      "id": "6ef21472-dc4f-42e6-9b9e-2139cd6d7a9f",
+      "canonical_name": "GUM TALHA",
+      "unii": "H18F76G097",
+      "matched_names": [
+        "TALCA RESIN"
+      ]
+    },
+    {
+      "id": "90b56841-c347-4dcd-bc4c-b948eaec1fcd",
+      "canonical_name": "THIOCARBOXIME",
+      "unii": "26V4631I21",
+      "matched_names": [
+        "TALCORD"
+      ]
+    },
+    {
+      "id": "c57adfb2-e3d2-4b16-a196-7417a2807775",
+      "canonical_name": "MAGNESIUM SILICATE",
+      "unii": "9B9691B2N9",
+      "matched_names": [
+        "MAGNESIUM SILICATE (TALC)"
+      ]
+    }
+  ],
+  "item_count": 2,
+  "items": [
+    {
+      "id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "title": "Testing Methods for Detecting and Identifying Asbestos in Talc-Containing Cosmetic Products",
+      "item_type": "proposed_rule",
+      "published_date": "2024-12-27",
+      "source_url": "https://www.federalregister.gov/documents/2024/12/27/2024-30544/testing-methods-for-detecting-and-identifying-asbestos-in-talc-containing-cosmetic-products",
+      "issuing_office": null,
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "title": "Testing Methods for Detecting and Identifying Asbestos in Talc-Containing Cosmetic Products; Withdrawal",
+      "item_type": "proposed_rule",
+      "published_date": "2025-11-28",
+      "source_url": "https://www.federalregister.gov/documents/2025/11/28/2025-21407/testing-methods-for-detecting-and-identifying-asbestos-in-talc-containing-cosmetic-products",
+      "issuing_office": null,
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "c2bd8105-96da-48c8-b968-d073476dd6bd",
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "summary": "The FDA has issued a proposed rule to establish standardized testing methods for the detection and identification of asbestos in talc-containing cosmetic products. This action is intended to ensure these products are free from asbestos contamination.",
+      "key_regulations": [
+        "21 CFR Part 730"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "testing_requirement",
+      "deadline": "2025-03-27"
+    },
+    {
+      "id": "28bd743d-b9dc-49ec-8594-78e8424f0019",
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "summary": "The FDA has withdrawn a proposed rule that would have established standardized testing methods for the detection and identification of asbestos in talc and talc-containing cosmetic products.",
+      "key_regulations": [
+        "21 CFR Part 730"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "baby_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "eye_makeup",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 730",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "chewing_gum",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "hard_candy_cough_drops",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "9d5bd28d-c61d-4fbb-b9c1-73f498afaeae",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "baby_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "eye_makeup",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 730",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "chewing_gum",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "cb119c26-7c00-4d93-9d5f-7866ff464055",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    }
+  ]
+}

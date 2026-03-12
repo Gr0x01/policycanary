@@ -1,0 +1,301 @@
+{
+  "substance": {
+    "id": "ba4357bd-24d8-4608-aa9a-4abc611c4025",
+    "canonical_name": "Sodium nitrite",
+    "unii": "M0KG633D4F",
+    "matched_names": [
+      "Sodium nitrite",
+      "NITHIODOTE COMPONENT SODIUM NITRITE",
+      "Sodium nitrite",
+      "SODIUM NITRITE [EP MONOGRAPH]",
+      "SODIUM NITRITE [FCC]",
+      "SODIUM NITRITE [HSDB]",
+      "SODIUM NITRITE [MART.]",
+      "SODIUM NITRITE [MI]",
+      "SODIUM NITRITE [ORANGE BOOK]",
+      "SODIUM NITRITE [USP MONOGRAPH]",
+      "SODIUM NITRITE [USP-RS]"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "ba4357bd-24d8-4608-aa9a-4abc611c4025",
+      "canonical_name": "Sodium nitrite",
+      "unii": "M0KG633D4F",
+      "matched_names": [
+        "Sodium nitrite",
+        "NITHIODOTE COMPONENT SODIUM NITRITE",
+        "Sodium nitrite",
+        "SODIUM NITRITE [EP MONOGRAPH]",
+        "SODIUM NITRITE [FCC]",
+        "SODIUM NITRITE [HSDB]",
+        "SODIUM NITRITE [MART.]",
+        "SODIUM NITRITE [MI]",
+        "SODIUM NITRITE [ORANGE BOOK]",
+        "SODIUM NITRITE [USP MONOGRAPH]",
+        "SODIUM NITRITE [USP-RS]"
+      ]
+    },
+    {
+      "id": "4a627458-8d9c-486d-b75a-505a2c7edddd",
+      "canonical_name": "SODIUM NITRITE N-15",
+      "unii": "R6EN23242B",
+      "matched_names": [
+        "SODIUM NITRITE N-15"
+      ]
+    }
+  ],
+  "item_count": 3,
+  "items": [
+    {
+      "id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "title": "Import Alert 99-45 — Detention Without Physical Examination of Food Products That Are or Contain an Unsafe Food Additive",
+      "item_type": "import_alert",
+      "published_date": "2026-03-03",
+      "source_url": "https://www.accessdata.fda.gov/cms_ia/importalert_1173.html",
+      "issuing_office": "ORA",
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "53bdb11e-08cf-4de2-8c3f-8eab2cf65350",
+      "title": "CPG Sec 540.500 Tuna, Sable, Salmon, Shad-Smoked Cured, Adulteration Involving Food Additives, Sodium Nitrite",
+      "item_type": "guidance",
+      "published_date": "2005-11-29",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-540500-tuna-sable-salmon-shad-smoked-cured-adulteration-involving-food-additives-sodium",
+      "issuing_office": "Human Foods Program<br><br>Office of Inspections and Investigations",
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f0dd5ffc-2a38-438c-aba3-bad281f1a123",
+      "title": "CPG Sec 540.200 Chubs, Hot Process Smoked with Added Nitrite - Adulteration Involving Food Additives, Sodium Nitrite",
+      "item_type": "guidance",
+      "published_date": "2005-11-28",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-540200-chubs-hot-process-smoked-added-nitrite-adulteration-involving-food-additives-sodium",
+      "issuing_office": "Office of Inspections and Investigations<br><br>Human Foods Program",
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "9d490758-94ce-4dfa-a433-5b9e54aafed1",
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "summary": "FDA Import Alert 99-45 authorizes the Detention Without Physical Examination (DWPE) of food products, including dietary supplements, that contain unsafe food additives. A food is deemed adulterated if it contains an additive that does not conform to a food additive regulation, an effective food contact notification, or an exemption. The extensive Red List targets firms exporting products containing unauthorized substances such as Lead and Cadmium in ceramics, Cyclamates in snacks and juices, Coumarin in vanilla extracts, and unapproved botanicals or chemicals (e.g., Ashwagandha, Kratom, Yohimbine, DMAA, Folic Acid) in conventional foods and beverages.",
+      "key_regulations": [
+        "Section 402(a)(2)(C)(i)",
+        "Section 409",
+        "Section 801(a)(3)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Division of Import Operations (DIO)",
+        "Center for Food Safety and Applied Nutrition (CFSAN)"
+      ],
+      "regulatory_action_type": "import_violation",
+      "deadline": null
+    },
+    {
+      "id": "0ad10ca6-35ec-4b63-a150-d733c730e21d",
+      "item_id": "53bdb11e-08cf-4de2-8c3f-8eab2cf65350",
+      "summary": "The FDA updated Compliance Policy Guide Sec 540.500, which provides enforcement criteria for excessive levels of the food additive sodium nitrite in smoked and cured fish. Legal action is recommended if sodium nitrite concentrations exceed 15 ppm in tuna or 220 ppm in salmon, sable, and shad.",
+      "key_regulations": [
+        "21 CFR 172.175"
+      ],
+      "key_entities": [
+        "CFSAN",
+        "Food and Drug Administration",
+        "Division of Enforcement"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "d4017b88-17a0-45d3-8ff5-df5d7b3d360c",
+      "item_id": "f0dd5ffc-2a38-438c-aba3-bad281f1a123",
+      "summary": "The FDA issued a Compliance Policy Guide (CPG Sec 540.200) outlining regulatory action criteria for adulteration involving sodium nitrite in hot process smoked chubs. Legal action is recommended if the sodium nitrite concentration in the loin muscle exceeds 220 ppm.",
+      "key_regulations": [
+        "21 CFR 172.177"
+      ],
+      "key_entities": [
+        "Office of Inspections and Investigations",
+        "Human Foods Program",
+        "CFSAN",
+        "Division of Enforcement"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "fruit_vegetable_juices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "coffee_tea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "gravies_sauces",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "alcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "facility_type",
+      "tag_value": "shipper",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "facility_type",
+      "tag_value": "importer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 342(a)(2)(C)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 348",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 402(a)(2)(C)(i) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 409 of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 801(a)(3)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "53bdb11e-08cf-4de2-8c3f-8eab2cf65350",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "53bdb11e-08cf-4de2-8c3f-8eab2cf65350",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 172.175",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f0dd5ffc-2a38-438c-aba3-bad281f1a123",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f0dd5ffc-2a38-438c-aba3-bad281f1a123",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 172.177",
+      "signal_source": "direct"
+    }
+  ]
+}

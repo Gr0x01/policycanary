@@ -1,0 +1,3500 @@
+{
+  "company_name": "Fresh & Ready Foods LLC",
+  "total_actions": 98,
+  "action_types": {
+    "recall": 98
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2024-03-27",
+    "latest": "2026-01-14"
+  },
+  "items": [
+    {
+      "id": "a1275fff-e07c-49d8-b3fa-a170602d7c57",
+      "title": "Spicy Veggie Breakfast Burrito, Fresh to You, Ready to Eat, Refrigerated. Net wt. 9.1oz. UPC 100000010310, LPK110310V06. Fresh & Ready Foods, 701 Monster Rd, Renton, WA 98057",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1a7ce8ef-98da-47af-8eb3-820c2a8f611e",
+      "title": "Spicy Breakfast Burrito, Sprig & Sprout brand, Ready to Eat. Refrigerated. Net wt. 9.1oz. UPC 100001000297, SS00297v02. Fresh & Ready Foods, 701 Monster Rd, Renton, WA 98057.",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "24b17101-81a9-44dc-b5a8-321af5ff8d2e",
+      "title": "Spicy Egg Potatoes Cheese Tacos, Fresh to You brand, Ready to Eat, Refrigerated. Net wt. 6.3oz. UPC 100000010389, LPK110369V06. Fresh & Ready Foods, 701 Monster Rd, Renton, WA 98057.",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ddb8e86e-fd86-4661-9e02-27bd1dc8467e",
+      "title": "Eggs Potatoes Cheese Tacos, Evergreen Refreshments brand, Ready to Eat, Refrigerated. Net wt. 6.3 oz. UPC 100040103898, EG03698v01. Fresh & Ready Foods, 701 Monster Rd, Renton, WA 98057.",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "94b2f9af-8863-4d86-81a5-54c7881b39eb",
+      "title": "Piccolo Pranzo Box; Keep Refrigerated, NET WT: 14.5 OZ,  UPC#  Manufactured by Fresh and Ready Foods LLC, San Fernando, CA 91340",
+      "item_type": "recall",
+      "published_date": "2025-09-24",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "859c9e1e-01bb-494d-9215-1b52964548c5",
+      "title": "Tuscan Artichoke and Mozzarella Salad; Keep Refrigerated, NET WT: 8.5 OZ,  UPC# 6 82906 90935 1 Manufactured by Fresh and Ready Foods LLC, San Fernando, CA 91340",
+      "item_type": "recall",
+      "published_date": "2025-09-24",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "76e44381-4e0a-44cc-bb6e-108f93d780c1",
+      "title": "Chili Crunch Market Mezze; Keep Refrigerated, NET WT: 14.5 OZ,  UPC#  Manufactured by Fresh and Ready Foods LLC, San Fernando, CA 91340",
+      "item_type": "recall",
+      "published_date": "2025-09-24",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "316f2f27-7402-4a63-8b6d-fe3fc48bbf27",
+      "title": "Spanish Club Ciabatta; Keep Refrigerated, NET WT: 10.5 OZ,  UPC# 6 82906 90933 7 Manufactured by Fresh and Ready Foods LLC, San Fernando, CA 91340",
+      "item_type": "recall",
+      "published_date": "2025-09-24",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "88ce1d06-4259-46f0-ae98-94826b9bf078",
+      "title": "Fresh Take Crave Away Turkey & Cheese Sub Sandwich; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61441 1",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d26a03df-4d24-4ce6-a014-25592ac48670",
+      "title": "City Point Market Fresh Food to Go Italian Hoagie Sub Sandwich; 6oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44201 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "45d690ea-a23e-4deb-b065-c0e8c429ecc8",
+      "title": "Fresh & Ready Foods Roasted Chicken on Wheat Sandwich, 8.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89292 9",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "67335f9f-d6c3-4e3e-9fd8-3ded35143075",
+      "title": "Fresh Take Crave Away Turkey & Bacon Club Multigrain Sandwich; 6.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 85889 9",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f120c13d-8bad-46e5-84c5-98161589d7a3",
+      "title": "Fresh Take Crave Away Club Supreme Sub Sandwich; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61439 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7d7df4b8-ee4a-4997-8196-262f997655aa",
+      "title": "Fresh & Ready Foods Ham & Cheese Mega Sandwich, 7.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89048 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d7881366-81a1-4aa7-a8af-a8181fc4e0dc",
+      "title": "Fresh Take Crave Away Protein Snack; 3oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61434 3",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "45e66e71-4d2b-4807-a56d-1f75357cec2c",
+      "title": "Fresh & Ready Foods Sub Club Sandwich, 6oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90341 0",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2be43c29-040d-420d-93ab-5479fc4cdf4c",
+      "title": "Fresh & Ready Foods Beef Cheesesteak Club Sandwich, 7oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90343 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a9a76884-78f8-40cf-9d36-0e2df66705e6",
+      "title": "City Point Market Fresh Food to Go Caprese Baguette; 6.5oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44192 7",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9ea5968b-e9d0-4155-844e-9a6357d98fca",
+      "title": "Fresh Take Crave Away Turkey & Cheese Croissant; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58552 0",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "96b64454-a7b5-4ce7-bdf8-24dd97a20c43",
+      "title": "Fresh & Ready Foods Turkey & Bacon Club Multigrain Sandwich, 6oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89064 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "dae29325-1467-42e9-b219-863c8dc86249",
+      "title": "Fresh & Ready Foods Ham & Cheese Dark Wheat Sandwich, 7oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89294 3",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2ef8888e-317a-4cd8-8b07-e211abd2d7fa",
+      "title": "Fresh & Ready Foods Turkey & Cheese Croissant Sandwich\t6oz PLASTIC CONTAINER; Best by: 05/12/2025 -05/12/2025  UPC# 6 82906 89293 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f2b5eaf0-5e29-41c5-8995-bdb09ced4865",
+      "title": "Fresh Take Crave Away Chicken Salad on Wheat Sandwich; 4.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58577 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1f0bfdf1-c211-4fdc-90de-4502be7d2698",
+      "title": "Fresh & Ready Foods Tuna Salad Multigrain Sandwich, 6.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89061 1",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b062295d-f9a1-4653-89dd-cb774a12b2a5",
+      "title": "City Point Market Fresh Food to Go Ham & Cheese on Wheat Sandwich; 5oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44187 3",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "73e402ef-136c-4400-a3e1-a5d4afba051c",
+      "title": "Fresh & Ready Foods Turkey & Cheese Sub Sandwich, 6oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89094 9",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d7fe53e8-69d2-4f6a-b3f2-ea687b7fa631",
+      "title": "Fresh & Ready Foods Turkey Cranberry Multigrain Sandwich, 7oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89296 7",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "31806112-0d6a-4ae7-ac17-4b35c11d1324",
+      "title": "Fresh Take Crave Away Egg Salad on Wheat Sandwich; 5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58575 5",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6d385b12-e492-4fe7-9c2d-ade1df614599",
+      "title": "Fresh & Ready Foods PB&J on White Sandwich, 5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90620 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ccdea658-4363-4369-ab75-79ddc1e21297",
+      "title": "Fresh & Ready Foods Dark Wheat Sandwich, 7oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89057 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "aa142772-bfec-40b1-859f-01b59a3890b1",
+      "title": "Fresh & Ready Foods Ham & Cheese Croissant Sandwich, 6.5 oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89055 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "52e5c4b3-81e1-4f03-8a93-212af806e18c",
+      "title": "City Point Market Fresh Food to Go Turkey & Cheese on Wheat Sandwich\t5.5oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44186 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "218df99a-66e3-472e-b4b8-f85d61ef1cf3",
+      "title": "City Point Market Fresh Food to Go Protein Snack; 3oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44197 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fcc1678b-e770-4c85-9341-5e0d13b4bfbf",
+      "title": "Fresh Take Crave Away Turkey & Cheese Mega; 8.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58555 1",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1c1d388f-48b6-4df6-9e34-0e1266e739e7",
+      "title": "Fresh & Ready Foods Turkey & Bacon Club Multigrain Sandwich; 6.5oz PLASTIC CONTAINER; Best by: 05/12/2025 -05/12/2025  UPC# 6 82906 89064 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "20374920-222b-43c6-bf2d-f0282a429581",
+      "title": "Fresh & Ready Foods Breakfast Bistro Box, 4 oz. plastic container. Best buy: 05/09/2025-05/12/2025 UPC# 6 82906 89908 9",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e9509a8d-ded8-44f7-bb26-5f58ff31853a",
+      "title": "Fresh & Ready Foods Ham Torta Sandwich, 4.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90707 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0ffbf1c9-0ebe-4e29-980b-73636b3bdd0e",
+      "title": "Fresh & Ready Foods Tuna Salad on Wheat Sandwich, 4.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89053 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f107ef26-76b8-4922-adf7-f4813b9f1f92",
+      "title": "Fresh & Ready Foods Turkey & Cheese Multigrain Sandwich; 7.5oz PLASTIC CONTAINER; Best by: 05/12/2025 -05/12/2025  UPC# 6 82906 89468 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "375ece8e-3a0d-44ef-81ee-e38f30ff5d1b",
+      "title": "Fresh & Ready Foods Street Corn Dipper Snack, 4oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90797 5",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c51aacc0-d006-4013-aee1-d155400cb63f",
+      "title": "Fresh Take Crave Away Italian Hoagie Sub Sandwich; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61440 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ebcb9e6b-ba64-480e-aa66-547986ac4b51",
+      "title": "Fresh Take Crave Away Turkey & Bacon Multigrain Sandwich; 6oz\tPLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61438 1",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "59e17b85-4e7c-4ffd-9b19-9dad60a2698d",
+      "title": "Fresh & Ready Foods Artisan Cheese Bistro Box, 4 oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89910 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0e7d91d2-ea1b-492a-9938-8628f4d57916",
+      "title": "City Point Market Fresh Food to Go PB&J Crunch on Country White; 6oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44193 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cacbc238-ea3d-4833-b147-d40d89e18407",
+      "title": "Fresh & Ready Foods Chicken Salad Multigrain Sandwich, 6oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89062 5",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a310ea26-1507-4a95-8ccd-566a200f210f",
+      "title": "Fresh Take Crave Away PB&J on Country White; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61116 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3c0f12d3-6880-4c22-a178-2c210c7f1d81",
+      "title": "Fresh & Ready Foods Mike's Tuna Mac Pasta, 9oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89065 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4343a449-b30a-4a0f-afec-c98ac01ce810",
+      "title": "Fresh & Ready Foods Club Sandwich on Wheat Sandwich, 5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89291 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1b87487e-8c8f-4b38-96d1-9fbaa83da1dd",
+      "title": "Fresh Take Crave Away Ham & Cheese Sub; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58569 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b5c688f6-14bd-4c90-a75d-12478bce1ef6",
+      "title": "Fresh & Ready Foods Turkey & Cheese Croissant Sandwich, 6 oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89293 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ffcbc896-eef7-4f8e-a65b-cb57983610c7",
+      "title": "Fresh & Ready Foods Egg Salad on Wheat Sandwich, 4.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89077 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4f6aee94-7750-4431-8bc3-77c6f654e260",
+      "title": "Fresh & Ready Foods Turkey & Cheese Multigrain Sandwich, 7oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89468 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "dd427cf8-0117-43b8-8877-fb0993a388fa",
+      "title": "Fresh Take Crave Away Garlic Pesto Pasta; 9.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58561 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f8b9c420-c7f4-4bcb-8c4e-76145c26f8f9",
+      "title": "Fresh & Ready Foods Garlic Pesto Pasta; 9.5oz PLASTIC CONTAINER; Best by: 05/12/2025 -05/12/2025  UPC# 6 82906 89066 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4677f0b2-8f72-492b-9296-ac976e8b361b",
+      "title": "Fresh Take Crave Away Chicken Salad Multigrain Sandwich; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58558 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1e8d6bb1-1472-497e-9e50-94ecc0e40006",
+      "title": "Fresh & Ready Foods \"Turkey & Cheese\" Pretzel Bun Sandwich, 8oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89297 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "378d8ce1-4cde-4ffe-98f8-c3277ba12fa9",
+      "title": "Fresh & Ready Foods Almonds & Chocolate Snack, 3oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90796 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "49dc88a5-f04a-4d47-949b-ac6b124ca2ee",
+      "title": "Fresh Take Crave Away Street Corn Dipper; 4oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61127 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "22a63a88-895d-4c4a-87e9-fa7997f7edbc",
+      "title": "Fresh Take Crave Away Tuna Salad on Wheat Sandwich; 5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58575 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "32f7769c-bb3e-4aa6-8602-f24bb91ae115",
+      "title": "Fresh & Ready Foods Protein Snack, 3 oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90802 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "31684bef-473c-4ed9-b490-f089210da5f2",
+      "title": "Fresh Take Crave Away Turkey Cranberry Multigrain Sandwich; 6.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 60745 1",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "29437d21-d163-4f7a-a7f6-0c1845f17f66",
+      "title": "City Point Market Fresh Food to Go Turkey & Bacon Multigrain Sandwich; 6oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44199 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2379c58f-a2dd-43e1-b120-1e1773b05b7b",
+      "title": "Fresh & Ready Foods Roasted Chicken Multigrain Sandwich, 6.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89063 5",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "93986a81-4ddb-41b7-bf67-3043b78699df",
+      "title": "Fresh & Ready Foods Turkey & Cheese on Wheat Sandwich, 5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89051 7",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1a2d8041-bcae-4b39-ab48-c12ed8a55b18",
+      "title": "Fresh Take Crave Away Ham & Cheese on Wheat Sandwich; 5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58574 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6f75c94e-f7a2-4383-a7d6-2ff2f83f6b93",
+      "title": "Fresh & Ready Food Chicken Torta Sandwich, 9oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90706 7",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6bb8a0f4-80d5-4737-8195-18249a89c648",
+      "title": "Fresh & Ready Foods Turkey & Cheese Multigrain Sandwich; 7oz PLASTIC CONTAINER; Best by: 05/12/2025 -05/12/2025  UPC# 6 82906 89468 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e4bfc8dc-0dd4-4f2d-b218-3e2baae23728",
+      "title": "Fresh & Ready Foods Mega Italian Sandwich, 7.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90321 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a7e1b184-e3ba-419e-b997-b3badf80aad7",
+      "title": "Fresh & Ready Foods Antipasto Bistro Box, 4 oz. plastic container. Best buy: 05/09/2025-05/12/2025 UPC# 6 82906 89909 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "953bcf06-72a7-47ac-9f3c-d0896a7f0a2f",
+      "title": "Fresh & Ready Foods Chicken Salad on Wheat Sandwich, 4.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89054 3",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c485503c-e673-4681-a5a9-7c6b5ef938f0",
+      "title": "City Point Market Fresh Food to Go Club Supreme Sub Sandwich; 6oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44200 9",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4c136e3a-4f1e-496d-bbd7-940202327359",
+      "title": "Fresh Take Crave Away Italian Mega; 9.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58557 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d331cf1b-1650-44d3-8810-a7cb615cfd74",
+      "title": "Fresh & Ready Foods Italian Ciabatta Sandwich, 8 oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89522 7",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4f13cd70-d280-4b64-95de-658b009cd78e",
+      "title": "Fresh & Ready Foods Turkey & Cheese Focaccia Sandwich, 8oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89059 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ed95f66d-fbfd-4dec-b396-1984b31c74ab",
+      "title": "Fresh Take Crave Away Turkey & Cheese Focaccia; 8oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58554 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "02e32c41-2e52-4d22-b4ae-ab76aec177a7",
+      "title": "Fresh & Ready Foods Roast Beef on Wheat Sandwich, 5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89289 3",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d54f3d4f-58f8-40ce-abb4-528ff2522334",
+      "title": "Fresh Take Crave Away Chicken Salas Croissant; 6.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58553 7",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5bcae410-e255-4f29-8d04-94e8106be21b",
+      "title": "Fresh & Ready Foods Chicken Salad Croissant Sandwich, 6oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89056 7",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "47d440d8-a377-44a0-9a0f-ce786650a4a6",
+      "title": "Fresh Take Crave Away El Cubano Sandwich; 8oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61117 5",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "478614b3-3699-4004-9e7f-a988e0f242c3",
+      "title": "Fresh & Ready Foods El Cubano Sandwich, 8oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90794 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "47456c44-8c50-4f72-87d8-db99e8605f0e",
+      "title": "City Point Market Fresh Food to Go Turkey & Cheese Sub Sandwich; 6oz, PLASTIC CONTAINER  Best By: 05/09/2025 - 05/18/2025 UPC# 4 00694  44202 3",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "eb2bbc27-77ec-4122-8646-bdc15ee99f04",
+      "title": "Fresh & Ready Foods Ham & Cheese on Wheat Sandwich, 5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89052 9",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c8416ba8-62e1-4b87-b01a-d1a1f99aa1b5",
+      "title": "Fresh Take Crave Away Mike's Tuna Mac Pasta; 9.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58560 5",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2bf3cd36-8d1b-4e95-aee2-6a1553d2d63b",
+      "title": "Fresh & Ready Foods Garlic Pesto Pasta, 9oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89066 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2aae7199-78c4-4c90-9a70-63cc8b2f5e27",
+      "title": "Fresh & Ready Foods Caprese Baguette, 6.5 oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90791 3",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8efeede8-8ed0-4484-8eb7-5908a72c2a1a",
+      "title": "Fresh Take Crave Away Turkey & Cheese on Wheat Sandwich; 5.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58573 3",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c3e1a888-1fc2-40a9-998b-16935bd54111",
+      "title": "Fresh & Ready Foods Egg Salad on Wheat Sandwich; 5oz PLASTIC CONTAINER; Best by: 05/12/2025 -05/12/2025  UPC# 6 82906 89077 2",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7b16b109-4a7e-4616-90e2-96e42d14d6b6",
+      "title": "Fresh Take Crave Away Ham & Cheese Mega; 8.5oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 58556 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a5508fd5-845b-4146-a6e2-885761dd5fc7",
+      "title": "Fresh & Ready Foods Ham & Cheese Sub Sandwich, 6oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89095 9",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b7a6eccf-b758-49cf-bea9-5f23983b90d8",
+      "title": "Fresh & Ready Foods Italian Hoagie Sandwich; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 6 82906 90114 0",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b4c66951-d123-44ca-ba17-c1417d596b1f",
+      "title": "Fresh & Ready Foods Turkey & Cheese Mega Sandwich, 7.5oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89047 5",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "21674853-adff-4a24-9446-4bf8ddd26f2c",
+      "title": "Fresh & Ready Foods Veggie Snack Bistro Box, 4 oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 89912 6",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8a904c0f-b7fa-4d25-b3a7-64ab6c7a5a7d",
+      "title": "Fresh Take Crave Away Beef Cheesesteak Sub Sandwich; 6oz PLASTIC CONTAINER; Best By:\t05/09/2025  - 05/19/2025  UPC# 8 06795 61442 8",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a39dec9c-e207-44c4-be9b-dea570b45a66",
+      "title": "Fresh & Ready Foods Thai Chicken on Ciabatta Sandwich, 9 oz. plastic container. Best buy: 05/09/2025-05/12/2025  UPC# 6 82906 90877 4",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5271ab00-9b9d-4c39-979b-a508de37033b",
+      "title": "Jack & Olive Ham Torta Sandwich on Telera Roll 9 oz UPC 8290690725",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ef3433fb-50fa-4f4b-a2c9-26574cf031d3",
+      "title": "Sprig & Sprout Ham Torta Sandwich on Telera Roll 9 oz UPC 8290690720",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "42a03e73-b2ff-457d-b2b2-3429f3ad6008",
+      "title": "Fresh & Ready Chicken Torta Sandwich 9 oz UPC 8290690706",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3643fc5d-c495-4aba-835d-420c2603b0fa",
+      "title": "Fresh & Ready Ham Torta Sandwich 9 oz UPC 8290690707",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Fresh & Ready Foods LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "51288731-eca9-4711-a4d1-817e64634e60",
+      "item_id": "02e32c41-2e52-4d22-b4ae-ab76aec177a7",
+      "summary": "Fresh & Ready Foods is recalling its Roast Beef on Wheat Sandwiches due to the detection of Listeria monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2850b69b-d817-424d-9b7c-fd0cfc2f9af3",
+      "item_id": "0e7d91d2-ea1b-492a-9938-8628f4d57916",
+      "summary": "City Point Market Fresh Food to Go has recalled its PB&J Crunch on Country White sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility. The affected products have 'Best By' dates ranging from 05/09/2025 to 05/18/2025 and UPC# 4 00694 44193 4.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market Fresh Food to Go"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f67b700a-22ca-4d83-804a-70d434ad05fc",
+      "item_id": "0ffbf1c9-0ebe-4e29-980b-73636b3bdd0e",
+      "summary": "Fresh & Ready Foods is recalling its Tuna Salad on Wheat Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces at its ready-to-eat sandwich manufacturing facility. The affected products have 'Best buy' dates from 05/09/2025 to 05/12/2025 and UPC# 6 82906 89053 6.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "05f68fec-cd32-4134-b272-bc13e2fd0867",
+      "item_id": "1a2d8041-bcae-4b39-ab48-c12ed8a55b18",
+      "summary": "A recall has been issued for Fresh Take Crave Away Ham & Cheese on Wheat Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces at the ready-to-eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8aa4147d-5521-4b6c-b9b8-6fa27c7d8616",
+      "item_id": "1a7ce8ef-98da-47af-8eb3-820c2a8f611e",
+      "summary": "Fresh & Ready Foods has recalled its Sprig & Sprout brand Spicy Breakfast Burrito, Ready to Eat, 9.1oz (UPC 100001000297, SS00297v02) due to foreign material contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods",
+        "Sprig & Sprout"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fb253f9c-80b8-402c-ad13-45f15d57afc6",
+      "item_id": "1b87487e-8c8f-4b38-96d1-9fbaa83da1dd",
+      "summary": "A recall has been issued for Fresh Take Crave Away Ham & Cheese Subs due to the detection of Listeria monocytogenes on food contact surfaces within the manufacturing facility, posing a potential health risk.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "28a4cb95-f2f7-4995-a729-0d147e322c8b",
+      "item_id": "1c1d388f-48b6-4df6-9e34-0e1266e739e7",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Bacon Club Multigrain Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility. The affected product comes in a 6.5oz plastic container with a best by date of 05/12/2025 and UPC# 6 82906 89064 2.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8073c84c-7e67-4bdb-839d-6a5bfe360088",
+      "item_id": "1e8d6bb1-1472-497e-9e50-94ecc0e40006",
+      "summary": "Fresh & Ready Foods is recalling its 'Turkey & Cheese' Pretzel Bun Sandwiches (8oz. plastic container, UPC# 6 82906 89297 4, best buy dates 05/09/2025-05/12/2025) due to the detection of Listeria Monocytogenes on food contact surfaces within the ready-to-eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9e6c4cc9-02c6-4698-b45b-59f396a891a8",
+      "item_id": "1f0bfdf1-c211-4fdc-90de-4502be7d2698",
+      "summary": "Fresh & Ready Foods has recalled its Tuna Salad Multigrain Sandwich (6.5oz, Best buy: 05/09/2025-05/12/2025, UPC# 6 82906 89061 1) due to the detection of Listeria monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ef41db82-56d7-4a29-a77e-3ff05f489b05",
+      "item_id": "20374920-222b-43c6-bf2d-f0282a429581",
+      "summary": "Fresh & Ready Foods is recalling its 4 oz. plastic containers of Breakfast Bistro Box due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility. The affected products have 'Best buy' dates ranging from 05/09/2025 to 05/12/2025 and UPC# 6 82906 89908 9.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "33cc6b02-b979-40ac-8a1e-84126abefd49",
+      "item_id": "21674853-adff-4a24-9446-4bf8ddd26f2c",
+      "summary": "Fresh & Ready Foods is recalling its Veggie Snack Bistro Box due to the detection of Listeria Monocytogenes on food contact surfaces in a ready-to-eat sandwich manufacturer facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5f13af40-7893-4406-921b-d62c1f2fde95",
+      "item_id": "218df99a-66e3-472e-b4b8-f85d61ef1cf3",
+      "summary": "City Point Market Fresh Food to Go Protein Snack products are being recalled due to the detection of Listeria Monocytogenes on food contact surfaces within the Ready To Eat sandwich manufacturer facility where they were produced. The recall covers products with 'Best By' dates from 05/09/2025 to 05/18/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "99c3d769-40a9-49e7-afbb-4096956761b0",
+      "item_id": "22a63a88-895d-4c4a-87e9-fa7997f7edbc",
+      "summary": "Fresh Take Crave Away Tuna Salad on Wheat Sandwich is being recalled due to the detection of Listeria monocytogenes on food contact surfaces at the manufacturing facility. The recall affects 5oz plastic containers with 'Best By' dates ranging from 05/09/2025 to 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take",
+        "Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "22fa0296-b72a-4370-bbe4-b08f949b2e2d",
+      "item_id": "2379c58f-a2dd-43e1-b120-1e1773b05b7b",
+      "summary": "Fresh & Ready Foods is recalling its Roasted Chicken Multigrain Sandwich due to the detection of Listeria monocytogenes on food contact surfaces within the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2d645061-7888-43b0-92b0-2e08f3ffafeb",
+      "item_id": "24b17101-81a9-44dc-b5a8-321af5ff8d2e",
+      "summary": "Fresh & Ready Foods is recalling 'Spicy Egg Potatoes Cheese Tacos, Fresh to You brand' due to the presence of foreign material. The product is a 6.3oz ready-to-eat, refrigerated item.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6c77a6cc-ede7-4eb6-8a03-5697e81e20b2",
+      "item_id": "29437d21-d163-4f7a-a7f6-0c1845f17f66",
+      "summary": "City Point Market Fresh Food to Go Turkey & Bacon Multigrain Sandwich is being recalled due to the detection of Listeria Monocytogenes on food contact surfaces in the ready-to-eat sandwich manufacturer facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0f7e39e4-f26e-4276-9d2d-0e700192f84e",
+      "item_id": "2aae7199-78c4-4c90-9a70-63cc8b2f5e27",
+      "summary": "Fresh & Ready Foods is recalling its Caprese Baguette due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility, posing a risk of contamination to the ready-to-eat sandwiches.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "caf29139-27fa-42a2-b980-a604a34d649b",
+      "item_id": "2be43c29-040d-420d-93ab-5479fc4cdf4c",
+      "summary": "Fresh & Ready Foods is recalling its Beef Cheesesteak Club Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces within the Ready To Eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "285ebc64-5f82-47cb-852d-0c7656e44564",
+      "item_id": "2bf3cd36-8d1b-4e95-aee2-6a1553d2d63b",
+      "summary": "Fresh & Ready Foods is recalling its Garlic Pesto Pasta, 9oz. plastic container, due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility. The affected products have best buy dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "33865fb3-9079-420a-9950-874c5b385d8b",
+      "item_id": "2ef8888e-317a-4cd8-8b07-e211abd2d7fa",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Cheese Croissant Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces within the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a85c6c55-4cb6-43f9-9427-e014ad983b9b",
+      "item_id": "31684bef-473c-4ed9-b490-f089210da5f2",
+      "summary": "Fresh Take has initiated a recall for its Crave Away Turkey Cranberry Multigrain Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces within the manufacturing facility. The affected products have 'Best By' dates ranging from 05/09/2025 to 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f83c52c5-d11c-4c8a-a306-502a11297a7c",
+      "item_id": "316f2f27-7402-4a63-8b6d-fe3fc48bbf27",
+      "summary": "Fresh and Ready Foods LLC is recalling Spanish Club Ciabatta ready-to-eat sandwiches due to undeclared wheat and milk allergens.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)"
+      ],
+      "key_entities": [
+        "Fresh and Ready Foods LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c3778dea-288c-4900-9b25-34c74e5b8717",
+      "item_id": "31806112-0d6a-4ae7-ac17-4b35c11d1324",
+      "summary": "Fresh Take Crave Away Egg Salad on Wheat Sandwiches, with best by dates between 05/09/2025 and 05/19/2025, are being recalled due to the detection of Listeria monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d489b08c-c9d5-45f8-b656-0146f33c8c14",
+      "item_id": "32f7769c-bb3e-4aa6-8602-f24bb91ae115",
+      "summary": "Fresh & Ready Foods is recalling its Protein Snack, 3 oz. plastic containers, with specific best buy dates due to the detection of Listeria monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f91bd243-ea23-45e3-9066-19a7654d8efe",
+      "item_id": "3643fc5d-c495-4aba-835d-420c2603b0fa",
+      "summary": "A recall has been issued for Fresh & Ready Ham Torta Sandwiches due to contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8b55cb21-48a4-4a1d-b620-c3dbb28c49c7",
+      "item_id": "375ece8e-3a0d-44ef-81ee-e38f30ff5d1b",
+      "summary": "Fresh & Ready Foods is recalling its Street Corn Dipper Snack due to the detection of Listeria Monocytogenes on food contact surfaces in a Ready To Eat sandwich manufacturer facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fdcd417b-fe10-4487-ae76-62c33a69426b",
+      "item_id": "378d8ce1-4cde-4ffe-98f8-c3277ba12fa9",
+      "summary": "Fresh & Ready Foods is recalling its Almonds & Chocolate Snack due to the detection of Listeria Monocytogenes on food contact surfaces within the Ready To Eat sandwich manufacturer facility. The affected products have best buy dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6e62d645-252e-462c-91ba-cf62951b656e",
+      "item_id": "3c0f12d3-6880-4c22-a178-2c210c7f1d81",
+      "summary": "Fresh & Ready Foods has recalled its 9oz Mike's Tuna Mac Pasta containers due to the detection of Listeria Monocytogenes on food contact surfaces within the Ready To Eat sandwich manufacturer facility. The affected products have 'Best buy' dates between 05/09/2025 and 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "50f3ac13-89e0-42a7-8631-685f2565ceb9",
+      "item_id": "42a03e73-b2ff-457d-b2b2-3429f3ad6008",
+      "summary": "Fresh & Ready Chicken Torta Sandwich 9 oz is being recalled due to contamination with Listeria monocytogenes (L. mono).",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "80d0fcf9-9d9d-407f-b7e0-83cff0651f3b",
+      "item_id": "4343a449-b30a-4a0f-afec-c98ac01ce810",
+      "summary": "Fresh & Ready Foods is recalling its Club Sandwich on Wheat Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "961210f6-46d9-453a-b261-2f79634a638c",
+      "item_id": "45d690ea-a23e-4deb-b065-c0e8c429ecc8",
+      "summary": "Fresh & Ready Foods has recalled its Roasted Chicken on Wheat Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces within the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c4205d1f-5ec5-4da0-80cf-973ff63cdbea",
+      "item_id": "45e66e71-4d2b-4807-a56d-1f75357cec2c",
+      "summary": "Fresh & Ready Foods is recalling its Sub Club Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility. The recall affects 6oz. plastic containers with best buy dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c808856d-e517-437f-bd6c-d168d3e76030",
+      "item_id": "4677f0b2-8f72-492b-9296-ac976e8b361b",
+      "summary": "Fresh Take has recalled its Crave Away Chicken Salad Multigrain Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility. The recall affects 6oz plastic containers with 'Best By' dates from 05/09/2025 to 05/19/2025 and UPC# 8 06795 58558 2.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "51f1c4ff-d201-4e25-aaff-f42ff8474c17",
+      "item_id": "47456c44-8c50-4f72-87d8-db99e8605f0e",
+      "summary": "City Point Market Fresh Food to Go has recalled its Turkey & Cheese Sub Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces in the ready-to-eat sandwich manufacturing facility. The recall affects 6oz plastic containers with 'Best By' dates from 05/09/2025 to 05/18/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market Fresh Food to Go"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8f0a3567-3508-477e-bea4-4f37077e1c7e",
+      "item_id": "478614b3-3699-4004-9e7f-a988e0f242c3",
+      "summary": "Fresh & Ready Foods is recalling its El Cubano Sandwich (8oz. plastic container, Best buy: 05/09/2025-05/12/2025, UPC# 6 82906 90794 4) due to the detection of Listeria monocytogenes on food contact surfaces within the ready-to-eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "681285a4-1006-4ddd-80cc-7a192a3841db",
+      "item_id": "47d440d8-a377-44a0-9a0f-ce786650a4a6",
+      "summary": "Fresh Take Crave Away El Cubano Sandwiches are being recalled due to the detection of Listeria Monocytogenes on food contact surfaces in the ready-to-eat sandwich manufacturing facility. The affected products have 'Best By' dates from 05/09/2025 to 05/19/2025.",
+      "key_regulations": [
+        "21 CFR Part 117"
+      ],
+      "key_entities": [
+        "Fresh Take Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b8b4d70a-24b0-4773-bb40-737223589433",
+      "item_id": "49dc88a5-f04a-4d47-949b-ac6b124ca2ee",
+      "summary": "Fresh Take Crave Away Street Corn Dipper is being recalled due to the detection of Listeria Monocytogenes on food contact surfaces within a Ready To Eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Listeria Monocytogenes"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4e273b3f-81ae-4b26-9a15-9bcd1aab68d9",
+      "item_id": "4c136e3a-4f1e-496d-bbd7-940202327359",
+      "summary": "Recall of Fresh Take Crave Away Italian Mega products due to the detection of Listeria Monocytogenes on food contact surfaces in a Ready To Eat sandwich manufacturer facility. The affected products have 'Best By' dates ranging from 05/09/2025 to 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away Italian Mega"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c425a25d-8504-4c15-91a6-8408478d0a81",
+      "item_id": "4f13cd70-d280-4b64-95de-658b009cd78e",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Cheese Focaccia Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces within its ready-to-eat sandwich manufacturing facility. The affected products have a best buy date between 05/09/2025 and 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a2c005ac-3efa-4cc1-9990-749653ed4e15",
+      "item_id": "4f6aee94-7750-4431-8bc3-77c6f654e260",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Cheese Multigrain Sandwiches (7oz, UPC# 6 82906 89468 8, Best buy: 05/09/2025-05/12/2025) due to the detection of Listeria monocytogenes on food contact surfaces at the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "32bd6a02-08e7-4a7e-b8c5-cc45e969aa6e",
+      "item_id": "5271ab00-9b9d-4c39-979b-a508de37033b",
+      "summary": "Jack & Olive Ham Torta Sandwich on Telera Roll is being recalled due to contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Jack & Olive"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7465d150-b35e-4f56-9575-2ec606b13a9c",
+      "item_id": "52e5c4b3-81e1-4f03-8a93-212af806e18c",
+      "summary": "City Point Market Fresh Food to Go Turkey & Cheese on Wheat Sandwiches are being recalled due to the detection of Listeria Monocytogenes on food contact surfaces within the ready-to-eat sandwich manufacturing facility. The affected products have 'Best By' dates ranging from 05/09/2025 to 05/18/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market Fresh Food to Go"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "96a06e70-eb74-41b9-9fbd-54b7c47620c7",
+      "item_id": "59e17b85-4e7c-4ffd-9b19-9dad60a2698d",
+      "summary": "Fresh & Ready Foods is recalling its Artisan Cheese Bistro Box due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility. The affected products have best buy dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5feae43a-b3ce-4e96-bc21-f4b1a64fdc8a",
+      "item_id": "5bcae410-e255-4f29-8d04-94e8106be21b",
+      "summary": "Fresh & Ready Foods is recalling its Chicken Salad Croissant Sandwich due to the detection of Listeria monocytogenes on food contact surfaces within the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d0952a0c-b9d9-42aa-b4ea-3bdd06dfc078",
+      "item_id": "67335f9f-d6c3-4e3e-9fd8-3ded35143075",
+      "summary": "A recall has been issued for Fresh Take Crave Away Turkey & Bacon Club Multigrain Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4d5f8e6c-3ae2-4c85-8d13-4a8d1182350c",
+      "item_id": "6bb8a0f4-80d5-4737-8195-18249a89c648",
+      "summary": "Fresh & Ready Foods has recalled its Turkey & Cheese Multigrain Sandwiches (7oz PLASTIC CONTAINER, Best by: 05/12/2025 - 05/12/2025, UPC# 6 82906 89468 8) due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e9c80676-1b7d-499b-8514-e00a97bb51c8",
+      "item_id": "6d385b12-e492-4fe7-9c2d-ade1df614599",
+      "summary": "Fresh & Ready Foods is recalling its PB&J on White Sandwiches, 5oz. plastic container with specific best buy dates, due to the detection of Listeria monocytogenes on food contact surfaces in the Ready To Eat sandwich manufacturer facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "abed0d01-8c3f-4d8a-a7ef-d961bede9b22",
+      "item_id": "6f75c94e-f7a2-4383-a7d6-2ff2f83f6b93",
+      "summary": "Fresh & Ready Food has recalled its Chicken Torta Sandwich (9oz. plastic container, UPC# 6 82906 90706 7, Best buy: 05/09/2025-05/12/2025) after Listeria Monocytogenes was detected on food contact surfaces within the ready-to-eat sandwich manufacturer facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Food"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "210924b9-478d-46ab-b4a6-94ea306e9889",
+      "item_id": "73e402ef-136c-4400-a3e1-a5d4afba051c",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Cheese Sub Sandwiches, 6oz. plastic containers, with specific best buy dates (05/09/2025-05/12/2025) due to the detection of Listeria Monocytogenes on food contact surfaces within the ready-to-eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4f699dc3-1e4c-4ebd-833e-f5b8eb48e8d9",
+      "item_id": "76e44381-4e0a-44cc-bb6e-108f93d780c1",
+      "summary": "Fresh and Ready Foods LLC is recalling 'Chili Crunch Market Mezze' ready-to-eat sandwiches due to the presence of undeclared wheat, a common allergen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh and Ready Foods LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f14e031e-9121-41de-8fe5-9916df871592",
+      "item_id": "7b16b109-4a7e-4616-90e2-96e42d14d6b6",
+      "summary": "A recall has been issued for Fresh Take Crave Away Ham & Cheese Mega sandwiches after Listeria Monocytogenes was detected on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [
+        "21 CFR Part 117"
+      ],
+      "key_entities": [
+        "Listeria Monocytogenes"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7c007a82-befe-4c7d-869c-ca807ac9fae4",
+      "item_id": "7d7df4b8-ee4a-4997-8196-262f997655aa",
+      "summary": "Fresh & Ready Foods has recalled its Ham & Cheese Mega Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces within the Ready To Eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "bd11864b-93f7-4ab3-82c9-71617c71ff3e",
+      "item_id": "859c9e1e-01bb-494d-9215-1b52964548c5",
+      "summary": "Fresh and Ready Foods LLC is recalling Tuscan Artichoke and Mozzarella Salad due to undeclared wheat and milk allergens.",
+      "key_regulations": [
+        "FALCPA"
+      ],
+      "key_entities": [
+        "Fresh and Ready Foods LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fb431472-4367-4249-ba22-180cddb4de3a",
+      "item_id": "88ce1d06-4259-46f0-ae98-94826b9bf078",
+      "summary": "Fresh Take Crave Away Turkey & Cheese Sub Sandwiches, 6oz plastic containers with specific 'Best By' dates (05/09/2025 - 05/19/2025), are being recalled due to the detection of Listeria monocytogenes on food contact surfaces at the ready-to-eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0b06e51c-fb21-40eb-bb6a-38c61116446b",
+      "item_id": "8a904c0f-b7fa-4d25-b3a7-64ab6c7a5a7d",
+      "summary": "Fresh Take Crave Away is recalling its 6oz Beef Cheesesteak Sub Sandwiches, with best by dates from 05/09/2025 to 05/19/2025, due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7d4b57eb-50d2-4576-9ff6-e5fcf8d12882",
+      "item_id": "8efeede8-8ed0-4484-8eb7-5908a72c2a1a",
+      "summary": "Fresh Take Crave Away Turkey & Cheese on Wheat Sandwiches are being recalled after Listeria Monocytogenes was detected on food contact surfaces in the ready-to-eat sandwich manufacturer's facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away Turkey & Cheese on Wheat Sandwich"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dc2e6847-59eb-4d1b-8dbc-ebfed70afe79",
+      "item_id": "93986a81-4ddb-41b7-bf67-3043b78699df",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Cheese on Wheat Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility. The affected sandwiches have 'Best buy' dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d08c9c2b-3c6d-40e1-99f7-f689dcffc9d6",
+      "item_id": "94b2f9af-8863-4d86-81a5-54c7881b39eb",
+      "summary": "Fresh and Ready Foods LLC is recalling 'Piccolo Pranzo Box' ready-to-eat sandwiches due to undeclared wheat and milk allergens.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh and Ready Foods LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8e7cbe1f-b987-4a51-a6cc-af4b7d6d4942",
+      "item_id": "953bcf06-72a7-47ac-9f3c-d0896a7f0a2f",
+      "summary": "Fresh & Ready Foods is recalling its Chicken Salad on Wheat Sandwich due to the detection of Listeria monocytogenes on food contact surfaces at the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c76a50ca-1b3f-4c07-8d02-18903fbd58f9",
+      "item_id": "96b64454-a7b5-4ce7-bdf8-24dd97a20c43",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Bacon Club Multigrain Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces within the manufacturing facility. The affected products have 'Best buy' dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b168898b-cb05-4077-a717-17706a7997a1",
+      "item_id": "9ea5968b-e9d0-4155-844e-9a6357d98fca",
+      "summary": "Fresh Take Crave Away is recalling its Turkey & Cheese Croissant products due to potential contamination with Listeria Monocytogenes, which was detected on food contact surfaces in the Ready To Eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "73c9d7dc-eeed-4f4d-9794-76e6be614f0e",
+      "item_id": "a1275fff-e07c-49d8-b3fa-a170602d7c57",
+      "summary": "A recall has been issued for 'Spicy Veggie Breakfast Burrito' manufactured by Fresh & Ready Foods due to contamination with foreign material.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "263cfd57-1fb8-4039-9bee-2bc81549b723",
+      "item_id": "a310ea26-1507-4a95-8ccd-566a200f210f",
+      "summary": "Fresh Take Crave Away PB&J on Country White sandwiches are being recalled due to the detection of Listeria Monocytogenes on food contact surfaces in the ready-to-eat sandwich manufacturing facility. The affected products have 'Best By' dates from 05/09/2025 to 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a7ae2fb0-4ca9-4349-bd5b-b2fc7b68b963",
+      "item_id": "a39dec9c-e207-44c4-be9b-dea570b45a66",
+      "summary": "Fresh & Ready Foods is recalling its Thai Chicken on Ciabatta Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cf8a33cb-e599-4830-ac7a-427db0da6aa1",
+      "item_id": "a5508fd5-845b-4146-a6e2-885761dd5fc7",
+      "summary": "Fresh & Ready Foods is recalling its Ham & Cheese Sub Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces within the Ready To Eat sandwich manufacturer facility. The recalled products have 'Best buy' dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fb5a7753-ec9c-41c9-82a3-5ad89229735c",
+      "item_id": "a7e1b184-e3ba-419e-b997-b3badf80aad7",
+      "summary": "Fresh & Ready Foods is recalling its Antipasto Bistro Box due to the detection of Listeria Monocytogenes on food contact surfaces at the Ready To Eat sandwich manufacturer facility. The affected products have best buy dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "55780ce2-66cf-420e-b62a-ffdfb0b096d0",
+      "item_id": "a9a76884-78f8-40cf-9d36-0e2df66705e6",
+      "summary": "City Point Market has recalled its Fresh Food to Go Caprese Baguettes (6.5oz, Best By: 05/09/2025 - 05/18/2025) due to the detection of Listeria monocytogenes on food contact surfaces within the Ready To Eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4e5bb9a8-cb10-4123-a4d5-e4fc9af9460a",
+      "item_id": "aa142772-bfec-40b1-859f-01b59a3890b1",
+      "summary": "Fresh & Ready Foods is recalling its Ham & Cheese Croissant Sandwich due to the detection of Listeria monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4af12a75-965f-4289-b15b-256d14a00a22",
+      "item_id": "b062295d-f9a1-4653-89dd-cb774a12b2a5",
+      "summary": "City Point Market Fresh Food to Go is recalling its Ham & Cheese on Wheat Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market Fresh Food to Go"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2dc17b85-19e2-4be7-8b9f-1c872ac760f3",
+      "item_id": "b4c66951-d123-44ca-ba17-c1417d596b1f",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Cheese Mega Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces in the ready-to-eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "059b2b97-2f76-4ac6-8d07-103ad299cb5d",
+      "item_id": "b5c688f6-14bd-4c90-a75d-12478bce1ef6",
+      "summary": "Fresh & Ready Foods is recalling Turkey & Cheese Croissant Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility. The recall affects products with best buy dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e2a1973c-04b5-440f-b4e3-266a04aea487",
+      "item_id": "b7a6eccf-b758-49cf-bea9-5f23983b90d8",
+      "summary": "Fresh & Ready Foods is recalling its Italian Hoagie Sandwich (6oz plastic container, UPC# 6 82906 90114 0, Best By: 05/09/2025 - 05/19/2025) due to the detection of Listeria Monocytogenes on food contact surfaces within their ready-to-eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "09ef5150-3a61-482d-9b5a-3f4909531c78",
+      "item_id": "c3e1a888-1fc2-40a9-998b-16935bd54111",
+      "summary": "Fresh & Ready Foods recalled Egg Salad on Wheat Sandwiches due to contamination with Listeria Monocytogenes found on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "449855cd-f894-4bbf-b345-667eb35a272d",
+      "item_id": "c485503c-e673-4681-a5a9-7c6b5ef938f0",
+      "summary": "City Point Market is recalling its Fresh Food to Go Club Supreme Sub Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "75036e00-155c-48d4-b72d-65c1f819345d",
+      "item_id": "c51aacc0-d006-4013-aee1-d155400cb63f",
+      "summary": "Fresh Take Crave Away Italian Hoagie Sub Sandwiches are being recalled due to the detection of Listeria Monocytogenes on food contact surfaces within the manufacturing facility. The affected products have 'Best By' dates between 05/09/2025 and 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a161d02f-ff55-4aeb-ad96-56ece069e552",
+      "item_id": "c8416ba8-62e1-4b87-b01a-d1a1f99aa1b5",
+      "summary": "Fresh Take Crave Away Mike's Tuna Mac Pasta is being recalled due to the detection of Listeria monocytogenes on food contact surfaces at a Ready To Eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7c050443-dd13-4640-badf-6e2a697b3e89",
+      "item_id": "cacbc238-ea3d-4833-b147-d40d89e18407",
+      "summary": "Fresh & Ready Foods is recalling its Chicken Salad Multigrain Sandwich after Listeria Monocytogenes was detected on food contact surfaces within the Ready To Eat sandwich manufacturer facility. The affected product is the 6oz. plastic container with Best buy dates 05/09/2025-05/12/2025 and UPC# 6 82906 89062 5.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7dae2ce6-8b05-4f0b-ba1d-76226c1613c3",
+      "item_id": "ccdea658-4363-4369-ab75-79ddc1e21297",
+      "summary": "Fresh & Ready Foods is recalling its Dark Wheat Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility. The recall affects 7oz plastic containers with 'Best buy' dates from 05/09/2025-05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "04484806-1b55-4a50-a8e7-331f6497a02d",
+      "item_id": "d26a03df-4d24-4ce6-a014-25592ac48670",
+      "summary": "City Point Market Fresh Food to Go is recalling its Italian Hoagie Sub Sandwich due to the detection of Listeria monocytogenes on food contact surfaces at the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "City Point Market Fresh Food to Go"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "37e5f443-bfd9-4b72-93b5-2d19513af0a9",
+      "item_id": "d331cf1b-1650-44d3-8810-a7cb615cfd74",
+      "summary": "Fresh & Ready Foods is recalling its Italian Ciabatta Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "25769281-785a-4db6-8fe3-05d422f598e4",
+      "item_id": "d54f3d4f-58f8-40ce-abb4-528ff2522334",
+      "summary": "Fresh Take Crave Away Chicken Salas Croissants are being recalled due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility. The affected products have 'Best By' dates between 05/09/2025 and 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9056637b-a45d-4044-8ffb-c4fa07fcd086",
+      "item_id": "d7881366-81a1-4aa7-a8af-a8181fc4e0dc",
+      "summary": "Fresh Take Crave Away Protein Snack is being recalled due to the detection of Listeria Monocytogenes on food contact surfaces within the manufacturing facility. The affected products have 'Best By' dates between 05/09/2025 and 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away Protein Snack"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0d4d43a9-6e3d-4850-92f4-a2444aaa8e58",
+      "item_id": "d7fe53e8-69d2-4f6a-b3f2-ea687b7fa631",
+      "summary": "A recall has been initiated for Fresh & Ready Foods Turkey Cranberry Multigrain Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5c3d6549-a15d-42c4-b32f-a39e718dcf3b",
+      "item_id": "dae29325-1467-42e9-b219-863c8dc86249",
+      "summary": "A recall has been issued for Fresh & Ready Foods Ham & Cheese Dark Wheat Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces within the ready-to-eat sandwich manufacturing facility. The affected products have 'Best buy' dates ranging from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fdb9c613-1ba6-4936-b889-87b666f892fa",
+      "item_id": "dd427cf8-0117-43b8-8877-fb0993a388fa",
+      "summary": "Fresh Take Crave Away Garlic Pesto Pasta is being recalled due to the detection of Listeria Monocytogenes on food contact surfaces within a Ready To Eat sandwich manufacturer facility. The recalled product is a 9.5oz plastic container with Best By dates from 05/09/2025 to 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away Garlic Pesto Pasta"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "23055f2b-0014-43ad-b2f9-39e869e4607e",
+      "item_id": "ddb8e86e-fd86-4661-9e02-27bd1dc8467e",
+      "summary": "Evergreen Refreshments brand Eggs Potatoes Cheese Tacos, Ready to Eat, Refrigerated, are being recalled by Fresh & Ready Foods due to contamination with foreign material.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods",
+        "Evergreen Refreshments"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e5fec384-abda-4bea-98cc-325e31798ccf",
+      "item_id": "e4bfc8dc-0dd4-4f2d-b218-3e2baae23728",
+      "summary": "Fresh & Ready Foods is recalling its Mega Italian Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "952437c7-7ff2-4c23-a3bd-fb1349983bcd",
+      "item_id": "e9509a8d-ded8-44f7-bb26-5f58ff31853a",
+      "summary": "Fresh & Ready Foods is recalling its Ham Torta Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces at the ready-to-eat sandwich manufacturing facility. The affected products have 'Best buy' dates from 05/09/2025 to 05/12/2025 and UPC# 6 82906 90707 4.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8351c4d3-816d-448c-9cbf-af252eb1b127",
+      "item_id": "eb2bbc27-77ec-4122-8646-bdc15ee99f04",
+      "summary": "Fresh & Ready Foods is recalling Ham & Cheese on Wheat Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces in their manufacturing facility. The affected products have best by dates from 05/09/2025 to 05/12/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b85c148a-386b-45a0-abc6-74e234afa294",
+      "item_id": "ebcb9e6b-ba64-480e-aa66-547986ac4b51",
+      "summary": "Recall of Fresh Take Crave Away Turkey & Bacon Multigrain Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces at the manufacturing facility. Products with 'Best By' dates from 05/09/2025 to 05/19/2025 are affected.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4a436379-2176-4e72-828b-155d0ac9252d",
+      "item_id": "ed95f66d-fbfd-4dec-b396-1984b31c74ab",
+      "summary": "Fresh Take Crave Away is recalling Turkey & Cheese Focaccia, sold in 8oz plastic containers with 'Best By' dates 05/09/2025 to 05/19/2025, due to the detection of Listeria monocytogenes on food contact surfaces in the ready-to-eat sandwich manufacturer facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dbca6175-bb6a-4fd4-b976-5d250e7e0ead",
+      "item_id": "ef3433fb-50fa-4f4b-a2c9-26574cf031d3",
+      "summary": "Sprig & Sprout is recalling its Ham Torta Sandwich on Telera Roll (9 oz, UPC 8290690720) due to contamination with Listeria monocytogenes (L. mono).",
+      "key_regulations": [],
+      "key_entities": [
+        "Sprig & Sprout"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "685923f6-c0fc-4028-a6b3-f26e5015fa53",
+      "item_id": "f107ef26-76b8-4922-adf7-f4813b9f1f92",
+      "summary": "Fresh & Ready Foods is recalling its Turkey & Cheese Multigrain Sandwiches due to the detection of Listeria Monocytogenes on food contact surfaces within the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "46734895-f799-43a6-a1e3-f85237d906c8",
+      "item_id": "f120c13d-8bad-46e5-84c5-98161589d7a3",
+      "summary": "Fresh Take Crave Away Club Supreme Sub Sandwiches are being recalled due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take Crave Away"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ddac54bb-9338-40c4-b43b-0fae13fbf426",
+      "item_id": "f2b5eaf0-5e29-41c5-8995-bdb09ced4865",
+      "summary": "Fresh Take has recalled its Crave Away Chicken Salad on Wheat Sandwich due to the detection of Listeria Monocytogenes on food contact surfaces within the ready-to-eat sandwich manufacturing facility. The recall affects 4.5oz plastic containers with 'Best By' dates from 05/09/2025 to 05/19/2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8ce1cbd2-51bc-4885-bf1c-d22f3f298023",
+      "item_id": "f8b9c420-c7f4-4bcb-8c4e-76145c26f8f9",
+      "summary": "Fresh & Ready Foods is recalling Garlic Pesto Pasta due to the detection of Listeria Monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f42948c0-f6a9-4dbb-96df-85a1724fe845",
+      "item_id": "fcc1678b-e770-4c85-9341-5e0d13b4bfbf",
+      "summary": "Fresh Take has recalled its 'Crave Away Turkey & Cheese Mega' sandwiches (8.5oz PLASTIC CONTAINER, Best By: 05/09/2025 - 05/19/2025, UPC# 8 06795 58555 1) due to the detection of Listeria Monocytogenes on food contact surfaces within the Ready To Eat sandwich manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Take",
+        "Listeria Monocytogenes"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6d53be6a-411a-4d76-90d4-556e33503ab0",
+      "item_id": "ffcbc896-eef7-4f8e-a65b-cb57983610c7",
+      "summary": "Fresh & Ready Foods recalled its Egg Salad on Wheat Sandwich due to the detection of Listeria monocytogenes on food contact surfaces in the manufacturing facility.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Ready Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "02e32c41-2e52-4d22-b4ae-ab76aec177a7",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02e32c41-2e52-4d22-b4ae-ab76aec177a7",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0e7d91d2-ea1b-492a-9938-8628f4d57916",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0e7d91d2-ea1b-492a-9938-8628f4d57916",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0ffbf1c9-0ebe-4e29-980b-73636b3bdd0e",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0ffbf1c9-0ebe-4e29-980b-73636b3bdd0e",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0ffbf1c9-0ebe-4e29-980b-73636b3bdd0e",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0ffbf1c9-0ebe-4e29-980b-73636b3bdd0e",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a2d8041-bcae-4b39-ab48-c12ed8a55b18",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a2d8041-bcae-4b39-ab48-c12ed8a55b18",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a7ce8ef-98da-47af-8eb3-820c2a8f611e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a7ce8ef-98da-47af-8eb3-820c2a8f611e",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_processing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1b87487e-8c8f-4b38-96d1-9fbaa83da1dd",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1b87487e-8c8f-4b38-96d1-9fbaa83da1dd",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1c1d388f-48b6-4df6-9e34-0e1266e739e7",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1c1d388f-48b6-4df6-9e34-0e1266e739e7",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1c1d388f-48b6-4df6-9e34-0e1266e739e7",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1c1d388f-48b6-4df6-9e34-0e1266e739e7",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1e8d6bb1-1472-497e-9e50-94ecc0e40006",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1e8d6bb1-1472-497e-9e50-94ecc0e40006",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1f0bfdf1-c211-4fdc-90de-4502be7d2698",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1f0bfdf1-c211-4fdc-90de-4502be7d2698",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1f0bfdf1-c211-4fdc-90de-4502be7d2698",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1f0bfdf1-c211-4fdc-90de-4502be7d2698",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "20374920-222b-43c6-bf2d-f0282a429581",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "20374920-222b-43c6-bf2d-f0282a429581",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21674853-adff-4a24-9446-4bf8ddd26f2c",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21674853-adff-4a24-9446-4bf8ddd26f2c",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "218df99a-66e3-472e-b4b8-f85d61ef1cf3",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "218df99a-66e3-472e-b4b8-f85d61ef1cf3",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "22a63a88-895d-4c4a-87e9-fa7997f7edbc",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "22a63a88-895d-4c4a-87e9-fa7997f7edbc",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "22a63a88-895d-4c4a-87e9-fa7997f7edbc",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "22a63a88-895d-4c4a-87e9-fa7997f7edbc",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2379c58f-a2dd-43e1-b120-1e1773b05b7b",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2379c58f-a2dd-43e1-b120-1e1773b05b7b",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2379c58f-a2dd-43e1-b120-1e1773b05b7b",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "24b17101-81a9-44dc-b5a8-321af5ff8d2e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "24b17101-81a9-44dc-b5a8-321af5ff8d2e",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "29437d21-d163-4f7a-a7f6-0c1845f17f66",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "29437d21-d163-4f7a-a7f6-0c1845f17f66",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "29437d21-d163-4f7a-a7f6-0c1845f17f66",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "29437d21-d163-4f7a-a7f6-0c1845f17f66",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2aae7199-78c4-4c90-9a70-63cc8b2f5e27",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2aae7199-78c4-4c90-9a70-63cc8b2f5e27",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2be43c29-040d-420d-93ab-5479fc4cdf4c",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2be43c29-040d-420d-93ab-5479fc4cdf4c",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2be43c29-040d-420d-93ab-5479fc4cdf4c",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2bf3cd36-8d1b-4e95-aee2-6a1553d2d63b",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2bf3cd36-8d1b-4e95-aee2-6a1553d2d63b",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2bf3cd36-8d1b-4e95-aee2-6a1553d2d63b",
+      "tag_dimension": "facility_type",
+      "tag_value": "ready_to_eat_food_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2ef8888e-317a-4cd8-8b07-e211abd2d7fa",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2ef8888e-317a-4cd8-8b07-e211abd2d7fa",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facilities",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "31684bef-473c-4ed9-b490-f089210da5f2",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "31684bef-473c-4ed9-b490-f089210da5f2",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "316f2f27-7402-4a63-8b6d-fe3fc48bbf27",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "316f2f27-7402-4a63-8b6d-fe3fc48bbf27",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "316f2f27-7402-4a63-8b6d-fe3fc48bbf27",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "316f2f27-7402-4a63-8b6d-fe3fc48bbf27",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101 Subpart A (General Labeling Provisions) specifically related to allergen declarations as per FALCPA",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "31806112-0d6a-4ae7-ac17-4b35c11d1324",
+      "tag_dimension": "product_type",
+      "tag_value": "egg_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "31806112-0d6a-4ae7-ac17-4b35c11d1324",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "32f7769c-bb3e-4aa6-8602-f24bb91ae115",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "32f7769c-bb3e-4aa6-8602-f24bb91ae115",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3643fc5d-c495-4aba-835d-420c2603b0fa",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "375ece8e-3a0d-44ef-81ee-e38f30ff5d1b",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "375ece8e-3a0d-44ef-81ee-e38f30ff5d1b",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "378d8ce1-4cde-4ffe-98f8-c3277ba12fa9",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "378d8ce1-4cde-4ffe-98f8-c3277ba12fa9",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3c0f12d3-6880-4c22-a178-2c210c7f1d81",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3c0f12d3-6880-4c22-a178-2c210c7f1d81",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3c0f12d3-6880-4c22-a178-2c210c7f1d81",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "42a03e73-b2ff-457d-b2b2-3429f3ad6008",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4343a449-b30a-4a0f-afec-c98ac01ce810",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4343a449-b30a-4a0f-afec-c98ac01ce810",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4343a449-b30a-4a0f-afec-c98ac01ce810",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45d690ea-a23e-4deb-b065-c0e8c429ecc8",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45d690ea-a23e-4deb-b065-c0e8c429ecc8",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45d690ea-a23e-4deb-b065-c0e8c429ecc8",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45d690ea-a23e-4deb-b065-c0e8c429ecc8",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45e66e71-4d2b-4807-a56d-1f75357cec2c",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45e66e71-4d2b-4807-a56d-1f75357cec2c",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4677f0b2-8f72-492b-9296-ac976e8b361b",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4677f0b2-8f72-492b-9296-ac976e8b361b",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47456c44-8c50-4f72-87d8-db99e8605f0e",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47456c44-8c50-4f72-87d8-db99e8605f0e",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47456c44-8c50-4f72-87d8-db99e8605f0e",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "478614b3-3699-4004-9e7f-a988e0f242c3",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "478614b3-3699-4004-9e7f-a988e0f242c3",
+      "tag_dimension": "facility_type",
+      "tag_value": "ready_to_eat_food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47d440d8-a377-44a0-9a0f-ce786650a4a6",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47d440d8-a377-44a0-9a0f-ce786650a4a6",
+      "tag_dimension": "facility_type",
+      "tag_value": "ready_to_eat_food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "49dc88a5-f04a-4d47-949b-ac6b124ca2ee",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "49dc88a5-f04a-4d47-949b-ac6b124ca2ee",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "49dc88a5-f04a-4d47-949b-ac6b124ca2ee",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4c136e3a-4f1e-496d-bbd7-940202327359",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4c136e3a-4f1e-496d-bbd7-940202327359",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f13cd70-d280-4b64-95de-658b009cd78e",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f13cd70-d280-4b64-95de-658b009cd78e",
+      "tag_dimension": "facility_type",
+      "tag_value": "food manufacturing facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f6aee94-7750-4431-8bc3-77c6f654e260",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f6aee94-7750-4431-8bc3-77c6f654e260",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5271ab00-9b9d-4c39-979b-a508de37033b",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "52e5c4b3-81e1-4f03-8a93-212af806e18c",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "52e5c4b3-81e1-4f03-8a93-212af806e18c",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "52e5c4b3-81e1-4f03-8a93-212af806e18c",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "52e5c4b3-81e1-4f03-8a93-212af806e18c",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "52e5c4b3-81e1-4f03-8a93-212af806e18c",
+      "tag_dimension": "facility_type",
+      "tag_value": "food manufacturing facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "59e17b85-4e7c-4ffd-9b19-9dad60a2698d",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "59e17b85-4e7c-4ffd-9b19-9dad60a2698d",
+      "tag_dimension": "facility_type",
+      "tag_value": "ready_to_eat_food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5bcae410-e255-4f29-8d04-94e8106be21b",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5bcae410-e255-4f29-8d04-94e8106be21b",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "67335f9f-d6c3-4e3e-9fd8-3ded35143075",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "67335f9f-d6c3-4e3e-9fd8-3ded35143075",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6bb8a0f4-80d5-4737-8195-18249a89c648",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6bb8a0f4-80d5-4737-8195-18249a89c648",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6bb8a0f4-80d5-4737-8195-18249a89c648",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6d385b12-e492-4fe7-9c2d-ade1df614599",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6d385b12-e492-4fe7-9c2d-ade1df614599",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6f75c94e-f7a2-4383-a7d6-2ff2f83f6b93",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6f75c94e-f7a2-4383-a7d6-2ff2f83f6b93",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6f75c94e-f7a2-4383-a7d6-2ff2f83f6b93",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6f75c94e-f7a2-4383-a7d6-2ff2f83f6b93",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "73e402ef-136c-4400-a3e1-a5d4afba051c",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "73e402ef-136c-4400-a3e1-a5d4afba051c",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "76e44381-4e0a-44cc-bb6e-108f93d780c1",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "76e44381-4e0a-44cc-bb6e-108f93d780c1",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7b16b109-4a7e-4616-90e2-96e42d14d6b6",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7b16b109-4a7e-4616-90e2-96e42d14d6b6",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7d7df4b8-ee4a-4997-8196-262f997655aa",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7d7df4b8-ee4a-4997-8196-262f997655aa",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "859c9e1e-01bb-494d-9215-1b52964548c5",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "859c9e1e-01bb-494d-9215-1b52964548c5",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "88ce1d06-4259-46f0-ae98-94826b9bf078",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "88ce1d06-4259-46f0-ae98-94826b9bf078",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8a904c0f-b7fa-4d25-b3a7-64ab6c7a5a7d",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8a904c0f-b7fa-4d25-b3a7-64ab6c7a5a7d",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8a904c0f-b7fa-4d25-b3a7-64ab6c7a5a7d",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8efeede8-8ed0-4484-8eb7-5908a72c2a1a",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8efeede8-8ed0-4484-8eb7-5908a72c2a1a",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "93986a81-4ddb-41b7-bf67-3043b78699df",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "93986a81-4ddb-41b7-bf67-3043b78699df",
+      "tag_dimension": "facility_type",
+      "tag_value": "food manufacturing facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "94b2f9af-8863-4d86-81a5-54c7881b39eb",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "94b2f9af-8863-4d86-81a5-54c7881b39eb",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "953bcf06-72a7-47ac-9f3c-d0896a7f0a2f",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "953bcf06-72a7-47ac-9f3c-d0896a7f0a2f",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "953bcf06-72a7-47ac-9f3c-d0896a7f0a2f",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96b64454-a7b5-4ce7-bdf8-24dd97a20c43",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96b64454-a7b5-4ce7-bdf8-24dd97a20c43",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ea5968b-e9d0-4155-844e-9a6357d98fca",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ea5968b-e9d0-4155-844e-9a6357d98fca",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a1275fff-e07c-49d8-b3fa-a170602d7c57",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a1275fff-e07c-49d8-b3fa-a170602d7c57",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a1275fff-e07c-49d8-b3fa-a170602d7c57",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a310ea26-1507-4a95-8ccd-566a200f210f",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a310ea26-1507-4a95-8ccd-566a200f210f",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a39dec9c-e207-44c4-be9b-dea570b45a66",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a39dec9c-e207-44c4-be9b-dea570b45a66",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a5508fd5-845b-4146-a6e2-885761dd5fc7",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a5508fd5-845b-4146-a6e2-885761dd5fc7",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a7e1b184-e3ba-419e-b997-b3badf80aad7",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a7e1b184-e3ba-419e-b997-b3badf80aad7",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a9a76884-78f8-40cf-9d36-0e2df66705e6",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a9a76884-78f8-40cf-9d36-0e2df66705e6",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a9a76884-78f8-40cf-9d36-0e2df66705e6",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa142772-bfec-40b1-859f-01b59a3890b1",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa142772-bfec-40b1-859f-01b59a3890b1",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa142772-bfec-40b1-859f-01b59a3890b1",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa142772-bfec-40b1-859f-01b59a3890b1",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b062295d-f9a1-4653-89dd-cb774a12b2a5",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b062295d-f9a1-4653-89dd-cb774a12b2a5",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b062295d-f9a1-4653-89dd-cb774a12b2a5",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b062295d-f9a1-4653-89dd-cb774a12b2a5",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b4c66951-d123-44ca-ba17-c1417d596b1f",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b4c66951-d123-44ca-ba17-c1417d596b1f",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b4c66951-d123-44ca-ba17-c1417d596b1f",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b5c688f6-14bd-4c90-a75d-12478bce1ef6",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b5c688f6-14bd-4c90-a75d-12478bce1ef6",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b7a6eccf-b758-49cf-bea9-5f23983b90d8",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b7a6eccf-b758-49cf-bea9-5f23983b90d8",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c3e1a888-1fc2-40a9-998b-16935bd54111",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c3e1a888-1fc2-40a9-998b-16935bd54111",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c485503c-e673-4681-a5a9-7c6b5ef938f0",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c485503c-e673-4681-a5a9-7c6b5ef938f0",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c51aacc0-d006-4013-aee1-d155400cb63f",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c51aacc0-d006-4013-aee1-d155400cb63f",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c8416ba8-62e1-4b87-b01a-d1a1f99aa1b5",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c8416ba8-62e1-4b87-b01a-d1a1f99aa1b5",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c8416ba8-62e1-4b87-b01a-d1a1f99aa1b5",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cacbc238-ea3d-4833-b147-d40d89e18407",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cacbc238-ea3d-4833-b147-d40d89e18407",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cacbc238-ea3d-4833-b147-d40d89e18407",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ccdea658-4363-4369-ab75-79ddc1e21297",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ccdea658-4363-4369-ab75-79ddc1e21297",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d26a03df-4d24-4ce6-a014-25592ac48670",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d331cf1b-1650-44d3-8810-a7cb615cfd74",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d331cf1b-1650-44d3-8810-a7cb615cfd74",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d54f3d4f-58f8-40ce-abb4-528ff2522334",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d54f3d4f-58f8-40ce-abb4-528ff2522334",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d54f3d4f-58f8-40ce-abb4-528ff2522334",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d7881366-81a1-4aa7-a8af-a8181fc4e0dc",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d7fe53e8-69d2-4f6a-b3f2-ea687b7fa631",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d7fe53e8-69d2-4f6a-b3f2-ea687b7fa631",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d7fe53e8-69d2-4f6a-b3f2-ea687b7fa631",
+      "tag_dimension": "facility_type",
+      "tag_value": "food manufacturing facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dae29325-1467-42e9-b219-863c8dc86249",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dae29325-1467-42e9-b219-863c8dc86249",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dae29325-1467-42e9-b219-863c8dc86249",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dd427cf8-0117-43b8-8877-fb0993a388fa",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dd427cf8-0117-43b8-8877-fb0993a388fa",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ddb8e86e-fd86-4661-9e02-27bd1dc8467e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4bfc8dc-0dd4-4f2d-b218-3e2baae23728",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4bfc8dc-0dd4-4f2d-b218-3e2baae23728",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e9509a8d-ded8-44f7-bb26-5f58ff31853a",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e9509a8d-ded8-44f7-bb26-5f58ff31853a",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e9509a8d-ded8-44f7-bb26-5f58ff31853a",
+      "tag_dimension": "facility_type",
+      "tag_value": "food manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "eb2bbc27-77ec-4122-8646-bdc15ee99f04",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "eb2bbc27-77ec-4122-8646-bdc15ee99f04",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "eb2bbc27-77ec-4122-8646-bdc15ee99f04",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "eb2bbc27-77ec-4122-8646-bdc15ee99f04",
+      "tag_dimension": "facility_type",
+      "tag_value": "ready to eat food manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ebcb9e6b-ba64-480e-aa66-547986ac4b51",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ebcb9e6b-ba64-480e-aa66-547986ac4b51",
+      "tag_dimension": "facility_type",
+      "tag_value": "Food Manufacturing Facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ed95f66d-fbfd-4dec-b396-1984b31c74ab",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ef3433fb-50fa-4f4b-a2c9-26574cf031d3",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f107ef26-76b8-4922-adf7-f4813b9f1f92",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f107ef26-76b8-4922-adf7-f4813b9f1f92",
+      "tag_dimension": "facility_type",
+      "tag_value": "sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f120c13d-8bad-46e5-84c5-98161589d7a3",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f120c13d-8bad-46e5-84c5-98161589d7a3",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2b5eaf0-5e29-41c5-8995-bdb09ced4865",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2b5eaf0-5e29-41c5-8995-bdb09ced4865",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2b5eaf0-5e29-41c5-8995-bdb09ced4865",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f8b9c420-c7f4-4bcb-8c4e-76145c26f8f9",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f8b9c420-c7f4-4bcb-8c4e-76145c26f8f9",
+      "tag_dimension": "facility_type",
+      "tag_value": "Ready To Eat sandwich manufacturer facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fcc1678b-e770-4c85-9341-5e0d13b4bfbf",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fcc1678b-e770-4c85-9341-5e0d13b4bfbf",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fcc1678b-e770-4c85-9341-5e0d13b4bfbf",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facilities",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ffcbc896-eef7-4f8e-a65b-cb57983610c7",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ffcbc896-eef7-4f8e-a65b-cb57983610c7",
+      "tag_dimension": "product_type",
+      "tag_value": "egg_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ffcbc896-eef7-4f8e-a65b-cb57983610c7",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ffcbc896-eef7-4f8e-a65b-cb57983610c7",
+      "tag_dimension": "facility_type",
+      "tag_value": "ready_to_eat_food_manufacturing",
+      "signal_source": "direct"
+    }
+  ]
+}

@@ -1,0 +1,1219 @@
+{
+  "substance": {
+    "id": "7808db3a-8107-437f-b7aa-dd6febd96ff1",
+    "canonical_name": "FD&C RED NO. 40",
+    "unii": "WZB9127XOA",
+    "matched_names": [
+      "FD&C RED 40",
+      "FDC RED 40 DYE",
+      "JAPAN RED 40",
+      "RED 40"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "7808db3a-8107-437f-b7aa-dd6febd96ff1",
+      "canonical_name": "FD&C RED NO. 40",
+      "unii": "WZB9127XOA",
+      "matched_names": [
+        "FD&C RED 40",
+        "FDC RED 40 DYE",
+        "JAPAN RED 40",
+        "RED 40"
+      ]
+    },
+    {
+      "id": "979221bc-e448-4ad1-a467-48f0c92b017b",
+      "canonical_name": "SOLVENT RED 4",
+      "unii": "EVE9WNU99R",
+      "matched_names": [
+        "CI PIGMENT RED 40",
+        "PIGMENT RED 40"
+      ]
+    },
+    {
+      "id": "d8d0bc4e-b026-4adb-ac3e-6db426366664",
+      "canonical_name": "FD&C RED NO. 40 ALUMINUM LAKE",
+      "unii": "6T47AS764T",
+      "matched_names": [
+        "Red 40 Lake"
+      ]
+    }
+  ],
+  "item_count": 32,
+  "items": [
+    {
+      "id": "09ba7cf0-fca8-4351-b1f7-9ff4cb1a3798",
+      "title": "Chocolate Raspberry: Three sizes, 1.  Small, Net Wt 1.25 lbs. (sub ingredients contain, yellow #5 and #6, and red #40 not declared on final product label)  2.  Medium, Net Wt 2.75 lbs. (sub ingredient",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Lithuanian Bakery, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0caced00-fee6-448b-a464-0a3a88ced9fb",
+      "title": "Chocolate Peanut Butter Protein Balls. Product has expected life of 2 weeks and does not require refrigeration. Product is packaged in sets of 2 protein balls into resealable plastic baggies. Net Wt. ",
+      "item_type": "recall",
+      "published_date": "2025-03-26",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prep'd CDA LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1d53bd55-661d-4ddf-acae-b9c5c045dfb8",
+      "title": "Italian Sesame Cookies",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gina Marie Bakery LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1d983df8-7c9c-4e7d-9815-873e5d92aaa1",
+      "title": "Cuban Crackers Galletas Cubanas, Net Wt 8Oz (226g). Distributed by Best Floridian, LLC. UPC 5700300060",
+      "item_type": "recall",
+      "published_date": "2026-01-28",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Lily's Bakery Factory",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "title": "Raspberry Jelly Sticks MILK, item number CB747-M, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail.  Product was sold out of bulk chocolate cases f",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2d20760c-c23a-4f50-8db2-c1b9866f1dba",
+      "title": "Raspberry Jelly Sticks DARK, Item Number CB747-D, packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail.  Product was sold out of bulk chocolate cases from",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "30b6b0c8-90b2-4167-83e2-1a56728ecb6b",
+      "title": "Eudos Bronquilan",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Nature's Eudos Distributors LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3a21de9b-216e-4bbf-aedb-bf62e05302d0",
+      "title": "Vanilla with Apricot Jam Cookies",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gina Marie Bakery LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3e131a0d-cc7b-495d-a12f-51f18348d274",
+      "title": "Snack Crackers 100to en boca (ciento en boca) Rovira, Net Wt. 1.5 oz, 12 pack Snack Crackers to go, 12 packets (Net Wt 1.5 oz bag) per box, 12/ 1.5 oz packets box, 6 box per case. UPC 072981023064  10",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "41d4b0b5-b26a-4a1d-b018-b3c14c1b6f8c",
+      "title": "Bizcocho de Boda Puertorrique¿o Naked \"Puerto Rican wedding cake naked\",  packaged in aluminum mold/plastic showcase, 24 Pack per case of 10 oz / 6 pack per case of 32 oz/ 4 pack per case of 51.2 oz, ",
+      "item_type": "recall",
+      "published_date": "2024-05-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reposteria Artesanal Laura",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "title": "Golden Crop Candy (8 oz. (227g) un-wrapped candies)",
+      "item_type": "recall",
+      "published_date": "2025-04-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Blooming Import Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "45bc2f4d-c1d9-4b76-9a3c-d7717601b06a",
+      "title": "Toasted Almond & Cherry Biscotti",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gina Marie Bakery LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4f5965c5-b7fd-4c7e-a8cb-89877fdc190f",
+      "title": "Charles Boggini Pink Lemonde; 1 or 5 U.S. Gallons",
+      "item_type": "recall",
+      "published_date": "2024-06-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Charles Boggini Company Llc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "title": "El Gordo Spices, LLC — Seafood HACCP/CGMP for Foods/Adulterated/Insanitary Conditions",
+      "item_type": "warning_letter",
+      "published_date": "2022-10-25",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/el-gordo-spices-llc-639957-09302022",
+      "issuing_office": "Division of Human and Animal Food Operations West III",
+      "enforcement_company_name": "El Gordo Spices, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5aefd427-6fb0-4740-95be-4688a02da8cf",
+      "title": "Tempting Crackers Tray, Rovira, 3 foil wrap trays per Net Wt. 8oz box (Net Wt 5 oz trays), 6 box per case. UPC 072981003127  Tempting Crackers, Rovira, 12 packets (Net Wt. 1.0 oz (30 g) bag) per box, ",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "643da01c-3e56-4c5c-8e12-8d084794ec37",
+      "title": "NutriLean, dietary supplement.  Legere Pharmaceuticals 15344 N 83rd way, Scottsdale AZ 85260  (Product does not have a UPC)",
+      "item_type": "recall",
+      "published_date": "2025-07-02",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Preventics, Inc. dba Legere Pharmaceuticals",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "697392b4-1a89-48ee-b1c2-e4e71466597f",
+      "title": "Vanilla Treats Crackers, Rovira, Net Wt. 31 oz (878.83 g) cans, 6/31oz cans per case.  Mini Vanilla Treats, Rovira, 12 to go packs (0.8oz (22.7g) each), Net Wt 9.6 oz (272g), 6/9.6oz boxes per case. U",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "title": "Tita Crackers Rovira, 3 (1/2 oz (15g) Foil Fresh Packets Net Wt.8 oz (226.8 g) boxes, 6/8oz boxes per case. UPC 072981005121  Tita Crackers Rovira, Net Wt. 24 oz (680 g) boxes, 6/24 oz boxes per case.",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "84617a22-ca79-4245-8a51-b75182b08420",
+      "title": "Calais Brand Grape jelly; 128 FL. OZ. (1 GAL.) 3.785 L; INGREDIENTS: Grape Juice, Corn Syrup, High Fructose Corn Syrup, Pectin, Citric Acid; REFRIGERATE AFTER OPENING; UPC 040264 10128 0",
+      "item_type": "recall",
+      "published_date": "2025-07-16",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Elwood International, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8a59c967-a06e-4da8-ab15-8665ab9f4681",
+      "title": "Toasted Cherry Biscotti",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gina Marie Bakery LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "title": "Golden Crop Candy (10 oz. (283g) wrapped candies)",
+      "item_type": "recall",
+      "published_date": "2025-04-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Blooming Import Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "977698ae-71a9-4c66-9b07-9075ffcb8fd2",
+      "title": "Vanilla Chocolate Dipped Cookies",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gina Marie Bakery LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a1e40549-3604-42ab-bb83-6dd1d1ca49ec",
+      "title": "Rodex Forte, dietary supplement.  90 capsule bottles.  Legere Pharmaceuticals 15344 N 83rd way, Scottsdale AZ 85260  (Product does not have a UPC)",
+      "item_type": "recall",
+      "published_date": "2025-07-02",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Preventics, Inc. dba Legere Pharmaceuticals",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a7b2487d-7820-482a-9897-9e89679ef270",
+      "title": "Probese Caps, dietary supplement with Iron.  90-count bottles.  Legere Pharmaceuticals 15344 N 83rd way, Scottsdale AZ 85260  (Product does not have a UPC)",
+      "item_type": "recall",
+      "published_date": "2025-07-02",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Preventics, Inc. dba Legere Pharmaceuticals",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a948e2f3-b291-40d8-8964-457806a7bb51",
+      "title": "Shloimy's Heimishe Matjes Herring packaged in 7oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Kosher First LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "aa322136-9263-461e-ad81-d391f3cca87b",
+      "title": "a.) Preema brand Bright Red Food Colour Powder; Net Weight .88oz/25gm; packaged in small plastic bottle; INGREDIENTS: SODIUM CHLORIDE, COLOUR (TARTRAZINE, CARMOSINE, ALLURA RED) CHECK THE LEGAL LIMIT,",
+      "item_type": "recall",
+      "published_date": "2026-02-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "KPCM New York Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ba0f90da-c264-4c29-b519-7f694b1c039e",
+      "title": "Protrim Plus, dietary supplement.  90 capsule/bottles.  Legere Pharmaceuticals 15344 N 83rd way, Scottsdale AZ 85260  (Product does not have a UPC)",
+      "item_type": "recall",
+      "published_date": "2025-07-02",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Preventics, Inc. dba Legere Pharmaceuticals",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "title": "Vainilla Crackers, Great Value (Galletas Vainilla)8 Foil Packets (17 g each), Net Wt.9.6 oz (272 g) box, 6 boxes per case. UPC 072981005022",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ce8980c8-bef7-481e-b4e1-0ee05a435678",
+      "title": "Prothin, dietary supplement.  Seven Packets containing 2 tablets and 4 capsules.  Legere Pharmaceuticals 15344 N 83rd way, Scottsdale AZ 85260  (Product does not have a UPC)",
+      "item_type": "recall",
+      "published_date": "2025-07-02",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Preventics, Inc. dba Legere Pharmaceuticals",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "title": "Italian Mixed Vanilla Cookies",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gina Marie Bakery LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d7c6a4e7-e7ba-46f9-b40a-6d782e7af6d6",
+      "title": "Vanilla Econo, Galletas de Vainilla, 8 paquets per Net Wt. 9.6 oz box (272 g), 6 box per case. UPC 072981005022",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e14723cf-5f08-4453-8274-8fc362cb6253",
+      "title": "Super ProTHIN Plus, dietary supplement.  Seven Packets with 2 tablets & 4 Capsules and 1 packet with 14 Nutrilean capsules.  Legere Pharmaceuticals 15344 N 83rd way, Scottsdale AZ 85260  (Product does",
+      "item_type": "recall",
+      "published_date": "2025-07-02",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Preventics, Inc. dba Legere Pharmaceuticals",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "d684deb1-a643-4807-9a49-a394a739fae7",
+      "item_id": "09ba7cf0-fca8-4351-b1f7-9ff4cb1a3798",
+      "summary": "Chocolate Raspberry products are being recalled due to the presence of undeclared allergens including milk, soy, peanut, and wheat, as well as undeclared sulfites, yellow #5, yellow #6, and red #40.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8a76d134-7b72-4691-93c0-7c9b527ac0e6",
+      "item_id": "0caced00-fee6-448b-a464-0a3a88ced9fb",
+      "summary": "Chocolate Peanut Butter Protein Balls are being recalled due to undeclared soy lecithin and a variety of undeclared color additives including Blue 1 Lake, Yellow 6, Red 40, Yellow 5, Blue 1, Yellow 6 Lake, Red 40 Lake, Yellow 5 Lake, Blue 2 Lake, and Blue 2.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "46176628-0424-457a-a7a8-162d47058306",
+      "item_id": "1d53bd55-661d-4ddf-acae-b9c5c045dfb8",
+      "summary": "Italian Sesame Cookies are being recalled due to undeclared sesame, Yellow 5, Red 40, and Yellow 6, posing risks to individuals with allergies or sensitivities to these ingredients.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9ab3ca98-e1f9-44ee-bef0-b135c69fe054",
+      "item_id": "1d983df8-7c9c-4e7d-9815-873e5d92aaa1",
+      "summary": "Best Floridian, LLC is recalling its 'Cuban Crackers Galletas Cubanas' due to the undeclared presence of color additives FD&C yellow #5, FD&C yellow #6, and FD&C red 40 on the product label.",
+      "key_regulations": [
+        "21 CFR Part 101"
+      ],
+      "key_entities": [
+        "Best Floridian, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5d333e88-f447-4b26-9f69-8d498ee058a5",
+      "item_id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "summary": "The Candy Basket, Inc. is recalling Raspberry Jelly Sticks MILK (item CB747-M) sold in bulk 4lbs. boxes due to undeclared Red #40 and Potassium Sorbate. The product was sold to consumers from bulk chocolate cases in candy stores without proper labeling.",
+      "key_regulations": [],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a3e66183-fe0a-41fa-b4c5-780d5d432620",
+      "item_id": "2d20760c-c23a-4f50-8db2-c1b9866f1dba",
+      "summary": "The Candy Basket, Inc. is recalling Raspberry Jelly Sticks DARK (Item Number CB747-D) due to undeclared Red #40 and Potassium Sorbate. The bulk product was sold from candy stores to consumers without proper labeling.",
+      "key_regulations": [],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2722a941-dccd-403e-b78a-d349d9543fe3",
+      "item_id": "30b6b0c8-90b2-4167-83e2-1a56728ecb6b",
+      "summary": "A recall has been issued for Eudos Bronquilan due to the presence of undeclared colors FD&C Yellow #5, FD&C Blue #1, and FD&C Red #40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Eudos Bronquilan"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "eb8d4ba8-f590-4d86-884e-dce47f33e98f",
+      "item_id": "3a21de9b-216e-4bbf-aedb-bf62e05302d0",
+      "summary": "Vanilla with Apricot Jam Cookies are being recalled due to the undeclared presence of color additives Red 40 and Yellow 6.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "67bcffad-aca7-4fb6-be9e-b86beeb31921",
+      "item_id": "3e131a0d-cc7b-495d-a12f-51f18348d274",
+      "summary": "Rovira is recalling Snack Crackers (100to en boca) due to the undeclared presence of color additives FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Rovira"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9e75902c-ead0-4f9c-9e3d-07bbcb5240d0",
+      "item_id": "41d4b0b5-b26a-4a1d-b018-b3c14c1b6f8c",
+      "summary": "A recall has been issued for 'Bizcocho de Boda Puertorrique¿o Naked' (Puerto Rican wedding cake naked) due to the undeclared presence of FD&C Red #40, Red #3, Yellow #5, Yellow #6, Blue #1, and Blue #2. The product was sold in various pack sizes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c30d072e-2c29-45a3-b7a6-4111dac73381",
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "summary": "Golden Crop Candy (8 oz. (227g) un-wrapped candies) is being recalled due to the presence of undeclared and unallowed colors, specifically Blue 1, Red 40, and Acid Red 18.",
+      "key_regulations": [],
+      "key_entities": [
+        "Golden Crop Candy"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6da774f5-c814-4b9a-950a-38a0234f480a",
+      "item_id": "45bc2f4d-c1d9-4b76-9a3c-d7717601b06a",
+      "summary": "Toasted Almond & Cherry Biscotti is being recalled due to the presence of undeclared Red 40, a color additive that was not listed on the product label.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3c03cf4b-aad0-4024-9019-3300c34ec0fb",
+      "item_id": "4f5965c5-b7fd-4c7e-a8cb-89877fdc190f",
+      "summary": "Charles Boggini has recalled its Pink Lemonade in 1 or 5 U.S. Gallon sizes because it contains undeclared FD&C Red No. 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Charles Boggini"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "79faa6e8-6675-49bf-995b-ea6d22866095",
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "summary": "The FDA issued a warning letter to El Gordo Spices, LLC following an inspection of its seafood and spice repacking facility. The firm was cited for serious violations of Seafood HACCP regulations for its dried shrimp products, including failing to identify shrimp allergens as a hazard and failing to implement corrective actions for sulfiting agents. Additionally, multiple products, including dried shrimp, spices, sesame seeds, and textured soy, were found to be misbranded for failing to include Nutrition Facts panels, not providing complete bilingual labeling, and not declaring the color additive FD&C Red No. 40 Lake in ground shrimp.",
+      "key_regulations": [
+        "21 CFR Part 123",
+        "21 CFR Part 101",
+        "21 U.S.C. § 342(a)(4)",
+        "21 U.S.C. § 343"
+      ],
+      "key_entities": [
+        "El Gordo Spices, LLC",
+        "FDA"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "7ebc9bbf-50b0-47c2-8d06-216111199746",
+      "item_id": "5aefd427-6fb0-4740-95be-4688a02da8cf",
+      "summary": "Rovira brand 'Tempting Crackers Tray' and 'Tempting Crackers' are being recalled due to the undeclared presence of FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Rovira"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "55d520e5-616e-4b7e-9712-a7232c4aa011",
+      "item_id": "643da01c-3e56-4c5c-8e12-8d084794ec37",
+      "summary": "Legere Pharmaceuticals is recalling NutriLean dietary supplements due to the undeclared presence of Allura Red (Red No. 40) and Brilliant Blue (Blue No. 1) in the gelatin capsules.",
+      "key_regulations": [],
+      "key_entities": [
+        "Legere Pharmaceuticals"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7ff7fc72-d41e-4d1d-afb8-30f834c6763a",
+      "item_id": "697392b4-1a89-48ee-b1c2-e4e71466597f",
+      "summary": "Rovira is recalling Vanilla Treats Crackers and Mini Vanilla Treats due to the presence of undeclared FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Rovira"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c8d6bbb1-837e-480d-bf76-e88b5b811dd1",
+      "item_id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "summary": "Tita Crackers Rovira are being recalled due to the undeclared presence of color additives FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [
+        "21 CFR Part 101",
+        "21 CFR Part 70"
+      ],
+      "key_entities": [
+        "Rovira"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c6d7b1eb-737d-48a0-802e-b91344995e6f",
+      "item_id": "84617a22-ca79-4245-8a51-b75182b08420",
+      "summary": "Calais Brand Grape jelly is being recalled due to the presence of undeclared color additives, specifically FD&C Blue 1 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Calais Brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1c1b542b-6667-4231-9995-5d7069745b69",
+      "item_id": "8a59c967-a06e-4da8-ab15-8665ab9f4681",
+      "summary": "Toasted Cherry Biscotti is being recalled due to the presence of undeclared Red 40, a color additive, which was not declared on the product label.",
+      "key_regulations": [
+        "21 CFR 101"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7e6a3841-b515-4cc5-b0fc-af93de44e31a",
+      "item_id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "summary": "Golden Crop Candy (10 oz. wrapped candies) is being recalled due to the presence of undeclared and unallowed color additives: Blue 1, Red 40, and Acid Red 18.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "565ec044-57cb-49d5-a5ba-587f35592f8b",
+      "item_id": "977698ae-71a9-4c66-9b07-9075ffcb8fd2",
+      "summary": "Vanilla Chocolate Dipped Cookies are being recalled due to the presence of undeclared Red 40.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fe02ed35-8626-4237-a1de-c21a9f222170",
+      "item_id": "a1e40549-3604-42ab-bb83-6dd1d1ca49ec",
+      "summary": "Legere Pharmaceuticals is recalling Rodex Forte dietary supplements due to the undeclared presence of color additives Allura Red (Red No. 40) and Brilliant Blue (Blue No. 1) in the gelatin capsules.",
+      "key_regulations": [],
+      "key_entities": [
+        "Legere Pharmaceuticals"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a3df80a5-41ff-417f-b846-74f8963acc90",
+      "item_id": "a7b2487d-7820-482a-9897-9e89679ef270",
+      "summary": "Legere Pharmaceuticals is recalling Probese Caps, a dietary supplement with Iron, in 90-count bottles due to the undeclared presence of Allura Red (Red No. 40) and Brillant Blue (Blue No. 1) color additives used in the gelatin capsules.",
+      "key_regulations": [],
+      "key_entities": [
+        "Legere Pharmaceuticals"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9953035f-f1de-44c3-b1a0-aad4446c0a78",
+      "item_id": "a948e2f3-b291-40d8-8964-457806a7bb51",
+      "summary": "Shloimy's Heimishe Matjes Herring in 7oz plastic containers is being recalled due to the presence of undeclared FD&C Red #40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Shloimy's Heimishe"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5d6a2839-1b8e-48e4-a254-ba412775cbb5",
+      "item_id": "aa322136-9263-461e-ad81-d391f3cca87b",
+      "summary": "Preema brand Bright Red and Orange Food Colour Powders are being recalled due to containing the banned color carmoisine and undeclared FD&C Yellow 5 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Preema"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "472f88db-f3da-4319-9277-768e61b09da8",
+      "item_id": "ba0f90da-c264-4c29-b519-7f694b1c039e",
+      "summary": "Legere Pharmaceuticals is recalling Protrim Plus dietary supplements in 90 capsule/bottle packaging due to the undeclared presence of Allura Red (Red No. 40) and Brilliant Blue (Blue No.1) color additives used in the gelatin capsules.",
+      "key_regulations": [
+        "21 CFR 101.3(g)",
+        "21 U.S.C. 343(a)"
+      ],
+      "key_entities": [
+        "Legere Pharmaceuticals"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "71cca53b-6f02-4855-87e8-c2b5278780c5",
+      "item_id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "summary": "Vainilla Crackers, Great Value (Galletas Vainilla) are being recalled due to the undeclared presence of color additives FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [
+        "21 CFR 101"
+      ],
+      "key_entities": [
+        "Great Value"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "beeb8262-3f59-4643-9ec5-74fd4369fccb",
+      "item_id": "ce8980c8-bef7-481e-b4e1-0ee05a435678",
+      "summary": "Legere Pharmaceuticals has issued a recall for its 'Prothin' dietary supplement due to the undeclared presence of color additives Allura Red (Red No. 40) and Brilliant Blue (Blue No. 1) in the gelatin capsules.",
+      "key_regulations": [],
+      "key_entities": [
+        "Legere Pharmaceuticals"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3ae55774-845a-4b13-95fb-bb047b3646d7",
+      "item_id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "summary": "Italian Mixed Vanilla Cookies are being recalled due to undeclared allergens (almonds, sesame) and undeclared color additives (Red 40, Red 3, Blue 1).",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+        "21 CFR Part 101"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5b3ea7e7-df75-42ae-abe6-913a40680b30",
+      "item_id": "d7c6a4e7-e7ba-46f9-b40a-6d782e7af6d6",
+      "summary": "Vanilla Econo is recalling its Galletas de Vainilla (Vanilla Cookies) due to the undeclared presence of FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3187fdae-deec-4b95-9cba-194b261ac268",
+      "item_id": "e14723cf-5f08-4453-8274-8fc362cb6253",
+      "summary": "Legere Pharmaceuticals is recalling Super ProTHIN Plus dietary supplements due to the undeclared presence of Allura Red (Red No. 40) and Brillant Blue (Blue No.1) in the gelatin capsules.",
+      "key_regulations": [],
+      "key_entities": [
+        "Legere Pharmaceuticals"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "09ba7cf0-fca8-4351-b1f7-9ff4cb1a3798",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ce8980c8-bef7-481e-b4e1-0ee05a435678",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a1e40549-3604-42ab-bb83-6dd1d1ca49ec",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "84617a22-ca79-4245-8a51-b75182b08420",
+      "tag_dimension": "product_type",
+      "tag_value": "jams_jellies",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ba0f90da-c264-4c29-b519-7f694b1c039e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ba0f90da-c264-4c29-b519-7f694b1c039e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.3(g)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ba0f90da-c264-4c29-b519-7f694b1c039e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 343(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "643da01c-3e56-4c5c-8e12-8d084794ec37",
+      "tag_dimension": "product_type",
+      "tag_value": "weight_management",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "643da01c-3e56-4c5c-8e12-8d084794ec37",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e14723cf-5f08-4453-8274-8fc362cb6253",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e14723cf-5f08-4453-8274-8fc362cb6253",
+      "tag_dimension": "facility_type",
+      "tag_value": "Dietary supplement manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a7b2487d-7820-482a-9897-9e89679ef270",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a7b2487d-7820-482a-9897-9e89679ef270",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a7b2487d-7820-482a-9897-9e89679ef270",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "product_type",
+      "tag_value": "nut_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "product_type",
+      "tag_value": "plant_protein_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "facility_type",
+      "tag_value": "repacker",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "facility_type",
+      "tag_value": "warehouse",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 123",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54d0748b-24cd-4172-ac74-5b338aa5c5bc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "30b6b0c8-90b2-4167-83e2-1a56728ecb6b",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "gelatins_puddings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "sweet_sauces_toppings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "hard_candy_cough_drops",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "jams_jellies",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "sports_performance",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "protein_powders",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "beauty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "42860ea6-0fb7-42bd-a1fa-8fe7a9e2a95b",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "tag_dimension": "product_type",
+      "tag_value": "gelatins_puddings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8b50a13b-9221-4258-9bc6-e3133bb1fae3",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "0caced00-fee6-448b-a464-0a3a88ced9fb",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0caced00-fee6-448b-a464-0a3a88ced9fb",
+      "tag_dimension": "product_type",
+      "tag_value": "nut_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d20760c-c23a-4f50-8db2-c1b9866f1dba",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d20760c-c23a-4f50-8db2-c1b9866f1dba",
+      "tag_dimension": "facility_type",
+      "tag_value": "candy_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f5965c5-b7fd-4c7e-a8cb-89877fdc190f",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1d983df8-7c9c-4e7d-9815-873e5d92aaa1",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1d983df8-7c9c-4e7d-9815-873e5d92aaa1",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa322136-9263-461e-ad81-d391f3cca87b",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "aa322136-9263-461e-ad81-d391f3cca87b",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5aefd427-6fb0-4740-95be-4688a02da8cf",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3e131a0d-cc7b-495d-a12f-51f18348d274",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3e131a0d-cc7b-495d-a12f-51f18348d274",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d7c6a4e7-e7ba-46f9-b40a-6d782e7af6d6",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "697392b4-1a89-48ee-b1c2-e4e71466597f",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "697392b4-1a89-48ee-b1c2-e4e71466597f",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a948e2f3-b291-40d8-8964-457806a7bb51",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "41d4b0b5-b26a-4a1d-b018-b3c14c1b6f8c",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "41d4b0b5-b26a-4a1d-b018-b3c14c1b6f8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1d53bd55-661d-4ddf-acae-b9c5c045dfb8",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45bc2f4d-c1d9-4b76-9a3c-d7717601b06a",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3a21de9b-216e-4bbf-aedb-bf62e05302d0",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8a59c967-a06e-4da8-ab15-8665ab9f4681",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8a59c967-a06e-4da8-ab15-8665ab9f4681",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "977698ae-71a9-4c66-9b07-9075ffcb8fd2",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101 - Food Labeling",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+      "signal_source": "direct"
+    }
+  ]
+}

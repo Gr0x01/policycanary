@@ -1,0 +1,587 @@
+{
+  "company_name": "Wells Enterprises, Inc.",
+  "total_actions": 21,
+  "action_types": {
+    "recall": 21
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-05-21",
+    "latest": "2025-05-21"
+  },
+  "items": [
+    {
+      "id": "2facbcd5-607d-45d5-9400-f2e01a4162b7",
+      "title": "Planet Smoothie ZSA Vanilla Flavored Fat Free Frozen Yogurt, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640005567, Item: 889334",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "eaabed7c-8e72-4a05-bf30-6ad86e578d70",
+      "title": "Mocha Almond Fudge Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640050420, Item: 19702",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1eba6379-7c2c-4f6e-a761-7e50458bf1ab",
+      "title": "Glenview Farms Vanilla Flavored Ice Cream, 3 GAL, DISTRIBUTED BY US FOODS, INC, Rosemont, IL 60018, UPC: 50758108118398, Item: 785848",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "92024a65-57f4-4332-8b59-d9cbf23d41d8",
+      "title": "Glenview Farms Artificially Flavored French Vanilla Ice Cream, 3 GAL, DISTRIBUTED BY US FOODS, INC, Rosemont, IL 60018, UPC: 50758108392668, Item: 785887",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c77a1479-8ac5-4044-8cc1-4a5063c67733",
+      "title": "Vanilla Frozen Yogurt, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 00070640022144, Item: 1352604",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "984a29bd-2eb8-4d45-bd7a-07459333194d",
+      "title": "BIPC Flavored Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640008025, Item: 934085",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bb0f3394-8de7-442a-9e64-cbfcbd21c8c4",
+      "title": "Country Rich Vanilla Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640600052, Item: 102010",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "54a7fa82-895c-42df-9934-051e666c907c",
+      "title": "Peanut Butter 'N Fudge Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640050574, Item: 33429",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "52e1b92a-e29c-4bd9-9a18-9d44d0af1398",
+      "title": "Johnny Rockets Vanilla Flavored Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640006564, Item: 902486",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8b67b967-7b9f-4702-8fd5-a7ec1acf1de0",
+      "title": "Quick Blend Vanilla Flavored Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640050604, Item: 773034",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "087c3d00-cced-4936-8c2f-1c64c32ac87a",
+      "title": "Vanilla Flavored Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640022250, Item: 1355358",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6b6f63ba-41a5-4860-838d-57c7c2bd4c41",
+      "title": "Ellington Farms Vanilla Flavored Ice Cream, 3 GAL, DISTRIBUTED BY Ben E. Keith Foods, Fort Worth, TX 76101 UPC: 046045065833, Item: 1144464",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d9b9e748-3b09-45ba-9e7e-d7aff4a4deb5",
+      "title": "Artificially Flavored French Vanilla Ice Cream, 3 GAL, DISTRIBUTED BY SYSCO CORPORATION, HOUSTON, TX 77077UPC: 00074865257275, Item: 1026416",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "be5a6c06-9697-40f1-9d50-ee041cb87058",
+      "title": "Glenview Farms Chocolate Ice Cream, 3 GAL, DISTRIBUTED BY US FOODS, INC, Rosemont, IL 60018, UPC: 50758108118404, Item: 785855",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c37b09c0-da97-427f-bfeb-de414713bb97",
+      "title": "GFGB 12% Vanilla Flavored Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640018451, Item: 1435313",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9fc73879-1398-4cff-86c2-801ccaee65bf",
+      "title": "GFGB Vanilla Bean Flavored Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640000272, Item: 669740",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a507e0df-91d8-4e0d-9e3c-4dd9bff6f2fb",
+      "title": "Scooper Hero Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640050642, Item: 487054",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "10a928e1-edab-4af2-a393-10e695d401e6",
+      "title": "Rocky Road Flavored Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640050314, Item: 19695",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cc2728e3-0833-4e01-b9ee-26f7e3257295",
+      "title": "Gordon Choice Vanilla Flavored Ice Cream, 3 GAL, FOR DISTRIBUTION EXCLUSIVELY BY GORDON FOOD SERVICE, WYOMING, MI 49509, UPC: 00093901820730, Item: 1367499",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c0d934b0-f7dd-4245-b7eb-6bfe5e6359d9",
+      "title": "Cotton Candy Flavored Ice Cream, 3 GAL, Wells Enterprises, INC dba Wells Dairy, Inc Le Mars, IA 51031, UPC: 070640050482, Item: 662429",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "86f02d06-4dfe-4bc4-8de1-1b356951cb38",
+      "title": "Vanilla Bean Ice Cream with Madagascar vanilla, 3 GAL, DISTRIBUTED BY US FOODS, INC, Rosemont, IL 60018, UPC: 50758108658085, Item: 945313",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Wells Enterprises, Inc.",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "23463217-27a2-46c8-b972-7a0ef03c329f",
+      "item_id": "087c3d00-cced-4936-8c2f-1c64c32ac87a",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling Vanilla Flavored Ice Cream (3 GAL, UPC: 070640022250, Item: 1355358) due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "36c5f712-c837-4ae6-8791-3790fa72a169",
+      "item_id": "10a928e1-edab-4af2-a393-10e695d401e6",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling Rocky Road Flavored Ice Cream (3 GAL, UPC: 070640050314, Item: 19695) due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC",
+        "Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "11860a09-59a8-46ca-b152-e07a436c3484",
+      "item_id": "1eba6379-7c2c-4f6e-a761-7e50458bf1ab",
+      "summary": "Glenview Farms Vanilla Flavored Ice Cream is being recalled due to the potential presence of foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "US FOODS, INC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "692e6414-615e-46e4-a358-7dc2972da774",
+      "item_id": "2facbcd5-607d-45d5-9400-f2e01a4162b7",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling Planet Smoothie ZSA Vanilla Flavored Fat Free Frozen Yogurt due to the potential presence of foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "93aa3a46-9111-4e33-abfb-440d98095640",
+      "item_id": "52e1b92a-e29c-4bd9-9a18-9d44d0af1398",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc has recalled Johnny Rockets Vanilla Flavored Ice Cream (3 GAL, UPC: 070640006564, Item: 902486) due to potential contamination with foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a0c653c4-da6d-4379-b711-29f8c5ae763f",
+      "item_id": "54a7fa82-895c-42df-9934-051e666c907c",
+      "summary": "Wells Enterprises, INC is recalling Peanut Butter 'N Fudge Ice Cream (3 GAL, UPC: 070640050574, Item: 33429) due to potential contamination with foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "651e1d13-b370-45f7-8239-a4f8f8a4400e",
+      "item_id": "6b6f63ba-41a5-4860-838d-57c7c2bd4c41",
+      "summary": "Ellington Farms Vanilla Flavored Ice Cream (3 GAL) distributed by Ben E. Keith Foods has been recalled due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Ellington Farms",
+        "Ben E. Keith Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "60c9fd97-f740-404d-a4e6-f88f5efdeab1",
+      "item_id": "86f02d06-4dfe-4bc4-8de1-1b356951cb38",
+      "summary": "US FOODS, INC is recalling Vanilla Bean Ice Cream due to potential foreign material (plastic) contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "US FOODS, INC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c4f23099-a1f5-4bc5-bea7-7469b82eb45e",
+      "item_id": "8b67b967-7b9f-4702-8fd5-a7ec1acf1de0",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling its Quick Blend Vanilla Flavored Ice Cream (3 GAL) due to the potential presence of foreign material, specifically plastic.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e5143953-cea7-4b8e-a5ca-9dc6fa9e9e63",
+      "item_id": "92024a65-57f4-4332-8b59-d9cbf23d41d8",
+      "summary": "US Foods, Inc. is recalling Glenview Farms Artificially Flavored French Vanilla Ice Cream due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "US FOODS, INC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cd02f678-f4f2-46d8-9997-2fa1951398b3",
+      "item_id": "984a29bd-2eb8-4d45-bd7a-07459333194d",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling BIPC Flavored Ice Cream, 3 GAL, due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "280dfd39-aa16-4d58-912c-14d800e1aaf1",
+      "item_id": "9fc73879-1398-4cff-86c2-801ccaee65bf",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling GFGB Vanilla Bean Flavored Ice Cream, 3 GAL, due to the potential presence of foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5b778d59-9d3c-4301-9f77-c9162f630759",
+      "item_id": "a507e0df-91d8-4e0d-9e3c-4dd9bff6f2fb",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling its Scooper Hero Ice Cream (3 GAL) due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1d7fbe90-d3e9-49e0-93a7-c794d1ce0ef2",
+      "item_id": "bb0f3394-8de7-442a-9e64-cbfcbd21c8c4",
+      "summary": "Wells Enterprises, INC is recalling Country Rich Vanilla Ice Cream (3 GAL) due to potential contamination with foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cd76251e-ebf3-4009-b7a3-0ca80b7bc9cd",
+      "item_id": "be5a6c06-9697-40f1-9d50-ee041cb87058",
+      "summary": "Glenview Farms Chocolate Ice Cream, 3 GAL, distributed by US FOODS, INC, is being recalled due to the potential presence of foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "US FOODS, INC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dfd8bca3-5a03-4376-8e54-454024845b63",
+      "item_id": "c0d934b0-f7dd-4245-b7eb-6bfe5e6359d9",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling Cotton Candy Flavored Ice Cream, 3 GAL, due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7f7ee389-6a62-47bf-a76b-17838e062881",
+      "item_id": "c37b09c0-da97-427f-bfeb-de414713bb97",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling its GFGB 12% Vanilla Flavored Ice Cream (3 GAL, UPC: 070640018451, Item: 1435313) due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "07048dcd-0d48-43de-8507-75f490e0dad3",
+      "item_id": "c77a1479-8ac5-4044-8cc1-4a5063c67733",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling 3-gallon containers of Vanilla Frozen Yogurt due to potential contamination with foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ca167f4a-0d2d-414c-808d-624b56cc119c",
+      "item_id": "cc2728e3-0833-4e01-b9ee-26f7e3257295",
+      "summary": "Gordon Food Service is recalling Gordon Choice Vanilla Flavored Ice Cream due to potential foreign material contamination (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "Gordon Food Service"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1bae816a-ddf3-4492-aee3-819aa88b4c19",
+      "item_id": "d9b9e748-3b09-45ba-9e7e-d7aff4a4deb5",
+      "summary": "Sysco Corporation is recalling Artificially Flavored French Vanilla Ice Cream, 3 GAL, due to the potential presence of foreign material (plastic) in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "SYSCO CORPORATION"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b6d5e8e6-b4b5-4e16-8475-fd30d5f3bb15",
+      "item_id": "eaabed7c-8e72-4a05-bf30-6ad86e578d70",
+      "summary": "Wells Enterprises, INC dba Wells Dairy, Inc is recalling 3 GAL containers of Mocha Almond Fudge Ice Cream due to the potential presence of foreign material (plastic).",
+      "key_regulations": [],
+      "key_entities": [
+        "Wells Enterprises, INC dba Wells Dairy, Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "087c3d00-cced-4936-8c2f-1c64c32ac87a",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "10a928e1-edab-4af2-a393-10e695d401e6",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1eba6379-7c2c-4f6e-a761-7e50458bf1ab",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2facbcd5-607d-45d5-9400-f2e01a4162b7",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "52e1b92a-e29c-4bd9-9a18-9d44d0af1398",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54a7fa82-895c-42df-9934-051e666c907c",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6b6f63ba-41a5-4860-838d-57c7c2bd4c41",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "86f02d06-4dfe-4bc4-8de1-1b356951cb38",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8b67b967-7b9f-4702-8fd5-a7ec1acf1de0",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "92024a65-57f4-4332-8b59-d9cbf23d41d8",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "984a29bd-2eb8-4d45-bd7a-07459333194d",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fc73879-1398-4cff-86c2-801ccaee65bf",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a507e0df-91d8-4e0d-9e3c-4dd9bff6f2fb",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bb0f3394-8de7-442a-9e64-cbfcbd21c8c4",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "be5a6c06-9697-40f1-9d50-ee041cb87058",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c0d934b0-f7dd-4245-b7eb-6bfe5e6359d9",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c37b09c0-da97-427f-bfeb-de414713bb97",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c77a1479-8ac5-4044-8cc1-4a5063c67733",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cc2728e3-0833-4e01-b9ee-26f7e3257295",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d9b9e748-3b09-45ba-9e7e-d7aff4a4deb5",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "eaabed7c-8e72-4a05-bf30-6ad86e578d70",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    }
+  ]
+}

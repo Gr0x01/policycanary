@@ -1,0 +1,290 @@
+{
+  "company_name": "Chicken of the Sea; Thai Union",
+  "total_actions": 10,
+  "action_types": {
+    "recall": 10
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-03-19",
+    "latest": "2025-03-19"
+  },
+  "items": [
+    {
+      "id": "9f4f461a-70a6-4315-b60e-0cb8654ec636",
+      "title": "Genova branded Yellowfin Tuna in Extra Virgin Olive Oil and Sea Salt; NET WT. 5 OZ (142g) RD WT. 4 OZ (113g); Distributed by Tri-Union Seafoods, LLC.; El Sugundo, CA 90245 U.S.A.  UPC# 48000 13275",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9a4ac196-e3a3-454d-ad15-1ec68ddcaec4",
+      "title": "Trader Joe's branded Solid Light Yellowfin Tuna in olive oil, Pole & Line Caught; NET WT. 5 OZ (142g) DR WT. 4 OZ (113g); Dist & Sold Exclusively By: Trader Joe's, Monrovia, CA 91816;  UPC# 51403",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e306c1c9-7877-4999-be16-9213b4f98fd8",
+      "title": "Genova branded Yellowfin Tuna; Genova; In Olive Oil; Wild Caught; NET WT. 5 OZ (142g) RD WT. 4 OZ (113g); Distributed by Tri-Union Seafoods, LLC.; El Sugundo, CA 90245 U.S.A.  UPC# 48000 73265 UPC# 48",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "813a167a-81a3-4867-9cd4-e252b5e27126",
+      "title": "Trader Joe's branded Solid White Albacore Tuna in water, Low sodium; NET WT. 5 OZ (142g) DR WT. 4 OZ (113g); Dist & Sold Exclusively By: Trader Joe's, Monrovia, CA 91816;  UPC# 95836",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "70737424-722b-4fa3-b877-2e25800d8cb2",
+      "title": "Genova branded Solid white Tuna; In Olive Oil; Wild Caught; NET WT. 5 OZ (142g) RD WT. 4 OZ (113g); Distributed by Tri-Union Seafoods, LLC.; El Sugundo, CA 90245 U.S.A. UPC# 48000 00215,",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d0f445e5-8f1e-4abe-95cb-569944d9e8b6",
+      "title": "HEB branded Solid White Albacore Tuna in water; Wild Caught; NET WT. 5 OZ (142g) DR WT. 4 OZ (113g); Made with Pride and Care for H-E-B, San Antonio, TX 78204  UPC# 41220 14184 (can); UPC# 41220 43345",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8443a272-c78f-4d6c-afcc-0e09ed88f639",
+      "title": "Trader Joe's branded Solid White Albacore Tuna in Water, salt added; NET WT. 5 OZ (142g) DR WT. 4 OZ (113g); Dist & Sold Exclusively By: Trader Joe's, Monrovia, CA 91816;  UPC# 0099285",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5e4e6b43-c99b-4f7e-b800-9198b10be255",
+      "title": "Trader Joe's branded Solid White Albacore Tuna in olive oil; NET WT. 5 OZ (142g) DR WT. 4 OZ (113g); Dist & Sold Exclusively By: Trader Joe's, Monrovia, CA 91816;  UPC# 99287",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c5ff53cf-5fb8-4dd8-9d94-b75717dc89e2",
+      "title": "Van Camp's  branded Solid Light Yellowfin in Vegetable oil;  NET WT. 5 OZ (142g) DR WT. 4 OZ (113g); Distributed by: Chicken of The Sea Intl.; El Segundo, CA 90245 U.S.A. UPC# 48000 25015 UPC# 48000 7",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2530f5a2-1700-4676-837e-a77a327ad102",
+      "title": "Trader Joe's branded Solid White Albacore Tuna in Water, no salt added; NET WT. 5 OZ (142g) DR WT. 4 OZ (113g); Dist & Sold Exclusively By: Trader Joe's, Monrovia, CA 91816;  UPC# 0099 2848",
+      "item_type": "recall",
+      "published_date": "2025-03-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Chicken of the Sea; Thai Union",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "d27f7f1c-fe0c-43a7-bad7-373ed0cac1c8",
+      "item_id": "2530f5a2-1700-4676-837e-a77a327ad102",
+      "summary": "Trader Joe's has issued a recall for its Solid White Albacore Tuna in Water due to improperly secured easy-pull lids, which could lead to the product becoming contaminated with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "Trader Joe's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "681aa335-7949-483c-88dd-faf224556eff",
+      "item_id": "5e4e6b43-c99b-4f7e-b800-9198b10be255",
+      "summary": "Trader Joe's is recalling its Solid White Albacore Tuna in olive oil due to an improperly secured easy-pull lid, which could lead to contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "Trader Joe's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "208e46db-c90c-46e6-a02d-62992872e6c3",
+      "item_id": "70737424-722b-4fa3-b877-2e25800d8cb2",
+      "summary": "Tri-Union Seafoods, LLC. is recalling Genova branded Solid white Tuna in Olive Oil due to an improperly secured easy-pull lid, which could lead to the product becoming adulterated with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "Tri-Union Seafoods, LLC.",
+        "Genova"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ec753065-07b4-4c58-8987-5b92d35f03f9",
+      "item_id": "813a167a-81a3-4867-9cd4-e252b5e27126",
+      "summary": "Trader Joe's is recalling its Solid White Albacore Tuna in water due to improperly secured lids that may lead to adulteration with Clostridium botulinum, posing a serious health risk.",
+      "key_regulations": [],
+      "key_entities": [
+        "Trader Joe's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cf56bcb7-d564-4f34-a537-fc7392ef4435",
+      "item_id": "8443a272-c78f-4d6c-afcc-0e09ed88f639",
+      "summary": "Trader Joe's has recalled its Solid White Albacore Tuna in Water due to a potential packaging defect (improperly secured easy-pull lid) that could lead to contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "Trader Joe's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "65d29ccb-dea1-4fe1-95c4-9d4920779ef8",
+      "item_id": "9a4ac196-e3a3-454d-ad15-1ec68ddcaec4",
+      "summary": "Trader Joe's is recalling its Solid Light Yellowfin Tuna in olive oil due to a defective easy-pull lid that could lead to contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "Trader Joe's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0683857a-b5b2-4ba5-aeae-ce3999d45e5e",
+      "item_id": "9f4f461a-70a6-4315-b60e-0cb8654ec636",
+      "summary": "Tri-Union Seafoods, LLC. is recalling Genova branded Yellowfin Tuna in Extra Virgin Olive Oil and Sea Salt (NET WT. 5 OZ, UPC# 48000 13275) because an improperly secured easy-pull lid may cause the product to become adulterated with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "Tri-Union Seafoods, LLC."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "86f796cd-9078-4c6a-8e3f-9936f5861445",
+      "item_id": "c5ff53cf-5fb8-4dd8-9d94-b75717dc89e2",
+      "summary": "Van Camp's branded Solid Light Yellowfin in Vegetable oil is being recalled due to an improperly secured easy-pull lid, which could lead to adulteration with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "Chicken of The Sea Intl."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "adb04b5f-b1cc-4cae-897a-b0958389cf0d",
+      "item_id": "d0f445e5-8f1e-4abe-95cb-569944d9e8b6",
+      "summary": "HEB is recalling its Solid White Albacore Tuna in water and Chunk White Albacore Tuna in water products due to improperly secured easy-pull lids, which could lead to contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "HEB"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "054d5ead-7364-4e06-a31f-7ace9a639c38",
+      "item_id": "e306c1c9-7877-4999-be16-9213b4f98fd8",
+      "summary": "Tri-Union Seafoods, LLC. is recalling Genova branded Yellowfin Tuna in Olive Oil due to improperly secured easy-pull lids that may cause the product to become adulterated with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [
+        "Tri-Union Seafoods, LLC.",
+        "Genova"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "2530f5a2-1700-4676-837e-a77a327ad102",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5e4e6b43-c99b-4f7e-b800-9198b10be255",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "70737424-722b-4fa3-b877-2e25800d8cb2",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "813a167a-81a3-4867-9cd4-e252b5e27126",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8443a272-c78f-4d6c-afcc-0e09ed88f639",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9a4ac196-e3a3-454d-ad15-1ec68ddcaec4",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9f4f461a-70a6-4315-b60e-0cb8654ec636",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c5ff53cf-5fb8-4dd8-9d94-b75717dc89e2",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0f445e5-8f1e-4abe-95cb-569944d9e8b6",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e306c1c9-7877-4999-be16-9213b4f98fd8",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    }
+  ]
+}

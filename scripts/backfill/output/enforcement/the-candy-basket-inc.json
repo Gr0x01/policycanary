@@ -1,0 +1,300 @@
+{
+  "company_name": "The Candy Basket Inc",
+  "total_actions": 8,
+  "action_types": {
+    "recall": 8
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-02-19",
+    "latest": "2025-02-19"
+  },
+  "items": [
+    {
+      "id": "ee4d44dc-503d-45a6-914b-a52159c4f2c3",
+      "title": "Lemon Jelly Sticks WHITE, item number CB750-W, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail.  Product was sold out of bulk chocolate cases from",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "75e5a764-d80f-49b9-912f-6aef5f8ac35b",
+      "title": "Orange Jelly Sticks DARK, item number CB741-D, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail. Product was sold out of bulk chocolate cases from ",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0160be68-7057-4932-a641-b4f9187b7e6b",
+      "title": "Marionberry Jelly Sticks DARK, item number CB745-D, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail.  Product was sold out of bulk chocolate cases",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "32116658-c7d3-4641-806e-1ed84137a9e9",
+      "title": "Lemon Jelly Sticks DARK, item number CB750-D, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail. Product was sold out of bulk chocolate cases from c",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ce1d89a2-c1b0-417e-b905-4a7ac0595e88",
+      "title": "Orange Jelly Sticks MILK, item number CB741-M, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail. Product was sold out of bulk chocolate cases from ",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "325d25d3-9c18-41c9-8ab8-1ed8cb1e115b",
+      "title": "Marionberry Jelly Sticks MILK, item number CB745-M, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail.  Product was sold out of bulk chocolate cases",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2d20760c-c23a-4f50-8db2-c1b9866f1dba",
+      "title": "Raspberry Jelly Sticks DARK, Item Number CB747-D, packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail.  Product was sold out of bulk chocolate cases from",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "title": "Raspberry Jelly Sticks MILK, item number CB747-M, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail.  Product was sold out of bulk chocolate cases f",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "8e3fb787-5c61-4b70-b685-ea6422ab9ef8",
+      "item_id": "0160be68-7057-4932-a641-b4f9187b7e6b",
+      "summary": "The Candy Basket, Inc. is recalling Marionberry Jelly Sticks DARK (item number CB745-D) sold in bulk 4lb. boxes due to undeclared Red #3, Blue #1, Potassium Sorbate, and Propylene Glycol. The product was sold to consumers from bulk chocolate cases without proper labeling.",
+      "key_regulations": [],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5d333e88-f447-4b26-9f69-8d498ee058a5",
+      "item_id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "summary": "The Candy Basket, Inc. is recalling Raspberry Jelly Sticks MILK (item CB747-M) sold in bulk 4lbs. boxes due to undeclared Red #40 and Potassium Sorbate. The product was sold to consumers from bulk chocolate cases in candy stores without proper labeling.",
+      "key_regulations": [],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a3e66183-fe0a-41fa-b4c5-780d5d432620",
+      "item_id": "2d20760c-c23a-4f50-8db2-c1b9866f1dba",
+      "summary": "The Candy Basket, Inc. is recalling Raspberry Jelly Sticks DARK (Item Number CB747-D) due to undeclared Red #40 and Potassium Sorbate. The bulk product was sold from candy stores to consumers without proper labeling.",
+      "key_regulations": [],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a31927aa-d90b-41cc-b99d-169abffa42b6",
+      "item_id": "32116658-c7d3-4641-806e-1ed84137a9e9",
+      "summary": "The Candy Basket, Inc. is recalling Lemon Jelly Sticks DARK (item number CB750-D) because they contain undeclared Yellow #5 and Potassium Sorbate. The product was sold in bulk from candy stores without proper labeling for retail consumers.",
+      "key_regulations": [],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e080cf30-9ed6-47e8-a496-988ac6d8a290",
+      "item_id": "325d25d3-9c18-41c9-8ab8-1ed8cb1e115b",
+      "summary": "The Candy Basket, Inc. is recalling Marionberry Jelly Sticks MILK (item CB745-M) sold in bulk 4lbs boxes from candy stores due to undeclared Red #3, Blue #1, Potassium Sorbate, and Propylene Glycol. The product was sold to consumers without proper labeling.",
+      "key_regulations": [
+        "21 CFR Part 101"
+      ],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "078e2369-300f-4a85-89a4-b80ae2323db1",
+      "item_id": "75e5a764-d80f-49b9-912f-6aef5f8ac35b",
+      "summary": "The Candy Basket, Inc. is recalling Orange Jelly Sticks DARK (item number CB741-D) due to undeclared Yellow #6 and Sodium Benzoate. The product was sold in bulk to candy stores and then to consumers without proper labeling, leading to misbranding.",
+      "key_regulations": [
+        "21 U.S.C. 343"
+      ],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7e3a6a1b-de9f-48e4-9ea2-9c910d6a5be8",
+      "item_id": "ce1d89a2-c1b0-417e-b905-4a7ac0595e88",
+      "summary": "The Candy Basket, Inc. is recalling Orange Jelly Sticks MILK because the product contains undeclared Yellow #6 and Sodium Benzoate. The product was sold in bulk without proper labeling for consumers.",
+      "key_regulations": [
+        "21 CFR 101.4"
+      ],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a00da16c-03bd-4bef-afb5-7ec859db7d70",
+      "item_id": "ee4d44dc-503d-45a6-914b-a52159c4f2c3",
+      "summary": "The Candy Basket, Inc. is recalling Lemon Jelly Sticks WHITE (item number CB750-W) because the product contains undeclared Yellow #5 and Potassium Sorbate. The product was sold in bulk 4lbs. boxes from candy stores to consumers without labeling.",
+      "key_regulations": [],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "0160be68-7057-4932-a641-b4f9187b7e6b",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "209ccc3d-1019-423a-b682-b5a07cc3fa16",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d20760c-c23a-4f50-8db2-c1b9866f1dba",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d20760c-c23a-4f50-8db2-c1b9866f1dba",
+      "tag_dimension": "facility_type",
+      "tag_value": "candy_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "32116658-c7d3-4641-806e-1ed84137a9e9",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "325d25d3-9c18-41c9-8ab8-1ed8cb1e115b",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "325d25d3-9c18-41c9-8ab8-1ed8cb1e115b",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "75e5a764-d80f-49b9-912f-6aef5f8ac35b",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "75e5a764-d80f-49b9-912f-6aef5f8ac35b",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "75e5a764-d80f-49b9-912f-6aef5f8ac35b",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act (FD&C Act) - Misbranding",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ce1d89a2-c1b0-417e-b905-4a7ac0595e88",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ce1d89a2-c1b0-417e-b905-4a7ac0595e88",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ce1d89a2-c1b0-417e-b905-4a7ac0595e88",
+      "tag_dimension": "facility_type",
+      "tag_value": "candy manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ce1d89a2-c1b0-417e-b905-4a7ac0595e88",
+      "tag_dimension": "claims",
+      "tag_value": "undeclared ingredients",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ce1d89a2-c1b0-417e-b905-4a7ac0595e88",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee4d44dc-503d-45a6-914b-a52159c4f2c3",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    }
+  ]
+}

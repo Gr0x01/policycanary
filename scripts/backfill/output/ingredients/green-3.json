@@ -1,0 +1,102 @@
+{
+  "substance": {
+    "id": "2fe1391a-7e85-430b-957b-c61ce05f35be",
+    "canonical_name": "PIGMENT GREEN 36",
+    "unii": "2O254H06E2",
+    "matched_names": [
+      "PIGMENT GREEN 36",
+      "C.I. PIGMENT GREEN 36",
+      "C.I. PIGMENT GREEN 38",
+      "PIGMENT GREEN 36"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "2fe1391a-7e85-430b-957b-c61ce05f35be",
+      "canonical_name": "PIGMENT GREEN 36",
+      "unii": "2O254H06E2",
+      "matched_names": [
+        "PIGMENT GREEN 36",
+        "C.I. PIGMENT GREEN 36",
+        "C.I. PIGMENT GREEN 38",
+        "PIGMENT GREEN 36"
+      ]
+    },
+    {
+      "id": "291757a8-83b4-48d3-afe3-50facc613495",
+      "canonical_name": "DILINOLEIC ACID/PROPANEDIOL COPOLYMER",
+      "unii": "VI8BUP90UI",
+      "matched_names": [
+        "VISCOPLAST GREEN 3000"
+      ]
+    },
+    {
+      "id": "9bb5b786-538d-424d-98d5-5975bc786761",
+      "canonical_name": "CHLOROPHYLLIN COPPER COMPLEX",
+      "unii": null,
+      "matched_names": [
+        "NATURAL GREEN 3"
+      ]
+    },
+    {
+      "id": "b8c62413-d7e3-4270-91ab-f1a034c9971b",
+      "canonical_name": "FD&C GREEN NO. 3",
+      "unii": "3P3ONR6O1S",
+      "matched_names": [
+        "C.I. FOOD GREEN 3"
+      ]
+    },
+    {
+      "id": "d824acbd-62f7-4970-baa4-dce6c4c8998b",
+      "canonical_name": "D&C GREEN NO. 6",
+      "unii": "4QP5U84YF7",
+      "matched_names": [
+        "SOLVENT GREEN 3"
+      ]
+    },
+    {
+      "id": "e655629b-3bf4-4d51-b569-e7cfa7a07b56",
+      "canonical_name": "Guinea Green B",
+      "unii": "4L2574620F",
+      "matched_names": [
+        "C.I. ACID GREEN 3",
+        "C.I. ACID GREEN 3 [HSDB]",
+        "C.I. ACID GREEN 3, SODIUM SALT"
+      ]
+    }
+  ],
+  "item_count": 1,
+  "items": [
+    {
+      "id": "dd9307bb-7873-46c4-8867-23c91fbf33b0",
+      "title": "1) Paw Patrol Heart-Shaped Gummy Candies, Mixed Fruit, Net Wt. 7 oz (200g), packaged in a cardboard box with heart-shaped top, UPC 805219643846, Distributed by Bendon, Inc.  2) Mickey Mouse Heart-Shap",
+      "item_type": "recall",
+      "published_date": "2026-01-07",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Bendon Publishing",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "2b9a1539-331f-4809-894d-4cc9b5ccdc0e",
+      "item_id": "dd9307bb-7873-46c4-8867-23c91fbf33b0",
+      "summary": "Bendon, Inc. is recalling various heart-shaped and multipack gummy candies, including Paw Patrol, Mickey Mouse, Stitch, SpongeBob Squarepants, and Toy Story brands, due to the presence of an unapproved color additive, chlorophyllin copper complex.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bendon, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "dd9307bb-7873-46c4-8867-23c91fbf33b0",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "company_name": "Rovira Biscuit Corporation",
+  "total_actions": 6,
+  "action_types": {
+    "recall": 6
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2026-01-14",
+    "latest": "2026-01-14"
+  },
+  "items": [
+    {
+      "id": "697392b4-1a89-48ee-b1c2-e4e71466597f",
+      "title": "Vanilla Treats Crackers, Rovira, Net Wt. 31 oz (878.83 g) cans, 6/31oz cans per case.  Mini Vanilla Treats, Rovira, 12 to go packs (0.8oz (22.7g) each), Net Wt 9.6 oz (272g), 6/9.6oz boxes per case. U",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d7c6a4e7-e7ba-46f9-b40a-6d782e7af6d6",
+      "title": "Vanilla Econo, Galletas de Vainilla, 8 paquets per Net Wt. 9.6 oz box (272 g), 6 box per case. UPC 072981005022",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5aefd427-6fb0-4740-95be-4688a02da8cf",
+      "title": "Tempting Crackers Tray, Rovira, 3 foil wrap trays per Net Wt. 8oz box (Net Wt 5 oz trays), 6 box per case. UPC 072981003127  Tempting Crackers, Rovira, 12 packets (Net Wt. 1.0 oz (30 g) bag) per box, ",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3e131a0d-cc7b-495d-a12f-51f18348d274",
+      "title": "Snack Crackers 100to en boca (ciento en boca) Rovira, Net Wt. 1.5 oz, 12 pack Snack Crackers to go, 12 packets (Net Wt 1.5 oz bag) per box, 12/ 1.5 oz packets box, 6 box per case. UPC 072981023064  10",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "title": "Tita Crackers Rovira, 3 (1/2 oz (15g) Foil Fresh Packets Net Wt.8 oz (226.8 g) boxes, 6/8oz boxes per case. UPC 072981005121  Tita Crackers Rovira, Net Wt. 24 oz (680 g) boxes, 6/24 oz boxes per case.",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "title": "Vainilla Crackers, Great Value (Galletas Vainilla)8 Foil Packets (17 g each), Net Wt.9.6 oz (272 g) box, 6 boxes per case. UPC 072981005022",
+      "item_type": "recall",
+      "published_date": "2026-01-14",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Rovira Biscuit Corporation",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "67bcffad-aca7-4fb6-be9e-b86beeb31921",
+      "item_id": "3e131a0d-cc7b-495d-a12f-51f18348d274",
+      "summary": "Rovira is recalling Snack Crackers (100to en boca) due to the undeclared presence of color additives FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Rovira"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7ebc9bbf-50b0-47c2-8d06-216111199746",
+      "item_id": "5aefd427-6fb0-4740-95be-4688a02da8cf",
+      "summary": "Rovira brand 'Tempting Crackers Tray' and 'Tempting Crackers' are being recalled due to the undeclared presence of FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Rovira"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7ff7fc72-d41e-4d1d-afb8-30f834c6763a",
+      "item_id": "697392b4-1a89-48ee-b1c2-e4e71466597f",
+      "summary": "Rovira is recalling Vanilla Treats Crackers and Mini Vanilla Treats due to the presence of undeclared FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [
+        "Rovira"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c8d6bbb1-837e-480d-bf76-e88b5b811dd1",
+      "item_id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "summary": "Tita Crackers Rovira are being recalled due to the undeclared presence of color additives FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [
+        "21 CFR Part 101",
+        "21 CFR Part 70"
+      ],
+      "key_entities": [
+        "Rovira"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "71cca53b-6f02-4855-87e8-c2b5278780c5",
+      "item_id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "summary": "Vainilla Crackers, Great Value (Galletas Vainilla) are being recalled due to the undeclared presence of color additives FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [
+        "21 CFR 101"
+      ],
+      "key_entities": [
+        "Great Value"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5b3ea7e7-df75-42ae-abe6-913a40680b30",
+      "item_id": "d7c6a4e7-e7ba-46f9-b40a-6d782e7af6d6",
+      "summary": "Vanilla Econo is recalling its Galletas de Vainilla (Vanilla Cookies) due to the undeclared presence of FD&C Yellow #6 and FD&C Red 40.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "3e131a0d-cc7b-495d-a12f-51f18348d274",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3e131a0d-cc7b-495d-a12f-51f18348d274",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5aefd427-6fb0-4740-95be-4688a02da8cf",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "697392b4-1a89-48ee-b1c2-e4e71466597f",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "697392b4-1a89-48ee-b1c2-e4e71466597f",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80af7f07-cff0-4480-806a-e5b998f8bb1d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf9f28f2-6c5d-413b-bcb3-208f602c98ca",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d7c6a4e7-e7ba-46f9-b40a-6d782e7af6d6",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    }
+  ]
+}

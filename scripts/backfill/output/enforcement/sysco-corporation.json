@@ -1,0 +1,332 @@
+{
+  "company_name": "Sysco Corporation",
+  "total_actions": 10,
+  "action_types": {
+    "recall": 10
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2024-12-18",
+    "latest": "2025-06-18"
+  },
+  "items": [
+    {
+      "id": "627b4b05-4523-4490-beb4-4a2c6a9f1e65",
+      "title": "5185\t2/7.125#\tEAST COAST FRESH\tAUTHENTIC GREEK SALAD (4070 2/7.125#\tALL LOT CODES  HKSAL138\t1/8 OZ. EA\tJACK AND OLIVE\tSalad- House- JO\tALL LOT CODES HKSAL176\t6/8 OZ. CS\tCREATED FRESH\tSalad- House- 6/8",
+      "item_type": "recall",
+      "published_date": "2025-06-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c8e0e37c-a1cd-4998-ab4e-2cf00a63ddd7",
+      "title": "HKSAC168\t6/5.76 OZ. CS\tCREATED FRESH\tSub- Chicken Salad on Everything Ficelle- 6/6oz\tALL LOT CODES HKSAN168\t1/5.76OZ\tCREATED FRESH\tSub- Chicken Salad on Everything Ficelle\tALL LOT CODES HKSAC168\t6/5.7",
+      "item_type": "recall",
+      "published_date": "2025-06-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "640decb4-49b0-482f-87af-9c7647de70c5",
+      "title": "KITGREEKPASTA5\t1/5#\tEAST COAST FRESH\tPC-Greek Pasta Salad Kit 1/5lb W/Pasta\tALL LOT CODES KITGREEKPASTA5\t1/5#\tEAST COAST FRESH\tPC-Greek Pasta Salad Kit 1/5lb W/Pasta\tALL LOT CODES  KITGREEKPASTA51\t1/5",
+      "item_type": "recall",
+      "published_date": "2025-06-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3a6e9e40-cad0-4116-94da-a5c01b6f0fcc",
+      "title": "HKBKF04\t1/11.25 OZ. EA\tCreated Fresh\tBreakfast Bowl-Southwest\tALL LOT CODES",
+      "item_type": "recall",
+      "published_date": "2025-06-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "39df536e-30da-42c1-a3c9-a7c6ea10490b",
+      "title": "RTSALSA1LB\t1#\tEAST COAST FRESH\tSalsa Cup - 1 lb\tALL LOT CODES SAL20\t5#\tEAST COAST FRESH\tEC-Salsa- Fresh 5#\tALL LOT CODES SAL210\t6/1#\tEAST COAST FRESH\tSalsa- Fresh Retail 6x1# (E)\tALL LOT CODES SAL45\t2",
+      "item_type": "recall",
+      "published_date": "2025-06-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "536febf4-4170-4481-91ea-41a70b9ac1f7",
+      "title": "HKSAN167\t1/5.76 OZ. EA\tCREATED FRESH\tSub- Tuna Salad on Everything Ficelle\tALL LOT CODES HKSAN167\t1/5.76 OZ. EA\tCreated Fresh\tSub- Tuna Salad on Everything Ficelle\tALL LOT CODES",
+      "item_type": "recall",
+      "published_date": "2025-06-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b20eb2b3-c138-45b0-a8bc-964d2ccb58da",
+      "title": "3909520\t2/5#\tIMPERIAL FRESH\tCUCUMBER DICED 3/8 SK-ON\tALL LOT CODES 480414\t2/5 #\tIMPERIAL FRESH\tFC CUCUMBER STRIPED AND SLICED\tALL LOT CODES 481768\t12/3 OZ\tIMPERIAL FRESH\tFC VEG VEGGIE W/HUMMUS SMALL P",
+      "item_type": "recall",
+      "published_date": "2025-06-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b356f110-9440-410d-aff9-1353045894c2",
+      "title": "HKSAN169\t1/5.76OZ\tCREATED FRESH\tSub- Egg Salad on Everything Ficelle\tALL LOT CODES HKSAN169\t1/5.76 OZ. EA\tCrested Fresh\tSub- Egg Salad on Everything Ficelle\tALL LOT CODES",
+      "item_type": "recall",
+      "published_date": "2025-06-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7c0c252e-bbe7-4fb1-87b2-ace144c74642",
+      "title": "Cucumber Chunk & Tomato Wedge  Item 11835.  2/2.5 lb.  Keep Refrigerated",
+      "item_type": "recall",
+      "published_date": "2024-12-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "448b5205-6227-44e1-a0d5-52402bb40203",
+      "title": "Whole and Cut Cucumbers packaged in the following sizes:   1.  Select 40-45 lb. boxes Item 05000.   2.  Bix 1/5 lb.  Item 05023.   3.  Bix  Cucumber Dice 1/34\" Skin-On 1/5 lb.  Item 11861.   4.  Bix C",
+      "item_type": "recall",
+      "published_date": "2024-12-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Sysco Corporation",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "720bd07c-599b-42a0-98a6-471d71e6f036",
+      "item_id": "39df536e-30da-42c1-a3c9-a7c6ea10490b",
+      "summary": "Multiple brands of salsa products, including those from East Coast Fresh, Tops, Wellsley Farms, Weis, and Ahold, are being recalled due to potential contamination with Salmonella linked to cucumbers used in the salsa.",
+      "key_regulations": [],
+      "key_entities": [
+        "EAST COAST FRESH",
+        "TOPS",
+        "WELLSLEY FARMS",
+        "WEIS",
+        "AHOLD"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "68f0fe3a-e7e8-4ded-aac5-c42f709398f6",
+      "item_id": "3a6e9e40-cad0-4116-94da-a5c01b6f0fcc",
+      "summary": "A recall has been issued for 'Breakfast Bowl-Southwest' due to potential contamination with Salmonella linked to cucumbers.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b10de00a-b63a-42a7-aa96-d659ad677844",
+      "item_id": "448b5205-6227-44e1-a0d5-52402bb40203",
+      "summary": "Bix is recalling various whole and cut cucumber products due to potential contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bix"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f0734d9e-7c26-4ee3-9f3b-a19fdc816b45",
+      "item_id": "536febf4-4170-4481-91ea-41a70b9ac1f7",
+      "summary": "A recall has been issued for 'Sub- Tuna Salad on Everything Ficelle' due to the potential for cucumbers within the product to be contaminated with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "CREATED FRESH"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "aebaaf1e-75df-4b1a-ade8-31673a42836a",
+      "item_id": "627b4b05-4523-4490-beb4-4a2c6a9f1e65",
+      "summary": "East Coast Fresh, Jack and Olive, Created Fresh, Spring and Sprout, and Weis have recalled various salad products due to potential contamination with Salmonella linked to cucumbers.",
+      "key_regulations": [],
+      "key_entities": [
+        "EAST COAST FRESH",
+        "JACK AND OLIVE",
+        "CREATED FRESH",
+        "SPRING AND SPROUT",
+        "WEIS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "73a416a5-bcf4-4a24-8843-49ec9f267d75",
+      "item_id": "640decb4-49b0-482f-87af-9c7647de70c5",
+      "summary": "East Coast Fresh is recalling PC-Greek Pasta Salad Kit and Greek Pasta Salad Kit due to potential Salmonella contamination from cucumbers, an ingredient in the kits.",
+      "key_regulations": [],
+      "key_entities": [
+        "EAST COAST FRESH"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "caeddb1a-9eaa-4240-a541-9a7828f17401",
+      "item_id": "7c0c252e-bbe7-4fb1-87b2-ace144c74642",
+      "summary": "Recall of \"Cucumber Chunk & Tomato Wedge\" due to potential Salmonella contamination in cucumbers.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5e8ce940-9611-4ed9-b6e2-50c1cdc3a260",
+      "item_id": "b20eb2b3-c138-45b0-a8bc-964d2ccb58da",
+      "summary": "Various brands of fresh and processed cucumber products, including diced, striped, sliced, and whole cucumbers, as well as some vegetable mixes containing cucumbers, are being recalled due to potential contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "IMPERIAL FRESH",
+        "JUST CUT",
+        "EAST COAST FRESH",
+        "PACKER",
+        "BEDNER FARMS",
+        "COASTAL SUNBELT",
+        "WELLSLEY FARMS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "30161ba6-29e0-41a3-9eca-ee2dba150e16",
+      "item_id": "b356f110-9440-410d-aff9-1353045894c2",
+      "summary": "A recall has been issued for 'Sub- Egg Salad on Everything Ficelle' products across all lot codes due to the potential for Salmonella contamination stemming from cucumbers.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "70c7f440-dee8-40e5-9ae0-e94638c11404",
+      "item_id": "c8e0e37c-a1cd-4998-ab4e-2cf00a63ddd7",
+      "summary": "CREATED FRESH is recalling 'Chicken Salad on Everything Ficelle' products due to potential contamination with Salmonella linked to cucumbers.",
+      "key_regulations": [],
+      "key_entities": [
+        "CREATED FRESH"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "39df536e-30da-42c1-a3c9-a7c6ea10490b",
+      "tag_dimension": "product_type",
+      "tag_value": "condiments_relishes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39df536e-30da-42c1-a3c9-a7c6ea10490b",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3a6e9e40-cad0-4116-94da-a5c01b6f0fcc",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3a6e9e40-cad0-4116-94da-a5c01b6f0fcc",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "448b5205-6227-44e1-a0d5-52402bb40203",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "536febf4-4170-4481-91ea-41a70b9ac1f7",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "536febf4-4170-4481-91ea-41a70b9ac1f7",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "627b4b05-4523-4490-beb4-4a2c6a9f1e65",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "627b4b05-4523-4490-beb4-4a2c6a9f1e65",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "640decb4-49b0-482f-87af-9c7647de70c5",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "640decb4-49b0-482f-87af-9c7647de70c5",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c0c252e-bbe7-4fb1-87b2-ace144c74642",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b20eb2b3-c138-45b0-a8bc-964d2ccb58da",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b356f110-9440-410d-aff9-1353045894c2",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c8e0e37c-a1cd-4998-ab4e-2cf00a63ddd7",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c8e0e37c-a1cd-4998-ab4e-2cf00a63ddd7",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    }
+  ]
+}

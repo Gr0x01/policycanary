@@ -1,0 +1,939 @@
+{
+  "company_name": "Albertsons Companies LLC",
+  "total_actions": 30,
+  "action_types": {
+    "recall": 30
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2024-03-27",
+    "latest": "2025-10-29"
+  },
+  "items": [
+    {
+      "id": "71d6a4b5-a72d-4e2b-909b-704bec1886d2",
+      "title": "Ready Meals Smoked Mozzarella Penne Pasta Salad, UPC 291298 #####. Product was made in-store with store generated scale label applied to the container.    Sold under store banners Carrs-Safeway, Eagle",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cde9d43d-7f94-408d-b091-41f4cb1c1e10",
+      "title": "Basil Pesto Bowtie Pasta Salad, UPC 294921 #####. Product was made in-store with store generated scale label applied to the container.   Sold under store banners Albertsons, Pavilions, Randalls, Safew",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e37be074-16d9-4868-ab5d-caf973d3afa9",
+      "title": "Smoked Mozzarella Penne Salad Kit, UPC 271876 #####. Product was made in-store with store generated scale label applied to the container.    Sold under store banners Carrs-Safeway, Eagle, and Safeway ",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "877e7f56-0c95-4d52-b35e-14fbd5e5b62f",
+      "title": "Grilled Chicken & Basil Pasta Extra Large UPC 213035 #####. Product was made in-store with store generated scale label applied to the container.    Sold under store banners  Carrs-Safeway, Eagle, and ",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0bcbe70c-a89f-45fc-9ea5-e8d6c23b543f",
+      "title": "Ready Meals Basil Pesto Bowtie Pasta Salad, UPC 291308 #####.  Product was made in-store with store generated scale label applied to the container.    Sold under store banners Carrs-Safeway, Eagle, an",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4c4405b6-05c9-4481-a5d5-12bc44203a3a",
+      "title": "READY MEALS Pesto Bowtie Pasta Salad, UPC 27133 #####.  Product was made in-store with store generated scale label applied to the container.    Sold under store banners Albertsons, Pavilions, Randalls",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9090671b-894c-47b1-bd8b-a6d9bccbb5ad",
+      "title": "Ready Meals Spinach Bowtie Pasta Salad, UPC 211426 #####. Product was made in-store with store generated scale label applied to the container.    Sold under store banners  Albertsons,  Amigos, Market,",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7c641086-9db2-4ff2-a7cd-46d76c0cea32",
+      "title": "Ready Meals Smoked Mozzarella With Hot Links Extra Large, UPC 200003 #####. Product was made in-store with store generated scale label applied to the container.    Sold under store banners Carrs-Safew",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1bc5f223-0ced-41dc-831f-42389400ca82",
+      "title": "Basil Pesto Bowtie Pasta Salad, UPC 216492 #####. Product was made in-store with store generated scale label applied to the container.   Sold under store banners Andronico's Community, Markets, Pak'N ",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c81319c6-37b6-4285-849f-b1a7ba3bdcf3",
+      "title": "Ready Meals Basil Bowtie Pasta Salad, UPC 211913 #####. Product was made in-store with store generated scale label applied to the container.    Sold under store banners  Albertsons, Market, Amigos, Ma",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "45c505b2-a990-4910-bb51-f6fded03d3c6",
+      "title": "READY MEALS TUNA SALAD",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4488dfa2-d988-4088-90e5-7034c23af092",
+      "title": "Jewel Osco TUNA SALAD",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "367407ca-39cb-4637-818d-cd4504cb77ad",
+      "title": "Randalls MINI SALAD CROISSANT 18 INCH TRAY",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e883d649-0df4-4d15-9d04-928c02a35406",
+      "title": "READY MEALS DUO TUNA SALAD W/ CRACKERS",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "86b2f7e6-06cd-45ce-aa29-3f32c5a71624",
+      "title": "Jewel Osco CLUB SANDWICHES WITH SALAD",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "aa139c5b-62c9-4284-955d-233a89ac0d50",
+      "title": "READY MEALS QUAD TUNA SALAD",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a3604172-3f31-4aa0-82c3-174ee747d696",
+      "title": "READY MEALS PREMIUM TUNA SALAD",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a39bb620-b8ae-4a1c-825b-e4fa928de3a2",
+      "title": "READY MEALS SUSTAINABLE TUNA SALAD CROISSANT SANDWICH",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "25b021f2-d08f-4149-ac47-302f8ee1ff95",
+      "title": "READY MEALS TUNA SALAD OVER BED OF LETTUCE",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "24752eee-67a9-4eef-bb1f-a65ec0556aa7",
+      "title": "Randalls PREMIUM TUNA SALAD",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c2e82291-c9c8-41b5-a238-eed0bf4d270b",
+      "title": "Randalls MINI SALAD CROISSANT 16 INCH TRAY",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "deeaf824-9254-4c56-96de-06d472850ab7",
+      "title": "Randalls SALAD SANDWICH 16 INCH TRAY",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c6244654-b93a-4d6d-ab32-1f273e49ab08",
+      "title": "READY MEALS TUNA SALAD CROISSANT SANDWICH",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6d916441-98b4-468e-af9a-8ac68be77d42",
+      "title": "Randalls SALAD SANDWICH 12 INCH TRAY",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2b9b9dca-89e4-4f34-bdda-5ca4e810fe21",
+      "title": "READY MEALS TUNA SALAD SNACKER TRAY",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1e93d8af-94d8-45d4-9945-9ed826eec15a",
+      "title": "AMCE GREEK SALAD AUTHENTIC FS, Refrigerated, packaged in clear plastic container, sold by pound, UPC 293070 #####  READY MEALS GREEK SALAD SS, Refrigerated, packaged in clear plastic container, sold b",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b998ef16-42a6-4179-a375-e2327e2a2e56",
+      "title": "(1) READY MEALS GREEN CHILI CHICKEN ENCHILADAS SS COLD (UPC 21291600000)  (2) GREEN CHICKEN ENCHILADAS 6 CT SS COLD (UPC 27163500000)",
+      "item_type": "recall",
+      "published_date": "2024-12-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f7a23017-8f0d-4dd0-bfa9-2c854ddbee89",
+      "title": "(1) GINGER CHICKEN BROCCOLI SALAD FS (UPC 27110800000) (2) READY MEALS GINGER CHICKEN BROCOLLI SALAD SS (UPC 29105700000) (3) GINGER BROCOLLI SALAD FS (UPC 29233600000) (4) CHICKEN CAESAR SALAD FS (UP",
+      "item_type": "recall",
+      "published_date": "2024-12-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b2ec89a1-e4dd-4ff1-93f6-d36185ffce1e",
+      "title": "(1) READY MEALS CHICKEN STREET TACOS SS COLD (UPC 27131600000) (2) READY MEALS ASADA STREET TACO MEAL SS COLD (UPC 29939100000) (3) READY MEALS CHICKEN STREET TACO MEAL SM SS COLD (UPC 27179600000)",
+      "item_type": "recall",
+      "published_date": "2024-12-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7b05c332-5ffc-46de-8903-b01e1c02ac6e",
+      "title": "Signature Select, Athens, and Cal Pia brand Bread Butter White Bread 22 oz. loaf",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Albertsons Companies LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "31953dce-b7f6-428a-bfa0-102b2406477e",
+      "item_id": "0bcbe70c-a89f-45fc-9ea5-e8d6c23b543f",
+      "summary": "Albertson's has recalled Ready Meals Basil Pesto Bowtie Pasta Salad sold under various store banners in AK due to contamination with Listeria monocytogenes, originating from a recalled bowtie pasta ingredient used in store-made deli items.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertson's",
+        "Carrs-Safeway",
+        "Eagle",
+        "Safeway"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "414befae-8a4c-4d20-ae5c-76039c2e8d24",
+      "item_id": "1bc5f223-0ced-41dc-831f-42389400ca82",
+      "summary": "Albertson's stores, including banners like Andronico's Community, Markets, Pak'N Save, Safeway, and Vons in CA, HI, and NV, have recalled 'Basil Pesto Bowtie Pasta Salad' due to the presence of Listeria monocytogenes. The recall stems from a recalled bowtie pasta ingredient used in the in-store prepared deli item.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertson's",
+        "Andronico's Community",
+        "Markets",
+        "Pak'N Save",
+        "Safeway",
+        "Vons"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a1a2ea0e-4489-44fc-973a-ced054feb057",
+      "item_id": "1e93d8af-94d8-45d4-9945-9ed826eec15a",
+      "summary": "Greek Salad products from AMCE, READY MEALS, and Star Market are being recalled due to contamination with Salmonella. The contamination is linked to recalled cucumbers from Bedner Grower's Company, which have been implicated in an ongoing Salmonella outbreak.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bedner Grower's Company",
+        "AMCE",
+        "READY MEALS",
+        "Star Market"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cb8c120a-9df6-4e48-9872-fb19373bbb52",
+      "item_id": "24752eee-67a9-4eef-bb1f-a65ec0556aa7",
+      "summary": "Randalls is recalling its PREMIUM TUNA SALAD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Randalls"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a3959919-0dad-47a1-ab63-775bd3a4ab39",
+      "item_id": "25b021f2-d08f-4149-ac47-302f8ee1ff95",
+      "summary": "READY MEALS TUNA SALAD OVER BED OF LETTUCE is being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f38ee701-e65f-45d5-8e9d-880458febe91",
+      "item_id": "2b9b9dca-89e4-4f34-bdda-5ca4e810fe21",
+      "summary": "A recall has been issued for READY MEALS TUNA SALAD SNACKER TRAY due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2ce0d24c-b30d-4742-b2b3-ffe435215a50",
+      "item_id": "367407ca-39cb-4637-818d-cd4504cb77ad",
+      "summary": "Randalls is recalling its MINI SALAD CROISSANT 18 INCH TRAY due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Randalls"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8db1d4a2-8473-4675-9bc5-35a5db0452a5",
+      "item_id": "4488dfa2-d988-4088-90e5-7034c23af092",
+      "summary": "Jewel Osco has issued a recall for its Tuna Salad due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Jewel Osco"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b676662f-abca-4f45-9f4a-6f8c980fa112",
+      "item_id": "45c505b2-a990-4910-bb51-f6fded03d3c6",
+      "summary": "A recall has been issued for READY MEALS TUNA SALAD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ee8f3589-3e7b-4b08-af4c-6aa22b443abc",
+      "item_id": "4c4405b6-05c9-4481-a5d5-12bc44203a3a",
+      "summary": "Albertsons, Pavilions, Randalls, Safeway, Tom Thumb, and Vons stores in multiple states have recalled 'READY MEALS Pesto Bowtie Pasta Salad' due to contamination with Listeria monocytogenes in a recalled bowtie pasta ingredient.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertsons",
+        "Pavilions",
+        "Randalls",
+        "Safeway",
+        "Tom Thumb",
+        "Vons"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b5f10cf6-7baa-49ca-835c-84ff95664339",
+      "item_id": "6d916441-98b4-468e-af9a-8ac68be77d42",
+      "summary": "Randalls is recalling its SALAD SANDWICH 12 INCH TRAY due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Randalls"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b7aae59b-4ac7-4c97-aa64-cb2dd54b4b75",
+      "item_id": "71d6a4b5-a72d-4e2b-909b-704bec1886d2",
+      "summary": "Ready Meals Smoked Mozzarella Penne Pasta Salad, sold under Carrs-Safeway, Eagle, and Safeway banners, has been recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertson's",
+        "Carrs-Safeway",
+        "Eagle",
+        "Safeway"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2858a10d-7756-40d9-838c-f275702d40ee",
+      "item_id": "7b05c332-5ffc-46de-8903-b01e1c02ac6e",
+      "summary": "Signature Select, Athens, and Cal Pia brand Bread Butter White Bread 22 oz. loaf is being recalled due to contamination with foreign objects, specifically metal and plastic shavings.",
+      "key_regulations": [],
+      "key_entities": [
+        "Signature Select",
+        "Athens",
+        "Cal Pia"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3add1e66-763c-4829-b2c0-b308223bffb9",
+      "item_id": "7c641086-9db2-4ff2-a7cd-46d76c0cea32",
+      "summary": "Albertson's stores, including Carrs-Safeway and Eagle banners in AK, have recalled 'Ready Meals Smoked Mozzarella With Hot Links Extra Large' and other store-made deli items. The recall is due to the presence of Listeria monocytogenes, traced to a contaminated Penne pasta ingredient used in these products.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertson's",
+        "Carrs-Safeway",
+        "Eagle",
+        "Safeway"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b0c227af-72b1-48d9-8540-2717eab7456c",
+      "item_id": "86b2f7e6-06cd-45ce-aa29-3f32c5a71624",
+      "summary": "Jewel Osco is recalling CLUB SANDWICHES WITH SALAD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Jewel Osco"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5bdc797a-7baa-4644-9071-098b4cf93dc2",
+      "item_id": "877e7f56-0c95-4d52-b35e-14fbd5e5b62f",
+      "summary": "Albertson's stores, including banners like Carrs-Safeway, Eagle, and Safeway, are recalling in-store made deli items, specifically Grilled Chicken & Basil Pasta Extra Large, due to the presence of Listeria monocytogenes. The contamination stems from a recalled bowtie pasta ingredient used in these products.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertson's",
+        "Carrs-Safeway",
+        "Eagle",
+        "Safeway"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "afa9e886-2a06-4216-a26d-d7b2aa3e443c",
+      "item_id": "9090671b-894c-47b1-bd8b-a6d9bccbb5ad",
+      "summary": "Ready Meals Spinach Bowtie Pasta Salad, sold under store banners Albertsons, Amigos, Market, Market Street, and United in NY and TX, has been recalled due to contamination with Listeria monocytogenes in a recalled bowtie pasta ingredient.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertsons",
+        "Amigos",
+        "Market",
+        "Market Street",
+        "United"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fe42a3a8-6c30-4f78-82fb-bf443a06a4cd",
+      "item_id": "a3604172-3f31-4aa0-82c3-174ee747d696",
+      "summary": "READY MEALS PREMIUM TUNA SALAD is being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ab8082d1-ab46-4123-b7cb-2482c51768fc",
+      "item_id": "a39bb620-b8ae-4a1c-825b-e4fa928de3a2",
+      "summary": "A recall has been issued for READY MEALS SUSTAINABLE TUNA SALAD CROISSANT SANDWICH due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "355dc6f0-1061-4018-b938-e82458c6ada0",
+      "item_id": "aa139c5b-62c9-4284-955d-233a89ac0d50",
+      "summary": "Recall of READY MEALS QUAD TUNA SALAD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f3fddd93-463c-4641-8ee4-39968a8ad585",
+      "item_id": "b2ec89a1-e4dd-4ff1-93f6-d36185ffce1e",
+      "summary": "Meal kits, including chicken street tacos and asada street taco meals, are being recalled due to contamination with Listeria monocytogenes found in the cooked chicken component.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3787597d-1e45-4d6c-b01d-b685f805041f",
+      "item_id": "b998ef16-42a6-4179-a375-e2327e2a2e56",
+      "summary": "Ready meals containing green chili chicken enchiladas are being recalled due to potential contamination with Listeria monocytogenes in the cooked chicken component.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b9d01e4e-460e-4a98-975b-ab645ad2f04c",
+      "item_id": "c2e82291-c9c8-41b5-a238-eed0bf4d270b",
+      "summary": "Randalls has initiated a recall for its MINI SALAD CROISSANT 16 INCH TRAY products due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Randalls"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dcbf3525-7ee2-4318-95e8-bc4d0009cabb",
+      "item_id": "c6244654-b93a-4d6d-ab32-1f273e49ab08",
+      "summary": "A recall has been issued for READY MEALS TUNA SALAD CROISSANT SANDWICH due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b41ab9d8-ae55-4445-a1ac-ab7b13e28a4a",
+      "item_id": "c81319c6-37b6-4285-849f-b1a7ba3bdcf3",
+      "summary": "Ready Meals Basil Bowtie Pasta Salad and other store-made deli items sold under various store banners including Albertsons, Market, Amigos, Market Street, and United in NM and TX have been recalled due to potential contamination with Listeria monocytogenes. The recall stems from a recalled bowtie pasta ingredient used in these in-store prepared products.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertsons",
+        "Market",
+        "Amigos",
+        "Market Street",
+        "United"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b4dde161-caa6-40e6-b836-2117852cf470",
+      "item_id": "cde9d43d-7f94-408d-b091-41f4cb1c1e10",
+      "summary": "Albertsons, Pavilions, Randalls, Safeway, Tom Thumb, and Vons stores in multiple states are recalling Basil Pesto Bowtie Pasta Salad. The product, made in-store, contains a recalled bowtie pasta ingredient that was contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertsons",
+        "Pavilions",
+        "Randalls",
+        "Safeway",
+        "Tom Thumb",
+        "Vons"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3cb4c011-18c6-42ac-a5ac-135bcaf25847",
+      "item_id": "deeaf824-9254-4c56-96de-06d472850ab7",
+      "summary": "Randalls has initiated a recall for its 16-inch Salad Sandwich Trays due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Randalls"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b8fa0849-8529-4cb9-b13b-5783c129bd40",
+      "item_id": "e37be074-16d9-4868-ab5d-caf973d3afa9",
+      "summary": "Albertson's, Carrs-Safeway, Eagle, and Safeway stores in Alaska are recalling their in-store made Smoked Mozzarella Penne Salad Kits. The recall is due to the presence of Listeria monocytogenes in the Penne pasta ingredient used in the salad kits.",
+      "key_regulations": [],
+      "key_entities": [
+        "Albertson's",
+        "Carrs-Safeway",
+        "Eagle",
+        "Safeway"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8c73b408-5251-4be2-9555-aaaa644daa81",
+      "item_id": "e883d649-0df4-4d15-9d04-928c02a35406",
+      "summary": "Recall of READY MEALS DUO TUNA SALAD W/ CRACKERS due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "669e559a-a87d-4340-8485-e00fa5292562",
+      "item_id": "f7a23017-8f0d-4dd0-bfa9-2c854ddbee89",
+      "summary": "Various meal kits and salads containing cooked chicken were recalled due to the chicken component being contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "0bcbe70c-a89f-45fc-9ea5-e8d6c23b543f",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0bcbe70c-a89f-45fc-9ea5-e8d6c23b543f",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0bcbe70c-a89f-45fc-9ea5-e8d6c23b543f",
+      "tag_dimension": "facility_type",
+      "tag_value": "deli",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bc5f223-0ced-41dc-831f-42389400ca82",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bc5f223-0ced-41dc-831f-42389400ca82",
+      "tag_dimension": "facility_type",
+      "tag_value": "grocery_store_deli",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1e93d8af-94d8-45d4-9945-9ed826eec15a",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1e93d8af-94d8-45d4-9945-9ed826eec15a",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "24752eee-67a9-4eef-bb1f-a65ec0556aa7",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "25b021f2-d08f-4149-ac47-302f8ee1ff95",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "25b021f2-d08f-4149-ac47-302f8ee1ff95",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "25b021f2-d08f-4149-ac47-302f8ee1ff95",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2b9b9dca-89e4-4f34-bdda-5ca4e810fe21",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "367407ca-39cb-4637-818d-cd4504cb77ad",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4488dfa2-d988-4088-90e5-7034c23af092",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45c505b2-a990-4910-bb51-f6fded03d3c6",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4c4405b6-05c9-4481-a5d5-12bc44203a3a",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6d916441-98b4-468e-af9a-8ac68be77d42",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "71d6a4b5-a72d-4e2b-909b-704bec1886d2",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7b05c332-5ffc-46de-8903-b01e1c02ac6e",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c641086-9db2-4ff2-a7cd-46d76c0cea32",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c641086-9db2-4ff2-a7cd-46d76c0cea32",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c641086-9db2-4ff2-a7cd-46d76c0cea32",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "86b2f7e6-06cd-45ce-aa29-3f32c5a71624",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "877e7f56-0c95-4d52-b35e-14fbd5e5b62f",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "877e7f56-0c95-4d52-b35e-14fbd5e5b62f",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "877e7f56-0c95-4d52-b35e-14fbd5e5b62f",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9090671b-894c-47b1-bd8b-a6d9bccbb5ad",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a3604172-3f31-4aa0-82c3-174ee747d696",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a39bb620-b8ae-4a1c-825b-e4fa928de3a2",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a39bb620-b8ae-4a1c-825b-e4fa928de3a2",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a39bb620-b8ae-4a1c-825b-e4fa928de3a2",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa139c5b-62c9-4284-955d-233a89ac0d50",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b2ec89a1-e4dd-4ff1-93f6-d36185ffce1e",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b2ec89a1-e4dd-4ff1-93f6-d36185ffce1e",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b998ef16-42a6-4179-a375-e2327e2a2e56",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2e82291-c9c8-41b5-a238-eed0bf4d270b",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c6244654-b93a-4d6d-ab32-1f273e49ab08",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c81319c6-37b6-4285-849f-b1a7ba3bdcf3",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c81319c6-37b6-4285-849f-b1a7ba3bdcf3",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cde9d43d-7f94-408d-b091-41f4cb1c1e10",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "deeaf824-9254-4c56-96de-06d472850ab7",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e37be074-16d9-4868-ab5d-caf973d3afa9",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e883d649-0df4-4d15-9d04-928c02a35406",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e883d649-0df4-4d15-9d04-928c02a35406",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7a23017-8f0d-4dd0-bfa9-2c854ddbee89",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    }
+  ]
+}

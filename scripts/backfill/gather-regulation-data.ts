@@ -136,7 +136,7 @@ async function gatherRegulationData(regulation: { name: string; searchTerms: str
     const batch = itemIds.slice(i, i + 100);
     const { data: enrichments } = await supabase
       .from("item_enrichments")
-      .select("id, item_id, summary, impact_level, action_required, audience_tags")
+      .select("id, item_id, summary, key_regulations, key_entities, regulatory_action_type, deadline")
       .in("item_id", batch);
     if (enrichments) allEnrichments.push(...enrichments);
   }
@@ -191,27 +191,31 @@ async function gatherRegulationData(regulation: { name: string; searchTerms: str
 }
 
 // Run
-const regulations = args.regulation
-  ? [{ name: args.regulation, searchTerms: [args.regulation] }]
-  : DEFAULT_REGULATIONS;
+async function main() {
+  const regulations = args.regulation
+    ? [{ name: args.regulation, searchTerms: [args.regulation] }]
+    : DEFAULT_REGULATIONS;
 
-console.log(`Gathering regulation data for ${regulations.length} regulations...`);
-console.log(`Output: ${outputDir}`);
+  console.log(`Gathering regulation data for ${regulations.length} regulations...`);
+  console.log(`Output: ${outputDir}`);
 
-let gathered = 0;
-for (const reg of regulations) {
-  try {
-    const data = await gatherRegulationData(reg);
-    if (data) {
-      const slug = reg.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-      const outFile = join(outputDir, `${slug}.json`);
-      writeFileSync(outFile, JSON.stringify(data, null, 2));
-      console.log(`  Wrote: ${outFile}`);
-      gathered++;
+  let gathered = 0;
+  for (const reg of regulations) {
+    try {
+      const data = await gatherRegulationData(reg);
+      if (data) {
+        const slug = reg.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        const outFile = join(outputDir, `${slug}.json`);
+        writeFileSync(outFile, JSON.stringify(data, null, 2));
+        console.log(`  Wrote: ${outFile}`);
+        gathered++;
+      }
+    } catch (err) {
+      console.error(`  Error gathering "${reg.name}":`, (err as Error).message);
     }
-  } catch (err) {
-    console.error(`  Error gathering "${reg.name}":`, (err as Error).message);
   }
+
+  console.log(`\nDone. ${gathered}/${regulations.length} regulations gathered.`);
 }
 
-console.log(`\nDone. ${gathered}/${regulations.length} regulations gathered.`);
+main().catch(console.error);

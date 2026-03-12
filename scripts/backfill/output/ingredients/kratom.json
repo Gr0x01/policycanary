@@ -1,0 +1,899 @@
+{
+  "substance": {
+    "id": "3885800c-ed0f-40ff-bb7c-3b742f797fed",
+    "canonical_name": "MITRAGYNA SPECIOSA WHOLE",
+    "unii": "A5K6F2BNRB",
+    "matched_names": [
+      "kratom [HOC]"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "3885800c-ed0f-40ff-bb7c-3b742f797fed",
+      "canonical_name": "MITRAGYNA SPECIOSA WHOLE",
+      "unii": "A5K6F2BNRB",
+      "matched_names": [
+        "kratom [HOC]"
+      ]
+    },
+    {
+      "id": "6a50135f-d27e-40d8-85b0-708a47b830fe",
+      "canonical_name": "MITRAGYNA SPECIOSA LEAF",
+      "unii": "754HG7WK00",
+      "matched_names": [
+        "Kratom",
+        "KRATOM LEAF"
+      ]
+    }
+  ],
+  "item_count": 10,
+  "items": [
+    {
+      "id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "title": "Sunshine Trading Company, Inc. dba Nova Tea and Nova Kratom — Unapproved New Drugs",
+      "item_type": "warning_letter",
+      "published_date": "2023-07-11",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/sunshine-trading-company-inc-dba-nova-tea-and-nova-kratom-660633-07032023",
+      "issuing_office": "Center for Drug Evaluation and Research | CDER",
+      "enforcement_company_name": "Sunshine Trading Company, Inc. dba Nova Tea and Nova Kratom",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "title": "Import Alert 54-15 — DETENTION WITHOUT PHYSICAL EXAMINATION OF DIETARY SUPPLEMENTS AND BULK DIETARY INGREDIENTS THAT ARE OR CONTAIN MITRAGYNA SPECIOSA OR KRATOM",
+      "item_type": "import_alert",
+      "published_date": "2025-02-21",
+      "source_url": "https://www.accessdata.fda.gov/cms_ia/importalert_1137.html",
+      "issuing_office": "ORA",
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "19d04564-708d-44a3-a806-36e70a48c58d",
+      "title": "Agency Information Collection Activities; Proposed Collection; Comment Request: Risk/Safety Considerations and Motivations for Purchase and Use of Kratom and Psychedelics Alone and in Combination With Other Substances",
+      "item_type": "notice",
+      "published_date": "2024-08-02",
+      "source_url": "https://www.federalregister.gov/documents/2024/08/02/2024-17102/agency-information-collection-activities-proposed-collection-comment-request-risksafety",
+      "issuing_office": null,
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "title": "Herbsens Botanicals — Finished Pharmaceuticals/Unapproved New Drug<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2022-07-05",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/herbsens-botanicals-634373-06302022",
+      "issuing_office": "Center for Drug Evaluation and Research | CDER",
+      "enforcement_company_name": "Herbsens Botanicals",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "title": "Omni Consumer Products LLC d/b/a YoKratom — Finished Pharmaceuticals/Unapproved New Drug<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2022-07-05",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/omni-consumer-products-llc-dba-yokratom-634184-06302022",
+      "issuing_office": "Center for Drug Evaluation and Research | CDER",
+      "enforcement_company_name": "Omni Consumer Products LLC d/b/a YoKratom",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7daee674-9349-458b-af44-3a418908de0b",
+      "title": "Kratom Exchange — Finished Pharmaceuticals/Unapproved New Drug<br />\r\n<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2022-07-05",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/kratom-exchange-633972-06302022",
+      "issuing_office": "Center for Drug Evaluation and Research | CDER",
+      "enforcement_company_name": "Kratom Exchange",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "title": "Klarity Kratom — Finished Pharmaceuticals/Unapproved New Drug<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2022-07-05",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/klarity-kratom-634501-06302022",
+      "issuing_office": "Center for Drug Evaluation and Research | CDER",
+      "enforcement_company_name": "Klarity Kratom",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a319d1b7-bad9-4ade-94b1-8debf5015d3a",
+      "title": "Agency Information Collection Activities; Proposed Collection; Risk/Safety Considerations and Motivations for Purchase and Use of Kratom and Psychedelics Alone and in Combination With Other Substances; Withdrawal of Notice",
+      "item_type": "notice",
+      "published_date": "2024-08-12",
+      "source_url": "https://www.federalregister.gov/documents/2024/08/12/2024-17793/agency-information-collection-activities-proposed-collection-risksafety-considerations-and",
+      "issuing_office": null,
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "title": "Umbrella — Dietary Supplement/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2021-06-22",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/umbrella-612037-05182021",
+      "issuing_office": "Division of Pharmaceutical Quality Operations IV",
+      "enforcement_company_name": "Umbrella",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "title": "Shot of Joy LLC — Unapproved New Drugs/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2023-09-29",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/shot-joy-llc-665936-09252023",
+      "issuing_office": "Center for Drug Evaluation and Research | CDER",
+      "enforcement_company_name": "Shot of Joy LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "3d6da08a-0671-43c4-a6a6-d5ea460707b3",
+      "item_id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "summary": "The FDA issued a warning letter to Sunshine Trading Company, Inc. (dba Nova Kratom) for selling kratom products as unapproved new drugs. The company's website made illegal claims that the products could treat opioid addiction and withdrawal, relieve pain, anxiety, and depression, and manage conditions like fibromyalgia and cancer. The FDA stated these products pose a significant threat to public health, particularly amid the opioid crisis, as they have not been proven safe or effective for any medical use.",
+      "key_regulations": [
+        "FD&C Act Section 505(a)",
+        "FD&C Act Section 301(d)",
+        "FD&C Act Section 201(g)(1)",
+        "FD&C Act Section 201(p)"
+      ],
+      "key_entities": [
+        "Sunshine Trading Company, Inc.",
+        "Nova Tea",
+        "Nova Kratom",
+        "Joshua Miller"
+      ],
+      "regulatory_action_type": "safety_alert",
+      "deadline": null
+    },
+    {
+      "id": "223f67ff-ebbc-4404-9245-105304a9ee31",
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "summary": "FDA Import Alert 54-15 authorizes the Detention Without Physical Examination (DWPE) of dietary supplements and bulk dietary ingredients containing Kratom (Mitragyna speciosa). The FDA considers Kratom to be a New Dietary Ingredient (NDI) that lacks adequate evidence of safety, making products containing it adulterated. The alert includes a RED LIST of numerous foreign manufacturers and domestic importers whose shipments are subject to immediate detention.",
+      "key_regulations": [
+        "21 U.S.C. 342",
+        "21 U.S.C. 350b",
+        "21 U.S.C. 321"
+      ],
+      "key_entities": [
+        "U.S. Food and Drug Administration",
+        "Division of Import Operations (DIO)",
+        "Center for Food Safety and Applied Nutrition (CFSAN)"
+      ],
+      "regulatory_action_type": "import_violation",
+      "deadline": null
+    },
+    {
+      "id": "3d294834-6610-422b-bdb5-25a38adf2c83",
+      "item_id": "19d04564-708d-44a3-a806-36e70a48c58d",
+      "summary": "The FDA is requesting comments on proposed information collection activities concerning the risk/safety considerations and motivations for the purchase and use of kratom and psychedelics, both alone and in combination with other substances.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": "2024-10-01"
+    },
+    {
+      "id": "549957fc-d0f2-491e-ab96-53cc196433ca",
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "summary": "The FDA and FTC issued a joint warning letter to Herbsens Botanicals for selling various kratom products with unapproved drug claims. The company's website promoted its kratom capsules and powders for treating serious conditions, including opioid addiction and withdrawal, pain, depression, diabetes, and high blood pressure. These claims render the products unapproved new drugs under the Federal Food, Drug, and Cosmetic Act. The FTC also demanded the company cease making unsubstantiated treatment claims, which violate the FTC Act. The company was given 15 working days to correct the violations.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act (FD&C Act)",
+        "Federal Trade Commission Act (FTC Act)"
+      ],
+      "key_entities": [
+        "Herbsens Botanicals",
+        "Center for Drug Evaluation and Research (CDER)",
+        "Federal Trade Commission (FTC)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2022-07-26"
+    },
+    {
+      "id": "ae918218-60ec-43a0-bc29-aea1cf46addc",
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "summary": "The FDA and FTC issued a joint warning letter to Omni Consumer Products LLC (d/b/a YoKratom) for marketing various kratom powder and capsule products as unapproved new drugs. The company's website made explicit disease claims, including that their products could treat opioid addiction, withdrawal symptoms, pain, and depression. These claims classify the products as drugs under the FD&C Act. As these products lack FDA approval for safety and efficacy, their sale in interstate commerce is illegal. The letter requires the company to cease making these claims and correct the violations within 15 working days.",
+      "key_regulations": [
+        "21 U.S.C. 355(a)",
+        "21 U.S.C. 331(d)",
+        "21 U.S.C. 321(g)(1)",
+        "21 U.S.C. 321(p)",
+        "FTC Act (15 U.S.C. §§ 41–57)",
+        "Opioid Addiction Recovery Fraud Prevention Act of 2018 (15 U.S.C. § 45d)"
+      ],
+      "key_entities": [
+        "Omni Consumer Products LLC",
+        "YoKratom",
+        "Center for Drug Evaluation and Research (CDER)",
+        "Federal Trade Commission (FTC)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "21737ebe-8cb5-45da-b835-a259a15e84c8",
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "summary": "The FDA and FTC jointly issued a warning letter to Kratom Exchange for selling various kratom powder products with unapproved drug claims. The company's website and social media promoted these products for treating serious conditions, including opioid addiction, withdrawal symptoms, depression, and high blood pressure. These claims render the products unapproved new drugs, sold in violation of the Federal Food, Drug, and Cosmetic (FD&C) Act. The agencies have demanded that the company cease making these illegal claims and provide a written response detailing corrective actions within 15 working days.",
+      "key_regulations": [
+        "FD&C Act Section 505(a)",
+        "FD&C Act Section 301(d)",
+        "FTC Act"
+      ],
+      "key_entities": [
+        "Kratom Exchange",
+        "FDA",
+        "FTC",
+        "Center for Drug Evaluation and Research"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "d2ca6ce9-b17c-4c57-8e29-19ac3fb906dc",
+      "item_id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "summary": "The FDA and FTC issued a joint warning letter to Klarity Kratom for illegally selling kratom products with unapproved drug claims. The company's website promoted its products for treating opioid addiction, withdrawal symptoms, rheumatoid arthritis, and pain, causing the products to be classified as unapproved new drugs under the FD&C Act. The company was instructed to correct the violations within 15 working days or face potential legal action.",
+      "key_regulations": [
+        "FD&C Act Section 505(a)",
+        "FD&C Act Section 301(d)",
+        "FD&C Act Section 201(g)(1)",
+        "FTC Act"
+      ],
+      "key_entities": [
+        "Klarity Kratom",
+        "Center for Drug Evaluation and Research",
+        "Federal Trade Commission"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2022-06-30"
+    },
+    {
+      "id": "220538a7-91b6-4322-8125-a487cd0d0a9f",
+      "item_id": "a319d1b7-bad9-4ade-94b1-8debf5015d3a",
+      "summary": "The FDA is withdrawing a previous notice regarding a proposed collection of information concerning the risk and safety considerations, as well as motivations, for the purchase and use of Kratom and psychedelics, both alone and in combination with other substances.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "eaa318f1-aad7-4d38-aa33-4f431563597f",
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "summary": "The FDA issued a warning letter to Umbrella for marketing and selling multiple products as dietary supplements that are classified as unapproved new drugs and are misbranded. Violative products include 'Alpha Male Plus', which contains the undeclared drug tadalafil; Kratom and Tianeptine products with illegal disease claims; a NACET product marketed to mitigate COVID-19; and numerous Selective Androgen Receptor Modulators (SARMs) promoted for human use with drug claims.",
+      "key_regulations": [
+        "FD&C Act Section 505(a) [21 U.S.C. § 355(a)]",
+        "FD&C Act Section 301(d) [21 U.S.C. § 331(d)]",
+        "FD&C Act Section 502 [21 U.S.C. § 352]"
+      ],
+      "key_entities": [
+        "Umbrella",
+        "Brendan Mullins"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "a02a1c67-67a5-415c-a7d9-b2956c9e21e7",
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "summary": "The FDA issued a warning letter to Shot of Joy LLC for marketing kratom and kava products with unapproved drug claims. The company's website claimed its products could treat serious conditions including opioid addiction, anxiety, depression, PTSD, and ADHD, rendering them unapproved new drugs under the FD&C Act. The FDA highlighted the significant public health threat posed by such unproven treatments, especially concerning the opioid crisis.",
+      "key_regulations": [
+        "21 U.S.C. 355(a)",
+        "21 U.S.C. 331(d)"
+      ],
+      "key_entities": [
+        "Shot of Joy LLC",
+        "Center for Drug Evaluation and Research",
+        "CDER"
+      ],
+      "regulatory_action_type": "safety_alert",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "tag_dimension": "claims",
+      "tag_value": "opioid addiction treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "tag_dimension": "claims",
+      "tag_value": "opioid withdrawal treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "tag_dimension": "claims",
+      "tag_value": "pain relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "tag_dimension": "claims",
+      "tag_value": "anxiety relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "tag_dimension": "claims",
+      "tag_value": "depression relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "10c50511-fec2-40da-a5f5-7d8be2f12062",
+      "tag_dimension": "claims",
+      "tag_value": "analgesic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "product_type",
+      "tag_value": "coffee_tea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "facility_type",
+      "tag_value": "importer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "facility_type",
+      "tag_value": "shipper",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "claims",
+      "tag_value": "dietary supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "claims",
+      "tag_value": "raw incense material",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "claims",
+      "tag_value": "raw soap material",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 321(ff)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 350b(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 342(f)(1)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1250faf2-4196-4a4b-87e5-89411f3cf068",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 801(a)(3)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19d04564-708d-44a3-a806-36e70a48c58d",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "claims",
+      "tag_value": "pain relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "claims",
+      "tag_value": "opioid addiction treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "claims",
+      "tag_value": "opioid withdrawal treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "claims",
+      "tag_value": "depression treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "claims",
+      "tag_value": "diabetes treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "claims",
+      "tag_value": "high blood pressure treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "claims",
+      "tag_value": "PTSD treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "claims",
+      "tag_value": "osteoporosis treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "19f87ea9-8a6d-4a25-94b0-005c7dc157a7",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "tag_dimension": "claims",
+      "tag_value": "opioid addiction treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "tag_dimension": "claims",
+      "tag_value": "opioid withdrawal treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "tag_dimension": "claims",
+      "tag_value": "pain relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "tag_dimension": "claims",
+      "tag_value": "depression treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ffacdd2-366f-427c-bca4-5d4cee86cc95",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "claims",
+      "tag_value": "opioid addiction treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "claims",
+      "tag_value": "opioid withdrawal symptom relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "claims",
+      "tag_value": "depression treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "claims",
+      "tag_value": "lowers blood pressure",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "claims",
+      "tag_value": "immune function boost",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "claims",
+      "tag_value": "cardiovascular health support",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(g)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7daee674-9349-458b-af44-3a418908de0b",
+      "tag_dimension": "regulation",
+      "tag_value": "FTC Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "tag_dimension": "claims",
+      "tag_value": "opioid addiction treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "tag_dimension": "claims",
+      "tag_value": "opioid withdrawal treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "tag_dimension": "claims",
+      "tag_value": "pain relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "tag_dimension": "claims",
+      "tag_value": "rheumatoid arthritis treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96e6c7b8-8fec-40c7-9e15-825a3673cc08",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a319d1b7-bad9-4ade-94b1-8debf5015d3a",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "product_type",
+      "tag_value": "sports_performance",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "erectile dysfunction treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "male enhancement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "anxiety treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "depression treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "pain relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "opiate withdrawal treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "mood brightener",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "COVID-19 symptom mitigation",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "muscle building",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "claims",
+      "tag_value": "testosterone therapy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 502",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(ff)(3)(B)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(g)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(p)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "a8ecb304-6022-4f96-9614-ab7bf1fbac33",
+      "tag_dimension": "product_type",
+      "tag_value": "controlled_substances",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "opioid addiction treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "anxiety treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "depression treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "ptsd treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "adhd treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "cardiovascular health",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "cancer treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "neuroprotective",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "claims",
+      "tag_value": "cognitive enhancement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(g)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(p)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "afee6d5a-fd20-4543-b6e5-e617dbce52ed",
+      "tag_dimension": "product_type",
+      "tag_value": "controlled_substances",
+      "signal_source": "cross_reference"
+    }
+  ]
+}

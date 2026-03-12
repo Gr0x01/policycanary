@@ -1,0 +1,538 @@
+{
+  "regulation_name": "PFAS Food Contact",
+  "search_terms": [
+    "PFAS",
+    "food contact",
+    "per- and polyfluoroalkyl"
+  ],
+  "item_count": 10,
+  "affected_categories": [
+    "infant_formula",
+    "food_contact_materials",
+    "other_food",
+    "fish_products",
+    "other_cosmetic"
+  ],
+  "cfr_references": [
+    {
+      "part": 170,
+      "title": 21
+    }
+  ],
+  "key_deadlines": [
+    {
+      "item_title": "Food Contact Notifications That Are No Longer Effective",
+      "effective_date": "2025-01-06",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Per- and Polyfluoroalkyl Substances in Seafood; Request for Information",
+      "effective_date": null,
+      "comment_deadline": "2025-02-18"
+    },
+    {
+      "item_title": "Food Additives: Food Contact Substance Notification That Is No Longer Effective",
+      "effective_date": "2024-05-21",
+      "comment_deadline": null
+    }
+  ],
+  "items": [
+    {
+      "id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "title": "FDA Finds Insufficient Data to Determine Safety of PFAS in Cosmetic Products",
+      "item_type": "press_release",
+      "published_date": "2025-12-29",
+      "source_url": "http://www.fda.gov/news-events/press-announcements/fda-finds-insufficient-data-determine-safety-pfas-cosmetic-products",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "3c5bfdb4-3a13-4e98-a0c3-e31f8dad279b",
+      "title": "NAFCO, WHITING FILLET SKIN-ON BONELESS IQF, 2 lb., Cases are corrugate. The product is individually frozen and packed in food contact retail bag. 15 bags per case. Keep Frozen",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f908c94b-469a-49f9-b6cb-ad2c132bd910",
+      "title": "Food Contact Notifications That Are No Longer Effective",
+      "item_type": "notice",
+      "published_date": "2025-01-06",
+      "source_url": "https://www.federalregister.gov/documents/2025/01/06/2024-31692/food-contact-notifications-that-are-no-longer-effective",
+      "issuing_office": null,
+      "effective_date": "2025-01-06",
+      "comment_deadline": null,
+      "cfr_references": []
+    },
+    {
+      "id": "d640e182-2611-4a87-a8d7-7485d92ceb81",
+      "title": "Per- and Polyfluoroalkyl Substances in Seafood; Request for Information",
+      "item_type": "notice",
+      "published_date": "2024-11-20",
+      "source_url": "https://www.federalregister.gov/documents/2024/11/20/2024-27070/per--and-polyfluoroalkyl-substances-in-seafood-request-for-information",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-02-18",
+      "cfr_references": []
+    },
+    {
+      "id": "3aea4238-020f-4cbd-9b01-9024b32b2fdf",
+      "title": "Food Additives: Food Contact Substance Notification That Is No Longer Effective",
+      "item_type": "rule",
+      "published_date": "2024-03-22",
+      "source_url": "https://www.federalregister.gov/documents/2024/03/22/2024-05802/food-additives-food-contact-substance-notification-that-is-no-longer-effective",
+      "issuing_office": null,
+      "effective_date": "2024-05-21",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 170,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "6afb44a6-ef04-4b73-94b2-90a4a1642f6a",
+      "title": "Guidance for Industry: Preparation of Food Contact Substance Notifications (Toxicology Recommendations)",
+      "item_type": "guidance",
+      "published_date": "2021-10-20",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-preparation-food-contact-substance-notifications-toxicology-recommendations",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "e2b74cee-c9a3-4aee-a480-6875116bb97b",
+      "title": "Guidance for Industry:  Preparation of Food Contact  Substance Notifications (Administrative)",
+      "item_type": "guidance",
+      "published_date": "2021-10-18",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-preparation-food-contact-substance-notifications-administrative",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "135abea0-049d-4d7e-a9b9-f05c85176bea",
+      "title": "Guidance for Industry: Preparation of Food Contact Notifications for Food Contact Substances in Contact with Infant Formula and/or Human Milk",
+      "item_type": "guidance",
+      "published_date": "2019-05-08",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-preparation-food-contact-notifications-food-contact-substances-contact-infant",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "title": "Guidance for Industry: Assessing the Effects of Significant Manufacturing Process Changes, Including Emerging Technologies, on the Safety and Regulatory Status of Food Ingredients and Food Contact Substances, Including Food Ingredients that Are Color Additives",
+      "item_type": "guidance",
+      "published_date": "2014-06-27",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-assessing-effects-significant-manufacturing-process-changes-including-emerging",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "title": "Guidance for Industry: Preparation of Premarket Submissions for Food Contact Substances (Chemistry Recommendations)",
+      "item_type": "guidance",
+      "published_date": "2007-12-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-preparation-premarket-submissions-food-contact-substances-chemistry",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "c406d2d9-2856-4337-918d-149017a0bf3c",
+      "item_id": "135abea0-049d-4d7e-a9b9-f05c85176bea",
+      "summary": "The FDA's Human Foods Program issued a guidance document detailing recommendations for manufacturers and suppliers preparing Food Contact Notification (FCN) submissions for food contact substances used with infant formula and human milk. This covers infant formula packaging, baby bottles, bottle inserts, nipples, and other infant food contact materials.",
+      "key_regulations": [
+        "FDA-2016-D-1814"
+      ],
+      "key_entities": [
+        "Human Foods Program",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "96af2e99-12cb-4e37-87ec-04ae0d44aa4a",
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "summary": "The FDA issued a Guidance for Industry on how manufacturers of food ingredients and food contact substances should assess the effects of significant manufacturing process changes, such as adopting emerging technologies like nanotechnology, on a product's safety and regulatory status.",
+      "key_regulations": [
+        "21 CFR 10.115(g)(5)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "9972f978-ccea-4c19-babc-bfb0ad376d48",
+      "item_id": "3aea4238-020f-4cbd-9b01-9024b32b2fdf",
+      "summary": "The FDA has issued a final rule declaring a Food Contact Substance Notification to be no longer effective. This action, effective May 21, 2024, revokes the authorization for the use of an unspecified substance in food contact applications under that specific notification.",
+      "key_regulations": [
+        "21 CFR Part 170"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "ban_restriction",
+      "deadline": "2024-05-21"
+    },
+    {
+      "id": "338f7f0f-b308-4ee8-91ca-29533e06c16b",
+      "item_id": "3c5bfdb4-3a13-4e98-a0c3-e31f8dad279b",
+      "summary": "NAFCO has initiated a recall for its WHITING FILLET SKIN-ON BONELESS IQF, 2 lb. cases, due to an incorrect \"best by\" date (1-11-2025) printed on the retail bags. The correct best-by date is 1-11-2027.",
+      "key_regulations": [],
+      "key_entities": [
+        "NAFCO"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "123dbe9e-9924-4a1e-b4cf-38e14a5608cc",
+      "item_id": "6afb44a6-ef04-4b73-94b2-90a4a1642f6a",
+      "summary": "The FDA's Human Foods Program issued a revised guidance for industry on the preparation of Food Contact Substance Notifications, specifically detailing toxicology recommendations. The guidance clarifies the scientific information and data needed to establish the safety of food additives that serve as food contact substances (FCSs) under Section 409 of the FD&C Act.",
+      "key_regulations": [
+        "FD&C Act Section 409(h)(6)",
+        "FD&C Act Section 409(a)(3)",
+        "FD&C Act Section 409(b)",
+        "21 CFR Parts 173-178",
+        "21 CFR 170.39"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "2f07cf92-08a3-4e72-a750-2d9fcbd8bd07",
+      "item_id": "d640e182-2611-4a87-a8d7-7485d92ceb81",
+      "summary": "The FDA is requesting information regarding Per- and Polyfluoroalkyl Substances (PFAS) in seafood. This is a public notice seeking data and comments to inform potential future actions regarding PFAS contamination in the seafood supply.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2025-02-18"
+    },
+    {
+      "id": "eca47867-e5ef-4ee2-b587-74d4d22ce136",
+      "item_id": "e2b74cee-c9a3-4aee-a480-6875116bb97b",
+      "summary": "The FDA issued a revised guidance document for industry detailing the administrative process and scientific requirements for preparing Food Contact Substance Notifications (FCNs). The guidance outlines that FCNs must contain scientific data demonstrating safety comparable to food additive petitions or Threshold of Regulation submissions.",
+      "key_regulations": [
+        "Section 409 of the FD&C Act",
+        "21 CFR 170.39"
+      ],
+      "key_entities": [
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "bf9c3a1d-d9ba-4cf9-8a31-34018b375aee",
+      "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "summary": "The FDA released a congressionally mandated report under the Modernization of Cosmetics Regulation Act of 2022 (MoCRA) evaluating PFAS in cosmetic products. The report found insufficient toxicological data to definitively determine the safety of most PFAS, underscoring significant data gaps. The FDA will continue to monitor the issue and address data gaps, but no specific federal regulations prohibiting PFAS in cosmetics currently exist.",
+      "key_regulations": [
+        "Modernization of Cosmetics Regulation Act of 2022",
+        "MoCRA"
+      ],
+      "key_entities": [
+        "FDA",
+        "CDC",
+        "EPA",
+        "U.S. Department of Health and Human Services"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "68ed970f-0458-4510-b775-096b1cdb78d3",
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "summary": "The FDA's Office of Food Additive Safety issued an updated guidance document detailing the chemistry recommendations for preparing premarket submissions for Food Contact Substances (FCS). The guidance provides industry instructions for completing Food Contact Notifications (FCNs) and Food Additive Petitions (FAPs), covering areas such as substance identity, technical effect, migration testing protocols, analytical method validation, and consumer exposure calculation.",
+      "key_regulations": [
+        "21 CFR 170.39",
+        "21 CFR 175.300",
+        "21 CFR 176.170"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Office of Food Additive Safety",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "f460beca-a4c1-4d9a-838e-1ebde7672018",
+      "item_id": "f908c94b-469a-49f9-b6cb-ad2c132bd910",
+      "summary": "This is a Federal Register notice announcing that certain food contact notifications are no longer effective. The provided content is an access message for FederalRegister.gov, explaining limitations due to automated scraping.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "135abea0-049d-4d7e-a9b9-f05c85176bea",
+      "tag_dimension": "product_type",
+      "tag_value": "infant_formula",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "135abea0-049d-4d7e-a9b9-f05c85176bea",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "135abea0-049d-4d7e-a9b9-f05c85176bea",
+      "tag_dimension": "facility_type",
+      "tag_value": "food contact substance manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "135abea0-049d-4d7e-a9b9-f05c85176bea",
+      "tag_dimension": "facility_type",
+      "tag_value": "packaging manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "135abea0-049d-4d7e-a9b9-f05c85176bea",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Contact Notification (FCN)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "facility_type",
+      "tag_value": "food ingredient manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "facility_type",
+      "tag_value": "food contact substance manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Additive Regulations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Color Additive Regulations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Contact Substance Notifications (FCN)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Generally Recognized as Safe (GRAS) Determinations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3aea4238-020f-4cbd-9b01-9024b32b2fdf",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3aea4238-020f-4cbd-9b01-9024b32b2fdf",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3aea4238-020f-4cbd-9b01-9024b32b2fdf",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 170",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3c5bfdb4-3a13-4e98-a0c3-e31f8dad279b",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6afb44a6-ef04-4b73-94b2-90a4a1642f6a",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6afb44a6-ef04-4b73-94b2-90a4a1642f6a",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 409 of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6afb44a6-ef04-4b73-94b2-90a4a1642f6a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 173-178",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6afb44a6-ef04-4b73-94b2-90a4a1642f6a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170.39",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d640e182-2611-4a87-a8d7-7485d92ceb81",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e2b74cee-c9a3-4aee-a480-6875116bb97b",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e2b74cee-c9a3-4aee-a480-6875116bb97b",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 409 of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e2b74cee-c9a3-4aee-a480-6875116bb97b",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170.39",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "tag_dimension": "regulation",
+      "tag_value": "Modernization of Cosmetics Regulation Act of 2022",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "tag_dimension": "regulation",
+      "tag_value": "MoCRA",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_contact_substance_manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "facility_type",
+      "tag_value": "packaging_manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 170.39",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 173",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 174",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 175",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 176",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 177",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 178",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act sec 409(h)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f908c94b-469a-49f9-b6cb-ad2c132bd910",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    }
+  ]
+}

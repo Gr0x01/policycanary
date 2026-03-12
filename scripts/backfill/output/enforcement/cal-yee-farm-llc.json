@@ -1,0 +1,392 @@
+{
+  "company_name": "Cal Yee Farm LLC",
+  "total_actions": 11,
+  "action_types": {
+    "recall": 11
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-01-29",
+    "latest": "2025-01-29"
+  },
+  "items": [
+    {
+      "id": "593e91e4-397e-43d4-ab1f-710bb74ba180",
+      "title": "Cal Yee's Tropical Trail Mix - assorted nuts and dried fruits (8-oz, 1-lb, 2-lb, 5-lb plastic bags)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cbf7bdc6-7b8b-479b-af78-8592a8cfa0c7",
+      "title": "Cal Yee's Butter Toffee Almonds (8-oz, 1-lb plastic bags) Boa Vista Butter Toffee Almonds (6-oz plastic bag)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c6f4dd5a-ca53-4a6b-b7b6-428f9411b956",
+      "title": "Cal Yee's Yogurt Coated Almonds (8-oz, 1-lb)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "904c2f24-3c3b-476b-9cab-c82fbd979ad7",
+      "title": "Cal Yee's Dark Chocolate Walnuts (8-oz plastic bag)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "15c86776-05e4-4fe2-b65d-66bd88ffe76b",
+      "title": "Cal Yee's New Orleans Hot Mix (1-lb plastic bag)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "92749a70-cc5d-4554-a3ab-37b63da6ad60",
+      "title": "Cal Yee's Dark Chocolate Almonds (8-oz plastic bag)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1cfd84e8-b72d-425c-8859-849c8880032e",
+      "title": "Cal Yee Farms Fruit Basket (50-oz)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6ed5b657-cd94-49c9-a679-4695362b0a55",
+      "title": "Cal Yee's Dried Mangos with Chili (8-oz, 1-lb plastic bags)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "86e348e1-2c33-4d2b-b365-3d251b56d453",
+      "title": "Cal Yee's Dark Chocolate Raisins (8-oz plastic bag)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c1fc8d83-3313-4dc6-b9c1-5a3a493929c4",
+      "title": "Cal Yee Farm Dark Chocolate Apricots (8-oz plastic non-flex container) Cal Yee Farms Dark Chocolate Apricots (8-oz plastic non-flex container)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b1d2a035-6709-4ff8-8a9a-467836e8fc69",
+      "title": "Cal Yee's Cajun Sesame Hot Sticks (1-lb plastic bag)",
+      "item_type": "recall",
+      "published_date": "2025-01-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Cal Yee Farm LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "bff5c466-0535-4f15-b7d4-e67590227b6e",
+      "item_id": "15c86776-05e4-4fe2-b65d-66bd88ffe76b",
+      "summary": "Cal Yee's New Orleans Hot Mix is being recalled due to the presence of undeclared wheat and soybean oil, posing a risk to individuals with allergies to these ingredients.",
+      "key_regulations": [],
+      "key_entities": [
+        "Cal Yee's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "37d6b4c8-9feb-4645-86a4-5e446d3cff21",
+      "item_id": "1cfd84e8-b72d-425c-8859-849c8880032e",
+      "summary": "Cal Yee Farms has issued a recall for its 50-oz Fruit Basket due to the presence of undeclared almonds, which is a known allergen.",
+      "key_regulations": [
+        "21 CFR 101.4"
+      ],
+      "key_entities": [
+        "Cal Yee Farms"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "20900f18-662b-4e19-b7d5-91d0d672db9a",
+      "item_id": "593e91e4-397e-43d4-ab1f-710bb74ba180",
+      "summary": "Cal Yee's is recalling its Tropical Trail Mix due to undeclared milk, a known allergen, in the product.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)"
+      ],
+      "key_entities": [
+        "Cal Yee's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "26dc8b16-2b60-4c32-a3bc-a635b57c9621",
+      "item_id": "6ed5b657-cd94-49c9-a679-4695362b0a55",
+      "summary": "Cal Yee's is recalling Dried Mangos with Chili (8-oz, 1-lb plastic bags) due to the presence of undeclared Yellow #5, a color additive that can cause allergic reactions in sensitive individuals.",
+      "key_regulations": [
+        "21 CFR 101.4 (Food; designation of ingredients)"
+      ],
+      "key_entities": [
+        "Cal Yee's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fae721da-6258-4ca1-9482-edcae319ded4",
+      "item_id": "86e348e1-2c33-4d2b-b365-3d251b56d453",
+      "summary": "Cal Yee's is recalling its 8-oz plastic bags of Dark Chocolate Raisins due to the presence of undeclared milk, a major food allergen, which poses a risk to individuals with milk allergies or sensitivities.",
+      "key_regulations": [
+        "21 CFR 101.4"
+      ],
+      "key_entities": [
+        "Cal Yee's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "18f01644-70c0-4ac0-8821-a52eb01c03e7",
+      "item_id": "904c2f24-3c3b-476b-9cab-c82fbd979ad7",
+      "summary": "Cal Yee's Dark Chocolate Walnuts (8-oz plastic bag) have been recalled due to undeclared milk, a major food allergen.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)"
+      ],
+      "key_entities": [
+        "Cal Yee's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0a2e1a9c-39c0-4c84-8fea-3fc64eafd17b",
+      "item_id": "92749a70-cc5d-4554-a3ab-37b63da6ad60",
+      "summary": "Cal Yee's is recalling its 8-oz plastic bags of Dark Chocolate Almonds due to the presence of undeclared milk, which is a common allergen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Cal Yee's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8ef59f31-ec6f-4ac4-9507-95025342ef1c",
+      "item_id": "b1d2a035-6709-4ff8-8a9a-467836e8fc69",
+      "summary": "Cal Yee's is recalling Cajun Sesame Hot Sticks due to undeclared wheat and soybean oil, which are allergens.",
+      "key_regulations": [],
+      "key_entities": [
+        "Cal Yee's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1f4e32df-fef8-4be1-972d-932747f9483f",
+      "item_id": "c1fc8d83-3313-4dc6-b9c1-5a3a493929c4",
+      "summary": "Cal Yee Farm is recalling its Dark Chocolate Apricots (8-oz plastic non-flex container) due to undeclared milk, which is an allergen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Cal Yee Farm"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "853f19e3-bf56-4f91-9980-8cdb17d79531",
+      "item_id": "c6f4dd5a-ca53-4a6b-b7b6-428f9411b956",
+      "summary": "Cal Yee's has recalled its Yogurt Coated Almonds (8-oz, 1-lb) due to undeclared milk, which is a common allergen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Cal Yee's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "874a2ddc-d90e-47b7-983f-9d2eeded5f7b",
+      "item_id": "cbf7bdc6-7b8b-479b-af78-8592a8cfa0c7",
+      "summary": "Cal Yee's and Boa Vista are recalling their Butter Toffee Almonds due to undeclared milk, which is an allergen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Cal Yee's",
+        "Boa Vista"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "15c86776-05e4-4fe2-b65d-66bd88ffe76b",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1cfd84e8-b72d-425c-8859-849c8880032e",
+      "tag_dimension": "product_type",
+      "tag_value": "nut_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1cfd84e8-b72d-425c-8859-849c8880032e",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1cfd84e8-b72d-425c-8859-849c8880032e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "593e91e4-397e-43d4-ab1f-710bb74ba180",
+      "tag_dimension": "product_type",
+      "tag_value": "nut_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "593e91e4-397e-43d4-ab1f-710bb74ba180",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "593e91e4-397e-43d4-ab1f-710bb74ba180",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6ed5b657-cd94-49c9-a679-4695362b0a55",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6ed5b657-cd94-49c9-a679-4695362b0a55",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "86e348e1-2c33-4d2b-b365-3d251b56d453",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "86e348e1-2c33-4d2b-b365-3d251b56d453",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "904c2f24-3c3b-476b-9cab-c82fbd979ad7",
+      "tag_dimension": "product_type",
+      "tag_value": "nut_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "904c2f24-3c3b-476b-9cab-c82fbd979ad7",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "92749a70-cc5d-4554-a3ab-37b63da6ad60",
+      "tag_dimension": "product_type",
+      "tag_value": "nut_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "92749a70-cc5d-4554-a3ab-37b63da6ad60",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b1d2a035-6709-4ff8-8a9a-467836e8fc69",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c1fc8d83-3313-4dc6-b9c1-5a3a493929c4",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c6f4dd5a-ca53-4a6b-b7b6-428f9411b956",
+      "tag_dimension": "product_type",
+      "tag_value": "nut_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c6f4dd5a-ca53-4a6b-b7b6-428f9411b956",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cbf7bdc6-7b8b-479b-af78-8592a8cfa0c7",
+      "tag_dimension": "product_type",
+      "tag_value": "nut_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cbf7bdc6-7b8b-479b-af78-8592a8cfa0c7",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cbf7bdc6-7b8b-479b-af78-8592a8cfa0c7",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    }
+  ]
+}

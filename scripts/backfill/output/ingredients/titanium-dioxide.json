@@ -1,0 +1,309 @@
+{
+  "substance": {
+    "id": "c52a0df5-b900-49e0-88c0-aee7c8fc4dbb",
+    "canonical_name": "TITANIUM DIOXIDE",
+    "unii": "15FIX9V2JP",
+    "matched_names": [
+      "TITANIUM DIOXIDE",
+      "TITANIUM DIOXIDE",
+      "TITANIUM DIOXIDE [EP IMPURITY]",
+      "TITANIUM DIOXIDE [EP MONOGRAPH]",
+      "TITANIUM DIOXIDE [FCC]",
+      "TITANIUM DIOXIDE [HSDB]",
+      "TITANIUM DIOXIDE [IARC]",
+      "TITANIUM DIOXIDE [II]",
+      "TITANIUM DIOXIDE [MART.]",
+      "TITANIUM DIOXIDE [MI]",
+      "TITANIUM DIOXIDE [ORANGE BOOK]"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "c52a0df5-b900-49e0-88c0-aee7c8fc4dbb",
+      "canonical_name": "TITANIUM DIOXIDE",
+      "unii": "15FIX9V2JP",
+      "matched_names": [
+        "TITANIUM DIOXIDE",
+        "TITANIUM DIOXIDE",
+        "TITANIUM DIOXIDE [EP IMPURITY]",
+        "TITANIUM DIOXIDE [EP MONOGRAPH]",
+        "TITANIUM DIOXIDE [FCC]",
+        "TITANIUM DIOXIDE [HSDB]",
+        "TITANIUM DIOXIDE [IARC]",
+        "TITANIUM DIOXIDE [II]",
+        "TITANIUM DIOXIDE [MART.]",
+        "TITANIUM DIOXIDE [MI]",
+        "TITANIUM DIOXIDE [ORANGE BOOK]"
+      ]
+    }
+  ],
+  "item_count": 3,
+  "items": [
+    {
+      "id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "title": "Invisi Smart Technologies UK LTD — Adulterated and Misbranded Products Related to Coronavirus Disease 2019",
+      "item_type": "warning_letter",
+      "published_date": "2021-08-26",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/invisi-smart-technologies-uk-ltd-614512-08242021",
+      "issuing_office": "Center for Devices and Radiological Health",
+      "enforcement_company_name": "Invisi Smart Technologies UK LTD",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "title": "Labeling and Effectiveness Testing: Sunscreen Drug Products for Over-The-Counter Human Use — Small Entity Compliance Guide:  Guidance for Industry",
+      "item_type": "guidance",
+      "published_date": "2012-12-06",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/labeling-and-effectiveness-testing-sunscreen-drug-products-over-counter-human-use-small-entity",
+      "issuing_office": "Center for Drug Evaluation and Research",
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ebb1c896-e92f-41e5-bdcc-af96a2823928",
+      "title": "Mr. Lulu LLC — CGMP/Finished Pharmaceuticals/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2023-06-06",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/mr-lulu-llc-650772-06012023",
+      "issuing_office": " Division of Pharmaceutical Quality Operations IV ",
+      "enforcement_company_name": "Mr. Lulu LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "91ca2011-3589-44b8-a288-d4e7a4432d1d",
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "summary": "The FDA issued a warning letter to Invisi Smart Technologies UK LTD for marketing unapproved medical devices, specifically the 'Invisi Smart Mask,' with claims of mitigating and preventing COVID-19. The products were deemed adulterated and misbranded because they lacked the necessary FDA marketing approval, clearance, or authorization. The company was instructed to cease the sale of these products in the U.S. and was warned that the devices are subject to detention and refusal of admission upon import.",
+      "key_regulations": [
+        "21 U.S.C. § 321(h)",
+        "21 U.S.C. § 351(f)(1)(B)",
+        "21 U.S.C. § 352(o)",
+        "21 U.S.C. § 360(k)"
+      ],
+      "key_entities": [
+        "Invisi Smart Technologies UK LTD",
+        "Center for Devices and Radiological Health"
+      ],
+      "regulatory_action_type": "import_violation",
+      "deadline": null
+    },
+    {
+      "id": "a48f9fa0-540f-4587-b782-7bbcb7995f64",
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "summary": "FDA Center for Drug Evaluation and Research (CDER) issued a Small Entity Compliance Guide for OTC sunscreen drug products. It clarifies labeling rules, SPF and Broad Spectrum testing requirements, and compliance dates for the 2011 sunscreen final rule (21 CFR 201.327). Sunscreens marketed without an NDA/ANDA containing specific active ingredients such as avobenzone, titanium dioxide, or zinc oxide must adhere to standard labeling and in vitro/in vivo testing formats to make claims like 'Broad Spectrum' and 'Water Resistant'.",
+      "key_regulations": [
+        "21 CFR 201.327"
+      ],
+      "key_entities": [
+        "Center for Drug Evaluation and Research",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2013-12-17"
+    },
+    {
+      "id": "d59ad5d5-9096-4946-868e-ec1e459cb6cc",
+      "item_id": "ebb1c896-e92f-41e5-bdcc-af96a2823928",
+      "summary": "The FDA issued a warning letter to Mr. Lulu LLC for significant CGMP violations at its drug manufacturing facility. An inspection revealed the firm failed to conduct release testing for active ingredients (zinc oxide, titanium dioxide) in its OTC sunscreen products, failed to test incoming components, used food-grade instead of USP-grade titanium dioxide, lacked process validation, used a personal kitchen mixer for manufacturing, and did not have a Quality Unit. The company has committed to ceasing drug production and must provide a corrective action plan.",
+      "key_regulations": [
+        "21 CFR 210",
+        "21 CFR 211",
+        "21 CFR 211.165(a)",
+        "21 CFR 211.84(d)(1)",
+        "21 CFR 211.84(d)(2)",
+        "21 CFR 211.100(a)",
+        "21 CFR 211.188",
+        "21 CFR 211.22"
+      ],
+      "key_entities": [
+        "Mr. Lulu LLC",
+        "Roi Chairat"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2023-06-22"
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "product_type",
+      "tag_value": "class_ii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "claims",
+      "tag_value": "COVID-19 prevention",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "claims",
+      "tag_value": "COVID-19 mitigation",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "claims",
+      "tag_value": "antiviral",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "claims",
+      "tag_value": "antibacterial",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "claims",
+      "tag_value": "self-disinfecting",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "regulation",
+      "tag_value": "section 201(h) of the Act, 21 U.S.C. § 321(h)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "regulation",
+      "tag_value": "section 501(f)(1)(B) of the Act, 21 U.S.C. § 351(f)(1)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "regulation",
+      "tag_value": "section 515(a) of the Act, 21 U.S.C. § 360e(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "regulation",
+      "tag_value": "section 520(g) of the Act, 21 U.S.C. § 360j(g)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "regulation",
+      "tag_value": "section 502(o) of the Act, 21 U.S.C. § 352(o)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f",
+      "tag_dimension": "regulation",
+      "tag_value": "section 510(k) of the Act, 21 U.S.C. § 360(k)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "product_type",
+      "tag_value": "suntan_preparations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "claims",
+      "tag_value": "Broad Spectrum",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "claims",
+      "tag_value": "Water Resistant",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "claims",
+      "tag_value": "helps prevent sunburn",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "claims",
+      "tag_value": "decreases the risk of skin cancer and early skin aging caused by the sun",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 201.327",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 201.66",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 207",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 352",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ebb1c896-e92f-41e5-bdcc-af96a2823928",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ebb1c896-e92f-41e5-bdcc-af96a2823928",
+      "tag_dimension": "product_type",
+      "tag_value": "suntan_preparations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ebb1c896-e92f-41e5-bdcc-af96a2823928",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ebb1c896-e92f-41e5-bdcc-af96a2823928",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ebb1c896-e92f-41e5-bdcc-af96a2823928",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ebb1c896-e92f-41e5-bdcc-af96a2823928",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 211",
+      "signal_source": "direct"
+    }
+  ]
+}

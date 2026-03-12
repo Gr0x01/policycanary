@@ -1,0 +1,1005 @@
+{
+  "company_name": "Gracie's Kitchens Inc.",
+  "total_actions": 35,
+  "action_types": {
+    "recall": 35
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2024-05-08",
+    "latest": "2025-01-08"
+  },
+  "items": [
+    {
+      "id": "7d441bb9-aeb7-41e7-83af-f3c7f580ae02",
+      "title": "a.) Wild by Nature brand Fruit Spears; UPC: 85316-10393; 24 oz plastic container b.) Gracie's Kitchen brand Fruit Spears; UPC: 85316-10393; 24 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "064eb654-bac6-4fdd-b8d3-f2fcfb9d1a04",
+      "title": "a.) Gracie's Kitchen brand Diced Carrots; UPC: 85316-10019; 10 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "574a975d-91f5-4c80-9295-2f07a923e6db",
+      "title": "a.) Gracie's Kitchen brand Mango & Blueberry Cup; UPC: 85316-10347; 12 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "af33ec95-dfc5-480c-acbe-774f7287510a",
+      "title": "a.) Wild by Nature brand Sliced Mixed Peppers; UPC: 85316-10102; 12 oz plastic container b.) Gracie's Kitchen brand Sliced Mixed Peppers; UPC: 85316-10007; 12 oz plastic container c.) Gracie's Kitchen",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a18b1ed7-0ea7-4186-a93c-bd437be19b87",
+      "title": "a.) King Kullen brand Papaya Chunks; UPC: 85316-10411; 12 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0183c30e-3824-4a9b-8953-3a710a949ccd",
+      "title": "a.) Gracie's Kitchen brand Broccoli & Cauliflower Florets; UPC: 85316-1009; 12 oz foam tray",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a75f3348-b48a-48f8-aa96-9636c54794a2",
+      "title": "a.) King Kullen brand Fiesta Bowl; UPC: 85316-10201; 64 oz plastic container b.) Wild By Nature brand Fiesta Bowl; UPC: 85316-10201; 64 oz plastic  c.) Gracie's Kitchen brand Fiesta Bowl; UPC: 85316-1",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "477d2ac1-91c9-460b-bafe-f2110f87443b",
+      "title": "a.) King Kullen brand Mango; UPC: 85316-10377; 12 oz plastic container b.) King Kullen brand Mango Spears; UPC: 85316-10387; 16 oz plastic container c.) Wild by Nature brand Mango; UPC: 85316-10377; 1",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a0b357b6-2357-415c-9274-fa0d8456240c",
+      "title": "a.) King Kullen brand Honeydew Slices; UPC 85316-10009; 20 oz foam tray b) Wild By Nature brand Honeydew Slices; UPC: 85316-10009; 20 oz foam tray c.) King Kullen brand Honeydew Chunks; UPC: 85316-103",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3a5a2a70-8195-4d4a-8c33-fde6a3b3c36e",
+      "title": "a.) King Kullen brand Tropical Fruit Cup; UPC: 85316-10384; 16 oz plastic container b.) King Kullen brand Tropical Fruit Cup; UPC: 85316-10403; 12 oz plastic container c.) Gracie's Kitchen brand Tropi",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2c7dff6d-d89a-4a47-930d-4120b9e905c3",
+      "title": "a.) King Kullen brand Watermelon Slices; UPC 85316-10006; 20 oz foam tray b) Wild By Nature brand Watermelon Slices; UPC: 85316-10006; 20 oz foam tray c.) King Kullen brand Watermelon Chunks; UPC: 853",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0856cb61-b933-4010-a8d1-ccf524765e2f",
+      "title": "a.) King Kullen brand Mixed Fruit; UPC: 85316-10376; 12 oz plastic container b.) King Kullen brand Mixed Fruit; UPC: 85316-10385; 16 oz plastic container c.) Wild By Nature brand Mixed Fruit; UPC: 853",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "980e473e-1a5a-4257-b483-b0586431bcc6",
+      "title": "a.) King Kullen brand Mirepoix; UPC: 85316-10167; 20 oz plastic container b.) Gracie's Kitchen brand Mirepoix; UPC: 85316-10167; 20 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "014e8ef7-75c6-417d-9968-2d13cb903660",
+      "title": "a.) King Kullen brand Pineapple Slices; UPC 85316-10007; 20 oz foam tray b) Wild By Nature brand Pineapple Slices; UPC: 85316-10007; 20 oz foam tray c.) King Kullen brand Pineapple Chunks; UPC: 85316-",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c5a61489-cb48-4bee-b9b5-49fbee41f1bb",
+      "title": "a.) King Kullen brand Vegetable Platter; UPC 85316-10005; 44oz plastic container b.) Wild by Nature brand Vegetable Platter; UPC 85316-10005; 44 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "481c2959-0742-44a7-91c2-42cbc34fad79",
+      "title": "a.) King Kullen brand Halo Bowl; UPC: 85316-10390; 28 oz plastic container b.) Wild by Nature brand Halo Bowl; UPC: 85316-10390; 28 oz plastic container c.) Gracie's Kitchen brand Halo Bowl; UPC: 8531",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a640481c-63f3-485c-b68c-88e3dc4c243d",
+      "title": "a.) King Kullen brand Mango Berry; UPC: 85316-10378; 12 oz plastic container b.) Wild By Nature brand Mango Berry; UPC: 85316-10378; 12 oz plastic container c.) Gracie's Kitchen brand Mango Berry; UPC",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "eb8b0a8c-1fd4-47ea-b268-170e48f0eaff",
+      "title": "a.) King Kullen brand Cantaloupe Slices; UPC 85316-10008; 20 oz foam tray b) Wild By Nature brand Cantaloupe Slices; UPC: 85316-10008; 20 oz foam tray c.) King Kullen brand Cantaloupe Chunks; UPC: 853",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "240c4af5-7873-46a4-9df9-0d90925d6d5d",
+      "title": "a.) Gracie's Kitchen brand Cauliflower Florets; UPC: 85316-10012; 12 oz foam tray",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b4efed2d-40d3-4830-b66a-6dac62dece84",
+      "title": "a.) King Kullen brand Fiesta Watermelon Bowl; UPC: 85316-10200; 60 oz plastic container b.) Gracie's Kitchen brand Fiesta Watermelon Bowl; UPC: 85316-10202; 60 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c5be5dfd-3f2b-4d83-8a92-46192f035471",
+      "title": "a.) Gracie's Kitchen brand Broccoli Florets; UPC: 85316-10011; 12 oz foam tray",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "291738fd-ee7b-4ade-abd8-afdfbe44a3c4",
+      "title": "a.) King Kullen brand Watermelon Halo; UPC: 85316-10392; 26 oz plastic container b.) Gracie's Kitchen brand Watermelon Halo; UPC: 85316-10392; 26 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "00a87281-a9e3-47f0-aacf-2d8c6260a9eb",
+      "title": "a.) King Kullen brand Tropical Delight Bowl; UPC: 85316-10391; 28 oz plastic container b.) Gracie's Kitchen brand Tropical Delight Bowl; UPC: 85316-10313; 28 oz plastic container c.) Gracie's Kitchen ",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "837079ec-0760-4b08-9885-38456afa17ce",
+      "title": "a.) King Kullen brand Tri Colored Noodles; UPC: 85316-10146; 14 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7d1b0d05-7e95-4fca-b6d9-ebdd6bf7c15f",
+      "title": "a.) King Kullen brand Stuffed Artichokes; UPC: 85316-10061; 16 oz foam tray b.) Gracie's Kitchen brand Stuffed Artichokes; UPC: 85316-10055; 16 oz foam tray",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b2ece42c-6492-4bbc-b7f0-cfd865fc7315",
+      "title": "a.) WIld by Nature brand Squash Noodles; UPC: 85316-10022; 14 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7225dfd5-a537-477a-a2dc-e9a6e030c2c7",
+      "title": "a.) King Kullen brand Fajita Mix; UPC: 85316-11090; 12 oz plastic container b.) Gracie's Kitchen brand Fajita Mix; UPC: 85316-10002; 12 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "699fb575-8a38-4be5-bb33-fb15d5082a06",
+      "title": "a.) King Kullen brand Brussel Sprout Halves; UPC: 85316-10097; 12 oz plastic container b.) King Kullen brand Brussel Sprouts Shredded; UPC: 85316-10098; 12 oz plastic container c.) Wild by Nature bran",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "072b8a11-3c78-4200-a83e-b6e1df961100",
+      "title": "a.) King Kullen brand Diced White Onion; UPC: 85316-10083; 12 oz plastic container b.) Wild By Nature brand Diced White Onion; UPC: 85316-10085; 12 oz plastic container c.) Gracie's Kitchen brand Dice",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8acdcf86-cffa-43cf-a046-327d992220b4",
+      "title": "a.) King Kullen brand Large Fruit Platter; UPC: 85316-10402; 56 oz plastic container b.) Gracie's Kitchen brand Large Fruit Platter; UPC: 85316-10402; 56 oz plastic container",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c01fdf4e-373b-4729-9db8-5a638635c5a6",
+      "title": "a.) King Kullen brand Fruit Tray; UPC: 85316-10398; 42 oz plastic container b.) King Kullen brand Fruit Tray; UPC: 85316-10399; 1.65 plastic container c.) WIld by Nature Fruit Tray; UPC: 85316-10398; ",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "77256bba-71e5-4031-a02a-efe5f1244aae",
+      "title": "a.) King Kullen brand Peppers & Onions; UPC: 85316-10087; 12 oz plastic container b.) Wild by Nature brand Peppers & Onions; UPC: 85316-10087; 12 oz plastic container c.) Gracie's Kitchen brand Pepper",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "27f0bcf9-9886-4586-8470-9028d02692b4",
+      "title": "a.) King Kullen brand Diced Celery; UPC: 85316-10083; 12 oz plastic container b.) Wild By Nature brand Diced Celery; UPC: 85316-10083; 12 oz plastic container c.) Gracie's Kitchen brand Diced Celery: ",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3da8112d-7dc8-435a-9276-4d9a59c9df5e",
+      "title": "a.) King Kullen brand Diced Red Onion; UPC: 85316-10086; 12 oz plastic container b.) Wild By Nature brand Diced Red Onion; UPC: 85316-10086; 12 oz plastic container c.) Gracie's Kitchen brand Diced Re",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9e478d13-5d6d-42ed-9762-a4643d473426",
+      "title": "King Kullen Broccoli Cutlets with Breadcrumbs and Parmesan; 20oz; oven safe tin package with a clear dome top marked with a UPC Code 0 8531610145 0",
+      "item_type": "recall",
+      "published_date": "2024-05-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gracie's Kitchens Inc.",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "433d7fc4-9d0f-4883-8a3e-6ce9f3a41d92",
+      "item_id": "00a87281-a9e3-47f0-aacf-2d8c6260a9eb",
+      "summary": "King Kullen and Gracie's Kitchen brand Tropical Delight Bowls are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a68f2a18-b41a-44e3-aa53-c20f2bb00dd4",
+      "item_id": "014e8ef7-75c6-417d-9968-2d13cb903660",
+      "summary": "Multiple brands of pineapple products, including slices, chunks, and spears from King Kullen, Wild By Nature, and Gracie's Kitchen, are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4f7a212b-93c1-435d-9ec8-a2717a170710",
+      "item_id": "0183c30e-3824-4a9b-8953-3a710a949ccd",
+      "summary": "Gracie's Kitchen is recalling Broccoli & Cauliflower Florets due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fc83318b-ba08-468e-b18c-b4fc38557a39",
+      "item_id": "064eb654-bac6-4fdd-b8d3-f2fcfb9d1a04",
+      "summary": "Gracie's Kitchen brand Diced Carrots are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3bfd49d0-debe-4b17-a853-7ba83c6d2dfe",
+      "item_id": "072b8a11-3c78-4200-a83e-b6e1df961100",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brand diced white onions are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d9ba8f3e-39fd-4614-a0bd-3bf7fd8ede65",
+      "item_id": "0856cb61-b933-4010-a8d1-ccf524765e2f",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brand Mixed Fruit products are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a82d2bd4-3114-4814-b636-cdcc51df9836",
+      "item_id": "240c4af5-7873-46a4-9df9-0d90925d6d5d",
+      "summary": "Gracie's Kitchen brand Cauliflower Florets are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Gracie's Kitchen",
+        "Listeria monocytogenes"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9f558f3f-0c9f-47cd-a280-1bb1651f724e",
+      "item_id": "27f0bcf9-9886-4586-8470-9028d02692b4",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brand Diced Celery products are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "97eeb871-127c-4b92-86de-47218c1b08bd",
+      "item_id": "291738fd-ee7b-4ade-abd8-afdfbe44a3c4",
+      "summary": "King Kullen and Gracie's Kitchen brand Watermelon Halo products are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "bc4b38b3-4a44-479a-8966-b2315a642d2e",
+      "item_id": "2c7dff6d-d89a-4a47-930d-4120b9e905c3",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brands are recalling various pre-cut watermelon products, including slices, chunks, and spears, due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "db65a220-de90-4d9b-8fbc-b16a0902c139",
+      "item_id": "3a5a2a70-8195-4d4a-8c33-fde6a3b3c36e",
+      "summary": "King Kullen and Gracie's Kitchen brand Tropical Fruit Cups are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1910ec25-2e83-42f2-820d-b386e6b1c4b6",
+      "item_id": "3da8112d-7dc8-435a-9276-4d9a59c9df5e",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brands of Diced Red Onion are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "966dc2d5-49c3-4955-82c4-0d28bcd03192",
+      "item_id": "477d2ac1-91c9-460b-bafe-f2110f87443b",
+      "summary": "Multiple brands of mango and mango products (King Kullen, Wild by Nature, Gracie's Kitchen) are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild by Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1a78d959-0422-493f-a8f5-3b758a9ba3f8",
+      "item_id": "481c2959-0742-44a7-91c2-42cbc34fad79",
+      "summary": "King Kullen, Wild by Nature, and Gracie's Kitchen brand Halo Bowls are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild by Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cefc0c7c-ff89-491c-8ee7-7293b76b6f98",
+      "item_id": "574a975d-91f5-4c80-9295-2f07a923e6db",
+      "summary": "Gracie's Kitchen is recalling its Mango & Blueberry Cup due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f39dc4a7-564f-4dee-808c-2ab1a9edb46b",
+      "item_id": "699fb575-8a38-4be5-bb33-fb15d5082a06",
+      "summary": "King Kullen, Wild by Nature, and Gracie's Kitchen brands of Brussel Sprout Halves and Shredded Brussel Sprouts are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild by Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0db19a09-4374-4d2a-bbb1-342b2ba7cf00",
+      "item_id": "7225dfd5-a537-477a-a2dc-e9a6e030c2c7",
+      "summary": "King Kullen and Gracie's Kitchen brand Fajita Mix products are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c58dd2b0-0aaa-48cf-9409-eeafef73b999",
+      "item_id": "77256bba-71e5-4031-a02a-efe5f1244aae",
+      "summary": "King Kullen, Wild by Nature, and Gracie's Kitchen brands of Peppers & Onions are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild by Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1b08fecc-9e97-4eca-93c2-074348c875dc",
+      "item_id": "7d1b0d05-7e95-4fca-b6d9-ebdd6bf7c15f",
+      "summary": "King Kullen and Gracie's Kitchen brand Stuffed Artichokes are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9cbb0152-0bf9-4ffd-9aa7-d5bd06784065",
+      "item_id": "7d441bb9-aeb7-41e7-83af-f3c7f580ae02",
+      "summary": "Wild by Nature and Gracie's Kitchen brands of Fruit Spears are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wild by Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "267b4572-8b9f-4cd6-bdb4-5530343b0ac9",
+      "item_id": "837079ec-0760-4b08-9885-38456afa17ce",
+      "summary": "King Kullen brand Tri Colored Noodles are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4c2ce6cd-2880-428d-a7e6-540d300a18a3",
+      "item_id": "8acdcf86-cffa-43cf-a046-327d992220b4",
+      "summary": "King Kullen and Gracie's Kitchen brands are recalling their Large Fruit Platters due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "bb2d5a68-7f76-43ab-b8e3-89e9c7f94ebc",
+      "item_id": "980e473e-1a5a-4257-b483-b0586431bcc6",
+      "summary": "King Kullen and Gracie's Kitchen brands of Mirepoix are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7e31c5e7-46ca-4fcd-82ed-b6a22f0736f9",
+      "item_id": "9e478d13-5d6d-42ed-9762-a4643d473426",
+      "summary": "King Kullen is recalling 20oz Broccoli Cutlets with Breadcrumbs and Parmesan due to the presence of undeclared wheat and sesame allergens.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5a20b729-0fed-4dfd-8d18-afe7cdd173c5",
+      "item_id": "a0b357b6-2357-415c-9274-fa0d8456240c",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brand honeydew slices and chunks are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ec5c07c4-f3d8-4c7c-b704-d2e18a2bfdae",
+      "item_id": "a18b1ed7-0ea7-4186-a93c-bd437be19b87",
+      "summary": "King Kullen is recalling its Papaya Chunks due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5e92b7e9-81a0-4f1b-9903-3e8afd1b1054",
+      "item_id": "a640481c-63f3-485c-b68c-88e3dc4c243d",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brands are recalling Mango Berry products in 12 oz plastic containers due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "112358e1-726d-4ebc-b9a8-50a0eb97c0af",
+      "item_id": "a75f3348-b48a-48f8-aa96-9636c54794a2",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brand Fiesta Bowls are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "383318df-3e25-418a-ab9a-bc50365539a3",
+      "item_id": "af33ec95-dfc5-480c-acbe-774f7287510a",
+      "summary": "Wild by Nature and Gracie's Kitchen brand Sliced Mixed Peppers and Diced Tri Color Peppers are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wild by Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c749a63f-c06e-4b7a-a2d7-194f337b5906",
+      "item_id": "b2ece42c-6492-4bbc-b7f0-cfd865fc7315",
+      "summary": "WIld by Nature brand Squash Noodles are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "WIld by Nature"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "361475b7-3bd1-4684-b478-81dce3b71cfa",
+      "item_id": "b4efed2d-40d3-4830-b66a-6dac62dece84",
+      "summary": "King Kullen and Gracie's Kitchen are recalling their Fiesta Watermelon Bowls due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4c80ac85-03c6-41fb-94d4-1fed86bd4802",
+      "item_id": "c01fdf4e-373b-4729-9db8-5a638635c5a6",
+      "summary": "King Kullen, Wild by Nature, and Gracie's Kitchen brand Fruit Trays are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild by Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "83bcbf11-7f71-421d-8293-8c848940ce3e",
+      "item_id": "c5a61489-cb48-4bee-b9b5-49fbee41f1bb",
+      "summary": "King Kullen and Wild by Nature brand Vegetable Platters are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild by Nature"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "053e398d-20ec-42be-843b-93834f7f4697",
+      "item_id": "c5be5dfd-3f2b-4d83-8a92-46192f035471",
+      "summary": "Gracie's Kitchen brand Broccoli Florets are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "67c165c1-5bc9-4ac3-8948-461d0c6255fc",
+      "item_id": "eb8b0a8c-1fd4-47ea-b268-170e48f0eaff",
+      "summary": "King Kullen, Wild By Nature, and Gracie's Kitchen brand cantaloupe slices and chunks are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "King Kullen",
+        "Wild By Nature",
+        "Gracie's Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "00a87281-a9e3-47f0-aacf-2d8c6260a9eb",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "014e8ef7-75c6-417d-9968-2d13cb903660",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0183c30e-3824-4a9b-8953-3a710a949ccd",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "064eb654-bac6-4fdd-b8d3-f2fcfb9d1a04",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "072b8a11-3c78-4200-a83e-b6e1df961100",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0856cb61-b933-4010-a8d1-ccf524765e2f",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "240c4af5-7873-46a4-9df9-0d90925d6d5d",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "27f0bcf9-9886-4586-8470-9028d02692b4",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "291738fd-ee7b-4ade-abd8-afdfbe44a3c4",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2c7dff6d-d89a-4a47-930d-4120b9e905c3",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3a5a2a70-8195-4d4a-8c33-fde6a3b3c36e",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3da8112d-7dc8-435a-9276-4d9a59c9df5e",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "477d2ac1-91c9-460b-bafe-f2110f87443b",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "481c2959-0742-44a7-91c2-42cbc34fad79",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "574a975d-91f5-4c80-9295-2f07a923e6db",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "699fb575-8a38-4be5-bb33-fb15d5082a06",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7225dfd5-a537-477a-a2dc-e9a6e030c2c7",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77256bba-71e5-4031-a02a-efe5f1244aae",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7d1b0d05-7e95-4fca-b6d9-ebdd6bf7c15f",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7d441bb9-aeb7-41e7-83af-f3c7f580ae02",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "837079ec-0760-4b08-9885-38456afa17ce",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8acdcf86-cffa-43cf-a046-327d992220b4",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "980e473e-1a5a-4257-b483-b0586431bcc6",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9e478d13-5d6d-42ed-9762-a4643d473426",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a0b357b6-2357-415c-9274-fa0d8456240c",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a18b1ed7-0ea7-4186-a93c-bd437be19b87",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a640481c-63f3-485c-b68c-88e3dc4c243d",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a75f3348-b48a-48f8-aa96-9636c54794a2",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "af33ec95-dfc5-480c-acbe-774f7287510a",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b2ece42c-6492-4bbc-b7f0-cfd865fc7315",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b4efed2d-40d3-4830-b66a-6dac62dece84",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c01fdf4e-373b-4729-9db8-5a638635c5a6",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c5a61489-cb48-4bee-b9b5-49fbee41f1bb",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c5be5dfd-3f2b-4d83-8a92-46192f035471",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "eb8b0a8c-1fd4-47ea-b268-170e48f0eaff",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    }
+  ]
+}

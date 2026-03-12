@@ -1,0 +1,154 @@
+{
+  "substance": {
+    "id": "f7dfcda5-cbdb-4ea1-b749-354a8bfc83a2",
+    "canonical_name": "Carrageenan",
+    "unii": "5C69YCD2YJ",
+    "matched_names": [
+      "Carrageenan",
+      "AEC CARRAGEENAN GEL",
+      "AEC CARRAGEENAN POWDER",
+      "Carrageenan",
+      "CARRAGEENAN [EP MONOGRAPH]",
+      "CARRAGEENAN [FCC]",
+      "CARRAGEENAN [HSDB]",
+      "CARRAGEENAN [II]",
+      "CARRAGEENAN [MART.]",
+      "CARRAGEENAN [MI]",
+      "CARRAGEENAN [VANDF]"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "f7dfcda5-cbdb-4ea1-b749-354a8bfc83a2",
+      "canonical_name": "Carrageenan",
+      "unii": "5C69YCD2YJ",
+      "matched_names": [
+        "Carrageenan",
+        "AEC CARRAGEENAN GEL",
+        "AEC CARRAGEENAN POWDER",
+        "Carrageenan",
+        "CARRAGEENAN [EP MONOGRAPH]",
+        "CARRAGEENAN [FCC]",
+        "CARRAGEENAN [HSDB]",
+        "CARRAGEENAN [II]",
+        "CARRAGEENAN [MART.]",
+        "CARRAGEENAN [MI]",
+        "CARRAGEENAN [VANDF]"
+      ]
+    },
+    {
+      "id": "b1fa9c8a-c963-4f73-a27e-67309bcdf575",
+      "canonical_name": ".KAPPA.-CARRAGEENAN (30% SULFATE)",
+      "unii": "5SZN0C4IL2",
+      "matched_names": [
+        ".KAPPA.-CARRAGEENAN (30% SULFATE)"
+      ]
+    },
+    {
+      "id": "36ba8ec2-1c82-4a51-b342-f2f39fd246bc",
+      "canonical_name": ".IOTA.-CARRAGEENAN CALCIUM",
+      "unii": "8OZM26QV2C",
+      "matched_names": [
+        ".IOTA.-CARRAGEENAN CALCIUM"
+      ]
+    },
+    {
+      "id": "fcca2f50-462b-4f87-9ef7-73afede06775",
+      "canonical_name": ".LAMBDA.-CARRAGEENAN (30% SULFATE)",
+      "unii": "52F298YW65",
+      "matched_names": [
+        ".LAMBDA.-CARRAGEENAN (30% SULFATE)"
+      ]
+    },
+    {
+      "id": "b7b423a3-0ba8-4ac5-a90f-e55e2fc249ad",
+      "canonical_name": "CARRAGEENAN CALCIUM",
+      "unii": "5C4SQ0541D",
+      "matched_names": [
+        "CARRAGEENAN CALCIUM"
+      ]
+    }
+  ],
+  "item_count": 1,
+  "items": [
+    {
+      "id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "title": "Import Alert 33-15 — �Detention Without Physical Examination of ***Mini-cup Gel and Jelly Candies of Firm Consistency that Present Risk of Choking***�",
+      "item_type": "import_alert",
+      "published_date": "2026-02-27",
+      "source_url": "https://www.accessdata.fda.gov/cms_ia/importalert_105.html",
+      "issuing_office": "ORA",
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "962bf09d-7af8-4d81-9ad3-1702a5a48d0d",
+      "item_id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "summary": "FDA Import Alert 33-15 authorizes the Detention Without Physical Examination (DWPE) of mini-cup gel and jelly candies that contain konjac, carrageenan, agar-agar, or other firm gelling agents. These candies pose a serious choking hazard due to their size, shape, slipperiness, and firm consistency, which prevents them from dissolving easily. Consequently, these products are deemed adulterated and unfit for food. The alert provides a Red List of foreign manufacturers whose shipments are subject to immediate detention upon offering for importation into the U.S.",
+      "key_regulations": [
+        "FD&C Act Section 801(a)(3)",
+        "FD&C Act Section 402(a)(3)"
+      ],
+      "key_entities": [
+        "Jiangsu Winnie Food Co., Ltd.",
+        "Labixiaoxin (Fujian) Foods Industrial Company Limited",
+        "jsl foodstuff co., ltd.",
+        "Alimentos Conica S.A.",
+        "CORPORACION DEL VALLE METROPOLITANO S.A.",
+        "HAN SHUO FOOD CO.,LTD",
+        "Jellico Food Co, Ltd.",
+        "Tsang Lin Industries Corp.",
+        "OII Division of Import Operations",
+        "Human Foods Program Office of Enforcement"
+      ],
+      "regulatory_action_type": "import_violation",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "tag_dimension": "product_type",
+      "tag_value": "gelatins_puddings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "tag_dimension": "product_type",
+      "tag_value": "jams_jellies",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "tag_dimension": "facility_type",
+      "tag_value": "importer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 801(a)(3)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "753b7826-74b7-4925-af33-6062a1864c4c",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 402(a)(3)",
+      "signal_source": "direct"
+    }
+  ]
+}

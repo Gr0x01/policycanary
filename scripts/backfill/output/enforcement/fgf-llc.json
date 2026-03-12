@@ -1,0 +1,1528 @@
+{
+  "company_name": "FGF, LLC",
+  "total_actions": 60,
+  "action_types": {
+    "recall": 60
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-02-12",
+    "latest": "2025-02-12"
+  },
+  "items": [
+    {
+      "id": "94b8f1d0-4e15-4142-b310-65d0b6a08494",
+      "title": "item 8201836 GEN YST RING DONUT ZGT PFD 78x3OZ, NET WT 13.16 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4f993ac1-d617-4566-a329-0485650930f2",
+      "title": "item 8201812 FRENCH CRULLERS 72x 1.6 OZ, NET WT 6.48 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a7528478-bec9-4adb-a670-2d4aff63d69e",
+      "title": "item 8201936 NATURAL & ARTIFICIAL FLAVORED BAVARIAN BISMARK, NET WT 13.16 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1101b264-6596-4ecd-9860-e957bb9e565c",
+      "title": "item 8201839 PBX YST RING DONUT PFD 108x2.12OZ, NET WT 12.88 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5eda72a2-9146-4056-ba35-b1e7d770f5bf",
+      "title": "item 8201844\tGEN GLD PERSIAN DONUT DGH FRZ 132x2.5OZ, NET WT 18.56 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5d1f608f-3159-4372-a0a0-9882175fec8d",
+      "title": "item 8201926 FBALL/EGG SHPD DONUT PFD 78 X 2OZ, NET WT 8.78 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "64d79776-0f83-4237-9aa2-c0970cd36f08",
+      "title": "item 8201919 BAR YST DONUT UNFLD PFD 74x3OZ, NET WT 12.49 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ab53314a-1732-4f4f-91bb-3b5e103df28d",
+      "title": "item 8201846\tGEN CHOC HEX DONUT DGH FRZ 144x1.88OZ, NET WT 15.23 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "498604ca-f9a0-4fe6-bc03-2709f33298fc",
+      "title": "item 8201807 BAVARIAN FILLED DONUT 78x2.75OZ, NET WT 12.07 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2514d64c-fa6c-4544-8f88-08eff1c83e55",
+      "title": "item 8201779 GEN PLN CAKE DONUT RINGS PFD 90x2.5 OZ, NET WT 12.66LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6a570f22-755c-4c04-9c03-328fbfcc2118",
+      "title": "item 8201927 APPLE FRITTER DONUT PFD 70 X 3.5OZ, NET WT 13.78 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ee92affb-2635-445a-8acc-b75eec223364",
+      "title": "item 8201870\tGEN BAR FLUFF DONUT ZGT PFD 78x3OZ, NET WT 13.16 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2d21ca1d-615c-4d43-a3e2-e9371224c033",
+      "title": "item 8201920 APPLE CRISP CK DONUT PFD 78x3OZ, NET WT 13.16 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "eed86dce-8722-4ab2-b071-f49a47919034",
+      "title": "item 8202891 PLAIN VANILLA MINI CAKE DONUT RING BULK 240X1.25OZ, NET WT 16.88 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3a8b3374-611d-4b17-b60d-f0df249bdcb4",
+      "title": "item 8201860 JUST BAKED SOUR CREAM CAKE DONUTS 120x2.5 OZ, NET WT 18.75 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "20feac0e-1323-4bfa-97ce-b3b387e9a27b",
+      "title": "item 8201921 FRENCH CRULLER PFD 72x1.6 OZ, NET WT 6.48 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f043f9db-4d20-46e2-b268-9b459c983a33",
+      "title": "item 8201806 RASPBERRY FILLED DONUT 78x2.75OZ, NET WT 12.07 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8e70d6dd-82af-4631-a4d7-5fe70005aa9d",
+      "title": "item 8201871\tESL CINNAMON FRIES 60x3OZ, NET WT 10.13 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8bca839d-957a-4d4b-8553-c50e20541bcd",
+      "title": "item 8201868\tGEN TWIST DONUT ZGT PFD 84x1.75 OZ, NET WT 12.93 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fb8cb1b4-e2cd-419b-81b2-dffa08d52c96",
+      "title": "item 8201858\tJUST BAKED YEAST SHELLS 120x1.88 OZ, NET WT 14.10 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "16758891-ce22-4023-b60f-7f382f9f4000",
+      "title": "item 8201809 PLAIN CAKE DONUT 108x2.25 OZ, NET WT 13.67 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "388e5c31-0434-483f-8b00-f3d7c7f66988",
+      "title": "item 8201905 JUST BAKED BLUEBERRY CAKE RING NATURALLY AND ARTIFICIALLY FLAVORED 135x2.5OZ, NET WT 21.09 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8a4bab06-c576-4669-848f-4dcf78ad180a",
+      "title": "item 8201834 JUST BAKED YEAST RING 120x1.88 OZ, NET WT 14.10 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "34fa1a3a-1b6f-4a92-a8a5-93798ec178b4",
+      "title": "item 8201886 FLAVOREDSOUR CREAM CAKE DONUT 72x3OZ, NET WT 12.15 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0ff8004d-1e81-42a7-b902-c3e665d0c144",
+      "title": "item 8201866\tJUST BAKED PUMPKIN CAKE RINGS 144x2.45 OZ, NET WT 22.05 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "13d3bc9b-01ac-4c29-a587-90f6d357441e",
+      "title": "item 8201922 FLAVORED RASPBERRY BISMARK PFD 3OZ, NET WT 13.16 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ca87b7bb-b7de-4b95-b976-b7bf054069da",
+      "title": "item 8201906 JUST BAKED CAKE STICKS 116x2.9 OZ, NET WT 21.03 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "16884c4d-d00c-452a-a966-9bf02448a906",
+      "title": "item 8201816 NATURALLY AND ARTIFICIALLY FLAVORED CHEESE PACZKI 66x4OZ, NET WT 14.85 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b620095a-4f37-4640-83c5-1fe7362cceee",
+      "title": "item 8201842\tGEN BAR DONUT DGH FRZ 132x2OZ, NET WT 14.85 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fcaa7358-2a7e-4d7e-b087-5a4ce15fc288",
+      "title": "item 8201848\tGEN HEX RG DONUT DGH FRZ 96x2.75OZ, NET WT 14.86 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "388d8668-83b2-4031-8061-ed7e3779c0e8",
+      "title": "item 8201865\tJUST BAKED APPLE FRITTERS 72x3OZ, NET WT 13.50 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3fb7ddc6-979b-4d56-8b99-bf49dfe6c7c5",
+      "title": "item 8201900 APPLE FRITTER DONUT ZGT PFD 54x3OZ, NET WT 9.11 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c53b8acf-2a6f-4bfd-966c-07db5a5ec939",
+      "title": "item 8201780 GEN CHOC CK DONUT RINGS PFD 90x2.5OZ, NET WT12.66LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2032209c-eaf8-4934-a2b4-c589ee6f89ee",
+      "title": "item 8201843\tGEN BISMARK DONUT DGH FRZ 144x2OZ, NET WT 16.20 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c7e1089a-3461-425a-aee5-3bb8d7ac44ce",
+      "title": "item 8201904 JUST BAKED CHOCOLATE CAKE RINGS ARTIFICIALLY FLAVORED 144x2.5OZ, NET WT 22.5 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "224984cb-7ac2-41f9-853c-7a297dc41586",
+      "title": "item 8201867\tJUST BAKED PUMPKIN CAKE MUNCHKINS 440x0.47 OZ, NET WT 12.93 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9aee1bcc-7b07-4214-aa77-eb7523203cd0",
+      "title": "item 8201835 JUST BAKED YEAST MUNCHKINS 350x0.39 OZ, NET WT 8.49 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c2ca5c3f-3fe1-45f9-9e25-6d6e502ed486",
+      "title": "item 8201817 APPLE FILLED PACZKI  66x4 OZ, NET WT 14.85 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d26821b3-2b3a-4152-946f-70b2661b332a",
+      "title": "item 8201845\tGEN RG HEX DONUT DGH FRZ 144x1.88OZ, NET WT 15.23 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "68dd7109-80a1-451c-85c3-2b4caa535e3b",
+      "title": "item 8201810 FLUFF BAR 78x2.75 OZ, NET WT 12.07 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e3f3b200-d114-4fd6-b658-e23d7bbac801",
+      "title": "item 8201864\tJUST BAKED COFFEE ROLLS 78x3OZ, NET WT 14.62 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2d05baba-c887-4f7f-b4df-4448a2fb75ca",
+      "title": "item 8201859\tJUST BAKED CAKE RING 144x2.45 OZ, NET WT 22.05 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bb798459-f591-4840-b5fe-61c8633d3611",
+      "title": "item 8201811 OLD FASHIONED NATURALLY AND ARTIFICIALLY FLAVORED SOUR CREAM CAKE DONUTS 90x2.5 OZ, NET WT 12.66 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bd222a2c-6ce6-477e-9139-1362695e9200",
+      "title": "item 8201882 JUST BAKED FRENCH CRULLERS 96x1.6 OZ, NET WT 9.60 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "07031e9f-069c-4546-822b-06d863b54568",
+      "title": "item 8201863\tJUST BAKED ECLAIRS 84x2.36 OZ, NET WT 12.39 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ccf702f9-b577-4407-bb34-472dee017d73",
+      "title": "item 8201879 RING RND DONUT ZGT PDF 96x2.25 OZ, NET WT 12.15 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d25ab404-f526-4320-a8b0-47984effd078",
+      "title": "item 8201872\tBAV CRM BISMARK DONUT PFD 60x3.85OZ, NET WT 12.99 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d482b4cd-852f-4f68-864f-a6c6bc361473",
+      "title": "item 8201923 BAV CRM BAR DONUT PFD 78 X 3OZ, NET WT 13.16 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c12ed9b7-c712-4c12-b18d-34fc213f2db5",
+      "title": "item 8201804 Yeast Ring Donut 108x2.15OZ, NET WT 13.06 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "02e3b713-0bb4-4212-b86a-dd581fe50d23",
+      "title": "item 8201876\tPMPKN SHAPE DONUT ZGT PFD 84x1.75OZ, NET WT 8.27 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "86a51df0-b276-4b1b-8ea5-03b4befd5209",
+      "title": "item 8201808 PERSIAN DONUT 78x2.25 OZ, NET WT 9.87 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "aabb5c42-9999-455b-8f05-54b4d137be46",
+      "title": "item 8201884 PERSIAN YST DONUT PFD 46x3.5 OZ, NET WT 9.06 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e9eeebc4-c8b9-4b5f-b6d6-cb1355f0295c",
+      "title": "item 8201841\tGEN PERSIAN DONUT DGH FRZ 168x2OZ, NET WT 18.90 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fcaed968-f6fe-4984-813b-a9fed05154be",
+      "title": "item 8201805 APPLE FRITTER 60x2.5 OZ, NET WT 8.44 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4be4d2a2-7e45-4f3a-a4f7-b52ea0dde18e",
+      "title": "item 8201901 JUST BAKED APPLE CIDER CAKE RINGS WITH NATURAL FLAVORS 144x2.5OZ, NET WT 22.5 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "930342a2-d46a-4ea4-93c0-f1f9cf0d7f98",
+      "title": "item 8202731 UNFLD BISMARK DONUT PFD 78X3OZ, NET WT 13.16 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "18518381-a704-4744-ad40-ac342aa875c7",
+      "title": "item 8201815 NATURALLY AND ARTIFICIALLY FLAVORED RASPBERRY PACZKI 66x4 OZ, NET WT 14.85 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b274ea59-e688-41e3-9a18-7256ec360685",
+      "title": "item 8201813 DUAL FILLED NATURALLY & ARTIFICIALLY FLAVORED CHOCOLATE AND BAVARIAN FILLED YEAST RING DONUT 80x3.1OZ, NET WT 13.97 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bfd83465-3b95-4d73-8cf1-f8af9f681eaa",
+      "title": "item 8201814 BAVARIAN PACZKI 66x4OZ, NET WT 14.85 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "634420a9-143a-4f5b-8891-e9445eb0c2de",
+      "title": "item 8201883 UNFLD BISMARK DONUT PFD 57x2.75OZ, NET WT 8.82 LB",
+      "item_type": "recall",
+      "published_date": "2025-02-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "FGF, LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "5e652f96-b492-405c-85cb-12be674f6005",
+      "item_id": "02e3b713-0bb4-4212-b86a-dd581fe50d23",
+      "summary": "PMPKN SHAPE DONUT ZGT PFD products are being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4a642bcf-64ae-40ed-b53f-58c715534351",
+      "item_id": "07031e9f-069c-4546-822b-06d863b54568",
+      "summary": "Recall of Just Baked Eclairs due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3243f7f4-0075-411e-8cee-23cfde765541",
+      "item_id": "0ff8004d-1e81-42a7-b902-c3e665d0c144",
+      "summary": "A recall has been issued for JUST BAKED PUMPKIN CAKE RINGS due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0decbbee-119c-4384-a4ea-d903371bbb10",
+      "item_id": "1101b264-6596-4ecd-9860-e957bb9e565c",
+      "summary": "Recall of PBX YST RING DONUT PFD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b71d0b0f-d478-4662-a620-8c51ea0a802f",
+      "item_id": "13d3bc9b-01ac-4c29-a587-90f6d357441e",
+      "summary": "A flavored raspberry bismark product (NET WT 13.16 LB) is being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "df6ce051-3aa2-410c-bbed-d6289813b581",
+      "item_id": "16758891-ce22-4023-b60f-7f382f9f4000",
+      "summary": "Plain cake donuts are being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "02ad54f5-132e-4e5e-a4f0-a35150e791c0",
+      "item_id": "16884c4d-d00c-452a-a966-9bf02448a906",
+      "summary": "A recall has been issued for Naturally and Artificially Flavored Cheese Paczki (item 8201816, 66x4OZ, NET WT 14.85 LB) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "NATURALLY AND ARTIFICIALLY FLAVORED CHEESE PACZKI"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2c796624-38c0-47d9-b003-f0a0e3f1399b",
+      "item_id": "18518381-a704-4744-ad40-ac342aa875c7",
+      "summary": "A recall has been issued for Naturally and Artificially Flavored Raspberry Paczki due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "887d4958-6ee5-4050-bd66-2ab2e3c4a1b5",
+      "item_id": "2032209c-eaf8-4934-a2b4-c589ee6f89ee",
+      "summary": "A recall has been issued for 'GEN BISMARK DONUT DGH FRZ' products due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "52116093-1580-4a86-acfb-20c83ab5d5c0",
+      "item_id": "20feac0e-1323-4bfa-97ce-b3b387e9a27b",
+      "summary": "French Cruller pastries (item 8201921 FRENCH CRULLER PFD 72x1.6 OZ, NET WT 6.48 LB) are being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b130206b-b280-42e5-b522-7ba8a5806067",
+      "item_id": "224984cb-7ac2-41f9-853c-7a297dc41586",
+      "summary": "A recall has been issued for JUST BAKED PUMPKIN CAKE MUNCHKINS due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "85216f8b-a89c-4ea3-bced-30092ea75245",
+      "item_id": "2514d64c-fa6c-4544-8f88-08eff1c83e55",
+      "summary": "Recall of GEN PLN CAKE DONUT RINGS due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9cbfc5f6-058c-4963-b447-f1cae6536f41",
+      "item_id": "2d05baba-c887-4f7f-b4df-4448a2fb75ca",
+      "summary": "A recall has been issued for JUST BAKED CAKE RING due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d5cae370-9f50-4aa8-899a-5e2cc4a1bf10",
+      "item_id": "2d21ca1d-615c-4d43-a3e2-e9371224c033",
+      "summary": "A recall has been issued for APPLE CRISP CK DONUT PFD (item 8201920) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4358a586-7f5c-4741-8f3d-405f755aac75",
+      "item_id": "34fa1a3a-1b6f-4a92-a8a5-93798ec178b4",
+      "summary": "A recall is initiated for FLAVOREDSOUR CREAM CAKE DONUT products due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ae10b86d-d21f-43d9-9288-b46f8c96a91b",
+      "item_id": "388d8668-83b2-4031-8061-ed7e3779c0e8",
+      "summary": "A recall has been issued for JUST BAKED APPLE FRITTERS (item 8201865, NET WT 13.50 LB) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4e0aea3d-8dee-471d-a0a7-acc6e5b0a94e",
+      "item_id": "388e5c31-0434-483f-8b00-f3d7c7f66988",
+      "summary": "Recall of JUST BAKED BLUEBERRY CAKE RING products due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6b1507df-b140-4d84-b8f0-86299b7cd7ff",
+      "item_id": "3a8b3374-611d-4b17-b60d-f0df249bdcb4",
+      "summary": "Recall of JUST BAKED SOUR CREAM CAKE DONUTS due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6163b833-f681-4d3d-a5ad-c47b6b4b14a9",
+      "item_id": "3fb7ddc6-979b-4d56-8b99-bf49dfe6c7c5",
+      "summary": "A recall has been issued for 'APPLE FRITTER DONUT ZGT PFD 54x3OZ' due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "40b78f24-1c8c-4385-b847-b3c014a7b750",
+      "item_id": "498604ca-f9a0-4fe6-bc03-2709f33298fc",
+      "summary": "A recall has been issued for BAVARIAN FILLED DONUTS due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b4d7b500-be9c-4a45-842f-a794677d4eeb",
+      "item_id": "4be4d2a2-7e45-4f3a-a4f7-b52ea0dde18e",
+      "summary": "Recall of JUST BAKED APPLE CIDER CAKE RINGS due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f8cee23c-b327-4d7f-8ae2-f51b84f755a7",
+      "item_id": "4f993ac1-d617-4566-a329-0485650930f2",
+      "summary": "FRENCH CRULLERS (72x 1.6 OZ, NET WT 6.48 LB) are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "afb242e3-2594-440f-9f0f-5ac50ff53764",
+      "item_id": "5d1f608f-3159-4372-a0a0-9882175fec8d",
+      "summary": "A recall has been issued for 'FBALL/EGG SHPD DONUT PFD' products due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9aa1a31e-209c-4a14-842b-f454abafbdbf",
+      "item_id": "5eda72a2-9146-4056-ba35-b1e7d770f5bf",
+      "summary": "A recall has been issued for GEN GLD PERSIAN DONUT DGH FRZ due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1d06c66a-4a87-4547-8fd1-4b097e19e5f7",
+      "item_id": "634420a9-143a-4f5b-8891-e9445eb0c2de",
+      "summary": "A recall has been issued for UNFLD BISMARK DONUT PFD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2dd83b66-4291-4831-b3b4-625a03fe258b",
+      "item_id": "64d79776-0f83-4237-9aa2-c0970cd36f08",
+      "summary": "A recall has been issued for BAR YST DONUT UNFLD PFD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b0d31671-241f-47b0-b74f-8e6b07c31b8c",
+      "item_id": "68dd7109-80a1-451c-85c3-2b4caa535e3b",
+      "summary": "Recall of FLUFF BAR products due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5be38de4-77ab-47fb-8981-0cf869b0b6c3",
+      "item_id": "6a570f22-755c-4c04-9c03-328fbfcc2118",
+      "summary": "A recall has been issued for 'APPLE FRITTER DONUT PFD 70 X 3.5OZ' due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "df1dc02e-bd58-4251-9840-608ccb8e14a5",
+      "item_id": "86a51df0-b276-4b1b-8ea5-03b4befd5209",
+      "summary": "Recall of PERSIAN DONUT (78x2.25 OZ, NET WT 9.87 LB) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "097c55d8-9664-42ec-b20f-c4c34e8d3d50",
+      "item_id": "8a4bab06-c576-4669-848f-4dcf78ad180a",
+      "summary": "A recall has been initiated for JUST BAKED YEAST RING products due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "JUST BAKED"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "53cd95a1-327c-4568-9160-fab6085e4da8",
+      "item_id": "8bca839d-957a-4d4b-8553-c50e20541bcd",
+      "summary": "A donut product (GEN TWIST DONUT ZGT PFD) is being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1d56cf15-41bd-4d69-bfcb-41d0165fc0d1",
+      "item_id": "8e70d6dd-82af-4631-a4d7-5fe70005aa9d",
+      "summary": "A product identified as 'ESL CINNAMON FRIES 60x3OZ, NET WT 10.13 LB' is being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "03d02f7b-de53-43d2-8077-2cb6a3bb409c",
+      "item_id": "930342a2-d46a-4ea4-93c0-f1f9cf0d7f98",
+      "summary": "A recall has been issued for UNFLD BISMARK DONUT PFD (78X3OZ, NET WT 13.16 LB) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "98f953e3-c3e4-45c8-9c34-1b6b7bf6ebcc",
+      "item_id": "94b8f1d0-4e15-4142-b310-65d0b6a08494",
+      "summary": "A recall has been issued for GEN YST RING DONUT due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6e19a1e0-010d-4f8e-819c-bd4bb811629e",
+      "item_id": "9aee1bcc-7b07-4214-aa77-eb7523203cd0",
+      "summary": "JUST BAKED YEAST MUNCHKINS (350x0.39 OZ, NET WT 8.49 LB, item 8201835) are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fc8b9ffb-7348-4b18-a485-337dd77e55f3",
+      "item_id": "a7528478-bec9-4adb-a670-2d4aff63d69e",
+      "summary": "NATURAL & ARTIFICIAL FLAVORED BAVARIAN BISMARK is being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "NATURAL & ARTIFICIAL FLAVORED BAVARIAN BISMARK"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "576d692f-fa97-4a62-88da-8b6c39993cfd",
+      "item_id": "aabb5c42-9999-455b-8f05-54b4d137be46",
+      "summary": "A recall has been issued for PERSIAN YST DONUT PFD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b3ddbdd4-bdf7-461e-b3f2-4144cb45fb76",
+      "item_id": "ab53314a-1732-4f4f-91bb-3b5e103df28d",
+      "summary": "A recall has been initiated for GEN CHOC HEX DONUT DGH FRZ (Item 8201846) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "35d0f32c-687b-4a4a-a914-9f4e59823351",
+      "item_id": "b274ea59-e688-41e3-9a18-7256ec360685",
+      "summary": "A recall has been issued for DUAL FILLED NATURALLY & ARTIFICIALLY FLAVORED CHOCOLATE AND BAVARIAN FILLED YEAST RING DONUTS (80x3.1OZ, NET WT 13.97 LB) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "eab4b2c5-1fec-4505-805e-f3dc9fa470ff",
+      "item_id": "b620095a-4f37-4640-83c5-1fe7362cceee",
+      "summary": "Recall of GEN BAR DONUT DGH FRZ (Item 8201842, NET WT 14.85 LB) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "93570804-87d7-484f-abe4-a96d7bc50b05",
+      "item_id": "bb798459-f591-4840-b5fe-61c8633d3611",
+      "summary": "A recall has been issued for OLD FASHIONED NATURALLY AND ARTIFICIALLY FLAVORED SOUR CREAM CAKE DONUTS due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ab89d42d-a5ce-434e-8e1d-c145b7c21a6d",
+      "item_id": "bd222a2c-6ce6-477e-9139-1362695e9200",
+      "summary": "JUST BAKED FRENCH CRULLERS are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "10e9f1ea-5712-4c60-97ca-bad17305dc95",
+      "item_id": "bfd83465-3b95-4d73-8cf1-f8af9f681eaa",
+      "summary": "A recall has been issued for BAVARIAN PACZKI 66x4OZ, NET WT 14.85 LB, due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "49c4fa11-ad27-4568-9efd-95df8acbacbe",
+      "item_id": "c12ed9b7-c712-4c12-b18d-34fc213f2db5",
+      "summary": "A recall has been issued for Yeast Ring Donuts (item 8201804, NET WT 13.06 LB) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "92c4679f-3dba-4076-be27-1e1d4dedcb4a",
+      "item_id": "c2ca5c3f-3fe1-45f9-9e25-6d6e502ed486",
+      "summary": "Recall of APPLE FILLED PACZKI due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "08769767-7ed2-43c4-a6fe-395677d29ac1",
+      "item_id": "c53b8acf-2a6f-4bfd-966c-07db5a5ec939",
+      "summary": "Recall of GEN CHOC CK DONUT RINGS PFD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7d57a7b4-95df-4894-af1d-d5d541ebc20e",
+      "item_id": "c7e1089a-3461-425a-aee5-3bb8d7ac44ce",
+      "summary": "A recall has been issued for Just Baked Chocolate Cake Rings due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "JUST BAKED"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b65c439c-80a8-4a35-8bb9-e0b21b5905bb",
+      "item_id": "ca87b7bb-b7de-4b95-b976-b7bf054069da",
+      "summary": "Just Baked Cake Sticks are being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "JUST BAKED"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5d8f80af-6a26-4381-b50f-7315d1b4d4f2",
+      "item_id": "ccf702f9-b577-4407-bb34-472dee017d73",
+      "summary": "A recall has been issued for RING RND DONUT ZGT PDF 96x2.25 OZ (NET WT 12.15 LB) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "82365099-5a44-45a3-8c05-de5453eb22cb",
+      "item_id": "d25ab404-f526-4320-a8b0-47984effd078",
+      "summary": "Recall of BAV CRM BISMARK DONUT PFD due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e96f2bf1-aed0-478b-9d50-57c3594d079b",
+      "item_id": "d26821b3-2b3a-4152-946f-70b2661b332a",
+      "summary": "Frozen donut dough (GEN RG HEX DONUT DGH FRZ) is being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "80a3d0c7-472f-48a4-82c8-7b3995adb576",
+      "item_id": "d482b4cd-852f-4f68-864f-a6c6bc361473",
+      "summary": "Recall of BAV CRM BAR DONUT products due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c14e68ad-f9b5-4c36-aeaa-d177789065e7",
+      "item_id": "e3f3b200-d114-4fd6-b658-e23d7bbac801",
+      "summary": "JUST BAKED COFFEE ROLLS are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8166ac95-bc93-4829-8ade-cfa2e31b9a83",
+      "item_id": "e9eeebc4-c8b9-4b5f-b6d6-cb1355f0295c",
+      "summary": "A recall has been issued for GEN PERSIAN DONUT DGH FRZ 168x2OZ, NET WT 18.90 LB, due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e6d82b58-0944-4749-8fe1-d8a1863e24fc",
+      "item_id": "ee92affb-2635-445a-8acc-b75eec223364",
+      "summary": "A donut product (GEN BAR FLUFF DONUT ZGT PFD) is being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "37ed144d-296b-474d-b7c2-49dc2a862dc5",
+      "item_id": "eed86dce-8722-4ab2-b071-f49a47919034",
+      "summary": "A recall has been issued for PLAIN VANILLA MINI CAKE DONUT RING BULK due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d873bce2-3a2a-4ff9-8b5c-93953e75b6de",
+      "item_id": "f043f9db-4d20-46e2-b268-9b459c983a33",
+      "summary": "Raspberry Filled Donuts (item 8201806, NET WT 12.07 LB) are being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "43fcbfd5-87bb-47f9-b783-e8df9ae51237",
+      "item_id": "fb8cb1b4-e2cd-419b-81b2-dffa08d52c96",
+      "summary": "JUST BAKED YEAST SHELLS are being recalled due to the potential for contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "90135885-5efd-41da-bbfb-79743e3842f2",
+      "item_id": "fcaa7358-2a7e-4d7e-b087-5a4ce15fc288",
+      "summary": "Recall of frozen donuts (GEN HEX RG DONUT DGH FRZ) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ecfb0281-ca4e-4e8e-add0-b4a63a4c56d0",
+      "item_id": "fcaed968-f6fe-4984-813b-a9fed05154be",
+      "summary": "Recall of APPLE FRITTER products due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "02e3b713-0bb4-4212-b86a-dd581fe50d23",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "07031e9f-069c-4546-822b-06d863b54568",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0ff8004d-1e81-42a7-b902-c3e665d0c144",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1101b264-6596-4ecd-9860-e957bb9e565c",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "13d3bc9b-01ac-4c29-a587-90f6d357441e",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "16758891-ce22-4023-b60f-7f382f9f4000",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "16884c4d-d00c-452a-a966-9bf02448a906",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "18518381-a704-4744-ad40-ac342aa875c7",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2032209c-eaf8-4934-a2b4-c589ee6f89ee",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "20feac0e-1323-4bfa-97ce-b3b387e9a27b",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "224984cb-7ac2-41f9-853c-7a297dc41586",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2514d64c-fa6c-4544-8f88-08eff1c83e55",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d05baba-c887-4f7f-b4df-4448a2fb75ca",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d21ca1d-615c-4d43-a3e2-e9371224c033",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "34fa1a3a-1b6f-4a92-a8a5-93798ec178b4",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "388d8668-83b2-4031-8061-ed7e3779c0e8",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "388e5c31-0434-483f-8b00-f3d7c7f66988",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3a8b3374-611d-4b17-b60d-f0df249bdcb4",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3fb7ddc6-979b-4d56-8b99-bf49dfe6c7c5",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "498604ca-f9a0-4fe6-bc03-2709f33298fc",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4be4d2a2-7e45-4f3a-a4f7-b52ea0dde18e",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f993ac1-d617-4566-a329-0485650930f2",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5d1f608f-3159-4372-a0a0-9882175fec8d",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5eda72a2-9146-4056-ba35-b1e7d770f5bf",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "634420a9-143a-4f5b-8891-e9445eb0c2de",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "64d79776-0f83-4237-9aa2-c0970cd36f08",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "68dd7109-80a1-451c-85c3-2b4caa535e3b",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6a570f22-755c-4c04-9c03-328fbfcc2118",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "86a51df0-b276-4b1b-8ea5-03b4befd5209",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8a4bab06-c576-4669-848f-4dcf78ad180a",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8bca839d-957a-4d4b-8553-c50e20541bcd",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8e70d6dd-82af-4631-a4d7-5fe70005aa9d",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "930342a2-d46a-4ea4-93c0-f1f9cf0d7f98",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "94b8f1d0-4e15-4142-b310-65d0b6a08494",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9aee1bcc-7b07-4214-aa77-eb7523203cd0",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a7528478-bec9-4adb-a670-2d4aff63d69e",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aabb5c42-9999-455b-8f05-54b4d137be46",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ab53314a-1732-4f4f-91bb-3b5e103df28d",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b274ea59-e688-41e3-9a18-7256ec360685",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b620095a-4f37-4640-83c5-1fe7362cceee",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bb798459-f591-4840-b5fe-61c8633d3611",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bd222a2c-6ce6-477e-9139-1362695e9200",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bfd83465-3b95-4d73-8cf1-f8af9f681eaa",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c12ed9b7-c712-4c12-b18d-34fc213f2db5",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2ca5c3f-3fe1-45f9-9e25-6d6e502ed486",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c53b8acf-2a6f-4bfd-966c-07db5a5ec939",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c7e1089a-3461-425a-aee5-3bb8d7ac44ce",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca87b7bb-b7de-4b95-b976-b7bf054069da",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ccf702f9-b577-4407-bb34-472dee017d73",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d25ab404-f526-4320-a8b0-47984effd078",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d26821b3-2b3a-4152-946f-70b2661b332a",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d482b4cd-852f-4f68-864f-a6c6bc361473",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e3f3b200-d114-4fd6-b658-e23d7bbac801",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e9eeebc4-c8b9-4b5f-b6d6-cb1355f0295c",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee92affb-2635-445a-8acc-b75eec223364",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "eed86dce-8722-4ab2-b071-f49a47919034",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f043f9db-4d20-46e2-b268-9b459c983a33",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fb8cb1b4-e2cd-419b-81b2-dffa08d52c96",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fcaa7358-2a7e-4d7e-b087-5a4ce15fc288",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fcaed968-f6fe-4984-813b-a9fed05154be",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    }
+  ]
+}

@@ -1,0 +1,529 @@
+{
+  "substance": {
+    "id": "2a0727bf-8bcb-422c-b566-66241b317808",
+    "canonical_name": "D&C RED NO. 33 ALUMINUM LAKE",
+    "unii": "L3FT3LUT29",
+    "matched_names": [
+      "D&C RED NO. 33 ALUMINUM LAKE",
+      "D&C RED NO. 33 ALUMINUM LAKE"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "2a0727bf-8bcb-422c-b566-66241b317808",
+      "canonical_name": "D&C RED NO. 33 ALUMINUM LAKE",
+      "unii": "L3FT3LUT29",
+      "matched_names": [
+        "D&C RED NO. 33 ALUMINUM LAKE",
+        "D&C RED NO. 33 ALUMINUM LAKE"
+      ]
+    },
+    {
+      "id": "11e75491-1720-4dab-9b12-43a33446338a",
+      "canonical_name": "D&C RED NO. 36",
+      "unii": "OE8ZA0KN9Z",
+      "matched_names": [
+        "D&C RED NO. 36",
+        "D&C RED NO. 36",
+        "D&C RED NO. 36 [II]",
+        "DC RED NO. 36"
+      ]
+    },
+    {
+      "id": "94948a6f-966d-42c1-ab4c-a40fc18c0669",
+      "canonical_name": "FD&C Red No. 3 aluminum lake",
+      "unii": "WXF83K327F",
+      "matched_names": [
+        "FD&C Red No. 3 aluminum lake",
+        "FD&C Red No. 3 aluminum lake"
+      ]
+    },
+    {
+      "id": "47132f0e-5831-49d4-9c3c-d07120e60129",
+      "canonical_name": "D&C RED NO. 33",
+      "unii": "9DBA0SBB0L",
+      "matched_names": [
+        "D&C RED NO. 33",
+        "D.C. RED NO. 33",
+        "D&C RED NO. 33",
+        "D&C RED NO. 33 [II]",
+        "DC RED NO. 33",
+        "FD&C RED NO. 33 (DELISTED)"
+      ]
+    },
+    {
+      "id": "ddaf3e89-be43-4b44-b969-beaa09e3f1d7",
+      "canonical_name": "FD&C RED NO. 3",
+      "unii": "PN2ZH5LOQY",
+      "matched_names": [
+        "FD&C RED NO. 3"
+      ]
+    }
+  ],
+  "item_count": 10,
+  "items": [
+    {
+      "id": "089ca876-491f-4c29-a18f-2878e7c775b0",
+      "title": "Great Value Diced Peaches, Mandarin Segments, & Cherry Mixed Fruits Variety Pack, 4 oz, 12 Pack",
+      "item_type": "recall",
+      "published_date": "2024-10-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Walmart Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "title": "CPG Sec 587.200 Uncertified or Delisted Colors in Foods for Export -  (e.g., FD&C Red #2)",
+      "item_type": "guidance",
+      "published_date": "1995-03-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-587200-uncertified-or-delisted-colors-foods-export-eg-fdc-red-2",
+      "issuing_office": "Human Foods Program<br><br>Office of Inspections and Investigations",
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "265397e6-7bc7-44d8-b582-68500c5f380a",
+      "title": "Great Value Cherry Mixed Fruit, 4 oz, 4 Count and 12 count plastic cups sealed with clear film.",
+      "item_type": "recall",
+      "published_date": "2024-10-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Walmart Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "30b06dec-e2ee-4f50-aa6e-13c8adcc7f9d",
+      "title": "SHOPPERS VALUE FRUIT COCKTAIL in HEAVY SYRUP, Net Wt. 22.5lbs, 24/15 OZ Cans per case.",
+      "item_type": "recall",
+      "published_date": "2025-07-16",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "SHANDONG JOYWIN INTERNATIONAL TRADING CO.,LTD.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "325d25d3-9c18-41c9-8ab8-1ed8cb1e115b",
+      "title": "Marionberry Jelly Sticks MILK, item number CB745-M, is packed and sold in bulk 4lbs. boxes.  Product does not have a UPC and is not repackaged for retail.  Product was sold out of bulk chocolate cases",
+      "item_type": "recall",
+      "published_date": "2025-02-19",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "The Candy Basket Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "41d4b0b5-b26a-4a1d-b018-b3c14c1b6f8c",
+      "title": "Bizcocho de Boda Puertorrique¿o Naked \"Puerto Rican wedding cake naked\",  packaged in aluminum mold/plastic showcase, 24 Pack per case of 10 oz / 6 pack per case of 32 oz/ 4 pack per case of 51.2 oz, ",
+      "item_type": "recall",
+      "published_date": "2024-05-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reposteria Artesanal Laura",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "56e4dee4-8787-4c46-a934-5a9152a55615",
+      "title": "Flor de Michoacan Blue Hawaiian Artificially Flavored Beverage Concentrate.  1 Gallon (3.78L)  Pasteurized.  Keep Frozen.  UPC 1 80596-00039 1.  Processed for:  Paletas Ice Cream, El Paso, Texas  7990",
+      "item_type": "recall",
+      "published_date": "2025-04-02",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Paletas Ice Cream, LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "title": "Italian Mixed Vanilla Cookies",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gina Marie Bakery LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "title": "Color Additive Petition From Center for Science in the Public Interest, et al.; Request To Revoke Color Additive Listing for Use of FD&C Red No. 3 in Food and Ingested Drugs",
+      "item_type": "rule",
+      "published_date": "2025-01-16",
+      "source_url": "https://www.federalregister.gov/documents/2025/01/16/2025-00830/color-additive-petition-from-center-for-science-in-the-public-interest-et-al-request-to-revoke-color",
+      "issuing_office": null,
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e6211f69-5d7b-4318-8482-5e4146192427",
+      "title": "Vanilla Cookies with Raspberry Peach Jam",
+      "item_type": "recall",
+      "published_date": "2025-10-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Gina Marie Bakery LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "8754015a-bb90-4c12-8c7e-72f74b44a9a3",
+      "item_id": "089ca876-491f-4c29-a18f-2878e7c775b0",
+      "summary": "Great Value Diced Peaches, Mandarin Segments, & Cherry Mixed Fruits Variety Pack is being recalled because FD&C Red No 3 was not declared as an ingredient on the label.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act",
+        "21 CFR Part 101"
+      ],
+      "key_entities": [
+        "Great Value"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a854890a-f6ab-4745-922c-9981abad886e",
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "summary": "FDA Compliance Policy Guide establishing the strict control systems and documentation required for manufacturers to legally use uncertified or delisted color additives, such as FD&C Red No. 2, in food products manufactured solely for export.",
+      "key_regulations": [
+        "FD&C Act Section 801(e)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Human Foods Program",
+        "Office of Inspections and Investigations"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "8cb8bbbe-3be0-4b2f-a0c9-dc742633f47b",
+      "item_id": "265397e6-7bc7-44d8-b582-68500c5f380a",
+      "summary": "A recall has been issued for Great Value Cherry Mixed Fruit in 4 oz, 4 count and 12 count plastic cups because FD&C Red No. 3 was not declared as an ingredient on the product label.",
+      "key_regulations": [
+        "21 CFR 70.25",
+        "21 CFR 101"
+      ],
+      "key_entities": [
+        "Great Value"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ff29f76b-e459-449c-86c4-321b6ab6f30d",
+      "item_id": "30b06dec-e2ee-4f50-aa6e-13c8adcc7f9d",
+      "summary": "SHOPPERS VALUE FRUIT COCKTAIL in HEAVY SYRUP is being recalled due to the presence of undeclared Red No. 3 (E127) color additive.",
+      "key_regulations": [],
+      "key_entities": [
+        "SHOPPERS VALUE"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e080cf30-9ed6-47e8-a496-988ac6d8a290",
+      "item_id": "325d25d3-9c18-41c9-8ab8-1ed8cb1e115b",
+      "summary": "The Candy Basket, Inc. is recalling Marionberry Jelly Sticks MILK (item CB745-M) sold in bulk 4lbs boxes from candy stores due to undeclared Red #3, Blue #1, Potassium Sorbate, and Propylene Glycol. The product was sold to consumers without proper labeling.",
+      "key_regulations": [
+        "21 CFR Part 101"
+      ],
+      "key_entities": [
+        "The Candy Basket, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9e75902c-ead0-4f9c-9e3d-07bbcb5240d0",
+      "item_id": "41d4b0b5-b26a-4a1d-b018-b3c14c1b6f8c",
+      "summary": "A recall has been issued for 'Bizcocho de Boda Puertorrique¿o Naked' (Puerto Rican wedding cake naked) due to the undeclared presence of FD&C Red #40, Red #3, Yellow #5, Yellow #6, Blue #1, and Blue #2. The product was sold in various pack sizes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "02abb738-bbc2-474e-8e44-43832da4abaf",
+      "item_id": "56e4dee4-8787-4c46-a934-5a9152a55615",
+      "summary": "Recall of Flor de Michoacan Blue Hawaiian Artificially Flavored Beverage Concentrate due to undeclared Red #3, which is used in or processed for Paletas Ice Cream.",
+      "key_regulations": [
+        "21 CFR 101.4"
+      ],
+      "key_entities": [
+        "Flor de Michoacan",
+        "Paletas Ice Cream"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3ae55774-845a-4b13-95fb-bb047b3646d7",
+      "item_id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "summary": "Italian Mixed Vanilla Cookies are being recalled due to undeclared allergens (almonds, sesame) and undeclared color additives (Red 40, Red 3, Blue 1).",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+        "21 CFR Part 101"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8714933d-e767-4db5-b1e0-954e4032bf53",
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "summary": "The FDA is issuing a final order to revoke the color additive listing for FD&C Red No. 3 for use in foods and ingested drugs. This action responds to a petition from the Center for Science in the Public Interest. The rule will be effective January 15, 2027.",
+      "key_regulations": [
+        "21 CFR Part 74"
+      ],
+      "key_entities": [
+        "Center for Science in the Public Interest",
+        "FDA"
+      ],
+      "regulatory_action_type": "ban_restriction",
+      "deadline": "2027-01-15"
+    },
+    {
+      "id": "8767fa65-ab09-48c0-a672-d83c8e28aa1f",
+      "item_id": "e6211f69-5d7b-4318-8482-5e4146192427",
+      "summary": "A recall has been issued for Vanilla Cookies with Raspberry Peach Jam due to the undeclared presence of color additives Red 3 and Blue 1.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 74",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "beauty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "sports_performance",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "30b06dec-e2ee-4f50-aa6e-13c8adcc7f9d",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "089ca876-491f-4c29-a18f-2878e7c775b0",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "265397e6-7bc7-44d8-b582-68500c5f380a",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "265397e6-7bc7-44d8-b582-68500c5f380a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "265397e6-7bc7-44d8-b582-68500c5f380a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "56e4dee4-8787-4c46-a934-5a9152a55615",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "56e4dee4-8787-4c46-a934-5a9152a55615",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "56e4dee4-8787-4c46-a934-5a9152a55615",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "325d25d3-9c18-41c9-8ab8-1ed8cb1e115b",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "325d25d3-9c18-41c9-8ab8-1ed8cb1e115b",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "41d4b0b5-b26a-4a1d-b018-b3c14c1b6f8c",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "41d4b0b5-b26a-4a1d-b018-b3c14c1b6f8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6211f69-5d7b-4318-8482-5e4146192427",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101 - Food Labeling",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d11af1c0-a6c0-47e7-bf6b-185b9be7d133",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "facility_type",
+      "tag_value": "processor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "facility_type",
+      "tag_value": "packer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "facility_type",
+      "tag_value": "exporter",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 801(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "110fd16e-5deb-4268-8360-f6cfcd0f6563",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    }
+  ]
+}

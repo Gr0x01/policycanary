@@ -1,0 +1,79 @@
+{
+  "regulation_name": "FSMA 204",
+  "search_terms": [
+    "FSMA 204",
+    "Food Traceability Rule"
+  ],
+  "item_count": 1,
+  "affected_categories": [
+    "dairy_products"
+  ],
+  "cfr_references": [
+    {
+      "part": 1,
+      "title": 21
+    }
+  ],
+  "key_deadlines": [
+    {
+      "item_title": "Requirements for Additional Traceability Records for Certain Foods; Proposed Exemption for Cottage Cheese Regulated by the National Conference on Interstate Milk Shipments Grade “A” Pasteurized Milk Ordinance",
+      "effective_date": null,
+      "comment_deadline": "2024-09-16"
+    }
+  ],
+  "items": [
+    {
+      "id": "e4d5297e-67f8-4a2f-9168-2599d093f45d",
+      "title": "Requirements for Additional Traceability Records for Certain Foods; Proposed Exemption for Cottage Cheese Regulated by the National Conference on Interstate Milk Shipments Grade “A” Pasteurized Milk Ordinance",
+      "item_type": "proposed_rule",
+      "published_date": "2024-06-17",
+      "source_url": "https://www.federalregister.gov/documents/2024/06/17/2024-13236/requirements-for-additional-traceability-records-for-certain-foods-proposed-exemption-for-cottage",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2024-09-16",
+      "cfr_references": [
+        {
+          "part": 1,
+          "title": 21
+        }
+      ]
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "75408e9a-28e1-4b7c-b848-70e21fdd0a13",
+      "item_id": "e4d5297e-67f8-4a2f-9168-2599d093f45d",
+      "summary": "The FDA has issued a proposed rule to exempt cottage cheese from the Food Traceability Rule (FSMA 204) recordkeeping requirements, provided it is regulated under the National Conference on Interstate Milk Shipments Grade “A” Pasteurized Milk Ordinance.",
+      "key_regulations": [
+        "21 CFR Part 1",
+        "FSMA 204"
+      ],
+      "key_entities": [
+        "FDA",
+        "National Conference on Interstate Milk Shipments"
+      ],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2024-09-16"
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "e4d5297e-67f8-4a2f-9168-2599d093f45d",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d5297e-67f8-4a2f-9168-2599d093f45d",
+      "tag_dimension": "regulation",
+      "tag_value": "FSMA 204",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d5297e-67f8-4a2f-9168-2599d093f45d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 1",
+      "signal_source": "direct"
+    }
+  ]
+}

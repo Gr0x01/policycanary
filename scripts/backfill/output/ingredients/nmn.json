@@ -1,0 +1,153 @@
+{
+  "substance": {
+    "id": "0ddbc803-ff26-4fc1-a430-6ca623ba8729",
+    "canonical_name": "Fosribnicotinamide",
+    "unii": "2KG6QX4W0V",
+    "matched_names": [
+      "NMN",
+      "NMN [MI]",
+      "β-D-NMN",
+      "β-NMN"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "0ddbc803-ff26-4fc1-a430-6ca623ba8729",
+      "canonical_name": "Fosribnicotinamide",
+      "unii": "2KG6QX4W0V",
+      "matched_names": [
+        "NMN",
+        "NMN [MI]",
+        "β-D-NMN",
+        "β-NMN"
+      ]
+    },
+    {
+      "id": "cf63a108-e37b-4740-b8aa-bdd4ba336263",
+      "canonical_name": "METHYL(NEOPENTYL)NITROSAMINE",
+      "unii": "TRM3W9BWK5",
+      "matched_names": [
+        "NMNA"
+      ]
+    }
+  ],
+  "item_count": 2,
+  "items": [
+    {
+      "id": "2d2ce47a-0e6b-42c1-8480-255b61c4804e",
+      "title": "NDI 1265 - Reinstatement Response Letter from FDA HFP to SyncoZymes (Shanghai) Co. Ltd. and Cellmark USA LLC regarding NDI 1265 SIRTality Nicotinamid Mononucleotide (NM)",
+      "item_type": "notice",
+      "published_date": "2026-02-06",
+      "source_url": "https://www.regulations.gov/document/FDA-2023-S-0023-0099",
+      "issuing_office": null,
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4ef1bf25-6052-49d5-b19d-767143eb8943",
+      "title": "NDI 1267 - Reinstatement Response Letter from FDA HFP to Effepharm Ltd. regarding NDI 1267 nicotinamide mononucleotide (NMN) beta-nicotinamide mononucleotide or b-NMN",
+      "item_type": "notice",
+      "published_date": "2026-02-06",
+      "source_url": "https://www.regulations.gov/document/FDA-2023-S-0023-0100",
+      "issuing_office": null,
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "105d8adf-4716-4a48-88f8-7d31e016050e",
+      "item_id": "2d2ce47a-0e6b-42c1-8480-255b61c4804e",
+      "summary": "FDA response letter regarding NDI 1265 for the ingredient Nicotinamide Mononucleotide (NMN), submitted by SyncoZymes (Shanghai) Co. Ltd. and Cellmark USA LLC. The document pertains to the reinstatement of the notification response status for this specific NDI filing.",
+      "key_regulations": [
+        "21 CFR 190.6",
+        "Section 413(a)(2) of the FD&C Act"
+      ],
+      "key_entities": [
+        "SyncoZymes (Shanghai) Co. Ltd.",
+        "Cellmark USA LLC",
+        "FDA Human Foods Program"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "640bcefe-6b50-476f-94d9-77fd12c6e108",
+      "item_id": "4ef1bf25-6052-49d5-b19d-767143eb8943",
+      "summary": "The FDA issued a reinstatement response letter to Effepharm Ltd. regarding New Dietary Ingredient (NDI) notification 1267 for nicotinamide mononucleotide (NMN). This action reinforces the FDA's position that NMN is excluded from being marketed as a dietary supplement due to its prior authorization for investigation as a new drug, effectively restricting its use in the supplement category.",
+      "key_regulations": [
+        "Section 201(ff) of the Federal Food, Drug, and Cosmetic Act",
+        "21 CFR 190.6"
+      ],
+      "key_entities": [
+        "Effepharm Ltd.",
+        "Food and Drug Administration (FDA)",
+        "Human Foods Program (HFP)"
+      ],
+      "regulatory_action_type": "ban_restriction",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "2d2ce47a-0e6b-42c1-8480-255b61c4804e",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d2ce47a-0e6b-42c1-8480-255b61c4804e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d2ce47a-0e6b-42c1-8480-255b61c4804e",
+      "tag_dimension": "facility_type",
+      "tag_value": "Dietary Supplement Manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d2ce47a-0e6b-42c1-8480-255b61c4804e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 190.6",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2d2ce47a-0e6b-42c1-8480-255b61c4804e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 413",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4ef1bf25-6052-49d5-b19d-767143eb8943",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4ef1bf25-6052-49d5-b19d-767143eb8943",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4ef1bf25-6052-49d5-b19d-767143eb8943",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4ef1bf25-6052-49d5-b19d-767143eb8943",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 321(ff)(3)(B)(ii)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4ef1bf25-6052-49d5-b19d-767143eb8943",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    }
+  ]
+}

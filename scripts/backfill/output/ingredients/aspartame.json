@@ -1,0 +1,401 @@
+{
+  "substance": {
+    "id": "95d3706e-4850-4eb3-8a3b-1ee85b821b19",
+    "canonical_name": "N-(P-METHOXYBENZYLOXYCARBONYL)ASPARTAME",
+    "unii": "9MSF2XU9JN",
+    "matched_names": [
+      "N-(P-METHOXYBENZYLOXYCARBONYL)ASPARTAME",
+      "N-(P-METHOXYBENZYLOXYCARBONYL)ASPARTAME"
+    ]
+  },
+  "all_matches": [
+    {
+      "id": "95d3706e-4850-4eb3-8a3b-1ee85b821b19",
+      "canonical_name": "N-(P-METHOXYBENZYLOXYCARBONYL)ASPARTAME",
+      "unii": "9MSF2XU9JN",
+      "matched_names": [
+        "N-(P-METHOXYBENZYLOXYCARBONYL)ASPARTAME",
+        "N-(P-METHOXYBENZYLOXYCARBONYL)ASPARTAME"
+      ]
+    },
+    {
+      "id": "670f2141-1bcd-4f57-bdc4-643ed1774b7c",
+      "canonical_name": "BENZYL N-(TERT-BUTYLOXYCARBONYL)ASPARTAME",
+      "unii": "Z1IJ3L7FZA",
+      "matched_names": [
+        "BENZYL N-(TERT-BUTYLOXYCARBONYL)ASPARTAME",
+        "BENZYL N-(TERT-BUTYLOXYCARBONYL)ASPARTAME"
+      ]
+    },
+    {
+      "id": "47365f33-fa51-4d8d-a584-67235c33347b",
+      "canonical_name": "ASPARTAME HYDROCHLORIDE",
+      "unii": "MH4IO18KU0",
+      "matched_names": [
+        "ASPARTAME HYDROCHLORIDE",
+        "ASPARTAME HYDROCHLORIDE"
+      ]
+    },
+    {
+      "id": "eb52d022-0066-4186-8648-bf9069909a26",
+      "canonical_name": "N-(BENZYLOXYCARBONYL)ASPARTAME",
+      "unii": "0G42J4QCR2",
+      "matched_names": [
+        "N-(BENZYLOXYCARBONYL)ASPARTAME",
+        "N-(BENZYLOXYCARBONYL)ASPARTAME"
+      ]
+    },
+    {
+      "id": "33f549e5-0f7c-4599-b741-9ac8bbdfac43",
+      "canonical_name": "N-ACETYL-.BETA.-ASPARTAME",
+      "unii": "NCE2P1007C",
+      "matched_names": [
+        "N-ACETYL-.BETA.-ASPARTAME",
+        "N-ACETYL-.BETA.-ASPARTAME",
+        "N-ACETYL-BETA-ASPARTAME"
+      ]
+    },
+    {
+      "id": "4ed06131-705e-4034-877c-257fc3b51086",
+      "canonical_name": "ASPARTAME",
+      "unii": "Z0H242BBR1",
+      "matched_names": [
+        "ASPARTAME"
+      ]
+    },
+    {
+      "id": "8a12f622-8bfd-4aaf-8cbe-b28d960c1b8f",
+      "canonical_name": "3,6-DIOXO-5-(PHENYLMETHYL)-2-PIPERAZINEACETIC ACID, (2S,5S)-",
+      "unii": "ZM82VP15YJ",
+      "matched_names": [
+        "ASPARTAME DIKETOPIPERAZINE",
+        "ASPARTAME RELATED COMPOUND A",
+        "ASPARTAME RELATED COMPOUND A [USP-RS]"
+      ]
+    }
+  ],
+  "item_count": 4,
+  "items": [
+    {
+      "id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "title": "Import Alert 99-45 — Detention Without Physical Examination of Food Products That Are or Contain an Unsafe Food Additive",
+      "item_type": "import_alert",
+      "published_date": "2026-03-03",
+      "source_url": "https://www.accessdata.fda.gov/cms_ia/importalert_1173.html",
+      "issuing_office": "ORA",
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "title": "Pain and Arthritis Products Containing Hidden Ingredients",
+      "item_type": "safety_alert",
+      "published_date": "2026-02-27",
+      "source_url": "http://www.fda.gov/drugs/medication-health-fraud-notifications/pain-and-arthritis-products-containing-hidden-ingredients",
+      "issuing_office": null,
+      "enforcement_company_name": null,
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a24e936e-61d8-458b-a049-04428bf51ca4",
+      "title": "Sodexo Stars Saccharin (Pink) Packets, Sugar Substitute, Net Wt 0.035 oz. (1g), Manufactured by Domino Foods, Inc., West Palm Beach, FL 33041",
+      "item_type": "recall",
+      "published_date": "2026-02-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Domino Foods Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b0e56ce7-cae6-4ac5-b421-45aff3be02df",
+      "title": "OneMultivitaminic GAF-PLUS Advance 300ml, plastic bottle, Room Temperature",
+      "item_type": "recall",
+      "published_date": "2024-12-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Armonia Natural Store LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "9d490758-94ce-4dfa-a433-5b9e54aafed1",
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "summary": "FDA Import Alert 99-45 authorizes the Detention Without Physical Examination (DWPE) of food products, including dietary supplements, that contain unsafe food additives. A food is deemed adulterated if it contains an additive that does not conform to a food additive regulation, an effective food contact notification, or an exemption. The extensive Red List targets firms exporting products containing unauthorized substances such as Lead and Cadmium in ceramics, Cyclamates in snacks and juices, Coumarin in vanilla extracts, and unapproved botanicals or chemicals (e.g., Ashwagandha, Kratom, Yohimbine, DMAA, Folic Acid) in conventional foods and beverages.",
+      "key_regulations": [
+        "Section 402(a)(2)(C)(i)",
+        "Section 409",
+        "Section 801(a)(3)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Division of Import Operations (DIO)",
+        "Center for Food Safety and Applied Nutrition (CFSAN)"
+      ],
+      "regulatory_action_type": "import_violation",
+      "deadline": null
+    },
+    {
+      "id": "5c6ffdaa-27f8-409b-86e3-997526a268fd",
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "summary": "The FDA issued a safety alert warning consumers about numerous pain and arthritis products, often falsely marketed as dietary supplements, food, or all-natural treatments, that contain dangerous and undeclared drug ingredients. These fraudulent products pose serious health risks, including severe health issues and hospitalization, and are not guaranteed to be effective. The alert provides a list of specific products found to contain hidden drug ingredients, such as Artri Ajo Rev, ULTRA ADVANC3, and various others, with one product, OneMultivitaminic GAF-Plus Advance, also containing undeclared aspartame.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "safety_alert",
+      "deadline": null
+    },
+    {
+      "id": "705c220c-6186-49d2-b632-0c6f0967d448",
+      "item_id": "a24e936e-61d8-458b-a049-04428bf51ca4",
+      "summary": "Sodexo Stars Saccharin (Pink) Packets, a sugar substitute manufactured by Domino Foods, Inc., has been recalled due to the presence of undeclared Aspartame.",
+      "key_regulations": [],
+      "key_entities": [
+        "Sodexo Stars",
+        "Domino Foods, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f0531796-ec66-4bd4-811b-fdcbe47da3bd",
+      "item_id": "b0e56ce7-cae6-4ac5-b421-45aff3be02df",
+      "summary": "OneMultivitaminic GAF-PLUS Advance 300ml is being recalled due to the presence of undeclared drugs Acetaminophen and Dexamethasone Phosphate, and the undeclared sweetener Aspartame.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "fruit_vegetable_juices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "coffee_tea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "gravies_sauces",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "alcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "facility_type",
+      "tag_value": "shipper",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "facility_type",
+      "tag_value": "importer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 342(a)(2)(C)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 348",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 402(a)(2)(C)(i) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 409 of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 801(a)(3)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "02d77b22-3a7b-4214-973c-64aff3949bea",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "product_type",
+      "tag_value": "joint_bone_health",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "product_type",
+      "tag_value": "coffee_tea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "claims",
+      "tag_value": "arthritis relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "claims",
+      "tag_value": "pain relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "claims",
+      "tag_value": "inflammation relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "claims",
+      "tag_value": "all-natural",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "604a06d3-8cca-4117-96ba-72ca73db412e",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "a24e936e-61d8-458b-a049-04428bf51ca4",
+      "tag_dimension": "product_type",
+      "tag_value": "sugar_substitutes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b0e56ce7-cae6-4ac5-b421-45aff3be02df",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b0e56ce7-cae6-4ac5-b421-45aff3be02df",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "b0e56ce7-cae6-4ac5-b421-45aff3be02df",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    }
+  ]
+}

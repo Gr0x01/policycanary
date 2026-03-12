@@ -1,0 +1,1473 @@
+{
+  "company_name": "CHETAK NEW YORK LLC",
+  "total_actions": 54,
+  "action_types": {
+    "recall": 54
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-09-03",
+    "latest": "2025-12-17"
+  },
+  "items": [
+    {
+      "id": "4546d738-8f79-4afa-bfc7-e4e4dd07a2b2",
+      "title": "Deep-brand PREMIUM Select Snake Gourd Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2e37245c-97f5-4ea2-86d7-e41c5e217553",
+      "title": "Deep-brand Premium Select Tuvar Lilva Net Wt. 1 LB 8 oz. (24 oz.) (680 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c50bf0bf-69e6-414e-b612-60de2b9427bd",
+      "title": "Deep-brand PREMIUM Select Amla KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "37b6e786-acfc-4ff6-92a5-2e654b891070",
+      "title": "Deep-brand PREMIUM Select Singoda (Cooked) Water Chestnuts Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b1c361cf-8b98-4927-affd-a2750650e3a2",
+      "title": "Deep-brand Premium Select Karela Ring Cut KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cfe07736-03d4-4eb2-943d-7abe3c95f831",
+      "title": "Deep-brand Premium Select Ratalu Sliced Violet Indian Yams KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d6df2a98-ec72-43f6-a728-aebab8ad3c01",
+      "title": "Deep-brand PREMIUM Select Turmeric Yellow Haldi KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "03cf1153-cd32-4538-b767-c5d6d6297436",
+      "title": "Deep-brand Premium Select Baby Bhindi KEEP FROZEN Net Wt. 12 oz (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1dbbcd08-401a-4729-9eb0-868974620054",
+      "title": "Deep-brand PREMIUM Select Red Guava Slices KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9f112ad3-7752-4fd7-83bf-d344eaf85dcc",
+      "title": "Deep-brand PREMIUM Select Dudhi (Lauki) Diced Bottle Gourd KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f53d7972-2163-4c13-aaac-b728f6fd06c2",
+      "title": "Deep-brand Ponk With Tangy Sev KEEP FROZEN Net Wt. 6 oz. (170 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "61a260cd-16cb-4cb6-93d8-392e5148f965",
+      "title": "Deep-brand PREMIUM Select Falsa KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5b66cc5c-cc49-4b17-bd9f-737e9d32fef0",
+      "title": "Deep-brand Select Tindora Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b73e0492-ebdc-41ac-b9b4-9a55bfc6c61f",
+      "title": "Deep-brand PREMIUM Select Aviyal Mix KEEP FROZEN Net Wt. 14.1 oz. (400 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f5d33cf1-460c-4748-bc63-a2bab2c8d687",
+      "title": "Deep-brand PREMIUM Select Green Peas KEEP FROZEN a) Net Wt. 3.85 LB. (1.75 kg); b) Net Wt. 2 LB. (907 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "af99d8ec-382f-46a6-9403-47609ba6ef58",
+      "title": "Deep-brand Select Arvi Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4d491bf6-5ed7-4972-88af-3b75da61c61e",
+      "title": "Deep-brand Select Bhindi Cut Okra KEEP FROZEN a) Net Wt. 12 oz (340 g); b) Net Wt. 1 LB 8 oz. (24 oz.) (680 g); c) Net Wt. 2 LB (907 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3790da7a-eb04-4294-a07c-c9582af5828a",
+      "title": "Deep-brand PREMIUM Select Peas and Carrots KEEP FROZEN Net Wt. 2 LB (907 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ef91d1a7-9650-44a1-bcc8-7f280ab4c9e4",
+      "title": "Deep-brand PREMIUM Select Mixed Vegetables 4 way KEEP FROZEN a) Net Wt. 3.85 LB. (1.75 kg); b) Net Wt. 2 LB (907 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8d7af1b3-4b5d-4448-87d5-c067c68f6db1",
+      "title": "Deep-brand Indian Kitchen Quick Cubes Ready For Cooking Green Chili of India Net Wt. 10 oz. (283 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3c404ff5-e10e-401a-bc10-b17a82b7cfd2",
+      "title": "Deep-brand PREMIUM Select Sweet Corn KEEP FROZEN Net Wt. 2 LB (907 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "60f12ac6-0f3f-4bd6-9d5e-cd46b3f39dbc",
+      "title": "Deep-brand Indian Kitchen Quick Cubes READY FOR COOKING Garlic of India KEEP FROZEN Net Wt. 10 oz. (283 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ffd17339-daad-41d3-8d9c-c90a990ba356",
+      "title": "Deep-brand PREMIUM Select Garlic Cloves Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "97d479ba-8fb0-4034-b1a6-1eec3776ef87",
+      "title": "Deep-brand PREMIUM Select Hot Green Chillies Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a4ddd02e-8c7a-44eb-bf58-96e1bc02073e",
+      "title": "Deep-brand PREMIUM Select Fansi Cut French Beans Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "706db3a0-3e01-44ef-8760-58cba6948849",
+      "title": "Deep-brand PREMIUM Select Dum Aloo (Cooked) Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d1759b60-c066-4192-8bcc-07bb996c9dc9",
+      "title": "Deep-brand Premium Select Suran Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bbfd52ec-f344-41d1-8ea8-d35ba4921904",
+      "title": "Deep-brand PREMIUM Select Jamun KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "855a8992-666b-476b-88e9-c814230f516f",
+      "title": "Deep-brand Premium Select Kantola KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b79d6702-fe1d-4623-a786-84267343e2a8",
+      "title": "Deep-brand Select Val Papdi Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9ca0ea70-a724-433a-8154-fd10b7d685ad",
+      "title": "Deep-brand PREMIUM Select Red Pearl Onions Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0f223639-ad98-4a57-9a26-e016fe92634d",
+      "title": "Deep-brand PREMIUM Select Tuvar Lilva Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0e5def46-74fe-467a-9e23-1faf5c07e17a",
+      "title": "Deep-brand Select Carrots Sliced Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c66431dd-612f-4147-88d8-2144d2619a89",
+      "title": "Deep-brand PREMIUM Select Methi Chopped KEEP FROZEN Net Wt. 10 oz. (283 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4bc66ffd-9da6-4493-af27-9f07bd197228",
+      "title": "Deep-brand Instant Stuffing For Pani Puri KEEP FROZEN Net Wt. 1 LB. (454 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "484756fd-6429-41a6-9876-759855d2a69f",
+      "title": "Deep-brand Premium Select Guvar KEEP FROZEN a) Net Wt. 12 oz. (340 g); b) Net Wt. 2 LB (907 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "27d072bb-efc8-4909-a9da-00daa0d8443a",
+      "title": "Deep-brand PREMIUM Select Amla Slices KEEP FROZEN Net Wt. 10 oz. (283 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4b4ee9b1-3342-4387-92b6-ac0d461e77c5",
+      "title": "Deep-brand Indian Kitchen Quick Cubes Ready for Cooking Ginger Garlic of India Net Wt. 10 oz. (283 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c79048b5-aca3-4181-919b-d78ff6e1966e",
+      "title": "Deep-brand PREMIUM Select Diced Green Mango KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a67cfc1b-c036-4dd5-97e6-7a9201eeb527",
+      "title": "Deep-brand Premium Select Punjabi Tinda KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c42c3c42-f8e0-4eb3-a961-c97059a311e2",
+      "title": "Deep-brand Premium Select Methi Blocks KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "48e7366c-3db9-467c-983c-aacea4c4b9ee",
+      "title": "Deep-brand Select Tindora Net Wt. 1 LB 8 oz. (24 oz.) (680 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "44e99b1b-b254-466f-81f3-80de582412ad",
+      "title": "Deep-brand Select Chauri Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e6e65f94-76db-430e-a819-fbb61a060a70",
+      "title": "Deep-brand Premium Select Surti Papdi Lilva Net Wt. 12 oz. (340g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "877709ed-f18b-4e8a-aa26-fa3cc56d977f",
+      "title": "Deep-brand Premium Select Sambhar Mix KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6916aa02-2afd-468e-ae66-a8ff34fd1680",
+      "title": "Deep-brand PREMIUM Select Lotus Root (Ring Cut) Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c6363745-387c-4e2a-89a3-59ccecf504fd",
+      "title": "Deep-brand Premium Select Surti Undhiu Mix Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "50a85871-ee8e-4745-8eac-17af84e09f90",
+      "title": "Deep-brand Premium Select Chikoo Slices KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "031afffc-5281-4213-891e-5226543fd83f",
+      "title": "Deep-brand PREMIUM Select Green Channa Net Wt. 12 oz. (340 g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "20e8a5ea-99f1-4f71-aeb6-4765d5353713",
+      "title": "Deep-brand PREMIUM Select Green Garlic KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3ae70c15-84ad-4867-a80e-6c0a39db7d30",
+      "title": "Deep-brand Premium Select Surti Papdi Whole Net Wt. 12 oz. (340g) KEEP FROZEN",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4b374730-08fa-475a-8768-58df387872b2",
+      "title": "Deep-brand PREMIUM Select Tapioca (Cassava) Diced KEEP FROZEN Net Wt. 12 oz. (340 g)",
+      "item_type": "recall",
+      "published_date": "2025-12-17",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d4b6a760-f074-4400-9966-ad389f876781",
+      "title": "Deep Sprouted Mat 16 oz.",
+      "item_type": "recall",
+      "published_date": "2025-09-03",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "01518034-c3e8-43fc-b583-c36f7042e672",
+      "title": "Deep Sprouted Moong 16 oz",
+      "item_type": "recall",
+      "published_date": "2025-09-03",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "CHETAK NEW YORK LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "0b94acca-707f-47a4-9bad-2924f9b765a8",
+      "item_id": "01518034-c3e8-43fc-b583-c36f7042e672",
+      "summary": "Deep Sprouted Moong 16 oz is being recalled because it tested positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c0b7b81d-a8cf-4f6d-b3aa-9580278490c3",
+      "item_id": "031afffc-5281-4213-891e-5226543fd83f",
+      "summary": "Deep-brand is recalling its PREMIUM Select Green Channa (frozen, 12 oz) because the product tested positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2a36d73c-31b0-48b0-9325-c45f12635e59",
+      "item_id": "03cf1153-cd32-4538-b767-c5d6d6297436",
+      "summary": "Deep-brand has recalled its Premium Select Baby Bhindi (okra) due to potential Salmonella contamination, as the product tested positive for the pathogen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6cad4a45-28b1-484a-a514-644a94ac901b",
+      "item_id": "0e5def46-74fe-467a-9e23-1faf5c07e17a",
+      "summary": "Deep-brand is recalling its Select Carrots Sliced, 12 oz (340 g) KEEP FROZEN, after the product tested positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b751973a-a852-46cc-b581-9d3637e5f411",
+      "item_id": "0f223639-ad98-4a57-9a26-e016fe92634d",
+      "summary": "Deep-brand is recalling its PREMIUM Select Tuvar Lilva (Net Wt. 12 oz. / 340 g, KEEP FROZEN) due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e404f13b-6d0d-44e3-8441-8d8a654f2181",
+      "item_id": "1dbbcd08-401a-4729-9eb0-868974620054",
+      "summary": "Deep-brand is recalling its PREMIUM Select Red Guava Slices because the product tested positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6f7dac24-74f7-46e4-a357-0e27b9cb1528",
+      "item_id": "20e8a5ea-99f1-4f71-aeb6-4765d5353713",
+      "summary": "Deep-brand has recalled its PREMIUM Select Green Garlic (12 oz.) after the product tested positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b5a46ab9-5fd2-4a44-b89b-070d22d09d8c",
+      "item_id": "27d072bb-efc8-4909-a9da-00daa0d8443a",
+      "summary": "Deep-brand is recalling its PREMIUM Select Amla Slices due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d9cce967-4273-48f0-93a3-e33ddf5ed73b",
+      "item_id": "2e37245c-97f5-4ea2-86d7-e41c5e217553",
+      "summary": "Deep-brand Premium Select Tuvar Lilva Net Wt. 1 LB 8 oz. (24 oz.) (680 g) KEEP FROZEN has been recalled due to testing positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "db18b348-52eb-47a1-9c5b-76466809ab9d",
+      "item_id": "3790da7a-eb04-4294-a07c-c9582af5828a",
+      "summary": "Deep-brand PREMIUM Select Peas and Carrots, a frozen product, are being recalled because they tested positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "470aa2d9-428f-40d8-82e1-dc447c453b3e",
+      "item_id": "37b6e786-acfc-4ff6-92a5-2e654b891070",
+      "summary": "Deep-brand has recalled its PREMIUM Select Singoda (Cooked) Water Chestnuts due to contamination with Salmonella. The product is sold in 12 oz. (340 g) packages and is intended to be kept frozen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3859fec9-a0e2-4a22-9df3-1f915f5522d5",
+      "item_id": "3ae70c15-84ad-4867-a80e-6c0a39db7d30",
+      "summary": "Deep-brand Premium Select Surti Papdi Whole frozen product is being recalled due to testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "11b54b3a-78bb-4a23-afcd-76e21b44231d",
+      "item_id": "3c404ff5-e10e-401a-bc10-b17a82b7cfd2",
+      "summary": "Deep-brand is recalling its PREMIUM Select Sweet Corn (KEEP FROZEN, Net Wt. 2 LB) after the product tested positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ab0ff07d-9a1c-4fff-8e6d-fc6300b21663",
+      "item_id": "44e99b1b-b254-466f-81f3-80de582412ad",
+      "summary": "Deep-brand Select Chauri frozen meat product has been recalled due to testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4a555678-84bd-4412-82e3-9ed5a3b5ea2a",
+      "item_id": "4546d738-8f79-4afa-bfc7-e4e4dd07a2b2",
+      "summary": "Deep-brand PREMIUM Select Snake Gourd is being recalled after testing positive for Salmonella contamination. The product is packaged as Net Wt. 12 oz. (340 g) and should be kept frozen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b1fa13b4-8518-4b42-927a-3062ce5edfff",
+      "item_id": "484756fd-6429-41a6-9876-759855d2a69f",
+      "summary": "Deep-brand has recalled its Premium Select Guvar, available in 12 oz. (340 g) and 2 LB (907 g) packages, due to confirmed contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6df0062b-9f5a-4949-b8c9-9be20b899761",
+      "item_id": "48e7366c-3db9-467c-983c-aacea4c4b9ee",
+      "summary": "Deep-brand Select Tindora is being recalled due to testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2fbe5363-523c-4ac2-9ab7-4c15a0611d8a",
+      "item_id": "4b374730-08fa-475a-8768-58df387872b2",
+      "summary": "Deep-brand is recalling its PREMIUM Select Tapioca (Cassava) Diced, Net Wt. 12 oz. (340 g), because the product tested positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "21898ebb-e6bb-4781-ac06-fd3c8baeacf4",
+      "item_id": "4b4ee9b1-3342-4387-92b6-ac0d461e77c5",
+      "summary": "Deep-brand Indian Kitchen Quick Cubes Ready for Cooking Ginger Garlic were recalled after testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand Indian Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e02302bb-8f52-429f-b7e0-e6de9a22d01c",
+      "item_id": "4bc66ffd-9da6-4493-af27-9f07bd197228",
+      "summary": "Deep-brand is recalling its Instant Stuffing For Pani Puri due to testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "270903e6-0d9e-4d21-9900-3f39342cda0c",
+      "item_id": "4d491bf6-5ed7-4972-88af-3b75da61c61e",
+      "summary": "Deep-brand Select Bhindi Cut Okra is being recalled after testing positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e18cbdf6-b32f-4db7-afaa-2cb70fcd377a",
+      "item_id": "50a85871-ee8e-4745-8eac-17af84e09f90",
+      "summary": "Deep-brand Premium Select Chikoo Slices are being recalled because they tested positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d37d3b8b-8f70-4c2f-9f44-c92d9e4b5bed",
+      "item_id": "5b66cc5c-cc49-4b17-bd9f-737e9d32fef0",
+      "summary": "Deep-brand Select Tindora frozen vegetable product is being recalled due to testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7def5e33-cdc3-4d13-a418-421954c385b8",
+      "item_id": "60f12ac6-0f3f-4bd6-9d5e-cd46b3f39dbc",
+      "summary": "Deep-brand Indian Kitchen Quick Cubes READY FOR COOKING Garlic of India, a frozen product, has been recalled due to testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand Indian Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e78429a6-0cd0-457d-983e-bf7992484354",
+      "item_id": "61a260cd-16cb-4cb6-93d8-392e5148f965",
+      "summary": "Deep-brand has recalled its PREMIUM Select Falsa (frozen, 12 oz.) after the product tested positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0ac71ac0-7c82-461e-ab91-ac63747d6a6a",
+      "item_id": "6916aa02-2afd-468e-ae66-a8ff34fd1680",
+      "summary": "Deep-brand PREMIUM Select Lotus Root (Ring Cut) is being recalled after testing positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1ed54bf4-668c-4419-bb9b-382629cc0e07",
+      "item_id": "706db3a0-3e01-44ef-8760-58cba6948849",
+      "summary": "Deep-brand PREMIUM Select Dum Aloo (Cooked) is being recalled after testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6c7636bb-5a75-408a-b4d4-5fa15be923fe",
+      "item_id": "855a8992-666b-476b-88e9-c814230f516f",
+      "summary": "Deep-brand Premium Select Kantola (frozen, 12 oz) is being recalled after testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "91a33f36-7c2b-4601-bbe6-b8a24cc43579",
+      "item_id": "877709ed-f18b-4e8a-aa26-fa3cc56d977f",
+      "summary": "Deep-brand Premium Select Sambhar Mix is being recalled due to testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "79c3ef5f-d36d-4f0c-91c3-4526c7aa2439",
+      "item_id": "8d7af1b3-4b5d-4448-87d5-c067c68f6db1",
+      "summary": "Deep-brand Indian Kitchen is recalling its Quick Cubes Ready For Cooking Green Chili of India due to testing positive for Salmonella contamination. The product is sold in 10 oz. (283 g) packages and is intended to be kept frozen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand Indian Kitchen"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0c7ae804-93b3-49f7-9f1b-9e36ff5122fb",
+      "item_id": "97d479ba-8fb0-4034-b1a6-1eec3776ef87",
+      "summary": "Deep-brand is recalling 'PREMIUM Select Hot Green Chillies' due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c89189f5-ceed-47f0-b7ba-cc60cc9ee925",
+      "item_id": "9ca0ea70-a724-433a-8154-fd10b7d685ad",
+      "summary": "Deep-brand has recalled its PREMIUM Select Red Pearl Onions due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9e1ac850-a97a-4cc5-9f1c-2e93b445d26a",
+      "item_id": "9f112ad3-7752-4fd7-83bf-d344eaf85dcc",
+      "summary": "Deep-brand has recalled its PREMIUM Select Dudhi (Lauki) Diced Bottle Gourd due to positive testing for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "22e3b550-11ca-42f3-9bc0-011b24b9430a",
+      "item_id": "a4ddd02e-8c7a-44eb-bf58-96e1bc02073e",
+      "summary": "Deep-brand PREMIUM Select Fansi Cut French Beans are being recalled after testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e0938a81-fed7-4a13-97af-2dc2c2b617f5",
+      "item_id": "a67cfc1b-c036-4dd5-97e6-7a9201eeb527",
+      "summary": "Deep-brand Premium Select Punjabi Tinda (frozen) has been recalled after testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "65b2be96-2f5f-451f-868f-d6eb5038b573",
+      "item_id": "af99d8ec-382f-46a6-9403-47609ba6ef58",
+      "summary": "Deep-brand Select Arvi (frozen, 12 oz) has been recalled after testing positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8296e372-2a9a-4fa0-80f3-9ddf504c87d9",
+      "item_id": "b1c361cf-8b98-4927-affd-a2750650e3a2",
+      "summary": "Deep-brand has issued a recall for its Premium Select Karela Ring Cut frozen vegetables due to positive test results for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "88b81cba-6dab-454b-a99b-667e56e017e7",
+      "item_id": "b73e0492-ebdc-41ac-b9b4-9a55bfc6c61f",
+      "summary": "Deep-brand is recalling its PREMIUM Select Aviyal Mix due to positive test results for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8c55cd03-5bb0-47f4-a2ec-46a1e07cb10e",
+      "item_id": "b79d6702-fe1d-4623-a786-84267343e2a8",
+      "summary": "Deep-brand has initiated a recall for its Select Val Papdi (12 oz.) due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cab88468-edf1-4824-8ca5-2ea9d7a18d6f",
+      "item_id": "bbfd52ec-f344-41d1-8ea8-d35ba4921904",
+      "summary": "Deep-brand is recalling its PREMIUM Select Jamun (Net Wt. 12 oz.) due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "577a5122-699a-44de-a160-b8a12f18476e",
+      "item_id": "c42c3c42-f8e0-4eb3-a961-c97059a311e2",
+      "summary": "Deep-brand is recalling its Premium Select Methi Blocks due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "38a97cb8-510b-4904-a719-3839a1c1a854",
+      "item_id": "c50bf0bf-69e6-414e-b612-60de2b9427bd",
+      "summary": "Deep-brand is recalling its PREMIUM Select Amla, sold as 'KEEP FROZEN Net Wt. 12 oz. (340 g)', because the product tested positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b40c74e0-e461-461b-9357-46f4ce0049db",
+      "item_id": "c6363745-387c-4e2a-89a3-59ccecf504fd",
+      "summary": "Deep-brand is recalling its Premium Select Surti Undhiu Mix due to confirmed Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8b3dc385-2ece-4822-bfb3-280dca5f0ace",
+      "item_id": "c66431dd-612f-4147-88d8-2144d2619a89",
+      "summary": "Deep-brand has recalled its PREMIUM Select Methi Chopped frozen product due to confirmed Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8affaaa0-96e5-4ed2-8170-e7ab414b3e96",
+      "item_id": "c79048b5-aca3-4181-919b-d78ff6e1966e",
+      "summary": "Deep-brand is recalling its PREMIUM Select Diced Green Mango due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "06351222-e56f-4931-9683-244c5b3943e0",
+      "item_id": "cfe07736-03d4-4eb2-943d-7abe3c95f831",
+      "summary": "Deep-brand is recalling its Premium Select Ratalu Sliced Violet Indian Yams because the product tested positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "df9b0aec-30ea-45ea-bdba-fb46426102e2",
+      "item_id": "d1759b60-c066-4192-8bcc-07bb996c9dc9",
+      "summary": "Deep-brand is recalling its Premium Select Suran Net Wt. 12 oz. (340 g) KEEP FROZEN due to positive test results for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fe6ff8a7-b7c4-4648-bf75-6e91b15a4fb3",
+      "item_id": "d4b6a760-f074-4400-9966-ad389f876781",
+      "summary": "Deep Sprouted Mat 16 oz. was recalled due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8c622a32-585d-4106-9e71-eefc81cbb480",
+      "item_id": "d6df2a98-ec72-43f6-a728-aebab8ad3c01",
+      "summary": "Deep-brand has initiated a recall for its PREMIUM Select Turmeric Yellow Haldi (Net Wt. 12 oz.) due to contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2f9b521c-c06c-454f-a69b-417e830b6041",
+      "item_id": "e6e65f94-76db-430e-a819-fbb61a060a70",
+      "summary": "Deep-brand is recalling its Premium Select Surti Papdi Lilva (frozen, 12 oz.) due to potential contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c7a4ac29-1a5e-4dc3-871a-70e31076a046",
+      "item_id": "ef91d1a7-9650-44a1-bcc8-7f280ab4c9e4",
+      "summary": "Deep-brand has recalled its PREMIUM Select Mixed Vegetables (3.85 LB and 2 LB packages) after the product tested positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d742510d-d39d-4e55-96c5-a03064f2e5a1",
+      "item_id": "f53d7972-2163-4c13-aaac-b728f6fd06c2",
+      "summary": "Deep-brand is recalling its frozen 'Ponk With Tangy Sev' snack product after it tested positive for Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand",
+        "Salmonella"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fa41c584-10b7-4ee2-81d2-551a1953388a",
+      "item_id": "f5d33cf1-460c-4748-bc63-a2bab2c8d687",
+      "summary": "Deep-brand is recalling its PREMIUM Select Green Peas, sold in 3.85 LB and 2 LB packages, because the product tested positive for Salmonella.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "48cac839-1374-46f9-965a-34e7ac795e49",
+      "item_id": "ffd17339-daad-41d3-8d9c-c90a990ba356",
+      "summary": "Deep-brand PREMIUM Select Garlic Cloves are being recalled after testing positive for Salmonella contamination. The product is sold in 12 oz (340 g) packages and is meant to be kept frozen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Deep-brand"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "01518034-c3e8-43fc-b583-c36f7042e672",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "031afffc-5281-4213-891e-5226543fd83f",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "03cf1153-cd32-4538-b767-c5d6d6297436",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0e5def46-74fe-467a-9e23-1faf5c07e17a",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0f223639-ad98-4a57-9a26-e016fe92634d",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1dbbcd08-401a-4729-9eb0-868974620054",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "20e8a5ea-99f1-4f71-aeb6-4765d5353713",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "27d072bb-efc8-4909-a9da-00daa0d8443a",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2e37245c-97f5-4ea2-86d7-e41c5e217553",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3790da7a-eb04-4294-a07c-c9582af5828a",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37b6e786-acfc-4ff6-92a5-2e654b891070",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3ae70c15-84ad-4867-a80e-6c0a39db7d30",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3c404ff5-e10e-401a-bc10-b17a82b7cfd2",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "44e99b1b-b254-466f-81f3-80de582412ad",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4546d738-8f79-4afa-bfc7-e4e4dd07a2b2",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "484756fd-6429-41a6-9876-759855d2a69f",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "48e7366c-3db9-467c-983c-aacea4c4b9ee",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b374730-08fa-475a-8768-58df387872b2",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4b4ee9b1-3342-4387-92b6-ac0d461e77c5",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4bc66ffd-9da6-4493-af27-9f07bd197228",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d491bf6-5ed7-4972-88af-3b75da61c61e",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "50a85871-ee8e-4745-8eac-17af84e09f90",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5b66cc5c-cc49-4b17-bd9f-737e9d32fef0",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "60f12ac6-0f3f-4bd6-9d5e-cd46b3f39dbc",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "61a260cd-16cb-4cb6-93d8-392e5148f965",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6916aa02-2afd-468e-ae66-a8ff34fd1680",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "706db3a0-3e01-44ef-8760-58cba6948849",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "855a8992-666b-476b-88e9-c814230f516f",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "877709ed-f18b-4e8a-aa26-fa3cc56d977f",
+      "tag_dimension": "product_type",
+      "tag_value": "soups_soup_mixes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8d7af1b3-4b5d-4448-87d5-c067c68f6db1",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "97d479ba-8fb0-4034-b1a6-1eec3776ef87",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ca0ea70-a724-433a-8154-fd10b7d685ad",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9f112ad3-7752-4fd7-83bf-d344eaf85dcc",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a4ddd02e-8c7a-44eb-bf58-96e1bc02073e",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a67cfc1b-c036-4dd5-97e6-7a9201eeb527",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "af99d8ec-382f-46a6-9403-47609ba6ef58",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b1c361cf-8b98-4927-affd-a2750650e3a2",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b73e0492-ebdc-41ac-b9b4-9a55bfc6c61f",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b79d6702-fe1d-4623-a786-84267343e2a8",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bbfd52ec-f344-41d1-8ea8-d35ba4921904",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c42c3c42-f8e0-4eb3-a961-c97059a311e2",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c50bf0bf-69e6-414e-b612-60de2b9427bd",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c6363745-387c-4e2a-89a3-59ccecf504fd",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c66431dd-612f-4147-88d8-2144d2619a89",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c79048b5-aca3-4181-919b-d78ff6e1966e",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cfe07736-03d4-4eb2-943d-7abe3c95f831",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d1759b60-c066-4192-8bcc-07bb996c9dc9",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4b6a760-f074-4400-9966-ad389f876781",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6df2a98-ec72-43f6-a728-aebab8ad3c01",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6e65f94-76db-430e-a819-fbb61a060a70",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ef91d1a7-9650-44a1-bcc8-7f280ab4c9e4",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f53d7972-2163-4c13-aaac-b728f6fd06c2",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f5d33cf1-460c-4748-bc63-a2bab2c8d687",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ffd17339-daad-41d3-8d9c-c90a990ba356",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    }
+  ]
+}

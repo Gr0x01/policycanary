@@ -1,0 +1,1907 @@
+{
+  "company_name": "Reser's Fine Foods, Inc.",
+  "total_actions": 62,
+  "action_types": {
+    "recall": 62
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2024-03-06",
+    "latest": "2026-02-25"
+  },
+  "items": [
+    {
+      "id": "39551a85-8f1f-4d5e-887a-dcdd0218b96f",
+      "title": "The Tuna Salad product container is mislabeled with a Chicken Salad lid, which states: Molly Kitchen's Chicken Salad, (item#) 789953, NET WT. 5 LB (2.26 kg) per plastic tub. UPC 7 5810830149 8. Distri",
+      "item_type": "recall",
+      "published_date": "2026-02-25",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e5e76a63-b3ac-4871-b780-4adff5a51b36",
+      "title": "Fresh Creative Foods (FCF) item #404637 Basil Pesto Bowtie Pasta Kit Item V, UPC#13454 38053. Perishable/Refrigerated product. Net wt. 10.5625lbs. This kit contains 2/3lbs. sealed bags of affected Bow",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "516077e7-bca5-4178-9c00-16925e57d40c",
+      "title": "Fresh Creative Foods (FCF) item #404284 Smoked Mozzarella Penne Salad Kit, UPC #13454 37904. Perishable/Refrigerated product. Net wt. 13lbs. This kit contains 2/3lbs. sealed bag of affected Penne Past",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fddc80d2-0680-40f4-91da-65036f7a0e4c",
+      "title": "Fresh Creative Foods (FCF) item #404736 Basil Pesto Bowtie Pasta Kit, UPC #13454 38092. Perishable/Refrigerated product. Net wt. 10.3125lbs. This kit contains 2/3lb. sealed bags of affected Bowtie Pas",
+      "item_type": "recall",
+      "published_date": "2025-10-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9cd1be07-f689-45eb-b788-56ab72c3f43f",
+      "title": "Sysco Classic Tuna Salad, Reorder #6724249, net wt. 5lb. Foodservice item. Product is packaged in clear printed plastic tub with printed lid. Keep Refrigerated.   Distributed by Sysco Corporation, Hou",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "01544673-1038-4fc6-a08b-96e3a77a80bb",
+      "title": "Reser's Tuna Salad, net wt. 5lb. Foodservice item. Product is packaged in white plastic tub and lid with sticker. Keep Refrigerated. This item contains ingredient Pickle Relish.  Distributed by Reser'",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b42fcc59-c4a6-46d6-a8fb-f3e5b4cd0448",
+      "title": "Signature Cafe Premium Tuna Salad, net wt. 3lb (48oz). Foodservice item to be used by deli. Product is packaged in clear plastic tub with printed white lid. Keep Refrigerated.    Distributed by Lucern",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "45ca0db3-f6da-464e-9b0a-0e12ad0ed4c3",
+      "title": "Molly's Kitchens Tuna Salad, item 794599, net wt. 5lb. Foodservice item. Product is packaged in clear printed plastic tub with printed white lid. Keep Refrigerated.   Distributed by U.S. Foods, Inc, R",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c1dc5953-7012-4844-8f49-b2a45750a24f",
+      "title": "Reser's Gourmet Tuna Salad, net wt. 5lb. Foodservice item. Product is packaged in clear printed plastic tub with white lid with white sticker. Keep Refrigerated.   Distributed by Reser's Fine Foods, B",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1f69fcd5-51e0-4042-bca8-39503bc07a99",
+      "title": "Sysco Imperial Deluxe Tuna Salad, Reorder #6526826, net wt. 5lb. Foodservice item. Product is packaged in clear printed plastic tub with printed white lid. Keep Refrigerated. Distributed by Sysco Corp",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a02181a9-6021-4605-824a-d726b61a1b35",
+      "title": "Reser's Tuna Salad, net wt. 5lb. Foodservice item. Product is packaged in white plastic tub and lid with sticker. Keep Refrigerated. This item does not contain ingredient Pickle Relish.  Distributed b",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "28869a19-8ab8-4acb-a2d0-d6c964d46579",
+      "title": "Trader Joe's Hot Honey Mustard Dressing (SKU #80152), packaged in glass bottle with tamper overwrap on plastic cap, net wt. 12 fl. oz. UPC 0080 1522. DIST. & SOLD Exclusively by: Trader Joe's Monrovia",
+      "item_type": "recall",
+      "published_date": "2025-04-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "797f0c4c-ccd1-444c-8667-5bc3c889a647",
+      "title": "Beef & Lamb Gyro Sandwich Express Meal Kit. Net wt. 31.8oz. UPC 0 13454 38313 1.   Each kit contains 6 Pitas, Gyro Meat, Tzatziki Sauce 3oz. cups, Fire Feta Sauce, Feta Cheese Crumbles.  Packaged in c",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7c084315-bad4-4742-ba7e-06177bcf3bbd",
+      "title": "FCF Item 404884, Gyro Kit With Trays. Each tray consists of 2/5.25lbs. packages. UPC 0 13454 38155. Distributed by Fresh Creative Foods, Vista CA.   Each kit consists of 8 bags of Traditional Pita Bre",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b420c794-ddb6-4fc2-a110-e743f14651af",
+      "title": "FCF Item 404885, Gyro Kit No Trays. Each box consists of 2/5.25lbs. packages. UPC 0 13454 38158. Distributed by Fresh Creative Foods, Vista CA.   Each kit consists of 8 bags of Traditional Pita Bread,",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "48a779ec-44b0-481d-ae70-d7164b487f6a",
+      "title": "Item 406873, UPC 40134 30852, Home Chef Asian Style Chicken Stir Fry OP With Trays 2/6.5 LB. Distributed by Fresh Creative Foods, Vista, CA.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fadaadf4-4abf-4290-81f4-983618c862b4",
+      "title": "Item 407118, UPC 13454 38493, Bistro 28 Creamy Green Chile Chicken Enchilada Express Meal Kit. Make 6 Enchiladas. Ready in 5 MIN. Net wt. 27 oz (1 LB 11 OZ) 765g. Distributed by Fresh Creative Foods, ",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "74edda44-b701-4e09-9077-a8c942315878",
+      "title": "Item 407120, UPC 13454 38495, Bistro 28 Chicken Street Tacos Express Meal Kit. Made 6 Tacos. Ready in 3 MIN. Net wt. 22 oz (1 LB 6 OZ) 624g. Distributed by Fresh Creative Foods, Vista, CA.  Case GTIN ",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "789b1442-5a87-430d-adcc-4d9839b29840",
+      "title": "Item 404711, UPC 13454 38082, Don Pancho Kit OP Street Taco Chicken NO Trays, 4.985 lb.   Case GTIN 10013454380823, Case UPC Code 1345438082, Don Pancho Kit OP Street Taco Chicken NO Trays. 2/4.985 lb",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b3fcb59f-ba85-4361-94c5-6474df844437",
+      "title": "Item 407119, UPC 13454 38494, Bistro 28 Chicken Burrito Bowl Express Meal Kit. Ready in 5 MIN. Net wt. 25 oz (1 LB 9 OZ) 788g. Distributed by Fresh Creative Foods, Vista, CA.  Case GTIN 10013454384944",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "86734123-bdd3-4d5c-adb0-f0799da67c83",
+      "title": "Item 404790, UPC 13454 38101, Ginger Chicken Broccoli Salad Kit V, 1/6.9625lb. Distributed by Fresh Creative Foods Vista, CA.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3cb88051-b95f-438d-a406-e471ed845f5f",
+      "title": "Item 406740, UPC 13454 38316, Asian Style Chicken Stir Fry Kit On Premise With Trays 2/6.5 LB. Distributed by Fresh Creative Foods, Vista, CA.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4d53f898-dce8-4ac5-a7c6-e234c45bf984",
+      "title": "Item 404866, UPC 13454 38152, HMS Hatch Chicken Enchilada Kit 1/22.225 LB. Distributed by Fresh Creative Foods, Vista, CA.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d415cb26-cda2-4c66-abd1-0bab7690cf4b",
+      "title": "Item 406897,UPC 13454 38407, Asian Style Stir Fry Single Serve OP no Trays 1/6.5 LB. Distributed by Fresh Creative Foods, Vista, CA.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "30829e8d-a935-465b-a1a6-a7c7f2cc8ac4",
+      "title": "Item 404710, UPC 13454 38080, Chicken Street Taco Kit with Trays, 4.985 lb.  Item 13454 38080 Chicken Street Taco Kit with Trays, 2/4.985 lb. bags per case.   Distributed by Fresh Creative Foods, Vist",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d2c222aa-53de-4757-85be-1c050109b8f2",
+      "title": "Item 404700, UPC 13454 38075, Premium Street Taco Kit With Trays, 2/4.9875 lbs. Distributed by Fresh Creative Foods Vista, CA.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "69ed7a09-e574-4456-9b29-4d14bd0e8a3a",
+      "title": "Item 401311, UPC 13454 35855, Caesar Salad Kit 2/6 lbs. Distributed by Fresh Creative Foods Vista, CA.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d8e11ae8-8e05-471c-87c2-74cd1254ea42",
+      "title": "Item 404764, UPC 71117 12500, Don Pancho Chicken Street Tacos Express Meal Kit. Made 6 Tacos. Ready in 3 MIN. Net wt. 22 oz (1 LB 6 OZ) 624g.  Case GTIN 10071117125006, Case UPC 71117 12500, Don Panch",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "80d7ee26-00b0-4991-8aeb-db6699f7e9a1",
+      "title": "Item 404977, UPC 13454 38191, Green Chile Chicken Enchilada Kit O.P. No Trays 2/6.75 LB. Distributed by Fresh Creative Foods, Vista, CA.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2b336272-c4e5-4c82-b3df-fb4f528b37fa",
+      "title": "Item 406581, UPC 40134 30435, Home Chef Kit Street Taco Chicken With Tray, 2/4.985 LB. Distributed by Fresh Creative Foods, Vista, CA or by Reser's Fine Foods Inc. Beaverton, OR.  Item 406581, UPC 401",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f999bc0a-7638-4cae-b0ed-4b3d99f1311e",
+      "title": "Item 404852, UPC 71117 12507, Don Pancho Chicken Quesadilla Express Meal Kit. Make 3 Quesadilla. Ready in 4 MIN. Net wt. 22.5 oz (1 LB 6.5 OZ) 638g.    Case GTIN 10071117125075, Case UPC 7111712507, D",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e0e0f0c2-f2f5-4e98-a381-e3ab18e00130",
+      "title": "Item 404856, UPC 71117 12506, Don Pancho Creamy Green Chile Chicken Enchilada Express Meal Kit. Made 6 Enchiladas . Ready in 4 MIN. Net wt. 27 oz (1 LB 11 OZ) 765g. There are 6 packages per case.  Dis",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "45010b97-d1a2-4346-97f5-5ba4c26f3a9f",
+      "title": "Item 407121, UPC 13454 38496, Bistro 28 Chicken Quesadilla Express Meal Kit. Make 3 Quesadilla. Ready in 4 MIN. Net wt. 22.5 oz (1 LB 6.5 OZ) 638g. Distributed by Fresh Creative Foods, Vista, CA.  Cas",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e6829838-9aa6-4a63-8005-8360c2f529bb",
+      "title": "UPC 95515 04502, Amazon Fresh Fresh Classic Macaroni Salad 16oz, refrigerated, packaged in a clear plastic tub with printed labels on top, bottom and side. There are 12 tubs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0b41559c-60d4-47a2-9ad2-9295f8b72496",
+      "title": "UPC 71117 19084, Reser's American Classics Spicy Pickle Potato Salad 16oz, refrigerated, packaged in an opaque printed plastic tub with a plastic red printed lid. There are 6 tubs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5ac05443-26ca-4570-b077-f934d9e89198",
+      "title": "UPC 71117 19063, Reser's American Classics Garden Pasta Salad 16oz, refrigerated, packaged in an opaque printed plastic tub with a plastic red printed lid. There are 6 tubs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a2cd284a-fcfc-43e3-8723-71cf8aaac333",
+      "title": "UPC 78742 02670, Walmart Original Freshness Guaranteed Macaroni Salad 3lb. (48oz), refrigerated, packaged in an opaque printed plastic tub with a plastic white printed lid. There are 6 tubs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0babd383-3966-45a3-8934-2681b01cd68d",
+      "title": "UPC 71117 14743, Reser s Rotisserie Chicken Salad Base 2lb. (32oz), refrigerated, packaged in an opaque plastic tub with a white printed plastic lid. There are 6 tubs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ada0e3e7-5010-4895-9156-917ff049d597",
+      "title": "UPC 78742 12653, Walmart Original Freshness Guaranteed Macaroni Salad 16oz, refrigerated, packaged in a clear plastic tub with printed labels on top, bottom and side. There are 12 tubs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-18",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cd279368-2067-4c61-8b89-6b1b80812654",
+      "title": "Item 71117.11356, Reser's American Classics Egg Salad, refrigerated product, net wt. 12oz. There are 6 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "43573703-9cb9-42c3-a881-3f80ae9be89a",
+      "title": "Item 71117.14378, Baked Scalloped Potatoes Special Request, refrigerated product, net wt. 2.5lb. There are 8 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "77bb7aff-b76c-49e5-95a3-67e9a086d837",
+      "title": "Item 71117.56013, Reser's Sweet Corn with Butter, refrigerated product, net wt. 4lb. There are 4 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bc632564-bce8-4b5a-9ebe-538f1bf53d66",
+      "title": "Item 71117.02009, Reser's American Classics Macaroni & Cheese White Cheddar, refrigerated product, net wt. 12oz. There are 6 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0da9da69-920b-4756-b54b-e39e0afae835",
+      "title": "Item 71117.14446, Potatoes Creamy Deluxe Special Request, refrigerated product, net wt. 5lb. There are 4 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7ebffad0-fe1f-44c7-96ea-0908ee0fcd2a",
+      "title": "Item 71117.18531, Stonemill Kitchens Green Goddess Pasta Salad, refrigerated product, net wt. 5lb. There are 2 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "675d0707-5a12-4076-badb-61cee30a0834",
+      "title": "Item 71117.03034, Reser's Kit HF Pudding Banana, refrigerated product, net wt. 4.81lb. There are 2 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "158e530f-b4f6-49d5-ac62-76b9a6caf977",
+      "title": "Item 71117.14459, Gravy Homestyle, refrigerated product, net wt. 4lb. There are 3 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b33f200b-296e-4e78-a729-3030bae291a9",
+      "title": "Item 71117.10923, Reser's Smokehouse Potato Salad, refrigerated product, net wt. 5lbs. There are 2 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "05f47975-8ab3-4aed-a604-be763a93de26",
+      "title": "Item 71117.15207, Reser's Raspberry Parfait Desserts, refrigerated product, net wt. 8lb. There are 2 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7cee54ed-bccd-4d1f-b258-b528d8644b11",
+      "title": "Item 71117.02126, Reser's American Classics Asiago Creamed Spinach, refrigerated product, net wt. 12oz. There are 6 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "361c40aa-e079-4248-ae17-f9ace18f4b88",
+      "title": "Item 71117.02123, Reser's American Classics Macaroni & Cheese, refrigerated product, net wt. 12oz. There are 6 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bcb56944-efb0-4cef-8521-ae9e20f5210f",
+      "title": "Item 71117.02008, Reser's American Classics Scalloped Potatoes, refrigerated product, net wt. 12oz. There are 6 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "065e1bb6-d151-4ee3-95d4-d4ab2538a9e6",
+      "title": "Item 41303.82013, Reser's Essential Everyday Original Potato Salad, refrigerated product, net wt. 16oz. There are 6 packs per case.",
+      "item_type": "recall",
+      "published_date": "2024-09-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "51cd021e-a716-40db-8bf0-a405616b610c",
+      "title": "Hill Country Fare Mustard Potato Salad refrigerated product is packaged in clear square plastic container with printed white plastic lid, net 48oz (3lb) 1.36 KG. UPC 4122003165. Distributed by H-E-B, ",
+      "item_type": "recall",
+      "published_date": "2024-08-07",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "26e5c725-ef4e-4cd3-9af1-6ed97f01cfaa",
+      "title": "Product is MACARONI Salad, but the bottom container is mislabeled with the ingredients statement for COLESLAW.  Product is refrigerated and packaged in a clear square container with 3 applied labels w",
+      "item_type": "recall",
+      "published_date": "2024-05-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0c5e515a-b7da-4894-bec2-bec77c1dc0f4",
+      "title": "Item # 407034, Don Pancho Fiesta 3 Pack Everything Sauce.  Each pack consists of Cilantro Lime Crema, Baja-Style Crema, Chipotle Crema. 3/12oz glass bottles per pack,  6 packs per case. UPC on 3-pack ",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e652169b-0c6a-411c-992b-6c63a469e1d0",
+      "title": "Item 404764, KIT EM CHICKEN STREET TACO DP EXPRESS MEAL 6/22 OZ, UPC 7111712500.  The following Taco Kits were distributed to consignees with instructions for assembly at retail store kitchen:  Item 4",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f328aba9-ba2c-453b-b2a8-2a1b8ae81ebd",
+      "title": "FCF Item 406957, Costco Item # 1744097, Club COSTCO SW Wrap Kit, Costco Service Deli, 2/8.15 lbs. Net Wt. 16.31 lbs., UPC 0 13454 38424 4.  Costco assembled and sold product as Southwest Wrap with Sau",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "36392740-1b46-4150-9c3c-462af248c54c",
+      "title": "FCF Item 403953, HEB Poblano Caesar Dressing, 12oz. glass bottle, 6 bottles per case. UPC 41220 94807",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3959356b-88f3-4d11-bbde-68e08101f5f9",
+      "title": "FCF Item 403949, HEB Cilantro Cotija Dressing Perfect for Tacos, 12oz glass bottle, 6 bottles per case. UPC on bottle: 41220 94799.",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4e3e01f6-0fdb-4333-8127-07d05ff04c22",
+      "title": "FCF Item #404967, Costco Item #1506878, Cilantro Lime Crema, 60/4oz plastic cups per case. Labeled cups only sold in bulk for Food Service Use not for individual sale. UPC 13454 38195.  FCF Item #4046",
+      "item_type": "recall",
+      "published_date": "2024-03-27",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ed6f4382-5257-4c6a-b7b8-50af8d51d833",
+      "title": "The recalled Reser's Amish Macaroni Salad was packaged in a plastic clear container where the top lid is labeled as Reser's Amish Macaroni Salad, Net Wt. 1lb., and the container side label indicates R",
+      "item_type": "recall",
+      "published_date": "2024-03-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Reser's Fine Foods, Inc.",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "6729f86f-49e6-4c47-8029-57be89037439",
+      "item_id": "01544673-1038-4fc6-a08b-96e3a77a80bb",
+      "summary": "Reser's Fine Foods, Incl. is recalling its 5lb. Foodservice Tuna Salad products due to potential contamination with Listeria monocytogenes. The contamination is linked to Newly Weds Foods Japanese Style Breadcrumbs, which were used in the tuna salad.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's Fine Foods, Incl.",
+        "Newly Weds Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d94c7cd3-3e9a-49a3-85f0-f78077bfc681",
+      "item_id": "05f47975-8ab3-4aed-a604-be763a93de26",
+      "summary": "Reser's Raspberry Parfait Desserts, net wt. 8lb (2 packs per case), have been recalled due to spoilage resulting from temperature abuse caused by a malfunctioning refrigeration unit during transport.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2d3058b3-6246-4b4b-9c6a-c6273021ce12",
+      "item_id": "065e1bb6-d151-4ee3-95d4-d4ab2538a9e6",
+      "summary": "Reser's Essential Everyday Original Potato Salad (16oz, refrigerated) is being recalled due to spoilage caused by temperature abuse during transport, resulting from a malfunctioning refrigeration unit on trailer #184.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0fce6835-ca0a-4710-a91f-eaa83ee30193",
+      "item_id": "0b41559c-60d4-47a2-9ad2-9295f8b72496",
+      "summary": "Reser's American Classics Spicy Pickle Potato Salad (16oz, UPC 71117 19084) has been recalled due to the potential presence of foreign material. The refrigerated product is packaged in an opaque printed plastic tub with a plastic red printed lid.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's American Classics"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1e48ad53-b380-49b9-9d12-441c319a0898",
+      "item_id": "0babd383-3966-45a3-8934-2681b01cd68d",
+      "summary": "Reser's is recalling its Rotisserie Chicken Salad Base (2lb., UPC 71117 14743) due to the presence of foreign material.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "52815123-7e1c-4b10-a8b0-778286286a68",
+      "item_id": "0c5e515a-b7da-4894-bec2-bec77c1dc0f4",
+      "summary": "Don Pancho Fiesta is recalling its 3 Pack Everything Sauce (Cilantro Lime Crema, Baja-Style Crema, Chipotle Crema) due to potential contamination with Listeria monocytogenes, linked to recalled Cotija cheese used in ready-to-eat products.",
+      "key_regulations": [],
+      "key_entities": [
+        "Don Pancho Fiesta 3 Pack Everything Sauce"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "df25e0df-eb51-47a6-b58c-2ddd1c4ef384",
+      "item_id": "0da9da69-920b-4756-b54b-e39e0afae835",
+      "summary": "Item 71117.14446, \"Potatoes Creamy Deluxe Special Request,\" a refrigerated product, is being recalled due to potential spoilage caused by temperature abuse from a malfunctioning refrigeration unit on a trailer.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e1d85e74-2d6c-437f-9876-87b40e75bb59",
+      "item_id": "158e530f-b4f6-49d5-ac62-76b9a6caf977",
+      "summary": "Gravy Homestyle, a refrigerated product, is being recalled because it may become spoiled due to temperature abuse caused by a malfunctioning refrigeration unit on a trailer.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1ef07ed4-9c75-48c2-be3b-22a3ba0f341e",
+      "item_id": "1f69fcd5-51e0-4042-bca8-39503bc07a99",
+      "summary": "Sysco Corp is recalling its Imperial Deluxe Tuna Salad (Reorder #6526826, 5lb foodservice item) due to potential contamination with Listeria monocytogenes. The contamination is linked to Newly Weds Foods recalled Japanese Style Breadcrumbs used in the tuna salad.",
+      "key_regulations": [],
+      "key_entities": [
+        "Sysco Corporation",
+        "Newly Weds Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e6d0a492-d06d-4114-ae93-1a7f9c3d1f22",
+      "item_id": "26e5c725-ef4e-4cd3-9af1-6ed97f01cfaa",
+      "summary": "Aldi is recalling its Macaroni Salad because it was mislabeled with the ingredient statement for Coleslaw, resulting in undeclared wheat, a common allergen. The macaroni salad is sold in a 32oz clear square container.",
+      "key_regulations": [],
+      "key_entities": [
+        "Aldi"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b39e5d11-33cb-49ed-aa95-0e873303dd8b",
+      "item_id": "28869a19-8ab8-4acb-a2d0-d6c964d46579",
+      "summary": "Trader Joe's is recalling its Hot Honey Mustard Dressing due to the undeclared presence of peanuts, soy, sesame, and wheat, which are major food allergens. The mislabeling occurred because bottles intended for Hot Honey Mustard Dressing were filled with Thai Style Peanut Dressing.",
+      "key_regulations": [],
+      "key_entities": [
+        "Trader Joe's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fa07a3a8-a49d-4b1a-a092-8d60e9580453",
+      "item_id": "2b336272-c4e5-4c82-b3df-fb4f528b37fa",
+      "summary": "Meal kits, specifically 'Home Chef Kit Street Taco Chicken With Tray', distributed by Fresh Creative Foods and Reser's Fine Foods Inc., were recalled due to the cooked chicken component being contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods",
+        "Reser's Fine Foods Inc.",
+        "Home Chef"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2a00b684-e13f-49f0-9634-3b165514db51",
+      "item_id": "30829e8d-a935-465b-a1a6-a7c7f2cc8ac4",
+      "summary": "Chicken Street Taco Kits distributed by Fresh Creative Foods and Reser's Fine Foods, Inc. have been recalled due to contamination with Listeria monocytogenes in the cooked chicken component of the meal kits.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods",
+        "Reser's Fine Foods, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "bd4d942c-f177-400a-9faa-836769d1f201",
+      "item_id": "361c40aa-e079-4248-ae17-f9ace18f4b88",
+      "summary": "Reser's American Classics Macaroni & Cheese is being recalled due to potential spoilage caused by temperature abuse from a malfunctioning refrigeration unit during transport.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a23fe790-1106-4f99-8615-d64fab4ba28d",
+      "item_id": "36392740-1b46-4150-9c3c-462af248c54c",
+      "summary": "HEB Poblano Caesar Dressing, 12oz glass bottles, is being recalled due to potential contamination with Listeria monocytogenes. The contamination originated from repackaged Cotija cheese.",
+      "key_regulations": [],
+      "key_entities": [
+        "HEB"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4fcc5264-6969-4c02-a91f-4a6192f7c23b",
+      "item_id": "39551a85-8f1f-4d5e-887a-dcdd0218b96f",
+      "summary": "US Foods, Inc. is recalling Molly Kitchen's Tuna Salad due to mislabeling, where containers have Chicken Salad lids. This error results in undeclared fish allergen (tuna) in the product, posing a risk to individuals with fish allergies.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)"
+      ],
+      "key_entities": [
+        "US Foods, Inc.",
+        "Molly Kitchen's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "10b8e1a4-49d0-41da-943b-142d03b1a22b",
+      "item_id": "3959356b-88f3-4d11-bbde-68e08101f5f9",
+      "summary": "HEB Cilantro Cotija Dressing Perfect for Tacos in 12oz glass bottles is being recalled due to potential contamination with Listeria monocytogenes, which originated from repackaged Cotija cheese used in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "HEB"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e8e0e691-7523-498b-90e4-3b68cad9e70f",
+      "item_id": "3cb88051-b95f-438d-a406-e471ed845f5f",
+      "summary": "Fresh Creative Foods has recalled Item 406740, Asian Style Chicken Stir Fry Kit On Premise With Trays, due to contamination with Listeria monocytogenes in the cooked chicken component of the meal kits.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "91ec7b81-1b26-48c8-ab7f-861339461bb7",
+      "item_id": "43573703-9cb9-42c3-a881-3f80ae9be89a",
+      "summary": "A recall has been issued for 'Baked Scalloped Potatoes Special Request' (Item 71117.14378) due to spoilage caused by temperature abuse, which resulted from a malfunctioning refrigeration unit on trailer #184.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b384a06e-e1df-45de-83c6-65a4ebf1e70c",
+      "item_id": "45010b97-d1a2-4346-97f5-5ba4c26f3a9f",
+      "summary": "Fresh Creative Foods is recalling Bistro 28 Chicken Quesadilla Express Meal Kits because they contain cooked chicken that was contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3f04e3f5-d0df-4580-910f-dc9147be64b8",
+      "item_id": "45ca0db3-f6da-464e-9b0a-0e12ad0ed4c3",
+      "summary": "Molly's Kitchens Tuna Salad (item 794599, 5lb. Foodservice item) distributed by U.S. Foods, Inc. is recalled due to potential contamination with Listeria monocytogenes, stemming from previously recalled Japanese Style Breadcrumbs from Newly Weds Foods.",
+      "key_regulations": [],
+      "key_entities": [
+        "Molly's Kitchens",
+        "U.S. Foods, Inc",
+        "Newly Weds Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5c32497e-c842-4878-bc09-74dec142738f",
+      "item_id": "48a779ec-44b0-481d-ae70-d7164b487f6a",
+      "summary": "Fresh Creative Foods has recalled Home Chef Asian Style Chicken Stir Fry meal kits due to contamination with Listeria monocytogenes in the cooked chicken component.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "38f148ad-89fe-4f44-a0ef-d82b83b3877e",
+      "item_id": "4d53f898-dce8-4ac5-a7c6-e234c45bf984",
+      "summary": "Fresh Creative Foods has recalled its HMS Hatch Chicken Enchilada Kit due to the cooked chicken component being contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3c2239f6-c349-49f1-afc7-42b7579e7ef0",
+      "item_id": "4e3e01f6-0fdb-4333-8127-07d05ff04c22",
+      "summary": "Multiple 'Cilantro Lime Crema' and 'Cilantro Lime Crema Everything Sauce' products, including those from FCF and Don Pancho, are being recalled due to contamination with Listeria monocytogenes. The contamination originated from repackaged Cotija cheese.",
+      "key_regulations": [],
+      "key_entities": [
+        "FCF",
+        "Costco",
+        "Don Pancho"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cff5b521-da4b-4812-a661-5db5478c5fb5",
+      "item_id": "516077e7-bca5-4178-9c00-16925e57d40c",
+      "summary": "Fresh Creative Foods (FCF) is recalling Smoked Mozzarella Penne Salad Kits (item #404284, UPC #13454 37904) due to potential contamination with Listeria monocytogenes. The kit contains 2/3lbs. sealed bag of affected Penne Pasta and is a perishable/refrigerated product, not sold directly to consumers.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods (FCF)"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "154dd67b-36ec-46f4-8377-64c8bceb2428",
+      "item_id": "51cd021e-a716-40db-8bf0-a405616b610c",
+      "summary": "H-E-B is recalling Hill Country Fare Mustard Potato Salad due to the presence of plastic foreign material.",
+      "key_regulations": [],
+      "key_entities": [
+        "H-E-B"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3a2af192-19ec-4fab-a2c2-09b9ea7e26eb",
+      "item_id": "5ac05443-26ca-4570-b077-f934d9e89198",
+      "summary": "Reser's American Classics Garden Pasta Salad (16oz, UPC 71117 19063) is being recalled due to the presence of foreign material.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's American Classics"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3328ee9a-aa0e-4bf3-bd60-82d7e78dc623",
+      "item_id": "675d0707-5a12-4076-badb-61cee30a0834",
+      "summary": "Reser's Kit HF Pudding Banana, a refrigerated product, is being recalled due to potential spoilage caused by temperature abuse from a malfunctioning refrigeration unit on a trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "22f5c277-4c4a-4e7c-95de-7473f46b454e",
+      "item_id": "69ed7a09-e574-4456-9b29-4d14bd0e8a3a",
+      "summary": "Fresh Creative Foods of Vista, CA, is recalling its Caesar Salad Kits (Item 401311, UPC 13454 35855) because they contain cooked chicken that was contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8f630d1b-7238-43d7-a4e3-c0aa2ce655c0",
+      "item_id": "74edda44-b701-4e09-9077-a8c942315878",
+      "summary": "Bistro 28 Chicken Street Tacos Express Meal Kits, distributed by Fresh Creative Foods, Vista, CA, are being recalled due to contamination with Listeria monocytogenes found in the cooked chicken component of the meal kits.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "377d1156-feb4-4c55-875c-b78c6cb7aeb6",
+      "item_id": "77bb7aff-b76c-49e5-95a3-67e9a086d837",
+      "summary": "Reser's Sweet Corn with Butter is being recalled due to spoilage caused by temperature abuse during transport, resulting from a malfunctioning refrigeration unit.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4aa2c342-516a-4975-abbe-e188f3ed60d5",
+      "item_id": "789b1442-5a87-430d-adcc-4d9839b29840",
+      "summary": "Don Pancho Kit OP Street Taco Chicken NO Trays meal kits containing cooked chicken have been recalled due to contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods",
+        "Reser's Fine Foods, Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "31eabd22-3dbf-4d7c-8eac-a49f24309c24",
+      "item_id": "797f0c4c-ccd1-444c-8667-5bc3c889a647",
+      "summary": "The Beef & Lamb Gyro Sandwich Express Meal Kit, distributed by Fresh Creative Foods, has been recalled due to contamination with Salmonella, found in the cucumber ingredient of the tzatziki sauce.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3ffea5f6-be31-438f-af8f-02f0d6a5a632",
+      "item_id": "7c084315-bad4-4742-ba7e-06177bcf3bbd",
+      "summary": "Fresh Creative Foods is recalling Item 404884, Gyro Kit With Trays, due to Salmonella contamination originating from cucumber used in the tzatziki sauce.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "27673a6d-6117-438d-b182-0dc0db4f7e2a",
+      "item_id": "7cee54ed-bccd-4d1f-b258-b528d8644b11",
+      "summary": "Reser's American Classics Asiago Creamed Spinach is being recalled because the refrigerated product may become spoiled due to temperature abuse caused by a malfunctioning refrigeration unit during transport.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's American Classics"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "01778459-7add-41cb-940a-ace95c9fc2b9",
+      "item_id": "7ebffad0-fe1f-44c7-96ea-0908ee0fcd2a",
+      "summary": "Stonemill Kitchens Green Goddess Pasta Salad is being recalled because it may become spoiled due to temperature abuse resulting from a malfunctioning refrigeration unit on trailer #184.",
+      "key_regulations": [],
+      "key_entities": [
+        "Stonemill Kitchens"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "62fee293-ba87-4628-b9ed-d82c1aa8cbcf",
+      "item_id": "80d7ee26-00b0-4991-8aeb-db6699f7e9a1",
+      "summary": "Fresh Creative Foods has issued a recall for Item 404977, UPC 13454 38191, Green Chile Chicken Enchilada Kit O.P. No Trays 2/6.75 LB, due to contamination with Listeria monocytogenes originating from the cooked chicken component of the meal kits.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f9ada5bc-4f9f-4b82-bf09-f5735f0edf63",
+      "item_id": "86734123-bdd3-4d5c-adb0-f0799da67c83",
+      "summary": "Fresh Creative Foods is recalling Ginger Chicken Broccoli Salad Kit V due to contamination with Listeria monocytogenes found in the cooked chicken component of the meal kits.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "046e5691-b832-40e9-974a-82110fd7c3f7",
+      "item_id": "9cd1be07-f689-45eb-b788-56ab72c3f43f",
+      "summary": "Sysco Corporation is recalling its Classic Tuna Salad (Reorder #6724249, net wt. 5lb) due to potential contamination with Listeria monocytogenes. The contamination is linked to Newly Weds Foods Japanese Style Breadcrumbs used in the product. The tuna salad is a foodservice item packaged in a clear plastic tub.",
+      "key_regulations": [],
+      "key_entities": [
+        "Sysco Corporation",
+        "Newly Weds Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "500f986c-be7a-4f27-8068-893dce328b32",
+      "item_id": "a02181a9-6021-4605-824a-d726b61a1b35",
+      "summary": "Reser's Fine Foods has recalled Reser's Tuna Salad (5lb. Foodservice item) due to potential contamination with Listeria monocytogenes. The contamination is linked to recalled Japanese Style Breadcrumbs used in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's Fine Foods",
+        "Newly Weds Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9dede471-1f02-47d9-b3c2-5b200f62e63c",
+      "item_id": "a2cd284a-fcfc-43e3-8723-71cf8aaac333",
+      "summary": "Walmart Original Freshness Guaranteed Macaroni Salad is being recalled due to contamination with foreign material.",
+      "key_regulations": [],
+      "key_entities": [
+        "Walmart",
+        "Freshness Guaranteed"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dfc19dc2-63a0-447f-84a5-cfaa20701e71",
+      "item_id": "ada0e3e7-5010-4895-9156-917ff049d597",
+      "summary": "Walmart Original Freshness Guaranteed Macaroni Salad (16oz, refrigerated) with UPC 78742 12653 has been recalled due to the presence of foreign material.",
+      "key_regulations": [],
+      "key_entities": [
+        "Walmart"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b536f4a5-f804-449b-8217-40977dd0ffc4",
+      "item_id": "b33f200b-296e-4e78-a729-3030bae291a9",
+      "summary": "Reser's Smokehouse Potato Salad (Item 71117.10923, net wt. 5lbs, 2 packs per case) is being recalled due to spoilage caused by temperature abuse resulting from a malfunctioning refrigeration unit on trailer #184.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2a3b6f6d-0291-446a-86cc-f20c7acd183b",
+      "item_id": "b3fcb59f-ba85-4361-94c5-6474df844437",
+      "summary": "Fresh Creative Foods recalled Bistro 28 Chicken Burrito Bowl Express Meal Kits due to contamination with Listeria monocytogenes in the cooked chicken component.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "30b3795d-7a3d-4c1c-b472-9f0e55364ac0",
+      "item_id": "b420c794-ddb6-4fc2-a110-e743f14651af",
+      "summary": "Fresh Creative Foods is recalling Gyro Kit No Trays (Item 404885) due to potential Salmonella contamination. The contamination is linked to cucumber found in the tzatziki sauce cups included in the kits, which are sold to consignees for further assembly or repackaging.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "74217b31-15e4-4595-92b1-932a409b12a8",
+      "item_id": "b42fcc59-c4a6-46d6-a8fb-f3e5b4cd0448",
+      "summary": "Signature Cafe Premium Tuna Salad (3lb/48oz) distributed by Lucerne Foods is recalled due to potential contamination with Listeria monocytogenes, stemming from recalled Japanese Style Breadcrumbs supplied by Newly Weds Foods.",
+      "key_regulations": [],
+      "key_entities": [
+        "Lucerne Foods",
+        "Newly Weds Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4df5e2f8-b257-41dc-b0f1-ebd855991806",
+      "item_id": "bc632564-bce8-4b5a-9ebe-538f1bf53d66",
+      "summary": "Reser's American Classics Macaroni & Cheese White Cheddar (12oz, refrigerated product) is being recalled due to potential spoilage caused by temperature abuse from a malfunctioning refrigeration unit during transport.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's American Classics"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b38f9c35-1ea6-4469-bdc1-2167d27739b5",
+      "item_id": "bcb56944-efb0-4cef-8521-ae9e20f5210f",
+      "summary": "Reser's American Classics Scalloped Potatoes, 12oz refrigerated product, are being recalled due to spoilage caused by temperature abuse from a malfunctioning refrigeration unit on a trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dc897964-2479-4de9-ab70-309e001c13f8",
+      "item_id": "c1dc5953-7012-4844-8f49-b2a45750a24f",
+      "summary": "Reser's Gourmet Tuna Salad is being recalled due to potential contamination with Listeria monocytogenes, stemming from recalled Japanese Style Breadcrumbs supplied by Newly Weds Foods.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's Fine Foods",
+        "Newly Weds Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "08e5745c-503e-43a8-acea-a2f1d8b98335",
+      "item_id": "cd279368-2067-4c61-8b89-6b1b80812654",
+      "summary": "Reser's American Classics Egg Salad, a refrigerated product, is being recalled due to potential spoilage caused by temperature abuse, which resulted from a malfunctioning refrigeration unit on trailer #184.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "61835a7f-84fd-4da4-8f6c-6d443ce37e7b",
+      "item_id": "d2c222aa-53de-4757-85be-1c050109b8f2",
+      "summary": "A Premium Street Taco Kit containing cooked chicken was recalled due to contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods Vista, CA"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "28e0582d-e693-4255-abca-b9b28ebca429",
+      "item_id": "d415cb26-cda2-4c66-abd1-0bab7690cf4b",
+      "summary": "Fresh Creative Foods is recalling 'Asian Style Stir Fry Single Serve OP no Trays' meal kits because they contain cooked chicken contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e04c0c49-7579-460c-afee-751cc52d6213",
+      "item_id": "d8e11ae8-8e05-471c-87c2-74cd1254ea42",
+      "summary": "Don Pancho Chicken Street Tacos Express Meal Kit is being recalled by Reser's Fine Foods Inc. due to contamination with Listeria monocytogenes found in the cooked chicken component of the meal kit.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's Fine Foods Inc.",
+        "Don Pancho"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2e43344d-4bc2-4843-981f-9e0afacb3958",
+      "item_id": "e0e0f0c2-f2f5-4e98-a381-e3ab18e00130",
+      "summary": "Don Pancho Creamy Green Chile Chicken Enchilada Express Meal Kits were recalled due to the presence of Listeria monocytogenes contamination in the cooked chicken component of the meal kits.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's Fine Foods Inc.",
+        "Don Pancho"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7c307186-c5ca-4ca6-bccd-fb00de3a06b6",
+      "item_id": "e5e76a63-b3ac-4871-b780-4adff5a51b36",
+      "summary": "Fresh Creative Foods (FCF) has recalled Basil Pesto Bowtie Pasta Kits and Salad Kits due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods (FCF)"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8ed0102d-5641-4c79-bec6-1c906a1e89db",
+      "item_id": "e652169b-0c6a-411c-992b-6c63a469e1d0",
+      "summary": "Multiple 'Chicken Street Taco' kits, including variants for express meals and single-serve options, have been recalled due to potential contamination with Listeria monocytogenes. The contamination originated from recalled Cotija cheese that was repackaged into these ready-to-eat taco products.",
+      "key_regulations": [],
+      "key_entities": [
+        "Listeria monocytogenes"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d92c99b6-41f1-4bda-9795-d9997bd3adf2",
+      "item_id": "e6829838-9aa6-4a63-8005-8360c2f529bb",
+      "summary": "Amazon Fresh is recalling its Fresh Classic Macaroni Salad 16oz due to the potential presence of foreign material. The recalled product has UPC 95515 04502 and is packaged in a clear plastic tub.",
+      "key_regulations": [],
+      "key_entities": [
+        "Amazon Fresh"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d60e4584-6a3b-4a5b-98a5-d7c56a2fe1b7",
+      "item_id": "ed6f4382-5257-4c6a-b7b8-50af8d51d833",
+      "summary": "Reser's Fine Foods has recalled its Amish Macaroni Salad because the product's side label, which was incorrectly printed as 'Reser's Southern Style with Egg Potato Salad,' failed to declare wheat, a known allergen, which is present in the Amish Macaroni Salad.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's Fine Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a34c49fd-1a57-4f41-9c66-5f0a06488a41",
+      "item_id": "f328aba9-ba2c-453b-b2a8-2a1b8ae81ebd",
+      "summary": "Costco has recalled its 'Club COSTCO SW Wrap Kit' due to contamination with Listeria monocytogenes. The contamination originated from recalled Cotija cheese that was repackaged into finished ready-to-eat products.",
+      "key_regulations": [],
+      "key_entities": [
+        "Costco"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ef694754-4692-4369-9aae-3d72d1b1740f",
+      "item_id": "f999bc0a-7638-4cae-b0ed-4b3d99f1311e",
+      "summary": "Don Pancho Chicken Quesadilla Express Meal Kits are being recalled because they contain cooked chicken that was contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Reser's Fine Foods Inc.",
+        "Don Pancho"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f3699566-b524-4f07-a5c0-0f5920b8bc00",
+      "item_id": "fadaadf4-4abf-4290-81f4-983618c862b4",
+      "summary": "Fresh Creative Foods is recalling Bistro 28 Creamy Green Chile Chicken Enchilada Express Meal Kits due to a cooked chicken component being contaminated with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh Creative Foods"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e360b5be-24ce-42c5-b5b6-b1e53db8988a",
+      "item_id": "fddc80d2-0680-40f4-91da-65036f7a0e4c",
+      "summary": "Fresh Creative Foods (FCF) has recalled item #404736 Basil Pesto Bowtie Pasta Kit and other Salad Kits due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act"
+      ],
+      "key_entities": [
+        "Fresh Creative Foods (FCF)"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "01544673-1038-4fc6-a08b-96e3a77a80bb",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05f47975-8ab3-4aed-a604-be763a93de26",
+      "tag_dimension": "product_type",
+      "tag_value": "gelatins_puddings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "065e1bb6-d151-4ee3-95d4-d4ab2538a9e6",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0b41559c-60d4-47a2-9ad2-9295f8b72496",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0babd383-3966-45a3-8934-2681b01cd68d",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0c5e515a-b7da-4894-bec2-bec77c1dc0f4",
+      "tag_dimension": "product_type",
+      "tag_value": "gravies_sauces",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0c5e515a-b7da-4894-bec2-bec77c1dc0f4",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0c5e515a-b7da-4894-bec2-bec77c1dc0f4",
+      "tag_dimension": "product_type",
+      "tag_value": "condiments_relishes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0da9da69-920b-4756-b54b-e39e0afae835",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "158e530f-b4f6-49d5-ac62-76b9a6caf977",
+      "tag_dimension": "product_type",
+      "tag_value": "gravies_sauces",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1f69fcd5-51e0-4042-bca8-39503bc07a99",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26e5c725-ef4e-4cd3-9af1-6ed97f01cfaa",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "28869a19-8ab8-4acb-a2d0-d6c964d46579",
+      "tag_dimension": "product_type",
+      "tag_value": "condiments_relishes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2b336272-c4e5-4c82-b3df-fb4f528b37fa",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2b336272-c4e5-4c82-b3df-fb4f528b37fa",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "30829e8d-a935-465b-a1a6-a7c7f2cc8ac4",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "30829e8d-a935-465b-a1a6-a7c7f2cc8ac4",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "361c40aa-e079-4248-ae17-f9ace18f4b88",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "36392740-1b46-4150-9c3c-462af248c54c",
+      "tag_dimension": "product_type",
+      "tag_value": "condiments_relishes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39551a85-8f1f-4d5e-887a-dcdd0218b96f",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39551a85-8f1f-4d5e-887a-dcdd0218b96f",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3959356b-88f3-4d11-bbde-68e08101f5f9",
+      "tag_dimension": "product_type",
+      "tag_value": "condiments_relishes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3cb88051-b95f-438d-a406-e471ed845f5f",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3cb88051-b95f-438d-a406-e471ed845f5f",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "43573703-9cb9-42c3-a881-3f80ae9be89a",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45010b97-d1a2-4346-97f5-5ba4c26f3a9f",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45ca0db3-f6da-464e-9b0a-0e12ad0ed4c3",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45ca0db3-f6da-464e-9b0a-0e12ad0ed4c3",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "48a779ec-44b0-481d-ae70-d7164b487f6a",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4d53f898-dce8-4ac5-a7c6-e234c45bf984",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4e3e01f6-0fdb-4333-8127-07d05ff04c22",
+      "tag_dimension": "product_type",
+      "tag_value": "gravies_sauces",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4e3e01f6-0fdb-4333-8127-07d05ff04c22",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "516077e7-bca5-4178-9c00-16925e57d40c",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "516077e7-bca5-4178-9c00-16925e57d40c",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "51cd021e-a716-40db-8bf0-a405616b610c",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5ac05443-26ca-4570-b077-f934d9e89198",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "675d0707-5a12-4076-badb-61cee30a0834",
+      "tag_dimension": "product_type",
+      "tag_value": "gelatins_puddings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "69ed7a09-e574-4456-9b29-4d14bd0e8a3a",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "74edda44-b701-4e09-9077-a8c942315878",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "74edda44-b701-4e09-9077-a8c942315878",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "77bb7aff-b76c-49e5-95a3-67e9a086d837",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "789b1442-5a87-430d-adcc-4d9839b29840",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "797f0c4c-ccd1-444c-8667-5bc3c889a647",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c084315-bad4-4742-ba7e-06177bcf3bbd",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c084315-bad4-4742-ba7e-06177bcf3bbd",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c084315-bad4-4742-ba7e-06177bcf3bbd",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c084315-bad4-4742-ba7e-06177bcf3bbd",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c084315-bad4-4742-ba7e-06177bcf3bbd",
+      "tag_dimension": "product_type",
+      "tag_value": "gravies_sauces",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7cee54ed-bccd-4d1f-b258-b528d8644b11",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7ebffad0-fe1f-44c7-96ea-0908ee0fcd2a",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80d7ee26-00b0-4991-8aeb-db6699f7e9a1",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "86734123-bdd3-4d5c-adb0-f0799da67c83",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "86734123-bdd3-4d5c-adb0-f0799da67c83",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9cd1be07-f689-45eb-b788-56ab72c3f43f",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a02181a9-6021-4605-824a-d726b61a1b35",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a2cd284a-fcfc-43e3-8723-71cf8aaac333",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ada0e3e7-5010-4895-9156-917ff049d597",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ada0e3e7-5010-4895-9156-917ff049d597",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b33f200b-296e-4e78-a729-3030bae291a9",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b3fcb59f-ba85-4361-94c5-6474df844437",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b3fcb59f-ba85-4361-94c5-6474df844437",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b420c794-ddb6-4fc2-a110-e743f14651af",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b420c794-ddb6-4fc2-a110-e743f14651af",
+      "tag_dimension": "product_type",
+      "tag_value": "gravies_sauces",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b420c794-ddb6-4fc2-a110-e743f14651af",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b420c794-ddb6-4fc2-a110-e743f14651af",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b42fcc59-c4a6-46d6-a8fb-f3e5b4cd0448",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b42fcc59-c4a6-46d6-a8fb-f3e5b4cd0448",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_service",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b42fcc59-c4a6-46d6-a8fb-f3e5b4cd0448",
+      "tag_dimension": "facility_type",
+      "tag_value": "retail_deli",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bc632564-bce8-4b5a-9ebe-538f1bf53d66",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bc632564-bce8-4b5a-9ebe-538f1bf53d66",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bcb56944-efb0-4cef-8521-ae9e20f5210f",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c1dc5953-7012-4844-8f49-b2a45750a24f",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cd279368-2067-4c61-8b89-6b1b80812654",
+      "tag_dimension": "product_type",
+      "tag_value": "egg_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d2c222aa-53de-4757-85be-1c050109b8f2",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d2c222aa-53de-4757-85be-1c050109b8f2",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d415cb26-cda2-4c66-abd1-0bab7690cf4b",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d415cb26-cda2-4c66-abd1-0bab7690cf4b",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d8e11ae8-8e05-471c-87c2-74cd1254ea42",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d8e11ae8-8e05-471c-87c2-74cd1254ea42",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0e0f0c2-f2f5-4e98-a381-e3ab18e00130",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5e76a63-b3ac-4871-b780-4adff5a51b36",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e652169b-0c6a-411c-992b-6c63a469e1d0",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e652169b-0c6a-411c-992b-6c63a469e1d0",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e652169b-0c6a-411c-992b-6c63a469e1d0",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6829838-9aa6-4a63-8005-8360c2f529bb",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ed6f4382-5257-4c6a-b7b8-50af8d51d833",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ed6f4382-5257-4c6a-b7b8-50af8d51d833",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ed6f4382-5257-4c6a-b7b8-50af8d51d833",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f328aba9-ba2c-453b-b2a8-2a1b8ae81ebd",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f328aba9-ba2c-453b-b2a8-2a1b8ae81ebd",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f999bc0a-7638-4cae-b0ed-4b3d99f1311e",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f999bc0a-7638-4cae-b0ed-4b3d99f1311e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fadaadf4-4abf-4290-81f4-983618c862b4",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fadaadf4-4abf-4290-81f4-983618c862b4",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fddc80d2-0680-40f4-91da-65036f7a0e4c",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    }
+  ]
+}

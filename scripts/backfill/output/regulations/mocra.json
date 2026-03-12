@@ -1,0 +1,558 @@
+{
+  "regulation_name": "MoCRA",
+  "search_terms": [
+    "MoCRA",
+    "Modernization of Cosmetics Regulation"
+  ],
+  "item_count": 8,
+  "affected_categories": [
+    "otc_drugs",
+    "topical_drugs_pharma",
+    "skin_care",
+    "personal_cleanliness",
+    "baby_products",
+    "suntan_preparations",
+    "other_food",
+    "other_supplement",
+    "other_cosmetic"
+  ],
+  "cfr_references": [],
+  "key_deadlines": [
+    {
+      "item_title": "Naturich Cosmetique Labs — CGMP/Finished Pharmaceuticals/Adulterated",
+      "effective_date": "2025-09-25",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Neva Global Grup Sanayi Ic Ve Dis Ticaret Anonim Sirketi — CGMP/Finished Pharmaceutical/Adulterated",
+      "effective_date": "2025-03-12",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Brands International Corporation — CGMP/Finished Pharmaceutical/Adulterated/Refusal to Allow Inspection<br />\r\n",
+      "effective_date": "2024-12-17",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Guidance for Industry:  Registration and Listing of Cosmetic Product Facilities and Products",
+      "effective_date": null,
+      "comment_deadline": "2025-01-13"
+    }
+  ],
+  "items": [
+    {
+      "id": "33449e67-d03f-441b-8fbc-2e75a7a37f6d",
+      "title": "2025-002044 - GUUD USA LLC - CLEEN - Clinically tested",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1921",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "title": "FDA Finds Insufficient Data to Determine Safety of PFAS in Cosmetic Products",
+      "item_type": "press_release",
+      "published_date": "2025-12-29",
+      "source_url": "http://www.fda.gov/news-events/press-announcements/fda-finds-insufficient-data-determine-safety-pfas-cosmetic-products",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "title": "Naturich Cosmetique Labs — CGMP/Finished Pharmaceuticals/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2025-10-07",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/naturich-cosmetique-labs-713565-09252025",
+      "issuing_office": "Center for Drug Evaluation and Research (CDER)",
+      "effective_date": "2025-09-25",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "title": "Neva Global Grup Sanayi Ic Ve Dis Ticaret Anonim Sirketi — CGMP/Finished Pharmaceutical/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2025-03-18",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/neva-global-grup-sanayi-ic-ve-dis-ticaret-anonim-sirketi-699000-03122025",
+      "issuing_office": "Center for Drug Evaluation and Research (CDER)",
+      "effective_date": "2025-03-12",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "title": "Brands International Corporation — CGMP/Finished Pharmaceutical/Adulterated/Refusal to Allow Inspection<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2024-12-24",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/brands-international-corporation-689983-12172024",
+      "issuing_office": "Center for Drug Evaluation and Research (CDER)",
+      "effective_date": "2024-12-17",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "93d241b8-3653-4c2e-9324-0d6185c19eca",
+      "title": "Guidance for Industry:  Registration and Listing of Cosmetic Product Facilities and Products",
+      "item_type": "guidance",
+      "published_date": "2024-12-11",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-registration-and-listing-cosmetic-product-facilities-and-products",
+      "issuing_office": "Office of the Commissioner,Office of the Chief Scientist",
+      "effective_date": null,
+      "comment_deadline": "2025-01-13",
+      "cfr_references": null
+    },
+    {
+      "id": "87365d38-bc10-48f5-9671-3929f7a75e40",
+      "title": "Guidance for Industry: Compliance Policy for Cosmetic Product Facility Registration and Cosmetic Product Listing",
+      "item_type": "guidance",
+      "published_date": "2023-11-08",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-compliance-policy-cosmetic-product-facility-registration-and-cosmetic-product",
+      "issuing_office": "Office of the Commissioner,Office of the Chief Scientist",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "4cbb8d4c-8126-4970-8094-acdd11c4e29a",
+      "title": "Draft Guidance for Industry: Cosmetic Good Manufacturing Practices",
+      "item_type": "draft_guidance",
+      "published_date": "2013-06-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/draft-guidance-industry-cosmetic-good-manufacturing-practices",
+      "issuing_office": "Office of the Commissioner,Office of the Chief Scientist",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "899838ae-a0fb-45be-bc78-d6b917202f09",
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "summary": "The FDA issued a warning letter to Naturich Cosmetique Labs for significant CGMP violations at its drug manufacturing facility. Violations include an unvalidated water system contaminated with bacteria like Enterobacter cloacae and Burkholderia cepacia, inadequate process validation for OTC drug products, and failure to investigate out-of-specification results. The firm also failed to conduct required identity testing on high-risk raw materials, such as testing ethyl alcohol for methanol and glycerin for diethylene glycol (DEG) and ethylene glycol (EG) contamination, posing a serious health risk.",
+      "key_regulations": [
+        "21 CFR 210",
+        "21 CFR 211",
+        "21 CFR 211.100(a)",
+        "21 CFR 211.192",
+        "21 CFR 211.84(d)(1)",
+        "21 CFR 211.84(d)(2)",
+        "FD&C Act Section 501(a)(2)(B)"
+      ],
+      "key_entities": [
+        "Naturich Cosmetique Labs",
+        "Center for Drug Evaluation and Research (CDER)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2025-10-16"
+    },
+    {
+      "id": "eaf0ab3e-74e8-44a4-a46a-2426f2b06418",
+      "item_id": "33449e67-d03f-441b-8fbc-2e75a7a37f6d",
+      "summary": "Administrative record for a cosmetic product listing by GUUD USA LLC for the brand 'CLEEN' under the Modernization of Cosmetics Regulation Act (MoCRA).",
+      "key_regulations": [
+        "21 U.S.C. 364b"
+      ],
+      "key_entities": [
+        "GUUD USA LLC"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "96ee39f2-baba-492e-bebe-9104c206459e",
+      "item_id": "4cbb8d4c-8126-4970-8094-acdd11c4e29a",
+      "summary": "The FDA issued a draft guidance in 2013 providing non-binding recommendations for Cosmetic Good Manufacturing Practices (GMPs), incorporating aspects of the ISO 22716:2007 standard. A May 2023 update notes that the FDA intends to withdraw or revise and reissue this draft guidance based on new GMP rulemaking required by the Modernization of Cosmetics Regulation Act of 2022 (MoCRA).",
+      "key_regulations": [
+        "Modernization of Cosmetics Regulation Act of 2022"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "International Cooperation on Cosmetic Regulations (ICCR)",
+        "International Organization for Standardization (ISO)"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "1d03a987-000b-4a7a-9ea4-1a7f11a4cd77",
+      "item_id": "87365d38-bc10-48f5-9671-3929f7a75e40",
+      "summary": "The FDA issued a guidance document announcing a six-month delay in the enforcement of cosmetic product facility registration and cosmetic product listing requirements under MoCRA. This extension is intended to give owners, operators, and responsible persons adequate time to submit the required information.",
+      "key_regulations": [
+        "21 CFR 10.115(g)(2)",
+        "21 CFR 10.115(g)(5)",
+        "Modernization of Cosmetics Regulation Act of 2022 (MoCRA)",
+        "Federal Food, Drug, and Cosmetic Act (FD&C Act)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Office of the Commissioner",
+        "Office of the Chief Scientist"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "c3e357dc-f13e-47c8-9c90-f677e5417178",
+      "item_id": "93d241b8-3653-4c2e-9324-0d6185c19eca",
+      "summary": "The FDA issued a Guidance for Industry to assist with the statutory requirements for cosmetic product facility registrations and product listings under MoCRA. The guidance explains who is responsible for submitting, what information to include, and how/when to submit. Three new FAQs in Appendix B (Q20-22) have been distributed for comment, with a deadline of January 13, 2025.",
+      "key_regulations": [
+        "MoCRA"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Office of the Commissioner",
+        "Office of the Chief Scientist"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2025-01-13"
+    },
+    {
+      "id": "58e9c325-7c7d-4302-a8c5-9425d3504959",
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "summary": "The FDA issued a warning letter to Brands International Corporation, a Canadian drug manufacturer, for significant CGMP violations and for limiting and delaying an FDA inspection in June 2024. Key violations include failure to investigate customer complaints of mold contamination in its \"Kissable Oatmeal Daily Moisturizing Body Lotion,\" failure to test incoming raw materials like glycerin for diethylene glycol (DEG) and ethylene glycol (EG), inadequate testing of finished products, poor facility conditions (pest control, improper storage), and an ineffective Quality Unit. The company's products are considered adulterated, and the firm was placed on Import Alert 66-40. The FDA requires a corrective action plan within 15 working days. The letter also notes that the firm's cosmetic products may be adulterated and subject to MoCRA.",
+      "key_regulations": [
+        "21 CFR Part 210",
+        "21 CFR Part 211",
+        "FD&C Act Section 501"
+      ],
+      "key_entities": [
+        "Brands International Corporation",
+        "Center for Drug Evaluation and Research (CDER)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2024-12-17"
+    },
+    {
+      "id": "bf9c3a1d-d9ba-4cf9-8a31-34018b375aee",
+      "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "summary": "The FDA released a congressionally mandated report under the Modernization of Cosmetics Regulation Act of 2022 (MoCRA) evaluating PFAS in cosmetic products. The report found insufficient toxicological data to definitively determine the safety of most PFAS, underscoring significant data gaps. The FDA will continue to monitor the issue and address data gaps, but no specific federal regulations prohibiting PFAS in cosmetics currently exist.",
+      "key_regulations": [
+        "Modernization of Cosmetics Regulation Act of 2022",
+        "MoCRA"
+      ],
+      "key_entities": [
+        "FDA",
+        "CDC",
+        "EPA",
+        "U.S. Department of Health and Human Services"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "60d70851-8666-4c6c-87ff-2dcb65e5c671",
+      "item_id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "summary": "The FDA issued a warning letter to Turkish manufacturer Neva Global Grup Sanayi Ic Ve Dis Ticaret Anonim Sirketi for significant CGMP violations concerning their over-the-counter (OTC) drug products. The inspection revealed failures in component identity testing, process validation, stability testing, and quality unit oversight. The firm was also noted to manufacture cosmetics and was reminded of MoCRA requirements. Consequently, the FDA has placed the company's products on Import Alert 66-40.",
+      "key_regulations": [
+        "21 CFR 210",
+        "21 CFR 211",
+        "21 CFR 211.84(d)(1)",
+        "21 CFR 211.84(d)(2)",
+        "21 CFR 211.100(a)",
+        "21 CFR 211.166(a)",
+        "21 CFR 211.22"
+      ],
+      "key_entities": [
+        "Neva Global Grup Sanayi Ic Ve Dis Ticaret Anonim Sirketi",
+        "Center for Drug Evaluation and Research (CDER)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2025-04-02"
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "product_type",
+      "tag_value": "baby_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "product_type",
+      "tag_value": "suntan_preparations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "regulation",
+      "tag_value": "Modernization of Cosmetics Regulation Act of 2022 (MoCRA)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "21f677fe-a47a-480d-afc9-9b38c1cd0380",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "33449e67-d03f-441b-8fbc-2e75a7a37f6d",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33449e67-d03f-441b-8fbc-2e75a7a37f6d",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33449e67-d03f-441b-8fbc-2e75a7a37f6d",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33449e67-d03f-441b-8fbc-2e75a7a37f6d",
+      "tag_dimension": "claims",
+      "tag_value": "Clinically tested",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33449e67-d03f-441b-8fbc-2e75a7a37f6d",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 607",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33449e67-d03f-441b-8fbc-2e75a7a37f6d",
+      "tag_dimension": "regulation",
+      "tag_value": "MoCRA",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4cbb8d4c-8126-4970-8094-acdd11c4e29a",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4cbb8d4c-8126-4970-8094-acdd11c4e29a",
+      "tag_dimension": "facility_type",
+      "tag_value": "Cosmetic Manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4cbb8d4c-8126-4970-8094-acdd11c4e29a",
+      "tag_dimension": "facility_type",
+      "tag_value": "Cosmetic Facilities",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4cbb8d4c-8126-4970-8094-acdd11c4e29a",
+      "tag_dimension": "regulation",
+      "tag_value": "Modernization of Cosmetics Regulation Act of 2022 (MoCRA)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "87365d38-bc10-48f5-9671-3929f7a75e40",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "87365d38-bc10-48f5-9671-3929f7a75e40",
+      "tag_dimension": "facility_type",
+      "tag_value": "cosmetic product facilities",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "87365d38-bc10-48f5-9671-3929f7a75e40",
+      "tag_dimension": "regulation",
+      "tag_value": "Modernization of Cosmetics Regulation Act of 2022 (MoCRA)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "87365d38-bc10-48f5-9671-3929f7a75e40",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "93d241b8-3653-4c2e-9324-0d6185c19eca",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "93d241b8-3653-4c2e-9324-0d6185c19eca",
+      "tag_dimension": "facility_type",
+      "tag_value": "Cosmetic Product Facilities",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "93d241b8-3653-4c2e-9324-0d6185c19eca",
+      "tag_dimension": "regulation",
+      "tag_value": "Modernization of Cosmetics Regulation Act of 2022 (MoCRA)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "93d241b8-3653-4c2e-9324-0d6185c19eca",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115(g)(5)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "facility_type",
+      "tag_value": "cosmetic_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 211",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 501(a)(2)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 501(j)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d462bc94-474d-4e4f-ab52-d51fe83ce77d",
+      "tag_dimension": "regulation",
+      "tag_value": "MoCRA",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "tag_dimension": "regulation",
+      "tag_value": "Modernization of Cosmetics Regulation Act of 2022",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437",
+      "tag_dimension": "regulation",
+      "tag_value": "MoCRA",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "tag_dimension": "facility_type",
+      "tag_value": "cosmetic_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 211",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ea701a12-f04f-499d-8eef-4f692634dc8e",
+      "tag_dimension": "regulation",
+      "tag_value": "MoCRA",
+      "signal_source": "direct"
+    }
+  ]
+}

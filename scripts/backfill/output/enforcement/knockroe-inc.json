@@ -1,0 +1,372 @@
+{
+  "company_name": "Knockroe Inc",
+  "total_actions": 12,
+  "action_types": {
+    "recall": 12
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-05-21",
+    "latest": "2025-05-21"
+  },
+  "items": [
+    {
+      "id": "9bf4371d-057d-4cb3-a8b3-2850ecc74da7",
+      "title": "Bonya Vanilla Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5855ec37-2c71-40c8-b4d0-e0b29e46f748",
+      "title": "Bonya Coconut Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "43058279-00b3-46af-b25e-79850406cc99",
+      "title": "Bonya Raspberry Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8a6aff8c-a66a-4fc5-a09e-5ef304160fae",
+      "title": "Bonya Strawberry Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "06edfda8-2b7a-47ec-a2d6-a567b75ace96",
+      "title": "Bonya Blueberry Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6b7ab2a5-c151-447f-a596-d1d01de0c64d",
+      "title": "Bonya Strawberry-Banana  Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f3b09152-029b-4359-a603-9c4b095520ea",
+      "title": "Bonya Black Cherry Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "abb3a4dd-0090-4bb1-882d-5a728424b8ab",
+      "title": "Bonya Passion Fruit Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d5d510bb-ac76-4160-92ff-5438c9a32b91",
+      "title": "Bonya Mango Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "616bf65b-e754-4c1f-84bc-466e77506cf3",
+      "title": "Bonya Peach Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "418e356d-e8d2-4280-9688-2cd3668a5c2e",
+      "title": "Bonya Lemon Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "dd492875-372a-4d36-b69d-ea5c845df181",
+      "title": "Bonya Pineapple Yogurt Parfait, 8oz, Plastic cups with plastic inserts for granola, 6 units per case for distributors, 12 units per case for all other customers, Always Refrigerate .",
+      "item_type": "recall",
+      "published_date": "2025-05-21",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Knockroe Inc",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "a4def705-efe7-47a2-95c0-b56c0124975b",
+      "item_id": "06edfda8-2b7a-47ec-a2d6-a567b75ace96",
+      "summary": "Bonya Blueberry Yogurt Parfait is being recalled due to the presence of undeclared almonds, posing a risk to individuals with almond allergies.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)"
+      ],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b219ce17-3200-485f-9ce1-aa881be8be91",
+      "item_id": "418e356d-e8d2-4280-9688-2cd3668a5c2e",
+      "summary": "Bonya Lemon Yogurt Parfait is being recalled due to the presence of undeclared almonds. The product is packaged in 8oz plastic cups and requires refrigeration.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f42cd14f-7d5a-454c-96d3-5e3d3850894e",
+      "item_id": "43058279-00b3-46af-b25e-79850406cc99",
+      "summary": "Bonya Raspberry Yogurt Parfait is being recalled due to the presence of undeclared almonds.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b1e3f3b3-232b-4231-bc40-8faea54e3dbe",
+      "item_id": "5855ec37-2c71-40c8-b4d0-e0b29e46f748",
+      "summary": "Bonya is recalling its 8oz Coconut Yogurt Parfait due to the presence of undeclared almonds, posing a risk to individuals with almond allergies.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9c43932b-4105-4f67-b173-20da6b9552cc",
+      "item_id": "616bf65b-e754-4c1f-84bc-466e77506cf3",
+      "summary": "Bonya Peach Yogurt Parfait is being recalled due to the presence of undeclared almonds, posing a risk to individuals with almond allergies.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)"
+      ],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "445afd92-c7dc-4057-899f-97af589d1f70",
+      "item_id": "6b7ab2a5-c151-447f-a596-d1d01de0c64d",
+      "summary": "Bonya is recalling its Strawberry-Banana Yogurt Parfait due to the presence of undeclared almonds, which is a common allergen.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "786f5b5a-5119-4249-8586-3b65e996b256",
+      "item_id": "8a6aff8c-a66a-4fc5-a09e-5ef304160fae",
+      "summary": "Bonya is recalling its Strawberry Yogurt Parfait due to the presence of undeclared almonds, posing a risk to individuals with almond allergies.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e6e7773d-bc6a-44c0-bbea-7cc51108ef73",
+      "item_id": "9bf4371d-057d-4cb3-a8b3-2850ecc74da7",
+      "summary": "Bonya is recalling its Vanilla Yogurt Parfait due to undeclared almonds, which can pose a health risk to individuals with almond allergies.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "38db9257-d8d2-4215-bd8d-369cb9c5a80f",
+      "item_id": "abb3a4dd-0090-4bb1-882d-5a728424b8ab",
+      "summary": "Bonya Passion Fruit Yogurt Parfait is being recalled due to the presence of undeclared almonds, posing a risk to individuals with almond allergies.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8a82a299-d9b3-48ad-adf8-8ced6c5a92dc",
+      "item_id": "d5d510bb-ac76-4160-92ff-5438c9a32b91",
+      "summary": "Bonya is recalling its 8oz Mango Yogurt Parfait due to the presence of undeclared almonds, which can pose a risk to individuals with almond allergies.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act of 2004 (FALCPA)"
+      ],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "62d5658c-d499-4cf7-8a7c-859f92beb1af",
+      "item_id": "dd492875-372a-4d36-b69d-ea5c845df181",
+      "summary": "Bonya is recalling its Pineapple Yogurt Parfait due to the presence of undeclared almonds, which can pose a risk to individuals with almond allergies.",
+      "key_regulations": [],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "42db7787-1f1a-4d30-8a4f-951d9b830c3c",
+      "item_id": "f3b09152-029b-4359-a603-9c4b095520ea",
+      "summary": "Bonya Black Cherry Yogurt Parfait, 8oz, is being recalled due to the presence of undeclared almonds, posing a risk to individuals with almond allergies.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)"
+      ],
+      "key_entities": [
+        "Bonya"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "06edfda8-2b7a-47ec-a2d6-a567b75ace96",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "06edfda8-2b7a-47ec-a2d6-a567b75ace96",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "418e356d-e8d2-4280-9688-2cd3668a5c2e",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "43058279-00b3-46af-b25e-79850406cc99",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5855ec37-2c71-40c8-b4d0-e0b29e46f748",
+      "tag_dimension": "product_type",
+      "tag_value": "imitation_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "616bf65b-e754-4c1f-84bc-466e77506cf3",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "616bf65b-e754-4c1f-84bc-466e77506cf3",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6b7ab2a5-c151-447f-a596-d1d01de0c64d",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8a6aff8c-a66a-4fc5-a09e-5ef304160fae",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9bf4371d-057d-4cb3-a8b3-2850ecc74da7",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "abb3a4dd-0090-4bb1-882d-5a728424b8ab",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d5d510bb-ac76-4160-92ff-5438c9a32b91",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dd492875-372a-4d36-b69d-ea5c845df181",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3b09152-029b-4359-a603-9c4b095520ea",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3b09152-029b-4359-a603-9c4b095520ea",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3b09152-029b-4359-a603-9c4b095520ea",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    }
+  ]
+}

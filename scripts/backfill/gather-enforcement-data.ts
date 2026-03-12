@@ -122,7 +122,7 @@ async function gatherCompanyData(companyName: string) {
     const batch = itemIds.slice(i, i + 100);
     const { data: enrichments } = await supabase
       .from("item_enrichments")
-      .select("id, item_id, summary, impact_level, action_required, audience_tags")
+      .select("id, item_id, summary, key_regulations, key_entities, regulatory_action_type, deadline")
       .in("item_id", batch);
     if (enrichments) allEnrichments.push(...enrichments);
   }
@@ -166,24 +166,28 @@ async function gatherCompanyData(companyName: string) {
 }
 
 // Run
-const companies = await getCompanies();
-console.log(`Gathering enforcement data for ${companies.length} companies...`);
-console.log(`Output: ${outputDir}`);
+async function main() {
+  const companies = await getCompanies();
+  console.log(`Gathering enforcement data for ${companies.length} companies...`);
+  console.log(`Output: ${outputDir}`);
 
-let gathered = 0;
-for (const name of companies) {
-  try {
-    const data = await gatherCompanyData(name);
-    if (data) {
-      const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-      const outFile = join(outputDir, `${slug}.json`);
-      writeFileSync(outFile, JSON.stringify(data, null, 2));
-      console.log(`  Wrote: ${outFile}`);
-      gathered++;
+  let gathered = 0;
+  for (const name of companies) {
+    try {
+      const data = await gatherCompanyData(name);
+      if (data) {
+        const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        const outFile = join(outputDir, `${slug}.json`);
+        writeFileSync(outFile, JSON.stringify(data, null, 2));
+        console.log(`  Wrote: ${outFile}`);
+        gathered++;
+      }
+    } catch (err) {
+      console.error(`  Error gathering "${name}":`, (err as Error).message);
     }
-  } catch (err) {
-    console.error(`  Error gathering "${name}":`, (err as Error).message);
   }
+
+  console.log(`\nDone. ${gathered}/${companies.length} companies gathered.`);
 }
 
-console.log(`\nDone. ${gathered}/${companies.length} companies gathered.`);
+main().catch(console.error);

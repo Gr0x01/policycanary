@@ -1,0 +1,1653 @@
+{
+  "regulation_name": "GRAS Reform",
+  "search_terms": [
+    "GRAS",
+    "Generally Recognized as Safe"
+  ],
+  "item_count": 26,
+  "affected_categories": [
+    "other_food",
+    "animal_feed",
+    "infant_formula",
+    "medical_foods",
+    "dietary_conventional_foods",
+    "dairy_products",
+    "baby_food",
+    "plant_protein_products",
+    "mushroom_supplements",
+    "enzymes",
+    "meat_products",
+    "poultry_products",
+    "egg_products",
+    "otc_drugs",
+    "suntan_preparations",
+    "topical_drugs_pharma",
+    "food_contact_materials",
+    "pediatric_drugs",
+    "pet_food",
+    "nonalcoholic_beverages",
+    "sugar_substitutes",
+    "personal_cleanliness",
+    "ophthalmic_drugs",
+    "botanicals_herbal",
+    "other_supplement",
+    "food_preservatives",
+    "fats_oils",
+    "baked_goods",
+    "breakfast_cereals",
+    "confections_frostings",
+    "frozen_dairy",
+    "prescription_drugs"
+  ],
+  "cfr_references": [],
+  "key_deadlines": [
+    {
+      "item_title": "Agency Information Collection Activities; Submission for Office of Management and Budget Review; Comment Request; Substances Generally Recognized as Safe (GRAS): Notifications and Convening Panels",
+      "effective_date": null,
+      "comment_deadline": "2025-09-25"
+    },
+    {
+      "item_title": "Revitalize Energy, Inc. — Unapproved New Drugs/Misbranded/OTC",
+      "effective_date": "2025-07-09",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Agency Information Collection Activities; Proposed Collection; Comment Request; Substances Generally Recognized as Safe: Notifications and Convening Panels",
+      "effective_date": null,
+      "comment_deadline": "2025-08-26"
+    },
+    {
+      "item_title": "Guidance for Industry: Best Practices for Convening a GRAS Panel",
+      "effective_date": null,
+      "comment_deadline": "2018-05-15"
+    },
+    {
+      "item_title": "CVM GFI #262 Pre-Submission Consultation Process for Animal Food Additive Petitions or Generally Recognized as Safe (GRAS) Notices",
+      "effective_date": null,
+      "comment_deadline": "2020-04-13"
+    }
+  ],
+  "items": [
+    {
+      "id": "8940596c-0842-4a67-be60-aa788987cf83",
+      "title": "GRAS Notice (GRN) 1269 - Modified-monellin preparation – amendments",
+      "item_type": "notice",
+      "published_date": "2026-02-19",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-N-1928-0050",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "0128ed63-30fa-4eb3-aad8-48576d415304",
+      "title": "GRAS Notice (GRN) 1261 - 2'-Fucosyllactose - amendment",
+      "item_type": "notice",
+      "published_date": "2026-02-19",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-N-1928-0049",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "017b4d5c-cbfd-4e9a-b693-96c9e4f05210",
+      "title": "GRAS Notice (GRN) 1284 - Recombinant bovine lactoferrin produced by a modified strain of Komagataella phaffii",
+      "item_type": "notice",
+      "published_date": "2026-02-19",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-N-1928-0051",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "05fac6fc-52b5-4d65-90f8-d6c8d4692092",
+      "title": "GRAS Notice (GRN) 1220 - Mycelial biomass from Pleurotus pulmonarius – amendments",
+      "item_type": "notice",
+      "published_date": "2026-02-19",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-N-1927-0102",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "cd517b6a-20f9-45e6-b410-6fef55e11a33",
+      "title": "GRAS Notice (GRN) 1165 - (R)-1,3-Butanediol",
+      "item_type": "notice",
+      "published_date": "2026-02-19",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-N-1927-0101",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "8f879c6c-2a9d-4f3e-b0f7-9104b7c8cd4c",
+      "title": "GRAS Notice (GRN) 1260 - Rebaudioside M - amendments",
+      "item_type": "notice",
+      "published_date": "2026-02-19",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-N-1928-0048",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "title": "FDA Launches Assessment of BHA, a Common Food Chemical Preservative",
+      "item_type": "press_release",
+      "published_date": "2026-02-10",
+      "source_url": "http://www.fda.gov/news-events/press-announcements/fda-launches-assessment-bha-common-food-chemical-preservative",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "781f3f1e-2ba6-4ff9-85bf-7c52c999e03a",
+      "title": "Goldenroot Yuzu Ginger Lemongrass Ginger Beer.  12 oz. (355 ml)  UPC 8 50052-32817 7.  Keep Cold.  Manufactured By Goldenroot, 3841 Market St #113, Denton, TX  76209.",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f6442275-e5f3-4511-ace0-20f355d361f5",
+      "title": "a.) Live it Up brand Super Greens; Natural Wild Berry Flavor; Chlorella, Spirulina, Wheatgrass, Kale, Broccoli, Spinach, Barley grass, Moringa, Parsley; Whole food dietary supplement powder; 30 day su",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "c658c73f-e989-4776-87b9-1f006e53c56a",
+      "title": "Live it Up brand Super Greens; Chlorella, Spirulina, Wheatgrass, Kale, Broccoli, Spinach, Barley grass, Moringa, Parsley; Whole food dietary supplement powder; 30 day supply; NET WT. 8.5OZ (240G); Man",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "6eb0f5ee-a13e-4c7b-892b-dc41c12a7cbc",
+      "title": "1) Middlefield Original Cheese Co-op 100% Grass-Fed Pepper Jack Cheese, 8 oz. individual units, 5 lb. loaves, and 40 lb. loaves, packaged in plastic with lot code 251661  2) Copia Collective 100% Gras",
+      "item_type": "recall",
+      "published_date": "2025-09-03",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "7549131f-ca1a-4e3f-9775-0c5fde1e905e",
+      "title": "Agency Information Collection Activities; Submission for Office of Management and Budget Review; Comment Request; Substances Generally Recognized as Safe (GRAS): Notifications and Convening Panels",
+      "item_type": "notice",
+      "published_date": "2025-08-26",
+      "source_url": "https://www.federalregister.gov/documents/2025/08/26/2025-16268/agency-information-collection-activities-submission-for-office-of-management-and-budget-review",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-09-25",
+      "cfr_references": []
+    },
+    {
+      "id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "title": "Revitalize Energy, Inc. — Unapproved New Drugs/Misbranded/OTC",
+      "item_type": "warning_letter",
+      "published_date": "2025-07-15",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/revitalize-energy-inc-712417-07092025",
+      "issuing_office": "Center for Drug Evaluation and Research (CDER)",
+      "effective_date": "2025-07-09",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "9fb68446-3c1d-42c6-b848-77643dfe1ef1",
+      "title": "Agency Information Collection Activities; Proposed Collection; Comment Request; Substances Generally Recognized as Safe: Notifications and Convening Panels",
+      "item_type": "notice",
+      "published_date": "2025-06-27",
+      "source_url": "https://www.federalregister.gov/documents/2025/06/27/2025-11960/agency-information-collection-activities-proposed-collection-comment-request-substances-generally",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-08-26",
+      "cfr_references": []
+    },
+    {
+      "id": "00c3fcd2-5b65-48cf-89b0-d06816dd923e",
+      "title": "Guidance for Industry: Best Practices for Convening a GRAS Panel",
+      "item_type": "guidance",
+      "published_date": "2022-12-20",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-best-practices-convening-gras-panel",
+      "issuing_office": "Center for Veterinary Medicine<br><br>Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": "2018-05-15",
+      "cfr_references": null
+    },
+    {
+      "id": "5db0ac6c-4f6e-4407-96cb-c408422bbeaf",
+      "title": "CVM GFI #262 Pre-Submission Consultation Process for Animal Food Additive Petitions or Generally Recognized as Safe (GRAS) Notices",
+      "item_type": "guidance",
+      "published_date": "2020-12-11",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cvm-gfi-262-pre-submission-consultation-process-animal-food-additive-petitions-or-generally",
+      "issuing_office": "Center for Veterinary Medicine",
+      "effective_date": null,
+      "comment_deadline": "2020-04-13",
+      "cfr_references": null
+    },
+    {
+      "id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "title": "Maximal Usage Trials for Topically Applied Active Ingredients Being Considered for Inclusion in an Over-The-Counter Monograph: Study Elements and Considerations",
+      "item_type": "guidance",
+      "published_date": "2019-05-10",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/maximal-usage-trials-topically-applied-active-ingredients-being-considered-inclusion-over-counter",
+      "issuing_office": "Center for Drug Evaluation and Research",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "title": "Guidance for Industry: Regulatory Framework for Substances Intended for Use in Human Food or Animal Food on the Basis of the Generally Recognized as Safe (GRAS) Provision of the Federal Food, Drug, and Cosmetic Act",
+      "item_type": "guidance",
+      "published_date": "2017-11-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-regulatory-framework-substances-intended-use-human-food-or-animal-food-basis",
+      "issuing_office": "Center for Veterinary Medicine<br><br>Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "title": "Consumer Antiseptic Wash Final Rule Questions and Answers:  Guidance for Industry",
+      "item_type": "guidance",
+      "published_date": "2017-07-26",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/consumer-antiseptic-wash-final-rule-questions-and-answers",
+      "issuing_office": "Center for Drug Evaluation and Research",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "title": "Nonprescription Sunscreen Drug Products – Safety and Effectiveness Data",
+      "item_type": "guidance",
+      "published_date": "2016-11-22",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/nonprescription-sunscreen-drug-products-safety-and-effectiveness-data",
+      "issuing_office": "Center for Drug Evaluation and Research",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "title": "Sunscreen Innovation Act: Withdrawal of a 586A Request or Pending Request Guidance for Industry",
+      "item_type": "guidance",
+      "published_date": "2016-10-11",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/sunscreen-innovation-act-withdrawal-586a-request-or-pending-request-guidance-industry",
+      "issuing_office": "Center for Drug Evaluation and Research",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "title": "Guidance for Industry:  Frequently Asked Questions About GRAS for Substances Intended for Use in Human or Animal Food",
+      "item_type": "guidance",
+      "published_date": "2016-09-30",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-frequently-asked-questions-about-gras-substances-intended-use-human-or-animal-food",
+      "issuing_office": "Center for Veterinary Medicine<br><br>Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "title": "Guidance for Industry: Assessing the Effects of Significant Manufacturing Process Changes, Including Emerging Technologies, on the Safety and Regulatory Status of Food Ingredients and Food Contact Substances, Including Food Ingredients that Are Color Additives",
+      "item_type": "guidance",
+      "published_date": "2014-06-27",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-assessing-effects-significant-manufacturing-process-changes-including-emerging",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "575ab8b0-890e-47b1-ae64-c8e936ec1d6d",
+      "title": "Topical Acne Drug Products for Over-the-Counter Human Use--Revision of Labeling and Classification of Benzoyl Peroxide as Safe and Effective:  Guidance for Industry",
+      "item_type": "guidance",
+      "published_date": "2011-06-21",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/topical-acne-drug-products-over-counter-human-use-revision-labeling-and-classification-benzoyl",
+      "issuing_office": "Center for Drug Evaluation and Research",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "title": "Guidance for Industry: Recommendations for Submission of Chemical and Technological Data for Food Additive Petitions and GRAS Notices for Enzyme Preparations",
+      "item_type": "guidance",
+      "published_date": "2010-06-30",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-recommendations-submission-chemical-and-technological-data-food-additive-petitions",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "title": "CPG Sec 500.200 Food Additives -\"GRAS\"",
+      "item_type": "guidance",
+      "published_date": "2005-11-29",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-500200-food-additives-gras",
+      "issuing_office": "Human Foods Program<br><br>Office of Inspections and Investigations",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "17be6b28-e435-40a5-bb0d-59024a9985a3",
+      "item_id": "00c3fcd2-5b65-48cf-89b0-d06816dd923e",
+      "summary": "The FDA's Center for Veterinary Medicine and Human Foods Program issued a final guidance document detailing best practices for convening a GRAS panel. The guidance provides recommendations for proponents of GRAS status on how to identify qualified panel members with appropriate expertise, manage potential conflicts of interest, and ensure the panel's evaluation relies on publicly available information to establish that a substance is safe for its intended use in human or animal food.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act (FD&C Act)",
+        "21 CFR 10.115(g)(5)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Center for Veterinary Medicine",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2018-05-15"
+    },
+    {
+      "id": "3ebc6c8f-f608-4d02-bc18-d75f2c5d2fb7",
+      "item_id": "0128ed63-30fa-4eb3-aad8-48576d415304",
+      "summary": "This filing represents a formal amendment to GRAS Notice (GRN) 1261 regarding the safety and intended use of 2'-Fucosyllactose (2'-FL) as a food ingredient, typically targeting infant formula and medical food applications.",
+      "key_regulations": [
+        "21 CFR 170.36"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "00beea59-7c5b-41d6-aa9d-cba34174656a",
+      "item_id": "017b4d5c-cbfd-4e9a-b693-96c9e4f05210",
+      "summary": "FDA has received GRAS Notice (GRN) 1284 regarding the use of recombinant bovine lactoferrin, produced by a modified strain of Komagataella phaffii, as a food ingredient.",
+      "key_regulations": [
+        "21 CFR 170 Subpart E"
+      ],
+      "key_entities": [
+        "Komagataella phaffii"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "e1750cb6-728a-4863-b4bc-9956473241bc",
+      "item_id": "05fac6fc-52b5-4d65-90f8-d6c8d4692092",
+      "summary": "The FDA received an amendment to GRAS Notice 1220, which concerns the safety notification for mycelial biomass derived from the Phoenix Oyster mushroom (Pleurotus pulmonarius) for use as a food ingredient.",
+      "key_regulations": [
+        "21 CFR 170 Subpart E"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "5f8f31c0-cbf6-4760-83ec-6f2959ef8c7c",
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "summary": "The FDA issued a guidance document detailing recommendations for the submission of chemical and technological data to support food additive petitions and GRAS notices for enzyme preparations used in food processing. It covers the required identity and characterization of enzymes and their sources, manufacturing processes, purity specifications, intended technical effects, dietary exposure estimates, and specific provisions for use in meat, poultry, egg products, and potential food allergens.",
+      "key_regulations": [
+        "21 CFR 170",
+        "21 CFR 171",
+        "21 CFR 173"
+      ],
+      "key_entities": [
+        "Office of Food Additive Safety",
+        "Center for Food Safety and Applied Nutrition",
+        "Food Safety and Inspection Service",
+        "U.S. Department of Agriculture"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "1528ebc6-adaf-42aa-b25d-eabb561e8a02",
+      "item_id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "summary": "The FDA's Center for Drug Evaluation and Research (CDER) issued a final guidance document detailing the safety and effectiveness data needed to determine if nonprescription (OTC) sunscreen active ingredients are Generally Recognized as Safe and Effective (GRASE) under the Sunscreen Innovation Act.",
+      "key_regulations": [
+        "Sunscreen Innovation Act",
+        "21 CFR 10.115"
+      ],
+      "key_entities": [
+        "Center for Drug Evaluation and Research",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "96af2e99-12cb-4e37-87ec-04ae0d44aa4a",
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "summary": "The FDA issued a Guidance for Industry on how manufacturers of food ingredients and food contact substances should assess the effects of significant manufacturing process changes, such as adopting emerging technologies like nanotechnology, on a product's safety and regulatory status.",
+      "key_regulations": [
+        "21 CFR 10.115(g)(5)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "bd7b170f-1640-48a1-bbf9-d2ff668ea54a",
+      "item_id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "summary": "The FDA (CDER) issued a final guidance document detailing recommendations for designing and conducting Maximal Usage Trials (MUsT). These in vivo absorption trials are used to assess the bioavailability of topically applied active ingredients being considered for an over-the-counter (OTC) drug monograph to determine if systemic exposure requires additional safety data for a GRASE determination.",
+      "key_regulations": [
+        "OTC Drug Monograph",
+        "21 CFR 10.115(g)(5)"
+      ],
+      "key_entities": [
+        "Center for Drug Evaluation and Research",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "11315b9c-240e-41a8-abad-8ed82fe47cbb",
+      "item_id": "575ab8b0-890e-47b1-ae64-c8e936ec1d6d",
+      "summary": "The FDA issued a Small Entity Compliance Guide to help businesses comply with the final rule for OTC topical acne drug products. The rule officially classifies benzoyl peroxide as a Generally Recognized as Safe and Effective (GRASE) active ingredient, mandates specific new warnings and directions for its use, and updates labeling requirements for all OTC topical acne products to align with the standardized Drug Facts formatting under 21 CFR 201.66.",
+      "key_regulations": [
+        "21 CFR 333",
+        "21 CFR 201.66",
+        "75 FR 9767"
+      ],
+      "key_entities": [
+        "Center for Drug Evaluation and Research",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "50f31161-5905-464a-8ba9-ec280a66e826",
+      "item_id": "5db0ac6c-4f6e-4407-96cb-c408422bbeaf",
+      "summary": "The FDA's Center for Veterinary Medicine (CVM) issued final guidance GFI #262, which details the recommended information and procedures for pre-submission consultations prior to submitting animal food additive petitions (FAPs), Generally Recognized as Safe (GRAS) notices for animal food, and Food Use Authorization (FUA) requests.",
+      "key_regulations": [
+        "21 CFR 10.115(g)(5)"
+      ],
+      "key_entities": [
+        "Center for Veterinary Medicine",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2020-04-13"
+    },
+    {
+      "id": "867d513c-5a15-4081-80f2-18fe9d3ec35a",
+      "item_id": "6eb0f5ee-a13e-4c7b-892b-dc41c12a7cbc",
+      "summary": "Middlefield Original Cheese Co-op and Copia Collective are recalling 100% Grass-Fed Pepper Jack Cheese products due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Middlefield Original Cheese Co-op",
+        "Copia Collective"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4d1acb83-0852-4de1-9f56-7c4ed9c36277",
+      "item_id": "7549131f-ca1a-4e3f-9775-0c5fde1e905e",
+      "summary": "The FDA has issued a notice requesting public comments on its information collection activities concerning Generally Recognized as Safe (GRAS) notifications and the process for convening panels related to GRAS substances. This is part of a routine Office of Management and Budget review process.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA",
+        "Office of Management and Budget"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": "2025-09-25"
+    },
+    {
+      "id": "0077694e-1add-4aab-a571-f3b5df0faccb",
+      "item_id": "781f3f1e-2ba6-4ff9-85bf-7c52c999e03a",
+      "summary": "Goldenroot is recalling its Yuzu Ginger Lemongrass Ginger Beer because it contains ginger juice that was not properly pasteurized, posing a potential safety risk.",
+      "key_regulations": [],
+      "key_entities": [
+        "Goldenroot"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8aa75c5c-e82f-40a3-bb97-831f971d1506",
+      "item_id": "8940596c-0842-4a67-be60-aa788987cf83",
+      "summary": "FDA has received amendments to GRAS Notice (GRN) 1269 concerning the use of modified-monellin preparation as a food ingredient.",
+      "key_regulations": [
+        "GRAS Notification Program"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "72e88f05-6f6b-45e5-aa2a-0fa9f317ea1d",
+      "item_id": "8f879c6c-2a9d-4f3e-b0f7-9104b7c8cd4c",
+      "summary": "The FDA received amendments to GRAS Notice (GRN) 1260 regarding Rebaudioside M. This filing is part of the regulatory process for establishing the 'Generally Recognized as Safe' status for the ingredient when used as a sweetener in food products.",
+      "key_regulations": [
+        "21 CFR 170.203"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "2234af0d-16ba-4851-89c9-b8413277d671",
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "summary": "The FDA issued a Small Entity Compliance Guide to help small businesses comply with the Consumer Antiseptic Wash Final Rule (81 FR 61106). The rule finalizes the nonmonograph status of 19 active ingredients, including triclosan and triclocarban, declaring them not Generally Recognized as Safe and Effective (GRASE) for use in OTC consumer antiseptic washes. Benzalkonium chloride, benzethonium chloride, and chloroxylenol were deferred from the final rule to allow sponsors more time to submit necessary safety and effectiveness data.",
+      "key_regulations": [
+        "81 FR 61106"
+      ],
+      "key_entities": [
+        "Center for Drug Evaluation and Research",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "d948b77c-92b0-403f-a471-7b6151f62f12",
+      "item_id": "9fb68446-3c1d-42c6-b848-77643dfe1ef1",
+      "summary": "The FDA is requesting public comments on proposed information collection activities pertaining to substances generally recognized as safe (GRAS) notifications and the process for convening panels related to these substances. The comment period closes on August 26, 2025.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": "2025-08-26"
+    },
+    {
+      "id": "0e26c83e-7672-4bff-97e5-aa1b2c1bd9ea",
+      "item_id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "summary": "FDA Compliance Policy Guide (CPG) Sec 500.200 outlines enforcement policies for GRAS food additives. The guidance clarifies that foods containing GRAS substances may be deemed adulterated if the substance is not of food grade, exceeds the amount reasonably required to accomplish the intended technical effect, or violates Good Manufacturing Practices.",
+      "key_regulations": [
+        "21 CFR 182.1",
+        "FD&C Act Section 409"
+      ],
+      "key_entities": [
+        "CFSAN",
+        "Office of Compliance",
+        "Division of Enforcement"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "b035eb15-5721-438c-a99a-74e351320200",
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "summary": "The FDA issued a warning letter to Revitalize Energy, Inc. for marketing 'Revitalize Energizing Eye Drops' as an unapproved new drug and misbranded drug. The product contains active ingredients (menthol, camphor, caffeine, taurine) not permitted under the OTC monograph for ophthalmic drugs. The product's labeling includes unapproved claims, such as treating 'screen fatigue' and protecting against cataracts, and improperly uses the FDA logo to imply approval or compliance.",
+      "key_regulations": [
+        "21 U.S.C. 355(a) (FD&C Act 505(a))",
+        "21 U.S.C. 352(ee) (FD&C Act 502(ee))",
+        "21 U.S.C. 355h (FD&C Act 505G)",
+        "OTC Monograph M018"
+      ],
+      "key_entities": [
+        "Revitalize Energy, Inc.",
+        "Center for Drug Evaluation and Research (CDER)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2025-07-30"
+    },
+    {
+      "id": "78ca9010-276b-454b-a117-da0dfb43b363",
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "summary": "The FDA's Center for Drug Evaluation and Research issued a final guidance document detailing the procedures for industry sponsors to withdraw 586A requests or pending requests under the Sunscreen Innovation Act. These requests seek determinations on whether nonprescription sunscreen active ingredients are Generally Recognized as Safe and Effective (GRASE) for use in over-the-counter (OTC) sunscreen monographs.",
+      "key_regulations": [
+        "Section 586A of the FD&C Act",
+        "Sunscreen Innovation Act"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Center for Drug Evaluation and Research"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "343e3368-40af-4e0b-bcd9-459e36c95e2a",
+      "item_id": "c658c73f-e989-4776-87b9-1f006e53c56a",
+      "summary": "Live it Up brand Super Greens dietary supplement powders are being recalled due to potential contamination with Salmonella Typhimurium.",
+      "key_regulations": [],
+      "key_entities": [
+        "Superfoods, Inc.",
+        "Live it Up"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dac4baa0-9318-45dd-8fc5-d764895187b1",
+      "item_id": "cd517b6a-20f9-45e6-b410-6fef55e11a33",
+      "summary": "The FDA has received a GRAS notice (GRN 1165) for (R)-1,3-Butanediol, a substance intended for use as an ingredient in conventional foods. This filing represents a manufacturer's self-affirmation of safety which the FDA will review for any concerns.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act",
+        "21 CFR 170"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "f44a3f90-aca5-49bd-8928-4b5035dbc98f",
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "summary": "The FDA issued final guidance detailing the regulatory framework for GRAS substances in human and animal food, encouraging industry to submit GRAS notices and warning that non-GRAS substances used without approval are unsafe food additives subject to enforcement.",
+      "key_regulations": [
+        "21 CFR part 170",
+        "21 CFR part 570",
+        "FD&C Act section 201",
+        "FD&C Act section 409"
+      ],
+      "key_entities": [
+        "Center for Veterinary Medicine",
+        "Human Foods Program",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "9939173b-30cc-497c-8557-bf60a67791d4",
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "summary": "The FDA issued updated final guidance providing answers to Frequently Asked Questions (FAQs) regarding the regulatory process and considerations for classifying substances intended for use in human or animal food as Generally Recognized as Safe (GRAS).",
+      "key_regulations": [
+        "81 FR 54960"
+      ],
+      "key_entities": [
+        "Center for Food Safety and Applied Nutrition (CFSAN)",
+        "Center for Veterinary Medicine (CVM)",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "fe9cd314-aec7-45fb-9a53-f0758b1de2e4",
+      "item_id": "f6442275-e5f3-4511-ace0-20f355d361f5",
+      "summary": "Live it Up brand Super Greens dietary supplement powder is being recalled due to potential contamination with Salmonella Typhimurium.",
+      "key_regulations": [],
+      "key_entities": [
+        "Superfoods, Inc.",
+        "Live it Up"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9f119cc8-1e29-4e33-b9f4-c0fd4968bc09",
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "summary": "The FDA has initiated a comprehensive re-assessment of butylated hydroxyanisole (BHA), a common food chemical preservative, and issued a Request for Information (RFI) to gather data on its safety and use. This action is part of a broader effort to review chemical additives in the food supply, with the potential to remove BHA if it does not meet current safety standards. BHT and azodicarbonamide are also slated for future assessments. The FDA is also reforming its GRAS framework.",
+      "key_regulations": [
+        "Generally Recognized as Safe (GRAS)",
+        "Food Additive Regulations"
+      ],
+      "key_entities": [
+        "U.S. Food and Drug Administration",
+        "FDA",
+        "Health and Human Services Secretary Robert F. Kennedy, Jr.",
+        "FDA Commissioner Marty Makary, M.D., M.P.H.",
+        "Kyle Diamantas, Deputy Commissioner for Human Foods",
+        "National Toxicology Program",
+        "National Institute of Health",
+        "Make America Healthy Again Commission"
+      ],
+      "regulatory_action_type": "proposed_restriction",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "00c3fcd2-5b65-48cf-89b0-d06816dd923e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "00c3fcd2-5b65-48cf-89b0-d06816dd923e",
+      "tag_dimension": "product_type",
+      "tag_value": "animal_feed",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "00c3fcd2-5b65-48cf-89b0-d06816dd923e",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act (FD&C Act)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0128ed63-30fa-4eb3-aad8-48576d415304",
+      "tag_dimension": "product_type",
+      "tag_value": "infant_formula",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0128ed63-30fa-4eb3-aad8-48576d415304",
+      "tag_dimension": "product_type",
+      "tag_value": "medical_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0128ed63-30fa-4eb3-aad8-48576d415304",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0128ed63-30fa-4eb3-aad8-48576d415304",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "0128ed63-30fa-4eb3-aad8-48576d415304",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "017b4d5c-cbfd-4e9a-b693-96c9e4f05210",
+      "tag_dimension": "product_type",
+      "tag_value": "infant_formula",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "017b4d5c-cbfd-4e9a-b693-96c9e4f05210",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "017b4d5c-cbfd-4e9a-b693-96c9e4f05210",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "017b4d5c-cbfd-4e9a-b693-96c9e4f05210",
+      "tag_dimension": "product_type",
+      "tag_value": "baby_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "017b4d5c-cbfd-4e9a-b693-96c9e4f05210",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "017b4d5c-cbfd-4e9a-b693-96c9e4f05210",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05fac6fc-52b5-4d65-90f8-d6c8d4692092",
+      "tag_dimension": "product_type",
+      "tag_value": "plant_protein_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05fac6fc-52b5-4d65-90f8-d6c8d4692092",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05fac6fc-52b5-4d65-90f8-d6c8d4692092",
+      "tag_dimension": "product_type",
+      "tag_value": "mushroom_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05fac6fc-52b5-4d65-90f8-d6c8d4692092",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05fac6fc-52b5-4d65-90f8-d6c8d4692092",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "product_type",
+      "tag_value": "enzymes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "product_type",
+      "tag_value": "poultry_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "product_type",
+      "tag_value": "egg_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "claims",
+      "tag_value": "GRAS",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "claims",
+      "tag_value": "Generally Recognized as Safe",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 173",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 171.1",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170.30",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1281338a-77cd-48bf-bf68-4da43b302fd0",
+      "tag_dimension": "regulation",
+      "tag_value": "FALCPA",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "tag_dimension": "product_type",
+      "tag_value": "suntan_preparations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "tag_dimension": "claims",
+      "tag_value": "generally recognized as safe and effective (GRASE)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "tag_dimension": "regulation",
+      "tag_value": "Sunscreen Innovation Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. Ch. 9, Sub. 5 Part I",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1bb2636d-f374-4662-a7d4-83a3b2b49a78",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "facility_type",
+      "tag_value": "food ingredient manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "facility_type",
+      "tag_value": "food contact substance manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Additive Regulations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Color Additive Regulations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Contact Substance Notifications (FCN)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Generally Recognized as Safe (GRAS) Determinations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "tag_dimension": "product_type",
+      "tag_value": "pediatric_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "tag_dimension": "facility_type",
+      "tag_value": "study sponsors",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "tag_dimension": "facility_type",
+      "tag_value": "clinical investigators",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "tag_dimension": "claims",
+      "tag_value": "generally recognized as safe and effective (GRASE)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5700439c-5e06-4b57-893b-195649e0900e",
+      "tag_dimension": "regulation",
+      "tag_value": "OTC Drug Monograph",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "575ab8b0-890e-47b1-ae64-c8e936ec1d6d",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "575ab8b0-890e-47b1-ae64-c8e936ec1d6d",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "575ab8b0-890e-47b1-ae64-c8e936ec1d6d",
+      "tag_dimension": "claims",
+      "tag_value": "generally recognized as safe and effective (GRASE)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "575ab8b0-890e-47b1-ae64-c8e936ec1d6d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 333, subpart D",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "575ab8b0-890e-47b1-ae64-c8e936ec1d6d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 201.66",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5db0ac6c-4f6e-4407-96cb-c408422bbeaf",
+      "tag_dimension": "product_type",
+      "tag_value": "animal_feed",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5db0ac6c-4f6e-4407-96cb-c408422bbeaf",
+      "tag_dimension": "product_type",
+      "tag_value": "pet_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5db0ac6c-4f6e-4407-96cb-c408422bbeaf",
+      "tag_dimension": "regulation",
+      "tag_value": "Generally Recognized as Safe (GRAS)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5db0ac6c-4f6e-4407-96cb-c408422bbeaf",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Additive Petitions (FAP)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6eb0f5ee-a13e-4c7b-892b-dc41c12a7cbc",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7549131f-ca1a-4e3f-9775-0c5fde1e905e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "781f3f1e-2ba6-4ff9-85bf-7c52c999e03a",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "781f3f1e-2ba6-4ff9-85bf-7c52c999e03a",
+      "tag_dimension": "facility_type",
+      "tag_value": "beverage manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8940596c-0842-4a67-be60-aa788987cf83",
+      "tag_dimension": "product_type",
+      "tag_value": "sugar_substitutes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8940596c-0842-4a67-be60-aa788987cf83",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8940596c-0842-4a67-be60-aa788987cf83",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8940596c-0842-4a67-be60-aa788987cf83",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8f879c6c-2a9d-4f3e-b0f7-9104b7c8cd4c",
+      "tag_dimension": "product_type",
+      "tag_value": "sugar_substitutes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8f879c6c-2a9d-4f3e-b0f7-9104b7c8cd4c",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8f879c6c-2a9d-4f3e-b0f7-9104b7c8cd4c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "facility_type",
+      "tag_value": "small_businesses",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "facility_type",
+      "tag_value": "otc_drug_manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "claims",
+      "tag_value": "generally recognized as safe and effective (GRASE)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "claims",
+      "tag_value": "antiseptic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "regulation",
+      "tag_value": "81 FR 61106",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "961e5c1c-2ec0-495a-9921-8a6fc3353af6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115(g)(5)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fb68446-3c1d-42c6-b848-77643dfe1ef1",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fb68446-3c1d-42c6-b848-77643dfe1ef1",
+      "tag_dimension": "product_type",
+      "tag_value": "infant_formula",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fb68446-3c1d-42c6-b848-77643dfe1ef1",
+      "tag_dimension": "product_type",
+      "tag_value": "medical_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fb68446-3c1d-42c6-b848-77643dfe1ef1",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fb68446-3c1d-42c6-b848-77643dfe1ef1",
+      "tag_dimension": "product_type",
+      "tag_value": "pet_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fb68446-3c1d-42c6-b848-77643dfe1ef1",
+      "tag_dimension": "product_type",
+      "tag_value": "animal_feed",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 182",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 184",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 186",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 182.1(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a93d8d17-cc57-4f27-8636-9e39fcb01098",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 409 of the Federal Food, Drug, and Cosmetic Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "product_type",
+      "tag_value": "ophthalmic_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "claims",
+      "tag_value": "screen fatigue relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "claims",
+      "tag_value": "relieves eye strain",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "claims",
+      "tag_value": "boosts focus",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "claims",
+      "tag_value": "protects from cataracts",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "claims",
+      "tag_value": "FDA COMPLIANT",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "claims",
+      "tag_value": "FDA GRAS APPROVED",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 502(ee)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505G",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b962880c-0a31-4e0c-85f5-add61c5c9d16",
+      "tag_dimension": "regulation",
+      "tag_value": "OTC Monograph M018",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "tag_dimension": "product_type",
+      "tag_value": "suntan_preparations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "tag_dimension": "claims",
+      "tag_value": "generally recognized as safe and effective (GRASE)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 586A of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 586(6) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "tag_dimension": "regulation",
+      "tag_value": "Sunscreen Innovation Act (Public Law 113-195)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c23f557a-4018-4785-9242-6856464c1ae7",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115(g)(5)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c658c73f-e989-4776-87b9-1f006e53c56a",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c658c73f-e989-4776-87b9-1f006e53c56a",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cd517b6a-20f9-45e6-b410-6fef55e11a33",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cd517b6a-20f9-45e6-b410-6fef55e11a33",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cd517b6a-20f9-45e6-b410-6fef55e11a33",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cd517b6a-20f9-45e6-b410-6fef55e11a33",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170.30",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "product_type",
+      "tag_value": "animal_feed",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "product_type",
+      "tag_value": "pet_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR part 170, subpart E",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR part 570, subpart E",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act section 201(s)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d0798942-7149-4b6b-ba70-f3fd4e3acd95",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act section 409",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "tag_dimension": "product_type",
+      "tag_value": "animal_feed",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "tag_dimension": "product_type",
+      "tag_value": "pet_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "tag_dimension": "facility_type",
+      "tag_value": "Food Manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "tag_dimension": "facility_type",
+      "tag_value": "Animal Food Manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "tag_dimension": "claims",
+      "tag_value": "Generally Recognized as Safe (GRAS)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "tag_dimension": "regulation",
+      "tag_value": "81 FR 54960",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "df74f479-40fc-45bf-a2e8-3735171b556c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f6442275-e5f3-4511-ace0-20f355d361f5",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f6442275-e5f3-4511-ace0-20f355d361f5",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "food_preservatives",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "fats_oils",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "breakfast_cereals",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "regulation",
+      "tag_value": "Generally Recognized as Safe (GRAS) framework",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Additive Regulations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "f7656654-7b85-4caf-a227-64bb3275c6c9",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+{
+  "company_name": "Dollar General Corporation",
+  "total_actions": 25,
+  "action_types": {
+    "recall": 25
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-08-13",
+    "latest": "2025-08-20"
+  },
+  "items": [
+    {
+      "id": "c09fbfe8-9054-4c65-89ed-8c7e06eb84fc",
+      "title": "Clover Valley Instant Coffee, NET WT 8 OZ (227 g), packaged in a glass jar, packed 6 jars per case, UPC: 876941004069, Distributed By Old East Main Co. 100 Mission Ridge Goodlettsville, TN 37072",
+      "item_type": "recall",
+      "published_date": "2025-08-20",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1a4a8232-09c6-43f5-899f-427371ff2f1e",
+      "title": "1) Clover Valley 2% Reduced Fat Milk, 1 GAL (3.78 L), packaged in a plastic jug, UPC: 070744002202 2) Clover Valley 2% Reduced Fat Milk, 1/2 GAL (1.89 L), packaged in a plastic jug, UPC: 070744009652",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0057f124-5b59-4ec6-a5b1-84083459be82",
+      "title": "Checkers Famous Seasoned Fries, NET WT 28 OZ (1 LB 12 OZ) 793g, packaged in a plastic/vinyl bag, UPC: 043301305818",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7fb938b0-cb1d-46a8-98fb-0ef9cc69cc78",
+      "title": "Clover Valley Lactose Free 2% Reduced Fat Milk, 64 FL OZ (2 QTS) 1.89 L, packaged in a paper carton, UPC: 070744010085",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8b529741-c7ca-491f-b626-c6ce20000b2c",
+      "title": "Pillsbury Cinnamon Rolls Original Icing, 8 ct., NET WT 12.4 OZ (351g), packaged in a cardboard and aluminum tube, UPC: 018000005017",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "015b3748-5ddb-4935-adf7-8d9f698f7dfb",
+      "title": "1) Simply Orange Pulp Free Orange Juice, 46 FL OZ (1.4 QT) 1.36 L, packaged in a plastic bottle, UPC: 025000136788 2) Simply Orange Pulp Free Orange Juice, 11.5 FL OZ (340 mL), packaged in a plastic b",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "563765df-df64-4775-805c-3dab0d598c64",
+      "title": "Velveeta Slices Sharp Cheddar, 16 ct., NET WT 12 OZ (340g), packaged in plastic/cardboard, UPC: 021000044894",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b160a108-3124-494c-bb8a-b95957427081",
+      "title": "Clover Valley One Dozen Grade A Eggs Large, 12 ct, packaged in styrofoam, UPC: 077438599024",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2c6bd07e-2802-421f-b4b6-63254d526e52",
+      "title": "1) Clover Valley Vitamin D Whole Milk, 1 GAL (3.78 L), packaged in a plastic jug, UPC: 070744002196 2) Clover Valley Vitamin D Whole Milk, 1/2 GAL (1.89 L), packaged in a plastic jug, UPC:  0707440096",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2329b068-a0d6-425c-932f-49448ed80e1b",
+      "title": "Chobani Flip Cookie Dough Greek Yogurt, NET WT. 4.5 OZ (128g), packaged in a plastic cup, UPC: 818290016652",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "05fcb46a-d56f-4c75-9a18-328406e36d16",
+      "title": "Twister Fruit Punch, 59 FL OZ (1.84 QT) 1.75 L, packaged in a paper carton, UPC: 048500021231",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e6fa0954-902a-4210-9a13-18cd898e3a18",
+      "title": "Silk Vanilla AlmondMilk, 64 FL OZ (2 QT) 1.89 L, packaged in a paper carton, UPC: 025293000995",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "56fe2646-f329-45f1-9d8f-52a0d916e7b8",
+      "title": "Minute Maid Tropical Punch, 59 FL OZ (1.8 QT) 1.75 L, packaged in a paper carton, UPC: 025000047695",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "29ed9d3e-788b-49f5-8848-6dab23e10ca7",
+      "title": "Shamrock Farms Whole Milk, 12 FL OZ (354 ML), packaged in a plastic bottle, UPC: 028300000896",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8ddcbdf2-78a9-45ef-94b0-6841d0475eb7",
+      "title": "Yoplait Original Strawberry Banana Yogurt, 6 OZ (170g), packaged in a plastic cup, UPC: 170470003136",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8e65b633-f82e-4359-8e55-451c7d29a45a",
+      "title": "Minute Maid Fruit Punch, 59 FL OZ (1.8 QT) 1.75 L, packaged in a paper carton, UPC: 025000047732",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "562ba7cf-40b7-40fb-bccb-7945ccff7ac9",
+      "title": "Shamrock Farms Chocolate Rockin' Protein Builder Protein Shake, 12 FL OZ (354 ML), packaged in a plastic bottle, UPC: 028300004054",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2fd34844-b93a-4fbc-bb71-2fe214afc065",
+      "title": "Milo's Lemonade, 128 FL OZ (1 GAL) 3.78 L, packaged in a plastic jug, UPC: 091475519005",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ac7825c3-ff14-4094-a59d-e57f0e8bf811",
+      "title": "Chobani Vanilla Greek Yogurt, 4 OZ (113g), packaged in a plastic cup, UPC: 818290010322",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fca2adac-cc01-42e9-81b0-e42a92de4c99",
+      "title": "Clover Valley 1% Low Fat Chocolate Milk, 1/2 GAL (1.89 L), packaged in a plastic jug, UPC: 070744009942",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ee08589d-8c52-4015-8fad-461685e3b1b5",
+      "title": "Milo's Extra Sweet Tea, 128 FL OZ (1 GAL) 3.78 L, packaged in a plastic jug, UPC: 091475931982",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6b5d69f9-d16f-46be-9cf5-96b5cf98d02d",
+      "title": "Imperial 48% Vegetable Oil Spread Margarine Sticks, NET WT 16 OZ (1 LB) 453g, packaged in a cardboard box, UPC: 011115871324",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "da143e2d-31a9-4f45-bd8e-1dddcae7bd61",
+      "title": "Clover Valley Shredded Parmesan Cheese, NET WT 6 OZ (170g), packaged in a plastic bag, UPC: 071505950428",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cc7fd743-4004-4948-b19c-e5caca7417b3",
+      "title": "Milo's Famous Sweet Tea, 128 FL OZ (1 GAL) 3.78 L, packaged in a plastic jug, UPC: 091475511009",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4911c67a-bf58-4543-8b21-7492e6542e92",
+      "title": "Yoplait Original Harvest Peach Yogurt, 6 OZ (170g), packaged in a plastic cup, UPC: 170470003075",
+      "item_type": "recall",
+      "published_date": "2025-08-13",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Dollar General Corporation",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "e5e91b89-f42e-418e-bfea-6a4f897fce32",
+      "item_id": "0057f124-5b59-4ec6-a5b1-84083459be82",
+      "summary": "Checkers Famous Seasoned Fries are being recalled due to temperature abuse caused by a temperature excursion in a shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Checkers"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "aa7ea2e2-c29e-4afc-ab9f-1b123ab1fe11",
+      "item_id": "015b3748-5ddb-4935-adf7-8d9f698f7dfb",
+      "summary": "Simply Orange Pulp Free Orange Juice in 46 FL OZ and 11.5 FL OZ plastic bottles has been recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "890c28bf-a5f8-4c61-94de-dc76f6d44f9f",
+      "item_id": "05fcb46a-d56f-4c75-9a18-328406e36d16",
+      "summary": "Twister Fruit Punch, 59 FL OZ, packaged in a paper carton, UPC: 048500021231, is being recalled due to temperature abuse from a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d4add41d-bc07-4e68-8974-9f4a13f7ae28",
+      "item_id": "1a4a8232-09c6-43f5-899f-427371ff2f1e",
+      "summary": "Clover Valley 2% Reduced Fat Milk, sold in 1-gallon and 1/2-gallon plastic jugs, has been recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Clover Valley"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6238cd95-1be3-4228-9d87-97100b84f712",
+      "item_id": "2329b068-a0d6-425c-932f-49448ed80e1b",
+      "summary": "Chobani has recalled its Flip Cookie Dough Greek Yogurt due to temperature abuse caused by a temperature excursion in a shipping trailer, affecting the product's quality.",
+      "key_regulations": [],
+      "key_entities": [
+        "Chobani"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "53230f56-b3b3-492d-acc7-2cde0f4c8245",
+      "item_id": "29ed9d3e-788b-49f5-8848-6dab23e10ca7",
+      "summary": "Shamrock Farms is recalling its 12 FL OZ Whole Milk product due to temperature abuse caused by a temperature excursion in a shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Shamrock Farms"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1cc08bd8-235e-46d4-ae4f-4abc16d5d1c9",
+      "item_id": "2c6bd07e-2802-421f-b4b6-63254d526e52",
+      "summary": "Clover Valley Vitamin D Whole Milk (1 GAL and 1/2 GAL plastic jugs) is being recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Clover Valley"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dc843b64-eb72-4f00-b4fa-bac74350dfcc",
+      "item_id": "2fd34844-b93a-4fbc-bb71-2fe214afc065",
+      "summary": "Milo's Lemonade, 128 FL OZ, was recalled due to temperature abuse caused by a temperature excursion in a shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Milo's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "4e3118da-6bca-48ed-8371-48a5e0eaf882",
+      "item_id": "4911c67a-bf58-4543-8b21-7492e6542e92",
+      "summary": "Yoplait Original Harvest Peach Yogurt in 6 OZ (170g) plastic cups with UPC 170470003075 is being recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Yoplait"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "34b9d352-5404-408a-a2d5-dc297ace0db1",
+      "item_id": "562ba7cf-40b7-40fb-bccb-7945ccff7ac9",
+      "summary": "Shamrock Farms has recalled its Chocolate Rockin' Protein Builder Protein Shake, 12 FL OZ, packaged in a plastic bottle (UPC: 028300004054), due to temperature abuse resulting from a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Shamrock Farms"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "859f67c3-8720-4ea2-a7ff-9b0e7647deaa",
+      "item_id": "563765df-df64-4775-805c-3dab0d598c64",
+      "summary": "Velveeta Slices Sharp Cheddar (16 ct., NET WT 12 OZ) have been recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Velveeta"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "54072578-7cd1-4f28-9332-10a7bd85deff",
+      "item_id": "56fe2646-f329-45f1-9d8f-52a0d916e7b8",
+      "summary": "Minute Maid Tropical Punch, 59 FL OZ, is being recalled due to temperature abuse caused by a temperature excursion during shipping.",
+      "key_regulations": [],
+      "key_entities": [
+        "Minute Maid"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7dc7ee19-3c42-423b-b76c-1c5f47aaa78e",
+      "item_id": "6b5d69f9-d16f-46be-9cf5-96b5cf98d02d",
+      "summary": "Imperial 48% Vegetable Oil Spread Margarine Sticks are being recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Imperial"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "aa32c3c5-1ccb-4b96-a7b4-fd9c3fa0db60",
+      "item_id": "7fb938b0-cb1d-46a8-98fb-0ef9cc69cc78",
+      "summary": "Clover Valley Lactose Free 2% Reduced Fat Milk, 64 FL OZ, is being recalled due to temperature abuse caused by a temperature excursion in a shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Clover Valley"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c0641b17-12db-4cf5-8964-fde9d298cd88",
+      "item_id": "8b529741-c7ca-491f-b626-c6ce20000b2c",
+      "summary": "Pillsbury Cinnamon Rolls Original Icing (8 ct., NET WT 12.4 OZ, UPC: 018000005017) are being recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Pillsbury"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1f5928dc-391f-4923-946c-207196d23369",
+      "item_id": "8ddcbdf2-78a9-45ef-94b0-6841d0475eb7",
+      "summary": "Yoplait Original Strawberry Banana Yogurt in 6 OZ (170g) plastic cups with UPC 170470003136 is being recalled due to temperature abuse caused by a temperature excursion in a shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Yoplait"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2e28f490-93e3-4012-a2f8-22457cd6f715",
+      "item_id": "8e65b633-f82e-4359-8e55-451c7d29a45a",
+      "summary": "Minute Maid Fruit Punch, 59 FL OZ, is being recalled due to temperature abuse caused by a temperature excursion in one shipping trailer, which compromised the product's integrity.",
+      "key_regulations": [],
+      "key_entities": [
+        "Minute Maid"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b68c9fa0-83f4-402f-ac30-9e2ab3957a88",
+      "item_id": "ac7825c3-ff14-4094-a59d-e57f0e8bf811",
+      "summary": "Chobani has issued a recall for its 4 OZ Vanilla Greek Yogurt due to temperature abuse during shipping, specifically a temperature excursion in one trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Chobani"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "832ebf49-27ee-4b34-ab52-9a0988892e01",
+      "item_id": "b160a108-3124-494c-bb8a-b95957427081",
+      "summary": "Clover Valley One Dozen Grade A Eggs Large are being recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Clover Valley"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7b60c635-cbb6-4cc3-9aaf-7e047fe5c246",
+      "item_id": "c09fbfe8-9054-4c65-89ed-8c7e06eb84fc",
+      "summary": "Clover Valley Instant Coffee, NET WT 8 OZ, is being recalled due to the potential presence of glass pieces in the product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Old East Main Co."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9c352029-650f-4b62-9bc1-66fb80f7e1fe",
+      "item_id": "cc7fd743-4004-4948-b19c-e5caca7417b3",
+      "summary": "Milo's Famous Sweet Tea, 128 FL OZ (1 GAL) 3.78 L, is being recalled due to temperature abuse caused by a temperature excursion in one shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Milo's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8beb2c50-216b-4428-8969-4d2ca1a0cdab",
+      "item_id": "da143e2d-31a9-4f45-bd8e-1dddcae7bd61",
+      "summary": "Clover Valley Shredded Parmesan Cheese (NET WT 6 OZ) is being recalled due to temperature abuse caused by a temperature excursion during shipping.",
+      "key_regulations": [],
+      "key_entities": [
+        "Clover Valley"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "acb86e8e-5190-4555-be07-c36493356fad",
+      "item_id": "e6fa0954-902a-4210-9a13-18cd898e3a18",
+      "summary": "Silk Vanilla AlmondMilk, 64 FL OZ, is being recalled due to temperature abuse resulting from a temperature excursion in a shipping trailer, which may lead to spoilage.",
+      "key_regulations": [],
+      "key_entities": [
+        "Silk"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "feb8112f-11d3-4fa6-9fde-50e51149e4a7",
+      "item_id": "ee08589d-8c52-4015-8fad-461685e3b1b5",
+      "summary": "Milo's Extra Sweet Tea, 128 FL OZ, is being recalled due to temperature abuse caused by a temperature excursion in a shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Milo's"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2c83698d-6b20-448e-a8a2-a91726bd3bc6",
+      "item_id": "fca2adac-cc01-42e9-81b0-e42a92de4c99",
+      "summary": "Clover Valley 1% Low Fat Chocolate Milk in 1/2 GAL (1.89 L) plastic jugs (UPC: 070744009942) has been recalled due to temperature abuse caused by a temperature excursion in a shipping trailer.",
+      "key_regulations": [],
+      "key_entities": [
+        "Clover Valley"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "0057f124-5b59-4ec6-a5b1-84083459be82",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "015b3748-5ddb-4935-adf7-8d9f698f7dfb",
+      "tag_dimension": "product_type",
+      "tag_value": "fruit_vegetable_juices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05fcb46a-d56f-4c75-9a18-328406e36d16",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a4a8232-09c6-43f5-899f-427371ff2f1e",
+      "tag_dimension": "product_type",
+      "tag_value": "milk_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2329b068-a0d6-425c-932f-49448ed80e1b",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "29ed9d3e-788b-49f5-8848-6dab23e10ca7",
+      "tag_dimension": "product_type",
+      "tag_value": "milk_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2c6bd07e-2802-421f-b4b6-63254d526e52",
+      "tag_dimension": "product_type",
+      "tag_value": "milk_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2c6bd07e-2802-421f-b4b6-63254d526e52",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2fd34844-b93a-4fbc-bb71-2fe214afc065",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4911c67a-bf58-4543-8b21-7492e6542e92",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "562ba7cf-40b7-40fb-bccb-7945ccff7ac9",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "562ba7cf-40b7-40fb-bccb-7945ccff7ac9",
+      "tag_dimension": "product_type",
+      "tag_value": "sports_performance",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "563765df-df64-4775-805c-3dab0d598c64",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "56fe2646-f329-45f1-9d8f-52a0d916e7b8",
+      "tag_dimension": "product_type",
+      "tag_value": "fruit_vegetable_juices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "56fe2646-f329-45f1-9d8f-52a0d916e7b8",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6b5d69f9-d16f-46be-9cf5-96b5cf98d02d",
+      "tag_dimension": "product_type",
+      "tag_value": "fats_oils",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7fb938b0-cb1d-46a8-98fb-0ef9cc69cc78",
+      "tag_dimension": "product_type",
+      "tag_value": "milk_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8b529741-c7ca-491f-b626-c6ce20000b2c",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8ddcbdf2-78a9-45ef-94b0-6841d0475eb7",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8e65b633-f82e-4359-8e55-451c7d29a45a",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ac7825c3-ff14-4094-a59d-e57f0e8bf811",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b160a108-3124-494c-bb8a-b95957427081",
+      "tag_dimension": "product_type",
+      "tag_value": "egg_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c09fbfe8-9054-4c65-89ed-8c7e06eb84fc",
+      "tag_dimension": "product_type",
+      "tag_value": "instant_coffee_tea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cc7fd743-4004-4948-b19c-e5caca7417b3",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "da143e2d-31a9-4f45-bd8e-1dddcae7bd61",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6fa0954-902a-4210-9a13-18cd898e3a18",
+      "tag_dimension": "product_type",
+      "tag_value": "imitation_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee08589d-8c52-4015-8fad-461685e3b1b5",
+      "tag_dimension": "product_type",
+      "tag_value": "coffee_tea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee08589d-8c52-4015-8fad-461685e3b1b5",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fca2adac-cc01-42e9-81b0-e42a92de4c99",
+      "tag_dimension": "product_type",
+      "tag_value": "milk_products",
+      "signal_source": "direct"
+    }
+  ]
+}

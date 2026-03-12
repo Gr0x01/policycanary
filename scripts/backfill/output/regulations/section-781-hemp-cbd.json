@@ -1,0 +1,1085 @@
+{
+  "regulation_name": "Section 781 Hemp CBD",
+  "search_terms": [
+    "Section 781",
+    "hemp",
+    "CBD regulation"
+  ],
+  "item_count": 10,
+  "affected_categories": [
+    "baked_goods",
+    "snack_foods",
+    "soft_candy",
+    "specialty_supplements",
+    "vape_e_cigarettes",
+    "controlled_substances",
+    "dietary_conventional_foods",
+    "topical_drugs_pharma",
+    "other_cosmetic",
+    "otc_drugs",
+    "nonalcoholic_beverages",
+    "prescription_drugs",
+    "veterinary_drugs",
+    "sugars_syrups",
+    "oral_hygiene",
+    "personal_cleanliness",
+    "nicotine_products",
+    "cigarettes_combustible",
+    "botanicals_herbal"
+  ],
+  "cfr_references": [],
+  "key_deadlines": [
+    {
+      "item_title": "bearlylegalhemp.com — Family Smoking Prevention and Tobacco Control Act/Adulterated/Misbranded<br />\r\n",
+      "effective_date": "2025-09-18",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Shake Hemp — Family Smoking Prevention and Tobacco Control Act/Adulterated/Misbranded",
+      "effective_date": "2024-09-20",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Earthly Hemps — Interstate Commerce/Food/Adulterated/Unfair or Deceptive Marketing",
+      "effective_date": "2024-07-15",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "GCHNC LLC dba Hemp XR/Gate City Hemp dba Hemp XR/Allaziya Enterprises, LLC dba Hemp XR — Premarket Approval/Adulterated",
+      "effective_date": "2023-09-28",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "PureChemPros LLC — CGMP/Finished Pharmaceuticals/Adulterated",
+      "effective_date": "2023-09-01",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Exclusive Hemp Farms/Oshipt.com — Interstate Commerce/Food/Adulterated",
+      "effective_date": "2023-06-29",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "North Carolina Hemp Exchange, LLC dba NC Hemp Shoppe — Interstate Commerce/Food/Adulterated",
+      "effective_date": "2023-06-29",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Cloud Hempistry — Family Smoking Prevention and Tobacco Control Act/Adulterated/Misbranded",
+      "effective_date": "2022-10-19",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Delta 8 Hemp — Unapproved New Drugs/Misbranded/Cannabidiol (CBD) Products",
+      "effective_date": "2022-05-04",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Functional Remedies, LLC D/B/A Synchronicity Hemp Oil — Unapproved and Misbranded Product Related to Coronavirus Disease 2019 (COVID-19)",
+      "effective_date": "2022-03-28",
+      "comment_deadline": null
+    }
+  ],
+  "items": [
+    {
+      "id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "title": "bearlylegalhemp.com — Family Smoking Prevention and Tobacco Control Act/Adulterated/Misbranded<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2025-09-23",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/bearlylegalhempcom-701661-09182025",
+      "issuing_office": "Center for Tobacco Products",
+      "effective_date": "2025-09-18",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "title": "Shake Hemp — Family Smoking Prevention and Tobacco Control Act/Adulterated/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2024-10-01",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/shake-hemp-692897-09202024",
+      "issuing_office": "Center for Tobacco Products",
+      "effective_date": "2024-09-20",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "title": "Earthly Hemps — Interstate Commerce/Food/Adulterated/Unfair or Deceptive Marketing",
+      "item_type": "warning_letter",
+      "published_date": "2024-07-16",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/earthly-hemps-674916-07152024",
+      "issuing_office": "Center for Food Safety and Applied Nutrition (CFSAN)",
+      "effective_date": "2024-07-15",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "title": "GCHNC LLC dba Hemp XR/Gate City Hemp dba Hemp XR/Allaziya Enterprises, LLC dba Hemp XR — Premarket Approval/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2023-12-05",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/gchnc-llc-dba-hemp-xrgate-city-hemp-dba-hemp-xrallaziya-enterprises-llc-dba-hemp-xr-656057-09282023",
+      "issuing_office": "Center for Food Safety and Applied Nutrition (CFSAN)",
+      "effective_date": "2023-09-28",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "title": "PureChemPros LLC — CGMP/Finished Pharmaceuticals/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2023-09-19",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/purechempros-llc-649677-09012023",
+      "issuing_office": " Division of Pharmaceutical Quality Operations IV",
+      "effective_date": "2023-09-01",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "title": "Exclusive Hemp Farms/Oshipt.com — Interstate Commerce/Food/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2023-07-05",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/exclusive-hemp-farmsoshiptcom-648877-06292023",
+      "issuing_office": "Center for Food Safety and Applied Nutrition (CFSAN)",
+      "effective_date": "2023-06-29",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "title": "North Carolina Hemp Exchange, LLC dba NC Hemp Shoppe — Interstate Commerce/Food/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2023-07-05",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/north-carolina-hemp-exchange-llc-dba-nc-hemp-shoppe-649018-06292023",
+      "issuing_office": "Center for Food Safety and Applied Nutrition (CFSAN)",
+      "effective_date": "2023-06-29",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "43fe4692-6f06-4687-b961-30decb2e425b",
+      "title": "Cloud Hempistry — Family Smoking Prevention and Tobacco Control Act/Adulterated/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2022-10-19",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/cloud-hempistry-642957-10192022",
+      "issuing_office": "Center for Tobacco Products",
+      "effective_date": "2022-10-19",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "title": "Delta 8 Hemp — Unapproved New Drugs/Misbranded/Cannabidiol (CBD) Products",
+      "item_type": "warning_letter",
+      "published_date": "2022-05-04",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/delta-8-hemp-618368-05042022",
+      "issuing_office": "Center for Drug Evaluation and Research | CDER",
+      "effective_date": "2022-05-04",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "title": "Functional Remedies, LLC D/B/A Synchronicity Hemp Oil — Unapproved and Misbranded Product Related to Coronavirus Disease 2019 (COVID-19)",
+      "item_type": "warning_letter",
+      "published_date": "2022-03-29",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/functional-remedies-llc-dba-synchronicity-hemp-oil-627208-03282022",
+      "issuing_office": "Center for Drug Evaluation and Research | CDER",
+      "effective_date": "2022-03-28",
+      "comment_deadline": null,
+      "cfr_references": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "715e1d31-f005-497f-b7a3-26913bed8cbe",
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "summary": "The FDA and FTC issued a joint warning letter to Exclusive Hemp Farms/Oshipt.com for marketing food products containing Delta-8 THC. The FDA determined the products are adulterated because Delta-8 THC is an unapproved food additive. The FTC found the marketing to be unfair and deceptive, as the products' packaging imitates popular snack foods (e.g., Oreos, Cheez-Its), which is appealing to children and poses a significant health and safety risk.",
+      "key_regulations": [
+        "21 U.S.C. 342(a)(2)(C)(i)",
+        "21 U.S.C. 331(a)",
+        "21 U.S.C. 348(a)",
+        "Section 5 of the FTC Act"
+      ],
+      "key_entities": [
+        "Exclusive Hemp Farms/Oshipt.com",
+        "Center for Food Safety and Applied Nutrition (CFSAN)",
+        "Federal Trade Commission (FTC)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "6081136f-6be0-4ab7-b31b-62c876b3aed4",
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "summary": "The FDA and FTC issued a joint warning letter to North Carolina Hemp Exchange, LLC for selling adulterated food products containing Delta-8 THC. The FDA determined that Delta-8 THC is an unapproved food additive, rendering products such as 'Stoner Patch Gummies', 'Stoneo Oreo Cookies', and 'Delta-8 THC Flamin Hot Cheetos' adulterated. The FTC also cited the company for unfair and deceptive marketing practices due to product packaging that imitates well-known snack brands, making them appealing to children and creating a risk of accidental ingestion.",
+      "key_regulations": [
+        "21 U.S.C. 342(a)(2)(C)(i)",
+        "21 U.S.C. 331(a)",
+        "21 U.S.C. 321(s)",
+        "Section 5 of the FTC Act"
+      ],
+      "key_entities": [
+        "North Carolina Hemp Exchange, LLC",
+        "NC Hemp Shoppe",
+        "Food and Drug Administration (FDA)",
+        "Federal Trade Commission (FTC)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "3500cdcf-5ee6-44da-8f16-b3eb7e40b6e6",
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "summary": "The FDA issued a warning letter to Delta 8 Hemp for illegally marketing products containing Delta-8 THC. The agency determined the company's products, including vapes, oils, and gummies, are unapproved new drugs and misbranded due to claims they can treat serious diseases like cancer, anxiety, and autoimmune disorders. Additionally, the gummy products are considered adulterated foods because Delta-8 THC is an unapproved food additive that is not Generally Recognized as Safe (GRAS). The letter requires the company to detail its corrective actions within 15 working days.",
+      "key_regulations": [
+        "FD&C Act Section 505(a)",
+        "FD&C Act Section 502(f)(1)",
+        "FD&C Act Section 402(a)(2)(C)(i)",
+        "FD&C Act Section 409"
+      ],
+      "key_entities": [
+        "Delta 8 Hemp",
+        "Center for Drug Evaluation and Research (CDER)",
+        "Center for Food Safety and Applied Nutrition (CFSAN)"
+      ],
+      "regulatory_action_type": "safety_alert",
+      "deadline": null
+    },
+    {
+      "id": "3ef75316-f5c2-45b7-9bc3-e80fb75ff0a9",
+      "item_id": "43fe4692-6f06-4687-b961-30decb2e425b",
+      "summary": "The FDA's Center for Tobacco Products issued a warning letter to Cloud Hempistry for manufacturing and distributing three e-liquid products (Cloud Hempistry Honey Circles, Forest Fruit, and Pumpkin Spice) without the required premarket authorization. These products are considered 'new tobacco products' and their marketing without an FDA order renders them adulterated and misbranded under the Federal Food, Drug, and Cosmetic Act.",
+      "key_regulations": [
+        "FD&C Act Section 910",
+        "FD&C Act Section 902(6)(A)",
+        "FD&C Act Section 903(a)(6)",
+        "FD&C Act Section 905(j)"
+      ],
+      "key_entities": [
+        "Cloud Hempistry",
+        "FDA Center for Tobacco Products"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "0dc7ab4d-4e11-4ea4-aa0d-016c038b6020",
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "summary": "The FDA issued a warning letter to GCHNC LLC (dba Hemp XR) for marketing conventional food products, such as cookies, gummies, and honey, containing Delta-8 THC and cannabidiol (CBD). The agency stated that these ingredients are unapproved food additives, which renders the products adulterated under the Federal Food, Drug, and Cosmetic Act. Additionally, the CBD-containing product was cited for violating the prohibition against adding an active drug ingredient to food.",
+      "key_regulations": [
+        "21 U.S.C. 342(a)(2)(C)(i)",
+        "21 U.S.C. 331(a)",
+        "21 U.S.C. 331(ll)",
+        "21 U.S.C. 348"
+      ],
+      "key_entities": [
+        "GCHNC LLC dba Hemp XR",
+        "Gate City Hemp dba Hemp XR",
+        "Allaziya Enterprises, LLC dba Hemp XR",
+        "Center for Food Safety and Applied Nutrition (CFSAN)"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "6b754ad9-de76-4d44-8383-1fa13e42d8ff",
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "summary": "PureChemPros LLC received a warning letter for significant CGMP violations at its drug manufacturing facility, rendering its products adulterated under the FD&C Act. Key violations included the failure to establish a quality control unit, inadequate testing of incoming components, and a lack of stability testing to support product expiration dates. Furthermore, the company's '35% FOOD GRADE HYDROGEN PEROXIDE' and '3% FOOD GRADE HYDROGEN PEROXIDE' products were deemed unapproved new drugs due to claims for antigingivitis and antiplaque use. These products, along with its 'LIQUID HAND SANITIZER', were also cited for multiple misbranding violations.",
+      "key_regulations": [
+        "21 CFR Part 210",
+        "21 CFR Part 211",
+        "FD&C Act 501(a)(2)(B)",
+        "FD&C Act 505(a)",
+        "FD&C Act 502"
+      ],
+      "key_entities": [
+        "PureChemPros LLC",
+        "Mr. Ryan J. Sieker"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2023-09-25"
+    },
+    {
+      "id": "59b85c89-4a04-48e9-8922-411d350e1781",
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "summary": "The FDA issued a warning letter to Shake Hemp for marketing new, unapproved tobacco products—specifically, Shake Bar disposable vapes—without the required premarket authorization. These actions render the products adulterated and misbranded under the FD&C Act. The company was also cited for illegally selling an electronic nicotine delivery system (ENDS) product to a person under the age of 21, which is a misbranding violation.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act",
+        "Consolidated Appropriations Act, 2022"
+      ],
+      "key_entities": [
+        "Shake Hemp",
+        "FDA Center for Tobacco Products"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "bd6e3c9c-d331-40bb-8d19-b79b2b0208e7",
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "summary": "The FDA's Center for Tobacco Products issued a warning letter to bearlylegalhemp.com for manufacturing and selling \"Nicotine Infused Hemp Cigarettes\" without required premarket authorization. Under a 2022 law, these products are classified as new tobacco products because they contain nicotine from a non-tobacco source. The FDA has determined these products are adulterated and misbranded for being marketed without an FDA marketing authorization order. The company is required to respond within 15 working days detailing its corrective actions.",
+      "key_regulations": [
+        "FD&C Act Section 201(rr)",
+        "FD&C Act Section 902(6)(A)",
+        "FD&C Act Section 903(a)(6)",
+        "FD&C Act Section 910(a)"
+      ],
+      "key_entities": [
+        "bearlylegalhemp.com",
+        "Center for Tobacco Products",
+        "Bearly Brands, Inc."
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "fbce0f86-3a08-4f56-ad96-7f450d9ee4df",
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "summary": "The FDA and FTC issued a joint warning letter to Earthly Hemps for selling food products, including chips and fruit snacks, that contain Delta-8 THC. The FDA considers Delta-8 THC an unsafe food additive, which makes the products adulterated under the FD&C Act. The FTC alleges that the product marketing is unfair and deceptive because the packaging mimics popular children's snack brands, creating a health and safety risk through potential accidental ingestion by children.",
+      "key_regulations": [
+        "FD&C Act Section 402(a)(2)(C)(i)",
+        "FD&C Act Section 201(s)",
+        "FD&C Act Section 409",
+        "FTC Act Section 5"
+      ],
+      "key_entities": [
+        "Earthly Hemps",
+        "U.S. Food and Drug Administration (FDA)",
+        "Federal Trade Commission (FTC)"
+      ],
+      "regulatory_action_type": "safety_alert",
+      "deadline": "2024-08-05"
+    },
+    {
+      "id": "6dcf3b14-7caf-48b6-acb6-b2a25efc3585",
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "summary": "The FDA and FTC issued a joint warning letter to Functional Remedies, LLC (d/b/a Synchronicity Hemp Oil) for selling Full-Spectrum Hemp Oil and cannabidiol (CBD) products with unapproved claims to treat, prevent, or cure COVID-19. The agencies classify these products as unapproved new drugs and misbranded drugs in violation of the FD&C Act. The letter cited specific claims on the company's website regarding reducing viral inflammation and inhibiting the virus. The company was directed to cease making these claims and report corrective actions within 48 hours to avoid potential legal action, including seizure and injunction.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act (FD&C Act) section 505(a)",
+        "Federal Food, Drug, and Cosmetic Act (FD&C Act) section 502",
+        "FTC Act"
+      ],
+      "key_entities": [
+        "Functional Remedies, LLC",
+        "Synchronicity Hemp Oil",
+        "Center for Drug Evaluation and Research (CDER)",
+        "Federal Trade Commission (FTC)"
+      ],
+      "regulatory_action_type": "safety_alert",
+      "deadline": "2022-03-30"
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "tag_dimension": "claims",
+      "tag_value": "medicated",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "tag_dimension": "claims",
+      "tag_value": "deceptive marketing through imitation of conventional food packaging",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "tag_dimension": "product_type",
+      "tag_value": "vape_e_cigarettes",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "05d260b2-a099-4e56-aa8a-16c216692f30",
+      "tag_dimension": "product_type",
+      "tag_value": "controlled_substances",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "claims",
+      "tag_value": "Marketing imitating conventional foods appealing to children",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 402(a)(2)(C)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 301(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 201(s)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 409",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "regulation",
+      "tag_value": "FTC Act Section 5",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "vape_e_cigarettes",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "controlled_substances",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "topical_drugs_pharma",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "3264a454-b32e-4336-88e6-91371f3cd092",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "vape_e_cigarettes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "facility_type",
+      "tag_value": "retailer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "claims",
+      "tag_value": "cancer_treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "claims",
+      "tag_value": "anxiety_reduction",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "claims",
+      "tag_value": "pain_relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "claims",
+      "tag_value": "autoimmune_disease_treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "claims",
+      "tag_value": "anti-nausea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "claims",
+      "tag_value": "neuroprotective_effects",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 502(f)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 402(a)(2)(C)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(p)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(s)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 409",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 170.30",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 201.5",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "controlled_substances",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "39b64608-637b-49dd-bcf3-06d2829db100",
+      "tag_dimension": "product_type",
+      "tag_value": "veterinary_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "43fe4692-6f06-4687-b961-30decb2e425b",
+      "tag_dimension": "product_type",
+      "tag_value": "vape_e_cigarettes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "43fe4692-6f06-4687-b961-30decb2e425b",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "43fe4692-6f06-4687-b961-30decb2e425b",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "43fe4692-6f06-4687-b961-30decb2e425b",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 910",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "43fe4692-6f06-4687-b961-30decb2e425b",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 902(6)(A)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "43fe4692-6f06-4687-b961-30decb2e425b",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 903(a)(6)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "product_type",
+      "tag_value": "sugars_syrups",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 402(a)(2)(C)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 301(ll)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(s)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 409",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46f01928-e4c9-44e8-a32e-db8ff318e97e",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "product_type",
+      "tag_value": "oral_hygiene",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "claims",
+      "tag_value": "antigingivitis",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "claims",
+      "tag_value": "antiplaque",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "claims",
+      "tag_value": "gum disease treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "claims",
+      "tag_value": "first aid antiseptic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "claims",
+      "tag_value": "hand sanitizing",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 211",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 501(a)(2)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 505(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7366f32a-dff3-4abe-81df-4bcf11fc4475",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 502",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "product_type",
+      "tag_value": "vape_e_cigarettes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "product_type",
+      "tag_value": "nicotine_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "facility_type",
+      "tag_value": "retailer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 910",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 902",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 903",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e390050-8fc2-43a9-8f0f-4889be242665",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 906(d)(5)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "product_type",
+      "tag_value": "cigarettes_combustible",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "product_type",
+      "tag_value": "nicotine_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "facility_type",
+      "tag_value": "retailer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 910",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 902(6)(A)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act Section 903(a)(6)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "80e2d916-21f5-474a-a416-3ca6260aa4bf",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "claims",
+      "tag_value": "Unfair or Deceptive Marketing",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "claims",
+      "tag_value": "Marketing appealing to children",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act section 402(a)(2)(C)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act section 301(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "regulation",
+      "tag_value": "FTC Act Section 5",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "product_type",
+      "tag_value": "vape_e_cigarettes",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e5adfcb6-1233-48ca-86b3-e58843ad1913",
+      "tag_dimension": "product_type",
+      "tag_value": "controlled_substances",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "claims",
+      "tag_value": "COVID-19 treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "claims",
+      "tag_value": "COVID-19 prevention",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "claims",
+      "tag_value": "anti-viral",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "claims",
+      "tag_value": "anti-inflammatory",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "regulation",
+      "tag_value": "unapproved_new_drug",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "feade8aa-68bc-4c06-b2cf-323ea7291cf7",
+      "tag_dimension": "regulation",
+      "tag_value": "misbranding",
+      "signal_source": "direct"
+    }
+  ]
+}

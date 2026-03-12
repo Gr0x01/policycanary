@@ -1,0 +1,492 @@
+{
+  "company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+  "total_actions": 16,
+  "action_types": {
+    "recall": 16
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-06-11",
+    "latest": "2025-06-11"
+  },
+  "items": [
+    {
+      "id": "f70d2b7b-85c8-44e5-83b8-214182e12ffe",
+      "title": "Plain Bagels:  Gluten-free plain bagels, clear plastic bag, 16 oz, 4 bagels/package  Ingredients: White rice flour, Water, Egg whites, Tapioca flour, Sugar, Palm fruit oil, Potato flour, Yeast, Rice b",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "15ae818c-081a-4bdf-a7fc-c3c2d072bddf",
+      "title": "Artisan Multigrain Bread:  Gluten-free multigrain bread, vacuum-sealed clear plastic, 32 oz, 1 loaf/package  Ingredients: White rice flour, Water, Egg whites, Tapioca flour, Honey, Golden flax seed, P",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ea0a8d91-7c67-498f-9923-a41761892ce2",
+      "title": "Artisan Cinnamon Raisin Bread: Gluten-free cinnamon raisin bread, vacuum-sealed clear plastic, 32 oz, 1 loaf/package  Ingredients: White rice flour, Water, Egg whites, Raisins, Honey, Tapioca flour, G",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "45f13caf-03b9-4e90-80d7-1119fb649cc4",
+      "title": "Cinnamon Raisin Bagels:  Gluten-free cinnamon raisin bagels, clear plastic bag, 16 oz, 4 bagels/package  Ingredients: White rice flour, Water, Egg whites, Raisins, Honey, Tapioca flour, Golden flax se",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fe900614-4f2f-440a-9cfb-b0036d49736e",
+      "title": "Frosted Sugar Cookie:  Gluten-free frosted sugar cookies, clear plastic bag, 4 oz, 6 cookies/package  Ingredients: White rice flour, Powdered sugar, Butter, Sugar, Palm shortening, Sprinkles, Rice mil",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "dfd3a7d6-af87-4b6e-8214-3ccb5bc3b429",
+      "title": "Artisan Seasoned Croutons:  Gluten-free artisan seasoned croutons, vacuum-sealed clear plastic, 8 oz, bulk  Ingredients: White rice flour, Water, Egg, Golden flax seed, Rice bran, Tapioca flour, Honey",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "febb0d32-73d1-4939-b1b8-ec2be858053d",
+      "title": "Multigrain Bagels:  Gluten-free multigrain bagels, clear plastic bag, 16 oz, 4 bagels/package  Ingredients: White rice flour, Water, Egg whites, Tapioca flour, Honey, Golden flax seed, Palm fruit oil,",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "522072b9-e2b8-439b-890c-2276ac3ffc3b",
+      "title": "Brownie Chocolate Chip Cookie:  Gluten-free brownie chocolate chip cookies, clear plastic bag, 4 oz, 8 cookies/package  Ingredients: Sugar, Eggs, Butter, Chocolate chips, White rice flour, Cocoa powde",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "424ed351-2538-4fec-a2df-d1f13e94a3f0",
+      "title": "Dye-Free Frosted Sugar Cookie:  Gluten-free dye-free frosted sugar cookies, clear plastic bag, 4 oz, 6 cookies/package  Ingredients: White rice flour, Powdered sugar, Butter, Sugar, Palm shortening, S",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cf3ab73a-9336-44f7-806e-02a665c56d36",
+      "title": "Coconut Macaroon Cookie:  Gluten-free coconut macaroon cookies, clear plastic bag, 4 oz, 6 cookies/package  Ingredients: Coconut flakes, Sweetened condensed milk, Egg whites, Potato flour, Vanilla, Se",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fc415d13-47ea-49e2-9aff-507110a55e08",
+      "title": "Artisan Sourdough Bread:  Gluten-free sourdough bread, vacuum-sealed clear plastic, 32 oz, 1 loaf/package  Ingredients: White rice flour, Water, Eggs, Tapioca flour, Sugar, Potato flour, Palm fruit oi",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1fa8cc47-2c30-4d39-9167-76777fdaf2a6",
+      "title": "Seasoned Bread Crumbs:  Gluten-free seasoned bread crumbs, vacuum-sealed clear plastic, 8 oz, bulk  Ingredients: White rice flour, Water, Egg, Golden flax seed, Rice bran, Tapioca flour, Honey, Palm f",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "44d33502-e1b6-4284-9d3e-cdb0b13fc9e7",
+      "title": "Pecan Caramel Bars Individually wrapped in plastic.  Ingredients: White rice flour, Sugar, Honey, Pecan pieces, Butter, Eggs, Rice milk, Potato flour, Vanilla, Baking powder, Xanthan gum, Unflavored g",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c140ef88-3f0f-4fde-a6c6-0370d3e8a1e7",
+      "title": "Chocolate Chip Cookie:  Gluten-free brownie chocolate chip cookies, clear plastic bag, 4 oz, 8 cookies/package  Ingredients: White rice flour, Butter, Chocolate chips, Brown sugar, Eggs, Sugar, Tapioc",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "64a17b42-cae1-44eb-89de-e444177ab1ce",
+      "title": "Blueberry Bagels:  : Gluten-free blueberry bagels, clear plastic bag, 16 oz, 4 bagels/package  Ingredients: White rice flour, Water, Egg whites, Tapioca flour, Sugar, Palm fruit oil, Potato flour, Yea",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "dbb878b9-dc56-4996-acfc-6835e9f4bec7",
+      "title": "Artisan White Bread:  Gluten-free artisan white bread, vacuum-sealed clear plastic, 32 oz, 1 loaf/package  Ingredients: White rice flour, Water, Egg whites, Tapioca flour, Sugar, Palm oil, Potato flou",
+      "item_type": "recall",
+      "published_date": "2025-06-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NEW GRAINS GLUTEN FREE BAKERY",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "a19b2259-9d65-4569-9965-bf160417f477",
+      "item_id": "15ae818c-081a-4bdf-a7fc-c3c2d072bddf",
+      "summary": "Artisan Multigrain Bread is being recalled because its label does not clearly declare the egg allergen, despite egg whites being an ingredient. This poses a risk to individuals with egg allergies.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+        "21 CFR 101.4"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "22091cb1-1da1-4567-b5b1-360424a9a79e",
+      "item_id": "1fa8cc47-2c30-4d39-9167-76777fdaf2a6",
+      "summary": "Gluten-free seasoned bread crumbs are being recalled because their labels failed to clearly declare the allergens Egg and Milk due to printing quality issues. The product is packaged in vacuum-sealed clear plastic, 8 oz, bulk.",
+      "key_regulations": [
+        "21 CFR 101"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f958a1ba-de1f-4982-83ae-cc71f061a260",
+      "item_id": "424ed351-2538-4fec-a2df-d1f13e94a3f0",
+      "summary": "A recall has been issued for Dye-Free Frosted Sugar Cookies because the product label failed to clearly declare the allergens Egg, Milk, and Soy due to printing quality issues. The product is packaged in a clear plastic bag, 4 oz, containing 6 cookies.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "56da76e8-3b43-4757-8c4d-6ad451ee3696",
+      "item_id": "44d33502-e1b6-4284-9d3e-cdb0b13fc9e7",
+      "summary": "Pecan Caramel Bars are being recalled because the product label does not clearly declare the allergens egg, milk, and pecan due to printing quality issues.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7ceb487a-a447-4295-b3cc-c1282a2ec859",
+      "item_id": "45f13caf-03b9-4e90-80d7-1119fb649cc4",
+      "summary": "Cinnamon Raisin Bagels are being recalled because the label does not clearly declare the presence of the egg allergen due to a printing quality issue.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a99b6c19-ceb9-470d-9186-21e01b189d59",
+      "item_id": "522072b9-e2b8-439b-890c-2276ac3ffc3b",
+      "summary": "Gluten-free brownie chocolate chip cookies are being recalled due to undeclared allergens (Egg, Milk, Soy) on the product label caused by printing quality issues.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2fbc1c53-fca1-4642-a787-7688b48e15e8",
+      "item_id": "64a17b42-cae1-44eb-89de-e444177ab1ce",
+      "summary": "Blueberry Bagels are being recalled because the label does not clearly declare the allergen 'Egg' due to printing quality issues. The product contains egg, which is an undeclared allergen.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "00aa2698-41e8-479b-be50-7befdc76e842",
+      "item_id": "c140ef88-3f0f-4fde-a6c6-0370d3e8a1e7",
+      "summary": "A recall has been issued for gluten-free brownie chocolate chip cookies due to undeclared allergens (Egg, Milk, Soy) caused by poor printing quality on the label.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0a8d0458-6687-493a-b7b8-cf45721797b8",
+      "item_id": "cf3ab73a-9336-44f7-806e-02a665c56d36",
+      "summary": "Coconut Macaroon Cookies are being recalled because the product label failed to clearly declare the allergens Egg, Milk, and Soy due to printing quality issues. The cookies are packaged in a clear plastic bag, 4 oz, with 6 cookies per package.",
+      "key_regulations": [
+        "21 CFR Part 101"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6349b0ff-ece2-4913-b9ec-d579e4ca4999",
+      "item_id": "dbb878b9-dc56-4996-acfc-6835e9f4bec7",
+      "summary": "A recall has been issued for Gluten-free artisan white bread because its label does not clearly declare the 'Egg' allergen due to printing quality issues. The product contains egg, which is a major food allergen.",
+      "key_regulations": [
+        "21 CFR Part 101 - Food Labeling",
+        "Food Allergen Labeling and Consumer Protection Act of 2004 (FALCPA)"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9c8c711c-78f8-497c-bcb5-a451a9aa145d",
+      "item_id": "dfd3a7d6-af87-4b6e-8214-3ccb5bc3b429",
+      "summary": "Artisan Seasoned Croutons are being recalled because the label fails to clearly declare the allergens Egg and Milk due to printing quality issues, posing a risk to consumers with allergies.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "98e6173b-9250-405e-9781-b9e84d8696b2",
+      "item_id": "ea0a8d91-7c67-498f-9923-a41761892ce2",
+      "summary": "A recall has been issued for Artisan Cinnamon Raisin Bread due to undeclared egg allergen caused by poor printing quality on the product label.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "91edc7c6-b43e-468b-93c3-79e2aaa72189",
+      "item_id": "f70d2b7b-85c8-44e5-83b8-214182e12ffe",
+      "summary": "Plain Bagels are being recalled due to undeclared egg allergen on the label, posing a risk to individuals with egg allergies.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "90207744-4b4e-4923-8d38-561156317931",
+      "item_id": "fc415d13-47ea-49e2-9aff-507110a55e08",
+      "summary": "Artisan Sourdough Bread is being recalled because its label does not clearly declare 'Egg' as an allergen, potentially endangering consumers with egg allergies.",
+      "key_regulations": [
+        "21 CFR 101.18"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5cd0d2d9-f6c6-4f6c-9f38-b2ed5b116731",
+      "item_id": "fe900614-4f2f-440a-9cfb-b0036d49736e",
+      "summary": "A recall has been issued for gluten-free frosted sugar cookies due to undeclared allergens (Egg, Milk, Soy) on the product label, stemming from a printing quality issue.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "88947950-bcf6-455d-a981-fdd82926eeee",
+      "item_id": "febb0d32-73d1-4939-b1b8-ec2be858053d",
+      "summary": "Multigrain Bagels are being recalled because the product label does not clearly declare the 'Egg' allergen due to printing quality issues. The product contains egg whites and egg.",
+      "key_regulations": [
+        "Food Allergen Labeling and Consumer Protection Act (FALCPA)"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "15ae818c-081a-4bdf-a7fc-c3c2d072bddf",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "15ae818c-081a-4bdf-a7fc-c3c2d072bddf",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1fa8cc47-2c30-4d39-9167-76777fdaf2a6",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1fa8cc47-2c30-4d39-9167-76777fdaf2a6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "424ed351-2538-4fec-a2df-d1f13e94a3f0",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "44d33502-e1b6-4284-9d3e-cdb0b13fc9e7",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45f13caf-03b9-4e90-80d7-1119fb649cc4",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45f13caf-03b9-4e90-80d7-1119fb649cc4",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101.4 - Food; designation of ingredients",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "522072b9-e2b8-439b-890c-2276ac3ffc3b",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "64a17b42-cae1-44eb-89de-e444177ab1ce",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c140ef88-3f0f-4fde-a6c6-0370d3e8a1e7",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cf3ab73a-9336-44f7-806e-02a665c56d36",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cf3ab73a-9336-44f7-806e-02a665c56d36",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dbb878b9-dc56-4996-acfc-6835e9f4bec7",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dbb878b9-dc56-4996-acfc-6835e9f4bec7",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dbb878b9-dc56-4996-acfc-6835e9f4bec7",
+      "tag_dimension": "regulation",
+      "tag_value": "FALCPA",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dfd3a7d6-af87-4b6e-8214-3ccb5bc3b429",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ea0a8d91-7c67-498f-9923-a41761892ce2",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f70d2b7b-85c8-44e5-83b8-214182e12ffe",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fc415d13-47ea-49e2-9aff-507110a55e08",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fc415d13-47ea-49e2-9aff-507110a55e08",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.18",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fe900614-4f2f-440a-9cfb-b0036d49736e",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fe900614-4f2f-440a-9cfb-b0036d49736e",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "febb0d32-73d1-4939-b1b8-ec2be858053d",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "febb0d32-73d1-4939-b1b8-ec2be858053d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.65",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "febb0d32-73d1-4939-b1b8-ec2be858053d",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Allergen Labeling and Consumer Protection Act (FALCPA)",
+      "signal_source": "direct"
+    }
+  ]
+}

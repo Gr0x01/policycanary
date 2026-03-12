@@ -1,0 +1,386 @@
+{
+  "company_name": "Diva Fam Inc",
+  "total_actions": 14,
+  "action_types": {
+    "recall": 14
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2026-02-11",
+    "latest": "2026-02-11"
+  },
+  "items": [
+    {
+      "id": "c6e4b7ba-ebd4-4956-9609-c148eb870d44",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Wildcrafted- UPC# 5065006235073",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "edaf45aa-589d-448e-ad71-e0eb6fa43e0d",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Orange- UPC# 5061033692926",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9a17e36a-a04d-43a7-9c47-72a2e146838b",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Mango- UPC# 5065006235875",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "cc717f89-95d8-494b-ae32-aab1587bf6b7",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Soursop- UPC# 5061033691875",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7e1fb7dc-ca28-4d53-9faa-80c6eaede799",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Lemon Pie- UPC# 5061033691271",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b2f4e358-2cac-4265-9993-ba334d46777b",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. 5 Blend in 1- UPC# 5061033690052",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "83ab2082-b198-4347-97f4-0c6d8629e341",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Blue Spirulina and Raspberry- UPC# 5065006235813",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1974e5df-a6e7-4066-bbea-0893b5172f62",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Strawberry- UPC# 5065006235271",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "bb0c388c-2613-4761-8190-c0c54bac6251",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Pineapple- UPC# 5065006235288",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1ab4ddbf-b970-416f-a5f2-b03974dcbb1b",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Mango and Pineapple- UPC# 5065006235301",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2caabb6e-9c1d-4af2-b61e-65d1b8f51756",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Elderberry- UPC# 5065006235189",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b846b53b-9966-4de3-8396-964c99e338a3",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Apple and Cinnamon- UPC# 5065006235776",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5792ab16-1282-458d-8ec0-01d4c0764139",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Passion Fruit- UPC# 5061033691882",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b86c80b3-7d34-4876-b350-0d7e794b4991",
+      "title": "Sea Moss Gel Superfood; 16 FL OZ; Glass jar sold individually. Cherry- UPC# 5061033691264",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Diva Fam Inc",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "77afa490-58ec-4675-b247-63a6e887dbd3",
+      "item_id": "1974e5df-a6e7-4066-bbea-0893b5172f62",
+      "summary": "A recall has been issued for Sea Moss Gel Superfood (16 FL OZ, Strawberry flavor, UPC# 5065006235271) due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f521d422-3ec8-46de-b566-bfc56441d9f4",
+      "item_id": "1ab4ddbf-b970-416f-a5f2-b03974dcbb1b",
+      "summary": "Sea Moss Gel Superfood in Mango and Pineapple flavors (16 FL OZ, UPC# 5065006235301) is being recalled due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b666e945-8e1e-4a1b-8665-560845dac481",
+      "item_id": "2caabb6e-9c1d-4af2-b61e-65d1b8f51756",
+      "summary": "A recall has been issued for Sea Moss Gel Superfood due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7152e2d2-0ca0-4b77-a8ba-430f86dd82dc",
+      "item_id": "5792ab16-1282-458d-8ec0-01d4c0764139",
+      "summary": "A recall has been issued for Sea Moss Gel Superfood, 16 FL OZ, Passion Fruit (UPC# 5061033691882), due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d383b52d-c102-41b9-a7ec-9ab4e9402b1a",
+      "item_id": "7e1fb7dc-ca28-4d53-9faa-80c6eaede799",
+      "summary": "Recall of Sea Moss Gel Superfood due to potential Clostridium botulinum contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e644480f-3a26-4aa7-9354-1aafbe6d4ec8",
+      "item_id": "83ab2082-b198-4347-97f4-0c6d8629e341",
+      "summary": "A Sea Moss Gel Superfood product, specifically the 16 FL OZ Blue Spirulina and Raspberry variety, UPC# 5065006235813, has been recalled due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2132781d-7935-415c-98f3-d8a938c15793",
+      "item_id": "9a17e36a-a04d-43a7-9c47-72a2e146838b",
+      "summary": "A recall has been issued for Sea Moss Gel Superfood (Mango, 16 FL OZ) due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "28d8c5c4-a369-4b97-957f-ac9855f80956",
+      "item_id": "b2f4e358-2cac-4265-9993-ba334d46777b",
+      "summary": "A recall has been issued for Sea Moss Gel Superfood, 16 FL OZ, 5 Blend in 1, UPC# 5061033690052, due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7c8ebb0f-7c8f-40e1-94eb-7311a874d70c",
+      "item_id": "b846b53b-9966-4de3-8396-964c99e338a3",
+      "summary": "Recall of Sea Moss Gel Superfood, Apple and Cinnamon flavor (UPC# 5065006235776), in 16 FL OZ glass jars, due to potential Clostridium botulinum contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0dd7a0bd-2753-4b3c-b5f4-ee918dc27e5c",
+      "item_id": "b86c80b3-7d34-4876-b350-0d7e794b4991",
+      "summary": "A sea moss gel superfood product is being recalled due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "043ade02-172c-4aa9-aa70-ca3d40b54766",
+      "item_id": "bb0c388c-2613-4761-8190-c0c54bac6251",
+      "summary": "A recall has been issued for Sea Moss Gel Superfood, 16 FL OZ, Pineapple flavor, due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9c1307cc-9bb4-4136-9cfc-31595c1aa39c",
+      "item_id": "c6e4b7ba-ebd4-4956-9609-c148eb870d44",
+      "summary": "Recall of Sea Moss Gel Superfood due to potential Clostridium botulinum contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "1982b68a-8e47-4bad-bf93-bd8dff416013",
+      "item_id": "cc717f89-95d8-494b-ae32-aab1587bf6b7",
+      "summary": "A recall has been issued for 'Sea Moss Gel Superfood' (16 FL OZ, Soursop flavor, UPC# 5061033691875) due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "05a9df49-ccc3-46a6-bad5-5fffbb9286f3",
+      "item_id": "edaf45aa-589d-448e-ad71-e0eb6fa43e0d",
+      "summary": "A recall has been issued for Sea Moss Gel Superfood, 16 FL OZ, sold in glass jars, due to potential contamination with Clostridium botulinum.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "1974e5df-a6e7-4066-bbea-0893b5172f62",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1ab4ddbf-b970-416f-a5f2-b03974dcbb1b",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2caabb6e-9c1d-4af2-b61e-65d1b8f51756",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5792ab16-1282-458d-8ec0-01d4c0764139",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7e1fb7dc-ca28-4d53-9faa-80c6eaede799",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "83ab2082-b198-4347-97f4-0c6d8629e341",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9a17e36a-a04d-43a7-9c47-72a2e146838b",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b2f4e358-2cac-4265-9993-ba334d46777b",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b846b53b-9966-4de3-8396-964c99e338a3",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b86c80b3-7d34-4876-b350-0d7e794b4991",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b86c80b3-7d34-4876-b350-0d7e794b4991",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bb0c388c-2613-4761-8190-c0c54bac6251",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c6e4b7ba-ebd4-4956-9609-c148eb870d44",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c6e4b7ba-ebd4-4956-9609-c148eb870d44",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cc717f89-95d8-494b-ae32-aab1587bf6b7",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "cc717f89-95d8-494b-ae32-aab1587bf6b7",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "edaf45aa-589d-448e-ad71-e0eb6fa43e0d",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    }
+  ]
+}

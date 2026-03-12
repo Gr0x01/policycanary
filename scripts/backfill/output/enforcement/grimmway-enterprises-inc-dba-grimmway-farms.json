@@ -1,0 +1,186 @@
+{
+  "company_name": "Grimmway Enterprises, Inc. dba Grimmway Farms",
+  "total_actions": 5,
+  "action_types": {
+    "recall": 5
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-01-08",
+    "latest": "2025-01-08"
+  },
+  "items": [
+    {
+      "id": "033b8aa1-3a04-4adc-8cb9-aed60cb51c27",
+      "title": "--- Organic Baby Carrots --- Orangic Baby Peeled Carrots 13/3 BL; Orangic Baby Peeled Carrots 30/1 BL; Org Baby Peeled Carrots 12/2 Wholesome Pantry RPC; Org Baby Peeled Carrots 24/1 Wholesome Pantry ",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Grimmway Enterprises, Inc. dba Grimmway Farms",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d618f590-3cb4-417a-b9d0-ff8599064d56",
+      "title": "--- Organic Baby Carrots --- Organic Baby Carrots 25 Grimmway Farms; Organic Baby Carrots 25 Lbs. Grimmway Farms --- Brand --- Grimmway Farms",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Grimmway Enterprises, Inc. dba Grimmway Farms",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "62dd6f2b-4357-4b46-bedc-16c335fb4332",
+      "title": "--- Organic Whole Carrots ---  Organic Clip Carrots 50 Lbs Cal-Organic Farm; Organic Clip Carrots 50 Lbs Cal-Organic RPC --- Brand --- Cal-Organic",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Grimmway Enterprises, Inc. dba Grimmway Farms",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "45389200-0e57-4546-8351-070f576ac558",
+      "title": "--- Organic Whole Carrots ---  Organic Carrot 125/6 Cal-Organic Farms; Organic Carrot 150/5 Bunny Luv; Organic Carrots 10/5 Lb O-Organic; Organic Carrots 10/5 Simple Truth; Organic Carrots 10/5# 365 O",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Grimmway Enterprises, Inc. dba Grimmway Farms",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1c72fca4-5553-4696-b161-b0178811246a",
+      "title": "--- Organic Baby Carrots --- Organic Baby Peeled Carrots 12/12oz Steam-to-Serve; Organic Baby Peel Carrot12/12oz Steam-to-Serve RPC --- Brand --- Cal-Organic; Marketside",
+      "item_type": "recall",
+      "published_date": "2025-01-08",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Grimmway Enterprises, Inc. dba Grimmway Farms",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "0293e407-1652-4884-8b99-b046f5c3c988",
+      "item_id": "033b8aa1-3a04-4adc-8cb9-aed60cb51c27",
+      "summary": "Multiple brands of organic baby carrots are being recalled due to potential contamination with E. coli O121:H19.",
+      "key_regulations": [],
+      "key_entities": [
+        "365",
+        "Bunny Luv",
+        "Cal-Organic",
+        "Compliments",
+        "Full Circle",
+        "Good & Gather",
+        "GreenWise",
+        "LIDL",
+        "Marketside",
+        "Nature's Promise",
+        "O Organics",
+        "President's Choice",
+        "Purely Made",
+        "Simple Truth",
+        "Sprouts",
+        "Trader Joe's",
+        "Wegmans",
+        "Wholesome Pantry"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "21b36370-d313-421e-b213-655beedfe7c9",
+      "item_id": "1c72fca4-5553-4696-b161-b0178811246a",
+      "summary": "Cal-Organic and Marketside brand Organic Baby Carrots and Organic Baby Peeled Carrots are being recalled due to potential contamination with E. coli O121:H19.",
+      "key_regulations": [],
+      "key_entities": [
+        "Cal-Organic",
+        "Marketside"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2c9b9863-cb13-49c7-89f0-9e393083805f",
+      "item_id": "45389200-0e57-4546-8351-070f576ac558",
+      "summary": "Multiple brands of organic whole carrots, including 365, Bunny Luv, Cal-Organic, and others, are being recalled due to potential contamination with E. coli O121:H19.",
+      "key_regulations": [],
+      "key_entities": [
+        "365",
+        "Bunny Luv",
+        "Cal-Organic",
+        "Compliments",
+        "Full Circle",
+        "Good & Gather",
+        "GreenWise",
+        "Marketside",
+        "Nature's Promise",
+        "O Organics",
+        "President's Choice",
+        "Simple Truth",
+        "Trader Joe's",
+        "Wegmans",
+        "Wholesome Pantry"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "778c535e-2785-4624-899f-1a4168f711e8",
+      "item_id": "62dd6f2b-4357-4b46-bedc-16c335fb4332",
+      "summary": "Cal-Organic is recalling Organic Whole Carrots and Organic Clip Carrots due to potential contamination with E. coli O121:H19.",
+      "key_regulations": [],
+      "key_entities": [
+        "Cal-Organic Farm",
+        "Cal-Organic"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7958af05-e359-4a3c-9563-876f8443838d",
+      "item_id": "d618f590-3cb4-417a-b9d0-ff8599064d56",
+      "summary": "Grimmway Farms has initiated a recall for its Organic Baby Carrots due to potential contamination with E. coli O121:H19.",
+      "key_regulations": [],
+      "key_entities": [
+        "Grimmway Farms"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "033b8aa1-3a04-4adc-8cb9-aed60cb51c27",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1c72fca4-5553-4696-b161-b0178811246a",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "45389200-0e57-4546-8351-070f576ac558",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "62dd6f2b-4357-4b46-bedc-16c335fb4332",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d618f590-3cb4-417a-b9d0-ff8599064d56",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    }
+  ]
+}

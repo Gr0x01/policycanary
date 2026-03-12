@@ -1,0 +1,616 @@
+{
+  "company_name": "GBC Food Services, LLC dba Yummi Sushi",
+  "total_actions": 23,
+  "action_types": {
+    "recall": 23
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2024-09-25",
+    "latest": "2025-02-05"
+  },
+  "items": [
+    {
+      "id": "3798d9ae-d23e-4bfd-97dd-0ff4d2aef3b8",
+      "title": "Individual Greek Salad \t850054894649\t12 oz (340g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "b5b137b9-7b8c-488a-b632-5eefa2e363f7",
+      "title": "California Roll (Crab Salad)\tUPC: 85375900857\tQty: 1 Tray, Net Wt: 7.6oz (216g)\t11/22 to 11/29/2024. California Roll (Crab Stick)\tUPC: 85375900858\tQty: 1 Tray, Net Wt: 7.6oz (216g)\t11/22 to 11/29/2024",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "20c4e9f1-2fe8-4857-b7bb-53493b60cf4a",
+      "title": "Family Cobb Salad\t850054894625\t22 oz (623g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6059d0c8-416c-4869-a3c5-7ac0b2f9ab80",
+      "title": "Cucumber Slices W/Tajin \t850053685699\t10 oz (284g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "03a8ad59-35a7-47fc-a5ac-d5cbc93abdbd",
+      "title": "Spicy Salmon Roll\tUPC: 85375900865\tQty: 1 Tray, Net Wt: 8.1oz (230g)\t11/22 to 11/29/2024 Fusion Spring Roll (Salmon)\tUPC: 85375900891\tQty: 1 Tray, Net Wt: 7.2oz (204g)\t11/22 to 11/29/2024 Grilled Salm",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7a0fb6ee-f5e2-4a26-b723-d7f127850c38",
+      "title": "Multiple varieties of sushi:  Cheetos¿ Flamin' Hot¿ California Roll UPC: 85005520995\tNet Wt: 10.1 oz (286g)\t11/22 to 11/29/2024 Spicy Crunchy Yummi Roll\tUPC: 85375900882\tQty: 1 Tray, Net Wt: 11oz (312",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "669a8914-fb01-4b9e-bc45-400b512a879a",
+      "title": "Vegetarian Roll\tUPC: 85375900869\tQty: 1 Tray, Net Wt: 6.1oz (174g)\t11/22 to 11/29/2024 Vegetarian Roll (Brown Rice)\tUPC: 85694200824\tQty: 1 Tray, Net Wt: 6.1oz (174g)\t11/22 to 11/29/2024 Mixed Vegetab",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "fd285b83-1d2e-4d6b-9880-9d816b6ea789",
+      "title": "Tempura Shrimp Roll\tUPC: 85375900884\tQty: 1 Tray, Net Wt: 10oz (284g)\t11/22 to 11/29/2024 Spicy Cajun Shrimp Roll  UPC: 85006499076\tNet Wt: 10.8 oz (305g)\t11/22 to 11/29/2024 Shrimp Combo\tUPC: 8500144",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3f8cca9f-455d-41cf-8efd-9d42e569a08d",
+      "title": "Vegetable Bowl  860010507131\t     26 oz (738g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5e660f92-c826-4dcb-8383-ec6425f8beee",
+      "title": "Individual Cobb Salad \t850054894632\t11 oz (311g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7f0e8ef0-ede9-456b-ba61-0e01fedd8ccc",
+      "title": "Southwest Salad \t850065403069\tNet Wt: 4oz (113g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "4985a524-368d-4ccb-b4e7-a99506532d11",
+      "title": "Cucumber Bowl with Ranch dip\t850054894519\t15oz (425g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "048f11e8-1089-4e9c-85a1-aaf5a8181f41",
+      "title": "Vegetable Ranch Tray No Dip Small \t850054894335\t19.5 oz (553g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e6f4d12d-a8ee-4985-b4f5-3c1e632777c1",
+      "title": "Individual Garden Salad\t850054894618\t12 oz (340g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1d55c839-b955-4f1b-97c6-e4a68289010f",
+      "title": "Family Garden Salad \t850054894601\t24 oz (679g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8148458d-e7f1-4bfb-bc07-ab80623159cd",
+      "title": "Large Vegetable Tray  \t850054894571\t42 oz (1190g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "370ee297-48f3-400f-8c7d-52e20d4040aa",
+      "title": "Karaage Chicken Bao Buns\tUPC: 85006499045\tNet Wt: 8.8 oz (251g)\t11/22 to 11/29/2024 Gyoza Combo\tUPC: 85001442018\tQty: 11 pcs, Net Wt: 13.3 OZ (377g)\t11/22 to 11/29/2024",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "e373b11a-7101-4715-8174-ced487a0ef27",
+      "title": "Spicy Tuna with Spicy Mayo Roll\tUPC: 85375900839\tQty: 1 Tray, Net Wt: 7.8oz (223g)\t11/22 to 11/29/2024 Spicy Tuna with Spicy Mayo Roll\tUPC: 85006061926\tQty: 1 Tray, Net Wt: 7.8oz (223g)\t11/22 to 11/29",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "baf5d7fc-b2b3-4fcf-aa31-af3fb1bfa65a",
+      "title": "Cucumber w/ Ranch Snack Cup\t850065403144\tNet Wt: 9.5oz (269g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "dd2d150a-90e0-422e-9f89-2fefc4d3c01c",
+      "title": "Vegetable Bowl \t850065403380\t13 oz (368g)",
+      "item_type": "recall",
+      "published_date": "2025-02-05",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3038966a-bdf4-4c7d-bc73-bc148203670f",
+      "title": "Supreme Grilling Veggies\t8-50053-68584\t19 OZ\t Supreme Vegetable Kabobs\t8-50053-68585\t27 OZ\t  Supreme Vegetable Bowl\t8-60010-50713\t26 OZ",
+      "item_type": "recall",
+      "published_date": "2024-09-25",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "37457454-f298-48a3-b7a8-116f3dc02333",
+      "title": "Supreme Peppers Tri Blend\t8-50053-68534\t8 OZ\t Supreme Jalapenos Diced\t8-50053-68536\t7 OZ\t Supreme Peppers W/Onions\t8-50053-68538\t7 OZ\t Supreme Peppers Snacking\t8-50053-68553\t12 OZ",
+      "item_type": "recall",
+      "published_date": "2024-09-25",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "10b50c3a-94eb-4f86-80c5-73747e30d87a",
+      "title": "Supreme Guacamole Chunky Mild\t8-50053-68588\t17 OZ\t Supreme Guacamole Chunky Medium\t8-50053-68589\t17 OZ\t Supreme Pico/Guacamole\t8-50054-89443\t16 OZ\t  Supreme Pico/Guacamole",
+      "item_type": "recall",
+      "published_date": "2024-09-25",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "GBC Food Services, LLC dba Yummi Sushi",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "bd905c0a-12b1-4bba-bff3-b189ffd9929e",
+      "item_id": "03a8ad59-35a7-47fc-a5ac-d5cbc93abdbd",
+      "summary": "Various salmon-based food products including Spicy Salmon Roll, Fusion Spring Roll (Salmon), Grilled Salmon Roll, Sesame Crusted Salmon Poke Bowl, and Salmon Combo are being recalled due to possible contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9bd4a5cf-f1c7-4609-a182-e8c464cc0561",
+      "item_id": "048f11e8-1089-4e9c-85a1-aaf5a8181f41",
+      "summary": "A recall has been issued for 'Vegetable Ranch Tray No Dip Small' due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "440b1db6-ec86-4140-9b2e-96ccc46c605c",
+      "item_id": "10b50c3a-94eb-4f86-80c5-73747e30d87a",
+      "summary": "Supreme Guacamole Chunky Mild, Supreme Guacamole Chunky Medium, and Supreme Pico/Guacamole products are being recalled due to possible contamination with Listeria Monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Supreme Guacamole",
+        "Supreme Pico/Guacamole"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5e09dc69-1b67-4a0d-8012-3510de886b94",
+      "item_id": "1d55c839-b955-4f1b-97c6-e4a68289010f",
+      "summary": "A recall has been issued for Family Garden Salad (24 oz, UPC 850054894601) due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2ba04273-8d47-47e6-ab71-e1b5dcc8f498",
+      "item_id": "20c4e9f1-2fe8-4857-b7bb-53493b60cf4a",
+      "summary": "Family Cobb Salad is being recalled due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "897049f6-d8d5-4f66-ab68-e71bdedadfda",
+      "item_id": "3038966a-bdf4-4c7d-bc73-bc148203670f",
+      "summary": "A recall has been issued for 'Supreme Grilling Veggies', 'Supreme Vegetable Kabobs', and 'Supreme Vegetable Bowl' due to possible contamination with Listeria Monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Supreme"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2c61b083-f550-43fc-9d02-91bae9e9d1d9",
+      "item_id": "370ee297-48f3-400f-8c7d-52e20d4040aa",
+      "summary": "Karaage Chicken Bao Buns and Gyoza Combo are being recalled due to possible contamination with Salmonella. The affected products have specific UPCs and date ranges.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7a73efac-e524-4b8a-9d8a-744b4457f0c2",
+      "item_id": "37457454-f298-48a3-b7a8-116f3dc02333",
+      "summary": "Multiple 'Supreme Peppers' products including Tri Blend, Diced Jalapenos, Peppers W/Onions, and Snacking Peppers are being recalled due to possible contamination with Listeria Monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "aae12e61-7669-467a-b9ac-7dfec438030b",
+      "item_id": "3798d9ae-d23e-4bfd-97dd-0ff4d2aef3b8",
+      "summary": "An individual Greek Salad product is being recalled due to potential contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a92cd872-288c-49e4-809e-bc1c53aa9447",
+      "item_id": "3f8cca9f-455d-41cf-8efd-9d42e569a08d",
+      "summary": "A recall has been issued for 'Vegetable Bowl' products (26 oz, UPC 860010507131) due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "717909bd-8510-45cc-9118-8ee0b3d15646",
+      "item_id": "4985a524-368d-4ccb-b4e7-a99506532d11",
+      "summary": "A recall has been issued for 'Cucumber Bowl with Ranch dip' due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5f2265f3-14aa-48fd-bf80-f9fbdc27fccf",
+      "item_id": "5e660f92-c826-4dcb-8383-ec6425f8beee",
+      "summary": "An individual Cobb Salad product (UPC 850054894632, 11 oz) is being recalled due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "463ec077-ffde-4329-9131-b6408436c7bc",
+      "item_id": "6059d0c8-416c-4869-a3c5-7ac0b2f9ab80",
+      "summary": "Cucumber Slices W/Tajin are being recalled due to potential contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "385a39fd-e360-4154-b952-56274b20f549",
+      "item_id": "669a8914-fb01-4b9e-bc45-400b512a879a",
+      "summary": "A recall has been issued for various vegetarian roll products due to possible contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5bdb0472-1492-4daf-b974-fe0dcbc8566c",
+      "item_id": "7a0fb6ee-f5e2-4a26-b723-d7f127850c38",
+      "summary": "Multiple varieties of sushi are being recalled due to possible contamination with Salmonella. The recalled products include various rolls and platters, with 'Best By' dates ranging from 11/22 to 11/29/2024.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "112efcae-468d-4874-8d3b-b2f0f7a82cb2",
+      "item_id": "7f0e8ef0-ede9-456b-ba61-0e01fedd8ccc",
+      "summary": "A Southwest Salad product (Net Wt: 4oz (113g), UPC: 850065403069) is being recalled due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "569d2d06-81bf-416f-8fd4-eb0e56f2063e",
+      "item_id": "8148458d-e7f1-4bfb-bc07-ab80623159cd",
+      "summary": "A large vegetable tray product is being recalled due to potential contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c45e8e02-da89-4539-9561-a5d2b73c7141",
+      "item_id": "b5b137b9-7b8c-488a-b632-5eefa2e363f7",
+      "summary": "Various sushi products, including California Rolls and Volcano Rolls, are being recalled due to possible contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5a56a0cb-9d75-4a31-b5b9-30879a0c57de",
+      "item_id": "baf5d7fc-b2b3-4fcf-aa31-af3fb1bfa65a",
+      "summary": "A recall has been issued for Cucumber w/ Ranch Snack Cups due to potential Salmonella contamination.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8064f126-c8b8-4518-9ff1-ec1b8cde04e7",
+      "item_id": "dd2d150a-90e0-422e-9f89-2fefc4d3c01c",
+      "summary": "A recall has been issued for 'Vegetable Bowl' products due to potential contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cbaa1d5f-4343-4e8b-80da-027947436d84",
+      "item_id": "e373b11a-7101-4715-8174-ced487a0ef27",
+      "summary": "Multiple sushi and tuna-based food products, including various Spicy Tuna rolls, Tuna Tataki Poke Bowl, and several platters, are being recalled due to possible contamination with Salmonella. The affected products have best by dates between November 22 and November 29, 2024.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0ca1959e-392f-4fc1-a978-4f988386c4e2",
+      "item_id": "e6f4d12d-a8ee-4985-b4f5-3c1e632777c1",
+      "summary": "An individual garden salad product is being recalled due to potential contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b2e2f0b0-5d58-4aa3-928b-ae0b709051db",
+      "item_id": "fd285b83-1d2e-4d6b-9880-9d816b6ea789",
+      "summary": "Multiple shrimp roll and combo products, including Tempura Shrimp Roll and Spicy Cajun Shrimp Roll, are being recalled due to possible contamination with Salmonella.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "03a8ad59-35a7-47fc-a5ac-d5cbc93abdbd",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "048f11e8-1089-4e9c-85a1-aaf5a8181f41",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "10b50c3a-94eb-4f86-80c5-73747e30d87a",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1d55c839-b955-4f1b-97c6-e4a68289010f",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "20c4e9f1-2fe8-4857-b7bb-53493b60cf4a",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3038966a-bdf4-4c7d-bc73-bc148203670f",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "370ee297-48f3-400f-8c7d-52e20d4040aa",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "37457454-f298-48a3-b7a8-116f3dc02333",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3798d9ae-d23e-4bfd-97dd-0ff4d2aef3b8",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3f8cca9f-455d-41cf-8efd-9d42e569a08d",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4985a524-368d-4ccb-b4e7-a99506532d11",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5e660f92-c826-4dcb-8383-ec6425f8beee",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6059d0c8-416c-4869-a3c5-7ac0b2f9ab80",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "669a8914-fb01-4b9e-bc45-400b512a879a",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7a0fb6ee-f5e2-4a26-b723-d7f127850c38",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7a0fb6ee-f5e2-4a26-b723-d7f127850c38",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7f0e8ef0-ede9-456b-ba61-0e01fedd8ccc",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8148458d-e7f1-4bfb-bc07-ab80623159cd",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b5b137b9-7b8c-488a-b632-5eefa2e363f7",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "baf5d7fc-b2b3-4fcf-aa31-af3fb1bfa65a",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "baf5d7fc-b2b3-4fcf-aa31-af3fb1bfa65a",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dd2d150a-90e0-422e-9f89-2fefc4d3c01c",
+      "tag_dimension": "product_type",
+      "tag_value": "processed_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e373b11a-7101-4715-8174-ced487a0ef27",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e6f4d12d-a8ee-4985-b4f5-3c1e632777c1",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fd285b83-1d2e-4d6b-9880-9d816b6ea789",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fd285b83-1d2e-4d6b-9880-9d816b6ea789",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 ---
 Title: Data Schema v1
 Version: v1
-Last-Updated: 2026-03-06
+Last-Updated: 2026-03-12
 Maintainer: RB
-Status: Active — 22 live tables (6 dropped: segment_impacts, enforcement_details merged, item_relations, trend_signals, user_bookmarks, email_campaign_items)
+Status: Active — 22 live tables + 3 intelligence tables pending (migration 007). 6 dropped: segment_impacts, enforcement_details merged, item_relations, trend_signals, user_bookmarks, email_campaign_items.
 ---
 
 # Data Schema: Policy Canary v1
@@ -54,6 +54,9 @@ LAYER 5: SEARCH & RETRIEVAL
       |
       v
 LAYER 6: INTELLIGENCE
+  intelligence_pages (single table, page_type enum: ingredient|enforcement|regulation)
+  intelligence_page_links (cross-references between pages)
+  intelligence_page_items (links pages to regulatory_items)
   (enforcement fields merged into regulatory_items, 2026-03-05)
   (item_relations, trend_signals DROPPED — premature, 2026-03-05)
       |

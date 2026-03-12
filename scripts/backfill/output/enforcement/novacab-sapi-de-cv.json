@@ -1,0 +1,275 @@
+{
+  "company_name": "NOVACAB SAPI DE CV",
+  "total_actions": 9,
+  "action_types": {
+    "recall": 9
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-08-06",
+    "latest": "2025-08-06"
+  },
+  "items": [
+    {
+      "id": "c00b67bd-1715-4597-85e9-f2d885b95a34",
+      "title": "Cajeta cupcakes (Box). Vanilla cake decorated with  suspiros  cream and  dulce de leche-milk caramel  filling. Blister plastic tray with lid (Box). Box: 6 servings (438 gr). Box: SKU89",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "486543b7-5096-4747-9554-ba0e37241eaf",
+      "title": "Suspiros Tres Leches Cajeta Cake. 15 P: 25 servings (2500 gr), 4P: 7 servings (700gr), Pocket: 3.7 servings (370gr). UPC= 15P: 1335, 4P: 6982, POCKET: 35256. Type of packaging: Plastic dome and plate ",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "dc70f87e-83f5-4d28-94a2-f8eba5728cc7",
+      "title": "Suspiros Cajeta Cake. 15 P: 20 servings (2000 gr), 4P: 4.8 servings (480gr). UPC= 15P: 1338, 4P: 6965. Type of packaging: Plastic dome and plate (15P and 4P). Firm name: NOVACAB SAPI de CV. Address li",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1fdfc503-7e63-4821-b0d2-563225636fda",
+      "title": "Suspiros German Cake. 15 P: 37.5 servings (2062 gr), 4P: 10 servings (550gr). UPC= 15 P: 1342, 4P: 6971.  Type of packaging: Plastic dome and plate (15P and 4P). Firm name: NOVACAB SAPI de CV. Address",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "8edde0fe-9dad-4195-a662-6bce574d7d48",
+      "title": "Suspiros Choconut Cake. 15 P: 36.7 servings (2018 gr), 4P: 9.9 servings (544 gr). UPC= 15P: 1300, 4P: 698.  Type of packaging: Plastic dome and plate (15P and 4P). Firm name: NOVACAB SAPI de CV. Addre",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1727779e-cc40-4a3d-a527-f30108382192",
+      "title": "Suspiros Chocoflan Cake.15 P: 13.7 servings (1712 gr). UPC=177.  Type of packaging: Plastic dome and plate. Firm name: NOVACAB SAPI de CV. Address listed on label: El paso, TX 79901, USA.",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f1a84dea-8536-4323-957f-d1dc33513a30",
+      "title": "Suspiros Mazapan Cake. 15 P: 36 servings (1980gr). 4P: 9.5 servings (522gr). UPC= 15P: 1296 4P: 6975.  Type of packaging: Plastic dome and plate (15P and 4P). Firm name: NOVACAB SAPI de CV. Address li",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "72ece4fd-3765-48f2-b4d7-f8f9529239be",
+      "title": "Suspiros Cheese Cake Coyota. 15 P: 15 servings (1875gr). UPC=7443.  Type of packaging: Plastic dome and plate. Firm name: NOVACAB SAPI de CV. Address listed on label: El paso, TX 79901, USA.",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "739721ff-4fb7-4918-9082-6ad1a488edee",
+      "title": "Suspiros 4 Leches Cake. 15 P: 26 servings (2600 gr), 4P: 7 servings (700 gr), Pocket: 4.1 servings (410gr). UPC=15P: 1343, 4P: 6969, POCKET: 7904.  Type of packaging: Plastic dome and plate (15P and 4",
+      "item_type": "recall",
+      "published_date": "2025-08-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "NOVACAB SAPI DE CV",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "13471d0c-8d82-436b-80d3-79e8664f6867",
+      "item_id": "1727779e-cc40-4a3d-a527-f30108382192",
+      "summary": "NOVACAB SAPI de CV has recalled Suspiros Chocoflan Cake products because they contain undeclared goat milk, which was only labeled as 'milk', posing a risk to individuals with goat milk allergies or sensitivities.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act"
+      ],
+      "key_entities": [
+        "NOVACAB SAPI de CV"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "26d0c728-ed22-4ab5-a4b7-59365df7d6d5",
+      "item_id": "1fdfc503-7e63-4821-b0d2-563225636fda",
+      "summary": "NOVACAB SAPI de CV is recalling Suspiros German Cake products (15P and 4P sizes) because they contain goat milk that was mislabeled as 'milk', posing an undeclared allergen risk.",
+      "key_regulations": [],
+      "key_entities": [
+        "NOVACAB SAPI de CV"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0ce48249-90bf-48c8-9956-4581a83c82f5",
+      "item_id": "486543b7-5096-4747-9554-ba0e37241eaf",
+      "summary": "NOVACAB SAPI de CV has recalled multiple Suspiros Tres Leches Cajeta Cake products because they contain goat milk that was only labeled as 'milk', posing an undeclared allergen risk.",
+      "key_regulations": [],
+      "key_entities": [
+        "NOVACAB SAPI de CV"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "eaab1434-90a3-4e72-b4dd-45ee22f02ef7",
+      "item_id": "72ece4fd-3765-48f2-b4d7-f8f9529239be",
+      "summary": "NOVACAB SAPI de CV is recalling Suspiros Cheese Cake Coyota products because they contain goat milk that was not properly declared on the label and was instead listed as 'milk', posing a risk to individuals sensitive to goat milk.",
+      "key_regulations": [],
+      "key_entities": [
+        "NOVACAB SAPI de CV"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6b09a12c-fe10-4fa2-a945-7567466ccf5e",
+      "item_id": "739721ff-4fb7-4918-9082-6ad1a488edee",
+      "summary": "NOVACAB SAPI de CV is recalling multiple Suspiros 4 Leches Cake products due to undeclared goat milk, which was labeled only as 'milk' on the packaging.",
+      "key_regulations": [
+        "21 CFR Part 101"
+      ],
+      "key_entities": [
+        "NOVACAB SAPI de CV"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ed124d80-2ba2-4d96-bd09-aec08d0165e2",
+      "item_id": "8edde0fe-9dad-4195-a662-6bce574d7d48",
+      "summary": "NOVACAB SAPI de CV is recalling Suspiros Choconut Cake products because they contain undeclared goat milk, which was incorrectly labeled as 'milk' on the packaging.",
+      "key_regulations": [],
+      "key_entities": [
+        "NOVACAB SAPI de CV"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "79d3f524-34ba-45dd-9ef1-122da1ad31f5",
+      "item_id": "c00b67bd-1715-4597-85e9-f2d885b95a34",
+      "summary": "Multiple cake products, including Cajeta cupcakes, are being recalled because they contain undeclared goat milk. The ingredient was labeled as 'milk' instead of 'goat milk,' posing a risk to consumers with goat milk allergies.",
+      "key_regulations": [],
+      "key_entities": [],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "34245a07-944c-4829-8743-24ad6ffdd80a",
+      "item_id": "dc70f87e-83f5-4d28-94a2-f8eba5728cc7",
+      "summary": "NOVACAB SAPI de CV is recalling 'Suspiros Cajeta Cake' products due to undeclared goat milk. The product was labeled as containing 'milk' but did not specify 'goat milk', posing an allergen risk to consumers sensitive to goat milk.",
+      "key_regulations": [],
+      "key_entities": [
+        "NOVACAB SAPI de CV"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8d2cca23-e8a8-42fe-9335-3b6e8df7cf77",
+      "item_id": "f1a84dea-8536-4323-957f-d1dc33513a30",
+      "summary": "NOVACAB SAPI de CV is recalling Suspiros Mazapan Cake products because they contain goat milk, which was only labeled as 'milk' on the packaging. This mislabeling could pose a risk to individuals with specific goat milk allergies or sensitivities.",
+      "key_regulations": [],
+      "key_entities": [
+        "NOVACAB SAPI de CV"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "1727779e-cc40-4a3d-a527-f30108382192",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1727779e-cc40-4a3d-a527-f30108382192",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturing_distribution",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1727779e-cc40-4a3d-a527-f30108382192",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1fdfc503-7e63-4821-b0d2-563225636fda",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "486543b7-5096-4747-9554-ba0e37241eaf",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "72ece4fd-3765-48f2-b4d7-f8f9529239be",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "739721ff-4fb7-4918-9082-6ad1a488edee",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8edde0fe-9dad-4195-a662-6bce574d7d48",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c00b67bd-1715-4597-85e9-f2d885b95a34",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "dc70f87e-83f5-4d28-94a2-f8eba5728cc7",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f1a84dea-8536-4323-957f-d1dc33513a30",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    }
+  ]
+}

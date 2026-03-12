@@ -100,25 +100,62 @@ mkdirSync(outputDir, { recursive: true });
 async function gatherSubstanceData(substanceName: string) {
   console.log(`\nGathering data for: ${substanceName}`);
 
-  // 1. Find substance in substances table
-  const { data: substanceRows } = await supabase
+  // 1. Find substance via canonical_name OR substance_names table
+  const { data: directMatches } = await supabase
     .from("substances")
-    .select("id, name, unii")
-    .ilike("name", `%${substanceName}%`)
+    .select("id, canonical_name, unii")
+    .ilike("canonical_name", `%${substanceName}%`)
     .limit(5);
 
-  if (!substanceRows || substanceRows.length === 0) {
+  // Also search substance_names for aliases (e.g. "Red No. 3" → "FD&C RED NO. 3")
+  const { data: nameMatches } = await supabase
+    .from("substance_names")
+    .select("substance_id, name")
+    .ilike("name", `%${substanceName}%`)
+    .limit(10);
+
+  // Combine unique substance IDs from both searches
+  const idSet = new Set<string>();
+  const substanceMap = new Map<string, { id: string; canonical_name: string; unii: string | null; matched_names: string[] }>();
+
+  for (const row of directMatches ?? []) {
+    idSet.add(row.id);
+    substanceMap.set(row.id, { ...row, matched_names: [row.canonical_name] });
+  }
+
+  if (nameMatches && nameMatches.length > 0) {
+    // Fetch full substance data for name matches
+    const nameSubIds = [...new Set(nameMatches.map((n) => n.substance_id))];
+    const { data: nameSubstances } = await supabase
+      .from("substances")
+      .select("id, canonical_name, unii")
+      .in("id", nameSubIds);
+    for (const row of nameSubstances ?? []) {
+      idSet.add(row.id);
+      const existing = substanceMap.get(row.id);
+      const matchedNames = nameMatches.filter((n) => n.substance_id === row.id).map((n) => n.name);
+      if (existing) {
+        existing.matched_names.push(...matchedNames);
+      } else {
+        substanceMap.set(row.id, { ...row, matched_names: matchedNames });
+      }
+    }
+  }
+
+  const substanceRows = [...substanceMap.values()];
+
+  if (substanceRows.length === 0) {
     console.warn(`  No substance found for "${substanceName}"`);
     return null;
   }
 
-  const substanceIds = substanceRows.map((s) => s.id);
-  console.log(`  Found ${substanceRows.length} substance match(es)`);
+  const substanceIds = [...idSet];
+  console.log(`  Found ${substanceRows.length} substance match(es): ${substanceRows.map((s) => s.canonical_name).join(", ")}`);
 
   // 2. Find regulatory items linked via regulatory_item_substances
   const { data: itemLinks } = await supabase
     .from("regulatory_item_substances")
-    .select("item_id, substance_id, match_confidence")
+    .select("regulatory_item_id, substance_id, confidence, raw_substance_name")
     .in("substance_id", substanceIds);
 
   if (!itemLinks || itemLinks.length === 0) {
@@ -126,7 +163,7 @@ async function gatherSubstanceData(substanceName: string) {
     return { substance: substanceRows[0], items: [], enrichments: [], tags: [] };
   }
 
-  const itemIds = [...new Set(itemLinks.map((l) => l.item_id))];
+  const itemIds = [...new Set(itemLinks.map((l) => l.regulatory_item_id))];
   console.log(`  Found ${itemIds.length} linked regulatory items`);
 
   // 3. Get regulatory items (batch by 100)
@@ -148,7 +185,7 @@ async function gatherSubstanceData(substanceName: string) {
     const batch = itemIds.slice(i, i + 100);
     const { data: enrichments } = await supabase
       .from("item_enrichments")
-      .select("id, item_id, summary, impact_level, action_required, audience_tags")
+      .select("id, item_id, summary, key_regulations, key_entities, regulatory_action_type, deadline")
       .in("item_id", batch);
     if (enrichments) allEnrichments.push(...enrichments);
   }
@@ -175,23 +212,27 @@ async function gatherSubstanceData(substanceName: string) {
 }
 
 // Run
-console.log(`Gathering ingredient data for ${substances.length} substances...`);
-console.log(`Output: ${outputDir}`);
+async function main() {
+  console.log(`Gathering ingredient data for ${substances.length} substances...`);
+  console.log(`Output: ${outputDir}`);
 
-let gathered = 0;
-for (const name of substances) {
-  try {
-    const data = await gatherSubstanceData(name);
-    if (data) {
-      const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-      const outFile = join(outputDir, `${slug}.json`);
-      writeFileSync(outFile, JSON.stringify(data, null, 2));
-      console.log(`  Wrote: ${outFile}`);
-      gathered++;
+  let gathered = 0;
+  for (const name of substances) {
+    try {
+      const data = await gatherSubstanceData(name);
+      if (data) {
+        const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        const outFile = join(outputDir, `${slug}.json`);
+        writeFileSync(outFile, JSON.stringify(data, null, 2));
+        console.log(`  Wrote: ${outFile}`);
+        gathered++;
+      }
+    } catch (err) {
+      console.error(`  Error gathering "${name}":`, (err as Error).message);
     }
-  } catch (err) {
-    console.error(`  Error gathering "${name}":`, (err as Error).message);
   }
+
+  console.log(`\nDone. ${gathered}/${substances.length} substances gathered.`);
 }
 
-console.log(`\nDone. ${gathered}/${substances.length} substances gathered.`);
+main().catch(console.error);

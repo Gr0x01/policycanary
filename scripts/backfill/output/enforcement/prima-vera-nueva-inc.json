@@ -1,0 +1,288 @@
+{
+  "company_name": "Prima Vera Nueva, Inc.",
+  "total_actions": 10,
+  "action_types": {
+    "recall": 10
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2026-02-04",
+    "latest": "2026-02-04"
+  },
+  "items": [
+    {
+      "id": "1b2a1c95-3be5-401f-9558-ac1a449ea94d",
+      "title": "Black Bean Bonanza Tamales with Black Beans NO DAIRY  Ingredients: Organic Corn Flour Masa, Black Beans, Salsa (Tomatoes, Onions, Chiles, Garlic & Cilantro), Non-GMO Corn, Non-hydrogenated Vegetable S",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c954e814-df40-4202-ae5a-c19960bf5253",
+      "title": "Roasted Green Chile & Jack Cheese Tamales  Ingredients: Organic Corn Flour Masa, Roasted Green Chiles, Jack Cheese (Pasteurized Milk, Cheese Cultures, Salt, Enzymes), Non-GMO Corn, Butter, Salt, Spice",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f0750e21-0e18-401b-a679-fbbad23a89a4",
+      "title": "BBQ Chipotle Bean & White Cheddar Tamales  Ingredients: Organic Corn Flour Masa, Beans, Jack Cheese (Pasteurized Milk, Cheese Cultures, Salt and Enzymes), Salsa (Tomatoes, Onions, Chiles, Garlic & Cil",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "a963c045-6540-4667-9d84-a147a71bf76a",
+      "title": "Mushroom, Spinach & Salsa Tamales with 2 Cheeses  Ingredients: Organic Corn Flour Masa, Mushrooms, Spinach, Onions, Jalapenos, Jack and White Cheddar Cheese (pasteurized milk, cheese cultures, salt an",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "000aa2db-e331-4519-9dfa-31e8534dec50",
+      "title": "Butternut Squash Tamales With Roasted Green Chiles, Corn & Jack Cheese  Ingredients: Organic Corn Flour Masa, Organic Butternut Squash, Organic Roasted Green Chiles, Non-GMO Corn, Organic Jalapeno Jac",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "96d00139-b95f-4584-9bcb-574c0690ac5d",
+      "title": "Roasted Pumpkin & White Cheddar Tamales  Ingredients: Organic Corn Flour Masa, Pumpkin, Green Chile, Sharp Cheddar Cheese (Pasteurized Milk, Cheese Cultures, Salt and Enzymes), Butter, Salt, Spices, B",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "74d5716d-40e8-4cb2-85f8-1a57e4e16795",
+      "title": "Mushroom, Spinach & Salsa Tamales No Dairy  Ingredients: Organic Corn Flour Masa, Mushrooms, Spinach, Tomatoes, Onions, Jalapenos, Non-hydrogenated Vegetable Shortning, Salt, Spices, Baking Powder.  M",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "066072aa-6580-4330-9dc1-a5e591abad1d",
+      "title": "Roasted Green Chile Tamales NO DAIRY  Ingredients: Organic Corn Flour Masa, Roasted Green Chiles, Non-GMO Corn, Non-hydrogenated Vegetable Shortening, Salt, Spices, Baking Powder (Sodium Acid Pyrophos",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c9231cbc-d72e-458d-b87b-f90dd549c990",
+      "title": "Butternut Squash Tamales with Roasted Green Chiles, NO DAIRY  Ingredients: Organic Corn Flour Masa, Organic Butternut Squash, Roasted Green Chiles, Non-GMO Corn, Non-hydrogenated Vegetable Shortening,",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2450652a-b483-4d10-90ce-53ddcb72fdd9",
+      "title": "Black Bean Bonanza Tamales with Black Beans and Jack Cheese  Ingredients: Organic Corn Flour Masa, Black Beans, Jack Cheese (Pasteurized Milk, Cheese Cultures, Salt, Enzymes), Salsa (Tomatoes, Onions,",
+      "item_type": "recall",
+      "published_date": "2026-02-04",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Prima Vera Nueva, Inc.",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "96baaf6c-1025-48ec-a182-a5e93dbfa983",
+      "item_id": "000aa2db-e331-4519-9dfa-31e8534dec50",
+      "summary": "Primavera is recalling Butternut Squash Tamales With Roasted Green Chiles, Corn & Jack Cheese due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ef98311a-24fd-431f-8f26-e44f919d887b",
+      "item_id": "066072aa-6580-4330-9dc1-a5e591abad1d",
+      "summary": "Roasted Green Chile Tamales NO DAIRY are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "961dbb47-0f93-4fa7-babe-68261d5f2160",
+      "item_id": "1b2a1c95-3be5-401f-9558-ac1a449ea94d",
+      "summary": "Black Bean Bonanza Tamales are being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "34ca1e2b-eb1f-420e-8767-a1515cf237bb",
+      "item_id": "2450652a-b483-4d10-90ce-53ddcb72fdd9",
+      "summary": "Primavera initiated a recall of Black Bean Bonanza Tamales with Black Beans and Jack Cheese due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "7358ebb8-9fb9-4875-852c-ee932b6c87d2",
+      "item_id": "74d5716d-40e8-4cb2-85f8-1a57e4e16795",
+      "summary": "Primavera has recalled Mushroom, Spinach & Salsa Tamales due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "f406207b-f6d2-4842-9657-c46076888703",
+      "item_id": "96d00139-b95f-4584-9bcb-574c0690ac5d",
+      "summary": "Primavera is recalling Roasted Pumpkin & White Cheddar Tamales due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "aa98e912-62f2-4a30-9fea-aa3f112d73d6",
+      "item_id": "a963c045-6540-4667-9d84-a147a71bf76a",
+      "summary": "Primavera has issued a recall for 'Mushroom, Spinach & Salsa Tamales with 2 Cheeses' due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "cb03d033-27a5-4b65-a413-61659b77b3da",
+      "item_id": "c9231cbc-d72e-458d-b87b-f90dd549c990",
+      "summary": "Primavera is recalling Butternut Squash Tamales with Roasted Green Chiles due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "811fdb7b-0b01-4971-a3b4-f98e3d5080e4",
+      "item_id": "c954e814-df40-4202-ae5a-c19960bf5253",
+      "summary": "Primavera is recalling Roasted Green Chile & Jack Cheese Tamales due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8d24ddd4-eb06-45de-8901-943767ebaed1",
+      "item_id": "f0750e21-0e18-401b-a679-fbbad23a89a4",
+      "summary": "Primavera is recalling its BBQ Chipotle Bean & White Cheddar Tamales due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Primavera"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "000aa2db-e331-4519-9dfa-31e8534dec50",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "066072aa-6580-4330-9dc1-a5e591abad1d",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1b2a1c95-3be5-401f-9558-ac1a449ea94d",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2450652a-b483-4d10-90ce-53ddcb72fdd9",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "74d5716d-40e8-4cb2-85f8-1a57e4e16795",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "96d00139-b95f-4584-9bcb-574c0690ac5d",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a963c045-6540-4667-9d84-a147a71bf76a",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c9231cbc-d72e-458d-b87b-f90dd549c990",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c954e814-df40-4202-ae5a-c19960bf5253",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f0750e21-0e18-401b-a679-fbbad23a89a4",
+      "tag_dimension": "product_type",
+      "tag_value": "grain_products_pastas",
+      "signal_source": "direct"
+    }
+  ]
+}

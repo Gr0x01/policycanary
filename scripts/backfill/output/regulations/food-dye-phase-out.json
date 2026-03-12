@@ -1,0 +1,3217 @@
+{
+  "regulation_name": "Food Dye Phase-Out",
+  "search_terms": [
+    "food dye",
+    "artificial color",
+    "color additive"
+  ],
+  "item_count": 44,
+  "affected_categories": [
+    "bath_preparations",
+    "eye_makeup",
+    "hair_coloring",
+    "lipstick",
+    "makeup_not_eye",
+    "oral_hygiene",
+    "personal_cleanliness",
+    "skin_care",
+    "other_cosmetic",
+    "baked_goods",
+    "nonalcoholic_beverages",
+    "confections_frostings",
+    "dairy_products",
+    "snack_foods",
+    "soft_candy",
+    "other_food",
+    "multivitamins",
+    "other_supplement",
+    "prescription_drugs",
+    "otc_drugs",
+    "meat_products",
+    "food_contact_materials",
+    "herbs_spices_seasonings",
+    "compounded_drugs",
+    "frozen_dairy",
+    "jams_jellies",
+    "sweet_sauces_toppings",
+    "sugar_substitutes",
+    "chewing_gum",
+    "gelatins_puddings",
+    "hair_preparations_non_coloring",
+    "manicuring",
+    "suntan_preparations",
+    "fragrance",
+    "mineral_supplements",
+    "animal_feed",
+    "pet_food",
+    "dietary_conventional_foods",
+    "beauty_supplements",
+    "single_vitamins",
+    "botanicals_herbal",
+    "specialty_supplements",
+    "plant_protein_products",
+    "class_ii_devices",
+    "class_iii_devices",
+    "alcoholic_beverages",
+    "coffee_tea",
+    "fish_products",
+    "generic_drugs",
+    "class_i_devices",
+    "implantable_devices",
+    "sports_performance",
+    "sugars_syrups",
+    "fresh_fruits_vegetables"
+  ],
+  "cfr_references": [
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 74,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 74,
+      "title": 21
+    },
+    {
+      "part": 80,
+      "title": 21
+    },
+    {
+      "part": 74,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 80,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    },
+    {
+      "part": 80,
+      "title": 21
+    },
+    {
+      "part": 73,
+      "title": 21
+    }
+  ],
+  "key_deadlines": [
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Beetroot Red",
+      "effective_date": "2026-03-23",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Spirulina Extract",
+      "effective_date": "2026-03-23",
+      "comment_deadline": "2026-03-09"
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Gardenia (Genipin) Blue; Confirmation of Effective Date",
+      "effective_date": "2025-08-29",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Proposal To Remove the Color Additive Listing for Use of Orange B on Casings or Surfaces of Frankfurters and Sausages",
+      "effective_date": null,
+      "comment_deadline": "2025-10-17"
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Butterfly Pea Flower Extract; Confirmation of Effective Date",
+      "effective_date": "2025-06-26",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Calcium Phosphate; Confirmation of Effective Date",
+      "effective_date": "2025-06-26",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Galdieria Extract Blue; Confirmation of Effective Date",
+      "effective_date": "2025-06-26",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Gardenia (Genipin) Blue; Correction",
+      "effective_date": "2025-08-29",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Gardenia (Genipin) Blue",
+      "effective_date": "2025-08-29",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Replacing Color Additives in Approved or Marketed Drug Products; Draft Guidance for Industry; Availability",
+      "effective_date": null,
+      "comment_deadline": "2025-07-29"
+    },
+    {
+      "item_title": "Listing of Color Additives; Myoglobin; Confirmation of Effective Date",
+      "effective_date": "2025-02-19",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Replacing Color Additives in Approved or Marketed Drug Products: Draft Guidance for Industry",
+      "effective_date": null,
+      "comment_deadline": "2025-07-29"
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Calcium Phosphate",
+      "effective_date": "2025-06-26",
+      "comment_deadline": "2025-06-11"
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Butterfly Pea Flower Extract",
+      "effective_date": "2025-06-26",
+      "comment_deadline": "2025-06-11"
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Galdieria Extract Blue",
+      "effective_date": "2025-06-26",
+      "comment_deadline": "2025-06-11"
+    },
+    {
+      "item_title": "Listing of Color Additives Exempt From Certification; Myoglobin",
+      "effective_date": "2025-02-19",
+      "comment_deadline": "2025-02-18"
+    },
+    {
+      "item_title": "Color Additive Petition From Center for Science in the Public Interest, et al.; Request To Revoke Color Additive Listing for Use of FD&C Red No. 3 in Food and Ingested Drugs",
+      "effective_date": "2027-01-15",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Color Additive Certification; Increase in Fees for Certification Services",
+      "effective_date": "2024-12-09",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "GNT USA, LLC; Filing of Color Additive Petition",
+      "effective_date": null,
+      "comment_deadline": "2024-10-04"
+    },
+    {
+      "item_title": "Color Additive Certification; Increase in Fees for Certification Services; Extension of the Comment Period",
+      "effective_date": null,
+      "comment_deadline": "2024-06-27"
+    },
+    {
+      "item_title": "Color Additive Certification; Increase in Fees for Certification Services; Reopening of the Comment Period",
+      "effective_date": null,
+      "comment_deadline": "2024-05-28"
+    }
+  ],
+  "items": [
+    {
+      "id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "title": "Import Alert 53-06 — Detention Without Physical Examination Of Cosmetics That are Adulterated and/or Misbranded Due to Color Additive Violations",
+      "item_type": "import_alert",
+      "published_date": "2026-03-05",
+      "source_url": "https://www.accessdata.fda.gov/cms_ia/importalert_130.html",
+      "issuing_office": "ORA",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "aeb8d607-b854-4031-a133-09b464599e96",
+      "title": "Ecoflora Cares; Filing of Color Additive Petition",
+      "item_type": "proposed_rule",
+      "published_date": "2026-03-04",
+      "source_url": "https://www.federalregister.gov/documents/2026/03/04/2026-04288/ecoflora-cares-filing-of-color-additive-petition",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "63d58832-4433-4466-b0d0-0496b9bd66e0",
+      "title": "spicely ORGANIC garlic salt  NO ARTIFICIAL COLORING NO GLUTEN - NO MSG - NO SOY NO PRESERVATIVES - NO WHEAT NO SUGAR - NO SALT - NO IRRADIATION  Net wt: 3.4oz (96g)  Ingredients: Salt, *Garlic *Organi",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "54c30971-38f0-4bf1-8790-5ad6edc12887",
+      "title": "spicely ORGANIC sumac  NO ARTIFICIAL COLORING NO GLUTEN - NO MSG - NO SOY NO PRESERVATIVES - NO WHEAT NO SUGAR - NO SALT - NO IRRADIATION  Net wt: 2oz (56g)  Ingredients: Organic Sumac, Salt  www.spic",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "2950e7ca-5345-486f-8357-10bbcf9dcc21",
+      "title": "spicely ORGANIC celery salt  NO ARTIFICIAL COLORING NO GLUTEN - NO MSG - NO SOY NO PRESERVATIVES - NO WHEAT NO SUGAR - NO SALT - NO IRRADIATION  Net wt: 2.4oz (68g)  Ingredients: Salt, *Celery Seeds *",
+      "item_type": "recall",
+      "published_date": "2026-02-11",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "title": "Listing of Color Additives Exempt From Certification; Beetroot Red",
+      "item_type": "rule",
+      "published_date": "2026-02-06",
+      "source_url": "https://www.federalregister.gov/documents/2026/02/06/2026-02313/listing-of-color-additives-exempt-from-certification-beetroot-red",
+      "issuing_office": null,
+      "effective_date": "2026-03-23",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "title": "Listing of Color Additives Exempt From Certification; Spirulina Extract",
+      "item_type": "rule",
+      "published_date": "2026-02-06",
+      "source_url": "https://www.federalregister.gov/documents/2026/02/06/2026-02314/listing-of-color-additives-exempt-from-certification-spirulina-extract",
+      "issuing_office": null,
+      "effective_date": "2026-03-23",
+      "comment_deadline": "2026-03-09",
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "d89452cc-1450-407d-989a-60058bb6937d",
+      "title": "FDA Takes New Approach to \"No Artificial Colors\" Claims",
+      "item_type": "press_release",
+      "published_date": "2026-02-05",
+      "source_url": "http://www.fda.gov/news-events/press-announcements/fda-takes-new-approach-no-artificial-colors-claims",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "title": "Tops Mixed Fruit Jam  INGREDIENTS: Sugar, Mixed Fruit Pulp 48% (Apple, Pear, Guava, Pineapple, Banana, Mango, Grapes, Papaya), Gelling Agent (Pectin - INS 440), Acidity Regulator (Citric Acid - INS 33",
+      "item_type": "recall",
+      "published_date": "2026-01-21",
+      "source_url": null,
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "title": "Listing of Color Additives Exempt From Certification; Gardenia (Genipin) Blue; Confirmation of Effective Date",
+      "item_type": "rule",
+      "published_date": "2025-10-01",
+      "source_url": "https://www.federalregister.gov/documents/2025/10/01/2025-19166/listing-of-color-additives-exempt-from-certification-gardenia-genipin-blue-confirmation-of-effective",
+      "issuing_office": null,
+      "effective_date": "2025-08-29",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "1f1e7cdb-2578-42ae-944a-e92489936136",
+      "title": "Proposal To Remove the Color Additive Listing for Use of Orange B on Casings or Surfaces of Frankfurters and Sausages",
+      "item_type": "proposed_rule",
+      "published_date": "2025-09-17",
+      "source_url": "https://www.federalregister.gov/documents/2025/09/17/2025-18023/proposal-to-remove-the-color-additive-listing-for-use-of-orange-b-on-casings-or-surfaces-of",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-10-17",
+      "cfr_references": [
+        {
+          "part": 74,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "title": "Listing of Color Additives Exempt From Certification; Butterfly Pea Flower Extract; Confirmation of Effective Date",
+      "item_type": "rule",
+      "published_date": "2025-08-21",
+      "source_url": "https://www.federalregister.gov/documents/2025/08/21/2025-16045/listing-of-color-additives-exempt-from-certification-butterfly-pea-flower-extract-confirmation-of",
+      "issuing_office": null,
+      "effective_date": "2025-06-26",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "title": "Listing of Color Additives Exempt From Certification; Calcium Phosphate; Confirmation of Effective Date",
+      "item_type": "rule",
+      "published_date": "2025-08-21",
+      "source_url": "https://www.federalregister.gov/documents/2025/08/21/2025-16047/listing-of-color-additives-exempt-from-certification-calcium-phosphate-confirmation-of-effective",
+      "issuing_office": null,
+      "effective_date": "2025-06-26",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "fddb25a6-eee4-4cee-a22a-2e45e300026b",
+      "title": "Listing of Color Additives Exempt From Certification; Galdieria Extract Blue; Confirmation of Effective Date",
+      "item_type": "rule",
+      "published_date": "2025-08-21",
+      "source_url": "https://www.federalregister.gov/documents/2025/08/21/2025-16046/listing-of-color-additives-exempt-from-certification-galdieria-extract-blue-confirmation-of",
+      "issuing_office": null,
+      "effective_date": "2025-06-26",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "34b9dc2e-8eac-4ec2-9e68-f3ab002396a2",
+      "title": "Listing of Color Additives Exempt From Certification; Gardenia (Genipin) Blue; Correction",
+      "item_type": "rule",
+      "published_date": "2025-08-06",
+      "source_url": "https://www.federalregister.gov/documents/2025/08/06/2025-14905/listing-of-color-additives-exempt-from-certification-gardenia-genipin-blue-correction",
+      "issuing_office": null,
+      "effective_date": "2025-08-29",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "58558de6-8d8a-439f-8bb2-a30d917108e4",
+      "title": "Listing of Color Additives Exempt From Certification; Gardenia (Genipin) Blue",
+      "item_type": "rule",
+      "published_date": "2025-07-15",
+      "source_url": "https://www.federalregister.gov/documents/2025/07/15/2025-13175/listing-of-color-additives-exempt-from-certification-gardenia-genipin-blue",
+      "issuing_office": null,
+      "effective_date": "2025-08-29",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "2b313712-c8fe-44be-b1f9-2834b264b08e",
+      "title": "Replacing Color Additives in Approved or Marketed Drug Products; Draft Guidance for Industry; Availability",
+      "item_type": "notice",
+      "published_date": "2025-05-30",
+      "source_url": "https://www.federalregister.gov/documents/2025/05/30/2025-09800/replacing-color-additives-in-approved-or-marketed-drug-products-draft-guidance-for-industry",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2025-07-29",
+      "cfr_references": []
+    },
+    {
+      "id": "e8a3d4b8-5a88-4646-b10d-00dda9158bdd",
+      "title": "Listing of Color Additives; Myoglobin; Confirmation of Effective Date",
+      "item_type": "rule",
+      "published_date": "2025-05-29",
+      "source_url": "https://www.federalregister.gov/documents/2025/05/29/2025-09680/listing-of-color-additives-myoglobin-confirmation-of-effective-date",
+      "issuing_office": null,
+      "effective_date": "2025-02-19",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "bc631199-3c11-4efd-9860-34829ce23eea",
+      "title": "Replacing Color Additives in Approved or Marketed Drug Products: Draft Guidance for Industry",
+      "item_type": "draft_guidance",
+      "published_date": "2025-05-29",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/replacing-color-additives-approved-or-marketed-drug-products",
+      "issuing_office": "Center for Drug Evaluation and Research",
+      "effective_date": null,
+      "comment_deadline": "2025-07-29",
+      "cfr_references": null
+    },
+    {
+      "id": "697a0bf3-5e81-4cc5-9746-8a8ed8d91be0",
+      "title": "Listing of Color Additives Exempt From Certification; Calcium Phosphate",
+      "item_type": "rule",
+      "published_date": "2025-05-12",
+      "source_url": "https://www.federalregister.gov/documents/2025/05/12/2025-08249/listing-of-color-additives-exempt-from-certification-calcium-phosphate",
+      "issuing_office": null,
+      "effective_date": "2025-06-26",
+      "comment_deadline": "2025-06-11",
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "title": "Listing of Color Additives Exempt From Certification; Butterfly Pea Flower Extract",
+      "item_type": "rule",
+      "published_date": "2025-05-12",
+      "source_url": "https://www.federalregister.gov/documents/2025/05/12/2025-08248/listing-of-color-additives-exempt-from-certification-butterfly-pea-flower-extract",
+      "issuing_office": null,
+      "effective_date": "2025-06-26",
+      "comment_deadline": "2025-06-11",
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "da210a97-7bd4-476b-a9a3-1bc2937a22fe",
+      "title": "Listing of Color Additives Exempt From Certification; Galdieria Extract Blue",
+      "item_type": "rule",
+      "published_date": "2025-05-12",
+      "source_url": "https://www.federalregister.gov/documents/2025/05/12/2025-08250/listing-of-color-additives-exempt-from-certification-galdieria-extract-blue",
+      "issuing_office": null,
+      "effective_date": "2025-06-26",
+      "comment_deadline": "2025-06-11",
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "a5a793a9-2ec4-4045-9632-e30baeeb3306",
+      "title": "Impossible Foods, Inc.; Filing of Color Additive Petition",
+      "item_type": "proposed_rule",
+      "published_date": "2025-03-14",
+      "source_url": "https://www.federalregister.gov/documents/2025/03/14/2025-04034/impossible-foods-inc-filing-of-color-additive-petition",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "b50afc1a-4db2-4594-a150-b71641555bae",
+      "title": "Listing of Color Additives Exempt From Certification; Myoglobin",
+      "item_type": "rule",
+      "published_date": "2025-01-17",
+      "source_url": "https://www.federalregister.gov/documents/2025/01/17/2025-01239/listing-of-color-additives-exempt-from-certification-myoglobin",
+      "issuing_office": null,
+      "effective_date": "2025-02-19",
+      "comment_deadline": "2025-02-18",
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "title": "Color Additive Petition From Center for Science in the Public Interest, et al.; Request To Revoke Color Additive Listing for Use of FD&C Red No. 3 in Food and Ingested Drugs",
+      "item_type": "rule",
+      "published_date": "2025-01-16",
+      "source_url": "https://www.federalregister.gov/documents/2025/01/16/2025-00830/color-additive-petition-from-center-for-science-in-the-public-interest-et-al-request-to-revoke-color",
+      "issuing_office": null,
+      "effective_date": "2027-01-15",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 74,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "title": "Color Additive Certification; Increase in Fees for Certification Services",
+      "item_type": "rule",
+      "published_date": "2024-11-08",
+      "source_url": "https://www.federalregister.gov/documents/2024/11/08/2024-25974/color-additive-certification-increase-in-fees-for-certification-services",
+      "issuing_office": null,
+      "effective_date": "2024-12-09",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 80,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "bf0260b4-d597-4bcd-af5b-fb71270f3b61",
+      "title": "DSM Biomedical; Filing of Color Additive Petition",
+      "item_type": "proposed_rule",
+      "published_date": "2024-09-23",
+      "source_url": "https://www.federalregister.gov/documents/2024/09/23/2024-21684/dsm-biomedical-filing-of-color-additive-petition",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 74,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "db6c6c0c-2074-4847-acaf-e997939b06ef",
+      "title": "GNT USA, LLC; Filing of Color Additive Petition",
+      "item_type": "proposed_rule",
+      "published_date": "2024-08-05",
+      "source_url": "https://www.federalregister.gov/documents/2024/08/05/2024-17090/gnt-usa-llc-filing-of-color-additive-petition",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2024-10-04",
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "4f37d330-5e69-4947-b2c4-5da50781f650",
+      "title": "Phytolon Ltd.; Filing of Color Additive Petition",
+      "item_type": "proposed_rule",
+      "published_date": "2024-07-18",
+      "source_url": "https://www.federalregister.gov/documents/2024/07/18/2024-15892/phytolon-ltd-filing-of-color-additive-petition",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "title": "Color Additive Certification; Increase in Fees for Certification Services; Extension of the Comment Period",
+      "item_type": "proposed_rule",
+      "published_date": "2024-05-28",
+      "source_url": "https://www.federalregister.gov/documents/2024/05/28/2024-11639/color-additive-certification-increase-in-fees-for-certification-services-extension-of-the-comment",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2024-06-27",
+      "cfr_references": [
+        {
+          "part": 80,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "title": "Lonza Greenwood LLC; Filing of Color Additive Petition",
+      "item_type": "proposed_rule",
+      "published_date": "2024-05-17",
+      "source_url": "https://www.federalregister.gov/documents/2024/05/17/2024-10888/lonza-greenwood-llc-filing-of-color-additive-petition",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "title": "Color Additive Certification; Increase in Fees for Certification Services; Reopening of the Comment Period",
+      "item_type": "proposed_rule",
+      "published_date": "2024-04-26",
+      "source_url": "https://www.federalregister.gov/documents/2024/04/26/2024-08950/color-additive-certification-increase-in-fees-for-certification-services-reopening-of-the-comment",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": "2024-05-28",
+      "cfr_references": [
+        {
+          "part": 80,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "b3974195-99b6-4a2f-b731-1bcb285b2a90",
+      "title": "Filing of Color Additive Petition From Phytolon Ltd.",
+      "item_type": "proposed_rule",
+      "published_date": "2024-03-12",
+      "source_url": "https://www.federalregister.gov/documents/2024/03/12/2024-05216/filing-of-color-additive-petition-from-phytolon-ltd",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 73,
+          "title": 21
+        }
+      ]
+    },
+    {
+      "id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "title": "Guidance for Industry: Assessing the Effects of Significant Manufacturing Process Changes, Including Emerging Technologies, on the Safety and Regulatory Status of Food Ingredients and Food Contact Substances, Including Food Ingredients that Are Color Additives",
+      "item_type": "guidance",
+      "published_date": "2014-06-27",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-assessing-effects-significant-manufacturing-process-changes-including-emerging",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "834f3c81-eb84-4ff6-816e-91021652bdaf",
+      "title": "CVM GFI #223 Small Entity Compliance Guide Declaring Color Additives in Animal Foods",
+      "item_type": "guidance",
+      "published_date": "2013-09-27",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cvm-gfi-223-small-entity-compliance-guide-declaring-color-additives-animal-foods",
+      "issuing_office": "Center for Veterinary Medicine",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "title": "Guidance for Industry: Questions and Answers About the Food Additive or Color Additive Petition Process",
+      "item_type": "guidance",
+      "published_date": "2011-03-31",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-questions-and-answers-about-food-additive-or-color-additive-petition-process",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "title": "Guidance for Industry: Color Additive Petitions - FDA Recommendations for Submission of Chemical and Technological Data on Color Additives for Food, Drugs, Cosmetics, or Medical Devices",
+      "item_type": "guidance",
+      "published_date": "2009-07-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-color-additive-petitions-fda-recommendations-submission-chemical-and-technological",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "title": "Guidance for Industry: Preparing a Color Additive Petition for Submission to the Center for Food Safety and Applied Nutrition for Color Additives Used in or on Contact Lenses",
+      "item_type": "guidance",
+      "published_date": "2006-05-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-preparing-color-additive-petition-submission-center-food-safety-and-applied",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "title": "CPG Sec 587.100 Label Declaration of Certification-Exempt Color Additives",
+      "item_type": "guidance",
+      "published_date": "2005-11-29",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-587100-label-declaration-certification-exempt-color-additives",
+      "issuing_office": "Human Foods Program<br><br>Office of Inspections and Investigations",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "48e1e415-ba1f-4ffe-a1ea-8e30e990cbeb",
+      "title": "CPG Sec 500.425 Use of Color Additives in Paper and Paperboard Intended for Use with Food",
+      "item_type": "guidance",
+      "published_date": "2005-11-29",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-500425-use-color-additives-paper-and-paperboard-intended-use-food",
+      "issuing_office": "Human Foods Program<br><br>Office of Inspections and Investigations",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "21a31700-1256-4f31-8f71-d4402086b19c",
+      "title": "CPG Sec 587.300 Color Additives",
+      "item_type": "guidance",
+      "published_date": "2005-11-29",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-587300-color-additives",
+      "issuing_office": "Human Foods Program<br><br>Office of Inspections and Investigations",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "8d7600b8-d859-45b3-975f-8aad400a3d86",
+      "title": "Guidance for Industry: Pre-Petition Consultations for Food Additives and Color Additives",
+      "item_type": "guidance",
+      "published_date": "2005-04-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-pre-petition-consultations-food-additives-and-color-additives",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "aeb513c6-f68b-479b-bd96-737583583a15",
+      "title": "Color Additive Petitions - Medical Devices",
+      "item_type": "guidance",
+      "published_date": "1987-06-01",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/color-additive-petitions-medical-devices",
+      "issuing_office": "Center for Devices and Radiological Health",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f5aa635f-9dce-4422-89f2-1e2c13879cda",
+      "title": "CPG Sec 550.625 Oranges - Artificial Coloring",
+      "item_type": "guidance",
+      "published_date": "1980-09-30",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-550625-oranges-artificial-coloring",
+      "issuing_office": "Human Foods Program<br><br>Office of Inspections and Investigations",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "96890ff6-4ed5-45fc-8473-13e95b82bef7",
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "summary": "The FDA is reopening the comment period for a proposed rule that would increase the fees for color additive certification services. The new deadline for submitting comments is May 28, 2024.",
+      "key_regulations": [
+        "21 CFR Part 80"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": "2024-05-28"
+    },
+    {
+      "id": "b1ce6972-f3c1-4ebc-ad1b-b28af7d21f02",
+      "item_id": "1f1e7cdb-2578-42ae-944a-e92489936136",
+      "summary": "The FDA has issued a proposed rule to remove Orange B from the list of approved color additives for use on the casings or surfaces of frankfurters and sausages. If finalized, this would prohibit the use of this color additive in these specific food products.",
+      "key_regulations": [
+        "21 CFR Part 74"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "proposed_restriction",
+      "deadline": "2025-10-17"
+    },
+    {
+      "id": "102d5dfd-d727-4013-9ebb-0c456af87116",
+      "item_id": "21a31700-1256-4f31-8f71-d4402086b19c",
+      "summary": "The FDA issued an updated Compliance Policy Guide (CPG Sec 587.300) instructing district and program field offices to consult with CFSAN's Office of Compliance/Division of Enforcement before recommending regulatory action or suggesting recalls for products that appear to contain non-permitted color additives.",
+      "key_regulations": [
+        "CPG Sec 587.300"
+      ],
+      "key_entities": [
+        "FDA",
+        "CFSAN",
+        "Office of Compliance",
+        "Division of Enforcement"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "96af2e99-12cb-4e37-87ec-04ae0d44aa4a",
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "summary": "The FDA issued a Guidance for Industry on how manufacturers of food ingredients and food contact substances should assess the effects of significant manufacturing process changes, such as adopting emerging technologies like nanotechnology, on a product's safety and regulatory status.",
+      "key_regulations": [
+        "21 CFR 10.115(g)(5)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "658069f6-8ffb-4b8e-a937-9da5d9178fbc",
+      "item_id": "2950e7ca-5345-486f-8357-10bbcf9dcc21",
+      "summary": "Organic Spices Inc. is recalling its 'spicely ORGANIC celery salt' because the product label falsely claims 'NO SALT' while 'Salt' is the primary ingredient, leading to mislabeling.",
+      "key_regulations": [],
+      "key_entities": [
+        "Organic Spices Inc.",
+        "spicely"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "76cf726e-c81b-4fec-9f2b-b52af48c17a5",
+      "item_id": "2b313712-c8fe-44be-b1f9-2834b264b08e",
+      "summary": "The FDA announced the availability of a draft guidance document titled 'Replacing Color Additives in Approved or Marketed Drug Products'. This guidance is intended for industry and seeks public comments by July 29, 2025, regarding the replacement of color additives in drug products.",
+      "key_regulations": [],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2025-07-29"
+    },
+    {
+      "id": "48f58767-2b76-4555-80e1-413fecb597b4",
+      "item_id": "34b9dc2e-8eac-4ec2-9e68-f3ab002396a2",
+      "summary": "The FDA issued a correction to a final rule concerning the listing of Gardenia (Genipin) Blue as a color additive exempt from certification under 21 CFR Part 73.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "90a3b048-7f02-4f2f-b03e-4fab12b27d8f",
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "summary": "The FDA has confirmed the effective date of a final rule that approves Butterfly Pea Flower Extract for use as a color additive exempt from certification. The rule amends 21 CFR Part 73.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-06-26"
+    },
+    {
+      "id": "f6c93ec1-ad6d-45db-8051-2d93049d3082",
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "summary": "FDA Import Alert 53-06 authorizes the Detention Without Physical Examination (DWPE) of cosmetic products that are adulterated or misbranded due to color additive violations. This includes products containing non-permitted or uncertified color additives, or failing to properly declare color additives on the product label. The alert includes a massive 'Red List' of specific international firms and products across various categories (e.g., eye makeup, henna, bath soaps, lotions) that are subject to immediate detention.",
+      "key_regulations": [
+        "21 CFR 70.25",
+        "Section 601(e)",
+        "Section 602(a)"
+      ],
+      "key_entities": [
+        "Division of Import Operations (DIO)",
+        "Office of Cosmetics and Colors",
+        "Division of Color Certification and Technology"
+      ],
+      "regulatory_action_type": "import_violation",
+      "deadline": null
+    },
+    {
+      "id": "7a6e6731-7d95-43ee-833f-4a80a7d9bb82",
+      "item_id": "48e1e415-ba1f-4ffe-a1ea-8e30e990cbeb",
+      "summary": "The FDA issued a Compliance Policy Guide clarifying that it does not object to the use of color additives in paper and paperboard intended for food contact, provided the colorants are regulated for direct addition to food without specific restrictions and do not migrate to impart color to the food. Other uses require specific authorization from CFSAN's Office of Food Additive Safety.",
+      "key_regulations": [
+        "21 CFR 73 Subpart A",
+        "21 CFR 74 Subpart A",
+        "21 CFR 81.1(a)",
+        "21 CFR 176.170(b)"
+      ],
+      "key_entities": [
+        "Human Foods Program",
+        "Office of Inspections and Investigations",
+        "CFSAN/Office of Food Additive Safety",
+        "CFSAN/Office of Compliance/Division of Enforcement"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "8dbc1da1-232f-49c4-aed8-adb7d41933fe",
+      "item_id": "4f37d330-5e69-4947-b2c4-5da50781f650",
+      "summary": "The FDA announced that it has received and filed a color additive petition from Phytolon Ltd. This is a formal notification to the public about the submission, which will now undergo review by the agency.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "Phytolon Ltd."
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "362a0f58-def3-4243-bc21-0db9c03c82b2",
+      "item_id": "54c30971-38f0-4bf1-8790-5ad6edc12887",
+      "summary": "Spicely Organic Spices Inc. is recalling its ORGANIC sumac product because it contains salt, but is mislabeled with a 'NO SALT' claim on the packaging.",
+      "key_regulations": [],
+      "key_entities": [
+        "Organic Spices Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "d0824f3b-498f-46f1-953f-3cd481b4eb59",
+      "item_id": "58558de6-8d8a-439f-8bb2-a30d917108e4",
+      "summary": "The FDA has issued a final rule amending 21 CFR Part 73 to add Gardenia (Genipin) Blue to the list of color additives exempt from certification. This action permits the use of this color additive in applicable products effective August 29, 2025.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-08-29"
+    },
+    {
+      "id": "ed6e43f0-8db8-473b-be05-425a2573b7e0",
+      "item_id": "63d58832-4433-4466-b0d0-0496b9bd66e0",
+      "summary": "Spicely Organic Garlic Salt is being recalled due to mislabeling; the product packaging incorrectly states 'NO SALT' while salt is present in the ingredients.",
+      "key_regulations": [],
+      "key_entities": [
+        "Spicely Organic Spices Inc."
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "90fd573b-b0f1-4207-97ed-c27ab94db3d1",
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "summary": "The FDA is confirming the effective date of June 26, 2025, for a final rule that amends the color additive regulations. The rule adds Calcium Phosphate to the list of color additives exempt from certification under 21 CFR Part 73.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-06-26"
+    },
+    {
+      "id": "aa8d7a7d-d992-4d78-9325-3cf7cbe46263",
+      "item_id": "697a0bf3-5e81-4cc5-9746-8a8ed8d91be0",
+      "summary": "The FDA has issued a final order amending 21 CFR Part 73 to update the listing of color additives exempt from certification, specifically concerning Calcium Phosphate. The new rule will be effective on June 26, 2025.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-06-26"
+    },
+    {
+      "id": "820dee9d-4ee7-4e8d-8b69-6fb55445be15",
+      "item_id": "834f3c81-eb84-4ff6-816e-91021652bdaf",
+      "summary": "The FDA's Center for Veterinary Medicine issued Small Entity Compliance Guide CVM GFI #223 to assist small businesses in complying with a 2011 final rule. The rule amends regulations to require the declaration of certified color additives on the labels of animal food, which includes animal feeds and pet foods.",
+      "key_regulations": [
+        "76 FR 29701"
+      ],
+      "key_entities": [
+        "Center for Veterinary Medicine",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "33048d0f-219d-4a96-9639-5b11adb36bea",
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "summary": "The FDA has issued a final rule amending 21 CFR Part 73 to list Beetroot Red as a color additive exempt from certification. This allows for its use in products as specified by the regulation, effective March 23, 2026.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2026-03-23"
+    },
+    {
+      "id": "07ca188d-e11c-4c2f-a0e0-d557a471976d",
+      "item_id": "8d7600b8-d859-45b3-975f-8aad400a3d86",
+      "summary": "The FDA issued a guidance document clarifying the procedures for pre-petition consultations regarding new uses of food additives and color additives. It provides recommendations on how industry stakeholders can request meetings and submit information to the Office of Food Additive Safety (OFAS) to verify petition requirements and ensure data quality prior to formal submission. The guidance also explains the FDA's protocols for reviewing and disclosing this voluntarily submitted information under the Freedom of Information Act.",
+      "key_regulations": [
+        "21 CFR 171.1",
+        "21 CFR 71.1",
+        "21 CFR Part 20"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Office of Food Additive Safety",
+        "Division of Petition Review"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "eb007849-78e8-45dc-875e-490e6fa5485e",
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "summary": "The FDA announced that it has filed a color additive petition (CAP 4C0312) from Lonza Greenwood LLC. The petition proposes an amendment to the color additive regulations (21 CFR 73.530) to permit the safe use of L-leucine as a color additive in dietary supplement tablets and capsules.",
+      "key_regulations": [
+        "21 CFR 73.530"
+      ],
+      "key_entities": [
+        "Lonza Greenwood LLC",
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "49be0d2b-22a1-47fa-9812-5b30ec5a1cfe",
+      "item_id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "summary": "The FDA issued a revised guidance document providing a Q&A format to assist the industry in understanding the food additive and color additive petition process. It outlines how to prepare scientific documentation, including toxicology, chemistry, and environmental assessments, and clarifies the administrative review process by the Office of Food Additive Safety.",
+      "key_regulations": [
+        "21 CFR 171.1",
+        "21 CFR 71.1",
+        "21 CFR 170-199",
+        "21 CFR 73",
+        "21 CFR 74"
+      ],
+      "key_entities": [
+        "Office of Food Additive Safety",
+        "Center for Food Safety and Applied Nutrition",
+        "Environmental Protection Agency",
+        "Organization for Economic Cooperation and Development",
+        "International Conference on Harmonization"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "0ea95eb4-a031-406f-a7c3-33f1b6b24f53",
+      "item_id": "a5a793a9-2ec4-4045-9632-e30baeeb3306",
+      "summary": "The FDA is announcing that Impossible Foods, Inc. has filed a petition to amend the color additive regulations under 21 CFR Part 73. The petition proposes to provide for the safe use of leghemoglobin as a color additive in uncooked ground beef analogue products.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "Impossible Foods, Inc."
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "6d08f52c-9a1c-4f7e-8580-cf704093fd87",
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "summary": "Tops Mixed Fruit Jam is being recalled due to the presence of unapproved color additive, Carmoisine (INS 122).",
+      "key_regulations": [
+        "21 CFR Part 70 (Color Additives)",
+        "Federal Food, Drug, and Cosmetic Act"
+      ],
+      "key_entities": [
+        "G.D. Foods Mfg. (I) Pvt. Ltd.",
+        "Mangalm LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "41c76fb6-4f29-46b7-901e-51af2ad8d70a",
+      "item_id": "aeb513c6-f68b-479b-bd96-737583583a15",
+      "summary": "The FDA's Center for Devices and Radiological Health (CDRH) issued a guidance document providing recommendations on the information regarding color additives that should be included in premarket applications for medical devices.",
+      "key_regulations": [
+        "21 CFR 10.115(g)(5)"
+      ],
+      "key_entities": [
+        "Center for Devices and Radiological Health",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "7a44f623-12e8-4bf3-88f7-c88862966863",
+      "item_id": "aeb8d607-b854-4031-a133-09b464599e96",
+      "summary": "The FDA has issued a notification acknowledging the filing of a color additive petition by the company Ecoflora Cares. This notice is a procedural step related to the potential listing of a new color additive under 21 CFR Part 73.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "Ecoflora Cares",
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "dab56bf6-8786-44be-b7d4-80a80faa7a08",
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "summary": "The FDA issued a final rule amending the color additive regulations to provide for the safe use of butterfly pea flower extract as a color additive exempt from certification in various foods and beverages.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-06-26"
+    },
+    {
+      "id": "3caa0d47-264d-4bd2-8ae4-d4ea3c45ce4e",
+      "item_id": "b3974195-99b6-4a2f-b731-1bcb285b2a90",
+      "summary": "The FDA has announced the filing of a color additive petition submitted by Phytolon Ltd. This is a formal notification acknowledging the agency's receipt of the petition, initiating the review process for the potential approval of a new color additive under 21 CFR Part 73.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "Phytolon Ltd.",
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "ba44f512-633a-4f9a-acb8-e5f8976d6ab4",
+      "item_id": "b50afc1a-4db2-4594-a150-b71641555bae",
+      "summary": "The FDA is issuing a final rule to amend the color additive regulations (21 CFR Part 73) to provide for the use of myoglobin as a color additive exempt from certification in food. The rule is effective February 19, 2025.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-02-19"
+    },
+    {
+      "id": "a4861d30-6cf0-495b-b1a6-3517122a5891",
+      "item_id": "bc631199-3c11-4efd-9860-34829ce23eea",
+      "summary": "The FDA's Center for Drug Evaluation and Research has issued draft guidance recommending that NDA and ANDA holders submit information supporting the replacement of color additives in approved or marketed drug products as 'changes being effected in 30 days' (CBE-30) supplements.",
+      "key_regulations": [
+        "21 CFR 10.115"
+      ],
+      "key_entities": [
+        "Center for Drug Evaluation and Research",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": "2025-07-29"
+    },
+    {
+      "id": "e2ccf8ed-2322-4825-bcaa-47eeb4da618d",
+      "item_id": "bf0260b4-d597-4bcd-af5b-fb71270f3b61",
+      "summary": "The FDA announced that DSM Biomedical has filed a petition for a color additive. This notice acknowledges the receipt of the petition, which is a preliminary step before the agency reviews the request. The specific color additive and its intended use are not specified in the document, but the petitioner is a biomedical company.",
+      "key_regulations": [
+        "21 CFR Part 74"
+      ],
+      "key_entities": [
+        "DSM Biomedical"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "8200b9a5-f1ec-4362-9b33-e0559b6e45ea",
+      "item_id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "summary": "The FDA issued a guidance document detailing the data requirements for preparing a Color Additive Petition (CAP) for color additives used in or on contact lenses. It provides recommendations for addressing chemistry, toxicology, and environmental data requirements, and outlines procedures for estimating color additive exposure based on current contact lens types.",
+      "key_regulations": [
+        "21 CFR 71.1(c)",
+        "Section 721 of the FFDCA"
+      ],
+      "key_entities": [
+        "Center for Food Safety and Applied Nutrition (CFSAN)",
+        "Center for Devices and Radiological Health (CDRH)",
+        "Food and Drug Administration"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "e4eb4b0f-7efd-48c7-bd24-c3355a6356cf",
+      "item_id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "summary": "The FDA has issued a final rule amending the color additive regulations to add Spirulina Extract to the list of color additives exempt from certification under 21 CFR Part 73. This allows its use in specified products without requiring batch-by-batch certification from the FDA.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2026-03-23"
+    },
+    {
+      "id": "6c661828-6362-47d6-8b34-2f8b5410d562",
+      "item_id": "d89452cc-1450-407d-989a-60058bb6937d",
+      "summary": "The FDA has announced a new approach to 'No Artificial Colors' claims, allowing companies to use this claim if their products do not contain petroleum-based colors, even if they contain naturally derived colors. Additionally, the agency approved beetroot red as a new food color option and expanded the permitted uses of spirulina extract to facilitate the transition away from artificial petroleum-based colors in the food supply.",
+      "key_regulations": [],
+      "key_entities": [
+        "U.S. Food and Drug Administration",
+        "Health and Human Services",
+        "Robert F. Kennedy Jr.",
+        "Marty Makary",
+        "Kyle Diamantas"
+      ],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": null
+    },
+    {
+      "id": "12d91a30-19bd-4e70-aeee-7f547368f8fa",
+      "item_id": "da210a97-7bd4-476b-a9a3-1bc2937a22fe",
+      "summary": "The FDA has issued a final rule amending the color additive regulations (21 CFR Part 73) to formally approve 'Galdieria Extract Blue' as a color additive exempt from certification. This action permits its use in applicable FDA-regulated products.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-06-26"
+    },
+    {
+      "id": "4b016d61-8c67-4d89-8dc1-c809432f1d6b",
+      "item_id": "db6c6c0c-2074-4847-acaf-e997939b06ef",
+      "summary": "The FDA has announced the filing of a color additive petition by GNT USA, LLC. The petition requests an amendment to the color additive regulations, potentially for a new color additive or a new use of an existing one, under 21 CFR Part 73.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "GNT USA, LLC"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": "2024-10-04"
+    },
+    {
+      "id": "9c9d7eab-8078-4bfc-b7f1-5bd5ec2fc06b",
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "summary": "The FDA has extended the comment period for a proposed rule that would increase the fees for color additive certification services. The new deadline for comments is June 27, 2024.",
+      "key_regulations": [
+        "21 CFR Part 80"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "administrative",
+      "deadline": "2024-06-27"
+    },
+    {
+      "id": "8714933d-e767-4db5-b1e0-954e4032bf53",
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "summary": "The FDA is issuing a final order to revoke the color additive listing for FD&C Red No. 3 for use in foods and ingested drugs. This action responds to a petition from the Center for Science in the Public Interest. The rule will be effective January 15, 2027.",
+      "key_regulations": [
+        "21 CFR Part 74"
+      ],
+      "key_entities": [
+        "Center for Science in the Public Interest",
+        "FDA"
+      ],
+      "regulatory_action_type": "ban_restriction",
+      "deadline": "2027-01-15"
+    },
+    {
+      "id": "eb443f2d-cfc1-4aa1-bfd3-474eb8c5facc",
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "summary": "FDA Compliance Policy Guide (CPG Sec 587.100) providing guidance to food manufacturers on the proper label declaration of certification-exempt color additives. It clarifies that terms like 'color added' and 'artificially colored' are acceptable, but objects to the use of 'natural color' or 'food color' for any added colors.",
+      "key_regulations": [
+        "Section 403(k)",
+        "Section 403(i)(2)",
+        "21 CFR 74.705"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Human Foods Program",
+        "Office of Inspections and Investigations"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "7ca2122a-48ff-4dd9-88b2-80c3ea02d1aa",
+      "item_id": "e8a3d4b8-5a88-4646-b10d-00dda9158bdd",
+      "summary": "The FDA has confirmed February 19, 2025, as the effective date for a final rule amending the color additive regulations. This amendment approves the use of myoglobin as a color additive, specifically for use in ground beef analogue products.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-02-19"
+    },
+    {
+      "id": "0190eae2-0cf8-4d77-b02b-3fc902dea59e",
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "summary": "The FDA issued a guidance document outlining recommendations for industry regarding the submission of chemical and technological data in color additive petitions. The guidance covers necessary information such as chemical identity, physical properties, manufacturing processes, stability data, intended uses, analytical methods, and estimates of probable exposure to demonstrate the safety and suitability of color additives proposed for use in foods, drugs, cosmetics, or medical devices.",
+      "key_regulations": [
+        "21 CFR Part 71",
+        "21 CFR 71.1",
+        "21 CFR Part 70"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Office of Food Additive Safety",
+        "Division of Petition Review",
+        "Center for Food Safety and Applied Nutrition"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "a1861ecd-fda8-40e8-89c1-f42efaa126b9",
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "summary": "The FDA has confirmed August 29, 2025, as the effective date for its final rule amending the color additive regulations. This rule adds Gardenia (Genipin) Blue to the list of color additives that are exempt from certification, permitting its use in specified products.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [
+        "FDA"
+      ],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-08-29"
+    },
+    {
+      "id": "fe71d3e2-a971-4275-9822-5b7008394d58",
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "summary": "The FDA has issued a final rule to increase the fees for its color additive certification services. This change amends 21 CFR Part 80 and affects all industries utilizing certified color additives, including food, cosmetics, drugs, and dietary supplements. The new fee schedule becomes effective on December 9, 2024.",
+      "key_regulations": [
+        "21 CFR Part 80"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "administrative",
+      "deadline": "2024-12-09"
+    },
+    {
+      "id": "e5731733-c3f6-42fc-936e-dc8c9afed39e",
+      "item_id": "f5aa635f-9dce-4422-89f2-1e2c13879cda",
+      "summary": "FDA Compliance Policy Guide establishing that artificially colored bulk oranges sold at retail must prominently declare the use of artificial coloring (e.g., Citrus Red No. 2 or ethylene gas) via bulk container labels, counter cards, or signs. Furthermore, oranges are deemed adulterated if artificial coloring is used to conceal inferiority or defects.",
+      "key_regulations": [
+        "21 CFR 74.302",
+        "21 CFR 101.22",
+        "FDCA Section 402(b)(3)"
+      ],
+      "key_entities": [
+        "Food and Drug Administration",
+        "Human Foods Program",
+        "Office of Inspections and Investigations"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "50512a26-2fd5-4ca5-a246-80a59e9f28b2",
+      "item_id": "fddb25a6-eee4-4cee-a22a-2e45e300026b",
+      "summary": "The FDA is confirming the effective date for a final rule that amends 21 CFR Part 73 to list 'Galdieria Extract Blue' as a color additive exempt from certification.",
+      "key_regulations": [
+        "21 CFR Part 73"
+      ],
+      "key_entities": [],
+      "regulatory_action_type": "compliance_requirement",
+      "deadline": "2025-06-26"
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "bath_preparations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "eye_makeup",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "hair_coloring",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "lipstick",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "oral_hygiene",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a516439-b3ac-4329-b442-98377a837deb",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 80",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1f1e7cdb-2578-42ae-944a-e92489936136",
+      "tag_dimension": "product_type",
+      "tag_value": "meat_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1f1e7cdb-2578-42ae-944a-e92489936136",
+      "tag_dimension": "regulation",
+      "tag_value": "Color Additive Listings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "21a31700-1256-4f31-8f71-d4402086b19c",
+      "tag_dimension": "regulation",
+      "tag_value": "CPG Sec 587.300",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "facility_type",
+      "tag_value": "food ingredient manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "facility_type",
+      "tag_value": "food contact substance manufacturers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Additive Regulations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Color Additive Regulations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Food Contact Substance Notifications (FCN)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2390e6c3-7653-40e2-85a6-769674e06656",
+      "tag_dimension": "regulation",
+      "tag_value": "Generally Recognized as Safe (GRAS) Determinations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2950e7ca-5345-486f-8357-10bbcf9dcc21",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2950e7ca-5345-486f-8357-10bbcf9dcc21",
+      "tag_dimension": "claims",
+      "tag_value": "NO SALT",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2b313712-c8fe-44be-b1f9-2834b264b08e",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2b313712-c8fe-44be-b1f9-2834b264b08e",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2b313712-c8fe-44be-b1f9-2834b264b08e",
+      "tag_dimension": "product_type",
+      "tag_value": "compounded_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "34b9dc2e-8eac-4ec2-9e68-f3ab002396a2",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "jams_jellies",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "sweet_sauces_toppings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "sugar_substitutes",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "chewing_gum",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "product_type",
+      "tag_value": "gelatins_puddings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4032c488-543e-408f-ba53-8f74bf4905ae",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "eye_makeup",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "hair_coloring",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "hair_preparations_non_coloring",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "lipstick",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "bath_preparations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "manicuring",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "suntan_preparations",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "fragrance",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "oral_hygiene",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "facility_type",
+      "tag_value": "shipper",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 70.25",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 201(t) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 601(e) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 602(a) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 721(a) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 801(a)(3) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "15 U.S.C. 1454(c)(3)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "15 U.S.C. 1456",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "46a77aca-d22a-401d-8165-1cd3b09487e9",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 1459 of the Fair Packaging and Labeling Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "48e1e415-ba1f-4ffe-a1ea-8e30e990cbeb",
+      "tag_dimension": "product_type",
+      "tag_value": "food_contact_materials",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "48e1e415-ba1f-4ffe-a1ea-8e30e990cbeb",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_contact_material_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "48e1e415-ba1f-4ffe-a1ea-8e30e990cbeb",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "48e1e415-ba1f-4ffe-a1ea-8e30e990cbeb",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 74",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "48e1e415-ba1f-4ffe-a1ea-8e30e990cbeb",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 81.1",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "48e1e415-ba1f-4ffe-a1ea-8e30e990cbeb",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 176.170",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54c30971-38f0-4bf1-8790-5ad6edc12887",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54c30971-38f0-4bf1-8790-5ad6edc12887",
+      "tag_dimension": "claims",
+      "tag_value": "NO SALT",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "58558de6-8d8a-439f-8bb2-a30d917108e4",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "63d58832-4433-4466-b0d0-0496b9bd66e0",
+      "tag_dimension": "product_type",
+      "tag_value": "herbs_spices_seasonings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "63d58832-4433-4466-b0d0-0496b9bd66e0",
+      "tag_dimension": "claims",
+      "tag_value": "NO SALT",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "648241bb-58f8-4e07-92b9-de5526ce0019",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "697a0bf3-5e81-4cc5-9746-8a8ed8d91be0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "697a0bf3-5e81-4cc5-9746-8a8ed8d91be0",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "697a0bf3-5e81-4cc5-9746-8a8ed8d91be0",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "834f3c81-eb84-4ff6-816e-91021652bdaf",
+      "tag_dimension": "product_type",
+      "tag_value": "animal_feed",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "834f3c81-eb84-4ff6-816e-91021652bdaf",
+      "tag_dimension": "product_type",
+      "tag_value": "pet_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "834f3c81-eb84-4ff6-816e-91021652bdaf",
+      "tag_dimension": "facility_type",
+      "tag_value": "animal_food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "834f3c81-eb84-4ff6-816e-91021652bdaf",
+      "tag_dimension": "facility_type",
+      "tag_value": "pet_food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "834f3c81-eb84-4ff6-816e-91021652bdaf",
+      "tag_dimension": "regulation",
+      "tag_value": "76 FR 29701",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "834f3c81-eb84-4ff6-816e-91021652bdaf",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "jams_jellies",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "beauty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "lipstick",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8c83637e-15b9-46ba-a968-7be6e4aaa931",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "8d7600b8-d859-45b3-975f-8aad400a3d86",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 171.1",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8d7600b8-d859-45b3-975f-8aad400a3d86",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 71.1",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8d7600b8-d859-45b3-975f-8aad400a3d86",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 20",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8d7600b8-d859-45b3-975f-8aad400a3d86",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 20.111(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8d7600b8-d859-45b3-975f-8aad400a3d86",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 171.1(h)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8d7600b8-d859-45b3-975f-8aad400a3d86",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 71.15",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "tag_dimension": "product_type",
+      "tag_value": "single_vitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8fe37f3d-7757-4db5-a9be-fbec8ed7e682",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Parts 170-199",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Parts 73 and 74",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 171.1",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 71.1",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 20",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 25",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9ec0c33f-8f7b-4bd8-85ab-b657583036be",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 58",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a5a793a9-2ec4-4045-9632-e30baeeb3306",
+      "tag_dimension": "product_type",
+      "tag_value": "plant_protein_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "a5a793a9-2ec4-4045-9632-e30baeeb3306",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "product_type",
+      "tag_value": "jams_jellies",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "regulation",
+      "tag_value": "Federal Food, Drug, and Cosmetic Act (FD&C Act) regarding adulteration and color additives",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "product_type",
+      "tag_value": "gelatins_puddings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "ad275579-078c-4eda-be92-ebd4bb7b0f92",
+      "tag_dimension": "product_type",
+      "tag_value": "sweet_sauces_toppings",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "aeb513c6-f68b-479b-bd96-737583583a15",
+      "tag_dimension": "product_type",
+      "tag_value": "class_ii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aeb513c6-f68b-479b-bd96-737583583a15",
+      "tag_dimension": "product_type",
+      "tag_value": "class_iii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aeb8d607-b854-4031-a133-09b464599e96",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "alcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "coffee_tea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "jams_jellies",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b265c6ee-3683-47c8-8942-3898c0117bdd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b3974195-99b6-4a2f-b731-1bcb285b2a90",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b50afc1a-4db2-4594-a150-b71641555bae",
+      "tag_dimension": "product_type",
+      "tag_value": "plant_protein_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b50afc1a-4db2-4594-a150-b71641555bae",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b50afc1a-4db2-4594-a150-b71641555bae",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b50afc1a-4db2-4594-a150-b71641555bae",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bc631199-3c11-4efd-9860-34829ce23eea",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bc631199-3c11-4efd-9860-34829ce23eea",
+      "tag_dimension": "product_type",
+      "tag_value": "generic_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bc631199-3c11-4efd-9860-34829ce23eea",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bc631199-3c11-4efd-9860-34829ce23eea",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturing facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bc631199-3c11-4efd-9860-34829ce23eea",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 10.115(g)(5)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf0260b4-d597-4bcd-af5b-fb71270f3b61",
+      "tag_dimension": "product_type",
+      "tag_value": "class_i_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf0260b4-d597-4bcd-af5b-fb71270f3b61",
+      "tag_dimension": "product_type",
+      "tag_value": "class_ii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf0260b4-d597-4bcd-af5b-fb71270f3b61",
+      "tag_dimension": "product_type",
+      "tag_value": "class_iii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf0260b4-d597-4bcd-af5b-fb71270f3b61",
+      "tag_dimension": "product_type",
+      "tag_value": "implantable_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf0260b4-d597-4bcd-af5b-fb71270f3b61",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "bf0260b4-d597-4bcd-af5b-fb71270f3b61",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 74",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "tag_dimension": "product_type",
+      "tag_value": "class_ii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "tag_dimension": "product_type",
+      "tag_value": "class_iii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 71.1(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 71",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 25.32(l)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d3e334d4-8708-4ede-91e3-f60bb957a1bf",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 721 of the FFDCA",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "tag_dimension": "product_type",
+      "tag_value": "chewing_gum",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4c9bc10-8b6d-4919-a4ff-b044a8998fb5",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d89452cc-1450-407d-989a-60058bb6937d",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d89452cc-1450-407d-989a-60058bb6937d",
+      "tag_dimension": "claims",
+      "tag_value": "No Artificial Colors",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "da210a97-7bd4-476b-a9a3-1bc2937a22fe",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "da210a97-7bd4-476b-a9a3-1bc2937a22fe",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "da210a97-7bd4-476b-a9a3-1bc2937a22fe",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "da210a97-7bd4-476b-a9a3-1bc2937a22fe",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "da210a97-7bd4-476b-a9a3-1bc2937a22fe",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "da210a97-7bd4-476b-a9a3-1bc2937a22fe",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "db6c6c0c-2074-4847-acaf-e997939b06ef",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "eye_makeup",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "lipstick",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "hair_coloring",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "de54ce58-ed84-4004-b0f4-919db8b2f518",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 74",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "beauty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "sports_performance",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "product_type",
+      "tag_value": "frozen_dairy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "claims",
+      "tag_value": "color added",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "claims",
+      "tag_value": "artificial color",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "claims",
+      "tag_value": "natural color",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "claims",
+      "tag_value": "Artificially Colored",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "claims",
+      "tag_value": "Artificial Color Added",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "claims",
+      "tag_value": "Food Color Added",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "claims",
+      "tag_value": "colored with _____",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 403(k) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 403(i)(2) of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4e57f98-aeba-462a-bb4b-2b60f7d0b31e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 74.705(d)(2)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8a3d4b8-5a88-4646-b10d-00dda9158bdd",
+      "tag_dimension": "product_type",
+      "tag_value": "plant_protein_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e8a3d4b8-5a88-4646-b10d-00dda9158bdd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "product_type",
+      "tag_value": "other_cosmetic",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "product_type",
+      "tag_value": "class_i_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "product_type",
+      "tag_value": "class_ii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "product_type",
+      "tag_value": "class_iii_devices",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "facility_type",
+      "tag_value": "analytical_laboratory",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 71",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 74",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 82",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3576f7-b80a-49ff-987b-81f7bf73d721",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 721",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "sugars_syrups",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ee3838a4-7818-48af-af04-53deda5403a2",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "eye_makeup",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "hair_coloring",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "lipstick",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "makeup_not_eye",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "personal_cleanliness",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "skin_care",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "snack_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "facility_type",
+      "tag_value": "color_additive_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "facility_type",
+      "tag_value": "cosmetic_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2d8fe0a-e152-4dad-a09d-401a5dd79c99",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 80",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f5aa635f-9dce-4422-89f2-1e2c13879cda",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f5aa635f-9dce-4422-89f2-1e2c13879cda",
+      "tag_dimension": "facility_type",
+      "tag_value": "retail establishment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f5aa635f-9dce-4422-89f2-1e2c13879cda",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 74.302(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f5aa635f-9dce-4422-89f2-1e2c13879cda",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.22(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f5aa635f-9dce-4422-89f2-1e2c13879cda",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 402(b)(3) of the Federal Food, Drug, and Cosmetic Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fddb25a6-eee4-4cee-a22a-2e45e300026b",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 73",
+      "signal_source": "direct"
+    }
+  ]
+}

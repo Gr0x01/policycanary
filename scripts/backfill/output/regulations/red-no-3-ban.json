@@ -1,0 +1,155 @@
+{
+  "regulation_name": "Red No. 3 Ban",
+  "search_terms": [
+    "Red No. 3",
+    "FD&C Red No. 3",
+    "erythrosine"
+  ],
+  "item_count": 1,
+  "affected_categories": [
+    "confections_frostings",
+    "soft_candy",
+    "baked_goods",
+    "nonalcoholic_beverages",
+    "other_food",
+    "prescription_drugs",
+    "otc_drugs",
+    "multivitamins",
+    "beauty_supplements",
+    "sports_performance",
+    "other_supplement"
+  ],
+  "cfr_references": [
+    {
+      "part": 74,
+      "title": 21
+    }
+  ],
+  "key_deadlines": [
+    {
+      "item_title": "Color Additive Petition From Center for Science in the Public Interest, et al.; Request To Revoke Color Additive Listing for Use of FD&C Red No. 3 in Food and Ingested Drugs",
+      "effective_date": "2027-01-15",
+      "comment_deadline": null
+    }
+  ],
+  "items": [
+    {
+      "id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "title": "Color Additive Petition From Center for Science in the Public Interest, et al.; Request To Revoke Color Additive Listing for Use of FD&C Red No. 3 in Food and Ingested Drugs",
+      "item_type": "rule",
+      "published_date": "2025-01-16",
+      "source_url": "https://www.federalregister.gov/documents/2025/01/16/2025-00830/color-additive-petition-from-center-for-science-in-the-public-interest-et-al-request-to-revoke-color",
+      "issuing_office": null,
+      "effective_date": "2027-01-15",
+      "comment_deadline": null,
+      "cfr_references": [
+        {
+          "part": 74,
+          "title": 21
+        }
+      ]
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "8714933d-e767-4db5-b1e0-954e4032bf53",
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "summary": "The FDA is issuing a final order to revoke the color additive listing for FD&C Red No. 3 for use in foods and ingested drugs. This action responds to a petition from the Center for Science in the Public Interest. The rule will be effective January 15, 2027.",
+      "key_regulations": [
+        "21 CFR Part 74"
+      ],
+      "key_entities": [
+        "Center for Science in the Public Interest",
+        "FDA"
+      ],
+      "regulatory_action_type": "ban_restriction",
+      "deadline": "2027-01-15"
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "confections_frostings",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "soft_candy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "baked_goods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "other_food",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "prescription_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "facility_type",
+      "tag_value": "drug_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 74",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "beauty_supplements",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "sports_performance",
+      "signal_source": "cross_reference"
+    },
+    {
+      "item_id": "e4d8fc83-e00a-42a5-8168-fb07baf0eede",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "cross_reference"
+    }
+  ]
+}

@@ -4,16 +4,16 @@ created: 2026-03-03
 last-updated: 2026-03-12
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Anton autonomy upgrade deployed. Intelligence pages backfill in progress (13/25 published).
+status: Active — Ingredient pages complete (25/25). Enforcement page backfill next.
 ---
 
 # Active Development Context
 
-**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Anton on Pi) upgraded to autonomous cofounder model. PostHog + Sentry instrumented. Phase 2 data sources deployed. Intelligence pages live with content backfill in progress.
+**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Anton on Pi) upgraded to autonomous cofounder model. PostHog + Sentry instrumented. Phase 2 data sources deployed. Intelligence pages live — ingredient backfill complete, enforcement next.
 **Live partner:** Anton on Pi 5 (`ssh gr0x@10.2.0.40`), Slack `#pc-content`. Upgraded 2026-03-12 with proactive-agent patterns (WAL, working buffer, compaction recovery, reverse prompting, outcome tracking, context-aware crons, business monitoring).
-**Just shipped:** Anton autonomy upgrade — proactive-agent patterns adapted for purpose-built cofounder role. Decision authority matrix (autonomous for research/analysis/drafting, Rashaad for publishing/outreach). Context-aware cron prompts. `lightContext: false` so heartbeat loads full operating system.
-**Current:** Intelligence page ingredient backfill (13/25 published, batches 4-5 remaining). Monitoring Anton's first autonomous cycle (nightly review tonight 11PM ET).
-**Next up:** Enforcement page backfill (23 companies), regulation page backfill (~15 regulations). Then launch prep.
+**Just shipped:** All 25 ingredient intelligence pages published (~51,750 words). CBD fact-checked and corrected. Parabens page added as 25th. Data gathering scripts run for enforcement (23 companies) and regulations (10 topics).
+**Current:** Enforcement page backfill (23 companies with data context files ready). Then regulation pages (~10-15).
+**Next up:** Regulation page backfill, cross-linking between pages, pipeline integration (flagPagesForRefresh). Then launch prep.
 **Following feature:** Research tier ($399/mo) — agentic search. Full planning doc: `memory-bank/projects/research-search.md`
 
 ---

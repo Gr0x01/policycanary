@@ -38,6 +38,7 @@
   Supplements:            FREE (everyone):
     DSLD lookup ──┐         Weekly FDA Roundup email
     (214K products)│        Blog at /blog
+                   │        Intel pages: /ingredients, /enforcement, /regulations
                    │
   Food:            ├──> subscriber_products    PAID (subscribers):
     Manual entry ──┤      + ingredients          Product Intelligence Email
@@ -74,3 +75,4 @@
 | **Match** | 3 Postgres RPCs, IDF scoring | Substance + category overlap, 15-min cache |
 | **Onboard** | DSLD local DB, Vision AI (Gemini Flash) | 214K supplements, 166K substances |
 | **Deliver** | Claude Opus (writing), Resend (email) | Per-product intelligence, lifecycle states |
+| **SEO** | Intelligence pages (ISR 1h), sitemap, JSON-LD | 3 surfaces: ingredients, enforcement, regulations |

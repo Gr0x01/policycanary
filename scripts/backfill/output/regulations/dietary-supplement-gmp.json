@@ -1,0 +1,2956 @@
+{
+  "regulation_name": "Dietary Supplement GMP",
+  "search_terms": [
+    "21 CFR 111",
+    "supplement GMP",
+    "dietary supplement manufacturing"
+  ],
+  "item_count": 34,
+  "affected_categories": [
+    "botanicals_herbal",
+    "dietary_conventional_foods",
+    "weight_management",
+    "probiotics_prebiotics",
+    "digestive_health",
+    "other_supplement",
+    "multivitamins",
+    "specialty_supplements",
+    "essential_fatty_acids",
+    "mineral_supplements",
+    "single_vitamins",
+    "amino_acids_peptides",
+    "immune_support",
+    "mushroom_supplements",
+    "joint_bone_health",
+    "sports_performance",
+    "baby_products",
+    "otc_drugs",
+    "pediatric_drugs",
+    "coffee_tea",
+    "protein_powders"
+  ],
+  "cfr_references": [],
+  "key_deadlines": [
+    {
+      "item_title": "Eniva USA, Inc. — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "effective_date": "2025-09-10",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "CC Pollen Company — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "effective_date": "2026-01-09",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "LXR Biotech, LLC — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "effective_date": "2025-12-23",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Mericon Industries, Inc. — Unapproved New Drugs/Misbranded",
+      "effective_date": "2025-07-17",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "M.O.M. Enterprises, LLC — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "effective_date": "2025-04-22",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Top Health Manufacturing, LLC — CGMP/Dietary Supplement/Adulterated",
+      "effective_date": "2024-06-03",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Restorative Botanicals, LLC — CGMP/Dietary Supplement/Adulterated<br />\r\n",
+      "effective_date": "2024-08-13",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Formulation Technology, Inc. — New Drugs/Dietary Supplements/Food Labeling/Misbranded<br />\r\n",
+      "effective_date": "2024-07-09",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Cosmax NBT USA — CGMP/Dietary Supplement/Adulterated/Misbranded<br />\r\n",
+      "effective_date": "2023-05-03",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "STPCA Inc. dba Sun Ten Laboratories — Unapproved New Drugs/Misbranded",
+      "effective_date": "2023-04-07",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Eden’s Answers, Inc. — CGMP/Dietary Supplement/Adulterated<br />\r\n",
+      "effective_date": "2023-06-28",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Spartan Enterprises Inc. dba Watershed Wellness Center — Unapproved New Drugs/Misbranded",
+      "effective_date": "2023-03-08",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "NatureLab Corp. — CGMP/Dietary Supplement/Adulterated<br />\r\n",
+      "effective_date": "2022-07-12",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Deggeh Foods, Inc. — Unapproved New Drugs/Misbranded",
+      "effective_date": "2022-07-29",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Muscle Feast, LLC — CGMP/Manufacturing, Packaging, Labeling, or Holding Operations for Dietary Supplements/Adulterated",
+      "effective_date": "2022-07-22",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "MCACO, LTD — CGMP/Dietary Supplement/Adulterated<br />\r\n",
+      "effective_date": "2022-04-21",
+      "comment_deadline": null
+    },
+    {
+      "item_title": "Western Herb Products, Inc. — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "effective_date": "2021-12-07",
+      "comment_deadline": null
+    }
+  ],
+  "items": [
+    {
+      "id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "title": "2025-001453 - Better Being Co - MULTIPLE CLAIMS (2)",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1669",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "14ded287-8af3-4290-95b3-4fe6b9d8207d",
+      "title": "2025-001895 - Gaia Herbs Inc - Herbs, Lactation Support 60 Liquid Phyto-Caps Herbal Supplement - Supports a healthy production of breast milk",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1772",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "16832c1b-f0f1-4043-a351-b2f99d1abca4",
+      "title": "2025-001853 - INUTR HEALTH PRODUCTS INC - Revive AM Capsules - Healthy Metabolism",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1730",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "17ac611f-ba52-4367-803b-653791ce95d0",
+      "title": "2025-001846 - Brookfield Pharmaceuticals LLC - Daily Probiotic and Prebiotic - Daily digestive support",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1723",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f2e46498-4874-4127-bc75-e8ce116d801e",
+      "title": "2025-001879 - Vimergy LLC - Vimergy, B12 -  Brain Body Nourish",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1756",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "title": "2025-001845 - Viva Naturals - MULTIPLE CLAIMS (3)",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1722",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f024c4cb-d17d-470d-93ad-3c640447b0e7",
+      "title": "Courtesy letter and related material from HFP to Gaia Herbs Inc",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-1997-S-0006-2235",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "3466dbef-85d1-49a2-9801-3a1e1cadf623",
+      "title": "2025-001819 - EuroPharmaTerry NaturallyEuroMedica - Terry Naturally, Andrographis EP80 - Supports brain health",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1696",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "445574b3-7f26-42ba-891d-18231b408d8d",
+      "title": "2025-001899 - Gaia Herbs Inc - Gaia Herbs, Quick Defense 20 Liquid Phyto-Caps Herbal Supplement - Immune",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1776",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "47c18ad4-4e01-4c92-a32c-58817c8a1683",
+      "title": "Courtesy letter and related material from HFP to Hyperlife Nutritionals Inc",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-1997-S-0006-2233",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "4f0038a6-49e7-4449-83b1-b5bd4d7f438f",
+      "title": "2025-001900 - Gaia Herbs Inc - Gaia Herbs, Quick Defense 80 Liquid Phyto-Caps Herbal Supplement - Immune",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1777",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "b289cffe-6163-4b71-9c0d-4b5f596463ed",
+      "title": "Courtesy letter and related material from HFP to Hyperlife Nutritionals Inc",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-1997-S-0006-2234",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "title": "2025-001970 - Better Being Co - MULTIPLE CLAIMS (2)",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1846",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f6b5e4e9-6547-44c7-a368-b4957741e4d4",
+      "title": "2025-002004 - MRO MaryRuth LLC - MRO MaryRuth, LLC; NADH Capsules, 30 ct - With Niacin - Which Supports Cellular Energy",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1881",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "5bba9e5f-fa8e-465b-8cf6-dab925c6be67",
+      "title": "2025-001796 - Factors Group of Nutritional Companies Inc - Whole Earth & Sea, Women's Prenatal Multivitamin & Mineral - You and your baby deserve the best, safest ingredients to support this journey of new life",
+      "item_type": "notice",
+      "published_date": "2026-02-20",
+      "source_url": "https://www.regulations.gov/document/FDA-2025-S-0024-1674",
+      "issuing_office": null,
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f593d85d-7d3d-4322-8862-341a2f1a306f",
+      "title": "Eniva USA, Inc. — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2026-02-03",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/eniva-usa-inc-706565-09102025",
+      "issuing_office": "Human Foods Program",
+      "effective_date": "2025-09-10",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "title": "CC Pollen Company — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2026-02-03",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/cc-pollen-company-714784-01092026",
+      "issuing_office": "Human Foods Program",
+      "effective_date": "2026-01-09",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "title": "Import Alert 54-14 — DETENTION WITHOUT PHYSICAL EXAMINATION OF DIETARY SUPPLEMENT PRODUCTS FROM FIRMS THAT HAVE NOT MET DIETARY SUPPLEMENT GMP",
+      "item_type": "import_alert",
+      "published_date": "2026-01-22",
+      "source_url": "https://www.accessdata.fda.gov/cms_ia/importalert_741.html",
+      "issuing_office": "ORA",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "title": "LXR Biotech, LLC — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2026-01-13",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/lxr-biotech-llc-714568-12232025",
+      "issuing_office": "Human Foods Program",
+      "effective_date": "2025-12-23",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "title": "Mericon Industries, Inc. — Unapproved New Drugs/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2025-09-16",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/mericon-industries-inc-692733-07172025",
+      "issuing_office": "Human Foods Program",
+      "effective_date": "2025-07-17",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "title": "M.O.M. Enterprises, LLC — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2025-06-24",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/mom-enterprises-llc-698651-04222025",
+      "issuing_office": "Human Foods Program",
+      "effective_date": "2025-04-22",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "title": "Top Health Manufacturing, LLC — CGMP/Dietary Supplement/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2024-11-05",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/top-health-manufacturing-llc-671665-06032024",
+      "issuing_office": "Division of Human and Animal Food Operations West IV",
+      "effective_date": "2024-06-03",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "title": "Restorative Botanicals, LLC — CGMP/Dietary Supplement/Adulterated<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2024-09-24",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/restorative-botanicals-llc-674740-08132024",
+      "issuing_office": "Division of Human and Animal Food Operations West IV",
+      "effective_date": "2024-08-13",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "title": "Formulation Technology, Inc. — New Drugs/Dietary Supplements/Food Labeling/Misbranded<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2024-07-23",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/formulation-technology-inc-672905-07092024",
+      "issuing_office": "Division of Human and Animal Food Operations West V",
+      "effective_date": "2024-07-09",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "title": "Cosmax NBT USA — CGMP/Dietary Supplement/Adulterated/Misbranded<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2023-08-29",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/cosmax-nbt-usa-615933-05032023",
+      "issuing_office": " Division of Human and Animal Food Operations West III ",
+      "effective_date": "2023-05-03",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "title": "STPCA Inc. dba Sun Ten Laboratories — Unapproved New Drugs/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2023-08-15",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/stpca-inc-dba-sun-ten-laboratories-645336-04072023",
+      "issuing_office": " Division of Human and Animal Food Operations West V",
+      "effective_date": "2023-04-07",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "title": "Eden’s Answers, Inc. — CGMP/Dietary Supplement/Adulterated<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2023-07-18",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/edens-answers-inc-648182-06282023",
+      "issuing_office": " Division of Human and Animal Food Operations East V ",
+      "effective_date": "2023-06-28",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "title": "Spartan Enterprises Inc. dba Watershed Wellness Center — Unapproved New Drugs/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2023-04-25",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/spartan-enterprises-inc-dba-watershed-wellness-center-642030-03082023",
+      "issuing_office": " Division of Human and Animal Food Operations East VI",
+      "effective_date": "2023-03-08",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "title": "NatureLab Corp. — CGMP/Dietary Supplement/Adulterated<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2022-11-08",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/naturelab-corp-625768-07122022",
+      "issuing_office": " Division of Pharmaceutical Quality Operations II ",
+      "effective_date": "2022-07-12",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "title": "Deggeh Foods, Inc. — Unapproved New Drugs/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2022-08-16",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/deggeh-foods-inc-628460-07292022",
+      "issuing_office": "Office of Human and Animal Food Operations East – Division 1",
+      "effective_date": "2022-07-29",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "title": "Muscle Feast, LLC — CGMP/Manufacturing, Packaging, Labeling, or Holding Operations for Dietary Supplements/Adulterated",
+      "item_type": "warning_letter",
+      "published_date": "2022-08-09",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/muscle-feast-llc-627030-07222022",
+      "issuing_office": "Office of Human and Animal Foods – East 5",
+      "effective_date": "2022-07-22",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "title": "MCACO, LTD — CGMP/Dietary Supplement/Adulterated<br />\r\n",
+      "item_type": "warning_letter",
+      "published_date": "2022-05-10",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/mcaco-ltd-624606-04212022",
+      "issuing_office": "Division of Human and Animal Food Operations West III",
+      "effective_date": "2022-04-21",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "title": "Western Herb Products, Inc. — CGMP/Dietary Supplement/Adulterated/Misbranded",
+      "item_type": "warning_letter",
+      "published_date": "2021-12-28",
+      "source_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/western-herb-products-inc-615439-12072021",
+      "issuing_office": "Office of Human and Animal Food Operations – West Division 6",
+      "effective_date": "2021-12-07",
+      "comment_deadline": null,
+      "cfr_references": null
+    },
+    {
+      "id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "title": "Small Entity Compliance Guide: Current Good Manufacturing Practice in Manufacturing, Packaging, Labeling, or Holding Operations for Dietary Supplements",
+      "item_type": "guidance",
+      "published_date": "2010-12-16",
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/small-entity-compliance-guide-current-good-manufacturing-practice-manufacturing-packaging-labeling",
+      "issuing_office": "Human Foods Program",
+      "effective_date": null,
+      "comment_deadline": null,
+      "cfr_references": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "9c3606e2-f22c-4993-a95b-a3e761b20385",
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "summary": "The FDA issued a warning letter to MCACO, LTD, a dietary supplement firm, for significant violations of Current Good Manufacturing Practice (CGMP) regulations under 21 CFR Part 111. An inspection revealed that the company's products are adulterated due to failures in establishing product and component specifications, qualifying raw material suppliers, verifying lab methods, and maintaining complete manufacturing records. Specific ingredients cited include Turmeric Root Powder, Milk Thistle Seed Extract, Amla Powder, and Beet Root Powder. The company must provide a written response detailing corrective actions within 15 working days.",
+      "key_regulations": [
+        "21 CFR 111",
+        "21 U.S.C. § 342(g)(1)"
+      ],
+      "key_entities": [
+        "MCACO, LTD",
+        "FDA"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "3bc01269-9d58-4615-8150-9ebbced736de",
+      "item_id": "14ded287-8af3-4290-95b3-4fe6b9d8207d",
+      "summary": "Regulatory enforcement action (likely a Warning Letter, Case #2025-001895) involving Gaia Herbs Inc regarding their Lactation Support herbal supplement and its associated structure-function claims for breast milk production.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act"
+      ],
+      "key_entities": [
+        "Gaia Herbs Inc"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "6a4d608d-6e32-460a-b033-78ec8f79da6e",
+      "item_id": "16832c1b-f0f1-4043-a351-b2f99d1abca4",
+      "summary": "Regulatory enforcement action (likely a Warning Letter) against INUTR HEALTH PRODUCTS INC concerning their Revive AM Capsules product and metabolism-related structure-function claims.",
+      "key_regulations": [
+        "FD&C Act Section 403(r)(6)",
+        "21 CFR 101.93"
+      ],
+      "key_entities": [
+        "INUTR HEALTH PRODUCTS INC"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "2f383dcc-f256-4c48-b4a1-5dab6df6ad4d",
+      "item_id": "17ac611f-ba52-4367-803b-653791ce95d0",
+      "summary": "Regulatory enforcement action, likely a Warning Letter, issued to Brookfield Pharmaceuticals LLC regarding its 'Daily Probiotic and Prebiotic' product, specifically concerning manufacturing standards and digestive health claims.",
+      "key_regulations": [
+        "21 CFR 111",
+        "Federal Food, Drug, and Cosmetic Act"
+      ],
+      "key_entities": [
+        "Brookfield Pharmaceuticals LLC"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "ff935b59-be19-4708-870c-c5de13d713a1",
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "summary": "The FDA issued a warning letter to Top Health Manufacturing, LLC, for significant violations of Current Good Manufacturing Practice (CGMP) regulations for dietary supplements (21 CFR Part 111). The inspection revealed failures in quality control, lack of identity and purity specifications for botanical components and finished products, incomplete Master Manufacturing Records, and deficient Batch Production Records. Consequently, products such as 'Grandma’s Herbs Kidney' were deemed adulterated. The products were also found to be misbranded due to various labeling deficiencies, including failure to identify plant parts and non-compliance with Supplement Facts panel formatting requirements.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 U.S.C. § 342(g)(1)",
+        "21 U.S.C. § 343"
+      ],
+      "key_entities": [
+        "Top Health Manufacturing, LLC",
+        "Mr. Mathieu Q C Ung",
+        "Ms. Cynthia L. Rudd"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "6a00c76c-43ad-4e63-99b2-9ded292ba395",
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "summary": "Regulatory notice for Viva Naturals regarding three counts of improper claims. This action likely involves the use of unauthorized therapeutic or health claims that misbrand the products as unapproved drugs.",
+      "key_regulations": [
+        "21 CFR 101.93",
+        "FD&C Act Section 403(r)"
+      ],
+      "key_entities": [
+        "Viva Naturals"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "3f7d2884-4b15-4654-af79-7144979efc17",
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "summary": "FDA Import Alert 54-14 authorizes the Detention Without Physical Examination (DWPE) of dietary supplement products from specific foreign manufacturers, processors, and distributors that have failed to comply with current Good Manufacturing Practices (cGMP) under 21 CFR Part 111. Products from firms on the Red List are considered adulterated and are subject to refusal of admission into the United States.",
+      "key_regulations": [
+        "21 CFR 111",
+        "Section 402(g)(1)"
+      ],
+      "key_entities": [
+        "FDA",
+        "Center for Food Safety and Applied Nutrition (CFSAN)",
+        "Division of Import Operations (DIO)"
+      ],
+      "regulatory_action_type": "import_violation",
+      "deadline": null
+    },
+    {
+      "id": "0ee051dc-cf5c-400d-81b0-11c7b3a5c419",
+      "item_id": "3466dbef-85d1-49a2-9801-3a1e1cadf623",
+      "summary": "The FDA issued an enforcement notice (Warning Letter 2025-001819) to EuroPharma (Terry Naturally/EuroMedica) regarding the marketing of 'Andrographis EP80'. The notice specifically identifies the claim 'Supports brain health' as a point of regulatory concern, which in the context of supplement enforcement usually pertains to unauthorized health claims or GMP violations.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act",
+        "21 CFR Part 111"
+      ],
+      "key_entities": [
+        "EuroPharma",
+        "Terry Naturally",
+        "EuroMedica"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "35002958-89e0-46ab-a824-0c93bf1e9bfc",
+      "item_id": "445574b3-7f26-42ba-891d-18231b408d8d",
+      "summary": "FDA regulatory notice or enforcement action involving Gaia Herbs Inc and their 'Quick Defense' Liquid Phyto-Caps, a botanical dietary supplement marketed for immune support.",
+      "key_regulations": [],
+      "key_entities": [
+        "Gaia Herbs Inc"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9a285cee-3901-427d-814d-8e6652cb7ecb",
+      "item_id": "47c18ad4-4e01-4c92-a32c-58817c8a1683",
+      "summary": "Courtesy letter and related materials from the FDA's Human Foods Program to Hyperlife Nutritionals Inc regarding compliance status and regulatory oversight.",
+      "key_regulations": [
+        "21 CFR 111"
+      ],
+      "key_entities": [
+        "Hyperlife Nutritionals Inc",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "d9d1b14f-230c-495b-8edf-64c15d6e2cbc",
+      "item_id": "4f0038a6-49e7-4449-83b1-b5bd4d7f438f",
+      "summary": "Regulatory record pertaining to Gaia Herbs Inc and its 'Quick Defense' herbal supplement product. The record likely relates to a compliance inspection or warning letter regarding the manufacturing or labeling of botanical supplements for immune support.",
+      "key_regulations": [
+        "21 CFR 111"
+      ],
+      "key_entities": [
+        "Gaia Herbs Inc"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "df3a2070-8b6c-41af-b01f-c0c2bf4750ca",
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "summary": "The FDA issued a warning letter to Restorative Botanicals, LLC, following an inspection that found significant violations of Current Good Manufacturing Practice (CGMP) regulations for dietary supplements (21 CFR Part 111). The violations cause the company's 'My GUT Shrooms Gummies' and 'My IMMUNE Shrooms Capsules' to be adulterated. Key issues cited include the failure to establish adequate identity specifications for mushroom components (e.g., Chaga, Maitake extracts), relying on insufficient organoleptic testing instead of scientifically valid methods. The company also failed to establish specifications for toxic elements, which are a known risk in mushroom components. Additional violations involved incomplete Master Manufacturing Records (MMRs) and Batch Production Records (BPRs).",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 U.S.C. § 342(g)(1)",
+        "21 CFR 111.70",
+        "21 CFR 111.75"
+      ],
+      "key_entities": [
+        "Restorative Botanicals, LLC",
+        "FDA"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "78d98419-6a14-40f2-8600-6dd55c7db07a",
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "summary": "Regulatory notice concerning Better Being Co regarding multiple unauthorized or unsubstantiated claims found on product labeling or marketing materials. Better Being Co is a significant manufacturer of dietary supplements, and such notices typically involve the misbranding of supplements as unapproved new drugs due to the nature of the health claims made.",
+      "key_regulations": [
+        "FD&C Act Section 403(r)",
+        "21 CFR Part 101"
+      ],
+      "key_entities": [
+        "Better Being Co"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "787fcd86-1296-4a26-9b51-f2ed501f7027",
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "summary": "The FDA issued a warning letter to Mericon Industries, Inc. for marketing its 'Florical' and 'Meribin' products with unapproved drug claims for the 'Prevention and remediation of osteoporosis.' These claims cause the products to be classified as unapproved new drugs and misbranded drugs. A facility inspection also revealed significant violations of dietary supplement Current Good Manufacturing Practice (CGMP) regulations (21 CFR Part 111), rendering the products adulterated. Key violations included failure to establish finished product specifications, inadequate quality control procedures, and incomplete batch production records. The products were also cited as misbranded dietary supplements for non-compliant nutrition labeling.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 U.S.C. 342(g)(1)",
+        "21 U.S.C. 321(g)(1)(B)",
+        "21 U.S.C. 355(a)"
+      ],
+      "key_entities": [
+        "Mericon Industries, Inc.",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "5218735f-ab99-4574-b39a-faaeff105743",
+      "item_id": "5bba9e5f-fa8e-465b-8cf6-dab925c6be67",
+      "summary": "Regulatory notice (likely a Warning Letter or enforcement entry) for Factors Group of Nutritional Companies Inc regarding their 'Whole Earth & Sea, Women's Prenatal Multivitamin & Mineral' product. The notice specifically cites marketing claims regarding the safety and necessity of ingredients for prenatal support.",
+      "key_regulations": [],
+      "key_entities": [
+        "Factors Group of Nutritional Companies Inc"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "69bc2643-736a-4dbb-b80a-0a6dd379edee",
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "summary": "Western Herb Products, Inc. received a warning letter for extensive violations of dietary supplement CGMP regulations (21 CFR Part 111) at their Washington facility. The FDA found the company failed to establish specifications for components and finished products, failed to prepare and follow master manufacturing records (MMRs) and batch production records (BPRs), and lacked written procedures for quality control and product complaints. These failures render their dietary supplements adulterated under the FD&C Act. Additionally, their 'Wormwood/Aloes' dietary supplement was found to be misbranded for multiple reasons, including incorrect declaration of the plant part, improper ingredient names, and non-compliant 'Supplement Facts' panel formatting.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "Section 402(g)(1) of the FD&C Act",
+        "Section 403 of the FD&C Act"
+      ],
+      "key_entities": [
+        "Western Herb Products, Inc.",
+        "FDA Office of Human and Animal Food Operations – West Division 6"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "33c86737-af80-436c-b5af-8e3dfc3720fa",
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "summary": "The FDA issued a warning letter to Eden’s Answers, Inc. following an inspection that revealed serious violations of Current Good Manufacturing Practice (CGMP) regulations for dietary supplements (21 CFR Part 111). The company's products, including Dental Health, Honey Herbal Syrup, and Lil’ Ones Sleepy Time, were deemed adulterated. Key violations include the failure to establish identity, purity, strength, and composition specifications for components and finished products. The firm also had deficient batch production records, master manufacturing records, and quality control procedures. Additionally, certain products were found to be misbranded for not complying with dietary supplement labeling requirements regarding serving size and servings per container.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 U.S.C. § 342(g)(1)",
+        "21 U.S.C. § 343"
+      ],
+      "key_entities": [
+        "Eden’s Answers, Inc.",
+        "Jonathan Laudon"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "bd76f47c-0224-41d9-812d-6c8214afcc25",
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "summary": "The FDA issued a Small Entity Compliance Guide detailing the Current Good Manufacturing Practice (CGMP) regulations for Dietary Supplements under 21 CFR Part 111. The guidance assists small businesses by outlining requirements for personnel, physical plant, equipment, production and process control systems, quality control, laboratory operations, batch records, packaging, identity testing, and the handling of product complaints and returns.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 CFR 111.75"
+      ],
+      "key_entities": [
+        "Food and Drug Administration (FDA)"
+      ],
+      "regulatory_action_type": "guidance_update",
+      "deadline": null
+    },
+    {
+      "id": "4d68345e-38bf-483e-95f8-f0afd01d33ab",
+      "item_id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "summary": "The FDA issued a warning letter to LXR Biotech, LLC following a 2025 inspection of its Rochester Hills, MI facility, which found significant violations of CGMP regulations for dietary supplements (21 CFR Part 111). The violations, including failure to establish specifications for finished products and components and lack of scientifically valid testing, render their 'Eternal Energy Grape' and 'Eternal Energy Tropical Punch' products adulterated. The company is required to provide a written response outlining corrective actions within 15 working days.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 CFR 111.70",
+        "21 CFR 111.75"
+      ],
+      "key_entities": [
+        "LXR Biotech, LLC",
+        "FDA Human Foods Program"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2026-01-14"
+    },
+    {
+      "id": "570883af-d071-49a7-bb7e-7800affb944a",
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "summary": "M.O.M. Enterprises, LLC, maker of Mommy's Bliss products, received a Warning Letter for significant cGMP violations, rendering its dietary supplements like Gripe Water and Kids Cough Syrup adulterated. The FDA cited the company for failing to properly investigate consumer complaints, including reports of spoilage. The firm also failed to submit Serious Adverse Event Reports (SAERs) for incidents where infants choked or were hospitalized. Additionally, products were deemed misbranded for non-compliant labeling, and the 'Gripe Water Original' product was classified as an unapproved new drug due to illegal claims on its website that it can treat diseases like acid reflux, GERD, and colic.",
+      "key_regulations": [
+        "21 CFR 111",
+        "FD&C Act Section 402(g)(1)",
+        "FD&C Act Section 761(c)",
+        "FD&C Act Section 403(q)(5)(F)",
+        "FD&C Act Section 201(g)(1)(B)",
+        "FD&C Act Section 505(a)",
+        "FD&C Act Section 502(f)(1)"
+      ],
+      "key_entities": [
+        "M.O.M. Enterprises, LLC",
+        "Mommy's Bliss",
+        "Human Foods Program"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "beefa8a8-54b7-48dc-ba29-86aa32d440a5",
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "summary": "The FDA issued a warning letter to Spartan Enterprises Inc. (dba Watershed Wellness Center) for significant violations at its dietary supplement manufacturing facility. An inspection revealed serious deviations from Current Good Manufacturing Practice (CGMP) standards (21 CFR 111), including failure to establish specifications, maintain proper records, and ensure sanitary conditions. Furthermore, numerous dietary supplements were deemed unapproved new drugs due to extensive disease-treatment claims (e.g., for cancer, Alzheimer's, high cholesterol) on the company's websites and YouTube channel. The letter also cited widespread misbranding, including incorrect Supplement Facts panels and a failure to properly declare black walnut, a tree nut allergen.",
+      "key_regulations": [
+        "21 CFR 111",
+        "21 CFR 101",
+        "FD&C Act Section 402(g)(1)",
+        "FD&C Act Section 502(f)(1)",
+        "FD&C Act Section 403(w)"
+      ],
+      "key_entities": [
+        "Spartan Enterprises Inc. dba Watershed Wellness Center",
+        "Robert F. McCauley"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "8a5b7339-a119-440f-bd79-11871ec71372",
+      "item_id": "b289cffe-6163-4b71-9c0d-4b5f596463ed",
+      "summary": "The FDA's Human and Animal Food Program (HFP) issued a courtesy letter to Hyperlife Nutritionals Inc. These letters typically serve as a formal notice of regulatory observations or concerns regarding the firm's compliance with FDA standards for food or dietary supplements.",
+      "key_regulations": [],
+      "key_entities": [
+        "Hyperlife Nutritionals Inc",
+        "Human and Animal Food Program",
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "4b19a1a4-0b34-4220-862f-0d73d19a2fe4",
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "summary": "Deggeh Foods, Inc. received an FDA warning letter for marketing dietary supplements and a tea product as unapproved new drugs with claims to treat serious diseases, including cancer, diabetes, and high blood pressure. A facility inspection also revealed significant cGMP violations under 21 CFR Part 111, rendering the dietary supplements adulterated. The letter detailed numerous failures, such as the lack of quality control procedures, specifications, and proper sanitation. Additionally, the products were cited for extensive labeling violations, making them misbranded as both dietary supplements and conventional foods.",
+      "key_regulations": [
+        "21 CFR 111",
+        "21 CFR 101",
+        "21 U.S.C. 321(g)(1)(B)",
+        "21 U.S.C. 355(a)",
+        "21 U.S.C. 342(g)(1)"
+      ],
+      "key_entities": [
+        "Deggeh Foods, Inc.",
+        "Ahmed T. Koita"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "1230f1f6-a9d8-4f09-8076-6460a542c9dc",
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "summary": "Muscle Feast, LLC received an FDA Warning Letter for significant Current Good Manufacturing Practice (CGMP) violations for its dietary supplements, rendering them adulterated. The inspection found failures to establish identity, purity, strength, and composition specifications for components (e.g., caffeine anhydrous, whey protein isolate) and finished products. The company also failed to conduct appropriate identity testing, maintain complete batch production records, ensure proper quality control oversight, and correctly hold reserve samples. The FDA requested a response detailing corrective actions within 15 working days.",
+      "key_regulations": [
+        "21 CFR 111"
+      ],
+      "key_entities": [
+        "Muscle Feast, LLC",
+        "FDA"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2022-08-12"
+    },
+    {
+      "id": "1021fdc2-9201-4533-8a9b-2ee58fddfb70",
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "summary": "The FDA issued a warning letter to STPCA Inc. dba Sun Ten Laboratories for marketing multiple products as unapproved new drugs due to illegal disease claims (e.g., treating allergies, UTIs, and low blood sugar). The letter also details serious cGMP violations for their dietary supplements, including failure to establish identity and purity specifications, failure to reject an out-of-specification batch of a zinc supplement, and incomplete manufacturing records. Additionally, several dietary supplement products were cited as misbranded for non-compliant labeling.",
+      "key_regulations": [
+        "21 U.S.C. 321(g)(1)(B)",
+        "21 U.S.C. 355(a)",
+        "21 U.S.C. 342(g)(1)",
+        "21 CFR Part 111",
+        "21 U.S.C. 343"
+      ],
+      "key_entities": [
+        "STPCA Inc. dba Sun Ten Laboratories",
+        "Mr. Michael Tsai"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "ffbe2b91-de66-4fee-8d40-7dfe0a982abe",
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "summary": "CC Pollen Company received a warning letter from the FDA for significant violations of dietary supplement Current Good Manufacturing Practice (CGMP) regulations (21 CFR Part 111). The inspection revealed failures in establishing product specifications, quality control procedures, rejecting out-of-spec components (Silica), maintaining master manufacturing records, and conducting identity testing for dietary ingredients (Bee Pollen). These issues led to their Bee Pollen and Royal Jelly products being deemed adulterated. The company was also cited for misbranding due to incorrect serving size information on product labels.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "Section 402(g)(1) of the FD&C Act",
+        "Section 403 of the FD&C Act"
+      ],
+      "key_entities": [
+        "CC Pollen Company",
+        "FDA Human Foods Program"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "c36b9bd0-aa23-4fca-9ad0-18999a16df3c",
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "summary": "Formulation Technology, Inc. received a warning letter for marketing a dietary supplement with unapproved drug claims for migraine treatment. The FDA also cited significant cGMP violations, including failure to establish specifications for heavy metals in botanical ingredients and failure to establish strength specifications for finished products. Additionally, products were found to be misbranded due to incorrect serving size declarations and non-compliant Supplement Facts panel formatting.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 CFR 101.36",
+        "21 U.S.C. § 355(a)",
+        "21 U.S.C. § 342(g)(1)"
+      ],
+      "key_entities": [
+        "Formulation Technology, Inc.",
+        "Mr. Matthew D. McBride"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": "2024-07-30"
+    },
+    {
+      "id": "633eeeaf-eb99-45a5-9aca-069c7653adc4",
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "summary": "The FDA issued a warning letter to NatureLab Corp., a dietary supplement manufacturer, for significant violations of Current Good Manufacturing Practice (CGMP) regulations (21 CFR Part 111). These violations render their products adulterated under the Federal Food, Drug, and Cosmetic Act. Key failures included not establishing required specifications for identity, purity, strength, and composition; not preparing and following complete Master Manufacturing Records (MMRs) and Batch Production Records (BPRs); and lacking written procedures for handling product complaints. Additionally, multiple products were cited for misbranding due to numerous labeling errors, including incorrect serving sizes, improper formatting of the Supplement Facts panel, and failure to provide a domestic address for serious adverse event reporting.",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 U.S.C. 342(g)(1)",
+        "21 CFR 101.36",
+        "21 U.S.C. 343"
+      ],
+      "key_entities": [
+        "NatureLab Corp."
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "9e1d05f5-06de-4ae7-a98a-bf42acbd25f7",
+      "item_id": "f024c4cb-d17d-470d-93ad-3c640447b0e7",
+      "summary": "The FDA's Human Foods Program (HFP) issued a courtesy letter and associated materials to Gaia Herbs Inc. This type of correspondence is typically administrative in nature, often related to the conclusion of an inspection or a follow-up on previous regulatory interactions.",
+      "key_regulations": [],
+      "key_entities": [
+        "Gaia Herbs Inc",
+        "Human Foods Program",
+        "FDA"
+      ],
+      "regulatory_action_type": "administrative",
+      "deadline": null
+    },
+    {
+      "id": "29ebab69-9650-49df-9821-0b586ddc4614",
+      "item_id": "f2e46498-4874-4127-bc75-e8ce116d801e",
+      "summary": "The FDA has issued a regulatory notice (Case 2025-001879) involving Vimergy LLC and their Vitamin B12 supplement 'Brain Body Nourish'. The action likely pertains to manufacturing standards (cGMP) or labeling claims common for vitamin products marketed with cognitive or physiological benefit claims.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act"
+      ],
+      "key_entities": [
+        "Vimergy LLC"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "fefe73f6-4621-4f02-b7d1-315085715d8f",
+      "item_id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "summary": "Cosmax NBT USA received a warning letter for significant violations of Current Good Manufacturing Practice (CGMP) and labeling regulations for dietary supplements (21 CFR Part 111 and 101). Violations included failing to establish product and component specifications, not verifying finished products for contaminants like pesticides, failing to conduct identity testing on ingredients before use, and numerous labeling errors on Supplement Facts panels.",
+      "key_regulations": [
+        "21 CFR 111",
+        "21 CFR 101"
+      ],
+      "key_entities": [
+        "Cosmax NBT USA"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "29c68781-1c39-4658-9f26-5ddfc5014309",
+      "item_id": "f593d85d-7d3d-4322-8862-341a2f1a306f",
+      "summary": "Eniva USA, Inc. received a warning letter for significant violations of Current Good Manufacturing Practice (CGMP) for dietary supplements. An FDA inspection found that the company failed to establish product specifications for identity, purity, strength, and composition of finished dietary supplement batches, such as its 'Immune Support' and 'Ashwagandha Gummies' products, as required by 21 CFR 111.70(e). The firm also failed to make and keep documentation of material review and disposition decisions, a violation of 21 CFR 111.140(b)(3).",
+      "key_regulations": [
+        "21 CFR Part 111",
+        "21 CFR 111.70(e)",
+        "21 CFR 111.140(b)(3)"
+      ],
+      "key_entities": [
+        "Eniva USA, Inc."
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "4cacdb9d-4881-44b4-8e88-41077f48716c",
+      "item_id": "f6b5e4e9-6547-44c7-a368-b4957741e4d4",
+      "summary": "Regulatory enforcement action (CMS 2025-002004) involving MRO MaryRuth LLC regarding its NADH Capsules with Niacin. The action focuses on compliance issues potentially related to manufacturing practices or labeling claims for cellular energy support.",
+      "key_regulations": [
+        "21 CFR 111",
+        "FD&C Act Section 403"
+      ],
+      "key_entities": [
+        "MRO MaryRuth LLC"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    },
+    {
+      "id": "f106d539-2692-4924-a21b-4a5c4fc827b0",
+      "item_id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "summary": "The FDA or relevant regulatory body has identified multiple unauthorized claims regarding products marketed by Better Being Co. This case (2025-001453) likely involves the use of therapeutic or disease-treatment claims that classify dietary supplements as unapproved new drugs.",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act",
+        "DSHEA"
+      ],
+      "key_entities": [
+        "Better Being Co"
+      ],
+      "regulatory_action_type": "cgmp_violation",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(b)(2)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.75(a)(2)(ii)(A)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.320(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.315(d)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "02cb6bbe-9289-4448-9762-9dd03eddc6cc",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.113(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "14ded287-8af3-4290-95b3-4fe6b9d8207d",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "14ded287-8af3-4290-95b3-4fe6b9d8207d",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "14ded287-8af3-4290-95b3-4fe6b9d8207d",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "14ded287-8af3-4290-95b3-4fe6b9d8207d",
+      "tag_dimension": "claims",
+      "tag_value": "Supports a healthy production of breast milk",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "14ded287-8af3-4290-95b3-4fe6b9d8207d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "14ded287-8af3-4290-95b3-4fe6b9d8207d",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.93",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "16832c1b-f0f1-4043-a351-b2f99d1abca4",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "16832c1b-f0f1-4043-a351-b2f99d1abca4",
+      "tag_dimension": "product_type",
+      "tag_value": "weight_management",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "16832c1b-f0f1-4043-a351-b2f99d1abca4",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "16832c1b-f0f1-4043-a351-b2f99d1abca4",
+      "tag_dimension": "claims",
+      "tag_value": "Healthy Metabolism",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "16832c1b-f0f1-4043-a351-b2f99d1abca4",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "16832c1b-f0f1-4043-a351-b2f99d1abca4",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.93",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "17ac611f-ba52-4367-803b-653791ce95d0",
+      "tag_dimension": "product_type",
+      "tag_value": "probiotics_prebiotics",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "17ac611f-ba52-4367-803b-653791ce95d0",
+      "tag_dimension": "product_type",
+      "tag_value": "digestive_health",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "17ac611f-ba52-4367-803b-653791ce95d0",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "17ac611f-ba52-4367-803b-653791ce95d0",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary supplement manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "17ac611f-ba52-4367-803b-653791ce95d0",
+      "tag_dimension": "claims",
+      "tag_value": "Daily digestive support",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "17ac611f-ba52-4367-803b-653791ce95d0",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.103",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.260",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "26bd63ba-8132-4b9e-a9ec-6858a9c2a371",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "product_type",
+      "tag_value": "essential_fatty_acids",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "claims",
+      "tag_value": "structure-function claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "claims",
+      "tag_value": "health claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33e84edd-8571-495c-9452-6390167cc44a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "product_type",
+      "tag_value": "single_vitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "product_type",
+      "tag_value": "amino_acids_peptides",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "facility_type",
+      "tag_value": "processor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 402(g)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 402(g)(2)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "346687ed-a17d-409c-b218-6cc123b8e0ae",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 801(a)(3)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3466dbef-85d1-49a2-9801-3a1e1cadf623",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3466dbef-85d1-49a2-9801-3a1e1cadf623",
+      "tag_dimension": "facility_type",
+      "tag_value": "Dietary Supplement Manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3466dbef-85d1-49a2-9801-3a1e1cadf623",
+      "tag_dimension": "claims",
+      "tag_value": "Supports brain health",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3466dbef-85d1-49a2-9801-3a1e1cadf623",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3466dbef-85d1-49a2-9801-3a1e1cadf623",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.93",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "445574b3-7f26-42ba-891d-18231b408d8d",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "445574b3-7f26-42ba-891d-18231b408d8d",
+      "tag_dimension": "product_type",
+      "tag_value": "immune_support",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "445574b3-7f26-42ba-891d-18231b408d8d",
+      "tag_dimension": "facility_type",
+      "tag_value": "Dietary Supplement Manufacturing Facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "445574b3-7f26-42ba-891d-18231b408d8d",
+      "tag_dimension": "claims",
+      "tag_value": "Immune",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47c18ad4-4e01-4c92-a32c-58817c8a1683",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47c18ad4-4e01-4c92-a32c-58817c8a1683",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47c18ad4-4e01-4c92-a32c-58817c8a1683",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47c18ad4-4e01-4c92-a32c-58817c8a1683",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f0038a6-49e7-4449-83b1-b5bd4d7f438f",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f0038a6-49e7-4449-83b1-b5bd4d7f438f",
+      "tag_dimension": "product_type",
+      "tag_value": "immune_support",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f0038a6-49e7-4449-83b1-b5bd4d7f438f",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "4f0038a6-49e7-4449-83b1-b5bd4d7f438f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "product_type",
+      "tag_value": "mushroom_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "product_type",
+      "tag_value": "immune_support",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "product_type",
+      "tag_value": "digestive_health",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.75",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.105",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.205",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "54dd3e63-7d5f-4695-952f-7439939ac6f5",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.255",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "tag_dimension": "claims",
+      "tag_value": "multiple claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "tag_dimension": "claims",
+      "tag_value": "structure/function claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "tag_dimension": "claims",
+      "tag_value": "disease claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.93",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "57919dcd-7e06-4224-914d-b7740837c2ea",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "product_type",
+      "tag_value": "joint_bone_health",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "claims",
+      "tag_value": "Prevention and remediation of osteoporosis",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.103",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.255(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.260",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "section 201(g)(1)(B) of the Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "section 505(a) of the Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "section 502(f)(1) of the Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "section 402(g)(1) of the Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "598bc988-f687-44bb-8fa2-b543e1eed071",
+      "tag_dimension": "regulation",
+      "tag_value": "section 403 of the Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5bba9e5f-fa8e-465b-8cf6-dab925c6be67",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5bba9e5f-fa8e-465b-8cf6-dab925c6be67",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5bba9e5f-fa8e-465b-8cf6-dab925c6be67",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5bba9e5f-fa8e-465b-8cf6-dab925c6be67",
+      "tag_dimension": "claims",
+      "tag_value": "You and your baby deserve the best, safest ingredients to support this journey of new life",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5bba9e5f-fa8e-465b-8cf6-dab925c6be67",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5bba9e5f-fa8e-465b-8cf6-dab925c6be67",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.205",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.255",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.260",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.103",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.553",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4(h)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "649e534e-1c65-4047-b36b-77bffdbca1cd",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.7",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(b)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.260(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.205(b)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.210(h)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.113(a)(2)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. § 343(q)(1)(A)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. § 343(q)(1)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. § 343(q)(5)(F)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6c6cf7ae-6233-49d5-b6d7-74123ce1b7d6",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36(b)(2)(iii)(E)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "product_type",
+      "tag_value": "single_vitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "facility_type",
+      "tag_value": "packager",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "facility_type",
+      "tag_value": "labeler",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "facility_type",
+      "tag_value": "warehouse",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "facility_type",
+      "tag_value": "retailer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.75",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 110",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 11",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c33cc9a-8bfd-4b60-b1fc-10feee0ca3c9",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 761 of the FD&C Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "tag_dimension": "product_type",
+      "tag_value": "sports_performance",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(b)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.75(h)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c8881b5-1ef6-44dd-9ba8-749e6f17b69f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 342(g)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "product_type",
+      "tag_value": "baby_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "product_type",
+      "tag_value": "digestive_health",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "product_type",
+      "tag_value": "immune_support",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "product_type",
+      "tag_value": "pediatric_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "claims",
+      "tag_value": "acid_reflux_treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "claims",
+      "tag_value": "gastroesophageal_reflux_disease_treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "claims",
+      "tag_value": "colic_treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "claims",
+      "tag_value": "asthma_treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 402(g)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 761(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "8c150e6d-36fb-4944-a6e4-d103ad63535e",
+      "tag_dimension": "regulation",
+      "tag_value": "FD&C Act Section 201(g)(1)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "anti-cancer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "Alzheimer's treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "dementia treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "lowers cholesterol",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "asthma support",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "reduces insulin resistance",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "kidney stone removal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "gall stone removal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "antiviral",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "antibacterial",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "claims",
+      "tag_value": "parasite removal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 321(g)(1)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 342(g)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 352(f)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aa4b7daf-2333-4ad1-b29c-0ca1c3fb366a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 343(w)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b289cffe-6163-4b71-9c0d-4b5f596463ed",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "b289cffe-6163-4b71-9c0d-4b5f596463ed",
+      "tag_dimension": "facility_type",
+      "tag_value": "Dietary supplement manufacturing facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "product_type",
+      "tag_value": "coffee_tea",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "facility_type",
+      "tag_value": "distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "claims",
+      "tag_value": "Instant Relief Fortified Herbal Formula for High Blood, Cholesterol, Asthma, Cancer Arthritis, Depression, Migrains [sic], Sickle Cell Kidney Problems Liver Problems . . . Diabetes, Rheumatism, Insomnia, Circulation Problems Hermoroids [sic], Acid reflux, Gastric Ulcers",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "claims",
+      "tag_value": "Prevention and Relief for Gastric Ulcers, Acid Reflux . . . Indigestion . . . Food Poisoning Stomach Worms & Parasites",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "claims",
+      "tag_value": "HELPS PREVENT CANCER, DESTROYS EARLY CANCEROUS CELLS",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 321(g)(1)(B)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 355(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 342(g)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 352(f)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ca310b4e-0ddb-4361-a9a0-d897e1b3b2e9",
+      "tag_dimension": "regulation",
+      "tag_value": "21 U.S.C. 343",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "product_type",
+      "tag_value": "protein_powders",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "product_type",
+      "tag_value": "sports_performance",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(b)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(b)(2)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.75(a)(1)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.75(c)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.105(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.123(a)(2)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.255(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4e5b9b8-5faf-42ad-be64-7afb56e4df8a",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.83(b)(1)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "product_type",
+      "tag_value": "otc_drugs",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "claims",
+      "tag_value": "Relief of allergy related symptoms",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "claims",
+      "tag_value": "Improve… low blood sugars",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "claims",
+      "tag_value": "Relief of hemorrhoids conditions and constipation",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "claims",
+      "tag_value": "Reduce urinary tract infections symptoms",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "claims",
+      "tag_value": "Support trauma injury relief",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "claims",
+      "tag_value": "Relief of inflammation and fungal infection",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "claims",
+      "tag_value": "Aids in stopping bleeding",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "claims",
+      "tag_value": "Relief of pain and stiffness in the lower body",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6d41c78-33c7-44d4-8e66-db4231071462",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.105(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.77(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.205(a)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.75(a)(1)(i)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.12(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 402(g)(1) of the Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e0b267b3-0eb3-43b0-8c0e-b146d94b3bb8",
+      "tag_dimension": "regulation",
+      "tag_value": "Section 403 of the Act",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "claims",
+      "tag_value": "migraine treatment",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.9(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e1ae256b-7014-438e-bb91-1a54ca276f0e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.12(b)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.36",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.3",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.4",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.93",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.205",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.210",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.255",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.260",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.410",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "e5bca335-87b6-47d4-ac2c-3bcf59440c8c",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.553",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f024c4cb-d17d-470d-93ad-3c640447b0e7",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f024c4cb-d17d-470d-93ad-3c640447b0e7",
+      "tag_dimension": "product_type",
+      "tag_value": "dietary_conventional_foods",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f024c4cb-d17d-470d-93ad-3c640447b0e7",
+      "tag_dimension": "facility_type",
+      "tag_value": "Dietary Supplement Manufacturing Facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2e46498-4874-4127-bc75-e8ce116d801e",
+      "tag_dimension": "product_type",
+      "tag_value": "single_vitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2e46498-4874-4127-bc75-e8ce116d801e",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2e46498-4874-4127-bc75-e8ce116d801e",
+      "tag_dimension": "claims",
+      "tag_value": "Brain Body Nourish",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f2e46498-4874-4127-bc75-e8ce116d801e",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "tag_dimension": "product_type",
+      "tag_value": "mineral_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "tag_dimension": "product_type",
+      "tag_value": "multivitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f3685bbd-0be6-48ab-9c85-6ce27f8dd628",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f593d85d-7d3d-4322-8862-341a2f1a306f",
+      "tag_dimension": "product_type",
+      "tag_value": "botanicals_herbal",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f593d85d-7d3d-4322-8862-341a2f1a306f",
+      "tag_dimension": "product_type",
+      "tag_value": "immune_support",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f593d85d-7d3d-4322-8862-341a2f1a306f",
+      "tag_dimension": "facility_type",
+      "tag_value": "dietary_supplement_manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f593d85d-7d3d-4322-8862-341a2f1a306f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR Part 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f593d85d-7d3d-4322-8862-341a2f1a306f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.70(e)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f593d85d-7d3d-4322-8862-341a2f1a306f",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111.140(b)(3)",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f6b5e4e9-6547-44c7-a368-b4957741e4d4",
+      "tag_dimension": "product_type",
+      "tag_value": "single_vitamins",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f6b5e4e9-6547-44c7-a368-b4957741e4d4",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f6b5e4e9-6547-44c7-a368-b4957741e4d4",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f6b5e4e9-6547-44c7-a368-b4957741e4d4",
+      "tag_dimension": "claims",
+      "tag_value": "Supports Cellular Energy",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f6b5e4e9-6547-44c7-a368-b4957741e4d4",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "tag_dimension": "product_type",
+      "tag_value": "other_supplement",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "tag_dimension": "product_type",
+      "tag_value": "specialty_supplements",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "tag_dimension": "facility_type",
+      "tag_value": "manufacturer",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "tag_dimension": "claims",
+      "tag_value": "therapeutic_claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "tag_dimension": "claims",
+      "tag_value": "structure_function_claims",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 101.93",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "fb68d107-0977-4d47-ad49-ad5f2068ce09",
+      "tag_dimension": "regulation",
+      "tag_value": "21 CFR 111",
+      "signal_source": "direct"
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+  "total_actions": 12,
+  "action_types": {
+    "recall": 12
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-09-24",
+    "latest": "2025-11-12"
+  },
+  "items": [
+    {
+      "id": "15d5cb3d-9965-421c-a219-4adf426e5667",
+      "title": "AquaStar Raw Peeled Tail-on Shrimp Skewers, net wt. 1.25lbs. UPC 731149390010. Product is packaged in a printed bag with a black top and blue bottom and printed pictures of the skewers inside.",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9c52a565-a1e6-4d64-99b7-06f6bbe7fc0d",
+      "title": "Publix Extra Large Shrimp Easy to Peel Deveined 21/25, net wt. 1.5 lbs. UPC 041415064454. Product was sold at Publix.",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "f5408563-0c16-4c2e-913d-4f3bd9490b4c",
+      "title": "Best Yet Frozen Raw EZ-Peel White Shrimp 16/20  (net wt. 1 lbs/pkg; 10 pkgs per case). UPC 04218700282  Best Yet Frozen Raw EZ-Peel White Shrimp 21/25  (net wt. 1 lbs/pkg; 10 pkgs per case). UPC 04218",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "41cd2274-b333-416e-8276-ff7afae307a3",
+      "title": "AquaStar 13/15 Raw Shrimp Easy Peel Deveined, net wt. 2 lbs. UPC 731149654051. Product was sold at Publix.",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "c1c38f8e-1aee-42c5-b722-a93ef7fad549",
+      "title": "Publix Large Shrimp Peeled & Deveined Tail On 31/40, net wt. 1.5 lbs. UPC 041415067455. Product was sold at Publix.",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9fb7254b-7378-4260-8556-14b04eaaaee4",
+      "title": "Kroger Raw Colossal EZ Peel Shrimp, net wt. 2lbs., UPC 20011110643906. Product is packaged in transparent printed bag with a blue band on the top with yellow and red details.",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "0e86b400-db03-48bd-9135-306c21d891ce",
+      "title": "Waterfront Bistro Frozen Raw EZ-Peel White Shrimp 21/25, net wt. 2lbs., UPC 021130123223. Product was sold at Shaw s and Star Market, Albertson's, Eagle, Carrs-Safeway, and Safeway.",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7c2df08a-54b8-4323-9958-2c89f6f1caf0",
+      "title": "AquaStar 16/20 Frozen Raw EZ-Peel White Shrimp, net wt. 5 lbs. UPC 731149654075. Product was sold at WinCo.",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3376a939-b4ae-4e0f-a982-364d3cdafbb3",
+      "title": "Kroger Mercado Cooked Medium Peeled Tail-Off Shrimp, net wt. 2lbs. UPC 011110626196. Product is packaged in clear plastic bag and has a white label with green stripes on top of each bag.",
+      "item_type": "recall",
+      "published_date": "2025-11-12",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d4240b89-e5b8-4f24-860b-b3ad4fca01ad",
+      "title": "Frozen Mercado Kroger Cooked Shrimp - Medium - Peeled - Tail-Off - Shrimp Pieces. 2 lbs. package.  Net wt. per case 10lbs. (5x2lb packages per case). UPC 011110626196.",
+      "item_type": "recall",
+      "published_date": "2025-09-24",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "5f9b189a-2e66-4f64-be50-b6863f659227",
+      "title": "AquaStar Cocktail Shrimp, 4oz. shrimp/2oz. cocktail sauce. Each case consists of 6x6 oz packages, UPC 19434612191. Distributed by Aqua Star, Seattle, WA. Farm Raised Product of Indonesia. Master cases",
+      "item_type": "recall",
+      "published_date": "2025-09-24",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9fde3c22-7754-4146-9f7f-f6b394fa8678",
+      "title": "Frozen AquaStar Breaded Shrimp, Butterfly, Clean-Tail, 16/20 count/lb. 3 lbs. package. Net wt. per case 36lbs. (12x3lbs. packages per case). UPC 731149601192. Packed For: AquaStar Seattle, WA. Farm Ra",
+      "item_type": "recall",
+      "published_date": "2025-09-24",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "Admiralty Island Fisheries Inc dba AquaStar (USA) Corp.",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "d95701fb-8596-4c60-942c-55b1598dacd9",
+      "item_id": "0e86b400-db03-48bd-9135-306c21d891ce",
+      "summary": "Waterfront Bistro Frozen Raw EZ-Peel White Shrimp 21/25, sold at various retailers, is being recalled due to potential contamination with Cesium-137 (Cs-137).",
+      "key_regulations": [],
+      "key_entities": [
+        "Waterfront Bistro",
+        "Shaw's",
+        "Star Market",
+        "Albertson's",
+        "Eagle",
+        "Carrs-Safeway",
+        "Safeway"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "968aeae3-c51f-4655-90a2-899160419236",
+      "item_id": "15d5cb3d-9965-421c-a219-4adf426e5667",
+      "summary": "AquaStar is recalling its Raw Peeled Tail-on Shrimp Skewers due to potential contamination with Cesium-137 (Cs-137).",
+      "key_regulations": [],
+      "key_entities": [
+        "AquaStar"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "9d0a7d08-a539-40ef-811e-418feae7ec89",
+      "item_id": "3376a939-b4ae-4e0f-a982-364d3cdafbb3",
+      "summary": "Kroger Mercado is recalling its Cooked Medium Peeled Tail-Off Shrimp due to potential contamination with Cesium-137 (Cs-137). The product is packaged in 2lb clear plastic bags with UPC 011110626196.",
+      "key_regulations": [],
+      "key_entities": [
+        "Kroger Mercado"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "204bcb56-9d7b-4b88-8220-47d62f32f20a",
+      "item_id": "41cd2274-b333-416e-8276-ff7afae307a3",
+      "summary": "AquaStar is recalling its 13/15 Raw Shrimp Easy Peel Deveined, 2 lbs. packages (UPC 731149654051), sold at Publix, due to potential contamination with Cesium-137 (Cs-137).",
+      "key_regulations": [],
+      "key_entities": [
+        "AquaStar",
+        "Publix"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c722702c-16c2-4c40-911c-bc0e7b7700da",
+      "item_id": "5f9b189a-2e66-4f64-be50-b6863f659227",
+      "summary": "AquaStar is recalling its 4oz. Cocktail Shrimp due to potential contamination with Cesium-137 (Cs-137). The product was distributed by Aqua Star, Seattle, WA, and sold at Walmart as a refrigerated product.",
+      "key_regulations": [],
+      "key_entities": [
+        "Aqua Star",
+        "Walmart"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0543a948-8989-4969-862a-7a093f42d7e5",
+      "item_id": "7c2df08a-54b8-4323-9958-2c89f6f1caf0",
+      "summary": "AquaStar has recalled its 16/20 Frozen Raw EZ-Peel White Shrimp (net wt. 5 lbs., UPC 731149654075), sold at WinCo, due to potential contamination with Cesium-137 (Cs-137).",
+      "key_regulations": [],
+      "key_entities": [
+        "AquaStar",
+        "WinCo"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6ccf9d8c-e64e-49d3-8317-38931a4533b1",
+      "item_id": "9c52a565-a1e6-4d64-99b7-06f6bbe7fc0d",
+      "summary": "Publix is recalling Extra Large Shrimp due to potential contamination with Cesium-137 (Cs-137). The recalled product is 'Publix Extra Large Shrimp Easy to Peel Deveined 21/25, net wt. 1.5 lbs. UPC 041415064454'.",
+      "key_regulations": [],
+      "key_entities": [
+        "Publix"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6b16cf9c-f9a3-45e7-9be9-f95f01a8542a",
+      "item_id": "9fb7254b-7378-4260-8556-14b04eaaaee4",
+      "summary": "Kroger has recalled its Raw Colossal EZ Peel Shrimp due to potential contamination with Cesium-137 (Cs-137).",
+      "key_regulations": [],
+      "key_entities": [
+        "Kroger"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0f8317db-7f8b-49d3-9d1f-faf9a9559902",
+      "item_id": "9fde3c22-7754-4146-9f7f-f6b394fa8678",
+      "summary": "AquaStar Seattle, WA is recalling Frozen AquaStar Breaded Shrimp due to potential contamination with Cesium-137 (Cs-137).",
+      "key_regulations": [],
+      "key_entities": [
+        "AquaStar Seattle, WA"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c65d6cc1-974a-41a8-9de6-fad503eea704",
+      "item_id": "c1c38f8e-1aee-42c5-b722-a93ef7fad549",
+      "summary": "Publix is recalling its Large Shrimp Peeled & Deveined Tail On (31/40, 1.5 lbs, UPC 041415067455) due to potential contamination with Cesium-137 (Cs-137). The product was sold at Publix stores.",
+      "key_regulations": [],
+      "key_entities": [
+        "Publix"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "89caf10a-ec55-44c3-a859-a84dcb21146e",
+      "item_id": "d4240b89-e5b8-4f24-860b-b3ad4fca01ad",
+      "summary": "Frozen Mercado Kroger Cooked Shrimp in 2 lbs. packages (UPC 011110626196) has been recalled due to potential contamination with Cesium-137 (Cs-137).",
+      "key_regulations": [],
+      "key_entities": [
+        "Kroger"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "439cb3a0-1793-4bdb-a40b-fdaf5755312e",
+      "item_id": "f5408563-0c16-4c2e-913d-4f3bd9490b4c",
+      "summary": "Best Yet Frozen Raw EZ-Peel White Shrimp is being recalled due to potential contamination with Cesium-137 (Cs-137).",
+      "key_regulations": [],
+      "key_entities": [
+        "Best Yet",
+        "C&S Wholesale"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "0e86b400-db03-48bd-9135-306c21d891ce",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "15d5cb3d-9965-421c-a219-4adf426e5667",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3376a939-b4ae-4e0f-a982-364d3cdafbb3",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "41cd2274-b333-416e-8276-ff7afae307a3",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "5f9b189a-2e66-4f64-be50-b6863f659227",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7c2df08a-54b8-4323-9958-2c89f6f1caf0",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9c52a565-a1e6-4d64-99b7-06f6bbe7fc0d",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fb7254b-7378-4260-8556-14b04eaaaee4",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9fde3c22-7754-4146-9f7f-f6b394fa8678",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c1c38f8e-1aee-42c5-b722-a93ef7fad549",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d4240b89-e5b8-4f24-860b-b3ad4fca01ad",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "f5408563-0c16-4c2e-913d-4f3bd9490b4c",
+      "tag_dimension": "product_type",
+      "tag_value": "fish_products",
+      "signal_source": "direct"
+    }
+  ]
+}

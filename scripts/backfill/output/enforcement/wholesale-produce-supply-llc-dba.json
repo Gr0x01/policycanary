@@ -1,0 +1,365 @@
+{
+  "company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+  "total_actions": 12,
+  "action_types": {
+    "recall": 12
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2025-01-22",
+    "latest": "2025-10-22"
+  },
+  "items": [
+    {
+      "id": "05f94a2c-e6f4-4746-9dcb-61a8bf56d588",
+      "title": "Cut Fresh Luau Blend Fruit Mix \"F&F\".  4/10 oz.  Fresh & Finest.  Contains:  Cantaloupe, Honeydew, Pineapple, Red Grapes, Strawberry, Blueberry.  Keep Refrigerated.     UPC 0 70253-00572 5.    Packed ",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1a12abdc-26ea-4ecf-82ee-e00005523b88",
+      "title": "Cut Fresh Fruit Tray with Strawberries.  2.5 LB Harvest Cuts.  Keep Refrigerated.   UPC 7 90629-08132 9.  Packed by WPS, Minneapolois, MN",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "aafe3684-5e43-4f34-8d6b-d64cd5aa7235",
+      "title": "Cut Fresh Fruit Mix.  Contains:  Cantaloupe, Honeydew, Watermelon and Red Grapes.  Keep Refrigerated. Packed under the following brands and sizes:    1.  Fruit Mix CHWG (MCT) 1/5 lb.  UPC 7 90629-1117",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "9cb5cddf-6de7-4517-b016-97ed5e52d0f6",
+      "title": "Cut Fresh Melon Mix.  Contains:  Cantaloupe, Honeydew, Watermelon.  Keep Refrigerated. Packed under the following brands and sizes:    1.  Melon Mix \"HC\" 4/16 oz. Harvest Cuts  UPC 7 90629-11844 5.   ",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "2ddd174f-679f-4fa8-914c-946429bc9777",
+      "title": "Cut Fresh Cantaloupe Chunks packaged into the following size containers some under brand names Fresh & Finest or Harvest Cuts:   1.  CANTALOUPE CHUNKS \"PRMK\"    30/2 OZ 2.  CANTALOUPE CHUNKS \"HC\" 6/6 ",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d6f990ea-fc18-47dc-91a8-6c7b2d5bd63b",
+      "title": "Cut Fresh Fruit Salad.  6/6 oz.  Harvest Cuts.  Contains:  Cantaloupe, Honeydew, Red Grape, Strawberry.  Keep Refrigerated.   Packed in the following container sizes:   1.  6/6 oz.    UPC 7 90629-1182",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d7a5aa83-a577-4f2a-92a0-99f8fe781b04",
+      "title": "Cut Fresh Fruit Mix.  Contains:  Cantaloupe, Honeydew, Pineapple, and Red Grapes.  Keep Refrigerated. Packed under the following brands and sizes:    1.  Fruit Mix CHPG (MCT) 1/5 lb.   2.  Fruit Medle",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "61dec91f-319f-4926-9c6d-01e3f09f9b1b",
+      "title": "Cut Fresh Fruit with Fruit Dip.  2 lbs.  Contains:  Cantaloupe, Honeydew, Pineapple, Red Grapes, & Fruit Dip.  Keep Refrigerated.   Packed under the following brands:   1.  Fresh & Finest.   UPC 0 702",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "616b0213-8a8f-426a-b66a-a02a6efe7a71",
+      "title": "Cut Fresh Fruit Mix.  Contains:  Cantaloupe, Honeydew, and Red Grapes.  Keep Refrigerated. Packed under the following brands and sizes:    1.  Fruit Mix \"HC\" 6/6oz.  UPC 7 90629-11821 6.   2.  Fruit M",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "89b0e3b9-2020-4f01-9556-59123b51c113",
+      "title": "Cut Fresh Cantaloupe & Honeydew Chunks Fresh & Finest.  Net Wt: 12 oz Keep Refrigerated.   UPC 0 70253-00582 4.  Packed by WPS, Minneapolois, MN",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ba71a9b5-e5b8-41ed-8668-945e1eaf8c50",
+      "title": "Harvest Cuts Fruit Tray with Watermelons.  Contains:  Cantaloupe, Honeydew, Pineapple, Watermelon, Red Grapes, Fruit Dip.  Keep Refrigerated.  Net Wt. 2 lbs. 8 oz.    UPC 7 90629-07997 5.   Packed by ",
+      "item_type": "recall",
+      "published_date": "2025-10-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6889a177-d4ff-4715-a8f2-88c27a8098a0",
+      "title": "Cucumbers, Wholesale Produce Supply, 752 Kasota Circle, Minneapolis, MN  554145. Product of Mexico.  Cucumbers sold in the following pack sizes:   1.  5 lb. pack 2.  6 ct individual items per case.   ",
+      "item_type": "recall",
+      "published_date": "2025-01-22",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "WHOLESALE PRODUCE SUPPLY LLC DBA",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "4d98e525-32b3-44d1-9f00-500f8e6ba623",
+      "item_id": "05f94a2c-e6f4-4746-9dcb-61a8bf56d588",
+      "summary": "WPS, under the 'Fresh & Finest' brand, has recalled its 'Cut Fresh Luau Blend Fruit Mix' due to potential contamination with Listeria monocytogenes. The product is packaged in 4/10 oz containers.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS",
+        "Fresh & Finest"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "dce2134e-e8a5-46ab-8987-6ce8e5e1c901",
+      "item_id": "1a12abdc-26ea-4ecf-82ee-e00005523b88",
+      "summary": "Recall of 'Cut Fresh Fruit Tray with Strawberries' (2.5 LB Harvest Cuts, UPC 7 90629-08132 9) packed by WPS, Minneapolis, MN, due to potential Listeria monocytogenes contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6c255a25-8ab1-4196-bf0e-7dea8e1fb2cc",
+      "item_id": "2ddd174f-679f-4fa8-914c-946429bc9777",
+      "summary": "WPS of Minneapolis, MN is recalling various sizes of Cut Fresh Cantaloupe Chunks and Cantaloupe Spears, sold under brand names Fresh & Finest and Harvest Cuts, due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS",
+        "Fresh & Finest",
+        "Harvest Cuts"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c6c8da5a-954c-4540-9d4a-e11e4658bce7",
+      "item_id": "616b0213-8a8f-426a-b66a-a02a6efe7a71",
+      "summary": "WPS in Minneapolis, MN, has recalled various brands and sizes of Cut Fresh Fruit Mix, including Cantaloupe, Honeydew, and Red Grapes, due to potential Listeria monocytogenes contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "116549d0-af52-4995-a0c3-e1c17be9bdad",
+      "item_id": "61dec91f-319f-4926-9c6d-01e3f09f9b1b",
+      "summary": "WPS of Minneapolis, MN, is recalling 'Cut Fresh Fruit with Fruit Dip' sold under the brands Fresh & Finest and Harvest Cuts, due to potential Listeria monocytogenes contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "Fresh & Finest",
+        "Harvest Cuts",
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "8e0dfa51-e672-4fa4-b1c2-72b5ef35833f",
+      "item_id": "6889a177-d4ff-4715-a8f2-88c27a8098a0",
+      "summary": "Wholesale Produce Supply is recalling cucumbers due to potential contamination with Salmonella. The recalled cucumbers were sold in various pack sizes.",
+      "key_regulations": [],
+      "key_entities": [
+        "Wholesale Produce Supply"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c829b5c4-11dd-4081-b9fb-ad75901e5b39",
+      "item_id": "89b0e3b9-2020-4f01-9556-59123b51c113",
+      "summary": "WPS, Minneapolis, MN, is recalling 'Cut Fresh Cantaloupe & Honeydew Chunks' due to potential Listeria monocytogenes contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "2f62dda5-eb45-432d-916d-c9a365cf0f33",
+      "item_id": "9cb5cddf-6de7-4517-b016-97ed5e52d0f6",
+      "summary": "WPS of Minneapolis, MN is recalling Cut Fresh Melon Mix packed under the 'Melon Mix HC Harvest Cuts' and 'Melon Mix CHW (MCT)' brands due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e832a812-4c76-48f8-87b9-f846db96072c",
+      "item_id": "aafe3684-5e43-4f34-8d6b-d64cd5aa7235",
+      "summary": "WPS, Minneapolois, MN, is recalling 'Cut Fresh Fruit Mix' products, including Fruit Mix CHWG and Melon Mix Bowl & Grapes, due to potential Listeria monocytogenes contamination.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "ab14eff2-d93c-4697-bdb4-7ec40357fc85",
+      "item_id": "ba71a9b5-e5b8-41ed-8668-945e1eaf8c50",
+      "summary": "Harvest Cuts Fruit Tray with Watermelons, packed by WPS, Minneapolois, MN, is being recalled due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b4a90d31-fd6a-4ce7-9491-8476a8503ca9",
+      "item_id": "d6f990ea-fc18-47dc-91a8-6c7b2d5bd63b",
+      "summary": "WPS, Minneapolis, MN has issued a recall for 'Cut Fresh Fruit Salad' (6/6 oz. and 4/16 oz. 'Harvest Cuts' containing Cantaloupe, Honeydew, Red Grape, Strawberry) due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "0738b9a2-5da6-4a27-8a46-dc186af72b4f",
+      "item_id": "d7a5aa83-a577-4f2a-92a0-99f8fe781b04",
+      "summary": "WPS of Minneapolis, MN, is recalling Cut Fresh Fruit Mix products, including Fruit Mix CHPG (MCT), Fruit Medley \"HC\", and Fruit Mix CHPG (PAIL), due to potential contamination with Listeria monocytogenes.",
+      "key_regulations": [],
+      "key_entities": [
+        "WPS"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "05f94a2c-e6f4-4746-9dcb-61a8bf56d588",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1a12abdc-26ea-4ecf-82ee-e00005523b88",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "2ddd174f-679f-4fa8-914c-946429bc9777",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "616b0213-8a8f-426a-b66a-a02a6efe7a71",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "61dec91f-319f-4926-9c6d-01e3f09f9b1b",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "61dec91f-319f-4926-9c6d-01e3f09f9b1b",
+      "tag_dimension": "facility_type",
+      "tag_value": "packing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6889a177-d4ff-4715-a8f2-88c27a8098a0",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6889a177-d4ff-4715-a8f2-88c27a8098a0",
+      "tag_dimension": "facility_type",
+      "tag_value": "wholesale_distributor",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "89b0e3b9-2020-4f01-9556-59123b51c113",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "9cb5cddf-6de7-4517-b016-97ed5e52d0f6",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "aafe3684-5e43-4f34-8d6b-d64cd5aa7235",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ba71a9b5-e5b8-41ed-8668-945e1eaf8c50",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6f990ea-fc18-47dc-91a8-6c7b2d5bd63b",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d6f990ea-fc18-47dc-91a8-6c7b2d5bd63b",
+      "tag_dimension": "facility_type",
+      "tag_value": "food_processing_facility",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d7a5aa83-a577-4f2a-92a0-99f8fe781b04",
+      "tag_dimension": "product_type",
+      "tag_value": "fresh_fruits_vegetables",
+      "signal_source": "direct"
+    }
+  ]
+}

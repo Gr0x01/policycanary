@@ -1,0 +1,378 @@
+{
+  "company_name": "DANONE US LLC",
+  "total_actions": 13,
+  "action_types": {
+    "recall": 13
+  },
+  "violation_types": [],
+  "date_range": {
+    "earliest": "2024-05-29",
+    "latest": "2025-07-23"
+  },
+  "items": [
+    {
+      "id": "c2b48894-35d1-4913-9d91-ddb6e0601c78",
+      "title": "YoCrunch Low Fat Yogurt with Toppers, Strawberry with milk chocolate M&Ms minis candies, Packaged in the following size containers:   1.  Single Serve Cup, 6 oz. (170g)  UPC 46675-00083 2.  Multipack ",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "829a6b19-72aa-4ce9-b5ea-aca3bd50e046",
+      "title": "YoCrunch Lowfat Yogurt with Toppers, Vanilla with milk chocolate M&Ms, Packaged in the following size containers:   1.  Single Serve Cup 6 oz (170g)  UPC 46675-00079 2.  Multipack consisting of 4-4 oz",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "158e5c65-fc96-4eff-bfaa-a9e66479422b",
+      "title": "YoCrunch Lowfat Yogurt with Toppers.  Two-product package.  Contains 8-6oz (170g) cups of Strawberry Yogurt with milk chocolate M&Ms pieces (cup UPC 46675-00084), and 8-6oz (170g) cups of Strawberry Y",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "1cc088fe-9cd4-471c-9211-5a051e82e68a",
+      "title": "YoCrunch Lowfat Yogurt with Toppers.  Two-product package.  Contains 8-6oz (170g) cups of Vanilla Yogurt with Snickers pieces (cup UPC 46675-00112), and 8-6oz (170g) cups of Vanilla Yogurt with Twix b",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "3a48cc61-4939-4154-a31c-c00bc0a0869d",
+      "title": "YoCrunch Lowfat Yogurt with Toppers.  Two-product packages.   1.  Contains 8- 6oz (170g) cups of Vanilla Yogurt with milk chocolate M&Ms pieces (cup UPC 46675-00079), and 8-6oz (170g) cups of Vanilla ",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "6b66d794-1202-4b66-8223-b85e8f13c40b",
+      "title": "YoCrunch Low Fat Yogurt with toppers.  Vanilla with Oreo cookie pieces, Packaged in the following size containers:   1.  Single Serve Cup, 6 oz.  (170g) UPC 46675-00080 2.  Multipack containing 4-4 oz",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "33216658-d9b7-452a-9ae4-c27f5dc6dc56",
+      "title": "YoCrunch Lowfat Yogurt with Toppers Two-product package.  Contains 8-6oz (170g) cups of Strawberry Yogurt with Granola pieces (Cup UPC 46675-00010), and 8-6oz (170g) cups of Raspberry Yogurt with Gran",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "ace791cf-ca1a-46c8-9c45-0e6268c829eb",
+      "title": "YoCrunch Low Fat Yogurt with Toppers, Vanilla with Snickers pieces, Packaged in the following size containers:   1.  Single Serve Cup, 6 oz. (170g)  UPC 46675-00112 2.  Multipack containing 4-4 oz. cu",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "47559ff4-2203-45aa-8038-4b9fb58e021a",
+      "title": "YoCrunch Low Fat Yogurt with Toppers, Vanilla with Chocolate Chip Cookie Dough pieces, Multipack containing 4-4 oz. (113g) cups.  UPC 46675-01315.  Keep Refrigerated.   Distributed by Danone US, LLC, ",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "be385b22-ece1-4130-a87c-a8ab554a347b",
+      "title": "YoCrunch Low Fat Yogurt with Toppers, Vanilla with Twix bar pieces, Packaged in the following size containers:   1.  Single Serve Cup, 6 oz. (170g) UPC 46675-00113 2.  Multipack containing 4-4 oz. cup",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "741f4385-87e3-4e6b-8d3e-fd605dd4e749",
+      "title": "YoCrunch Low Fat Yogurt with Toppers, Strawberry with Granola pieces, Single Serve Cup, 6 oz. (170g)  UPC 46675-00010.  Keep Refrigerated.   Distributed by Danone US, LLC, White Plains, NY  10605",
+      "item_type": "recall",
+      "published_date": "2025-07-23",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "d64008bd-fafd-4652-b1d9-9f6f5a484fd9",
+      "title": "Home Alone International Delight Peppermint Mocha Zero Sugar, 32oz plastic bottle, 6 bottles per case. Refrigerated.",
+      "item_type": "recall",
+      "published_date": "2024-11-06",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    },
+    {
+      "id": "7d2bb43b-d72d-4a11-8cc2-a367df5e0eb1",
+      "title": "YoCrunch¿ Vanilla Lowfat Yogurt with M&Ms 18   6oz cups per case",
+      "item_type": "recall",
+      "published_date": "2024-05-29",
+      "source_url": null,
+      "issuing_office": null,
+      "enforcement_company_name": "DANONE US LLC",
+      "enforcement_violation_types": null
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "60346492-43aa-4a28-9028-af4925caff3f",
+      "item_id": "158e5c65-fc96-4eff-bfaa-a9e66479422b",
+      "summary": "YoCrunch Lowfat Yogurt with Toppers, including Strawberry Yogurt with milk chocolate M&Ms pieces and Strawberry Yogurt with Oreo pieces, is being recalled due to the presence of foreign material, specifically plastic pieces.",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "e72bfa4c-4991-4c7a-a98d-6c962aea2aca",
+      "item_id": "1cc088fe-9cd4-471c-9211-5a051e82e68a",
+      "summary": "YoCrunch Lowfat Yogurt with Snickers and Twix bar pieces is being recalled due to the presence of foreign material (plastic pieces). The product is distributed by Danone US, LLC.",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "3b9d3826-14b9-4922-8c08-63c8f705e4c3",
+      "item_id": "33216658-d9b7-452a-9ae4-c27f5dc6dc56",
+      "summary": "Danone US, LLC has recalled YoCrunch Lowfat Yogurt with Toppers, specifically Strawberry and Raspberry flavors, in 8-6oz cup two-product packages due to the presence of foreign material (plastic pieces).",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "72cda6ca-81ea-48cd-b622-2a6ed71af0d6",
+      "item_id": "3a48cc61-4939-4154-a31c-c00bc0a0869d",
+      "summary": "Danone US, LLC is recalling YoCrunch Lowfat Yogurt with Toppers (various two-product packages of Vanilla Yogurt with M&Ms or Oreo pieces) due to the presence of foreign material (plastic pieces).",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "b4e88482-dccd-4013-85e2-5499ddc5affe",
+      "item_id": "47559ff4-2203-45aa-8038-4b9fb58e021a",
+      "summary": "Danone US, LLC is recalling YoCrunch Low Fat Yogurt with Toppers, Vanilla with Chocolate Chip Cookie Dough pieces, due to contamination with foreign material (plastic pieces). The recalled product is a multipack containing 4-4 oz. cups with UPC 46675-01315.",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "20a613df-f6e7-41d3-bfe4-4525f50b7b78",
+      "item_id": "6b66d794-1202-4b66-8223-b85e8f13c40b",
+      "summary": "YoCrunch Low Fat Yogurt with Oreo cookie pieces, in 6 oz. single-serve cups and 4-4 oz. multipacks, is being recalled due to the presence of foreign material (plastic). The product is distributed by Danone US, LLC.",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fdbb0605-2c08-4147-9b2d-bec03f05e410",
+      "item_id": "741f4385-87e3-4e6b-8d3e-fd605dd4e749",
+      "summary": "Danone US, LLC is recalling YoCrunch Low Fat Yogurt with Toppers, Strawberry with Granola pieces, Single Serve Cup, 6 oz. (170g) due to the presence of foreign material (plastic pieces).",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "c2ade592-e9ff-4ac4-b499-545bca039bd3",
+      "item_id": "7d2bb43b-d72d-4a11-8cc2-a367df5e0eb1",
+      "summary": "YoCrunch is recalling its Vanilla Lowfat Yogurt with M&Ms due to undeclared wheat.",
+      "key_regulations": [],
+      "key_entities": [
+        "YoCrunch"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "6bef5fa0-55d6-4554-a85a-67d3728301d1",
+      "item_id": "829a6b19-72aa-4ce9-b5ea-aca3bd50e046",
+      "summary": "YoCrunch Lowfat Yogurt with Toppers, Vanilla with milk chocolate M&Ms, packaged in 6 oz single serve cups and 4-4 oz multipacks, has been recalled due to the presence of foreign material (plastic pieces). The product is distributed by Danone US.",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "a3fe2405-8b22-4444-b774-8780b68fd871",
+      "item_id": "ace791cf-ca1a-46c8-9c45-0e6268c829eb",
+      "summary": "Danone US, LLC is recalling YoCrunch Low Fat Yogurt with Toppers, Vanilla with Snickers pieces, in 6 oz. single serve cups and 4-4 oz. multipacks, due to contamination with foreign material (plastic pieces).",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "21fd7012-5c8f-4507-8bfe-8a8e0dccd0d1",
+      "item_id": "be385b22-ece1-4130-a87c-a8ab554a347b",
+      "summary": "Danone US, LLC is recalling YoCrunch Low Fat Yogurt with Toppers, Vanilla with Twix bar pieces, sold in single-serve and multipack containers, due to the presence of foreign material (plastic pieces).",
+      "key_regulations": [
+        "Federal Food, Drug, and Cosmetic Act",
+        "21 CFR Part 7"
+      ],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "5cf414e5-d023-4ab4-8582-ae4ee7dc28d2",
+      "item_id": "c2b48894-35d1-4913-9d91-ddb6e0601c78",
+      "summary": "YoCrunch Low Fat Yogurt with Toppers, Strawberry with milk chocolate M&Ms minis candies, is being recalled due to the presence of foreign material, specifically plastic pieces.",
+      "key_regulations": [],
+      "key_entities": [
+        "Danone US, LLC"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    },
+    {
+      "id": "fd22d55f-55ff-4614-aee1-7434e3a73041",
+      "item_id": "d64008bd-fafd-4652-b1d9-9f6f5a484fd9",
+      "summary": "International Delight Peppermint Mocha Zero Sugar is being recalled because it was mislabeled as 'zero sugar' but actually contains sugar.",
+      "key_regulations": [],
+      "key_entities": [
+        "Home Alone International Delight"
+      ],
+      "regulatory_action_type": "recall",
+      "deadline": null
+    }
+  ],
+  "tags": [
+    {
+      "item_id": "158e5c65-fc96-4eff-bfaa-a9e66479422b",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "1cc088fe-9cd4-471c-9211-5a051e82e68a",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "33216658-d9b7-452a-9ae4-c27f5dc6dc56",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "3a48cc61-4939-4154-a31c-c00bc0a0869d",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "47559ff4-2203-45aa-8038-4b9fb58e021a",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "6b66d794-1202-4b66-8223-b85e8f13c40b",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "741f4385-87e3-4e6b-8d3e-fd605dd4e749",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "7d2bb43b-d72d-4a11-8cc2-a367df5e0eb1",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "829a6b19-72aa-4ce9-b5ea-aca3bd50e046",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "ace791cf-ca1a-46c8-9c45-0e6268c829eb",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "be385b22-ece1-4130-a87c-a8ab554a347b",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "c2b48894-35d1-4913-9d91-ddb6e0601c78",
+      "tag_dimension": "product_type",
+      "tag_value": "dairy_products",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d64008bd-fafd-4652-b1d9-9f6f5a484fd9",
+      "tag_dimension": "product_type",
+      "tag_value": "nonalcoholic_beverages",
+      "signal_source": "direct"
+    },
+    {
+      "item_id": "d64008bd-fafd-4652-b1d9-9f6f5a484fd9",
+      "tag_dimension": "claims",
+      "tag_value": "Zero Sugar",
+      "signal_source": "direct"
+    }
+  ]
+}
