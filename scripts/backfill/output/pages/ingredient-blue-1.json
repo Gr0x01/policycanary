@@ -1,0 +1,44 @@
+{
+  "page_type": "ingredient",
+  "slug": "blue-1",
+  "title": "FD&C Blue No. 1 (Brilliant Blue): FDA Phase-Out, State Bans & Compliance Guide",
+  "excerpt": "Comprehensive regulatory intelligence on FD&C Blue No. 1 — FDA voluntary phase-out timeline, state-level school bans, EU status, natural alternatives, and compliance strategy.",
+  "seo_title": "FD&C Blue No. 1: FDA Phase-Out & State Ban Guide (2026)",
+  "seo_description": "FD&C Blue No. 1 regulatory guide: FDA voluntary phase-out by end of 2027, state school bans in 11 states, EU status, natural alternatives, and compliance deadlines.",
+  "status": "draft",
+  "structured_data": {
+    "substance_id": "9f6ca096-6666-4cd1-8826-10b3ae6fb973",
+    "unii": "H3R47K3TBD",
+    "cas_number": "3844-45-9",
+    "fda_status": "Authorized color additive (21 CFR 74.101) — voluntary phase-out by end of 2027",
+    "cfr_references": ["21 CFR 74.101", "21 CFR 74.1101", "21 CFR 74.2101"],
+    "state_bans": [
+      "West Virginia HB 2354 (school meals Aug 2025, retail Jan 2028 — injunction pending)",
+      "California AB 2316 (school food, Dec 31, 2027)",
+      "Utah HB 402 (school food, May 7, 2025)",
+      "Arizona HB 2164 (school food, 2026-2027 school year)",
+      "Virginia HB 1910/SB 1289 (school food, Jul 1, 2027)",
+      "Texas SB 314 (school meals, 2026-2027 school year)",
+      "Louisiana SB 14 (school meals, 2028-2029 school year)"
+    ],
+    "affected_categories": [
+      "confectionery",
+      "beverages",
+      "breakfast-cereals",
+      "ice-cream-frozen-desserts",
+      "baked-goods",
+      "dietary-supplements",
+      "pharmaceuticals-otc",
+      "cosmetics-general"
+    ],
+    "key_deadlines": [
+      { "date": "2025-04-22", "label": "FDA/HHS announces voluntary phase-out of 6 petroleum-based dyes including Blue 1" },
+      { "date": "2025-05-09", "label": "FDA approves butterfly pea flower extract, galdieria extract blue, and calcium phosphate as natural color alternatives" },
+      { "date": "2025-08-01", "label": "West Virginia school meal ban takes effect (Phase 1)" },
+      { "date": "2027-07-01", "label": "Virginia school meal ban takes effect" },
+      { "date": "2027-12-31", "label": "California school food ban takes effect; FDA voluntary phase-out target deadline" },
+      { "date": "2028-01-01", "label": "West Virginia retail ban scheduled (currently enjoined)" }
+    ]
+  },
+  "linked_item_ids": []
+}

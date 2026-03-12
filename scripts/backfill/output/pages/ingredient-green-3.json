@@ -1,0 +1,41 @@
+{
+  "page_type": "ingredient",
+  "slug": "green-3",
+  "title": "FD&C Green No. 3 (Fast Green FCF): FDA Phase-Out, State Bans & Compliance Guide",
+  "excerpt": "Green 3 is the least-used FDA-certified dye, now targeted for voluntary phase-out by end of 2026. State bans and reformulation guidance for affected manufacturers.",
+  "seo_title": "FD&C Green No. 3: FDA Phase-Out & State Bans Guide",
+  "seo_description": "FD&C Green No. 3 (Fast Green FCF) regulatory status: FDA voluntary phase-out timeline, West Virginia and California bans, EU prohibition, and reformulation options.",
+  "status": "draft",
+  "structured_data": {
+    "unii": "3P3ONR6O1S",
+    "cas_number": "2353-45-9",
+    "fda_status": "Authorized color additive (21 CFR 74.203) — voluntary phase-out by end of 2026",
+    "cfr_references": [
+      "21 CFR 74.203",
+      "21 CFR 74.1203",
+      "21 CFR 74.2203"
+    ],
+    "state_bans": [
+      "West Virginia HB 2354 (school meals Aug 2025, retail Jan 2028 — injunction pending)",
+      "California AB 2316 (school food, Dec 31, 2027)",
+      "Virginia HB 1910/SB 1289 (school food, Jul 1, 2027)"
+    ],
+    "affected_categories": [
+      "candy-confectionery",
+      "beverages",
+      "frozen-desserts",
+      "baked-goods",
+      "cereals",
+      "dietary-supplements"
+    ],
+    "key_deadlines": [
+      { "date": "2025-04-22", "label": "FDA/HHS announces voluntary phase-out of 6 petroleum-based dyes including Green 3" },
+      { "date": "2025-08-01", "label": "West Virginia school meal ban takes effect (Green 3 included)" },
+      { "date": "2026-12-31", "label": "FDA target for voluntary industry elimination of Green 3 from food supply" },
+      { "date": "2027-07-01", "label": "Virginia school lunch ban takes effect" },
+      { "date": "2027-12-31", "label": "California AB 2316 school food ban takes effect" },
+      { "date": "2028-01-01", "label": "West Virginia statewide retail ban scheduled (currently enjoined)" }
+    ]
+  },
+  "linked_item_ids": []
+}

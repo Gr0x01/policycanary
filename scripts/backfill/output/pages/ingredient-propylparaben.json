@@ -1,0 +1,35 @@
+{
+  "page_type": "ingredient",
+  "slug": "propylparaben",
+  "title": "Propylparaben: California Ban, Endocrine Disruption Concerns & FDA Status",
+  "excerpt": "Propylparaben faces a California food ban effective Jan 2027, FDA post-market review in 2026, and West Virginia restrictions. Full regulatory intelligence for food and cosmetic companies.",
+  "seo_title": "Propylparaben FDA Status, California Ban & Safety Review",
+  "seo_description": "Propylparaben regulatory intelligence: California AB 418 food ban (Jan 2027), FDA MAHA review, West Virginia HB 2354, EU removal, and endocrine disruption concerns.",
+  "status": "draft",
+  "structured_data": {
+    "substance_id": "e382fca1-0b6f-4483-91f5-6eeb627f101c",
+    "unii": "Z8IX2SC1OH",
+    "cas_number": "94-13-3",
+    "fda_status": "GRAS (21 CFR 184.1670) — banned in California food (Jan 2027), West Virginia (Jan 2028, injunction pending)",
+    "cfr_references": ["21 CFR 184.1670"],
+    "state_bans": [
+      "California AB 418 (all food, Jan 1, 2027)",
+      "West Virginia HB 2354 Phase 2 (retail, Jan 1, 2028 — injunction pending)"
+    ],
+    "affected_categories": [
+      "baked-goods",
+      "processed-meats",
+      "beverages",
+      "condiments-sauces",
+      "snack-foods",
+      "cosmetics-skincare",
+      "cosmetics-hair-care",
+      "dietary-supplements"
+    ],
+    "key_deadlines": [
+      { "date": "2027-01-01", "label": "California AB 418 food ban takes effect" },
+      { "date": "2028-01-01", "label": "West Virginia HB 2354 Phase 2 retail ban (if injunction lifted)" }
+    ]
+  },
+  "linked_item_ids": []
+}

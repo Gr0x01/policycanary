@@ -1,0 +1,38 @@
+{
+  "page_type": "ingredient",
+  "slug": "yellow-5",
+  "title": "Yellow No. 5 (Tartrazine): FDA Phase-Out, State Bans & Compliance Guide",
+  "excerpt": "FD&C Yellow No. 5 is targeted for voluntary phase-out by end of 2026 under the MAHA initiative. State bans already in effect. Complete compliance guide for food and pharma companies.",
+  "seo_title": "Yellow No. 5 (Tartrazine) FDA Status 2026: Phase-Out, State Bans & Compliance | Policy Canary",
+  "seo_description": "Yellow No. 5 (tartrazine) regulatory status: FDA voluntary phase-out by 2026, West Virginia ban, California school food ban, EU warning labels. Action steps for compliance.",
+  "status": "draft",
+  "structured_data": {
+    "unii": "I753WB2F1M",
+    "cas_number": "1934-21-0",
+    "e_number": "E102",
+    "fda_status": "Authorized color additive (21 CFR 74.705) — voluntary phase-out by end of 2026",
+    "cfr_references": ["21 CFR 74.705", "21 CFR 74.1705", "21 CFR 74.2705", "21 CFR 101.22(k)", "21 CFR 201.20"],
+    "state_bans": [
+      "West Virginia (HB 2354, school meals Aug 1, 2025; retail Jan 1, 2028)",
+      "California (AB 2316, school food Dec 31, 2027)"
+    ],
+    "affected_categories": [
+      "candy-confections",
+      "beverages-non-alcoholic",
+      "cereals",
+      "snack-foods",
+      "baked-goods",
+      "dietary-supplements-general",
+      "pharmaceuticals-otc",
+      "cosmetics-general"
+    ],
+    "key_deadlines": [
+      { "date": "2025-04-22", "label": "FDA/HHS announce voluntary phase-out of 6 synthetic food dyes by end of 2026" },
+      { "date": "2025-08-01", "label": "West Virginia HB 2354 school meals ban effective" },
+      { "date": "2026-12-31", "label": "Target date for voluntary industry phase-out of Yellow No. 5 in food" },
+      { "date": "2027-12-31", "label": "California AB 2316 school food ban effective" },
+      { "date": "2028-01-01", "label": "West Virginia HB 2354 retail food ban effective (injunction pending)" }
+    ]
+  },
+  "linked_item_ids": []
+}

@@ -1,0 +1,36 @@
+{
+  "page_type": "ingredient",
+  "slug": "kratom",
+  "title": "Kratom (Mitragyna speciosa): FDA Regulatory Status, State Bans & 7-OH Scheduling",
+  "excerpt": "Kratom remains unapproved by the FDA for any use, subject to Import Alert 54-15, and caught in a regulatory tug-of-war between state bans, Consumer Protection Acts, and a federal push to schedule concentrated 7-hydroxymitragynine. Here is what companies in the dietary supplement and functional beverage space need to track.",
+  "status": "draft",
+  "seo_title": "Kratom FDA Status 2026 | Import Alerts, State Bans & 7-OH Scheduling",
+  "seo_description": "Comprehensive regulatory intelligence on kratom (Mitragyna speciosa), mitragynine, and 7-hydroxymitragynine. FDA import alert 54-15, DEA scheduling history, state-by-state ban map, KCPA legislation, and compliance guidance.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "ISP41580TL",
+    "cas_number": "4098-40-2",
+    "fda_status": "unapproved",
+    "state_bans": [
+      { "state": "Alabama", "status": "banned", "year": 2016 },
+      { "state": "Arkansas", "status": "banned", "year": 2016 },
+      { "state": "Indiana", "status": "banned", "year": 2014 },
+      { "state": "Vermont", "status": "banned", "year": 2016 },
+      { "state": "Wisconsin", "status": "banned", "year": 2014 },
+      { "state": "Louisiana", "status": "banned", "year": 2025, "notes": "SB 154 effective August 1, 2025" }
+    ],
+    "affected_categories": [
+      "dietary-supplements-general",
+      "functional-beverages",
+      "botanical-extracts",
+      "herbal-teas"
+    ],
+    "key_deadlines": [
+      { "label": "Rhode Island KCPA takes effect (first ban reversal)", "date": "2026-04-01", "type": "state" },
+      { "label": "FDA recommended 7-OH for Schedule I classification", "date": "2025-07-29", "type": "federal" },
+      { "label": "FDA issued 7 warning letters to 7-OH product companies", "date": "2025-07-15", "type": "federal" },
+      { "label": "Louisiana kratom ban effective (SB 154)", "date": "2025-08-01", "type": "state" },
+      { "label": "DEA rulemaking on 7-OH Schedule I (expected completion)", "date": "2027-01-01", "type": "federal" }
+    ]
+  }
+}

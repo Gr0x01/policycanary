@@ -1,0 +1,65 @@
+{
+  "page_type": "ingredient",
+  "slug": "red-no-3",
+  "title": "Red No. 3 (Erythrosine): FDA Ban, Deadlines & What Companies Must Do",
+  "excerpt": "FD&C Red No. 3 is banned in food (Jan 2027) and drugs (Jan 2028). Complete compliance guide: deadlines, state bans, reformulation steps, and enforcement outlook.",
+  "seo_title": "Red No. 3 FDA Ban 2025: Compliance Deadlines & Industry Impact | Policy Canary",
+  "seo_description": "FDA banned Red No. 3 (erythrosine) in food and drugs. Food deadline Jan 15, 2027. Drug deadline Jan 18, 2028. State bans, reformulation guide, enforcement outlook.",
+  "status": "draft",
+  "structured_data": {
+    "substance_id": "ddaf3e89-be43-4b44-b969-beaa09e3f1d7",
+    "unii": "PN2ZH5LOQY",
+    "cas_number": "16423-68-0",
+    "fda_status": "banned",
+    "federal_register_citation": "90 FR 4628",
+    "docket_number": "FDA-2023-N-0437",
+    "cfr_references": ["21 CFR 74.303", "21 CFR 74.1303"],
+    "delaney_clause": true,
+    "state_bans": [
+      "California (AB 418, effective Jan 1, 2027)",
+      "West Virginia (HB 2354, effective Jan 2028)"
+    ],
+    "state_school_bans": [
+      "Utah (HB 402, effective May 7, 2025)",
+      "Arizona (HB 2164, effective 2026-2027 school year)",
+      "Virginia (S 1289/H 1910, effective July 1, 2027)",
+      "California (AB 2316, effective Dec 31, 2027)"
+    ],
+    "affected_categories": [
+      "food-colorings",
+      "candy-confections",
+      "baked-goods",
+      "fruit-products",
+      "frozen-desserts",
+      "beverages-non-alcoholic",
+      "dairy-products",
+      "cereals",
+      "dietary-supplements-general"
+    ],
+    "key_deadlines": [
+      { "date": "2025-05-07", "label": "Utah HB 402 enacted (school compliance required 2026-27 school year)" },
+      { "date": "2027-01-01", "label": "California AB 418 food ban effective" },
+      { "date": "2027-01-15", "label": "FDA compliance deadline for food products (21 CFR 74.303 removed)" },
+      { "date": "2027-12-31", "label": "California AB 2316 school food ban effective" },
+      { "date": "2028-01-01", "label": "West Virginia HB 2354 food ban effective" },
+      { "date": "2028-01-18", "label": "FDA compliance deadline for ingested drugs (21 CFR 74.1303 removed)" }
+    ],
+    "last_enforcement_date": null,
+    "related_substances": [
+      { "name": "FD&C Red No. 3 aluminum lake", "unii": "WXF83K327F", "status": "banned since 1990" }
+    ],
+    "natural_alternatives": [
+      "Beet juice concentrate",
+      "Red cabbage extract",
+      "Carmine (cochineal)",
+      "Fruit/vegetable juice blends"
+    ]
+  },
+  "linked_item_ids": [
+    { "item_id": "089ca876-491f-4c29-a18f-2878e7c775b0", "relevance": "supporting" },
+    { "item_id": "c49e3ee4-7e53-4ed1-9ed2-49870ddf5fbd", "relevance": "supporting" },
+    { "item_id": "2ebe5c0c-1d5e-4fb4-9e89-7363f6458bf5", "relevance": "supporting" },
+    { "item_id": "e8b6b9e6-bc46-4eb7-b3e5-6ae9e1e2de7e", "relevance": "supporting" },
+    { "item_id": "6a1b07c4-27f7-48f3-b8ed-8dab2a56e07c", "relevance": "supporting" }
+  ]
+}

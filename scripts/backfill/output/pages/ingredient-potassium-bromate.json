@@ -1,0 +1,76 @@
+{
+  "page_type": "ingredient",
+  "slug": "potassium-bromate",
+  "title": "Potassium Bromate: FDA Status, State Bans & Global Regulatory Outlook",
+  "excerpt": "Potassium bromate remains permitted in US baked goods under 21 CFR 136 while banned in the EU, Canada, China, India, Brazil, and most major economies. California's AB 418 ban takes effect Jan 1, 2027. FDA review ongoing since March 2024.",
+  "seo_title": "Potassium Bromate FDA Status, California Ban & International Regulations | Policy Canary",
+  "seo_description": "Potassium bromate is permitted in US bread under 21 CFR 136 but banned in 30+ countries. California AB 418 ban effective Jan 2027. IARC Group 2B carcinogen. Complete regulatory guide for compliance teams.",
+  "status": "draft",
+  "structured_data": {
+    "substance_id": "4d928597-1bd9-484d-aa74-1516e345498b",
+    "unii": "04MB35W6ZA",
+    "cas_number": "7758-01-2",
+    "fda_status": "permitted",
+    "cfr_references": [
+      "21 CFR 136.110(c)(1)",
+      "21 CFR 136.110(c)(14)",
+      "21 CFR 136.180(a)(1)"
+    ],
+    "iarc_classification": "Group 2B (possibly carcinogenic to humans)",
+    "iarc_monograph_volume": 73,
+    "maximum_permitted_level": "0.0075 parts per 100 parts flour (75 ppm)",
+    "fda_review_initiated": "2024-03-04",
+    "fda_review_phase": "Review of Information",
+    "international_bans": [
+      { "jurisdiction": "European Union", "year": 1990 },
+      { "jurisdiction": "United Kingdom", "year": 1990 },
+      { "jurisdiction": "Canada", "year": 1994 },
+      { "jurisdiction": "Brazil", "year": 1998 },
+      { "jurisdiction": "China", "year": 2005 },
+      { "jurisdiction": "India", "year": 2016 },
+      { "jurisdiction": "Argentina", "year": null },
+      { "jurisdiction": "Nigeria", "year": null },
+      { "jurisdiction": "South Korea", "year": null },
+      { "jurisdiction": "Peru", "year": null },
+      { "jurisdiction": "Sri Lanka", "year": null }
+    ],
+    "codex_alimentarius_withdrawal": 2012,
+    "state_bans": [
+      "California (AB 418, effective Jan 1, 2027)"
+    ],
+    "state_school_bans": [
+      "Utah (HB 402, effective May 7, 2025)",
+      "Arizona (HB 2164, effective 2026-2027 school year)"
+    ],
+    "state_pending_bans": [
+      "New York (Food Safety and Chemical Disclosure Act, passed State Senate)",
+      "Illinois (SB 93, in second chamber)",
+      "Arkansas (SB 9, moved beyond first chamber)",
+      "Maryland (HB 1208, moved beyond first chamber)"
+    ],
+    "affected_categories": [
+      "bread-white",
+      "bread-whole-wheat",
+      "rolls-buns",
+      "baked-goods",
+      "flour",
+      "pizza-dough",
+      "flour-tortillas",
+      "crackers",
+      "frozen-dough"
+    ],
+    "key_deadlines": [
+      { "date": "2024-03-04", "label": "FDA initiates formal review of potassium bromate" },
+      { "date": "2025-05-07", "label": "Utah HB 402 school food ban takes effect" },
+      { "date": "2026-08-01", "label": "Arizona HB 2164 school food ban takes effect (2026-2027 school year)" },
+      { "date": "2027-01-01", "label": "California AB 418 statewide food ban takes effect" }
+    ],
+    "reformulation_alternatives": [
+      "Ascorbic acid (vitamin C)",
+      "Azodicarbonamide (ADA)",
+      "Enzyme-based systems (hemicellulases, glutathione oxidase)",
+      "Enzyme-ascorbic acid blends"
+    ]
+  },
+  "linked_item_ids": []
+}

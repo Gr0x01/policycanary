@@ -1,0 +1,31 @@
+{
+  "page_type": "ingredient",
+  "slug": "aspartame",
+  "title": "Aspartame: IARC Cancer Classification, FDA Response & Regulatory Outlook",
+  "excerpt": "IARC classified aspartame as Group 2B 'possibly carcinogenic' in 2023, but FDA and JECFA reaffirmed safety. Track the evolving regulatory landscape for this high-intensity sweetener.",
+  "seo_title": "Aspartame Regulatory Status: FDA, IARC & MAHA Updates",
+  "seo_description": "Comprehensive regulatory intelligence on aspartame: FDA status under 21 CFR 172.804, IARC Group 2B classification, JECFA ADI, MAHA review, and compliance guidance.",
+  "status": "draft",
+  "structured_data": {
+    "unii": "Z0H242BBR1",
+    "cas_number": "22839-47-0",
+    "fda_status": "Approved food additive (21 CFR 172.804) — general-purpose sweetener since 1996",
+    "cfr_references": ["21 CFR 172.804"],
+    "state_bans": [],
+    "affected_categories": [
+      "diet-beverages",
+      "sugar-free-confectionery",
+      "tabletop-sweeteners",
+      "sugar-free-gum",
+      "dietary-supplements",
+      "pharmaceutical-excipients",
+      "frozen-desserts",
+      "dry-beverage-mixes"
+    ],
+    "key_deadlines": [
+      { "date": "2023-07-14", "label": "IARC classifies aspartame as Group 2B; JECFA reaffirms 40mg/kg ADI" },
+      { "date": "2026-06-30", "label": "FDA 2026 Priority Deliverables: proposed GRAS notification rule and sweetener labeling assessment expected" }
+    ]
+  },
+  "linked_item_ids": []
+}

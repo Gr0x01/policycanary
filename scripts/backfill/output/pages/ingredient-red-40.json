@@ -1,0 +1,45 @@
+{
+  "page_type": "ingredient",
+  "slug": "red-40",
+  "title": "Red 40 (Allura Red AC): FDA Phase-Out, State Bans & Reformulation Guide",
+  "excerpt": "FD&C Red No. 40 is the most widely used synthetic food dye in the US, targeted for voluntary phase-out by end of 2026. State bans already in effect. Complete compliance guide.",
+  "seo_title": "Red 40 (Allura Red) FDA Status 2026: Phase-Out, State Bans & Compliance | Policy Canary",
+  "seo_description": "Red 40 (Allura Red AC) regulatory status: FDA voluntary phase-out by 2026, West Virginia ban, California school food ban, EU warning labels. Compliance steps for food companies.",
+  "status": "draft",
+  "structured_data": {
+    "substance_id": "7808db3a-8107-437f-b7aa-dd6febd96ff1",
+    "unii": "WZB9127XOA",
+    "cas_number": "25956-17-6",
+    "fda_status": "Authorized color additive (21 CFR 74.340) — voluntary phase-out by end of 2026",
+    "cfr_references": ["21 CFR 74.340", "21 CFR 74.1340", "21 CFR 74.2340"],
+    "state_bans": [
+      "West Virginia (HB 2354, school meals Aug 1, 2025; retail Jan 1, 2028 — injunction pending)",
+      "California (AB 2316, school food Dec 31, 2027)",
+      "Virginia (S 1289/H 1910, school food July 1, 2027)",
+      "Utah (HB 402, school food 2026-27 school year)",
+      "Arizona (HB 2164, school food 2026-27 school year)"
+    ],
+    "affected_categories": [
+      "candy-confections",
+      "beverages-non-alcoholic",
+      "cereals",
+      "snack-foods",
+      "baked-goods",
+      "frozen-desserts",
+      "dairy-products",
+      "sauces-condiments",
+      "dietary-supplements-general",
+      "pharmaceuticals-otc",
+      "cosmetics-general"
+    ],
+    "key_deadlines": [
+      { "date": "2025-04-22", "label": "FDA/HHS announce voluntary phase-out of 6 synthetic food dyes by end of 2026" },
+      { "date": "2025-08-01", "label": "West Virginia HB 2354 school meals ban effective" },
+      { "date": "2026-12-31", "label": "Target date for voluntary industry phase-out of Red 40 in food" },
+      { "date": "2027-07-01", "label": "Virginia S 1289/H 1910 school food ban effective" },
+      { "date": "2027-12-31", "label": "California AB 2316 school food ban effective" },
+      { "date": "2028-01-01", "label": "West Virginia HB 2354 retail food ban effective (injunction pending)" }
+    ]
+  },
+  "linked_item_ids": []
+}

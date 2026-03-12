@@ -1,0 +1,137 @@
+{
+  "page_type": "ingredient",
+  "slug": "titanium-dioxide",
+  "title": "Titanium Dioxide (TiO2): EU Ban, US Status & Global Compliance",
+  "excerpt": "Titanium dioxide is banned in EU food since August 2022 but remains an authorized color additive in the US under 21 CFR 73.575. FDA review is accelerating under MAHA pressure.",
+  "seo_title": "Titanium Dioxide FDA Status 2026: EU Ban vs US Authorization & What Companies Must Know | Policy Canary",
+  "seo_description": "Titanium dioxide regulatory status: banned in EU food (2022), permitted in US under 21 CFR 73.575. FDA review accelerating. Action steps for compliance.",
+  "status": "draft",
+  "structured_data": {
+    "substance_id": "c52a0df5-b900-49e0-88c0-aee7c8fc4dbb",
+    "unii": "15FIX9V2JP",
+    "cas_number": "13463-67-7",
+    "e_number": "E171",
+    "fda_status": "Authorized color additive (21 CFR 73.575, max 1% by weight)",
+    "eu_status": "Banned in food (Regulation (EU) 2022/63, effective August 2022); permitted in pharmaceuticals",
+    "state_bans": [],
+    "international_reviews": [
+      {
+        "jurisdiction": "EU",
+        "status": "Banned in food",
+        "effective_date": "2022-08-07",
+        "regulation": "Commission Regulation (EU) 2022/63"
+      },
+      {
+        "jurisdiction": "US",
+        "status": "Authorized",
+        "regulation": "21 CFR 73.575",
+        "under_review": true,
+        "review_context": "FDA expedited review; MAHA report; citizen petition FDA-2023-C-1487; Food Chemical Reassessment Act of 2025 (H.R. 4306)"
+      },
+      {
+        "jurisdiction": "Australia",
+        "status": "Authorized"
+      },
+      {
+        "jurisdiction": "Canada",
+        "status": "Authorized"
+      },
+      {
+        "jurisdiction": "Japan",
+        "status": "Authorized"
+      },
+      {
+        "jurisdiction": "UK",
+        "status": "Authorized"
+      },
+      {
+        "jurisdiction": "Brazil",
+        "status": "Authorized"
+      },
+      {
+        "jurisdiction": "New Zealand",
+        "status": "Authorized"
+      }
+    ],
+    "affected_categories": [
+      "candy-confections",
+      "baked-goods",
+      "dairy-products",
+      "frozen-desserts",
+      "snack-foods",
+      "baby-food",
+      "dietary-supplements-general",
+      "cosmetics-general",
+      "pharmaceuticals-otc",
+      "sun-care",
+      "skin-care"
+    ],
+    "key_regulations": [
+      "21 CFR 73.575",
+      "21 CFR 73.1575",
+      "21 CFR 73.2575",
+      "21 CFR 352",
+      "Commission Regulation (EU) 2022/63"
+    ],
+    "key_deadlines": [
+      {
+        "date": "2022-08-07",
+        "label": "EU food ban fully effective (Regulation 2022/63)"
+      },
+      {
+        "date": "2027-01-01",
+        "label": "California Food Safety Act effective (TiO2 excluded but related additives banned)"
+      }
+    ],
+    "key_events": [
+      {
+        "date": "2021-05-06",
+        "description": "EFSA publishes safety assessment concluding genotoxicity concern cannot be ruled out"
+      },
+      {
+        "date": "2022-01-14",
+        "description": "European Commission adopts Regulation (EU) 2022/63 banning E171 in food"
+      },
+      {
+        "date": "2022-08-07",
+        "description": "EU food ban fully effective; no new products with E171 permitted"
+      },
+      {
+        "date": "2022-08-01",
+        "description": "FDA reaffirms safety of TiO2 for food use under 21 CFR 73.575"
+      },
+      {
+        "date": "2023-10-07",
+        "description": "California AB 418 signed without TiO2 (removed during legislative process)"
+      },
+      {
+        "date": "2024-12-31",
+        "description": "Mars removes TiO2 from US Skittles production"
+      },
+      {
+        "date": "2025-05-22",
+        "description": "MAHA report names TiO2 as food chemical of potential concern"
+      },
+      {
+        "date": "2025-07-01",
+        "description": "Food Chemical Reassessment Act of 2025 (H.R. 4306) introduced, listing TiO2 as first-priority for FDA reassessment"
+      },
+      {
+        "date": "2025-08-04",
+        "description": "EU Commission issues SWD confirming continued TiO2 authorization in pharmaceuticals (EMA review)"
+      }
+    ],
+    "related_topics": [
+      "synthetic-food-dyes",
+      "gras-reform",
+      "eu-food-additives",
+      "california-food-safety-act",
+      "maha-food-chemicals"
+    ]
+  },
+  "linked_item_ids": [
+    { "item_id": "5f936d44-6bc1-4129-bce4-d5493afff77f", "relevance": "supporting" },
+    { "item_id": "d4012c53-04f8-4cd6-9935-c04778e7024f", "relevance": "supporting" },
+    { "item_id": "ebb1c896-e92f-41e5-bdcc-af96a2823928", "relevance": "mentioned" }
+  ]
+}

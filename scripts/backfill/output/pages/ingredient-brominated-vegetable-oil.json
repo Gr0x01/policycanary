@@ -1,0 +1,61 @@
+{
+  "page_type": "ingredient",
+  "slug": "brominated-vegetable-oil",
+  "title": "Brominated Vegetable Oil (BVO): FDA Revocation, State Bans, and What It Means for Beverage Companies",
+  "excerpt": "BVO became the first food additive the FDA revoked in decades when it finalized 21 CFR 180.30 removal in July 2024. With the compliance deadline passed in August 2025 and California AB 418 enforcement looming in 2027, beverage manufacturers face a new enforcement reality.",
+  "status": "draft",
+  "seo_title": "Brominated Vegetable Oil (BVO) FDA Ban: Regulatory Status, Deadlines & Compliance Guide",
+  "seo_description": "BVO was revoked by the FDA in July 2024 with an August 2025 compliance deadline. Learn about the regulatory history, California AB 418, international bans, and what beverage companies must do now.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "93WH4D2435",
+    "cas_number": "8016-94-2",
+    "fda_status": "revoked",
+    "cfr_references": ["21 CFR 180.30"],
+    "state_bans": [
+      {
+        "state": "California",
+        "law": "AB 418 (California Food Safety Act)",
+        "effective_date": "2027-01-01",
+        "status": "enacted"
+      }
+    ],
+    "affected_categories": [
+      "citrus_flavored_beverages",
+      "sports_drinks",
+      "fruit_flavored_soft_drinks"
+    ],
+    "key_deadlines": [
+      {
+        "label": "FDA proposed rule published (NPRM)",
+        "date": "2023-11-03",
+        "type": "federal"
+      },
+      {
+        "label": "California AB 418 signed into law",
+        "date": "2023-10-07",
+        "type": "state"
+      },
+      {
+        "label": "FDA final rule published (89 FR 55040)",
+        "date": "2024-07-03",
+        "type": "federal"
+      },
+      {
+        "label": "FDA final rule effective date",
+        "date": "2024-08-02",
+        "type": "federal"
+      },
+      {
+        "label": "FDA compliance deadline — BVO no longer permitted in food",
+        "date": "2025-08-02",
+        "type": "federal"
+      },
+      {
+        "label": "California AB 418 enforcement begins",
+        "date": "2027-01-01",
+        "type": "state"
+      }
+    ]
+  }
+}

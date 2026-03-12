@@ -1,0 +1,42 @@
+{
+  "page_type": "ingredient",
+  "slug": "blue-2",
+  "title": "FD&C Blue No. 2 (Indigotine): FDA Phase-Out, State Bans & Compliance Guide",
+  "excerpt": "FD&C Blue No. 2 faces voluntary FDA phase-out by end of 2027, state-level school bans in 5 states, and growing reformulation pressure. What companies need to know now.",
+  "seo_title": "FD&C Blue No. 2: FDA Phase-Out & State Bans Guide",
+  "seo_description": "Track FDA's voluntary phase-out of FD&C Blue No. 2 (Indigotine), state bans in CA, WV, VA, UT, AZ, EU status, and natural alternatives for compliance.",
+  "status": "draft",
+  "structured_data": {
+    "unii": "D3741U8K7L",
+    "cas_number": "860-22-0",
+    "fda_status": "Authorized color additive (21 CFR 74.102) — voluntary phase-out by end of 2027",
+    "cfr_references": ["21 CFR 74.102", "21 CFR 74.1102", "21 CFR 74.2102", "21 CFR 74.3102"],
+    "state_bans": [
+      "West Virginia HB 2354 (school meals Aug 2025, retail Jan 2028 — injunction pending)",
+      "California AB 2316 (school food, Dec 31, 2027)",
+      "Virginia SB 1289 (school food, Jul 1, 2027)",
+      "Utah HB 402 (school food, May 7, 2025)",
+      "Arizona HB 2164 (school food, 2026-2027 school year)"
+    ],
+    "affected_categories": [
+      "confectionery",
+      "baked-goods",
+      "ice-cream-frozen-desserts",
+      "cereals",
+      "snack-foods",
+      "beverages",
+      "dietary-supplements",
+      "pet-food",
+      "pharmaceuticals-otc",
+      "cosmetics-general"
+    ],
+    "key_deadlines": [
+      { "date": "2025-05-07", "label": "Utah HB 402 school food ban effective" },
+      { "date": "2025-08-01", "label": "West Virginia HB 2354 school meals ban effective" },
+      { "date": "2027-07-01", "label": "Virginia SB 1289 school food ban effective" },
+      { "date": "2027-12-31", "label": "California AB 2316 school food ban effective; FDA voluntary phase-out target" },
+      { "date": "2028-01-01", "label": "West Virginia HB 2354 statewide retail ban effective (currently enjoined)" }
+    ]
+  },
+  "linked_item_ids": []
+}

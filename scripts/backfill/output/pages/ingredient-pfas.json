@@ -1,0 +1,44 @@
+{
+  "page_type": "ingredient",
+  "slug": "pfas",
+  "title": "PFAS (Per- and Polyfluoroalkyl Substances) in Food & Cosmetics: Regulatory Intelligence",
+  "excerpt": "Comprehensive regulatory tracker for PFAS in food contact materials, food packaging, and cosmetics. Covers the FDA voluntary phase-out, 15+ state bans, MoCRA cosmetics report, EU REACH restriction proposal, and EPA drinking water limits.",
+  "status": "draft",
+  "seo_title": "PFAS Regulation Tracker: FDA Food Packaging & Cosmetics | Policy Canary",
+  "seo_description": "Track PFAS regulations affecting food companies: FDA voluntary phase-out complete, 15+ state bans on food packaging, cosmetics PFAS bans in 5+ states, EU REACH restriction, and EPA drinking water limits. Updated March 2026.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": null,
+    "cas_number": null,
+    "fda_status": "phase_out_complete",
+    "state_bans": [
+      { "state": "California", "scope": "food_packaging", "effective": "2023-01-01", "law": "AB 1200" },
+      { "state": "California", "scope": "cosmetics", "effective": "2025-01-01", "law": "AB 2771" },
+      { "state": "New York", "scope": "food_packaging", "effective": "2022-12-31", "law": "S8817" },
+      { "state": "Maine", "scope": "food_packaging_and_all_products_2030", "effective": "2023-01-01", "law": "LD 1503" },
+      { "state": "Vermont", "scope": "food_packaging", "effective": "2023-07-01", "law": "S.20" },
+      { "state": "Connecticut", "scope": "food_packaging", "effective": "2023-01-01", "law": "SB 837" },
+      { "state": "Washington", "scope": "food_packaging", "effective": "2023-01-01", "law": "HB 1648" },
+      { "state": "Colorado", "scope": "food_packaging_and_cosmetics", "effective": "2024-01-01", "law": "HB 22-1345" },
+      { "state": "Maryland", "scope": "cosmetics", "effective": "2025-01-01", "law": "HB 643" },
+      { "state": "Minnesota", "scope": "food_packaging", "effective": "2025-01-01", "law": "Amara's Law" },
+      { "state": "Oregon", "scope": "food_packaging", "effective": "2025-01-01", "law": "HB 3043" },
+      { "state": "Rhode Island", "scope": "food_packaging", "effective": "2025-01-01", "law": "H 7438" }
+    ],
+    "affected_categories": [
+      "food-packaging",
+      "food-contact-materials",
+      "cosmetics-general",
+      "cookware",
+      "dietary-supplements-general"
+    ],
+    "key_deadlines": [
+      { "label": "35 FDA food contact notifications for PFAS revoked", "date": "2025-01-06", "type": "federal" },
+      { "label": "FDA compliance deadline for existing PFAS food packaging stock", "date": "2025-06-30", "type": "federal" },
+      { "label": "FDA published MoCRA PFAS in cosmetics safety report", "date": "2025-12-29", "type": "federal" },
+      { "label": "Illinois PFAS food packaging ban takes effect", "date": "2026-01-01", "type": "state" },
+      { "label": "ECHA target for completing EU PFAS restriction evaluation", "date": "2026-12-31", "type": "international" },
+      { "label": "Maine: PFAS banned in ALL products sold in state", "date": "2030-01-01", "type": "state" }
+    ]
+  }
+}

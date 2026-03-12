@@ -1,0 +1,38 @@
+{
+  "page_type": "ingredient",
+  "slug": "bha",
+  "title": "BHA (Butylated Hydroxyanisole): FDA Reassessment, Carcinogen Classification & State Bans",
+  "excerpt": "BHA is under formal FDA post-market reassessment as of February 2026. Listed as a carcinogen by NTP and IARC. Banned in West Virginia (injunction pending). Complete compliance guide.",
+  "seo_title": "BHA FDA Reassessment 2026: Carcinogen Status, West Virginia Ban & Compliance | Policy Canary",
+  "seo_description": "BHA (butylated hydroxyanisole) regulatory status: FDA reassessment underway, NTP carcinogen listing, IARC Group 2B, West Virginia ban, Prop 65. Action steps for food companies.",
+  "status": "draft",
+  "structured_data": {
+    "unii": "REK4960K2U",
+    "cas_number": "25013-16-5",
+    "fda_status": "GRAS (21 CFR 182.3169) and food additive (21 CFR 172.110) — under formal reassessment",
+    "cfr_references": ["21 CFR 182.3169", "21 CFR 172.110", "21 CFR 175-178"],
+    "carcinogen_classifications": [
+      "NTP: Reasonably anticipated to be a human carcinogen (since 1991, reaffirmed 2021)",
+      "IARC: Group 2B — Possibly carcinogenic to humans (1987, Supplement 7)",
+      "California Prop 65: Known carcinogen (since January 1, 1990)"
+    ],
+    "state_bans": [
+      "West Virginia (HB 2354, retail ban Jan 1, 2028 — preliminary injunction Dec 2025)"
+    ],
+    "affected_categories": [
+      "cereals",
+      "snack-foods",
+      "baked-goods",
+      "fats-oils",
+      "food-packaging",
+      "cosmetics-general",
+      "pharmaceuticals-otc"
+    ],
+    "key_deadlines": [
+      { "date": "2026-02-11", "label": "FDA publishes Request for Information on BHA safety (91 FR 6227, Docket FDA-2026-N-0302)" },
+      { "date": "2026-04-13", "label": "FDA public comment deadline on BHA reassessment" },
+      { "date": "2028-01-01", "label": "West Virginia HB 2354 retail BHA ban effective (preliminary injunction pending)" }
+    ]
+  },
+  "linked_item_ids": []
+}

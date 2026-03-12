@@ -1,0 +1,56 @@
+{
+  "page_type": "ingredient",
+  "slug": "cbd-cannabidiol",
+  "title": "CBD (Cannabidiol): FDA Regulation, Warning Letters & Compliance Guide",
+  "excerpt": "CBD remains illegal in food and dietary supplements under federal law despite widespread availability. Track FDA enforcement, Section 781 changes, and the legislative path forward.",
+  "seo_title": "CBD FDA Regulation 2026: Warning Letters, Legal Status & Compliance | Policy Canary",
+  "seo_description": "Comprehensive guide to CBD's FDA regulatory status, 53+ warning letters, Section 781 hemp changes, the HEMP Act, and compliance steps for food and supplement companies.",
+  "status": "draft",
+  "structured_data": {
+    "substance_id": "4adc315a-9a27-4cb8-bc4d-13c8456fc421",
+    "unii": "19GBJ60SN5",
+    "fda_status": "not approved for food/supplements",
+    "state_bans": [],
+    "affected_categories": [
+      "dietary-supplements-general",
+      "beverages-non-alcoholic",
+      "topical-cosmetics",
+      "functional-foods",
+      "candy-confections",
+      "pet-foods",
+      "skin-care",
+      "body-care"
+    ],
+    "key_deadlines": [
+      {
+        "date": "2023-01-26",
+        "label": "FDA concluded existing frameworks not appropriate for CBD; denied citizen petitions"
+      },
+      {
+        "date": "2025-11-12",
+        "label": "Section 781 enacted — new hemp definition with one-year transition period"
+      },
+      {
+        "date": "2026-02-10",
+        "label": "FDA deadline to publish cannabinoid classification lists (90 days post-enactment — missed)"
+      },
+      {
+        "date": "2026-11-12",
+        "label": "Section 781 takes full effect — total THC standard, 0.4 mg/container cap"
+      }
+    ],
+    "last_enforcement_date": "2025-09-02"
+  },
+  "linked_item_ids": [
+    { "item_id": "1547a475-fdcd-4498-a2b8-c333b45c6a57", "relevance": "primary" },
+    { "item_id": "11cc5cec-ebcb-4101-932f-8f4b1a924d96", "relevance": "primary" },
+    { "item_id": "2404e852-e234-406e-9904-7a08474ebd63", "relevance": "supporting" },
+    { "item_id": "d4d73e78-e9a2-4e76-9d3a-6681d2c202ec", "relevance": "supporting" },
+    { "item_id": "0f081f6d-3a04-4c2d-812d-7d8d4a7cb2e5", "relevance": "supporting" },
+    { "item_id": "5c1f9678-bd5b-4091-815e-d02142468e48", "relevance": "supporting" },
+    { "item_id": "a33083fa-7d17-40b9-a8e8-8a55aef5c5d8", "relevance": "mentioned" },
+    { "item_id": "a5d09c33-69da-4e6f-9e94-b092849ecbda", "relevance": "mentioned" },
+    { "item_id": "71fb2e21-7e54-4d3c-8cb5-6f6acaf7c4db", "relevance": "mentioned" },
+    { "item_id": "c1f8065a-5202-4ac5-85b8-5c07a0463e33", "relevance": "mentioned" }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "page_type": "ingredient",
+  "slug": "formaldehyde",
+  "title": "Formaldehyde: FDA Regulatory Status, State Bans & Global Restrictions",
+  "excerpt": "Formaldehyde is an IARC Group 1 carcinogen facing an accelerating patchwork of state bans in cosmetics, a repeatedly delayed federal proposed rule, active mass tort litigation with 11,400+ pending cases, and an August 2026 EU REACH deadline. Here is what FDA-regulated companies need to know.",
+  "status": "draft",
+  "seo_title": "Formaldehyde FDA Status & Bans (2026) | Regulatory Intelligence",
+  "seo_description": "Track formaldehyde's FDA regulatory status, state cosmetic bans (CA, WA, MD), the delayed federal proposed rule, EU REACH 2026 deadline, hair straightener litigation, and MoCRA implications.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "1HG84L3525",
+    "cas_number": "50-00-0",
+    "fda_status": "proposed_ban_delayed",
+    "cfr_references": [
+      "21 CFR 175.105",
+      "21 CFR 177.1460",
+      "21 CFR 177.1900",
+      "21 CFR 173.340"
+    ],
+    "state_bans": [
+      {
+        "state": "California",
+        "law": "AB 2762 (Toxic-Free Cosmetics Act)",
+        "effective_date": "2025-01-01",
+        "scope": "Formaldehyde, paraformaldehyde, and methylene glycol banned in cosmetics"
+      },
+      {
+        "state": "Maryland",
+        "law": "HB 643",
+        "effective_date": "2025-01-01",
+        "scope": "Formaldehyde banned in cosmetics"
+      },
+      {
+        "state": "Colorado",
+        "law": "HB 22-1345",
+        "effective_date": "2025-01-01",
+        "scope": "Formaldehyde banned in cosmetics"
+      },
+      {
+        "state": "Washington",
+        "law": "Toxic-Free Cosmetics Act + WAC 173-399",
+        "effective_date": "2027-01-01",
+        "scope": "Formaldehyde and 25 formaldehyde-releasing chemicals banned in cosmetics"
+      }
+    ],
+    "affected_categories": [
+      "hair-care",
+      "skin-care",
+      "nail-products",
+      "cosmetics-general",
+      "food-contact-materials"
+    ],
+    "key_deadlines": [
+      {
+        "label": "California & Maryland cosmetic bans effective",
+        "date": "2025-01-01",
+        "type": "state"
+      },
+      {
+        "label": "FDA proposed rule deadline (missed — 6th delay)",
+        "date": "2025-12-31",
+        "type": "federal"
+      },
+      {
+        "label": "MDL 3060 bellwether case selection deadline",
+        "date": "2026-04-01",
+        "type": "legal"
+      },
+      {
+        "label": "EU REACH Annex XVII Entry 77 — formaldehyde emission limits enforceable",
+        "date": "2026-08-06",
+        "type": "international"
+      },
+      {
+        "label": "Washington formaldehyde-releasing chemicals ban effective",
+        "date": "2027-01-01",
+        "type": "state"
+      }
+    ]
+  }
+}

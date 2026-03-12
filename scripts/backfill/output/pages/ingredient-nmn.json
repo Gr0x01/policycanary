@@ -1,0 +1,53 @@
+{
+  "page_type": "ingredient",
+  "slug": "nmn",
+  "title": "NMN (Nicotinamide Mononucleotide): FDA Drug Preclusion Reversal & Supplement Status",
+  "excerpt": "After a three-year regulatory battle, the FDA reversed its drug preclusion determination for NMN in September 2025, confirming it is lawful in dietary supplements. Here is everything regulatory professionals need to know.",
+  "status": "draft",
+  "seo_title": "NMN FDA Status 2026: Drug Preclusion Reversal, NPA Lawsuit & NDI Requirements",
+  "seo_description": "Complete regulatory intelligence on NMN (nicotinamide mononucleotide). FDA reversed its drug preclusion ruling in September 2025. NDI notification requirements, international status, and compliance guidance for supplement companies.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "1094N0V2PA",
+    "cas_number": "1094-61-7",
+    "fda_status": "lawful_dietary_ingredient",
+    "state_bans": [],
+    "affected_categories": [
+      "dietary-supplements-general",
+      "anti-aging-supplements",
+      "sports-nutrition"
+    ],
+    "key_deadlines": [
+      {
+        "label": "FDA issued drug preclusion exclusion for NMN",
+        "date": "2022-11-04",
+        "type": "federal"
+      },
+      {
+        "label": "NPA/ANH filed citizen petition (FDA-2023-P-0872)",
+        "date": "2023-03-07",
+        "type": "federal"
+      },
+      {
+        "label": "NPA files lawsuit against FDA in DC District Court",
+        "date": "2024-08-28",
+        "type": "legal"
+      },
+      {
+        "label": "FDA reverses position — NMN declared lawful in dietary supplements",
+        "date": "2025-09-29",
+        "type": "federal"
+      },
+      {
+        "label": "FDA reinstates NDI status — letters to SyncoZymes and Kingdomway",
+        "date": "2025-12-02",
+        "type": "federal"
+      },
+      {
+        "label": "Australia TGA approves NMN (2-year exclusivity to SyncoZymes)",
+        "date": "2025-12-10",
+        "type": "international"
+      }
+    ]
+  }
+}

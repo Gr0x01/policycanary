@@ -1,0 +1,43 @@
+{
+  "page_type": "ingredient",
+  "slug": "yellow-6",
+  "title": "Yellow No. 6 (Sunset Yellow): FDA Phase-Out, State Bans & Contaminant Concerns",
+  "excerpt": "FD&C Yellow No. 6 is targeted for voluntary phase-out by end of 2026. State school food bans already in effect. EU mandatory warning labels since 2010. Compliance guide for food and pharma companies.",
+  "seo_title": "Yellow No. 6 (Sunset Yellow) FDA Status 2026: Phase-Out, State Bans & Compliance | Policy Canary",
+  "seo_description": "Yellow No. 6 (Sunset Yellow FCF) regulatory status: FDA voluntary phase-out, West Virginia ban, California school food ban, EU warning labels, contaminant concerns. Compliance steps.",
+  "status": "draft",
+  "structured_data": {
+    "unii": "GR3583FMH3",
+    "cas_number": "2783-94-0",
+    "e_number": "E110",
+    "fda_status": "Authorized color additive (21 CFR 74.706) — voluntary phase-out by end of 2026",
+    "cfr_references": ["21 CFR 74.706", "21 CFR 74.1706", "21 CFR 74.2706"],
+    "state_bans": [
+      "West Virginia (HB 2354, school meals Aug 1, 2025; retail Jan 1, 2028 — injunction pending)",
+      "California (AB 2316, school food Dec 31, 2027)",
+      "Virginia (S 1289/H 1910, school food July 1, 2027)",
+      "Utah (HB 402, school food 2026-27 school year)",
+      "Arizona (HB 2164, school food 2026-27 school year)"
+    ],
+    "affected_categories": [
+      "candy-confections",
+      "beverages-non-alcoholic",
+      "cereals",
+      "snack-foods",
+      "baked-goods",
+      "sauces-condiments",
+      "dietary-supplements-general",
+      "pharmaceuticals-otc",
+      "cosmetics-general"
+    ],
+    "key_deadlines": [
+      { "date": "2025-04-22", "label": "FDA/HHS announce voluntary phase-out of 6 synthetic food dyes by end of 2026" },
+      { "date": "2025-08-01", "label": "West Virginia HB 2354 school meals ban effective" },
+      { "date": "2026-12-31", "label": "Target date for voluntary industry phase-out of Yellow No. 6 in food" },
+      { "date": "2027-07-01", "label": "Virginia S 1289/H 1910 school food ban effective" },
+      { "date": "2027-12-31", "label": "California AB 2316 school food ban effective" },
+      { "date": "2028-01-01", "label": "West Virginia HB 2354 retail food ban effective (injunction pending)" }
+    ]
+  },
+  "linked_item_ids": []
+}

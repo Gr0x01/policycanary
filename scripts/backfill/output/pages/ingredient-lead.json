@@ -1,0 +1,78 @@
+{
+  "page_type": "ingredient",
+  "slug": "lead",
+  "title": "Lead in Food, Supplements, and Cosmetics: FDA Regulatory Intelligence",
+  "excerpt": "Lead is a toxic heavy metal that contaminates food, dietary supplements, and cosmetics through environmental exposure, processing equipment, and occasionally deliberate adulteration. FDA's Closer to Zero initiative is setting action levels for baby food, juice, and candy, while the 2023 WanaBana applesauce recall exposed systemic failures in spice supply chain oversight.",
+  "status": "draft",
+  "seo_title": "Lead Contamination in Food & Cosmetics — FDA Regulations, Action Levels & Deadlines",
+  "seo_description": "Comprehensive regulatory intelligence on lead as a contaminant in food, baby food, dietary supplements, and cosmetics. Covers FDA Closer to Zero action levels, Prop 65 limits, WanaBana recall, and compliance deadlines.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": "2P299V784P",
+    "cas_number": "7439-92-1",
+    "fda_status": "regulated_contaminant",
+    "cfr_references": [
+      "21 CFR 109",
+      "21 CFR 117",
+      "21 CFR 111",
+      "21 CFR 1.500-1.514"
+    ],
+    "state_bans": [
+      {
+        "state": "California",
+        "law": "Proposition 65",
+        "detail": "MADL 0.5 mcg/day (reproductive), NSRL 15 mcg/day (cancer)",
+        "effective": "1986-11-01"
+      },
+      {
+        "state": "Vermont",
+        "law": "Act 39 — Cosmetics regulation",
+        "detail": "Prohibits intentionally added lead in cosmetics",
+        "effective": "2026-01-01"
+      }
+    ],
+    "affected_categories": [
+      "baby-food",
+      "infant-formula",
+      "fruit-juice",
+      "candy-confections",
+      "spices-seasonings",
+      "dietary-supplements-general",
+      "cosmetics-lip-products",
+      "root-vegetables",
+      "cocoa-chocolate"
+    ],
+    "key_deadlines": [
+      {
+        "label": "FDA finalized action levels for lead in baby food (10-20 ppb by category)",
+        "date": "2025-01-06",
+        "type": "federal"
+      },
+      {
+        "label": "FDA draft action levels for lead in juice (10 ppb apple, 20 ppb other) — finalization expected",
+        "date": "2025-12-31",
+        "type": "federal"
+      },
+      {
+        "label": "Vermont ban on intentionally added lead in cosmetics takes effect",
+        "date": "2026-01-01",
+        "type": "state"
+      },
+      {
+        "label": "FDA Closer to Zero Phase 2: cadmium and inorganic arsenic action levels for baby food",
+        "date": "2026-12-31",
+        "type": "federal"
+      },
+      {
+        "label": "EU Regulation 2023/915 contaminant limits in force (includes lead MLs)",
+        "date": "2023-05-25",
+        "type": "international"
+      },
+      {
+        "label": "Codex CCCF17 adopted new maximum limits for lead in spices",
+        "date": "2024-04-19",
+        "type": "international"
+      }
+    ]
+  }
+}

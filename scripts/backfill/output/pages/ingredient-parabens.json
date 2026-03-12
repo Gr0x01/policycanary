@@ -1,0 +1,41 @@
+{
+  "page_type": "ingredient",
+  "slug": "parabens",
+  "title": "Parabens: FDA Status, State Bans & Global Restrictions for Food and Cosmetics",
+  "excerpt": "Parabens face a rapidly shifting regulatory landscape — from California's food and cosmetics bans to EU concentration limits and 20+ state-level restrictions. Here's what food and cosmetics companies need to know.",
+  "status": "draft",
+  "seo_title": "Parabens Regulatory Status 2026 | FDA, State Bans & EU Restrictions",
+  "seo_description": "Comprehensive regulatory intelligence on parabens (methylparaben, propylparaben, butylparaben) in food and cosmetics. FDA GRAS status, California AB 418 & AB 2762 bans, EU limits, MoCRA implications, and compliance deadlines.",
+  "structured_data": {
+    "substance_id": null,
+    "unii": null,
+    "cas_number": "99-76-3 (methyl), 120-47-8 (ethyl), 94-13-3 (propyl), 94-26-8 (butyl), 4191-73-5 (isopropyl), 4247-02-3 (isobutyl)",
+    "fda_status": "GRAS (food: methylparaben 21 CFR 184.1490, propylparaben 21 CFR 184.1670); no premarket approval required for cosmetics under MoCRA",
+    "state_bans": [
+      { "state": "California", "law": "AB 2762 (Toxic-Free Cosmetics Act)", "scope": "Cosmetics — isopropylparaben and isobutylparaben banned", "effective": "2025-01-01" },
+      { "state": "California", "law": "AB 418 (California Food Safety Act)", "scope": "Food — propylparaben banned", "effective": "2027-01-01" },
+      { "state": "Maryland", "law": "HB 643", "scope": "Cosmetics — parabens banned", "effective": "2025-01-01" },
+      { "state": "Washington", "law": "Toxic-Free Cosmetics Act", "scope": "Cosmetics — parabens banned", "effective": "2025-01-01" },
+      { "state": "Vermont", "law": "S.25", "scope": "Cosmetics — parabens banned", "effective": "2026-01-01" },
+      { "state": "Oregon", "law": "SB 546 (Toxic-Free Cosmetics Act)", "scope": "Cosmetics — parabens banned", "effective": "2027-01-01" }
+    ],
+    "affected_categories": [
+      "cosmetics_skin_care",
+      "cosmetics_hair_care",
+      "cosmetics_makeup",
+      "food_baked_goods",
+      "food_beverages",
+      "food_condiments_and_sauces",
+      "food_frozen_desserts",
+      "food_processed_fruits_and_vegetables",
+      "supplement_softgels_capsules"
+    ],
+    "key_deadlines": [
+      { "date": "2025-01-01", "event": "California AB 2762 — isopropylparaben and isobutylparaben banned in cosmetics", "type": "state_ban" },
+      { "date": "2025-01-01", "event": "Maryland HB 643 and Washington Toxic-Free Cosmetics Act — paraben bans in cosmetics", "type": "state_ban" },
+      { "date": "2026-01-01", "event": "Vermont S.25 — paraben ban in cosmetics", "type": "state_ban" },
+      { "date": "2027-01-01", "event": "California AB 418 — propylparaben banned in food products", "type": "state_ban" },
+      { "date": "2027-01-01", "event": "Oregon SB 546 — paraben ban in cosmetics", "type": "state_ban" }
+    ]
+  }
+}
