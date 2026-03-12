@@ -124,7 +124,20 @@ One surprising fact from our database. No blog link needed.
 - Pure product pitches — LinkedIn penalizes obvious ads
 - Emojis or bullet-point emoji lists
 
-## Step 3.5 — Verify Accuracy
+## Step 3.5 — Humanize Pass
+
+Before fact-checking, run the anti-slop audit. Read `anti-slop.md` and apply the full checklist:
+
+1. Search draft for every banned word and phrase. Replace or cut.
+2. Check for em dashes — replace with commas or parentheses.
+3. Check for rule-of-three structures — break them up.
+4. Check for -ing analysis phrases at end of sentences — cut them.
+5. Check for negative parallelism ("not just X, it's Y") — rewrite.
+6. Check for copula avoidance ("serves as", "stands as") — use "is."
+7. Vary sentence length. If it reads like a list of same-length bullets, rewrite.
+8. Read it out loud. If it sounds like corporate speak, rewrite it like a person talking.
+
+## Step 3.6 — Verify Accuracy
 
 Before posting for review, run the fact-checker to catch errors. This uses a **different AI model** (Gemini) to independently verify claims — it has never seen the content before.
 

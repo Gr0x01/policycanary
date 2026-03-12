@@ -1,7 +1,7 @@
 ---
 Last-Updated: 2026-03-12
 Maintainer: RB
-Status: Active — Running on Pi 5 (clawd). Vultr DESTROYED. Autonomy upgrade deployed (proactive-agent patterns).
+Status: Active — Running on Pi 5 (clawd). Vultr DESTROYED. Autonomy upgrade deployed. Humanization pass added to all content skills.
 ---
 
 # Anton (formerly Clawdbot) Reference
@@ -129,9 +129,10 @@ Skill file: `skills/agent-browser/SKILL.md`. Prefer over built-in OpenClaw Playw
 | `generate-image.mjs` | AI-generated images | `--prompt TEXT`, `--output PATH` | Google Gemini (`gemini-3-pro-image-preview`) |
 
 ### Quality
-| Script | Purpose | Key Flags | API |
+| Script / File | Purpose | Key Flags | API |
 |--------|---------|-----------|-----|
 | `verify-content.mjs` | Second-pass fact-checking (different model verifies content) | `--content-file PATH`, `--content-type {blog|intelligence|linkedin}`, `--verbose` | Google Gemini (Flash extraction + Pro grounding via Google Search) + optional Supabase cross-ref |
+| `anti-slop.md` | Humanization guide — 24 AI writing patterns to detect and fix (based on Wikipedia "Signs of AI writing"). Banned words, phrases, sentence patterns, formatting tells. Includes 10-step humanize pass checklist. | Read before any content draft | N/A (reference doc) |
 
 ### Publishing
 | Script | Purpose | Key Flags | API |
@@ -213,6 +214,9 @@ GOOGLE_GENERATIVE_AI_API_KEY=...     # For image generation
     SESSION-STATE.md          # Active working memory (read first, update last every heartbeat)
     HEARTBEAT.md             # Work queue (Rashaad's tasks + Anton's Queue)
     TACIT.md                 # Corrections, patterns, autonomy calibration
+    anti-slop.md             # Humanization guide (24 AI writing patterns, banned words/phrases, checklist)
+    brand-pc.md              # Policy Canary brand voice
+    brand-finch.md           # Finch brand voice
     memory/
       working-buffer.md      # Danger zone log (activates at 60% context)
       YYYY-MM-DD.md          # Daily notes
@@ -296,6 +300,8 @@ ssh gr0x@10.2.0.40 sudo systemctl restart anton.service
 ## Content Workflow (Context-Aware — Upgraded 2026-03-12)
 
 All crons now read SESSION-STATE.md first and decide whether the scheduled task is the highest-value use of the time slot. Anton can pivot with reasoning posted to #anton.
+
+**Content quality pipeline (all content skills):** Draft → Humanize Pass (anti-slop.md audit) → Fact-check (verify-content.mjs) → Post to Slack for review.
 
 ### Weekly Roundup (Friday 9AM)
 1. Reads SESSION-STATE.md for prep context (nightly review pre-stages item counts)
