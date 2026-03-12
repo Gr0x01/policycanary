@@ -206,9 +206,9 @@ The food dye phase-out affects a broad swath of the consumer products industry. 
 
 9. **Reformulate nationally, not state by state.** The patchwork of state laws makes a single national formulation the most cost-effective approach for most companies. Reformulating only for California creates ongoing SKU management complexity.
 
-9. **Watch the Fourth Circuit.** The West Virginia case (IACM v. West Virginia) could determine whether states can effectively ban FDA-approved color additives. The outcome will influence legislative strategy in dozens of states with pending bills.
+10. **Watch the Fourth Circuit.** The West Virginia case (IACM v. West Virginia) could determine whether states can effectively ban FDA-approved color additives. The outcome will influence legislative strategy in dozens of states with pending bills.
 
-10. **Prepare for the voluntary-to-mandatory transition.** If voluntary industry compliance falls short of the administration's end-of-2026 target, formal rulemaking becomes more likely. Companies that have already reformulated will have a competitive advantage; those that have not will face compressed timelines.
+11. **Prepare for the voluntary-to-mandatory transition.** If voluntary industry compliance falls short of the administration's end-of-2026 target, formal rulemaking becomes more likely. Companies that have already reformulated will have a competitive advantage; those that have not will face compressed timelines.
 
 
 ## Policy Canary Intelligence

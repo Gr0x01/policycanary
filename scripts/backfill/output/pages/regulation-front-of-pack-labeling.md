@@ -204,7 +204,7 @@ Industry reaction to the proposed rule has been sharply divided.
 ## Regulatory References
 
 - **Proposed Rule**: 90 FR 5426 (January 16, 2025) — [Federal Register](https://www.federalregister.gov/documents/2025/01/16/2025-00778/food-labeling-front-of-package-nutrition-information)
-- **Comment Period Extension**: 90 FR 20157 (May 9, 2025) — [Federal Register](https://www.federalregister.gov/documents/2025/05/09/2025-08204/food-labeling-front-of-package-nutrition-information-extension-of-comment-period)
+- **Comment Period Extension**: 90 FR 19664 (May 9, 2025) — [Federal Register](https://www.federalregister.gov/documents/2025/05/09/2025-08204/food-labeling-front-of-package-nutrition-information-extension-of-comment-period)
 - **Docket**: FDA-2024-N-2910 — [Regulations.gov](https://www.regulations.gov)
 - **CFR**: 21 CFR Part 101 (Food Labeling)
 - **FDA FOP Labeling Hub**: [FDA.gov](https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/front-package-nutrition-labeling)
