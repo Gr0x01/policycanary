@@ -1,19 +1,19 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-09
+last-updated: 2026-03-12
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Phase 2 fetchers shipped (7 FDA sources now). Consultant outreach in progress. LinkedIn content automation live.
+status: Active — Anton autonomy upgrade deployed. Intelligence pages backfill in progress (13/25 published).
 ---
 
 # Active Development Context
 
-**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Clawdbot) running. PostHog + Sentry instrumented. Phase 2 data sources deployed.
-**Live partner:** Clawdbot on Discord (`#clawdbot` for general chat, `#weekly-roundup` for content, `#linkedin-drafts` for LinkedIn posts). VPS: `ssh root@108.61.151.130`.
-**Just shipped:** Phase 2 FDA fetchers + full enrichment — import alerts (154), guidance documents (2,761), regulations.gov (1,178). All 4,093 new items enriched (0 errors on guidance, 2 token-limit on IA, 1 on regs). Homepage/pricing updated to "7 FDA data sources".
-**Current:** Consultant outreach for accuracy validation — Katherine Giannamore emailed (Mar 7), Kristen Klesh next. Review packet rebuilt (v2: embedded live HTML emails with clickable FDA source links, 3 accuracy questions only).
-**Next up:** Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner, remove `/pricing` redirect from proxy). Regulations.gov deeper backfill (extend --start further back).
+**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Anton on Pi) upgraded to autonomous cofounder model. PostHog + Sentry instrumented. Phase 2 data sources deployed. Intelligence pages live with content backfill in progress.
+**Live partner:** Anton on Pi 5 (`ssh gr0x@10.2.0.40`), Slack `#pc-content`. Upgraded 2026-03-12 with proactive-agent patterns (WAL, working buffer, compaction recovery, reverse prompting, outcome tracking, context-aware crons, business monitoring).
+**Just shipped:** Anton autonomy upgrade — proactive-agent patterns adapted for purpose-built cofounder role. Decision authority matrix (autonomous for research/analysis/drafting, Rashaad for publishing/outreach). Context-aware cron prompts. `lightContext: false` so heartbeat loads full operating system.
+**Current:** Intelligence page ingredient backfill (13/25 published, batches 4-5 remaining). Monitoring Anton's first autonomous cycle (nightly review tonight 11PM ET).
+**Next up:** Enforcement page backfill (23 companies), regulation page backfill (~15 regulations). Then launch prep.
 **Following feature:** Research tier ($399/mo) — agentic search. Full planning doc: `memory-bank/projects/research-search.md`
 
 ---

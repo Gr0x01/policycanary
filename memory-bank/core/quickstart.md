@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-08
+Last-Updated: 2026-03-12
 Maintainer: RB
 Status: Active
 ---
@@ -13,14 +13,14 @@ Status: Active
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GTM**: Pilot program (no pricing surfaced, `/pricing` redirects to `/` via proxy). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Clawdbot VPS**: `ssh root@108.61.151.130` — OpenClaw gateway + Discord bot. 5 cron jobs: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), linkedin-monday (Mon 10AM), linkedin-wednesday (Wed 10AM)
-- **Next**: Launch prep (surface Stripe checkout, re-add subscription links to email footers, remove pilot banner, remove `/pricing` redirect from proxy). Minor: product detail image display.
+- **Anton (Pi 5)**: `ssh gr0x@10.2.0.40` — Autonomous cofounder (OpenClaw + Slack). Context-aware crons, WAL protocol, working buffer, reverse prompting, outcome tracking. See `architecture/clawdbot.md`.
+- **Next**: Apply migration 007 (intelligence pages), run backfill scripts, generate first batch of ingredient/enforcement/regulation pages. Then launch prep.
 
 ---
 
 ## What's Happening
 
-**Consultant outreach for pre-launch accuracy validation.** Emailing FDA regulatory attorneys for paid review of AI-generated output. Katherine Giannamore emailed (Mar 7), Kristen Klesh (Loeb & Loeb) next, then Marc Ullman. Ask: 30-60 min paid consultation — is the analysis accurate, is urgency calibrated right, what are we getting wrong. Review packet rebuilt (v2): embedded live HTML emails with clickable FDA source links, 3 accuracy questions. Build: `npx tsx scripts/outreach/build-consultant-pdf.ts`.
+**Intelligence pages backfill in progress. Anton autonomy upgrade deployed.** Three SEO surfaces (`/ingredients/`, `/enforcement/`, `/regulations/`) — migration 007 applied, 13/25 ingredient pages published. Anton upgraded with proactive-agent patterns: WAL protocol, working buffer, compaction recovery, context-aware crons, reverse prompting, outcome tracking, business monitoring. All deployed to Pi and live.
 
 ---
 
@@ -88,18 +88,21 @@ npx tsx scripts/pipeline/run-verdicts.ts --user <userId>    # Backfill for speci
 npx tsx scripts/bootstrap/bootstrap-gsrs.ts              # Full bootstrap: 169K substances + 950K codes
 npx tsx scripts/bootstrap/bootstrap-gsrs.ts --codes-only  # Codes-only backfill (substances already loaded)
 
-# Clawdbot (OpenClaw) — VPS at 108.61.151.130
-ssh root@108.61.151.130                           # SSH into VPS
-systemctl {status|restart} openclaw.service       # Manage gateway
-journalctl -u openclaw.service -f                 # Stream logs
-# Cron management (run as openclaw user on VPS):
-su - openclaw -c 'openclaw cron list'             # List scheduled jobs
-su - openclaw -c 'openclaw cron run <jobId>'      # Manually trigger a job
-# Local setup script:
-./scripts/clawdbot/setup-clawdbot.sh {provision|deploy|configure|cron|ssh|status}
-# Skills on VPS: weekly-roundup, seo-blog-post, linkedin-post
-# Cron: weekly-roundup (Fri 9AM), seo-blog-tuesday (Tue 10AM), linkedin-monday (Mon 10AM), linkedin-wednesday (Wed 10AM)
-# Content flow: Friday roundup generates blog draft + LinkedIn copy → Monday LinkedIn promotes the roundup → Wednesday LinkedIn is fresh content
+# Anton (OpenClaw) — Pi 5 at 10.2.0.40
+ssh gr0x@10.2.0.40                                # SSH into Pi
+sudo systemctl {status|restart} anton.service     # Manage gateway
+journalctl -u anton.service -f                    # Stream logs
+# Skills: weekly-roundup, seo-blog-post, linkedin-post
+# Crons: weekly-roundup (Fri 9AM), seo-blog (Tue 10AM), linkedin-mon/wed (Mon/Wed 10AM)
+# Deploy scripts: scp scripts/clawdbot/*.mjs gr0x@10.2.0.40:/home/gr0x/.openclaw/workspace/scripts/
+
+# Intelligence pages (backfill + publish)
+npx tsx scripts/backfill/gather-ingredient-data.ts        # Gather data for 25 substances (no LLM)
+npx tsx scripts/backfill/gather-enforcement-data.ts       # Gather enforcement data by company
+npx tsx scripts/backfill/gather-regulation-data.ts        # Gather regulation data (10 regs)
+# Anton scripts (on Pi):
+node publish-intelligence.mjs --page-type ingredient --slug red-no-3 --title "..." --content-file /tmp/page.md --excerpt "..." --structured-data-file /tmp/data.json
+node query-intelligence.mjs --status needs_refresh        # Find pages needing refresh
 
 # SEO Keyword Research
 npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volume + difficulty
@@ -169,6 +172,8 @@ npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volu
 - [ ] **Full historical backfill** — Federal Register (1994-present), openFDA enforcement (2004-present) + enrich all. Prerequisite for Research tier.
 - [ ] **Research tier ($399/mo)** — agentic search with 7 tools, three-model pipeline (Flash bouncer/status → Pro researcher → Sonnet writer). Full planning doc: `memory-bank/projects/research-search.md`
 - [x] **Phase 2 federal sources** — Guidance Documents (2,761), Regulations.gov (1,178), Import Alerts (154). All enriched.
+- [x] **Intelligence pages (programmatic SEO)** — Code complete. 3 surfaces (`/ingredients/`, `/enforcement/`, `/regulations/`). Migration `007` ready. Backfill scripts ready. Content generation pending.
+- [ ] **Intelligence pages backfill** — Apply migration, run data gathering, generate content via subagents, publish first batch (25 ingredients, enforcement companies, 10 regulations).
 - [ ] **Phase 3 sources** — Adverse Events (FAERS/CAERS), state compliance (Prop 65, state bills). Different data shape — deferred.
 - [ ] **Expansion:** State compliance layer (deferred — federal-only until customer demand justifies)
 - [ ] **Expansion:** Pet food / animal supplements (deferred)
@@ -194,8 +199,8 @@ OPENAI_API_KEY=...
 # Email
 RESEND_API_KEY=...  # or POSTMARK_SERVER_TOKEN
 
-# Blog (Clawdbot write path)
-BLOG_API_KEY=...    # X-API-Key header for POST /api/blog
+# Blog + Intelligence pages (Anton write path)
+BLOG_API_KEY=...    # X-API-Key header for POST /api/blog and POST /api/intelligence
 
 # Analytics
 NEXT_PUBLIC_POSTHOG_KEY=...
@@ -215,18 +220,7 @@ UPSTASH_REDIS_REST_TOKEN=...    # Upstash Redis REST token
 INNGEST_SIGNING_KEY=...          # Required in Vercel for production (not needed locally)
 INNGEST_EVENT_KEY=...            # Required if sending events from outside serve handler
 
-# Vultr
-VULTR_PAT=...                    # Vultr API key for VPS management
-
-# Discord / Clawdbot
-CLAWDBOT_TOKEN=...               # Discord bot token
-DISCORD_GUILD_ID=...             # Discord server ID
-DISCORD_CHANNEL_WEEKLY_ROUNDUP=...
-DISCORD_CHANNEL_BLOG_DRAFTS=...
-DISCORD_CHANNEL_ALERTS=...
-DISCORD_CHANNEL_CLAWDBOT=...     # General chat channel
-CLAWDBOT_VPS_IP=...              # Vultr VPS IP
-CLAWDBOT_VPS_ID=...              # Vultr instance ID
+# (Vultr + Discord env vars DEPRECATED — Anton moved to Pi 5 with Slack)
 
 # DataForSEO
 DATAFORSEO_LOGIN=...             # DataForSEO API login
