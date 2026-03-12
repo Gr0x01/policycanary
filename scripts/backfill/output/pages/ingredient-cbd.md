@@ -1,6 +1,6 @@
 ## What Is CBD?
 
-Cannabidiol (CBD) is a non-intoxicating cannabinoid extracted from Cannabis sativa L. (hemp). It is the second most abundant cannabinoid after THC and has been incorporated into thousands of consumer products — oils, tinctures, gummies, beverages, topical creams, pet treats, and cosmetics. The global CBD market was valued at roughly $7.7 billion in 2024, with the U.S. accounting for the majority of sales.
+Cannabidiol (CBD) is a non-intoxicating cannabinoid extracted from Cannabis sativa L. (hemp). It is the second most abundant cannabinoid after THC and has been incorporated into thousands of consumer products — oils, tinctures, gummies, beverages, topical creams, pet treats, and cosmetics. The global CBD market was valued at roughly $7.7 billion in 2023, with the U.S. accounting for the majority of sales.
 
 CBD's UNII is **19GBJ60SN5**. The FDA-approved pharmaceutical form is Epidiolex (cannabidiol oral solution), developed by GW Pharmaceuticals (now Jazz Pharmaceuticals), approved **June 25, 2018** for seizures associated with Lennox-Gastaut syndrome and Dravet syndrome. The FDA expanded the indication to include tuberous sclerosis complex on **August 3, 2020**.
 
@@ -75,7 +75,7 @@ CBD is one of the most actively enforced ingredient categories in the FDA's warn
 **Unapproved new drug claims** — The most frequent violation. Companies claiming CBD treats cancer, anxiety, pain, arthritis, Parkinson's, Crohn's disease, PTSD, or other conditions. Examples from the database include:
 - **CBD American Shaman, LLC** (November 2022) — CFSAN warning for CBD in human foods, pet foods, dietary supplements, and an OTC sunscreen
 - **Discover Health, LLC d/b/a Discover CBD and Strain Snobs** (November 2023) — Multi-center warning covering finished pharmaceuticals, animal drugs, human foods, and animal foods
-- **Root Bioscience Brands, LLC dba Naternal** (September 2024) — Unapproved new drugs and misbranding
+- **Root Bioscience Brands, LLC dba Naternal** (August 2024) — Unapproved new drugs and misbranding
 
 **Adulterated food (CBD as unsafe food additive)** — Warning letters citing Section 402(a)(2)(C)(i), which deems food adulterated when it contains an unsafe food additive. CBD is not GRAS and has no food additive petition on file. Companies cited include:
 - **11-11-11 Brands** (November 2022) — CBD-infused herbal tea
@@ -127,7 +127,7 @@ Even in states that permit CBD in food and supplements, the products remain ille
 | **~February 10, 2026** | FDA deadline to publish cannabinoid classification lists (90 days post-enactment — missed) |
 | **January 2026** | HEMP Act introduced (Griffith/Veasey) — would direct FDA to create CBD regulatory pathway |
 | **November 12, 2026** | Section 781 takes full effect — total THC standard, 0.4 mg/container cap |
-| **~2029 (if HEMP Act passes)** | Automatic milligram limits (5 mg/serving, 30 mg/package) if FDA fails to finalize rules within 3 years |
+| **~2029 (if HEMP Act passes)** | Automatic fallback milligram limits for THC (5 mg/serving, 30 mg/package) and CBD (10 mg/serving, 50 mg/package oral) if FDA fails to finalize rules within 3 years |
 
 ### The HEMP Act (January 2026)
 
@@ -138,7 +138,7 @@ Representatives Morgan Griffith (R-VA) and Marc Veasey (D-TX) introduced the Hem
 - Establish a Cannabinoid Hemp Products Advisory Committee
 - Set age restriction of **21+** for purchase
 - Enable FDA product recalls
-- Institute automatic fallback limits of **5 mg per serving / 30 mg per package** if FDA does not finalize rules within three years
+- Institute automatic fallback limits for intoxicating cannabinoids (THC) of **5 mg per serving / 30 mg per package** if FDA does not finalize rules within three years (non-intoxicating cannabinoids like CBD would have higher limits: 10 mg/serving, 50 mg/package for oral products)
 
 ### Executive Order 14370 (December 18, 2025)
 
