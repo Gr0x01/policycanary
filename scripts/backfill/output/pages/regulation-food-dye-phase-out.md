@@ -60,7 +60,7 @@ On **February 5, 2026**, the FDA issued new enforcement discretion guidance allo
 - **Signed**: March 2025
 - **School provisions effective**: August 1, 2025
 - **Statewide ban effective**: January 1, 2028
-- **Scope**: Bans Red 3, Red 40, Yellow 5, Yellow 6, Blue 1, Blue 2, Green 3, and butylated hydroxyanisole (BHA) from food and pharmaceuticals
+- **Scope**: Bans Red 3, Red 40, Yellow 5, Yellow 6, Blue 1, Blue 2, Green 3, butylated hydroxyanisole (BHA), and propylparaben from food and pharmaceuticals
 - **Legal challenge**: On **December 23, 2025**, U.S. District Judge Irene Berger issued a **preliminary injunction** blocking enforcement of the statewide ban on vagueness grounds. The International Association of Color Manufacturers (IACM) argued that the law's use of "poisonous or injurious" was never defined and could enable arbitrary enforcement. The injunction does **not** apply to the school food provisions. West Virginia filed a notice of appeal on **January 22, 2026**; the case is now before the Fourth Circuit.
 
 **Utah — HB 402**

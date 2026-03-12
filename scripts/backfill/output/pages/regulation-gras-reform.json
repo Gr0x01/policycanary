@@ -11,7 +11,7 @@
     "current_status": "proposed",
     "cfr_references": ["21 CFR 170", "21 CFR 170 Subpart E", "21 CFR 182", "21 CFR 184", "21 CFR 186", "21 CFR 570"],
     "key_deadlines": [
-      { "date": "2025-09-01", "label": "HHS Secretary Kennedy directs FDA to explore rulemaking to eliminate self-affirmed GRAS" },
+      { "date": "2025-03-10", "label": "HHS Secretary Kennedy directs FDA to explore rulemaking to eliminate self-affirmed GRAS" },
       { "date": "2025-11-06", "label": "Better Food Disclosure Act (S. 3122) introduced in Senate" },
       { "date": "2025-12-01", "label": "FDA submits proposed mandatory GRAS notification rule to OMB/OIRA" },
       { "date": "2026-02-10", "label": "FDA launches BHA comprehensive reassessment and issues RFI" },
