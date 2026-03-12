@@ -25,7 +25,7 @@ MoCRA was enacted on December 29, 2022. Several provisions took effect immediate
 **Provisions pending rulemaking:**
 
 - **Good Manufacturing Practices**: The statutory deadline for a proposed rule was December 29, 2024, and a final rule by December 29, 2025. Both deadlines have passed without action. As of the Fall 2025 Unified Agenda, GMP rulemaking is classified as a "long-term action" with no target date for a proposed rule. A final GMP rule is not expected before late 2026 at the earliest.
-- **Fragrance allergen labeling**: Originally targeted for January 2025, the proposed rule has been delayed to May 2026.
+- **Fragrance allergen labeling**: The statutory deadline for this proposed rule was June 29, 2024 (18 months after enactment). The FDA missed that deadline, set a revised target of January 2025 in the Spring 2024 Unified Agenda, and has now delayed further to May 2026.
 - **Standardized asbestos testing for talc**: The FDA issued a proposed rule in December 2024 but withdrew it in November 2025 citing the need to "reconsider the best means of addressing the issues." The agency stated it would reissue a new proposed rule to meet its statutory obligations, but no timeline has been set.
 
 **Political and regulatory headwinds:** Executive Order 14192, issued by the Trump Administration, imposes a "one-in, ten-out" requirement for new regulations, which has further delayed MoCRA rulemaking. However, the core statutory requirements (registration, listing, adverse event reporting, recall authority) are self-executing provisions that do not require additional rulemaking to be enforceable.

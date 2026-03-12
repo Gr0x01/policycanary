@@ -75,7 +75,7 @@ On **February 5, 2026**, the FDA issued new enforcement discretion guidance allo
 | Date | Event | Scope |
 |------|-------|-------|
 | May 7, 2025 | Utah school food dye ban takes effect (HB 402) | Schools only — 9 dyes |
-| August 1, 2025 | West Virginia school food dye ban takes effect (HB 2354) | Schools only — 8 dyes + BHA |
+| August 1, 2025 | West Virginia school food dye ban takes effect (HB 2354) | Schools only — 7 dyes + BHA + propylparaben |
 | September 17, 2025 | FDA proposes revocation of Orange B | Formal rulemaking |
 | December 23, 2025 | Federal court blocks WV statewide ban (preliminary injunction) | Statewide provisions paused |
 | January 22, 2026 | West Virginia appeals injunction to Fourth Circuit | Ongoing litigation |
@@ -85,7 +85,7 @@ On **February 5, 2026**, the FDA issued new enforcement discretion guidance allo
 | January 15, 2027 | FDA Red No. 3 ban — food compliance deadline | Federal — all food products |
 | Fall 2026–2027 | Consumer Brands Association school dye-free pledge | Industry voluntary — school food |
 | December 31, 2027 | California AB 2316 takes effect (6 dyes in schools) | Schools only — 6 dyes |
-| January 1, 2028 | West Virginia statewide ban scheduled (if injunction lifted) | Statewide — 8 dyes + BHA |
+| January 1, 2028 | West Virginia statewide ban scheduled (if injunction lifted) | Statewide — 7 dyes + BHA + propylparaben |
 | January 18, 2028 | FDA Red No. 3 ban — drug compliance deadline | Federal — ingested drugs |
 
 
@@ -110,7 +110,7 @@ The FDA has not initiated formal rulemaking to revoke authorization for Red 40, 
 The divergence between federal and state approaches is creating a compliance nightmare for national food manufacturers. Consider the landscape as of March 2026:
 
 - **California** has two separate laws: AB 418 (Red No. 3 + 3 additives, effective Jan 2027) and AB 2316 (6 dyes in schools, effective Dec 2027)
-- **West Virginia** enacted the broadest ban (8 dyes + BHA) but is blocked by a federal injunction on vagueness grounds
+- **West Virginia** enacted the broadest ban (7 dyes + BHA + propylparaben) but is blocked by a federal injunction on vagueness grounds
 - **Utah** has a school-only ban on all 9 synthetic dyes, already in effect
 - **37+ states** introduced food dye bills in 2025, with many advancing through 2026 sessions
 

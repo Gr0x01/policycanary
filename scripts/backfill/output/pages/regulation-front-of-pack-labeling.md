@@ -9,7 +9,7 @@ This is the most significant proposed change to food labeling in the United Stat
 
 ## Current Regulatory Status
 
-The proposed rule was published in the **Federal Register on January 16, 2025** (90 FR 4386), during the final days of the Biden administration. Four days later, the incoming Trump administration issued a Presidential Memorandum imposing a regulatory freeze on pending rules. This raised immediate questions about the proposal's future.
+The proposed rule was published in the **Federal Register on January 16, 2025** (90 FR 5426), during the final days of the Biden administration. Four days later, the incoming Trump administration issued a Presidential Memorandum imposing a regulatory freeze on pending rules. This raised immediate questions about the proposal's future.
 
 However, the rule was not withdrawn. The **comment period originally closed May 16, 2025**, and the FDA extended it by 60 days to **July 15, 2025**, after receiving requests from industry groups including the Consumer Brands Association and FMI — The Food Industry Association. The FDA received more than **11,000 public comments** during the comment period.
 
@@ -24,7 +24,7 @@ The regulatory trajectory remains uncertain. Industry groups continue to lobby f
 
 | Date | Event | Status |
 |---|---|---|
-| January 16, 2025 | Proposed rule published in Federal Register (90 FR 4386) | Complete |
+| January 16, 2025 | Proposed rule published in Federal Register (90 FR 5426) | Complete |
 | January 20, 2025 | Trump administration regulatory freeze memo | Complete |
 | May 9, 2025 | FDA publishes 60-day comment period extension | Complete |
 | May 16, 2025 | Original comment period deadline | Passed |
@@ -203,7 +203,7 @@ Industry reaction to the proposed rule has been sharply divided.
 
 ## Regulatory References
 
-- **Proposed Rule**: 90 FR 4386 (January 16, 2025) — [Federal Register](https://www.federalregister.gov/documents/2025/01/16/2025-00778/food-labeling-front-of-package-nutrition-information)
+- **Proposed Rule**: 90 FR 5426 (January 16, 2025) — [Federal Register](https://www.federalregister.gov/documents/2025/01/16/2025-00778/food-labeling-front-of-package-nutrition-information)
 - **Comment Period Extension**: 90 FR 20157 (May 9, 2025) — [Federal Register](https://www.federalregister.gov/documents/2025/05/09/2025-08204/food-labeling-front-of-package-nutrition-information-extension-of-comment-period)
 - **Docket**: FDA-2024-N-2910 — [Regulations.gov](https://www.regulations.gov)
 - **CFR**: 21 CFR Part 101 (Food Labeling)

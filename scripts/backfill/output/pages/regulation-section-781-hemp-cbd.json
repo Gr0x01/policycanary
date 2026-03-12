@@ -41,6 +41,6 @@
     }
   },
   "linked_pages": [
-    { "page_type": "ingredient", "slug": "cbd", "link_type": "regulation_affects_ingredient" }
+    { "page_type": "ingredient", "slug": "cbd-cannabidiol", "link_type": "regulation_affects_ingredient" }
   ]
 }

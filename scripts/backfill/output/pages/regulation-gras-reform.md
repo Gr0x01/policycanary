@@ -42,7 +42,7 @@ In December 2022, the FDA issued final guidance on best practices for convening 
 | August 2016 | FDA finalizes GRAS Notification Rule (21 CFR 170 Subpart E) | Complete |
 | September 2021 | Court grants FDA summary judgment in CSPI/CFS lawsuit challenging GRAS rule | Complete |
 | December 2022 | FDA issues final guidance on best practices for convening a GRAS panel | Complete |
-| September 2025 | HHS Secretary Kennedy directs FDA to explore rulemaking to eliminate self-affirmed GRAS | Complete |
+| March 2025 | HHS Secretary Kennedy directs FDA to explore rulemaking to eliminate self-affirmed GRAS | Complete |
 | November 6, 2025 | Senator Marshall introduces Better Food Disclosure Act (S. 3122) | Introduced |
 | December 1, 2025 | FDA submits proposed mandatory GRAS notification rule to OMB/OIRA for review | Under OMB review |
 | February 10, 2026 | FDA launches comprehensive BHA reassessment; issues RFI | Active |

@@ -32,7 +32,7 @@ In July 2022, the FDA issued a separate Request for Information on fluorinated h
 
 ### FDA: PFAS in Seafood
 
-On November 19, 2024, the FDA published a Request for Information (RFI) on PFAS in seafood (docket FDA-2024-N-4604). The agency is seeking scientific data on PFAS concentrations in seafood, environmental contamination of aquatic habitats, processing water contamination, and mitigation strategies.
+On November 20, 2024, the FDA published a Request for Information (RFI) on PFAS in seafood (docket FDA-2024-N-4604). The agency is seeking scientific data on PFAS concentrations in seafood, environmental contamination of aquatic habitats, processing water contamination, and mitigation strategies.
 
 The RFI was prompted by FDA Total Diet Study data showing that seafood has higher PFAS detection rates than other food categories. In 2024 TDS testing, PFAS were detected in 7.2% of 542 food samples, with the highest concentrations in shrimp, clams, catfish, and tilapia. The comment period closed February 18, 2025. No proposed rule has followed yet, but this signals that FDA is building a data foundation for potential future limits on PFAS in seafood.
 

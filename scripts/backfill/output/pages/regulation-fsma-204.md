@@ -11,7 +11,7 @@ FSMA 204 is enacted federal law. The final rule (87 FR 70910) was published on N
 
 ### Compliance Deadline Extension
 
-The original compliance date was January 20, 2026. In March 2025, the FDA proposed extending this deadline by 30 months, and the final rule extending the compliance date to **July 20, 2028** was published in the Federal Register on August 7, 2025.
+The original compliance date was January 20, 2026. In March 2025, the FDA proposed extending this deadline by 30 months, and the proposed rule extending the compliance date to **July 20, 2028** was published in the Federal Register on August 7, 2025. Congress subsequently codified this extended deadline through the Continuing Appropriations Act of 2026, signed in November 2025.
 
 Congress reinforced this extension through the Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act of 2026, which explicitly directed the FDA not to enforce the Food Traceability Rule prior to July 20, 2028. The FDA has stated it intends to comply with this Congressional directive.
 
@@ -32,7 +32,8 @@ The extension was driven by a fundamental coordination problem. Even companies t
 | June 17, 2024 | Proposed exemption for cottage cheese under NCIMS Grade "A" PMO |
 | September 16, 2024 | Comment deadline for cottage cheese exemption |
 | March 2025 | FDA proposes 30-month compliance extension |
-| August 7, 2025 | Compliance extension finalized; new deadline July 20, 2028 |
+| August 7, 2025 | FDA publishes proposed 30-month compliance extension |
+| November 2025 | Congress codifies July 20, 2028 deadline via Continuing Appropriations Act |
 | February 20, 2026 | Cottage cheese exemption finalized for IMS-listed Grade "A" products |
 | **July 20, 2028** | **Compliance deadline for all covered entities** |
 
