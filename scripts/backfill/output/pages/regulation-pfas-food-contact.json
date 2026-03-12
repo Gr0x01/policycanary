@@ -1,0 +1,70 @@
+{
+  "page_type": "regulation",
+  "slug": "pfas-food-contact",
+  "title": "PFAS in Food Contact Materials: FDA Phase-Out & State Bans",
+  "excerpt": "The FDA completed its voluntary phase-out of PFAS grease-proofing agents in February 2024 and revoked 35 food contact notifications in January 2025. At least 12 states have enacted their own PFAS food packaging bans, with compliance deadlines ranging from 2023 to 2032. This page tracks the full federal, state, and international regulatory landscape for PFAS in food contact materials, seafood, cosmetics, and drinking water.",
+  "status": "draft",
+  "seo_title": "PFAS Food Packaging Bans: FDA & State Regulations | Policy Canary",
+  "seo_description": "Complete regulatory intelligence on PFAS in food contact materials. FDA revoked 35 food contact notifications (compliance deadline June 30, 2025). 12+ state bans in effect. EPA drinking water MCLs. MoCRA cosmetics report. Deadlines, affected categories, and compliance steps.",
+  "structured_data": {
+    "regulation_name": "PFAS Food Contact Regulation",
+    "current_status": "enacted",
+    "cfr_references": ["21 CFR 170", "21 CFR 175.300"],
+    "federal_register_citations": [
+      "89 FR 22066 (March 22, 2024 — FCN revocation, effective May 21, 2024)",
+      "90 FR 820 (January 6, 2025 — 35 FCNs no longer effective)",
+      "89 FR 91765 (November 20, 2024 — PFAS in Seafood RFI)",
+      "89 FR 32532 (April 26, 2024 — EPA PFAS NPDWR)"
+    ],
+    "docket_numbers": [
+      "FDA-2024-N-4604 (PFAS in Seafood RFI)",
+      "EPA-HQ-OW-2022-0114 (PFAS Drinking Water Rule)"
+    ],
+    "key_deadlines": [
+      { "date": "2025-01-06", "label": "35 PFAS food contact notifications declared no longer effective (FDA)" },
+      { "date": "2025-02-18", "label": "Comment period closed for PFAS in seafood RFI (FDA)" },
+      { "date": "2025-06-30", "label": "Compliance deadline: existing PFAS-containing food paper packaging must be exhausted (FDA)" },
+      { "date": "2026-05-25", "label": "Maine PFAS ban effective for plant-fiber food packaging" },
+      { "date": "2027-01-01", "label": "New Mexico PFAS food packaging ban effective (HB 212)" },
+      { "date": "2029-01-01", "label": "Water systems must comply with PFAS monitoring/reporting (EPA)" },
+      { "date": "2031-01-01", "label": "Water systems must meet PFOA/PFOS MCLs (EPA, extended from 2029)" },
+      { "date": "2032-01-01", "label": "Minnesota prohibition expands to all consumer products (Amara's Law)" }
+    ],
+    "affected_categories": ["food_contact_materials", "infant_formula", "fish_products", "other_food", "other_cosmetic"],
+    "state_bans": [
+      { "state": "New York", "effective": "2022-12-31", "scope": "Intentionally added PFAS in food packaging" },
+      { "state": "California", "effective": "2023-01-01", "scope": "PFAS in plant fiber-based food packaging (100 ppm)" },
+      { "state": "Washington", "effective": "2023-01-01", "scope": "Specified plant fiber packaging types" },
+      { "state": "Connecticut", "effective": "2023-12-31", "scope": "All intentionally added PFAS in food packaging" },
+      { "state": "Vermont", "effective": "2023-07-01", "scope": "Comprehensive PFAS ban in food packaging" },
+      { "state": "Colorado", "effective": "2024-01-01", "scope": "Intentionally added PFAS in food packaging" },
+      { "state": "Minnesota", "effective": "2025-01-01", "scope": "Full ban on PFAS in food packaging; cookware, cosmetics also banned" },
+      { "state": "Oregon", "effective": "2025-01-01", "scope": "PFAS in foodware containers" },
+      { "state": "Rhode Island", "effective": "2025-01-01", "scope": "Intentionally added PFAS in food packaging" },
+      { "state": "Maine", "effective": "2026-05-25", "scope": "Nine plant-fiber packaging types; broader product ban phases in through 2032" },
+      { "state": "New Mexico", "effective": "2027-01-01", "scope": "PFAS in food packaging (HB 212)" }
+    ],
+    "fcns_revoked": 35,
+    "voluntary_phase_out_completed": "2024-02-28",
+    "epa_pfoa_mcl_ppt": 4.0,
+    "epa_pfos_mcl_ppt": 4.0,
+    "mocra_pfas_cosmetics_report_date": "2025-12-29",
+    "cosmetic_formulations_with_pfas": 1744,
+    "pfas_compounds_in_cosmetics": 51
+  },
+  "linked_pages": [
+    { "page_type": "regulation", "slug": "mocra", "link_type": "related" }
+  ],
+  "linked_item_ids": [
+    { "item_id": "f908c94b-469a-49f9-b6cb-ad2c132bd910", "relevance": "primary" },
+    { "item_id": "3aea4238-020f-4cbd-9b01-9024b32b2fdf", "relevance": "primary" },
+    { "item_id": "d640e182-2611-4a87-a8d7-7485d92ceb81", "relevance": "primary" },
+    { "item_id": "e6aa2c7c-2156-4722-b98b-05cc28307437", "relevance": "supporting" },
+    { "item_id": "6afb44a6-ef04-4b73-94b2-90a4a1642f6a", "relevance": "supporting" },
+    { "item_id": "e2b74cee-c9a3-4aee-a480-6875116bb97b", "relevance": "supporting" },
+    { "item_id": "135abea0-049d-4d7e-a9b9-f05c85176bea", "relevance": "supporting" },
+    { "item_id": "2390e6c3-7653-40e2-85a6-769674e06656", "relevance": "supporting" },
+    { "item_id": "e8493c5e-26d8-4bb6-85d9-384afbd53378", "relevance": "supporting" },
+    { "item_id": "3c5bfdb4-3a13-4e98-a0c3-e31f8dad279b", "relevance": "supporting" }
+  ]
+}

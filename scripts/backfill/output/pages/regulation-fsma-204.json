@@ -1,0 +1,34 @@
+{
+  "page_type": "regulation",
+  "slug": "fsma-204",
+  "title": "FSMA 204: FDA Food Traceability Rule — Compliance Deadlines & Requirements",
+  "excerpt": "The FDA's Food Traceability Rule requires standardized farm-to-fork recordkeeping for high-risk foods including leafy greens, seafood, soft cheeses, and shell eggs. Originally due January 2026, the compliance deadline was extended 30 months to July 20, 2028. A complete guide to the Food Traceability List, Critical Tracking Events, technology requirements, and what companies should do now.",
+  "status": "draft",
+  "seo_title": "FSMA 204 Food Traceability Rule: Deadlines & Compliance | Policy Canary",
+  "seo_description": "Complete guide to FSMA 204, the FDA Food Traceability Rule. Compliance deadline extended to July 2028. Food Traceability List, Critical Tracking Events, GS1 requirements, and action steps for food companies.",
+  "structured_data": {
+    "regulation_name": "FSMA Section 204 Food Traceability Rule",
+    "current_status": "enacted",
+    "cfr_references": ["21 CFR Part 1, Subpart S"],
+    "key_deadlines": [
+      { "date": "2011-01-04", "label": "FSMA signed into law" },
+      { "date": "2022-11-21", "label": "Final rule published (87 FR 70910)" },
+      { "date": "2024-06-17", "label": "Cottage cheese NCIMS exemption proposed" },
+      { "date": "2025-08-07", "label": "Compliance extension finalized (30-month delay)" },
+      { "date": "2026-02-20", "label": "Cottage cheese exemption finalized" },
+      { "date": "2028-07-20", "label": "Compliance deadline for all covered entities" }
+    ],
+    "affected_categories": [
+      "fresh_fruits_vegetables",
+      "dairy_products",
+      "fish_products",
+      "herbs_spices_seasonings",
+      "shell_eggs",
+      "nut_butters"
+    ]
+  },
+  "linked_pages": [
+    { "page_type": "enforcement", "slug": "grimmway-farms", "link_type": "enforcement_of_regulation" },
+    { "page_type": "enforcement", "slug": "albertsons", "link_type": "enforcement_of_regulation" }
+  ]
+}

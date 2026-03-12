@@ -1,0 +1,49 @@
+{
+  "page_type": "regulation",
+  "slug": "food-dye-phase-out",
+  "title": "Food Dye Phase-Out: Federal & State Bans on Synthetic Color Additives",
+  "excerpt": "The U.S. is converging on the elimination of synthetic food dyes through a combination of the FDA's Red No. 3 ban (effective January 2027), a voluntary federal phase-out of six remaining petroleum-based dyes by end of 2026, and enacted state laws in California, West Virginia, and Utah. With 37+ states introducing food dye legislation in 2025 and major manufacturers pledging reformulation, the regulatory landscape is shifting faster than at any point in the past three decades.",
+  "status": "draft",
+  "seo_title": "Food Dye Bans: Red 40, Yellow 5 & State Phase-Outs | Policy Canary",
+  "seo_description": "Complete regulatory intelligence on the U.S. food dye phase-out: FDA Red No. 3 ban timeline, voluntary phase-out of Red 40, Yellow 5, Yellow 6, Blue 1, Blue 2, Green 3, state-by-state legislation tracker, court challenges, and reformulation guidance for food manufacturers.",
+  "structured_data": {
+    "regulation_name": "Food Dye Phase-Out",
+    "current_status": "enacted",
+    "cfr_references": ["21 CFR 73", "21 CFR 74"],
+    "key_deadlines": [
+      { "date": "2025-05-07", "label": "Utah school food dye ban takes effect (HB 402)" },
+      { "date": "2025-08-01", "label": "West Virginia school food dye ban takes effect (HB 2354)" },
+      { "date": "2025-09-17", "label": "FDA proposes revocation of Orange B" },
+      { "date": "2025-12-23", "label": "Federal court blocks WV statewide ban (preliminary injunction)" },
+      { "date": "2026-02-05", "label": "FDA 'no artificial colors' labeling flexibility issued" },
+      { "date": "2026-12-31", "label": "FDA voluntary phase-out target for 6 remaining dyes" },
+      { "date": "2027-01-01", "label": "California AB 418 takes effect (Red No. 3 + 3 additives)" },
+      { "date": "2027-01-15", "label": "FDA Red No. 3 ban — food compliance deadline" },
+      { "date": "2027-12-31", "label": "California AB 2316 takes effect (6 dyes in schools)" },
+      { "date": "2028-01-01", "label": "West Virginia statewide ban scheduled (if injunction lifted)" },
+      { "date": "2028-01-18", "label": "FDA Red No. 3 ban — drug compliance deadline" }
+    ],
+    "affected_categories": [
+      "confections_frostings",
+      "nonalcoholic_beverages",
+      "baked_goods",
+      "snack_foods",
+      "soft_candy",
+      "dairy_products",
+      "cereals",
+      "sauces_condiments",
+      "gummy_supplements",
+      "capsules_tablets"
+    ]
+  },
+  "linked_pages": [
+    { "page_type": "ingredient", "slug": "red-no-3", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "red-40", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "yellow-5", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "yellow-6", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "blue-1", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "blue-2", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "green-3", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "regulation", "slug": "red-no-3-ban", "link_type": "related" }
+  ]
+}

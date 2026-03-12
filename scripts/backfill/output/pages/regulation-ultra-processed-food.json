@@ -1,0 +1,32 @@
+{
+  "page_type": "regulation",
+  "slug": "ultra-processed-food",
+  "title": "Ultra-Processed Food: FDA Request for Information & Regulatory Outlook",
+  "excerpt": "The FDA and USDA published a joint Request for Information in July 2025 seeking public input on a federal definition of ultra-processed food — the first formal step toward regulating a category that constitutes an estimated 57-60% of American caloric intake. Backed by the MAHA Commission and former FDA Commissioner Kessler's petition to revoke GRAS status of key UPF ingredients, the regulatory trajectory is clear even as the timeline remains uncertain.",
+  "status": "draft",
+  "seo_title": "Ultra-Processed Food FDA RFI: NOVA Classification & Regulation | Policy Canary",
+  "seo_description": "Track the FDA's ultra-processed food regulatory initiative: the July 2025 Request for Information, NOVA classification debate, MAHA Commission strategy, Kessler petition on GRAS ingredients, state-level UPF bans, and what food manufacturers should do now.",
+  "structured_data": {
+    "regulation_name": "Ultra-Processed Foods; Request for Information",
+    "current_status": "proposed",
+    "cfr_references": [],
+    "key_deadlines": [
+      { "date": "2025-07-25", "label": "FDA/USDA RFI published in Federal Register" },
+      { "date": "2025-10-23", "label": "Extended comment period deadline (closed)" },
+      { "date": "2026-01-27", "label": "FDA Human Foods Program 2026 priorities published; UPF definition listed as deliverable" },
+      { "date": "2026-02-15", "label": "Kennedy announces FDA will act on Kessler petition targeting UPF ingredients" }
+    ],
+    "affected_categories": [
+      "dietary_conventional_foods",
+      "baked_goods",
+      "snack_foods",
+      "nonalcoholic_beverages",
+      "confections_frostings",
+      "breakfast_cereals",
+      "condiments_relishes",
+      "infant_formula",
+      "frozen_dairy"
+    ]
+  },
+  "linked_pages": []
+}

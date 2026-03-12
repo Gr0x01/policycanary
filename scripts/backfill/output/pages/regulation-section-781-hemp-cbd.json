@@ -1,0 +1,46 @@
+{
+  "page_type": "regulation",
+  "slug": "section-781-hemp-cbd",
+  "title": "Section 781 Hemp & CBD: FDA Regulatory Framework & Enforcement",
+  "excerpt": "Section 781 of the FD&C Act, enacted November 2025, rewrites the federal definition of hemp with a total THC standard and a 0.4 mg per container cap -- threatening 95% of existing hemp-derived cannabinoid products by November 2026. FDA missed its February 2026 guidance deadline, leaving the $30B industry in regulatory limbo.",
+  "status": "draft",
+  "seo_title": "Hemp CBD Regulation: FDA Section 781, State Laws & Enforcement | Policy Canary",
+  "seo_description": "Comprehensive analysis of Section 781's impact on hemp and CBD products: total THC redefinition, 0.4 mg container cap, FDA's missed guidance deadline, congressional response bills, state patchwork, and enforcement trends against CBD companies.",
+  "structured_data": {
+    "regulation_name": "Section 781 Hemp & CBD Regulation",
+    "current_status": "enacted",
+    "authority": "FDA / DEA / FTC",
+    "enacted_date": "2025-11-12",
+    "effective_date": "2026-11-12",
+    "statute": "FD&C Act Section 781 (P.L. 119-37, Division B)",
+    "cfr_references": [],
+    "key_deadlines": [
+      { "date": "2025-11-12", "label": "Section 781 enacted as part of P.L. 119-37" },
+      { "date": "2026-02-10", "label": "FDA deadline for cannabinoid lists and container guidance (missed)" },
+      { "date": "2026-11-12", "label": "Section 781 restrictions take full effect -- 0.4 mg THC cap enforced" }
+    ],
+    "affected_categories": [
+      "specialty_supplements",
+      "nonalcoholic_beverages",
+      "soft_candy",
+      "botanicals_herbal",
+      "vape_e_cigarettes",
+      "baked_goods",
+      "snack_foods"
+    ],
+    "related_legislation": [
+      "2018 Agriculture Improvement Act (Farm Bill)",
+      "American Hemp Protection Act of 2025 (H.R. 6209)",
+      "Cannabinoid Safety and Regulation Act (CSRA, December 2025)"
+    ],
+    "industry_impact": {
+      "estimated_market_value": "$30 billion",
+      "products_affected_pct": "95%",
+      "jobs_at_risk": "300,000+",
+      "state_tax_revenue_at_risk": "$1.5 billion"
+    }
+  },
+  "linked_pages": [
+    { "page_type": "ingredient", "slug": "cbd", "link_type": "regulation_affects_ingredient" }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "page_type": "regulation",
+  "slug": "gras-reform",
+  "title": "GRAS Reform: FDA's Generally Recognized as Safe Review & Proposed Changes",
+  "excerpt": "The FDA is preparing a proposed rule to make GRAS notification mandatory, ending decades of industry self-determination. With the Better Food Disclosure Act advancing in Congress and targeted reassessments of BHA and other substances underway, companies relying on self-affirmed GRAS face a compliance reckoning in 2026-2027.",
+  "seo_title": "GRAS Reform: FDA Self-Determination Loophole & Proposed Rules | Policy Canary",
+  "seo_description": "GRAS reform intelligence: FDA mandatory notification proposed rule, Better Food Disclosure Act (S. 3122), BHA reassessment, self-affirmed GRAS loophole, and compliance deadlines for food companies.",
+  "status": "draft",
+  "structured_data": {
+    "regulation_name": "GRAS (Generally Recognized as Safe) Reform",
+    "current_status": "proposed",
+    "cfr_references": ["21 CFR 170", "21 CFR 170 Subpart E", "21 CFR 182", "21 CFR 184", "21 CFR 186", "21 CFR 570"],
+    "key_deadlines": [
+      { "date": "2025-09-01", "label": "HHS Secretary Kennedy directs FDA to explore rulemaking to eliminate self-affirmed GRAS" },
+      { "date": "2025-11-06", "label": "Better Food Disclosure Act (S. 3122) introduced in Senate" },
+      { "date": "2025-12-01", "label": "FDA submits proposed mandatory GRAS notification rule to OMB/OIRA" },
+      { "date": "2026-02-10", "label": "FDA launches BHA comprehensive reassessment and issues RFI" },
+      { "date": "2026-04-13", "label": "BHA RFI comment period closes" },
+      { "date": "2026-06-01", "label": "FDA proposed rule requiring mandatory GRAS notifications expected (est.)" },
+      { "date": "2027-06-01", "label": "Final rule and initial compliance deadline possible (est.)" }
+    ],
+    "affected_categories": ["other_food", "animal_feed", "infant_formula", "dairy_products", "plant_protein_products", "food_contact_materials", "baked_goods", "snack_food", "cereal_and_grain", "frozen_food"]
+  },
+  "linked_pages": [
+    { "page_type": "ingredient", "slug": "bha", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "carrageenan", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "potassium-bromate", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "azodicarbonamide", "link_type": "regulation_affects_ingredient" }
+  ],
+  "linked_item_ids": []
+}

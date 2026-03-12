@@ -1,0 +1,46 @@
+{
+  "page_type": "regulation",
+  "slug": "mocra",
+  "title": "MoCRA: Modernization of Cosmetics Regulation Act — FDA Compliance Intelligence",
+  "excerpt": "MoCRA is the first major overhaul of U.S. cosmetics regulation since 1938. Facility registration, product listing, and adverse event reporting are now mandatory. GMP and fragrance allergen rules remain delayed into 2026+.",
+  "seo_title": "MoCRA FDA Compliance: Deadlines, Requirements & Enforcement | Policy Canary",
+  "seo_description": "MoCRA compliance guide: facility registration, product listing, adverse event reporting, GMP timeline, PFAS report, and FDA enforcement actions.",
+  "status": "draft",
+  "structured_data": {
+    "regulation_name": "Modernization of Cosmetics Regulation Act (MoCRA)",
+    "current_status": "enacted",
+    "cfr_references": [
+      "FD&C Act Section 604 (Facility Registration)",
+      "FD&C Act Section 605 (Product Listing)",
+      "FD&C Act Section 606 (Good Manufacturing Practice)",
+      "FD&C Act Section 607 (Serious Adverse Event Reporting)",
+      "FD&C Act Section 608 (Safety Substantiation)",
+      "FD&C Act Section 609 (Fragrance Allergen Labeling)",
+      "FD&C Act Section 611 (Mandatory Recall)",
+      "Public Law 117-328 Title III Subtitle E"
+    ],
+    "key_deadlines": [
+      { "date": "2022-12-29", "label": "MoCRA signed into law; mandatory recall authority effective immediately" },
+      { "date": "2023-12-29", "label": "Serious adverse event reporting and safety substantiation requirements take effect" },
+      { "date": "2024-07-01", "label": "FDA begins enforcing facility registration and product listing" },
+      { "date": "2024-12-29", "label": "Responsible person labeling requirement takes effect" },
+      { "date": "2025-12-29", "label": "FDA publishes PFAS in cosmetics report (statutory deadline met)" },
+      { "date": "2026-05-01", "label": "Proposed rule for fragrance allergen labeling (estimated)" },
+      { "date": "2026-07-01", "label": "First biennial facility registration renewals due" }
+    ],
+    "affected_categories": [
+      "skin_care",
+      "personal_cleanliness",
+      "baby_products",
+      "suntan_preparations",
+      "other_cosmetic"
+    ]
+  },
+  "linked_pages": [
+    { "page_type": "ingredient", "slug": "propylparaben", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "formaldehyde", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "ingredient", "slug": "talc", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "regulation", "slug": "pfas-food-contact", "link_type": "related" }
+  ],
+  "linked_item_ids": []
+}

@@ -1,0 +1,61 @@
+{
+  "page_type": "regulation",
+  "slug": "dietary-supplement-gmp",
+  "title": "Dietary Supplement GMP: 21 CFR 111 Compliance & FDA Enforcement",
+  "excerpt": "21 CFR Part 111 requires all dietary supplement manufacturers to follow current good manufacturing practices for identity testing, specifications, and documentation. With 34 CGMP-related enforcement actions in our database and nearly half of inspected facilities receiving FDA citations, supplement GMP compliance remains the industry's most persistent regulatory challenge.",
+  "status": "draft",
+  "seo_title": "Dietary Supplement GMP Requirements: FDA 21 CFR 111 | Policy Canary",
+  "seo_description": "Complete guide to dietary supplement GMP compliance under 21 CFR Part 111. Covers the five most common FDA violations, warning letter patterns, third-party certification (NSF, USP, ConsumerLab), the Dietary Supplement Listing Act of 2026, and what manufacturers should do now.",
+  "structured_data": {
+    "regulation_name": "Dietary Supplement Current Good Manufacturing Practices (21 CFR 111)",
+    "current_status": "enacted",
+    "cfr_references": ["21 CFR 111"],
+    "key_deadlines": [
+      {
+        "date": "1994-10-25",
+        "label": "DSHEA signed into law"
+      },
+      {
+        "date": "2007-06-25",
+        "label": "21 CFR 111 final rule published"
+      },
+      {
+        "date": "2008-06-25",
+        "label": "GMP compliance required: 500+ employee firms"
+      },
+      {
+        "date": "2009-06-25",
+        "label": "GMP compliance required: 20-499 employee firms"
+      },
+      {
+        "date": "2010-06-25",
+        "label": "GMP compliance required: all firms (including <20 employees)"
+      },
+      {
+        "date": "2026-01-15",
+        "label": "Dietary Supplement Listing Act of 2026 (S.3677) introduced by Sen. Durbin"
+      }
+    ],
+    "affected_categories": [
+      "botanicals_herbal",
+      "multivitamins",
+      "specialty_supplements",
+      "weight_management",
+      "sports_performance",
+      "protein_powders",
+      "probiotics_prebiotics"
+    ]
+  },
+  "linked_pages": [
+    {
+      "page_type": "ingredient",
+      "slug": "kratom",
+      "link_type": "regulation_affects_ingredient"
+    },
+    {
+      "page_type": "ingredient",
+      "slug": "nmn",
+      "link_type": "regulation_affects_ingredient"
+    }
+  ]
+}

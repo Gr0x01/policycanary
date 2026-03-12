@@ -1,0 +1,46 @@
+{
+  "page_type": "regulation",
+  "slug": "red-no-3-ban",
+  "title": "Red No. 3 Ban: FDA Revokes FD&C Red No. 3 for Food & Drugs",
+  "excerpt": "The FDA revoked color additive listings for FD&C Red No. 3 under the Delaney Clause. Food deadline January 15, 2027. Drug deadline January 18, 2028. Complete timeline, state bans, and reformulation guide.",
+  "status": "draft",
+  "seo_title": "Red No. 3 Ban: FDA Final Rule, Deadlines & Reformulation | Policy Canary",
+  "seo_description": "FDA banned Red No. 3 (erythrosine) in food and drugs under the Delaney Clause. Food products must comply by Jan 15, 2027. Drugs by Jan 18, 2028. Full regulatory analysis, state bans, and industry action plan.",
+  "structured_data": {
+    "regulation_name": "FD&C Red No. 3 Ban",
+    "current_status": "enacted",
+    "issuing_agency": "FDA",
+    "federal_register_citation": "90 FR 4628",
+    "docket_number": "FDA-2023-N-0437",
+    "cfr_references": ["21 CFR 74.303", "21 CFR 74.1303"],
+    "statutory_authority": "FD&C Act Section 721(b)(5)(B) (Delaney Clause)",
+    "key_deadlines": [
+      { "date": "2025-01-15", "label": "FDA issues final order revoking Red No. 3 color additive listings" },
+      { "date": "2025-02-18", "label": "Deadline for objections and hearing requests" },
+      { "date": "2025-04-22", "label": "FDA/HHS announce broader synthetic dye phase-out (MAHA initiative)" },
+      { "date": "2027-01-01", "label": "California AB 418 takes effect — Red No. 3 banned in food sold in California" },
+      { "date": "2027-01-15", "label": "FDA ban effective — Red No. 3 prohibited in food and dietary supplements" },
+      { "date": "2028-01-18", "label": "FDA ban effective — Red No. 3 prohibited in ingested drugs (Rx and OTC)" }
+    ],
+    "affected_categories": [
+      "confections_frostings",
+      "soft_candy",
+      "baked_goods",
+      "nonalcoholic_beverages",
+      "prescription_drugs",
+      "otc_drugs",
+      "multivitamins"
+    ],
+    "related_state_laws": [
+      { "state": "California", "bill": "AB 418", "effective": "2027-01-01", "scope": "Food ban" },
+      { "state": "West Virginia", "bill": "HB 2354", "effective": "2028-01-01", "scope": "Food ban (preliminary injunction on retail provisions Dec 2025)" },
+      { "state": "Utah", "bill": "HB 402", "effective": "2025-05-07", "scope": "School food ban" },
+      { "state": "Arizona", "bill": "HB 2164", "effective": "2026-08-01", "scope": "School food ban" },
+      { "state": "Virginia", "bill": "S 1289/H 1910", "effective": "2027-07-01", "scope": "School food ban" }
+    ]
+  },
+  "linked_pages": [
+    { "page_type": "ingredient", "slug": "red-no-3", "link_type": "regulation_affects_ingredient" },
+    { "page_type": "regulation", "slug": "food-dye-phase-out", "link_type": "related" }
+  ]
+}

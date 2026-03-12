@@ -1,0 +1,35 @@
+{
+  "page_type": "regulation",
+  "slug": "front-of-pack-labeling",
+  "title": "Front-of-Pack Labeling: FDA's Proposed Nutrition Information Rule",
+  "excerpt": "The FDA has proposed mandatory front-of-package nutrition labels requiring a 'Nutrition Info box' displaying Low, Med, or High interpretive ratings for saturated fat, sodium, and added sugars on most packaged foods. Published January 16, 2025, the rule received 11,000+ comments and could be finalized in spring 2026 — though the Trump administration's MAHA initiative may reshape the final design.",
+  "status": "draft",
+  "seo_title": "FDA Front-of-Pack Labeling Rule: Proposed Requirements & Timeline | Policy Canary",
+  "seo_description": "Complete regulatory intelligence on the FDA's proposed front-of-pack nutrition labeling rule (21 CFR 101). Covers the Nutrition Info box design, Low/Med/High thresholds, comment period timeline, MAHA implications, international FOP systems, and what food manufacturers should do to prepare.",
+  "structured_data": {
+    "regulation_name": "Front-of-Pack Nutrition Labeling",
+    "current_status": "proposed",
+    "cfr_references": ["21 CFR 101"],
+    "docket_number": "FDA-2024-N-2910",
+    "federal_register_citation": "90 FR 4386",
+    "key_deadlines": [
+      { "date": "2025-01-16", "label": "Proposed rule published in Federal Register" },
+      { "date": "2025-05-16", "label": "Original comment period deadline (passed)" },
+      { "date": "2025-07-15", "label": "Extended comment period deadline (closed)" },
+      { "date": "2026-06-30", "label": "Projected final rule issuance (spring 2026, approximate)" }
+    ],
+    "affected_categories": [
+      "dietary_conventional_foods",
+      "baked_goods",
+      "nonalcoholic_beverages",
+      "breakfast_cereals",
+      "confections_frostings",
+      "dairy_products",
+      "snack_foods",
+      "soups"
+    ],
+    "estimated_annual_cost": "$66M–$154M (primary estimate $105M)",
+    "compliance_timeline": "3 years after final rule ($10M+ businesses), 4 years (under $10M)"
+  },
+  "linked_pages": []
+}
