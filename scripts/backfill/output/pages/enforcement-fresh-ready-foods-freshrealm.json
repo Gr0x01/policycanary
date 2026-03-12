@@ -1,0 +1,28 @@
+{
+  "page_type": "enforcement",
+  "slug": "fresh-ready-foods-freshrealm",
+  "title": "Fresh & Ready Foods LLC / FreshRealm: 98 Recall Actions and a Deadly Listeria Crisis",
+  "excerpt": "Two ready-to-eat food manufacturers — Fresh & Ready Foods LLC and FreshRealm Inc. — triggered 98 recall actions tied to Listeria monocytogenes contamination. Together, the outbreaks sickened 38 people, hospitalized 37, and killed 8 across 19 states.",
+  "status": "draft",
+  "seo_title": "Fresh & Ready Foods / FreshRealm Listeria Recalls — Enforcement Intelligence | Policy Canary",
+  "seo_description": "Full enforcement analysis of 98 Listeria monocytogenes recall actions involving Fresh & Ready Foods LLC and FreshRealm. Timeline, FDA/FSIS actions, 8 deaths, 38 illnesses, and industry implications for ready-to-eat food manufacturers.",
+  "structured_data": {
+    "company_name": "Fresh & Ready Foods LLC / FreshRealm Inc.",
+    "total_actions": 98,
+    "action_types": { "recall_class_i": 82, "public_health_alert": 9, "warning_letter": 2, "inspection_oia": 5 },
+    "violation_types": [
+      "Listeria monocytogenes contamination",
+      "Inadequate sanitation preventive controls",
+      "Failure to identify reasonably foreseeable hazards",
+      "Inadequate environmental monitoring program",
+      "CGMP violations — insanitary conditions",
+      "Failure to implement effective HACCP procedures"
+    ],
+    "affected_categories": ["ready-to-eat-meals", "sandwiches", "prepared-salads", "pasta-meals", "snack-items", "meal-kits"],
+    "date_range": { "earliest": "2023-12-03", "latest": "2026-02-15" },
+    "key_deadlines": [
+      { "date": "2025-12-05", "description": "FDA warning letter response deadline for Fresh & Ready Foods LLC" },
+      { "date": "2026-02-15", "description": "CDC declared FreshRealm prepared pasta meals outbreak closed — 28 ill, 7 dead" }
+    ]
+  }
+}

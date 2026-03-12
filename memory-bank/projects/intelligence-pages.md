@@ -2,7 +2,7 @@
 title: Intelligence Pages — Programmatic SEO Surfaces
 created: 2026-03-11
 last-updated: 2026-03-12
-status: Active — Ingredients complete (25/25), enforcement backfill next
+status: Active — Ingredients (25/25) and enforcement (10/10) complete, regulation backfill next
 maintainer: RB
 ---
 
@@ -247,14 +247,8 @@ Internal linking architecture:
 ### Ingredients — COMPLETE (25/25 published, ~51,750 words)
 Red No. 3, Red 40, BHA, titanium dioxide, PFAS, Yellow 5, Yellow 6, Blue 1, Blue 2, Green 3, potassium bromate, propylparaben, brominated vegetable oil, azodicarbonamide, NMN, formaldehyde, talc, lead, kratom, CBD/cannabidiol, sucralose, aspartame, carrageenan, sodium nitrite, parabens
 
-### Enforcement (Week 2-3)
-Prioritize companies from 2025-2026 with high search volume:
-- ByHeart (infant formula botulism)
-- FreshRealm (listeria, 7 deaths)
-- GLP-1 compounders (50+ warning letters)
-- Dollar Tree (lead-tainted applesauce)
-- Major retailers (recall execution failures)
-- Kratom/tianeptine vendors
+### Enforcement — COMPLETE (10/10 published, ~18,000 words)
+Grimmway Farms, Dollar General, Fresh & Ready Foods/FreshRealm, Reser's Fine Foods, Albertsons, Sysco, Danone, FGF Brands, Deep Foods/Chetak, Wells Enterprises
 
 ### Regulations (Week 3-4)
 MoCRA, FSMA 204, Red No. 3 ban (Delaney Clause), food dye phase-out (MAHA), GRAS reform, Section 781 hemp/CBD, front-of-pack labeling, dietary supplement GMP (21 CFR 111), PFAS food contact restrictions, ultra-processed food definition, dietary supplement listing act, formaldehyde in cosmetics, lead in baby food (Closer to Zero), FSMA agricultural water

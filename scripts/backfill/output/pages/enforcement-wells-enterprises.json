@@ -1,0 +1,30 @@
+{
+  "page_type": "enforcement",
+  "slug": "wells-enterprises",
+  "title": "Wells Enterprises, Inc. — FDA Enforcement Intelligence",
+  "excerpt": "Enforcement intelligence profile for Wells Enterprises, Inc. (Ferrero Group), covering 24 FDA recall actions across its ice cream and frozen dessert portfolio. A single April 2025 plastic contamination event generated 22 simultaneous recalls affecting 53,000+ gallons of product distributed to 103 centers nationwide, exposing manufacturing control gaps at America's largest privately held ice cream maker.",
+  "status": "draft",
+  "seo_title": "Wells Enterprises FDA Recalls & Enforcement Actions | Policy Canary",
+  "seo_description": "Complete enforcement intelligence on Wells Enterprises (Blue Bunny, Halo Top, Bomb Pop): 24 FDA recall actions, 2025 plastic contamination mega-recall, undeclared allergens, Listeria history, Ferrero acquisition context, and what it means for the frozen dessert industry.",
+  "structured_data": {
+    "company_name": "Wells Enterprises, Inc.",
+    "parent_company": "Ferrero Group",
+    "total_actions": 24,
+    "action_types": { "voluntary_recalls": 24, "class_i_recalls": 2, "class_ii_recalls": 22 },
+    "violation_types": [
+      "Foreign material contamination (plastic)",
+      "Listeria monocytogenes contamination",
+      "Undeclared allergens (egg, wheat)"
+    ],
+    "affected_categories": [
+      "Ice cream",
+      "Frozen yogurt",
+      "Frozen novelties",
+      "Foodservice bulk ice cream"
+    ],
+    "date_range": { "earliest": "2011-10-07", "latest": "2025-04-25" },
+    "key_deadlines": [
+      { "date": "2028-07-20", "description": "FSMA Food Traceability Final Rule compliance date (extended from January 2026) — impacts frozen dessert supply chain traceability requirements" }
+    ]
+  }
+}

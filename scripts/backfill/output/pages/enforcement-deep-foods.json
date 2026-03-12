@@ -1,0 +1,44 @@
+{
+  "page_type": "enforcement",
+  "slug": "deep-foods",
+  "title": "Deep Foods / Chetak International — FDA Enforcement Intelligence",
+  "excerpt": "Enforcement intelligence profile for Deep Foods LLC and its distribution arm Chetak LLC Group, covering 54 recall actions stemming from a massive Salmonella Anatum contamination event affecting 3.5 million+ bags of frozen Indian vegetables and fruits. The 2025 outbreak, traced to imported sprouted beans, triggered one of the largest Class I frozen food recalls in recent history and exposed critical FSVP gaps for ethnic food importers.",
+  "status": "draft",
+  "seo_title": "Deep Foods / Chetak FDA Recalls & Enforcement Actions | Policy Canary",
+  "seo_description": "Complete enforcement intelligence on Deep Foods and Chetak LLC Group: 54 FDA recall actions, Salmonella Anatum outbreak, 3.5M+ bags recalled at Class I level, and what it means for ethnic and specialty food importers.",
+  "structured_data": {
+    "company_name": "Deep Foods LLC / Chetak LLC Group",
+    "total_actions": 54,
+    "action_types": {
+      "voluntary_recalls": 51,
+      "class_i_recalls": 3
+    },
+    "violation_types": [
+      "Salmonella Anatum contamination",
+      "Salmonella Bareilly contamination",
+      "Salmonella contamination (unspecified serotype)",
+      "Shared equipment cross-contamination"
+    ],
+    "affected_categories": [
+      "Frozen sprouted beans",
+      "Frozen vegetables",
+      "Frozen fruits",
+      "Frozen vegetable mixes",
+      "Frozen Indian specialty items"
+    ],
+    "date_range": {
+      "earliest": "2025-07-16",
+      "latest": "2025-12-11"
+    },
+    "key_deadlines": [
+      {
+        "date": "2025-12-11",
+        "description": "FDA classified the expanded recall as Class I — the most severe designation, indicating reasonable probability of serious adverse health consequences or death"
+      },
+      {
+        "date": "2025-09-25",
+        "description": "CDC declared the Salmonella Anatum outbreak officially over after 12 confirmed illnesses across 11 states"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "page_type": "enforcement",
+  "slug": "dollar-general",
+  "title": "Dollar General Corporation: FDA Enforcement & Food Safety Record",
+  "excerpt": "Dollar General faces a mounting regulatory profile spanning 25 FDA recall actions, a $12M OSHA settlement, and growing scrutiny over discount retail food safety failures — all while operating 20,000+ stores where consumables account for 82% of revenue.",
+  "status": "draft",
+  "seo_title": "Dollar General FDA Enforcement Actions & Food Safety Record | Policy Canary",
+  "seo_description": "Comprehensive analysis of Dollar General's FDA enforcement history, including 25 recall actions, OSHA's $12M settlement, temperature excursion failures, and the discount retail food safety crisis highlighted by the WanaBana lead-contaminated applesauce outbreak.",
+  "structured_data": {
+    "company_name": "Dollar General Corporation",
+    "total_actions": 25,
+    "action_types": { "voluntary_recalls": 22, "fda_class_ii_recalls": 2, "regulatory_inspections": 1 },
+    "violation_types": [
+      "Physical contamination (glass fragments)",
+      "Undeclared allergens (milk, tree nuts)",
+      "Temperature excursion / cold chain failure",
+      "Pathogen contamination (Listeria, Salmonella)",
+      "Workplace safety (blocked exits, fire hazards)"
+    ],
+    "affected_categories": ["Instant coffee", "Baked goods and cookies", "Dairy products", "Frozen foods", "Refrigerated beverages", "Confectionery", "General consumables"],
+    "date_range": { "earliest": "2018-01-01", "latest": "2025-08-11" },
+    "key_deadlines": [
+      { "date": "2025-07-11", "description": "OSHA settlement compliance: quarterly safety reports due to OSHA, third-party auditor engagement required" },
+      { "date": "2025-08-06", "description": "FDA Class II classification issued for temperature excursion recall affecting dairy, frozen, and refrigerated products" }
+    ]
+  }
+}

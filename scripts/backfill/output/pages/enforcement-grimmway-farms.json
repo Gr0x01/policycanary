@@ -1,0 +1,26 @@
+{
+  "page_type": "enforcement",
+  "slug": "grimmway-farms",
+  "title": "Grimmway Farms: E. coli O121 Outbreak and Multi-Brand Organic Carrot Recall",
+  "excerpt": "The world's largest carrot producer triggered a nationwide recall across 18+ retail brands after an E. coli O121:H19 outbreak sickened 48 people in 19 states, hospitalized 20, and killed one. A timeline of FDA enforcement actions, CDC investigation findings, and supply chain lessons for the fresh produce industry.",
+  "status": "draft",
+  "seo_title": "Grimmway Farms FDA Recall & E. coli Outbreak | Enforcement Analysis",
+  "seo_description": "Complete analysis of Grimmway Farms' 2024 organic carrot recall tied to E. coli O121:H19. 48 illnesses, 1 death, 18+ brands affected. FDA enforcement timeline, CDC investigation, and industry impact.",
+  "structured_data": {
+    "company_name": "Grimmway Enterprises, Inc. dba Grimmway Farms",
+    "total_actions": 5,
+    "action_types": { "recall": 5 },
+    "violation_types": [
+      "E. coli O121:H19 contamination",
+      "Adulterated food (STEC-positive environmental samples)"
+    ],
+    "affected_categories": ["fresh_fruits_vegetables"],
+    "date_range": { "earliest": "2024-11-16", "latest": "2025-01-08" },
+    "key_deadlines": [
+      { "date": "2024-11-16", "description": "Initial voluntary recall of organic whole and baby carrots" },
+      { "date": "2024-11-21", "description": "Recall expanded to include additional bag sizes" },
+      { "date": "2024-12-18", "description": "CDC declared outbreak investigation closed" },
+      { "date": "2025-01-08", "description": "FDA recall records finalized (5 actions)" }
+    ]
+  }
+}

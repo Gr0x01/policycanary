@@ -1,0 +1,27 @@
+{
+  "page_type": "enforcement",
+  "slug": "resers-fine-foods",
+  "title": "Reser's Fine Foods, Inc.: Enforcement Intelligence Profile",
+  "excerpt": "With 62 FDA and USDA enforcement actions spanning over a decade, Reser's Fine Foods — a $2 billion private-label prepared foods giant — presents a case study in recurring Listeria contamination, undeclared allergens, and the compounding risks of co-packing at scale.",
+  "status": "draft",
+  "seo_title": "Reser's Fine Foods FDA Recalls & Enforcement Actions | Policy Canary",
+  "seo_description": "Comprehensive enforcement intelligence on Reser's Fine Foods, Inc. — 62 recall actions, recurring Listeria contamination, undeclared allergens, FDA warning letters, and what it means for private-label food safety.",
+  "structured_data": {
+    "company_name": "Reser's Fine Foods, Inc.",
+    "total_actions": 62,
+    "action_types": { "voluntary_recalls": 48, "fda_warning_letters": 2, "fsis_public_health_alerts": 5, "market_withdrawals": 7 },
+    "violation_types": [
+      "Listeria monocytogenes contamination",
+      "Undeclared allergens (milk, soy, wheat, egg)",
+      "Supplier ingredient contamination",
+      "CGMP violations — sanitation and equipment maintenance",
+      "Inadequate environmental monitoring",
+      "Labeling errors"
+    ],
+    "affected_categories": ["Prepared salads", "Deli side dishes", "Ready-to-eat meal kits", "Refrigerated dips and spreads", "Meat salads (ham, tuna, chicken)", "Mexican-style prepared foods"],
+    "date_range": { "earliest": "2013-10-22", "latest": "2025-07-29" },
+    "key_deadlines": [
+      { "date": "2025-09-01", "description": "Final sell-by date for ham salad products under July 2025 FSIS public health alert" }
+    ]
+  }
+}

@@ -4,16 +4,16 @@ created: 2026-03-03
 last-updated: 2026-03-12
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Ingredient pages complete (25/25). Enforcement page backfill next.
+status: Active — Ingredient (25/25) and enforcement (10/10) pages complete. Regulation page backfill next.
 ---
 
 # Active Development Context
 
 **Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Anton on Pi) upgraded to autonomous cofounder model. PostHog + Sentry instrumented. Phase 2 data sources deployed. Intelligence pages live — ingredient backfill complete, enforcement next.
 **Live partner:** Anton on Pi 5 (`ssh gr0x@10.2.0.40`), Slack `#pc-content`. Upgraded 2026-03-12 with proactive-agent patterns (WAL, working buffer, compaction recovery, reverse prompting, outcome tracking, context-aware crons, business monitoring).
-**Just shipped:** All 25 ingredient intelligence pages published (~51,750 words). CBD fact-checked and corrected. Parabens page added as 25th. Data gathering scripts run for enforcement (23 companies) and regulations (10 topics).
-**Current:** Enforcement page backfill (23 companies with data context files ready). Then regulation pages (~10-15).
-**Next up:** Regulation page backfill, cross-linking between pages, pipeline integration (flagPagesForRefresh). Then launch prep.
+**Just shipped:** All 10 enforcement intelligence pages published (~18,000 words, fact-checked). Companies: grimmway-farms, dollar-general, fresh-ready-foods-freshrealm, resers-fine-foods, albertsons, sysco, danone, fgf-brands, deep-foods, wells-enterprises. FSMA 204 date corrected across all pages (Jan 2026 → July 2028).
+**Current:** Regulation page backfill (~10-15 topics, data context files ready). Then cross-linking and pipeline integration.
+**Next up:** Cross-linking between pages, pipeline integration (flagPagesForRefresh). Then launch prep.
 **Following feature:** Research tier ($399/mo) — agentic search. Full planning doc: `memory-bank/projects/research-search.md`
 
 ---

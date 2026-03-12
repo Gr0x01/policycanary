@@ -1,0 +1,36 @@
+{
+  "page_type": "enforcement",
+  "slug": "danone",
+  "title": "Danone North America, PBC — FDA Enforcement Intelligence",
+  "excerpt": "Enforcement intelligence profile for Danone North America, covering 13 recall actions across its yogurt, dairy, plant-based, and coffee creamer portfolio. A pattern of foreign material contamination, undeclared allergens, and spoilage events — compounded by the 2026 global infant formula cereulide crisis — exposes systemic quality control gaps across one of the largest certified B Corporations in the United States.",
+  "status": "draft",
+  "seo_title": "Danone FDA Recalls & Enforcement Actions | Policy Canary",
+  "seo_description": "Complete enforcement intelligence on Danone North America: 13 FDA recall actions covering YoCrunch plastic contamination, International Delight spoilage, undeclared allergens, and the global infant formula cereulide crisis. Analysis of patterns, affected brands, and industry implications.",
+  "structured_data": {
+    "company_name": "Danone North America, PBC",
+    "total_actions": 13,
+    "action_types": { "voluntary_recalls": 13, "class_i_recalls": 1, "class_ii_recalls": 12 },
+    "violation_types": [
+      "Foreign material contamination (plastic pieces)",
+      "Foreign material contamination (stones/hard objects)",
+      "Undeclared allergens (peanuts, eggs, wheat)",
+      "Product spoilage and illness complaints",
+      "Chemical contamination (sanitizer)",
+      "Mislabeling (sugar content)",
+      "Cereulide toxin contamination (infant formula, international)"
+    ],
+    "affected_categories": [
+      "Yogurt (YoCrunch, Light & Fit, Dannon)",
+      "Coffee creamers (International Delight)",
+      "Dairy (Horizon Organic milk, heavy cream)",
+      "Plant-based frozen desserts (So Delicious)",
+      "Plant-based beverages (Silk)",
+      "Infant formula (Aptamil, Cow & Gate — international)"
+    ],
+    "date_range": { "earliest": "2018-12-05", "latest": "2025-12-15" },
+    "key_deadlines": [
+      { "date": "2028-07-20", "description": "FSMA Food Traceability Final Rule compliance date (extended from January 2026) — impacts Danone's dairy, plant-based, and yogurt supply chains" },
+      { "date": "2026-02-16", "description": "French prosecutors open investigation into Danone, Nestle, and Lactalis over cereulide-contaminated infant formula" }
+    ]
+  }
+}

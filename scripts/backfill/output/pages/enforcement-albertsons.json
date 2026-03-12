@@ -1,0 +1,25 @@
+{
+  "page_type": "enforcement",
+  "slug": "albertsons",
+  "title": "Albertsons Companies, Inc. — FDA Enforcement Intelligence",
+  "excerpt": "Enforcement intelligence profile for Albertsons Companies, Inc., covering 30 recall actions across its 2,270-store network. Recurring supplier-driven Listeria and Salmonella contamination in ReadyMeals and deli products highlights the systemic food safety challenges facing America's second-largest grocery chain.",
+  "status": "draft",
+  "seo_title": "Albertsons FDA Recalls & Enforcement Actions | Policy Canary",
+  "seo_description": "Complete enforcement intelligence on Albertsons Companies: 30 FDA recall actions, Listeria and Salmonella contamination events, supplier chain failures from BrucePac and Fresh Creative Foods, and what it means for the retail food safety industry.",
+  "structured_data": {
+    "company_name": "Albertsons Companies, Inc.",
+    "total_actions": 30,
+    "action_types": { "voluntary_recalls": 28, "class_i_recalls": 2 },
+    "violation_types": [
+      "Listeria monocytogenes contamination",
+      "Salmonella contamination",
+      "E. coli contamination",
+      "Undeclared allergens (peanut, soy)"
+    ],
+    "affected_categories": ["Ready meals", "Deli items", "Taco kits", "Pasta salads", "Vegetable trays", "Organic carrots", "Bakery products", "Fresh-cut produce"],
+    "date_range": { "earliest": "2017-10-20", "latest": "2025-10-01" },
+    "key_deadlines": [
+      { "date": "2028-07-20", "description": "FSMA Food Traceability Final Rule compliance date (extended from January 2026) — directly impacts Albertsons' fresh-cut produce, deli, and ready meal supply chains" }
+    ]
+  }
+}

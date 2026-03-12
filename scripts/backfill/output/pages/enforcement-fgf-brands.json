@@ -1,0 +1,34 @@
+{
+  "page_type": "enforcement",
+  "slug": "fgf-brands",
+  "title": "FGF Brands Inc. — FDA Enforcement Intelligence",
+  "excerpt": "Enforcement intelligence profile for FGF Brands Inc., covering 60 recall actions triggered by a single massive Listeria event at the company's Brownsburg, Indiana donut facility. Over 2 million cases of baked goods — including products supplied to Dunkin' and major grocery retailers — were voluntarily recalled in January 2025 after environmental Listeria detection, exposing the concentration risk inherent in private-label bakery manufacturing.",
+  "status": "draft",
+  "seo_title": "FGF Brands FDA Recalls & Enforcement Actions | Policy Canary",
+  "seo_description": "Complete enforcement intelligence on FGF Brands Inc.: 60 FDA recall actions, 2M+ cases of donuts and baked goods recalled for Listeria contamination, Dunkin' and ALDI exposure, allergen violations, and what it means for private-label bakery manufacturing.",
+  "structured_data": {
+    "company_name": "FGF Brands Inc.",
+    "total_actions": 60,
+    "action_types": { "class_ii_recalls": 59, "class_ii_allergen_recalls": 1 },
+    "violation_types": [
+      "Listeria monocytogenes contamination (environmental)",
+      "Undeclared allergens (walnut)"
+    ],
+    "affected_categories": [
+      "Donuts (cake, yeast, filled, glazed)",
+      "Fritters",
+      "French crullers",
+      "Eclairs",
+      "Paczki",
+      "Munchkins",
+      "Coffee rolls",
+      "Cinnamon sticks",
+      "Fluff bars",
+      "Muffins"
+    ],
+    "date_range": { "earliest": "2024-06-26", "latest": "2025-02-05" },
+    "key_deadlines": [
+      { "date": "2028-07-20", "description": "FSMA Food Traceability Final Rule compliance date (extended from January 2026) — impacts bakery supply chain traceability requirements for FGF's retail and foodservice customers" }
+    ]
+  }
+}
