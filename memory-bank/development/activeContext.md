@@ -4,16 +4,15 @@ created: 2026-03-03
 last-updated: 2026-03-12
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — Ingredient (25/25) and enforcement (10/10) pages complete. Regulation page backfill next.
+status: Active — All 45 intelligence pages published (25 ingredient + 10 enforcement + 10 regulation). Launch prep next.
 ---
 
 # Active Development Context
 
-**Phase:** Core product built. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Anton on Pi) upgraded to autonomous cofounder model. PostHog + Sentry instrumented. Phase 2 data sources deployed. Intelligence pages live — ingredient backfill complete, enforcement next.
+**Phase:** Core product built. All 45 intelligence pages published. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Anton on Pi) upgraded to autonomous cofounder model. PostHog + Sentry instrumented. Phase 2 data sources deployed.
 **Live partner:** Anton on Pi 5 (`ssh gr0x@10.2.0.40`), Slack `#pc-content`. Upgraded 2026-03-12 with proactive-agent patterns (WAL, working buffer, compaction recovery, reverse prompting, outcome tracking, context-aware crons, business monitoring).
-**Just shipped:** All 10 enforcement intelligence pages published (~18,000 words, fact-checked). Companies: grimmway-farms, dollar-general, fresh-ready-foods-freshrealm, resers-fine-foods, albertsons, sysco, danone, fgf-brands, deep-foods, wells-enterprises. FSMA 204 date corrected across all pages (Jan 2026 → July 2028).
-**Current:** Regulation page backfill (~10-15 topics, data context files ready). Then cross-linking and pipeline integration.
-**Next up:** Cross-linking between pages, pipeline integration (flagPagesForRefresh). Then launch prep.
+**Just shipped:** IndexNow + Slack GSC reminder. Every blog/intelligence publish pings Bing/Yandex instantly and sends Slack notification to `#notifications` reminding RB to submit to Google Search Console.
+**Current:** Launch prep.
 **Following feature:** Research tier ($399/mo) — agentic search. Full planning doc: `memory-bank/projects/research-search.md`
 
 ---

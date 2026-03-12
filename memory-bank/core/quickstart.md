@@ -8,19 +8,19 @@ Status: Active
 
 ## Current State
 
-- **Status**: Weekly email moved to Inngest (was Vercel cron, free newsletter never sent). FK bug fixed. User settings, alert system, PostHog analytics all shipped.
+- **Status**: Core product built. All 45 intelligence pages published. Email pipeline, enrichment, matching, verdicts, onboarding, analytics (PostHog + Sentry) all live.
 - **Goal**: Monitor FDA for YOUR specific products across ALL regulated sectors — not just your industry
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GTM**: Pilot program (no pricing surfaced, `/pricing` redirects to `/` via proxy). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
 - **Anton (Pi 5)**: `ssh gr0x@10.2.0.40` — Autonomous cofounder (OpenClaw + Slack). Context-aware crons, WAL protocol, working buffer, reverse prompting, outcome tracking. See `architecture/clawdbot.md`.
-- **Next**: Apply migration 007 (intelligence pages), run backfill scripts, generate first batch of ingredient/enforcement/regulation pages. Then launch prep.
+- **Next**: Launch prep.
 
 ---
 
 ## What's Happening
 
-**Intelligence pages backfill in progress. Anton autonomy upgrade deployed.** Three SEO surfaces (`/ingredients/`, `/enforcement/`, `/regulations/`) — migration 007 applied, 13/25 ingredient pages published. Anton upgraded with proactive-agent patterns: WAL protocol, working buffer, compaction recovery, context-aware crons, reverse prompting, outcome tracking, business monitoring. All deployed to Pi and live.
+**All 45 intelligence pages published. Launch prep.** Three SEO surfaces live (`/ingredients/`, `/enforcement/`, `/regulations/`) — 25 ingredient + 10 enforcement + 10 regulation pages (~100K words total). Cross-linking code wired into all 3 page templates. Anton upgraded with proactive-agent patterns on Pi 5.
 
 ---
 
@@ -172,8 +172,7 @@ npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volu
 - [ ] **Full historical backfill** — Federal Register (1994-present), openFDA enforcement (2004-present) + enrich all. Prerequisite for Research tier.
 - [ ] **Research tier ($399/mo)** — agentic search with 7 tools, three-model pipeline (Flash bouncer/status → Pro researcher → Sonnet writer). Full planning doc: `memory-bank/projects/research-search.md`
 - [x] **Phase 2 federal sources** — Guidance Documents (2,761), Regulations.gov (1,178), Import Alerts (154). All enriched.
-- [x] **Intelligence pages (programmatic SEO)** — Code complete. 3 surfaces (`/ingredients/`, `/enforcement/`, `/regulations/`). Migration `007` ready. Backfill scripts ready. Content generation pending.
-- [ ] **Intelligence pages backfill** — Apply migration, run data gathering, generate content via subagents, publish first batch (25 ingredients, enforcement companies, 10 regulations).
+- [x] **Intelligence pages (programmatic SEO)** — 45 pages published across 3 surfaces (`/ingredients/`, `/enforcement/`, `/regulations/`). ~100K words, fact-checked. Migration `007` applied. Cross-linking wired into all page templates.
 - [ ] **Phase 3 sources** — Adverse Events (FAERS/CAERS), state compliance (Prop 65, state bills). Different data shape — deferred.
 - [ ] **Expansion:** State compliance layer (deferred — federal-only until customer demand justifies)
 - [ ] **Expansion:** Pet food / animal supplements (deferred)
@@ -230,6 +229,9 @@ DATAFORSEO_BASE64=...            # Base64-encoded login:password
 # Sentry (error monitoring)
 NEXT_PUBLIC_SENTRY_DSN=...       # Sentry DSN (client + server)
 SENTRY_AUTH_TOKEN=...            # Org auth token for source map uploads
+
+# SEO (IndexNow + Slack GSC reminder)
+SLACK_WEBHOOK_SEO=...            # Slack incoming webhook → #notifications (GSC index reminder)
 ```
 
 ---
