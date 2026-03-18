@@ -17,8 +17,8 @@ These are "house on fire, no smoke detector" issues. The system can break and no
 | # | Issue | Files | Status |
 |---|-------|-------|--------|
 | 1.1 | **No failure notifications anywhere** — all pipeline/email errors go to `console.error` only. ~~Add Slack webhook~~ Wired up `Sentry.captureException()` across all catch-and-swallow sites: daily-ingest (7 fetchers), enrich-batch, runner (embeddings/verdicts/alerts/refresh), email sender, send-weekly-core (paid + free), alerts, webhook handler. | `daily-ingest.ts`, `enrich-batch.ts`, `runner.ts`, `sender.ts`, `send-weekly-core.ts`, `alerts.ts`, `webhook/route.ts`, `embeddings.ts` | DONE |
-| 1.2 | **Paid briefings don't record `email_sends` rows** — webhook tracking (open/click/bounce) is completely broken for paid users. Add `recordEmailSend()` after `sendEmail()` in `sendPaidBriefings`. | `src/lib/email/send-weekly-core.ts` ~line 85-100 | TODO |
-| 1.3 | **Failed sends marked as `"queued"` instead of `"failed"`** — ghost records that look pending but are actually failures. Change `"queued"` to `"failed"`. | `src/lib/email/send-weekly-core.ts` ~line 175 | TODO |
+| 1.2 | **Paid briefings don't record `email_sends` rows** — Added `recordEmailSend()` after `sendEmail()` in `sendPaidBriefings`. Webhook tracking now works for paid users. | `src/lib/email/send-weekly-core.ts` | DONE |
+| 1.3 | **Failed sends marked as `"queued"` instead of `"failed"`** — Fixed in both `send-weekly-core.ts` and `alerts.ts`. Added `"failed"` to status union in `queries.ts`. | `src/lib/email/send-weekly-core.ts`, `alerts.ts`, `queries.ts` | DONE |
 | 1.4 | **Embeddings insert errors silently ignored** — items appear enriched but have zero searchable chunks. Check `{ error }` return from insert. Now throws + reports to Sentry. | `src/pipeline/enrichment/embeddings.ts` ~line 135 | DONE |
 
 ---
