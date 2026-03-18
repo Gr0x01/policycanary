@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-18
+Last-Updated: 2026-03-19
 Maintainer: RB
 Status: Active
 ---
@@ -30,12 +30,12 @@ These work now but will break as subscribers/data grow.
 | # | Issue | Files | Status |
 |---|-------|-------|--------|
 | 2.1 | **`send-weekly-emails` and `weekly-snapshot` share same cron** — Staggered: snapshot at 1pm UTC, emails at 2pm UTC. | `weekly-snapshot.ts` | DONE |
-| 2.2 | **Paid briefings = N sequential LLM calls in one Inngest step** — will timeout at ~15 subscribers. Fan out per-subscriber via `step.run()` or individual events. | `src/lib/inngest/functions/send-weekly-emails.ts`, `src/lib/email/send-weekly-core.ts` | TODO |
+| 2.2 | **Paid briefings = N sequential LLM calls in one Inngest step** — Fanned out into batches of 5 per Inngest step with independent retry/timeout. | `send-weekly-emails.ts` | DONE |
 | 2.3 | **N+1 dedup in regulations.gov fetcher** — Batched: one `.in()` query per page instead of 250 individual queries. | `regulations-gov.ts` | DONE |
 | 2.4 | **N+1 dedup in warning letters fetcher** — Batched slug check per page. MARCS dedup still per-letter (requires page fetch). | `warning-letters.ts` | DONE |
-| 2.5 | **Sequential DB writes in enrichItem()** — topics, substances, citations inserted one-at-a-time. Batch into single upserts. 26K-46K unnecessary round-trips per full run. | `src/pipeline/enrichment/processor.ts` ~line 303-331, 319-331, 386-396 | TODO |
-| 2.6 | **In-memory match cache ineffective on Vercel** — module-level `Map` not shared across serverless isolates. Replace with React `cache()` for request-level dedup or remove entirely. | `src/lib/products/matches.ts` ~line 30-58 | TODO |
-| 2.7 | **Feed `myProducts` filter unbounded** — fetches ALL relevant verdict item_ids with no limit. Will exceed PostgREST URL length. Add date floor or move to joined RPC. | `src/lib/products/queries.ts` ~line 433-441 | TODO |
+| 2.5 | **Sequential DB writes in enrichItem()** — Batched: categories, substances, citations all use single batch upsert/insert. | `processor.ts` | DONE |
+| 2.6 | **In-memory match cache ineffective on Vercel** — Removed entirely. RPC calls are fast (~4ms), no cross-request cache needed. | `matches.ts`, `products/route.ts`, `products/[id]/route.ts` | DONE |
+| 2.7 | **Feed `myProducts` filter unbounded** — Bounded to 180-day window on `evaluated_at`. | `queries.ts` | DONE |
 | 2.8 | **Enrichment always triggers even when 0 items fetched** — Gated on `totalCreated > 0`. | `daily-ingest.ts` | DONE |
 | 2.9 | **No timeout on Federal Register / openFDA fetches** — Added 30s `AbortSignal.timeout` to all fetch calls. | `federal-register.ts`, `openfda-enforcement.ts` | DONE |
 
@@ -47,19 +47,19 @@ Real bugs or fragile patterns that should be hardened.
 
 | # | Issue | Files | Status |
 |---|-------|-------|--------|
-| 3.1 | **Inconsistent Stripe error format** — checkout/portal return `{ error: "string" }`, everything else returns `{ error: { message } }`. Frontend will crash on TypeError. | `src/app/api/stripe/checkout/route.ts`, `portal/route.ts` | TODO |
-| 3.2 | **`auth/sync-user` returns `{ ok: true }` on DB failure** — silent failure, downstream features break. Return 500 on insert/update error. | `src/app/api/auth/sync-user/route.ts` ~line 40-78 | TODO |
-| 3.3 | **Blog/intelligence queries called twice per page** — `generateMetadata` + page component both call `getPostBySlug`. Wrap in React `cache()`. | `src/lib/blog/queries.ts`, `src/lib/intelligence/queries.ts` | TODO |
-| 3.4 | **Schema objects not in migration files** — RPCs, `product_match_verdicts`, `weekly_intelligence_snapshots` only in Dashboard. `pg_dump --schema-only` and commit. | `supabase/migrations/` | TODO |
-| 3.5 | **Bounces don't deactivate paid users** — webhook only deactivates `email_subscribers` (free). Also set `email_opted_out = true` on `users` for bounces. | `src/app/api/email/webhook/route.ts` ~line 125-147 | TODO |
-| 3.6 | **`GET /api/products/[id]` missing rate limiting** — 3 DB queries per request, no throttle. Add rate limit. | `src/app/api/products/[id]/route.ts` ~line 18-63 | TODO |
-| 3.7 | **`user.email!` non-null assertion in sync-user** — breaks if social auth ever added. Guard with check. | `src/app/api/auth/sync-user/route.ts` ~line 38, 49, 69 | TODO |
-| 3.8 | **`getUserProducts` fetches all ingredient rows to count** — should use grouped COUNT. | `src/lib/products/queries.ts` ~line 96-115 | TODO |
-| 3.9 | **Sequential cleanup deletes on re-enrichment** — 5 deletes with no error checking, partial state possible. Check errors, parallelize where FK allows. | `src/pipeline/enrichment/processor.ts` ~line 145-153 | TODO |
-| 3.10 | **openFDA + warning letters do insert-then-update** — merge enforcement fields into single insert. | `src/pipeline/fetchers/openfda-enforcement.ts` ~line 203-252, `warning-letters.ts` ~line 356-408 | TODO |
-| 3.11 | **Content-fetch has no retry on transient failures** — single failed fetch = thin enrichment, item marked done. Add 1 retry with backoff. | `src/pipeline/enrichment/content-fetch.ts` | TODO |
-| 3.12 | **One campaign row per paid subscriber** — should be one campaign per weekly send. | `src/lib/email/send-weekly-core.ts` ~line 75-79 | TODO |
-| 3.13 | **Urgent alert dedup uses `html_content` column** — fragile, will break if column gets real HTML. Needs dedicated `reference_id` column (schema change). | `src/lib/email/alerts.ts` ~line 37-46, 94 | TODO |
+| 3.1 | **Inconsistent Stripe error format** — All Stripe routes now return `{ error: { message } }`. | `checkout/route.ts`, `portal/route.ts` | DONE |
+| 3.2 | **`auth/sync-user` returns `{ ok: true }` on DB failure** — Now returns 500 on insert/update failure. | `sync-user/route.ts` | DONE |
+| 3.3 | **Blog/intelligence queries called twice per page** — Wrapped in React `cache()`. | `blog/queries.ts`, `intelligence/queries.ts` | DONE |
+| 3.4 | **Schema objects not in migration files** — Captured in `008_capture_dashboard_objects.sql`: 2 tables + 6 RPCs, all idempotent. | `supabase/migrations/008` | DONE |
+| 3.5 | **Bounces don't deactivate paid users** — Webhook now sets `email_opted_out = true` on `users` table too. | `webhook/route.ts` | DONE |
+| 3.6 | **`GET /api/products/[id]` missing rate limiting** — Added 30 req/window rate limit. | `products/[id]/route.ts` | DONE |
+| 3.7 | **`user.email!` non-null assertion** — Replaced with guard returning 400. All `user.email!` removed. | `sync-user/route.ts` | DONE |
+| 3.8 | **`getUserProducts` fetches all ingredient rows to count** — Parallel `head:true` count queries per product. | `queries.ts` | DONE |
+| 3.9 | **Sequential cleanup deletes on re-enrichment** — FK-ordered (citations→enrichments sequential), then 4 parallel with error checks. | `processor.ts` | DONE |
+| 3.10 | **openFDA + warning letters do insert-then-update** — Merged enforcement fields into single insert. Removed wasteful `.select("id").single()`. | `openfda-enforcement.ts`, `warning-letters.ts` | DONE |
+| 3.11 | **Content-fetch has no retry on transient failures** — Retries once on 5xx/network errors with 1s backoff. 4xx fails immediately. | `content-fetch.ts` | DONE |
+| 3.12 | **One campaign row per paid subscriber** — One campaign created in Inngest/manual route, passed to all batches. | `send-weekly-emails.ts`, `send-weekly-core.ts`, `send-weekly/route.ts` | DONE |
+| 3.13 | **Urgent alert dedup uses `html_content` column** — New `reference_item_id` UUID column with FK + partial index. Migration `009`. | `alerts.ts`, `queries.ts`, `supabase/migrations/009` | DONE |
 
 ---
 
