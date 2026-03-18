@@ -29,15 +29,15 @@ These work now but will break as subscribers/data grow.
 
 | # | Issue | Files | Status |
 |---|-------|-------|--------|
-| 2.1 | **`send-weekly-emails` and `weekly-snapshot` share same cron (Fri 2pm UTC)** — no ordering guarantee. Stagger: snapshot at 1pm, emails at 2pm. | `src/lib/inngest/functions/send-weekly-emails.ts`, `weekly-snapshot.ts` | TODO |
+| 2.1 | **`send-weekly-emails` and `weekly-snapshot` share same cron** — Staggered: snapshot at 1pm UTC, emails at 2pm UTC. | `weekly-snapshot.ts` | DONE |
 | 2.2 | **Paid briefings = N sequential LLM calls in one Inngest step** — will timeout at ~15 subscribers. Fan out per-subscriber via `step.run()` or individual events. | `src/lib/inngest/functions/send-weekly-emails.ts`, `src/lib/email/send-weekly-core.ts` | TODO |
-| 2.3 | **N+1 dedup in regulations.gov fetcher** — 250 individual queries per page. Batch with `.in("source_ref", docIds)` like federal-register does. | `src/pipeline/fetchers/regulations-gov.ts` ~line 207-217 | TODO |
-| 2.4 | **N+1 dedup in warning letters fetcher** — same pattern. Batch-load known source_refs per page. | `src/pipeline/fetchers/warning-letters.ts` ~line 273-284 | TODO |
+| 2.3 | **N+1 dedup in regulations.gov fetcher** — Batched: one `.in()` query per page instead of 250 individual queries. | `regulations-gov.ts` | DONE |
+| 2.4 | **N+1 dedup in warning letters fetcher** — Batched slug check per page. MARCS dedup still per-letter (requires page fetch). | `warning-letters.ts` | DONE |
 | 2.5 | **Sequential DB writes in enrichItem()** — topics, substances, citations inserted one-at-a-time. Batch into single upserts. 26K-46K unnecessary round-trips per full run. | `src/pipeline/enrichment/processor.ts` ~line 303-331, 319-331, 386-396 | TODO |
 | 2.6 | **In-memory match cache ineffective on Vercel** — module-level `Map` not shared across serverless isolates. Replace with React `cache()` for request-level dedup or remove entirely. | `src/lib/products/matches.ts` ~line 30-58 | TODO |
 | 2.7 | **Feed `myProducts` filter unbounded** — fetches ALL relevant verdict item_ids with no limit. Will exceed PostgREST URL length. Add date floor or move to joined RPC. | `src/lib/products/queries.ts` ~line 433-441 | TODO |
-| 2.8 | **Enrichment always triggers even when 0 items fetched** — gate on `totalCreated > 0`. | `src/lib/inngest/functions/daily-ingest.ts` ~line 114-117 | TODO |
-| 2.9 | **No timeout on Federal Register / openFDA fetches** — hangs forever if API is down. Add `AbortSignal.timeout(30_000)`. | `src/pipeline/fetchers/federal-register.ts`, `openfda-enforcement.ts` | TODO |
+| 2.8 | **Enrichment always triggers even when 0 items fetched** — Gated on `totalCreated > 0`. | `daily-ingest.ts` | DONE |
+| 2.9 | **No timeout on Federal Register / openFDA fetches** — Added 30s `AbortSignal.timeout` to all fetch calls. | `federal-register.ts`, `openfda-enforcement.ts` | DONE |
 
 ---
 
