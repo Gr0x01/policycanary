@@ -1,39 +1,84 @@
 ---
-Last-Updated: 2026-03-12
+Last-Updated: 2026-03-16
 Maintainer: RB
-Status: Active — Running on Pi 5 (clawd). Vultr DESTROYED. Autonomy upgrade deployed. Humanization pass added to all content skills.
+Status: RUNNING — Proxmox LXC (VMID 112). Pi 5 available as backup.
 ---
 
 # Anton (formerly Clawdbot) Reference
 
-Anton is an OpenClaw-powered AI agent (Claude Opus 4.6) that operates as Rashaad's cofounder — owning ops, sales, and marketing for Policy Canary and Finch. Runs as a systemd service on a Raspberry Pi 5, connects to Slack, and makes autonomous decisions about what to work on within defined guardrails.
+> **STATUS: RUNNING (2026-03-16).** Anton migrated from Pi 5 to Proxmox LXC (VMID 112, `anton@10.2.20.221`). NVIDIA A2000 12GB GPU passthrough for embeddings. Slack connected. Scheduled content stays in Cowork; Anton handles reactive skills + heartbeat. Pi intact as backup (`ssh gr0x@10.2.0.40`).
+
+Anton was an OpenClaw-powered AI agent (Claude Sonnet 4.6) that operated as Rashaad's cofounder — owning ops, sales, and marketing for Policy Canary and Finch. Ran as a systemd service on a Raspberry Pi 5, connected to Slack, and made autonomous decisions about what to work on within defined guardrails.
+
+## Migration to Cowork
+
+**Why:** API costs ($400/3 days on Opus, still significant on Sonnet) for work that was mostly content generation Rashaad reviewed anyway. Cowork runs on the Claude Max subscription — $0 incremental cost.
+
+**What moved to Cowork (`~/cowork/policy-canary/`):**
+- Weekly FDA roundup (was Friday 9AM cron)
+- SEO blog posts (was Tuesday 10AM cron)
+- LinkedIn drafts (was Mon/Wed 10AM crons)
+- Lead finder (was Monday 8AM cron)
+- All context files: brand voice, anti-slop, SEO keywords, Supabase schema
+
+**What was dropped:**
+- Heartbeat (30min idle proactivity) — low ROI for token cost
+- Nightly review (11PM) — manual check replaces it
+- Pipeline monitoring — check Inngest dashboard directly
+- QMD semantic memory — file-based memory in Cowork workspace instead
+
+**What's still on the Pi (dormant):**
+- OpenClaw installation, all scripts, all skills — intact, just not running
+- `.env` with API keys — still valid
+- Cron jobs in OpenClaw config — still defined, just service is off
 
 ---
 
 ## Infrastructure
 
-### Current: Raspberry Pi 5 (`clawd`)
+### Primary: Proxmox LXC (VMID 112, `anton`)
 | Detail | Value |
 |--------|-------|
-| **Host** | Pi 5 (8GB) + S2Pi NVMe HAT (466GB Samsung) + 2.5GbE |
-| **IP** | `10.2.0.40` (fixed in Unifi) |
-| **SSH** | `ssh gr0x@10.2.0.40` |
-| **OS** | Debian Trixie (Raspberry Pi OS), Node.js 22 |
-| **Agent** | OpenClaw v2026.3.8, Claude Opus 4.6 |
-| **Browser** | `agent-browser` v0.17.1 (native ARM64 Rust CLI + Chromium 145) |
+| **Host** | Proxmox LXC on MS01 (i9-12900H, 96GB RAM) |
+| **VMID** | 112 |
+| **IP** | `10.2.20.221` (DHCP) |
+| **SSH** | `ssh anton@10.2.20.221` |
+| **OS** | Ubuntu 24.04, Node.js 22 |
+| **Agent** | OpenClaw v2026.3.13, Claude Sonnet 4.6 |
+| **GPU** | NVIDIA RTX A2000 12GB (passthrough, CUDA 12.2, driver 535.261.03) |
+| **Resources** | 4 vCPU, 16GB RAM, 16GB disk (LXC — only uses what it needs) |
 | **Service** | `sudo systemctl {start|stop|restart|status} anton.service` |
 | **Logs** | `journalctl -u anton.service -f` |
-| **Config** | `/home/gr0x/.openclaw/openclaw.json` |
-| **Workspace** | `/home/gr0x/.openclaw/workspace/` |
+| **Config** | `/home/anton/.openclaw/openclaw.json` |
+| **Workspace** | `/home/anton/.openclaw/workspace/` |
+| **Timezone** | `Asia/Tokyo` (JST) |
 
-**Vultr VPS DESTROYED.** All Vultr references and Discord integration are deprecated.
+### Backup: Raspberry Pi 5 (`clawd`)
+| Detail | Value |
+|--------|-------|
+| **Host** | Pi 5 (8GB) + S2Pi NVMe HAT (466GB Samsung) + 2.5GbE + cooling hat |
+| **IP** | `10.2.0.40` (fixed in Unifi) |
+| **SSH** | `ssh gr0x@10.2.0.40` |
+| **OS** | Debian Trixie, Node.js 22 |
+| **Agent** | OpenClaw v2026.3.8 |
+| **Status** | STOPPED. Service disabled. Everything intact — restore with `sudo systemctl enable --now anton.service` |
+
+### Portability
+Deploy script handles both targets:
+```bash
+./scripts/clawdbot/deploy.sh pve   # Deploy to Proxmox
+./scripts/clawdbot/deploy.sh pi    # Deploy to Pi
+```
+Switchover: stop on current host → deploy to new host → start on new host. Don't run both simultaneously (duplicate Slack responses).
 
 ### Key Architecture Notes
 - All connections are **outbound** (Slack API, Supabase, Anthropic API, blog/intelligence API) — no inbound ports needed
 - `gateway.mode` must be `"local"` (required for headless operation)
-- `agents.defaults.model` set to Opus 4.6
-- Heartbeat: Sonnet 4.6, every 30m, `lightContext: false` (loads full AGENTS.md with all protocols)
+- `agents.defaults.model` set to Sonnet 4.6 (switched from Opus 2026-03-12 — $400/3 days, quality didn't justify cost)
+- Heartbeat: Sonnet 4.6, every 30m, `lightContext: true`, `target: "slack"`, custom prompt (work tasks, don't just ack)
 - Do NOT create multiple OpenClaw agents simultaneously — concurrent QMD embed processes cause thermal crash
+- QMD embed runs via system cron (`*/10 * * * *`) — OpenClaw's internal 120s timeout is too short for CPU-only Pi. Vulkan GPU build succeeds but Pi 5's VideoCore VII has insufficient shared memory for matrix ops.
+- Config hot reloads reset the heartbeat timer — avoid frequent `openclaw.json` edits
 
 ### Autonomy Model (Upgraded 2026-03-12)
 Inspired by [proactive-agent v3.1.0](https://clawhub.ai/halthelobster/proactive-agent) but adapted for Anton's purpose-built role.
@@ -204,9 +249,9 @@ GOOGLE_GENERATIVE_AI_API_KEY=...     # For image generation
 
 ## File Locations
 
-### On Pi
+### On Proxmox LXC (primary)
 ```
-/home/gr0x/.openclaw/
+/home/anton/.openclaw/
   openclaw.json              # OpenClaw config (Slack, model, cron)
   workspace/
     .env                     # API keys for scripts
@@ -216,7 +261,6 @@ GOOGLE_GENERATIVE_AI_API_KEY=...     # For image generation
     TACIT.md                 # Corrections, patterns, autonomy calibration
     anti-slop.md             # Humanization guide (24 AI writing patterns, banned words/phrases, checklist)
     brand-pc.md              # Policy Canary brand voice
-    brand-finch.md           # Finch brand voice
     memory/
       working-buffer.md      # Danger zone log (activates at 60% context)
       YYYY-MM-DD.md          # Daily notes
@@ -228,6 +272,9 @@ GOOGLE_GENERATIVE_AI_API_KEY=...     # For image generation
       lead-finder/SKILL.md
       agent-browser/SKILL.md
 ```
+
+### On Pi (backup — same layout, different user)
+Same structure under `/home/gr0x/.openclaw/`. Service disabled but intact.
 
 ### In Repo
 ```
@@ -266,33 +313,28 @@ scripts/clawdbot/
 
 ## Deployment
 
-### Deploy workspace files (AGENTS.md, SESSION-STATE.md, HEARTBEAT.md, TACIT.md)
+### Deploy (use the portable script)
 ```bash
-scp scripts/clawdbot/workspace/*.md gr0x@10.2.0.40:/home/gr0x/.openclaw/workspace/
-scp scripts/clawdbot/workspace/memory/working-buffer.md gr0x@10.2.0.40:/home/gr0x/.openclaw/workspace/memory/
+./scripts/clawdbot/deploy.sh pve   # Deploy scripts, skills, workspace to Proxmox
+./scripts/clawdbot/deploy.sh pi    # Deploy to Pi (backup)
 ```
 
-### Deploy scripts to Pi
+### Manual deploy (Proxmox)
 ```bash
-scp scripts/clawdbot/*.mjs gr0x@10.2.0.40:/home/gr0x/.openclaw/workspace/scripts/
+scp scripts/clawdbot/*.mjs anton@10.2.20.221:~/.openclaw/workspace/scripts/
+scp -r scripts/clawdbot/skills/* anton@10.2.20.221:~/.openclaw/workspace/skills/
+scp scripts/clawdbot/workspace/*.md anton@10.2.20.221:~/.openclaw/workspace/
+ssh anton@10.2.20.221 sudo systemctl restart anton.service
 ```
 
-### Deploy skills to Pi
+### Switchover between hosts
 ```bash
-scp -r scripts/clawdbot/skills/* gr0x@10.2.0.40:/home/gr0x/.openclaw/workspace/skills/
-```
-
-### Upgrade cron jobs (context-aware prompts)
-```bash
-# Cron removal requires job IDs: openclaw cron list → openclaw cron remove <id>
-# Then re-add with upgrade-crons.sh (review prompts before running)
-scp scripts/clawdbot/upgrade-crons.sh gr0x@10.2.0.40:/tmp/
-ssh gr0x@10.2.0.40 'bash /tmp/upgrade-crons.sh'
-```
-
-### Restart after config changes
-```bash
-ssh gr0x@10.2.0.40 sudo systemctl restart anton.service
+# Stop on current host
+ssh anton@10.2.20.221 "sudo systemctl stop anton.service"
+# Deploy to new host
+./scripts/clawdbot/deploy.sh pi
+# Start on new host
+ssh gr0x@10.2.0.40 "sudo systemctl enable --now anton.service"
 ```
 
 ---
@@ -472,6 +514,17 @@ Implementation: add `trigger-inngest.mjs` helper script. Turns Slack into ops co
 ---
 
 ## Troubleshooting
+
+### QMD semantic memory
+**On Proxmox**: QMD v2.0.1 installed with CUDA GPU acceleration (A2000). 50 chunks embedded in 2 seconds.
+- Built llama.cpp from source against CUDA 12.6 (prebuilt binary targets CUDA 13, incompatible with driver 535)
+- Patched `/usr/lib/node_modules/@tobilu/qmd/dist/llm.js` — added `gpu: "cuda"` to `getLlama()` call (qmd doesn't auto-detect CUDA in containers)
+- Embed cron: `*/10 * * * *` as anton user (with CUDA PATH)
+- Collections: `memory` (workspace/memory/) + `workspace` (workspace/*.md)
+- Models: embeddinggemma-300M, Qwen3-Reranker-0.6B, qmd-query-expansion-1.7B (cached in `~/.cache/qmd/models/`)
+- Container bumped to 8GB RAM (was 4GB, OOM during initial embed)
+
+**On Pi (historical)**: QMD ran CPU-only via system cron, ~3 min per embed cycle. Pi 5 VideoCore VII GPU couldn't handle even the 300M model.
 
 ### Service won't start
 ```bash

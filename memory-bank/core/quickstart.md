@@ -1,5 +1,5 @@
 ---
-Last-Updated: 2026-03-12
+Last-Updated: 2026-03-19
 Maintainer: RB
 Status: Active
 ---
@@ -13,14 +13,15 @@ Status: Active
 - **Sector scope**: ALL FDA sectors (food, supplements, cosmetics, pharma, devices, biologics, tobacco, veterinary). Marketing may focus specific verticals; thinking does not.
 - **GTM**: Pilot program (no pricing surfaced, `/pricing` redirects to `/` via proxy). Signup → magic link → onboarding (first_name, last_name, company, role, FEI) → add products (with optional manufacturer/FEI per product) → monitor access (5 products).
 - **GitHub**: https://github.com/Gr0x01/policycanary
-- **Anton (Pi 5)**: `ssh gr0x@10.2.0.40` — Autonomous cofounder (OpenClaw + Slack). Context-aware crons, WAL protocol, working buffer, reverse prompting, outcome tracking. See `architecture/clawdbot.md`.
+- **Anton (Pi 5)**: STOPPED. Service disabled 2026-03-12. Content workflows migrated to Claude Cowork (Desktop). Pi available if needed: `ssh gr0x@10.2.0.40 "sudo systemctl enable --now anton.service"`. See `architecture/clawdbot.md`.
+- **Cowork workspace**: `~/cowork/policy-canary/` — context files, prompt templates, Supabase schema. Replaces Anton for content generation, lead finding, outreach. Runs on subscription, not API tokens.
 - **Next**: Launch prep.
 
 ---
 
 ## What's Happening
 
-**All 45 intelligence pages published. Launch prep.** Three SEO surfaces live (`/ingredients/`, `/enforcement/`, `/regulations/`) — 25 ingredient + 10 enforcement + 10 regulation pages (~100K words total). Cross-linking code wired into all 3 page templates. Anton upgraded with proactive-agent patterns on Pi 5.
+**Code audit complete. Launch prep.** Full codebase audit shipped 26 fixes (9 commits) across pipeline, email, API, frontend, and DB. Sentry now catches all previously-swallowed errors. Fetcher dedup batched. Email tracking works for paid users. Inngest sends fanned out. Schema objects version-controlled. See `development/code-audit-fixes.md` for full tracker.
 
 ---
 
@@ -88,21 +89,21 @@ npx tsx scripts/pipeline/run-verdicts.ts --user <userId>    # Backfill for speci
 npx tsx scripts/bootstrap/bootstrap-gsrs.ts              # Full bootstrap: 169K substances + 950K codes
 npx tsx scripts/bootstrap/bootstrap-gsrs.ts --codes-only  # Codes-only backfill (substances already loaded)
 
-# Anton (OpenClaw) — Pi 5 at 10.2.0.40
-ssh gr0x@10.2.0.40                                # SSH into Pi
-sudo systemctl {status|restart} anton.service     # Manage gateway
-journalctl -u anton.service -f                    # Stream logs
-# Skills: weekly-roundup, seo-blog-post, linkedin-post
-# Crons: weekly-roundup (Fri 9AM), seo-blog (Tue 10AM), linkedin-mon/wed (Mon/Wed 10AM)
-# Deploy scripts: scp scripts/clawdbot/*.mjs gr0x@10.2.0.40:/home/gr0x/.openclaw/workspace/scripts/
+# Anton (DORMANT — Pi 5 at 10.2.0.40)
+# Service stopped and disabled 2026-03-12. Content workflows → Claude Cowork.
+# Restore if needed:
+ssh gr0x@10.2.0.40 "sudo systemctl enable --now anton.service"
+
+# Content automation now via Claude Cowork (Desktop app)
+# Workspace: ~/cowork/policy-canary/
+# Prompt templates: prompts/{weekly-roundup,seo-blog,linkedin,lead-finder}.md
+# Context: context/{about,brand-voice,anti-slop,seo-keywords,supabase-schema}.md
+# MCP: Supabase (replaces .mjs scripts). Web search built in.
 
 # Intelligence pages (backfill + publish)
 npx tsx scripts/backfill/gather-ingredient-data.ts        # Gather data for 25 substances (no LLM)
 npx tsx scripts/backfill/gather-enforcement-data.ts       # Gather enforcement data by company
 npx tsx scripts/backfill/gather-regulation-data.ts        # Gather regulation data (10 regs)
-# Anton scripts (on Pi):
-node publish-intelligence.mjs --page-type ingredient --slug red-no-3 --title "..." --content-file /tmp/page.md --excerpt "..." --structured-data-file /tmp/data.json
-node query-intelligence.mjs --status needs_refresh        # Find pages needing refresh
 
 # SEO Keyword Research
 npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volume + difficulty
@@ -168,6 +169,7 @@ npx tsx scripts/outreach/seo-research.ts          # DataForSEO bulk keyword volu
 - [x] **Validation** — product intelligence email confirmed working in production (received in inbox, quality approved)
 - [x] **Weekly email → Inngest** — moved from Vercel cron to Inngest function (`send-weekly-emails`). Fixed: FK violation on `createCampaign` (passed `users.id` to `email_subscribers.id` FK), free newsletter never sent (timeout from per-subscriber LLM calls). Newsletter content now generated once (2 LLM calls total). `vercel.json` crons emptied. Manual trigger route kept at `/api/email/send-weekly`.
 - [x] **Sentry error monitoring** — `@sentry/nextjs`, org `policy-canary`, project `policy-canary-web`. Client/server/edge configs, tunnel at `/monitoring`, 20% trace sampling, replay on errors. Source maps uploaded + deleted. Code-reviewed.
+- [x] **Full codebase audit (2026-03-19)** — 26 fixes across 3 waves. Sentry `captureException` wired into all swallowed errors. Batch dedup in fetchers. Batch DB writes in enrichment. Broken in-memory cache removed. Email tracking for paid briefings. Fan-out paid sends in Inngest. Fetch timeouts. Content-fetch retry. Stripe error format. Auth sync hardened. Alert dedup column (`reference_item_id`). Schema objects captured in migrations (008, 009). See `development/code-audit-fixes.md`.
 - [ ] Launch
 - [ ] **Full historical backfill** — Federal Register (1994-present), openFDA enforcement (2004-present) + enrich all. Prerequisite for Research tier.
 - [ ] **Research tier ($399/mo)** — agentic search with 7 tools, three-model pipeline (Flash bouncer/status → Pro researcher → Sonnet writer). Full planning doc: `memory-bank/projects/research-search.md`

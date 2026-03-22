@@ -1,17 +1,17 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-12
+last-updated: 2026-03-19
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
-status: Active — All 45 intelligence pages published (25 ingredient + 10 enforcement + 10 regulation). Launch prep next.
+status: Active — Code audit complete (26/26 fixes shipped). Launch prep next.
 ---
 
 # Active Development Context
 
-**Phase:** Core product built. All 45 intelligence pages published. Email pipeline, enrichment, matching, verdicts, onboarding all live. Content automation (Anton on Pi) upgraded to autonomous cofounder model. PostHog + Sentry instrumented. Phase 2 data sources deployed.
-**Live partner:** Anton on Pi 5 (`ssh gr0x@10.2.0.40`), Slack `#pc-content`. Upgraded 2026-03-12 with proactive-agent patterns (WAL, working buffer, compaction recovery, reverse prompting, outcome tracking, context-aware crons, business monitoring).
-**Just shipped:** IndexNow + Slack GSC reminder. Every blog/intelligence publish pings Bing/Yandex instantly and sends Slack notification to `#notifications` reminding RB to submit to Google Search Console.
+**Phase:** Core product built. All 45 intelligence pages published. Email pipeline, enrichment, matching, verdicts, onboarding all live. PostHog + Sentry instrumented. Phase 2 data sources deployed.
+**Content automation:** Migrated from Anton (Pi 5, API tokens) to Claude Cowork (Desktop, subscription). Workspace at `~/cowork/policy-canary/` with prompt templates for weekly roundup, SEO blog, LinkedIn, lead finder. Anton service stopped and disabled 2026-03-12.
+**Just shipped:** Full codebase audit — 26 fixes across pipeline, email, API, frontend, DB (2026-03-19). See `development/code-audit-fixes.md`.
 **Current:** Launch prep.
 **Following feature:** Research tier ($399/mo) — agentic search. Full planning doc: `memory-bank/projects/research-search.md`
 

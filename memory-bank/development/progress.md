@@ -1,7 +1,7 @@
 ---
-Last-Updated: 2026-03-12
+Last-Updated: 2026-03-19
 Maintainer: RB
-Status: Active — All 45 intelligence pages published (25 ingredient + 10 enforcement + 10 regulation, ~100K words). Launch prep next.
+Status: Active — Code audit complete (26/26 fixes). Launch prep next.
 ---
 
 # Progress: Policy Canary
@@ -135,14 +135,24 @@ Status: Active — All 45 intelligence pages published (25 ingredient + 10 enfor
 | Monthly infrastructure | ~$10-75/mo |
 | Domain (policycanary.io) | ~$30/year |
 | Consultant validation (3-4 hours) | ~$500-$1,200 |
-| Clawdbot VPS (Vultr) | $12/mo |
+| ~~Clawdbot VPS (Vultr)~~ | ~~$12/mo~~ DESTROYED |
+| ~~Anton API tokens (Sonnet 4.6)~~ | ~~$50-100+/mo~~ STOPPED |
 | **Total to MVP** | **~$555-$1,340** |
 
-**Ongoing:** ~$22-87/month (scales with usage and subscribers; includes $12/mo VPS)
+**Ongoing:** ~$10-75/month (scales with usage and subscribers). Anton API costs eliminated — content workflows migrated to Claude Cowork (subscription).
 
 ---
 
 ## Completed Work
+
+### 2026-03-12 — Anton Stopped, Content Workflows → Claude Cowork
+- **Decision:** Anton (OpenClaw on Pi 5) stopped and disabled. API token costs not justified for content generation that Rashaad reviews manually anyway.
+- **Migration:** All content workflows (weekly roundup, SEO blog, LinkedIn, lead finder) migrated to Claude Cowork (Desktop app, runs on Max subscription — $0 incremental).
+- **Cowork workspace:** `~/cowork/policy-canary/` with context files (about, brand voice, anti-slop, SEO keywords, Supabase schema), prompt templates for each workflow, memory/content-log for persistence.
+- **MCP connections needed:** Supabase (replaces all .mjs query scripts). Web search built into Cowork.
+- **What was dropped:** Heartbeat (30min idle proactivity), nightly review, pipeline monitoring, QMD semantic memory. Low ROI for token cost.
+- **Pi 5 still available:** `ssh gr0x@10.2.0.40 "sudo systemctl enable --now anton.service"` to restore.
+- **Key trade-off:** Lose always-on crons and proactivity. Gain $0 content generation cost and no Pi maintenance.
 
 ### 2026-03-07 — Weekly Email: Inngest Migration + Bug Fixes
 - **3 bugs fixed**: (1) FK violation — `createCampaign()` passed `users.id` as `subscriber_id` but FK references `email_subscribers(id)`, now omitted for paid campaigns. (2) Free newsletter never sent — `compileNewsletter()` made 2 LLM calls per subscriber, causing Vercel 60s timeout. Split into `generateNewsletterContent()` (once) + `renderNewsletter()` (per subscriber). (3) Not using Inngest — moved to `send-weekly-emails` Inngest function with 3 steps (generate content → paid briefings → free newsletters).
