@@ -249,16 +249,41 @@ cat > /tmp/blog-post.md << 'CONTENT'
 CONTENT
 ```
 
-2. Publish via the API:
+2. Publish via the API.
+
+**Same-day publish (default — `published_at` becomes "now"):**
 ```bash
-node scripts/publish-blog.mjs \
+node scripts/clawdbot/publish-blog.mjs \
   --title "[title]" \
   --slug "[slug]" \
   --content-file /tmp/blog-post.md \
   --category "weekly_roundup" \
   --excerpt "[excerpt]" \
-  --status "published"
+  --status "published" \
+  --cover-image-url "[url from upload-image.mjs]"
 ```
+
+**Backdated publish (Friday-of-week-covered, gap fills, late posts):**
+
+Slug convention: `weekly-fda-roundup-YYYY-MM-DD` where the date is the **Saturday at the start** of the covered week (matches existing posts: `weekly-fda-roundup-2026-04-11` covered April 11–17).
+
+Backdate target: the **Friday at the end** of the covered week, ~22:00 UTC (matches the natural Friday roundup cadence).
+
+```bash
+node scripts/clawdbot/publish-blog.mjs \
+  --title "[title]" \
+  --slug "weekly-fda-roundup-2026-04-25" \
+  --content-file /tmp/blog-post.md \
+  --category "weekly_roundup" \
+  --excerpt "[excerpt]" \
+  --status "published" \
+  --cover-image-url "[url]" \
+  --published-at "2026-05-01T22:00:00Z"
+```
+
+How `--published-at` works: the script first upserts the row directly via Supabase with the backdated `published_at`, then POSTs `/api/blog`. The API preserves the existing `published_at` on upsert and triggers `revalidatePath` + IndexNow. Single command.
+
+Requires `NEXT_PUBLIC_SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` env vars (already in `.env.local`).
 
 3. Report the result. If successful, the post is live at `https://policycanary.io/blog/[slug]`.
 

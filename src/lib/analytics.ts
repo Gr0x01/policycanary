@@ -1,5 +1,6 @@
 import "server-only";
 import { PostHog } from "posthog-node";
+import { after } from "next/server";
 
 // ---------------------------------------------------------------------------
 // Server-side PostHog client (lazy singleton)
@@ -17,6 +18,21 @@ function getClient(): PostHog | null {
     });
   }
   return _client;
+}
+
+// Defer flush past the HTTP response in request context (route handlers,
+// Server Actions). Outside request context (Inngest, scripts), fall back to
+// fire-and-forget — those routes are long-lived enough for the buffer to drain.
+function deferFlush(client: PostHog) {
+  const flush = () =>
+    client.flush().catch((e) => {
+      console.error("[posthog] flush failed:", e);
+    });
+  try {
+    after(flush);
+  } catch {
+    void flush();
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -41,6 +57,8 @@ export function track(
       properties: { ...properties, $process_person_profile: false },
     });
   }
+
+  deferFlush(client);
 }
 
 // ---------------------------------------------------------------------------
@@ -97,6 +115,8 @@ export function identifyUser(
       properties: { $group_type: "company", $group_key: properties.company_name },
     });
   }
+
+  deferFlush(client);
 }
 
 // ---------------------------------------------------------------------------

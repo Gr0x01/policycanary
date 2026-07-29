@@ -7,17 +7,23 @@
  *   node publish-blog.mjs --title "Title" --slug "my-slug" --content-file /tmp/post.md --category "weekly_roundup" --excerpt "Summary" --status published
  *
  * Flags:
- *   --title       Post title (required)
- *   --slug        URL slug (required, lowercase-hyphen)
- *   --content     Markdown content (required unless --content-file)
+ *   --title         Post title (required)
+ *   --slug          URL slug (required, lowercase-hyphen)
+ *   --content       Markdown content (required unless --content-file)
  *   --content-file  Read content from file instead of arg
- *   --category    One of: weekly_roundup, warning_letter_analysis, regulatory_trends, breaking_analysis
- *   --excerpt     Short summary (required)
- *   --status      "draft" (default) or "published"
- *   --base-url    API base URL (default: https://policycanary.io)
+ *   --category      One of: weekly_roundup, warning_letter_analysis, regulatory_trends, breaking_analysis
+ *   --excerpt       Short summary (required)
+ *   --status        "draft" (default) or "published"
+ *   --cover-image-url URL of cover image (optional)
+ *   --published-at  ISO timestamp to backdate the post (e.g. "2026-05-01T22:00:00Z").
+ *                   When set, upserts the row directly via Supabase first so the API
+ *                   preserves this date on the subsequent POST. Requires SUPABASE_SERVICE_ROLE_KEY
+ *                   and NEXT_PUBLIC_SUPABASE_URL (or SUPABASE_URL).
+ *   --base-url      API base URL (default: https://policycanary.io)
  *
  * Env vars (required):
  *   BLOG_API_KEY
+ *   NEXT_PUBLIC_SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY  (only when --published-at is used)
  */
 
 import { parseArgs } from "node:util";
@@ -33,6 +39,7 @@ const { values: args } = parseArgs({
     excerpt: { type: "string" },
     status: { type: "string", default: "draft" },
     "cover-image-url": { type: "string" },
+    "published-at": { type: "string" },
     "base-url": { type: "string", default: "https://policycanary.io" },
   },
 });
@@ -82,6 +89,42 @@ const body = {
   status: args.status,
   ...(args["cover-image-url"] && { cover_image_url: args["cover-image-url"] }),
 };
+
+// Backdate path: pre-upsert the row with the desired published_at via Supabase, so the
+// subsequent API POST preserves it (the API only sets published_at when the row doesn't exist).
+if (args["published-at"]) {
+  if (args.status !== "published") {
+    console.error("--published-at requires --status published");
+    process.exit(1);
+  }
+  const isoDate = new Date(args["published-at"]).toISOString();
+  if (Number.isNaN(Date.parse(args["published-at"]))) {
+    console.error(`Invalid --published-at: ${args["published-at"]}`);
+    process.exit(1);
+  }
+  const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+  const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    console.error("--published-at requires NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY");
+    process.exit(1);
+  }
+  const { createClient } = await import("@supabase/supabase-js");
+  const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+  const word_count = content.trim().split(/\s+/).length;
+  const { error } = await supabase.from("blog_posts").upsert(
+    {
+      ...body,
+      published_at: isoDate,
+      word_count,
+    },
+    { onConflict: "slug" }
+  );
+  if (error) {
+    console.error("Supabase backdate upsert failed:", error.message);
+    process.exit(1);
+  }
+  console.error(`Backdate set: ${isoDate}. Now POSTing to API to preserve date and revalidate...`);
+}
 
 const url = `${args["base-url"]}/api/blog`;
 

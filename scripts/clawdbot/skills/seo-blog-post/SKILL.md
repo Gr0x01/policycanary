@@ -86,6 +86,22 @@ People search for *problems* (warning letters, recalls), not solution categories
 - Research: GRAS changes, Human Foods Program rollout, additive bans
 - Angles: FSMA compliance gaps, food additive reformulation, GRAS revocations
 
+### 6. Pharma Data Integrity / Import Alerts (MEDIUM — high CPC, supply chain buyers)
+- **"FDA import alert"** — 480/mo, $7.89 CPC
+- **"FDA data integrity guidance"** — 260/mo, $0.00 CPC
+- **"pharmaceutical regulatory compliance"** — 210/mo, $2.78 CPC
+- **"pharmaceutical data integrity"** — 140/mo, $3.90 CPC
+- **"contract manufacturer FDA"** — 40/mo, $19.62 CPC (highest CPC in cluster — buyers)
+- **"FDA batch record requirements"** — 10/mo, $19.34 CPC
+- **"FDA supplier qualification"** — 20/mo, $8.74 CPC
+- **"FDA 483 data integrity"** — 20/mo, $8.29 CPC
+- **"import alert 66-40"** — 50/mo (niche but specific)
+- Format: Enforcement pattern analysis, import alert explainer, supplier risk guide
+- Data: `--report trends`, item queries filtered to warning_letter or import_alert
+- Research: Search for recent data integrity enforcement, import alert updates
+- Angles: overseas supplier enforcement, contract lab risk, CGMP data integrity patterns, import alert process explainers
+- Note: conversational supply chain terms ("pharma supply chain risk", "contract lab FDA compliance") have zero search volume. Use "FDA import alert" and "data integrity" phrasing in titles/headings.
+
 ### Opportunistic (write ONLY when news breaks)
 - **GLP-1/compounding crackdown** — search volume surges around enforcement waves (30 WLs in one day = news)
 - **Ingredient bans** (red 40, BHA, titanium dioxide) — low steady volume (10-40/mo) but surges on ban announcements

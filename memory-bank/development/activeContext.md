@@ -1,7 +1,7 @@
 ---
 title: Active Development Context
 created: 2026-03-03
-last-updated: 2026-03-19
+last-updated: 2026-04-17 (April 11-17 weekly roundup)
 deploy: Vercel (live), Stripe webhook endpoint registered
 maintainer: RB
 status: Active — Code audit complete (26/26 fixes shipped). Launch prep next.
@@ -11,8 +11,8 @@ status: Active — Code audit complete (26/26 fixes shipped). Launch prep next.
 
 **Phase:** Core product built. All 45 intelligence pages published. Email pipeline, enrichment, matching, verdicts, onboarding all live. PostHog + Sentry instrumented. Phase 2 data sources deployed.
 **Content automation:** Migrated from Anton (Pi 5, API tokens) to Claude Cowork (Desktop, subscription). Workspace at `~/cowork/policy-canary/` with prompt templates for weekly roundup, SEO blog, LinkedIn, lead finder. Anton service stopped and disabled 2026-03-12.
-**Just shipped:** Full codebase audit — 26 fixes across pipeline, email, API, frontend, DB (2026-03-19). See `development/code-audit-fixes.md`.
-**Current:** Launch prep.
+**Just shipped:** April 11-17 weekly roundup — `weekly-fda-roundup-2026-04-11` (published live 2026-04-17 22:51 UTC, id `8bbbc795-9dc2-46e8-a008-65ea26949336`). Lead: seven Class I device actions in three days (Draeger Atlan, Philips Trilogy Evo, Percussionaire Phasitron, Stryker TMJ, Merit Medical dialysis sheath, + two Early Alerts for convenience kits from Medical Action Industries and Owens & Minor/American Contract Systems sharing the same defective Medline Namic RA Syringe component). Also covered: CDER sweep of 4 online pharmacies (controlled substances + botulinum toxin), Purolea Cosmetics Lab WL (**novel enforcement signal: FDA explicitly cited firm's use of AI to generate compliance documentation without Quality Unit review — first time we've seen this language**), 14 total WLs on 4/14, clinical trial disclosure push (2,200+ sponsors), TRT idiopathic hypogonadism label-expansion signal (April 30 deadline), CBER NGS genome editing draft guidance (July 14 comment deadline). Gemini cover image (idle anesthesia + ventilator in storage, plastic-covered). Previous: IA 66-40 SEO blog (2026-04-13, backdated to 4/07), April 4-10 weekly roundup (2026-04-13 backfill). **Publishing pattern for backdated posts:** direct Supabase upsert with backdated `published_at`, then re-POST to `/api/blog` (upsert preserves existing date) to trigger `revalidatePath` + IndexNow.
+**Current:** Launch prep. Content marketing active (LinkedIn 2x/week, SEO blog).
 **Following feature:** Research tier ($399/mo) — agentic search. Full planning doc: `memory-bank/projects/research-search.md`
 
 ---
