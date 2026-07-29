@@ -258,6 +258,16 @@ function ProductSection({
               </Link>
             </Text>
           )}
+
+          {/* In-app action link — resolving there removes the item from future briefings */}
+          <Text style={appLinkStyle}>
+            <Link
+              href={`${SITE_URL}/app/products?product=${product.id}&item=${item.item_id}`}
+              style={appLinkAnchorStyle}
+            >
+              Review &amp; resolve in Policy Canary →
+            </Link>
+          </Text>
         </Section>
       ))}
 
@@ -567,6 +577,17 @@ const regulationStyle: React.CSSProperties = {
 
 const sourceLinkStyle: React.CSSProperties = {
   color: COLORS.textSecondary,
+  textDecoration: "underline",
+};
+
+const appLinkStyle: React.CSSProperties = {
+  margin: "8px 0 0",
+};
+
+const appLinkAnchorStyle: React.CSSProperties = {
+  fontFamily: FONTS.sans,
+  fontSize: "14px",
+  color: COLORS.amber,
   textDecoration: "underline",
 };
 

@@ -151,10 +151,43 @@ export async function getBriefingData(
   if (productList.length === 0) return null;
 
   // Get matches for this subscriber in the period
-  const matches = await getMatchesForUser(userId, start);
-  if (matches.length === 0 && productList.length > 0) {
+  const allMatches = await getMatchesForUser(userId, start);
+  if (allMatches.length === 0 && productList.length > 0) {
     console.warn(`[email-queries] Zero matches for user ${userId} with ${productList.length} products — RPC may have failed`);
   }
+
+  // Half-open window (start, end]: items published exactly on the start date
+  // were already covered by the previous briefing (whose end date it was).
+  const startStr = start.toISOString().slice(0, 10);
+  const windowMatches = allMatches.filter((m) => m.published_date > startStr);
+
+  // Gate on the LLM verdict layer — the same source of truth the products
+  // page uses. Raw substance/category overlap flags brand-specific recalls of
+  // other companies' products as matches; verdicts filter that noise, and a
+  // user resolution ("resolved"/"not_applicable") silences the item for good.
+  // Items filtered here still fall through to the industry/other zones below.
+  const { data: verdictRows } = windowMatches.length > 0
+    ? await adminClient
+        .from("product_match_verdicts")
+        .select("item_id, product_id, relevant, resolution")
+        .eq("user_id", userId)
+        .in("item_id", windowMatches.map((m) => m.item_id))
+    : { data: [] };
+
+  const liveVerdictKeys = new Set(
+    (verdictRows ?? [])
+      .filter((v) => v.relevant && (!v.resolution || v.resolution === "watching"))
+      .map((v) => `${v.item_id}:${v.product_id}`)
+  );
+
+  const matches = windowMatches
+    .map((m) => ({
+      ...m,
+      matched_products: m.matched_products.filter((p) =>
+        liveVerdictKeys.has(`${m.item_id}:${p.product_id}`)
+      ),
+    }))
+    .filter((m) => m.matched_products.length > 0);
 
   // Get all recent items in the period for industry + other zones
   const { data: recentItems } = await adminClient
@@ -163,14 +196,13 @@ export async function getBriefingData(
       id, title, item_type, published_date, source_url,
       item_enrichments(summary, regulatory_action_type, deadline, raw_response)
     `)
-    .gte("published_date", start.toISOString().slice(0, 10))
+    .gt("published_date", startStr)
     .lte("published_date", end.toISOString().slice(0, 10))
     .not("item_enrichments", "is", null)
     .order("published_date", { ascending: false })
     .limit(200); // cap to avoid unbounded .in() on tag batch query
 
   const totalReviewed = recentItems?.length ?? 0;
-  const matchedItemIds = new Set(matches.map((m) => m.item_id));
 
   // Get category slugs for subscriber's products (for industry zone filtering)
   const { data: productCategories } = await adminClient
@@ -200,6 +232,8 @@ export async function getBriefingData(
       return isLiveState(ls);
     })
     .map((m) => matchToBriefingItem(m));
+
+  const matchedItemIds = new Set(productItems.map((i) => i.item_id));
 
   // Batch-fetch all product_type tags for recent items (avoids N+1)
   const recentItemIds = (recentItems ?? []).map((i) => i.id);
@@ -316,7 +350,9 @@ export async function getWeeklyDigestData(
       id, title, item_type, published_date, source_url,
       item_enrichments(summary, regulatory_action_type, deadline)
     `)
-    .gte("published_date", start.toISOString().slice(0, 10))
+    // Half-open window (start, end] — matches the paid briefing, so an item
+    // published on a Friday boundary lands in exactly one week's digest.
+    .gt("published_date", start.toISOString().slice(0, 10))
     .lte("published_date", end.toISOString().slice(0, 10))
     .not("item_enrichments", "is", null)
     .order("published_date", { ascending: false });

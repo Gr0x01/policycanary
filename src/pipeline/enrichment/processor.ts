@@ -155,7 +155,10 @@ export async function enrichItem(
         supabase.from("regulatory_item_substances").delete().eq("regulatory_item_id", item.id),
         supabase.from("item_enrichment_tags").delete().eq("item_id", item.id),
         supabase.from("item_categories").delete().eq("item_id", item.id),
-        supabase.from("product_match_verdicts").delete().eq("item_id", item.id),
+        // Keep rows the user has acted on (resolution set) — re-evaluation
+        // upserts relevant/reasoning without touching resolution, so user
+        // state survives re-enrichment.
+        supabase.from("product_match_verdicts").delete().eq("item_id", item.id).is("resolution", null),
       ]);
       for (const { error } of cleanupResults) {
         if (error) throw new Error(`cleanup parallel delete: ${error.message}`);
