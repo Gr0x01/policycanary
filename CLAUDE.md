@@ -15,13 +15,13 @@ Project knowledge lives in `/.koda/memory/` (one topic per note, indexed in `MEM
 2. `/.koda/memory/active-context.md` — current focus + next steps
 3. `/.koda/memory/quickstart.md` — situational awareness, commands, milestones
 4. `/.koda/memory/tech-stack.md` — stack, deployments, LLM models
-5. `/.koda/memory/changelog.md` — recently shipped work (one line per change; add a line when you ship)
+5. `/Documents/changelog.md` — recently shipped work (one line per change; add a line when you ship)
 
 **Read on demand (not every session):** the other notes in the index — `data-schema`, `llm-data-flow`, `project-brief`, `dev-context` (migrations + deploy state), `clawdbot` (Anton), `intelligence-pages`, `blog-editorial-voice`. Frozen history (Mar–Apr 2026 progress table, build-phase plans) is in `/.koda/memory/archive/`. RB's readable research and plans are in `/Documents/` (research/, plans/).
 
 **Update the memory** when you finish a feature, shift architecture/tooling, or discover a reusable pattern: update the existing topic note (a new note is earned only by a genuinely new system or decision), keep its `description:` frontmatter and `MEMORY.md` index line in sync, and update `Last-Updated` headers.
 
-**Changelog discipline** (`/.koda/memory/changelog.md`):
+**Changelog discipline** (`/Documents/changelog.md` — lives in Documents/ so RB sees it in Koda):
 - When work ships (commit / deploy / publish), add its entry **in the same session** — not at tidy time.
 - ONE line per change: what changed + why it matters, ending with the commit hash. Detail lives in the commit message or the relevant topic doc, never in the changelog.
 - Newest date first. Check whether today's `## YYYY-MM-DD` section already exists before adding one — append to it, don't create a duplicate section.
