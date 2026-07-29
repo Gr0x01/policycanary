@@ -27,7 +27,8 @@ export default async function FeedPage({ searchParams }: FeedPageProps) {
   const filters: FeedFilters = {
     type: params.type || undefined,
     range: params.range || undefined,
-    myProducts: params.myProducts === "true",
+    // Default ON — the firehose is opt-in via ?myProducts=false
+    myProducts: params.myProducts !== "false",
     showArchived: params.showArchived === "true",
   };
 

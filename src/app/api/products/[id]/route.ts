@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { adminClient } from "@/lib/supabase/admin";
-import { getProductById, getProductVerdicts, getIngredientUseCodes, resolveIngredients, replaceProductIngredients } from "@/lib/products/queries";
+import { getProductById, getProductVerdicts, getIngredientUseCodes, getLastPipelineScanAt, getEnforcementHistory, resolveIngredients, replaceProductIngredients, countActiveProducts } from "@/lib/products/queries";
+import { getStripe, ADDON_LOOKUP_KEY } from "@/lib/stripe";
 import { UpdateProductSchema } from "@/lib/products/types";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { evaluateProductHistory } from "@/lib/products/verdicts";
@@ -62,10 +63,14 @@ export async function GET(
   const substanceIds = (data.ingredients ?? [])
     .map((ing) => ing.substance_id)
     .filter((sid): sid is string => sid !== null);
-  const useCodesMap = await getIngredientUseCodes(substanceIds);
+  const [useCodesMap, last_scan_at, enforcement_history] = await Promise.all([
+    getIngredientUseCodes(substanceIds),
+    getLastPipelineScanAt(),
+    getEnforcementHistory({ name: data.name, brand: data.brand, substanceIds, categoryId: data.product_category_id }),
+  ]);
   const use_codes = Object.fromEntries(useCodesMap);
 
-  return Response.json({ data, verdicts, use_codes });
+  return Response.json({ data, verdicts, use_codes, last_scan_at, enforcement_history });
 }
 
 // ---------------------------------------------------------------------------
@@ -324,5 +329,61 @@ export async function DELETE(
 
   track(userId, "product_deleted", { product_id: id });
 
+  // Release paid add-on slots the user no longer occupies. Best-effort — a
+  // billing hiccup must not fail the delete; worst case they stay at the
+  // higher limit until the next delete.
+  try {
+    await releaseUnusedAddonSlots(userId);
+  } catch (err) {
+    console.error("[products] add-on slot release failed:", err);
+  }
+
   return Response.json({ data: { id: data.id, deleted: true } });
+}
+
+/**
+ * Shrink the $10/mo add-on quantity (and max_products) down to what's used.
+ * The included base is derived as max_products minus the CURRENT Stripe add-on
+ * quantity, so manually-granted custom limits are preserved, and a release can
+ * only ever lower the quantity — never raise it or touch non-add-on users.
+ */
+async function releaseUnusedAddonSlots(userId: string) {
+  const { data: dbUser } = await adminClient
+    .from("users")
+    .select("max_products, stripe_subscription_id")
+    .eq("id", userId)
+    .single();
+  if (!dbUser?.stripe_subscription_id) return;
+
+  const stripe = getStripe();
+  const subscription = await stripe.subscriptions.retrieve(dbUser.stripe_subscription_id);
+  const addonItem = subscription.items.data.find(
+    (item) =>
+      item.price.lookup_key === ADDON_LOOKUP_KEY ||
+      (process.env.STRIPE_PRICE_ADDITIONAL_PRODUCT && item.price.id === process.env.STRIPE_PRICE_ADDITIONAL_PRODUCT)
+  );
+  const addonQuantity = addonItem?.quantity ?? 0;
+  if (!addonItem || addonQuantity === 0) return;
+
+  const includedBase = dbUser.max_products - addonQuantity;
+  const productCount = await countActiveProducts(userId);
+  const neededAddons = Math.max(0, productCount - includedBase);
+  const newQuantity = Math.min(addonQuantity, neededAddons);
+  if (newQuantity === addonQuantity) return;
+
+  if (newQuantity > 0) {
+    await stripe.subscriptionItems.update(addonItem.id, {
+      quantity: newQuantity,
+      proration_behavior: "create_prorations",
+    });
+  } else {
+    await stripe.subscriptionItems.del(addonItem.id, {
+      proration_behavior: "create_prorations",
+    });
+  }
+
+  await adminClient
+    .from("users")
+    .update({ max_products: includedBase + newQuantity })
+    .eq("id", userId);
 }

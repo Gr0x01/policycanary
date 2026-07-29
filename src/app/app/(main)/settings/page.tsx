@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { getAuthUser, getDbUser } from "@/lib/supabase/auth";
 import SettingsForm from "@/components/app/SettingsForm";
+import BillingButton from "@/components/app/BillingButton";
 import { isDev, DEV_USER_ID } from "@/lib/dev";
 
 export default async function SettingsPage() {
@@ -47,6 +48,14 @@ export default async function SettingsPage() {
             </dd>
           </div>
         </dl>
+        {dbUser.stripe_customer_id && (
+          <div className="mt-4 pt-4 border-t border-border">
+            <BillingButton />
+            <p className="text-xs text-text-secondary mt-1">
+              Update your card, view invoices, or cancel your subscription.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Editable profile + danger zone */}

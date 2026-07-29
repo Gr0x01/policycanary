@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 
+/** Opens the Stripe customer portal (update card, view invoices, cancel). */
 export default function BillingButton() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -15,7 +16,7 @@ export default function BillingButton() {
       const data = await res.json();
 
       if (!res.ok || !data.url) {
-        setError(data.error ?? "Something went wrong.");
+        setError(data.error?.message ?? "Something went wrong.");
         setLoading(false);
         return;
       }
@@ -28,23 +29,16 @@ export default function BillingButton() {
   }
 
   return (
-    <div className="relative">
+    <div>
       <button
         onClick={handlePortal}
         disabled={loading}
-        className="text-xs text-slate-500 hover:text-slate-300 transition-colors duration-100 disabled:opacity-70"
+        className="inline-flex items-center gap-1.5 text-sm text-amber font-medium hover:text-amber-action transition-colors duration-150 disabled:opacity-70"
       >
-        {loading ? (
-          <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />
-        ) : (
-          "Manage Billing"
-        )}
+        {loading && <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden="true" />}
+        Manage billing
       </button>
-      {error && (
-        <p className="absolute top-full right-0 text-xs text-red-400 mt-1 whitespace-nowrap">
-          {error}
-        </p>
-      )}
+      {error && <p className="text-xs text-urgent mt-1">{error}</p>}
     </div>
   );
 }

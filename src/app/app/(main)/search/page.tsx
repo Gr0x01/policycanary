@@ -27,7 +27,13 @@ export default function SearchPage() {
   const [citations, setCitations] = useState<SearchCitationCard[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Platform-dependent, so resolved after mount to keep SSR and client HTML identical
+  const [kbdHint, setKbdHint] = useState("Ctrl+K");
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (/Mac/i.test(navigator.userAgent)) setKbdHint("⌘K");
+  }, []);
 
   // Cmd+K / Ctrl+K focus
   useEffect(() => {
@@ -138,10 +144,7 @@ export default function SearchPage() {
           />
           <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
             <kbd className="hidden sm:inline-block font-mono text-[10px] text-text-secondary bg-surface-subtle border border-border rounded px-1.5 py-0.5">
-              {typeof navigator !== "undefined" &&
-              /Mac/i.test(navigator.userAgent)
-                ? "\u2318K"
-                : "Ctrl+K"}
+              {kbdHint}
             </kbd>
           </div>
         </div>

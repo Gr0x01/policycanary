@@ -41,8 +41,8 @@ const RESOLUTION_LABELS: Record<string, string> = {
 };
 
 export default function MatchCard({ matchWithItem, isExpanded, onToggle, onResolve }: MatchCardProps) {
-  const { match, item, resolution } = matchWithItem;
-  const matchStatus = LIFECYCLE_TO_STATUS[item.lifecycle_state];
+  const { match, item, resolution, administrative } = matchWithItem;
+  const matchStatus = administrative ? "all_clear" : LIFECYCLE_TO_STATUS[item.lifecycle_state];
   const typeLabel = ACTION_TYPE_LABELS[item.item_type] ?? item.item_type;
   const isWatching = resolution === "watching";
   const shouldReduceMotion = useReducedMotion();
@@ -98,6 +98,11 @@ export default function MatchCard({ matchWithItem, isExpanded, onToggle, onResol
           )}
         </div>
         <div className="flex items-center gap-1.5 shrink-0">
+          {administrative && (
+            <span className="font-mono text-[10px] text-text-secondary/70 bg-surface-subtle border border-border rounded px-2 py-0.5 uppercase tracking-wide">
+              Administrative
+            </span>
+          )}
           {matchWithItem.hasCrossReference && (
             <span className="font-mono text-[10px] font-medium text-amber bg-amber/10 border border-amber/25 rounded px-2 py-0.5 uppercase tracking-wide">
               Cross-sector

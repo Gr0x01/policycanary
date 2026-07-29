@@ -6,6 +6,8 @@ import type { ItemDetailData } from "@/lib/mock/app-data";
 import { formatDate } from "@/lib/utils/format";
 import ItemTypeTag from "@/components/app/ItemTypeTag";
 import TrackItemView from "@/components/app/TrackItemView";
+import ItemVerdictActions from "@/components/app/ItemVerdictActions";
+import { isAdministrativeItem } from "@/lib/utils/lifecycle";
 
 import { isDev, DEV_USER_ID } from "@/lib/dev";
 
@@ -74,10 +76,16 @@ export default async function ItemDetailPage({ params, searchParams }: ItemDetai
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-3">
           <ItemTypeTag type={item.item_type} />
-          {relevance && (
-            <span className="inline-block rounded px-2 py-0.5 border bg-slate-500/10 text-slate-600 border-slate-500/25 font-mono text-[10px] uppercase tracking-wide leading-relaxed">
-              {relevanceLabel(relevance)}
+          {isAdministrativeItem(item.title) ? (
+            <span className="inline-block rounded px-2 py-0.5 border bg-surface-subtle text-text-secondary/70 border-border font-mono text-[10px] uppercase tracking-wide leading-relaxed">
+              Administrative
             </span>
+          ) : (
+            relevance && (
+              <span className="inline-block rounded px-2 py-0.5 border bg-slate-500/10 text-slate-600 border-slate-500/25 font-mono text-[10px] uppercase tracking-wide leading-relaxed">
+                {relevanceLabel(relevance)}
+              </span>
+            )
           )}
         </div>
 
@@ -107,7 +115,7 @@ export default async function ItemDetailPage({ params, searchParams }: ItemDetai
             className="inline-flex items-center gap-1 mt-3 font-mono text-xs text-text-secondary hover:text-amber transition-colors"
           >
             View on FDA.gov
-            <span aria-hidden="true">&nearr;</span>
+            <span aria-hidden="true">↗</span>
           </a>
         )}
       </div>
@@ -154,23 +162,13 @@ export default async function ItemDetailPage({ params, searchParams }: ItemDetai
         </section>
       )}
 
-      {/* 5. Your products affected */}
+      {/* 5. Your products affected — with resolve actions */}
       {matched_products.length > 0 && (
         <section className="mb-6">
           <h2 className="font-mono text-[10px] uppercase tracking-wider text-text-secondary mb-3">
             Your Products Affected
           </h2>
-          <div className="flex flex-wrap gap-2">
-            {matched_products.map((p) => (
-              <span
-                key={p.id}
-                className="inline-flex items-center gap-1.5 bg-canary/10 border border-canary/20 rounded px-3 py-1.5 text-sm font-semibold text-canary"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-canary shrink-0" />
-                {p.name}
-              </span>
-            ))}
-          </div>
+          <ItemVerdictActions itemId={item.id} products={matched_products} />
         </section>
       )}
 

@@ -14,13 +14,14 @@ export default function AppNav({ initials, accessLevel, signOut }: AppNavProps) 
       {/* Logo */}
       <Link
         href="/app/products"
-        className="flex items-center gap-2 mr-8 group shrink-0"
+        className="flex items-center gap-2 mr-3 sm:mr-8 group shrink-0"
       >
         <span
           className="h-2 w-2 rounded-full bg-canary group-hover:scale-110 transition-transform duration-150"
           aria-hidden="true"
         />
-        <Logo className="h-2.5 text-white" />
+        {/* Wordmark hidden on phones — the canary dot stays as the home button */}
+        <Logo className="h-2.5 text-white hidden sm:block" />
       </Link>
 
       {/* Center nav */}
@@ -29,7 +30,7 @@ export default function AppNav({ initials, accessLevel, signOut }: AppNavProps) 
       </div>
 
       {/* Right side */}
-      <div className="flex items-center gap-4 shrink-0">
+      <div className="flex items-center gap-3 sm:gap-4 shrink-0">
         <Link
           href="/app/settings"
           className="h-8 w-8 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center transition-colors duration-100"
@@ -49,7 +50,7 @@ export default function AppNav({ initials, accessLevel, signOut }: AppNavProps) 
         ) : (
           <Link
             href="/app/settings"
-            className="text-xs text-slate-400 hover:text-slate-200 transition-colors duration-100 leading-none"
+            className="hidden sm:block text-xs text-slate-400 hover:text-slate-200 transition-colors duration-100 leading-none"
           >
             Billing
           </Link>

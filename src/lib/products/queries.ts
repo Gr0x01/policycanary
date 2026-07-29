@@ -11,7 +11,7 @@ import type {
 } from "./types";
 import type { NormalizationStatus, ItemType } from "@/types/enums";
 import type { FeedItemEnriched, ItemDetailData } from "@/lib/mock/app-data";
-import { getLifecycleState, isLiveState, type LifecycleState } from "@/lib/utils/lifecycle";
+import { getLifecycleState, deriveProductStatus, isAdministrativeItem, type LifecycleState, type ProductStatus } from "@/lib/utils/lifecycle";
 
 // ---------------------------------------------------------------------------
 // DSLD Search
@@ -636,7 +636,7 @@ export const getItemDetail = cache(async function getItemDetail(
   // Verdicts for this user
   const { data: verdicts } = await adminClient
     .from("product_match_verdicts")
-    .select("product_id, relevant, subscriber_products(id, name)")
+    .select("product_id, relevant, resolution, subscriber_products(id, name)")
     .eq("item_id", itemId)
     .eq("user_id", userId)
     .eq("relevant", true);
@@ -644,9 +644,9 @@ export const getItemDetail = cache(async function getItemDetail(
   const matchedProducts = (verdicts ?? [])
     .map((v) => {
       const p = v.subscriber_products as unknown as { id: string; name: string } | null;
-      return p ? { id: p.id, name: p.name } : null;
+      return p ? { id: p.id, name: p.name, resolution: (v.resolution as string | null) ?? null } : null;
     })
-    .filter((p): p is { id: string; name: string } => p !== null);
+    .filter((p): p is { id: string; name: string; resolution: string | null } => p !== null);
 
   const enrichmentRaw = parseEnrichment(item.item_enrichments);
   const raw = enrichmentRaw?.raw_response;
@@ -709,6 +709,7 @@ export interface ProductVerdictItem {
   deadline: string | null;
   regulatory_action_type: string | null;
   lifecycle_state: LifecycleState;
+  administrative: boolean;
   substance_ids: string[];
   has_cross_reference: boolean;
 }
@@ -784,6 +785,7 @@ export const getProductVerdicts = cache(async function getProductVerdicts(
         deadline,
         regulatory_action_type: enrichment?.regulatory_action_type ?? null,
         lifecycle_state,
+        administrative: isAdministrativeItem(item.title),
         substance_ids: (item.regulatory_item_substances ?? []).map((s) => s.substance_id),
         has_cross_reference: (item.item_enrichment_tags ?? []).some(
           (t) => t.signal_source === "cross_reference"
@@ -794,22 +796,178 @@ export const getProductVerdicts = cache(async function getProductVerdicts(
 });
 
 /**
- * Get verdict counts per product for deriving sidebar status.
+ * When the ingestion pipeline last brought in items — the honest "last scanned"
+ * timestamp. Per-product verdict dates age forever on quiet products and read
+ * as if monitoring stopped.
  */
-export const getProductVerdictCounts = cache(async function getProductVerdictCounts(
-  userId: string
-): Promise<Map<string, { total: number; urgent: number; watching: number }>> {
-  const { data, error } = await adminClient.rpc("get_live_verdict_counts", {
-    p_user_id: userId,
-  });
+export const getLastPipelineScanAt = cache(async function getLastPipelineScanAt(): Promise<string | null> {
+  const { data } = await adminClient
+    .from("regulatory_items")
+    .select("created_at")
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  return data?.created_at ?? null;
+});
 
-  if (error || !data) return new Map();
+// ---------------------------------------------------------------------------
+// Enforcement archive — historical WLs/recalls touching this product's
+// ingredients or naming its brand. Archive depth: WLs 2021+, recalls 2024+.
+// ---------------------------------------------------------------------------
 
-  const counts = new Map<string, { total: number; urgent: number; watching: number }>();
-  for (const row of data as Array<{ product_id: string; total: number; urgent: number; watching: number }>) {
-    counts.set(row.product_id, { total: row.total, urgent: row.urgent, watching: row.watching });
+const ENFORCEMENT_TYPES = ["warning_letter", "recall", "safety_alert", "import_alert"];
+
+export interface EnforcementHistoryItem {
+  id: string;
+  title: string;
+  item_type: string;
+  published_date: string;
+  source_url: string | null;
+  matched_on: "ingredient" | "name";
+}
+
+function escapeLike(s: string): string {
+  return s.replace(/[%_\\]/g, "\\$&");
+}
+
+export async function getEnforcementHistory(product: {
+  name: string;
+  brand: string | null;
+  substanceIds: string[];
+  categoryId: string | null;
+}): Promise<EnforcementHistoryItem[]> {
+  const byId = new Map<string, EnforcementHistoryItem>();
+
+  // Brand/name mentions in enforcement titles (brands under 5 chars like "RAW"
+  // false-positive on ordinary words, so they're skipped). One .ilike() query
+  // per term — .or() would choke on commas/parens common in product names.
+  const nameTerms = [product.name, product.brand ?? ""]
+    .map((s) => s.trim())
+    .filter((s) => s.length >= 5);
+
+  for (const term of nameTerms) {
+    const { data } = await adminClient
+      .from("regulatory_items")
+      .select("id, title, item_type, published_date, source_url")
+      .in("item_type", ENFORCEMENT_TYPES)
+      .ilike("title", `%${escapeLike(term)}%`)
+      .order("published_date", { ascending: false })
+      .limit(8);
+    for (const item of data ?? []) {
+      byId.set(item.id, { ...item, matched_on: "name" });
+    }
   }
-  return counts;
+
+  // Ingredient matches only count within the product's own category — common
+  // ingredients (water, honey, tea) otherwise drag in every recall that shares
+  // one. A category is required; without it the shared-ingredient net is all noise.
+  if (product.substanceIds.length > 0 && product.categoryId) {
+    const { data: category } = await adminClient
+      .from("product_categories")
+      .select("slug")
+      .eq("id", product.categoryId)
+      .maybeSingle();
+
+    const { data: subRows } = category?.slug
+      ? await adminClient
+          .from("regulatory_item_substances")
+          .select("regulatory_item_id")
+          .in("substance_id", product.substanceIds)
+          .limit(300)
+      : { data: [] };
+    let itemIds = [...new Set((subRows ?? []).map((r) => r.regulatory_item_id))];
+
+    if (itemIds.length > 0) {
+      const { data: taggedRows } = await adminClient
+        .from("item_enrichment_tags")
+        .select("item_id")
+        .in("item_id", itemIds)
+        .eq("tag_dimension", "product_type")
+        .eq("tag_value", category!.slug);
+      itemIds = [...new Set((taggedRows ?? []).map((r) => r.item_id))];
+    }
+
+    if (itemIds.length > 0) {
+      const { data } = await adminClient
+        .from("regulatory_items")
+        .select("id, title, item_type, published_date, source_url")
+        .in("id", itemIds)
+        .in("item_type", ENFORCEMENT_TYPES)
+        .order("published_date", { ascending: false })
+        .limit(8);
+      for (const item of data ?? []) {
+        if (!byId.has(item.id)) byId.set(item.id, { ...item, matched_on: "ingredient" });
+      }
+    }
+  }
+
+  return [...byId.values()]
+    .sort((a, b) => b.published_date.localeCompare(a.published_date))
+    .slice(0, 8);
+}
+
+/**
+ * Per-product status for the sidebar, derived with the SAME lifecycle rules
+ * the detail panel uses (deriveProductStatus) so the two can never disagree.
+ */
+export const getUserProductStatuses = cache(async function getUserProductStatuses(
+  userId: string
+): Promise<Map<string, { status: ProductStatus; activeCount: number; lastEvaluatedAt: string | null }>> {
+  const { data, error } = await adminClient
+    .from("product_match_verdicts")
+    .select(`
+      product_id, resolution, evaluated_at,
+      regulatory_items(title, item_type, published_date, item_enrichments(deadline))
+    `)
+    .eq("user_id", userId)
+    .eq("relevant", true);
+
+  if (error || !data) {
+    if (error) console.error("[products] getUserProductStatuses error:", error);
+    return new Map();
+  }
+
+  const byProduct = new Map<
+    string,
+    {
+      verdicts: { resolution: string | null; lifecycle_state: LifecycleState; administrative: boolean }[];
+      lastEvaluatedAt: string | null;
+    }
+  >();
+
+  for (const row of data) {
+    const item = row.regulatory_items as unknown as {
+      title: string;
+      item_type: string;
+      published_date: string;
+      item_enrichments: Array<{ deadline: string | null }> | null;
+    } | null;
+    if (!item) continue;
+
+    const lifecycle_state = getLifecycleState({
+      item_type: item.item_type,
+      published_date: item.published_date,
+      deadline: item.item_enrichments?.[0]?.deadline ?? null,
+    });
+
+    const entry = byProduct.get(row.product_id) ?? { verdicts: [], lastEvaluatedAt: null };
+    entry.verdicts.push({
+      resolution: row.resolution ?? null,
+      lifecycle_state,
+      administrative: isAdministrativeItem(item.title),
+    });
+    if (!entry.lastEvaluatedAt || row.evaluated_at > entry.lastEvaluatedAt) {
+      entry.lastEvaluatedAt = row.evaluated_at;
+    }
+    byProduct.set(row.product_id, entry);
+  }
+
+  const result = new Map<string, { status: ProductStatus; activeCount: number; lastEvaluatedAt: string | null }>();
+  for (const [productId, entry] of byProduct) {
+    const { status, activeCount } = deriveProductStatus(entry.verdicts);
+    result.set(productId, { status, activeCount, lastEvaluatedAt: entry.lastEvaluatedAt });
+  }
+  return result;
 });
 
 // ---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 import { adminClient } from "@/lib/supabase/admin";
 import { getMatchesForUser, type ProductMatch } from "@/lib/products/matches";
-import { getLifecycleState, isLiveState } from "@/lib/utils/lifecycle";
+import { getLifecycleState, isLiveState, isAdministrativeItem } from "@/lib/utils/lifecycle";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -221,9 +221,12 @@ export async function getBriefingData(
       .filter((s): s is string => !!s)
   );
 
-  // Build briefing items from matches (YOUR PRODUCTS zone)
+  // Build briefing items from matches (YOUR PRODUCTS zone).
+  // Administrative (PRA/OMB) filings never headline Zone 1 — same demotion as
+  // the products page; they fall through to the industry/other zones.
   const productItems: BriefingItem[] = matches
     .filter((m) => {
+      if (isAdministrativeItem(m.title)) return false;
       const ls = getLifecycleState({
         item_type: m.item_type,
         published_date: m.published_date,

@@ -126,18 +126,90 @@ export default function ProductSidebar({ items, selectedId, onSelect, onAdd, max
 
       {/* Add Product button — pinned bottom */}
       <div className="px-3 py-3 border-t border-border">
-        <button
-          onClick={onAdd}
-          disabled={atLimit}
-          className={`w-full py-2 text-[13px] font-medium border border-dashed rounded transition-colors ${
-            atLimit
-              ? "text-text-secondary/50 border-border cursor-not-allowed"
-              : "text-text-secondary border-border-strong hover:border-amber hover:text-amber"
-          }`}
-        >
-          {atLimit ? `Limit reached (${maxProducts})` : "+ Add Product"}
-        </button>
+        {atLimit ? (
+          <AtLimitAction maxProducts={maxProducts} />
+        ) : (
+          <button
+            onClick={onAdd}
+            className="w-full py-2 text-[13px] font-medium border border-dashed rounded transition-colors text-text-secondary border-border-strong hover:border-amber hover:text-amber"
+          >
+            + Add Product
+          </button>
+        )}
       </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// At-limit action — free tier upgrades; paid tier buys a $10/mo slot
+// ---------------------------------------------------------------------------
+
+function AtLimitAction({ maxProducts }: { maxProducts: number }) {
+  const isPaid = maxProducts >= 5;
+  const [step, setStep] = useState<"idle" | "confirm" | "pending" | "error">("idle");
+
+  if (!isPaid) {
+    return (
+      <a
+        href="/app/feed?checkout=start"
+        className="block w-full py-2 text-center text-[13px] font-semibold border rounded bg-canary/10 border-canary/30 text-amber-action hover:bg-canary/20 transition-colors"
+      >
+        Upgrade to add more products
+      </a>
+    );
+  }
+
+  async function handleAddSlot() {
+    setStep("pending");
+    try {
+      const res = await fetch("/api/stripe/add-product-slot", { method: "POST" });
+      if (!res.ok) {
+        setStep("error");
+        return;
+      }
+      // max_products changed server-side — reload picks up the new limit
+      window.location.reload();
+    } catch {
+      setStep("error");
+    }
+  }
+
+  return (
+    <div>
+      {step === "confirm" || step === "pending" ? (
+        <div className="flex items-center gap-1.5">
+          <button
+            onClick={handleAddSlot}
+            disabled={step === "pending"}
+            className="flex-1 py-2 text-[13px] font-semibold border rounded bg-canary/10 border-canary/30 text-amber-action hover:bg-canary/20 transition-colors disabled:opacity-60"
+          >
+            {step === "pending" ? "Adding…" : "Confirm +$10/mo"}
+          </button>
+          <button
+            onClick={() => setStep("idle")}
+            disabled={step === "pending"}
+            className="px-3 py-2 text-[13px] text-text-secondary hover:text-text-primary transition-colors disabled:opacity-60"
+          >
+            Cancel
+          </button>
+        </div>
+      ) : (
+        <button
+          onClick={() => setStep("confirm")}
+          className="w-full py-2 text-[13px] font-medium border border-dashed rounded transition-colors text-text-secondary border-border-strong hover:border-amber hover:text-amber"
+        >
+          + Add product slot · $10/mo
+        </button>
+      )}
+      {step === "error" && (
+        <p className="text-[11px] text-urgent mt-1.5 text-center">
+          Couldn&apos;t add a slot — check billing in Settings.
+        </p>
+      )}
+      <p className="text-[11px] text-text-secondary/70 mt-1.5 text-center">
+        Your plan currently covers {maxProducts} products
+      </p>
     </div>
   );
 }

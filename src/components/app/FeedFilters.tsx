@@ -28,7 +28,7 @@ export default function FeedFilters() {
 
   const currentType = searchParams.get("type") ?? "";
   const currentRange = searchParams.get("range") ?? "";
-  const myProducts = searchParams.get("myProducts") === "true";
+  const myProducts = searchParams.get("myProducts") !== "false";
   const showArchived = searchParams.get("showArchived") === "true";
 
   const currentTypeLabel =
@@ -72,6 +72,18 @@ export default function FeedFilters() {
     },
     [searchParams, router]
   );
+
+  // myProducts defaults ON, so turning it off needs an explicit "false"
+  const toggleMyProducts = useCallback(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (myProducts) {
+      params.set("myProducts", "false");
+    } else {
+      params.delete("myProducts");
+    }
+    trackEvent("feed_filter_changed", { filter: "myProducts", value: !myProducts });
+    router.push(`/app/feed?${params.toString()}`);
+  }, [searchParams, router, myProducts]);
 
   const pillBase =
     "px-3 py-1.5 rounded border text-xs font-sans font-medium transition-colors duration-100 cursor-pointer";
@@ -149,7 +161,7 @@ export default function FeedFilters() {
 
       {/* My Products — amber when active */}
       <button
-        onClick={() => toggleParam("myProducts", myProducts)}
+        onClick={toggleMyProducts}
         className={`${pillBase} inline-flex items-center gap-1 ${
           myProducts ? myProductsActive : pillInactive
         }`}

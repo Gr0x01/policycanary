@@ -2,13 +2,15 @@ import { test, expect } from "@playwright/test";
 
 test("landing page renders hero headline", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByText("The FDA changed something")).toBeVisible();
+  await expect(
+    page.getByText("Understand FDA changes in terms of your exact products.")
+  ).toBeVisible();
 });
 
-test("pricing page shows three tiers", async ({ page }) => {
+test("pricing page shows Monitor plan", async ({ page }) => {
   await page.goto("/pricing");
-  await expect(page.getByText("$49")).toBeVisible();
-  await expect(page.getByText("$249")).toBeVisible();
+  await expect(page.getByText("$99/month").first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /start free trial/i }).first()).toBeVisible();
 });
 
 test("sample report shows Marine Collagen Powder", async ({ page }) => {
@@ -16,9 +18,9 @@ test("sample report shows Marine Collagen Powder", async ({ page }) => {
   await expect(page.getByText("Marine Collagen Powder").first()).toBeVisible();
 });
 
-test("signup form shows success state after submission", async ({ page }) => {
+// Render-only check — submitting would write a fake subscriber to the live table
+test("newsletter signup form renders", async ({ page }) => {
   await page.goto("/");
-  await page.locator('input[type="email"]').fill("test+e2e@example.com");
-  await page.getByRole("button", { name: /start free/i }).click();
-  await expect(page.getByText(/subscribed|on the list/i)).toBeVisible();
+  const form = page.locator("form").filter({ has: page.getByRole("button", { name: /subscribe/i }) });
+  await expect(form.locator('input[type="email"]')).toBeVisible();
 });

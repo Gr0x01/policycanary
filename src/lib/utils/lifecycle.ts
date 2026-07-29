@@ -45,3 +45,58 @@ export function getLifecycleState(
 export function isLiveState(state: LifecycleState): boolean {
   return state === "urgent" || state === "active" || state === "grace";
 }
+
+// ---------------------------------------------------------------------------
+// Product status — single source of truth for sidebar, detail panel, and
+// mobile picker. Keep ALL product-status derivation here so surfaces can't
+// drift apart again.
+// ---------------------------------------------------------------------------
+
+export type ProductStatus = "action_required" | "under_review" | "watch" | "all_clear";
+
+/**
+ * Paperwork Reduction Act / OMB filings match everything in a category but
+ * require nothing from anyone. They stay visible as FYI items but never make
+ * a product read "needs attention" — alert fatigue kills trust faster than a
+ * missed notice does.
+ */
+const ADMINISTRATIVE_TITLE_PATTERNS = [
+  /agency information collection activities/i,
+  /paperwork reduction act/i,
+  /submission for (the )?office of management and budget/i,
+  /submission for omb review/i,
+];
+
+export function isAdministrativeItem(title: string): boolean {
+  return ADMINISTRATIVE_TITLE_PATTERNS.some((p) => p.test(title));
+}
+
+interface VerdictLike {
+  resolution: string | null;
+  lifecycle_state: LifecycleState;
+  administrative?: boolean;
+}
+
+/** A verdict the user hasn't resolved that is still within its live window. */
+export function isActiveVerdict(v: VerdictLike): boolean {
+  return (!v.resolution || v.resolution === "watching") && isLiveState(v.lifecycle_state);
+}
+
+export function deriveProductStatus(verdicts: VerdictLike[]): {
+  status: ProductStatus;
+  activeCount: number;
+} {
+  // Administrative filings stay listed but never drive status or counts
+  const active = verdicts.filter(isActiveVerdict).filter((v) => !v.administrative);
+  let status: ProductStatus = "all_clear";
+  if (active.length > 0) {
+    const hasUrgent = active.some(
+      (v) => v.lifecycle_state === "urgent" && v.resolution !== "watching"
+    );
+    const allWatching = active.every((v) => v.resolution === "watching");
+    if (allWatching) status = "watch";
+    else if (hasUrgent) status = "action_required";
+    else status = "under_review";
+  }
+  return { status, activeCount: active.length };
+}

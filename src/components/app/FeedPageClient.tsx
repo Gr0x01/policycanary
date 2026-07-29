@@ -99,7 +99,7 @@ export default function FeedPageClient({ initialItems, initialHasMore, productCo
     const showArchived = searchParams.get("showArchived");
     if (type) params.set("type", type);
     if (range) params.set("range", range);
-    if (myProducts === "true") params.set("myProducts", "true");
+    if (myProducts !== "false") params.set("myProducts", "true");
     if (showArchived === "true") params.set("showArchived", "true");
     return params.toString();
   }, [searchParams]);
@@ -107,7 +107,7 @@ export default function FeedPageClient({ initialItems, initialHasMore, productCo
   // Keep ref in sync so observer closure always has latest value
   filterQsRef.current = filterQs;
 
-  const myProducts = searchParams.get("myProducts") === "true";
+  const myProducts = searchParams.get("myProducts") !== "false";
 
   // Lazy load: IntersectionObserver on sentinel div.
   // Mutable values via refs so the observer stays stable.

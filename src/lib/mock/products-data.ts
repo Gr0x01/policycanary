@@ -11,7 +11,7 @@ import {
 } from "./app-data";
 import type { SubscriberProduct, ProductMatch } from "@/types/database";
 import type { ProductIngredientRow } from "@/lib/products/types";
-import type { VerdictResolution } from "@/lib/products/queries";
+import type { VerdictResolution, EnforcementHistoryItem } from "@/lib/products/queries";
 
 // ---------------------------------------------------------------------------
 // Types for the Products view
@@ -25,6 +25,7 @@ export interface ProductMatchWithItem {
   substanceIds: string[]; // substance IDs from the match for ingredient highlighting
   resolution?: VerdictResolution;
   hasCrossReference?: boolean;
+  administrative?: boolean; // PRA/OMB filing — shown as FYI, never drives status
 }
 
 export interface ProductSidebarItem {
@@ -42,6 +43,7 @@ export interface ProductDetailData {
   status: ProductStatus;
   activeMatches: ProductMatchWithItem[];
   resolvedHistory: ResolvedHistoryItem[];
+  enforcementHistory?: EnforcementHistoryItem[];
   lastScannedAt: string;
   /** Structured ingredients from product_ingredients table (when available) */
   ingredients?: ProductIngredientRow[];

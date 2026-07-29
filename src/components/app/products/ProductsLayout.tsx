@@ -5,9 +5,9 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { ProductSidebarItem, ProductDetailData } from "@/lib/mock/products-data";
 import type { FeedItemEnriched } from "@/lib/mock/app-data";
 import type { ProductDetail } from "@/lib/products/types";
-import type { ProductVerdictItem, VerdictResolution } from "@/lib/products/queries";
+import type { ProductVerdictItem, VerdictResolution, EnforcementHistoryItem } from "@/lib/products/queries";
 import type { SubscriberProduct } from "@/types/database";
-import { isLiveState } from "@/lib/utils/lifecycle";
+import { isLiveState, isActiveVerdict, deriveProductStatus } from "@/lib/utils/lifecycle";
 import ProductSidebar from "./ProductSidebar";
 import IntelligencePanel from "./IntelligencePanel";
 import ProductContextPanel from "./ProductContextPanel";
@@ -21,7 +21,12 @@ interface ProductsLayoutProps {
 }
 
 /** Map API ProductDetail + verdicts → the ProductDetailData shape used by Intelligence/Context panels */
-function toDetailData(detail: ProductDetail, verdicts: ProductVerdictItem[]): ProductDetailData {
+function toDetailData(
+  detail: ProductDetail,
+  verdicts: ProductVerdictItem[],
+  lastScanAt?: string | null,
+  enforcementHistory?: EnforcementHistoryItem[]
+): ProductDetailData {
   const product: SubscriberProduct = {
     id: detail.id,
     user_id: "",
@@ -43,23 +48,13 @@ function toDetailData(detail: ProductDetail, verdicts: ProductVerdictItem[]): Pr
 
   // User-resolved/not_applicable → history, regardless of lifecycle
   // Watching + unresolved → active if lifecycle is live, history if archived
-  const activeVerdicts = verdicts.filter(
-    (v) => !v.resolution || v.resolution === "watching"
-  ).filter((v) => isLiveState(v.lifecycle_state));
+  const activeVerdicts = verdicts.filter(isActiveVerdict);
 
   const historyVerdicts = verdicts.filter(
     (v) => v.resolution === "resolved" || v.resolution === "not_applicable" || !isLiveState(v.lifecycle_state)
   );
 
-  // Derive status from active verdicts only
-  let status: "action_required" | "under_review" | "watch" | "all_clear" = "all_clear";
-  if (activeVerdicts.length > 0) {
-    const hasUrgent = activeVerdicts.some((v) => v.lifecycle_state === "urgent" && v.resolution !== "watching");
-    const allWatching = activeVerdicts.every((v) => v.resolution === "watching");
-    if (allWatching) status = "watch";
-    else if (hasUrgent) status = "action_required";
-    else status = "under_review";
-  }
+  const { status } = deriveProductStatus(verdicts);
 
   function verdictToMatch(v: ProductVerdictItem) {
     // Compute intersection: verdict's substance_ids ∩ product ingredient substance_ids
@@ -105,6 +100,7 @@ function toDetailData(detail: ProductDetail, verdicts: ProductVerdictItem[]): Pr
       substanceIds: matchedSubstanceIds,
       resolution: v.resolution,
       hasCrossReference: v.has_cross_reference,
+      administrative: v.administrative,
     };
   }
 
@@ -124,7 +120,9 @@ function toDetailData(detail: ProductDetail, verdicts: ProductVerdictItem[]): Pr
     status,
     activeMatches,
     resolvedHistory,
-    lastScannedAt: verdicts[0]?.evaluated_at ?? new Date().toISOString(),
+    enforcementHistory,
+    // Pipeline ingest time, not verdict time — quiet products still scan daily
+    lastScannedAt: lastScanAt ?? verdicts[0]?.evaluated_at ?? detail.created_at,
     ingredients: detail.ingredients,
   };
 }
@@ -173,12 +171,14 @@ export default function ProductsLayout({
     try {
       const res = await fetch(`/api/products/${id}`);
       if (!res.ok) throw new Error("Failed to fetch product detail");
-      const { data, verdicts, use_codes } = (await res.json()) as {
+      const { data, verdicts, last_scan_at, enforcement_history } = (await res.json()) as {
         data: ProductDetail;
         verdicts: ProductVerdictItem[];
         use_codes?: Record<string, string[]>;
+        last_scan_at?: string | null;
+        enforcement_history?: EnforcementHistoryItem[];
       };
-      const detail = toDetailData(data, verdicts ?? []);
+      const detail = toDetailData(data, verdicts ?? [], last_scan_at, enforcement_history);
       detailCache.current.set(id, detail);
       // C2 fix: only apply if user hasn't navigated away during fetch
       if (intendedIdRef.current === id) {
@@ -339,8 +339,13 @@ export default function ProductsLayout({
           // Fetch fresh detail, then sync sidebar status from it
           const detailRes = await fetch(`/api/products/${productId}`);
           if (detailRes.ok) {
-            const { data, verdicts: v } = (await detailRes.json()) as { data: ProductDetail; verdicts: ProductVerdictItem[] };
-            const detail = toDetailData(data, v ?? []);
+            const { data, verdicts: v, last_scan_at, enforcement_history } = (await detailRes.json()) as {
+              data: ProductDetail;
+              verdicts: ProductVerdictItem[];
+              last_scan_at?: string | null;
+              enforcement_history?: EnforcementHistoryItem[];
+            };
+            const detail = toDetailData(data, v ?? [], last_scan_at, enforcement_history);
             detailCache.current.set(productId, detail);
             if (intendedIdRef.current === productId) {
               setCurrentDetail(detail);

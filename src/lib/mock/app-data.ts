@@ -44,7 +44,7 @@ export interface ItemDetailData {
   relevance: RelevanceLevel | null;
   action_items: string[] | null;
   substances: Array<{ raw_substance_name: string; canonical_name?: string | null }>;
-  matched_products: Array<{ id: string; name: string }>;
+  matched_products: Array<{ id: string; name: string; resolution?: string | null }>;
 }
 
 export interface SearchCitationCard {

@@ -10,6 +10,7 @@ import MatchCard from "./MatchCard";
 import AllClearCard from "./AllClearCard";
 import ProductContextInline from "./ProductContextInline";
 import HistoryPreview from "./HistoryPreview";
+import EnforcementArchive from "./EnforcementArchive";
 
 interface IntelligencePanelProps {
   detail: ProductDetailData;
@@ -187,6 +188,11 @@ export default function IntelligencePanel({
         {/* History preview */}
         {detail.resolvedHistory.length > 0 && (
           <HistoryPreview key={product.id} items={detail.resolvedHistory} />
+        )}
+
+        {/* Enforcement archive */}
+        {detail.enforcementHistory && detail.enforcementHistory.length > 0 && (
+          <EnforcementArchive items={detail.enforcementHistory} />
         )}
       </div>
     </motion.div>

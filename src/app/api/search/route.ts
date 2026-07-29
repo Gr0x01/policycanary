@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { generateText } from "ai";
 import { createClient } from "@/lib/supabase/server";
+import { adminClient } from "@/lib/supabase/admin";
 import { generateEmbedding } from "@/lib/ai/openai";
 import { claudeSonnet } from "@/lib/ai/anthropic";
 import { checkRateLimit } from "@/lib/rate-limit";
@@ -79,8 +80,8 @@ export async function POST(request: Request) {
     );
   }
 
-  // 5. Vector search via Supabase RPC
-  const supabase = await createClient();
+  // 5. Vector search via Supabase RPC — admin client, since the RPC's EXECUTE
+  // grant excludes anon/public (this route already authenticates + rate-limits)
   let chunks: Array<{
     id: string;
     item_id: string;
@@ -90,9 +91,12 @@ export async function POST(request: Request) {
   }> | null = null;
 
   try {
-    const { data, error } = await supabase.rpc("match_item_chunks", {
+    // Query-to-passage cosine similarity with text-embedding-3-small tops out
+    // around 0.55-0.75 even for on-topic questions — 0.45 floors out noise
+    // while keeping normal questions answerable.
+    const { data, error } = await adminClient.rpc("match_item_chunks", {
       query_embedding: JSON.stringify(embedding),
-      match_threshold: 0.65,
+      match_threshold: 0.45,
       match_count: 8,
     });
 
@@ -108,11 +112,11 @@ export async function POST(request: Request) {
     chunks = null;
   }
 
-  // 6. No chunks — return "no data yet" response
+  // 6. No chunks — nothing indexed matched this query
   if (!chunks || chunks.length === 0) {
     return Response.json({
       answer:
-        "Not enough regulatory data indexed yet. Check back as the database grows.",
+        "No indexed regulatory documents matched that question. Try rephrasing, or ask about a specific regulation, ingredient, or enforcement topic.",
       citations: [],
     });
   }
@@ -129,7 +133,7 @@ export async function POST(request: Request) {
 
   // 8. Fetch item metadata for citations
   const itemIds = [...new Set(chunks.map((c) => c.item_id))];
-  const { data: items } = await supabase
+  const { data: items } = await adminClient
     .from("regulatory_items")
     .select("id, title, item_type, published_date")
     .in("id", itemIds);

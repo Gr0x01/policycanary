@@ -68,7 +68,7 @@ export default function FeedDetailPanel({ item, onClose }: FeedDetailPanelProps)
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 font-mono text-xs text-text-secondary hover:text-amber transition-colors mb-6"
         >
-          View on FDA.gov <span aria-hidden="true">&nearr;</span>
+          View on FDA.gov <span aria-hidden="true">↗</span>
         </a>
       )}
 
