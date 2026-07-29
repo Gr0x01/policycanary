@@ -53,13 +53,14 @@ let query = supabase
   .from("regulatory_items")
   .select(
     args.summary
-      ? `id, external_id, item_type, title, source_url, published_date, created_at,
+      ? `id, source_ref, item_type, title, source_url, published_date, created_at,
+         enforcement_company_name, enforcement_recall_classification,
          item_enrichments (
-           enrichment_title, regulatory_action_type, urgency_level, deadline,
-           regulatory_item_substances (substance_name, context),
-           item_enrichment_tags (tag_dimension, tag_value, signal_source)
-         )`
-      : `id, external_id, item_type, title, source_url, published_date, content_snippet, created_at`
+           summary, regulatory_action_type, deadline, key_regulations, key_entities
+         ),
+         regulatory_item_substances (raw_substance_name),
+         item_enrichment_tags (tag_dimension, tag_value, signal_source)`
+      : `id, source_ref, item_type, title, source_url, published_date, action_text, created_at`
   )
   .gte("created_at", since)
   .order("created_at", { ascending: false })
