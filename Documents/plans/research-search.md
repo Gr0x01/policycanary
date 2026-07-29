@@ -517,5 +517,5 @@ Status lines are in product voice, specific, and informative. They demonstrate c
 
 ## References
 
-- `memory-bank/development/ai-search-research.md` — initial market research (Perplexity, Westlaw, Lexis, RAG best practices)
-- `memory-bank/development/research-agentic-search-2026-03-08.md` — agentic search market research (Harvey, CoCounsel, failure modes, latency expectations)
+- `Documents/research/technical/ai-search-research.md` — initial market research (Perplexity, Westlaw, Lexis, RAG best practices)
+- `Documents/research/technical/research-agentic-search-2026-03-08.md` — agentic search market research (Harvey, CoCounsel, failure modes, latency expectations)

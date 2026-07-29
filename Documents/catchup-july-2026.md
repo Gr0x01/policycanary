@@ -39,7 +39,7 @@ Working document for restarting after the April–July lapse. Status checked liv
 
 ## Where development left off (April)
 
-Status at pause: **product built, code audit done (26/26 fixes), launch prep was the current phase.** The next planned feature was the Research tier ($399/mo, agentic search — plan in `memory-bank/projects/research-search.md`).
+Status at pause: **product built, code audit done (26/26 fixes), launch prep was the current phase.** The next planned feature was the Research tier ($399/mo, agentic search — plan in `Documents/plans/research-search.md`).
 
 There's finished-but-uncommitted work sitting in the tree from April (last commit was March 31):
 

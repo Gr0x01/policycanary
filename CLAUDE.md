@@ -4,25 +4,29 @@
 
 **NEVER rename `proxy.ts` to `middleware.ts`.** Next.js 16 renamed Middleware to Proxy. `proxy.ts` with a named `proxy` export is correct.
 
-**NEVER change LLM model names or configurations without explicit authorization.** Model reference: `/memory-bank/architecture/techStack.md`. Ask first if you think there's an error.
+**NEVER change LLM model names or configurations without explicit authorization.** Model reference: `/.koda/memory/tech-stack.md`. Ask first if you think there's an error.
 
 **Ask before adding dependencies or altering core workflows.** This is a solo dev MVP — no surprises.
 
-## MEMORY BANK — START PROCEDURE
+## PROJECT MEMORY — START PROCEDURE
 
-Read these files in order before doing anything else:
-1. `/memory-bank/core/quickstart.md` — situational awareness, commands, milestones
-2. `/memory-bank/core/projectbrief.md` — product definition and data schema
-3. `/memory-bank/development/activeContext.md` — current focus + next steps
-4. `/memory-bank/architecture/techStack.md` — stack, deployments, LLM models
-5. `/memory-bank/development/progress.md` — highlights of shipped work
+Project knowledge lives in `/.koda/memory/` (one topic per note, indexed in `MEMORY.md`). Koda sessions auto-load the index + active context; in any other session, read these first:
+1. `/.koda/memory/MEMORY.md` — index of all notes (one line each — open only what the task needs)
+2. `/.koda/memory/active-context.md` — current focus + next steps
+3. `/.koda/memory/quickstart.md` — situational awareness, commands, milestones
+4. `/.koda/memory/tech-stack.md` — stack, deployments, LLM models
+5. `/.koda/memory/changelog.md` — recently shipped work (one line per change; add a line when you ship)
 
-**Read on demand (not every session):**
-- `/memory-bank/core/build-phases.md` — when working on a specific phase
-- `/memory-bank/architecture/data-pipeline.md` — when working with data/enrichment
-- `/memory-bank/architecture/clawdbot.md` — when working with Anton/Clawdbot
+**Read on demand (not every session):** the other notes in the index — `data-schema`, `llm-data-flow`, `project-brief`, `dev-context` (migrations + deploy state), `clawdbot` (Anton), `intelligence-pages`, `blog-editorial-voice`. Frozen history (Mar–Apr 2026 progress table, build-phase plans) is in `/.koda/memory/archive/`. RB's readable research and plans are in `/Documents/` (research/, plans/).
 
-**Update the memory bank** when you finish a feature, shift architecture/tooling, or discover a reusable pattern. Always update `Last-Updated` headers.
+**Update the memory** when you finish a feature, shift architecture/tooling, or discover a reusable pattern: update the existing topic note (a new note is earned only by a genuinely new system or decision), keep its `description:` frontmatter and `MEMORY.md` index line in sync, and update `Last-Updated` headers.
+
+**Changelog discipline** (`/.koda/memory/changelog.md`):
+- When work ships (commit / deploy / publish), add its entry **in the same session** — not at tidy time.
+- ONE line per change: what changed + why it matters, ending with the commit hash. Detail lives in the commit message or the relevant topic doc, never in the changelog.
+- Newest date first. Check whether today's `## YYYY-MM-DD` section already exists before adding one — append to it, don't create a duplicate section.
+- Docs-only or trivial commits don't need a line; anything a future session would want to know about does.
+- Do not add new rows to the frozen milestone table in `archive/progress-2026-03.md`.
 
 ## BEHAVIORAL RULES
 
@@ -91,7 +95,7 @@ Update `.claude/agents/*.md` files when you finish a feature, add dependencies, 
 - Run `npm run test:e2e` before marking features complete (use `test:e2e:ui` for visual dev)
 - Use code-reviewer subagent after significant changes; fix Critical issues before handoff
 - Keep diffs surgical — strip logs, commented code, unused exports
-- Update memory-bank docs as part of definition of done
+- Update `.koda/memory/` notes as part of definition of done — including the one-line changelog entry for anything shipped
 
 ## DESIGN AUTHORITY
 

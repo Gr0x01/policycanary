@@ -1,77 +1,30 @@
-# Directory Site Template
+# Policy Canary
 
-Template for creating SEO-optimized directory websites with Claude Code configuration.
+FDA regulatory intelligence for food, supplement, and cosmetics companies. Monitors FDA data sources daily, enriches items with LLMs, matches them against subscriber product profiles, and delivers weekly intelligence emails plus a web app.
 
-## Usage
+**Live**: [policycanary.io](https://policycanary.io) · Vercel (hosting) · Supabase (DB) · Inngest (pipeline) · Resend (email) · Stripe (billing)
 
-1. Copy this folder to create a new project:
-   ```bash
-   cp -r directory-template my-new-directory
-   cd my-new-directory
-   ```
+## Getting oriented
 
-2. Update the memory bank files with your project details:
-   - `memory-bank/core/quickstart.md` - Project overview and commands
-   - `memory-bank/core/projectbrief.md` - Product definition and schema
-   - `memory-bank/development/activeContext.md` - Current focus
-   - `memory-bank/architecture/techStack.md` - Technology stack
+- `CLAUDE.md` — agent rules and the start procedure
+- `.koda/memory/` — project knowledge base (index: `MEMORY.md`; local to this machine, not in git)
+- `Documents/` — research corpus and plans (git-tracked)
 
-3. Replace `[PROJECT_NAME]` and other placeholders with your actual values
+## Commands
 
-4. Initialize your project:
-   ```bash
-   npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir
-   npm install @supabase/supabase-js zod lucide-react
-   ```
-
-## Structure
-
-```
-.claude/
-├── settings.local.json          # Claude permissions
-├── agents/                      # Specialized agents
-│   ├── backend-architect.md
-│   ├── code-architect.md
-│   ├── code-reviewer.md
-│   ├── frontend-developer.md
-│   ├── trend-researcher.md
-│   ├── ui-designer.md
-│   └── visual-storyteller.md
-└── skills/
-    ├── settings.local.json
-    └── frontend-design/
-        └── SKILL.md             # Frontend design guidelines
-
-memory-bank/
-├── core/
-│   ├── quickstart.md            # Project overview
-│   └── projectbrief.md          # Product definition
-├── development/
-│   ├── activeContext.md         # Current focus
-│   └── progress.md              # Work log
-├── architecture/
-│   └── techStack.md             # Technology decisions
-└── archive/                     # Historical docs
-
-CLAUDE.md                        # Main Claude instructions
+```bash
+npm run dev          # local dev server
+npm run type-check   # TypeScript check
+npm run test:e2e     # Playwright e2e tests
+npm run email:dev    # email template preview (port 3001)
 ```
 
-## Included Agents
+## Layout
 
-| Agent | Use For |
-|-------|---------|
-| **backend-architect** | API design, database architecture |
-| **code-architect** | Project structure, folder organization |
-| **code-reviewer** | Code quality and security reviews |
-| **frontend-developer** | UI implementation, performance |
-| **ui-designer** | Interface design, visual aesthetics |
-| **trend-researcher** | Market research, trend analysis |
-| **visual-storyteller** | Infographics, presentations |
-
-## Tech Stack (Default)
-
-- **Frontend**: Next.js 15+, React 19+, Tailwind CSS 4
-- **Backend**: Next.js API routes, Supabase (PostgreSQL)
-- **Maps**: MapLibre GL JS (if needed)
-- **Analytics**: PostHog
-- **Hosting**: Vercel
+```
+src/            # Next.js app (App Router), pipeline, email, lib
+scripts/        # backfills, clawdbot (Anton) content automation, ops
+supabase/       # migrations
+Documents/      # research + plans (human-readable)
+.koda/memory/   # agent knowledge base (local)
+```
