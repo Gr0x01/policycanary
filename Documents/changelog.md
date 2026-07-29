@@ -4,6 +4,8 @@ One dated line per shipped change, newest first. Add the line in the same sessio
 
 ## 2026-07-29
 
+- In-app UX fixes from the July review: AI Search unbroken (missing `match_item_chunks` DB function created — migration `010`, applied to prod; threshold tuned; Search added to nav), product status unified to one lifecycle source (sidebar/portfolio/detail/mobile all agree now), Stripe billing portal button wired into Settings, feed defaults to My Products, honest "last scanned" (pipeline ingest time), mobile header overflow + `&nearr;` entity + ⌘K hydration fixed, stale marketing e2e specs updated to current copy. Findings doc: `Documents/ux-review-app-july-2026.md`. (uncommitted)
+- Blog backfill: 12 Weekly FDA Roundups (May 2 – Jul 24) drafted via an 11-agent parallel workflow, self-checked against FDA source records + chart data DB-verified, published backdated to each week's Friday. Fills the May–Jul content gap; archive reads as an unbroken weekly series. Review drafts kept in `Documents/blog-backfill/`.
 - Doc migration to Koda style: `memory-bank/` deleted — agent knowledge → `.koda/memory/` (local), research/plans → `Documents/`, frozen history → `.koda/memory/archive/`. CLAUDE.md + README repointed. This changelog moved to `Documents/` so it's visible in Koda. (`8d6678f`)
 - Weekly briefing spam fix — Zone 1 gated on LLM verdicts (kills category-noise repeats), half-open email window, per-item "Review & resolve" deep link, resolutions survive re-enrichment. (`c0cf854`)
 - `query-supabase.mjs` columns aligned with live schema (source_ref, summary, raw_substance_name). (`52e6bef`)

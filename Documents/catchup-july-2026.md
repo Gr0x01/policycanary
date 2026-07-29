@@ -64,7 +64,9 @@ The April 11–17 roundup flagged a **first-of-its-kind enforcement signal**: FD
 
 * [x] Commit the April working-tree changes (one clean commit)
 
-* [ ] Decide: resume weekly roundups fresh from this week, or backfill the \~12-week gap? (The backdating tooling exists; a full backfill is a lot of posts — a "we're back" roundup + selective backfill of big enforcement stories may be the better ratio)
+* [x] ~~Decide: resume vs backfill the ~12-week gap~~ **DONE 2026-07-29** — full backfill: 12 roundups (May 2 – Jul 24) published backdated to each Friday. Review drafts in `Documents/blog-backfill/`.
+
+* [ ] Repair the drifted `scripts/clawdbot/` content scripts (schema-aligned queries, faster fact-check) before Cowork automation resumes
 
 * [ ] Restart Cowork's scheduled content (SEO Tue is the highest-value slot — it's what drives traffic)
 
