@@ -1,7 +1,7 @@
-# Backfill drafts — 12 Weekly FDA Roundups (May 2 – Jul 24, 2026)
+# Backfill — 12 Weekly FDA Roundups (May 2 – Jul 24, 2026)
 
-> [!IMPORTANT]
-> These are DRAFTS. Nothing is published. Each was written from FDA source records, fact-self-checked, and its chart data verified against the database. Open any file to read the full post with its cover image and chart. When you're happy, tell me which to publish (all, or a subset) and I'll publish them backdated to each week's Friday.
+> [!NOTE]
+> **All 12 are PUBLISHED** (backdated to each week's Friday, 22:00 UTC) — verified against `blog_posts` on 2026-07-29. These files are the source drafts, kept for reference. Each was written from FDA source records, fact-self-checked, and its chart data verified against the database.
 
 | # | Week | Lead story | Words | Draft |
 |---|------|-----------|------|------|
